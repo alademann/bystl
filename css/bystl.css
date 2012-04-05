@@ -1,0 +1,132 @@
+BODY
+{
+    BACKGROUND-COLOR: #E1E7EA;
+    FONT-FAMILY: verdana,arial,sans-serif;
+    FONT-SIZE: 9px
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 14px
+}
+
+td
+{
+    COLOR: #0F1C2B;
+    FONT-FAMILY: verdana,geneva,arial,sans-serif;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 20px
+}
+
+.rightcolumn
+{
+    COLOR: #5E6872;
+    FONT-FAMILY: verdana,geneva,arial,sans-serif;
+    FONT-SIZE: 9px;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 18px;
+    TEXT-DECORATION: none	
+}
+
+.bottom
+{
+    COLOR: #5E6872;
+    FONT-FAMILY: verdana,geneva,arial,sans-serif;
+    FONT-SIZE: 9px;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 14px;
+    TEXT-DECORATION: none	
+}
+
+.light
+{
+    COLOR: #9FA7AE;
+    FONT-FAMILY: verdana,geneva,arial,sans-serif;
+    FONT-SIZE: 9px;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 14px;
+    TEXT-DECORATION: none	
+}
+
+.sched
+{
+    COLOR: #0F1C2B;
+    BACKGROUND: #F0F3F5;
+    FONT-FAMILY: verdana,geneva,arial,sans-serif;
+    FONT-SIZE: 9px;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 14px;
+    TEXT-DECORATION: none	
+}
+
+.sched-table
+{
+    PADDING: 1px;
+	BORDER: 1px solid #78818A;
+	MARGIN-BOTTOM: 25px	
+}
+
+A
+{
+    COLOR: #FF0000;
+    FONT-FAMILY: verdana,geneva,arial,sans-serif;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 20px;
+    TEXT-DECORATION: none	
+}
+
+A:hover
+{
+ 	COLOR: #FF0000;
+ 	BACKGROUND-COLOR: #FFFFFF;
+    FONT-FAMILY: verdana,geneva,arial,sans-serif;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 20px;
+    TEXT-DECORATION: none	
+}
+
+A.linkrightcolumn
+{
+    COLOR: #FF0000;
+    FONT-FAMILY: verdana,geneva,arial,sans-serif;
+    FONT-SIZE: 9px;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 18px;
+    TEXT-DECORATION: none	
+}
+
+A.linkrightcolumn:hover
+{
+ 	COLOR: #FF0000;
+ 	BACKGROUND-COLOR: #FFFFFF;
+    FONT-FAMILY: verdana,geneva,arial,sans-serif;
+    FONT-SIZE: 9px;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 18px;
+    TEXT-DECORATION: none	
+}
+
+A.navbottom
+{
+    COLOR: #0F1C2B;
+    FONT-FAMILY: verdana,geneva,arial,sans-serif;
+    FONT-SIZE: 9px;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 14px;
+    TEXT-DECORATION: none	
+}
+
+A.navbottom:hover
+{
+ 	COLOR: #0F1C2B;
+ 	BACKGROUND-COLOR: #FFFFFF;
+    FONT-FAMILY: verdana,geneva,arial,sans-serif;
+    FONT-SIZE: 9px;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 14px;
+    TEXT-DECORATION: none	
+}
+
+
+
+

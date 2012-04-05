@@ -1,0 +1,92 @@
+0
+CgiVar---
+name: redirect
+state: hidden
+active: 1
+label: 
+text:
+http://www.yogastlouis.com/survey_submit.htmlCgiVar---
+name: sort
+state: hidden
+active: 0
+label: 
+text:
+alphabeticCgiVar---
+name: return_link_title
+state: hidden
+active: 0
+label: 
+text:
+Back to Main PageCgiVar---
+name: studio_location
+state: 
+active: 1
+label: Studio?
+text:
+studioCgiVar---
+name: realname
+state: 
+active: 1
+label: Your Name?
+text:
+nameCgiVar---
+name: title
+state: hidden
+active: 1
+label: 
+text:
+Class Time SurveyCgiVar---
+name: required
+state: hidden
+active: 1
+label: 
+text:
+email, nameCgiVar---
+name: print_blank_fields
+state: hidden
+active: 0
+label: 
+text:
+0CgiVar---
+name: env_report
+state: hidden
+active: 0
+label: 
+text:
+REMOTE_ADDR,HTTP_USER_AGENTCgiVar---
+name: missing_fields_redirect
+state: hidden
+active: 1
+label: 
+text:
+http://www.yogastlouis.com/survey_redirect.htmlCgiVar---
+name: return_link_url
+state: hidden
+active: 0
+label: 
+text:
+CgiVar---
+name: recipient
+state: hidden
+active: 1
+label: 
+text:
+survey@yogastlouis.comCgiVar---
+name: email
+state: 
+active: 1
+label: Your Email address?
+text:
+emailCgiVar---
+name: print_config
+state: hidden
+active: 0
+label: 
+text:
+email,subjectCgiVar---
+name: subject
+state: hidden
+active: 1
+label: 
+text:
+Class Survey

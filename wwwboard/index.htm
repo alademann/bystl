@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>NMS WWWBoard Version 1.0</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/css/nms.css" /> -->
+  </head>
+  <body>
+    <h1 align="center">NMS WWWBoard Version 1.0</h1>
+    <p>Below is NMS WWWBoard Version 1.0</p>
+    <hr />
+    <p align="center">[ <a href="#post">Post Message</a> ]
+      [ <a href="faq.html">FAQ</a> ]</p> 
+    <hr />
+
+    <ul>
+      <!--begin-->
+    </ul>
+
+    <h2 align="center"><a id="name" name="post">Post A Message!</a></h2>
+    <form method="post" action="/cgi-bin/wwwboard.pl">
+      <table summary="">
+	<tr>
+	  <td>Name:</td>
+	  <td><input type="text" name="name" size="50" /></td>
+	</tr>
+	<tr>
+	  <td>E-Mail:</td>
+	  <td><input type="text" name="email" size="50" /></td>
+	</tr>
+	<tr>
+	  <td>Subject:</td>
+	  <td><input type="text" name="subject" size="50" /></td>
+	</tr>
+	<tr>
+	  <td valign="top">Message:</td>
+	  <td><textarea cols="55" rows="10" name="body"></textarea></td>
+	</tr>
+	<tr>
+	  <td>Optional Link URL:</td>
+	  <td><input type="text" name="url" size="45" /></td>
+	</tr>
+	<tr>
+	  <td>Link Title:</td>
+	  <td><input type="text" name="url_title" size="50" /></td>
+	</tr>
+	<tr>
+	  <td>Optional Image URL:</td>
+	  <td><input type="text" name="img" size="45" /></td>
+	</tr>
+	<tr>
+	  <td colspan="2"><input type="submit" value="Post Message" /> 
+	    <input type="reset" /></td>
+	</tr>
+      </table>
+    </form>
+    <p>WWWBoard is part of <a href="http://nms-cgi.sourceforge.net/">nms</a></p> 
+  </body>
+</html>

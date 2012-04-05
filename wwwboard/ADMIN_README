@@ -1,0 +1,153 @@
+COPYRIGHT:
+----------
+
+wwwadmin.pl Version 1.00 (part of wwwboard)
+Copyright 2001,2002 London Perl Mongers, All rights reserved
+
+LICENSE:
+--------
+
+This script is free software; you are free to redistribute it
+and/or modify it under the same terms as Perl itself.
+
+URL:
+----
+
+The most up to date version of this script is available from the nms
+script archive at  <http://nms-cgi.sourceforge.net/>
+
+SUMMARY:
+--------
+
+wwwadmin.pl is a script which allows you maintain and administer a discussion
+forum on the web.
+
+FILES:
+------
+
+Here are the files pertaining to wwwadmin:
+  wwwadmin.pl   - An administration tool to delete messages
+  passwd.txt    - The encoded password and username for wwwadmin
+  ADMIN_README  - wwwadmin config and install instruction.
+
+CONFIGURATION and INSTALLATION:
+-------------------------------
+
+The configuration of wwwadmin.pl is very similar to wwwboard.pl. In fact, for all but two parameter settings, it should be the same as in wwwboad.pl (ie. copy paste them over from wwwboard.pl). Here is what should be set and how wwwadmin should be installed:
+
+* wwwadmin.pl
+   Settings (remember to carry other parameters over from wwwboard.pl):
+
+      $cgi_url     - This is the full website address (URL) to the wwwboard.pl
+                     file which will run the wwwboard.
+
+      $passwd_file - This is the name of the file, in $basedir, where the
+                     username and password for the board administrator will be
+                     stored.
+
+   Installation:
+      You must upload this file to your server's cgi-bin or in a directory where
+      CGI execution is allowed. Make sure the directory and path match the
+      $cgi_url put in the settings. You must also give the file the right
+      permissions. In order to do so, the file must be chmoded to 755 using the
+      following command:
+         chmod 755 wwwboard.pl
+
+* password.txt
+   Settings:
+      None.
+
+   Installation:
+      Simply upload this file to $basedir, as mentionned in wwwadmin.pl. You
+      also have to chmod the file to 666 (no, we are not the devil) using the
+      following command:
+         chmod 666 password.txt
+
+USAGE:
+------
+
+RUNNING WWWADMIN.
+        WWWAdmin is a self-contained script, in that all you have to do is 
+   call the script with a plain url (The url you used in $cgi_url) and it 
+   will give you a form which displays all of your options.  The options 
+   that are currently available in this release are:
+        Remove Messages
+        Remove Messages by Date
+        Remove Messages by Author
+        Remove Messages by Sorted Number
+        Change WWWAdmin Password
+
+All of these options require you to use a password and username once you 
+take the link.  The default username and password for WWWAdmin are:
+
+Username: WebAdmin
+Password: WebBoard
+
+They are case sensitive, so make sure you type them in correctly.  I suggest 
+you jump down to the explanation on Changing WWWAdmin Password before 
+you make this wwwboard available to the public.  A brief description of 
+how each WWWAdmin function works is below:
+
+REMOVE MESSAGES
+===============
+        When selecting this link, you will be taken to a form which gives you 
+the article number, two radio boxes, the subject, author and date that 
+the article was posted, for all articles.  The form is put inside of a 
+Netscape table, but I have tested it and it also works with lynx (a text 
+based browser) so I am sure it will work with others.  You can check the 
+radio boxes to the side of the messages that you wish to remove from 
+your WWWBoard.  Checking the check box to the left, will remove the 
+entire thread, while checking the check box on the right, simply removes 
+that single posting, whether it is imbeded in a thread or not.  This 
+will also remove the message out of your messages/ directory, and if you 
+select to remove the thread, it will remove all messages in that thread 
+out of your messages/ directory.
+
+REMOVE MESSAGES BY DATE
+=======================
+        This link will pop up a form that looks something like this:
+
+  Checkbox   Date1   # of Messages  Message Numbers
+
+You can click in the checkbox next to any dates of your choice and it 
+will remove all files that were posted on that date.  To see what files 
+are going to be removed and how many, you can look at the columns 
+labeled # of messages and message numbers.  If messages of an earlier 
+date happen to be at the head of a thread, they will be removed and the 
+next response down in the thread becomes the head of that thread.  It 
+will only remove messages with that date.
+
+REMOVE MESSAGES BY AUTHOR
+=========================
+        This link will pop up a form very similar to that which the Remove 
+Message by Date link brought up.  Except instead of different dates, you 
+will see the names of authors of messages.  You can check the checkbox 
+next to an authors name to remove all postings that he or she posted to 
+your message board.
+
+REMOVE MESSAGES BY SORTED NUMBER
+================================
+        This link brings up a form identical to the plain Remove Messages form, 
+except that the postings are sorted from lowest number to highest 
+number.  This can be useful if you want to delete postings in the order 
+they were posted, but this is probably the l east useful remove function.
+
+CHANGE PASSWORD
+===============
+        This form will ask you to fill in your current username and password 
+and allow you to change your username and password to whatever you 
+like.  If you want to keep the username the same, you can simply not 
+fill in the 'New Username' part of the script.  When changing your 
+password, which I suggest you do right when you get WWWAdmin working, 
+you will need to type the new password two times in a row, just to make 
+sure you don't mis-type it.  Then, hit submit and if you input the 
+correct old username and password, you will be given a response that 
+tells you the new username and password.  Do not forget your password, 
+because it will be encrypted in the passwd.txt file, just like your Unix 
+login password.  You will need to re-download the wwwadmin tool...
+
+SUPPORT:
+--------
+
+For support of this script please suscribe to and email:
+  <nms-cgi-support@lists.sourceforge.net>
