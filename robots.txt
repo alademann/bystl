@@ -1,0 +1,23 @@
+﻿# robots.txt file for yogastlouis.com
+# send e-mail to carol@yogastlouis.com for problems 
+# last updated on 4-4-2012 at 11:37 p.m. CDT
+
+#Sitemap: 
+
+User-agent: *
+#Disallow: *
+
+# DISALLOW DEPRECATED DIRECTORIES
+Disallow: */carol
+Disallow: */guest
+Disallow: */wwwboard
+
+# DISALLOW STATIC RESOURCES
+Disallow: *.js
+Disallow: *.css
+
+# DISALLOW ABBREVIATED LINKS THAT CONTENT SCRAPERS PRODUCE
+Disallow: *...*
+Disallow: *..*
+Disallow: *-.*
+Disallow: *,*
