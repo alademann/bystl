@@ -1,5 +1,5 @@
 ﻿# robots.txt file for yogastlouis.com
-# send e-mail to carol@yogastlouis.com for problems 
+# send e-mail to yogastlouis@yogastlouis.com for problems 
 # last updated on 4-4-2012 at 11:37 p.m. CDT
 
 #Sitemap: 
