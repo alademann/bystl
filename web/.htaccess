@@ -1,6 +1,6 @@
 # Media Temple
-	Action php5-script /gs-bin/php5-latest
-	AddHandler php5-script .php
+#	Action php5-script /gs-bin/php5-latest
+#	AddHandler php5-script .php
 # END Media Temple
 
 	BrowserMatch ^Mozilla/5 AddHandler php-stable .php
