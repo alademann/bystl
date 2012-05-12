@@ -1,0 +1,24 @@
+/*----------------------------------------------
+
+  PARTIAL:  _hero-unit.scss
+  PARENT:   _bootstrap.scss
+  
+----------------------------------------------*/
+
+.hero-unit {
+  padding: 60px;
+  margin-bottom: 30px;
+  background-color: darken($almostWhite, 2%);
+  @include tb_border-radius(6px);
+  h1 {
+    margin-bottom: 0;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+  p {
+    font-size: pxtoem(18);
+    font-weight: 200;
+    line-height: $baseLineHeight * 1.5;
+  }
+}

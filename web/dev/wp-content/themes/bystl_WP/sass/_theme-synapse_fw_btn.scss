@@ -1,0 +1,63 @@
+/* 
+    Document   : buttons
+    Created on : Jan 25, 2012, 9:55:57 PM
+    Author     : Dany
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+
+
+
+.rounded-1 {
+    -moz-border-radius: 99px;
+    -webkit-border-radius: 99px;
+    border-radius: 99px;
+	-ms-border-radius: 99px;
+	border-radius: 99px;
+}
+
+.rounded-2 {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.small-btn, .big-btn {
+    margin-top: 20px;
+    font-size: 13px;
+    float: left;
+    -moz-box-shadow: 0 1px 2px rgba(255, 255, 255, 0.4) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 1px 2px rgba(255, 255, 255, 0.4) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 2px rgba(255, 255, 255, 0.4) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF !important;
+    font-weight: bold;
+    padding: 9px 17px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.small-btn:hover, .big-btn:hover {
+    text-decoration: none;
+}
+
+.small-btn:active, .big-btn:active {
+    font-size: 13px;
+  
+    border: none;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
+    color: #FFFFFF !important;
+    font-weight: bold;
+     padding: 10px 18px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.big-btn {
+    font-size: 19px;
+    padding: 14px 22px;
+}
+.big-btn:active {
+    font-size: 19px;
+     padding: 15px 23px;
+}

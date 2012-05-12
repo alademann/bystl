@@ -1,0 +1,49 @@
+/* 
+    Document   : blue
+    Created on : Jan 25, 2012, 9:55:57 PM
+    Author     : Dany
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+
+
+.small-btn, .big-btn {
+       border-top: 1px solid #474747;
+    border-bottom: 1px solid #1c1c1c;
+    border-left: 1px solid #3a3a3a;
+    border-right: 1px solid #3a3a3a;
+background: rgb(98,98,98); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(98,98,98,1) 0%, rgba(28,28,28,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(98,98,98,1)), color-stop(100%,rgba(28,28,28,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(98,98,98,1) 0%,rgba(28,28,28,1) 100%); /* Chrome10+,Safari5.1+ */
+background: linear-gradient(top,  rgba(98,98,98,1) 0%,rgba(28,28,28,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(98,98,98,1) 0%,rgba(28,28,28,1) 100%); /* IE10+ */
+background: linear-gradient(top,  rgba(98,98,98,1) 0%,rgba(28,28,28,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#626262', endColorstr='#1c1c1c',GradientType=0 ); /* IE6-9 */
+
+
+}
+.small-btn:hover, .big-btn:hover {
+background: rgb(107,107,107); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(107,107,107,1) 1%, rgba(51,51,51,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(107,107,107,1)), color-stop(100%,rgba(51,51,51,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(107,107,107,1) 1%,rgba(51,51,51,1) 100%); /* Chrome10+,Safari5.1+ */
+background: linear-gradient(top,  rgba(107,107,107,1) 1%,rgba(51,51,51,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(107,107,107,1) 1%,rgba(51,51,51,1) 100%); /* IE10+ */
+background: linear-gradient(top,  rgba(107,107,107,1) 1%,rgba(51,51,51,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b6b6b', endColorstr='#333333',GradientType=0 ); /* IE6-9 */
+
+}
+.small-btn:active, .big-btn:active {
+  background: rgb(98,98,98); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(98,98,98,1) 0%, rgba(28,28,28,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(98,98,98,1)), color-stop(100%,rgba(28,28,28,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(98,98,98,1) 0%,rgba(28,28,28,1) 100%); /* Chrome10+,Safari5.1+ */
+background: linear-gradient(top,  rgba(98,98,98,1) 0%,rgba(28,28,28,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(98,98,98,1) 0%,rgba(28,28,28,1) 100%); /* IE10+ */
+background: linear-gradient(top,  rgba(98,98,98,1) 0%,rgba(28,28,28,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#626262', endColorstr='#1c1c1c',GradientType=0 ); /* IE6-9 */
+
+}

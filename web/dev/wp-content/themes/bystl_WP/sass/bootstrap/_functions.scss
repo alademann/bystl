@@ -1,0 +1,36 @@
+/*----------------------------------------------
+
+	PARTIAL:	_functions.scss
+	PARENT:		_bootstrap.scss
+	
+----------------------------------------------*/
+
+// Convert px to em
+@function pxtoem($target, $container: $baseFontSizeInt){
+  @return ($target/$container)+0em;
+}
+// Convert em to px
+@function emtopx($target, $container: $baseFontSizeInt){
+	@return ($target*$container)+0px;
+}
+
+// simply lighten rgb value when rgba is used in a place where filter cannot be used
+// by mixing the top color with the bottom color
+@function rgba_ie($color, $alpha, $bgcolor: $bodyBgColor){
+	$alpha_base: $alpha * 100;
+	@if not ($alpha_base <= 100) { 
+		// user sent opacity like 100 or 80 instead of 1 or .8
+		$alpha: ($alpha / 100);
+	} 
+	$ie_color: rgb(red($color), green($color), blue($color));
+	$ie_bgColor: rgb(red($bgcolor), green($bgcolor), blue($bgcolor));
+	$weight: ($alpha * 100) + 0%; // convert, for instance .7 into 70%
+	@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+		@return mix($ie_color, $ie_bgColor, $weight);
+	} @else {
+		@return rgba($color, $alpha);
+	}
+} // END @mixin rgba_ie
+
+$chisel-dark:							rgba($black, 0.1);
+$chisel-light:						rgba($white, 0.4);

@@ -1,0 +1,34 @@
+/*----------------------------------------------
+
+  PARTIAL:  _pager.scss
+  PARENT:   _bootstrap.scss
+  
+----------------------------------------------*/
+
+.pager {
+  margin-left: 0;
+  margin-bottom: 1em;
+  list-style: none;
+  text-align: center;
+  @include clearfix();
+}
+.pager li {
+  display: inline;
+}
+.pager a {
+  @include inline-block;
+  padding: 5px 14px;
+  background-color: #fff;
+  border: 1px solid $grayLighterD;
+  @include tb_border-radius(15px);
+}
+.pager a:hover {
+  text-decoration: none;
+  background-color: darken($almostWhite, 2%);
+}
+.pager .next a {
+  @include float(right);
+}
+.pager .previous a {
+  @include float(left);
+}

@@ -1,0 +1,39 @@
+/*----------------------------------------------
+
+  PARTIAL:  _thumbnails.scss
+  PARENT:   _bootstrap.scss
+  
+----------------------------------------------*/
+
+.thumbnails {
+  margin-left: -$gridGutterWidth;
+  list-style: none;
+  @include clearfix();
+}
+.thumbnails > li {
+  @include float(left);
+  margin: 0 0 $baseLineHeight $gridGutterWidth;
+}
+.thumbnail {
+  display: block;
+  padding: 4px;
+  line-height: 1;
+  border: 1px solid $grayLighterD;
+  @include tb_border-radius(4px);
+  @include tb_box-shadow(0 1px 1px rgba_ie($black,.075));
+}
+// Add a hover state for linked versions only
+a.thumbnail:hover {
+  border-color: $linkColor;
+  @include tb_box-shadow(0 1px 4px rgba_ie(rgb(0,105,214),.25));
+}
+// Images and captions
+.thumbnail > img {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.thumbnail .caption {
+  padding: 9px;
+}

@@ -1,0 +1,208 @@
+/*----------------------------------------------
+
+	PARTIAL:	_type.scss
+	PARENT:		_theme-synapse.scss
+	
+ ----------------------------------------------*/
+
+
+/*	HEADINGS, PARAGRAPHS, EMPHASIS, ETC
+---------------------------------------------- */
+h2 {
+	margin-bottom: 10px;
+} // END <h2>
+
+h3 {
+
+	.widget & {
+		border-bottom: 1px solid #6f6f6f;
+		margin-bottom: 15px;
+		padding-bottom: 7px;
+		color: #fff;
+		text-shadow: 1px 1px 0 rgba(0,0,0, 0.5);
+	} // END .widget <h3>
+
+	.sidebar .blog-widget & {
+		margin-bottom: 0;
+	} // END .sidebar .blog-widget <h3>
+
+	.footer & {
+		border-bottom: 1px solid #c9c9c9;
+		padding-bottom: 5px;
+		margin-bottom: 20px;
+	} // END .footer <h3>
+
+} // END <h3>
+
+p {
+	text-shadow: 1px 1px rgba(255,255,255, 0.8);
+	color: #555555;
+	font-size: 12px;
+
+	.page-content & {
+		text-shadow: none;
+	}
+
+	.sidebar & {
+		color: #969696;
+		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+	}
+
+	.video-holder &, .portfolio-item & {
+		color: #848484;
+		font-family: 'Droid Serif',serif;
+		font-weight: normal;
+		font-size: 12px;
+		font-style: italic;
+		text-shadow: -1px -1px rgba(0, 0, 0, 0.4);
+		margin: 15px 0 0 0;	
+	}
+
+	.footer & {
+		font-size: 12px;
+	}
+
+} // END <p>
+
+em {
+	font-style: italic;
+} // END <em>
+
+/*	LINKS
+---------------------------------------------- */
+a {
+	color: #235C98;
+	.sidebar & { 
+		color: #cdcdcd; 
+	}
+	&:hover { 
+		color: #407fc1; 
+	}
+
+	.video-holder &, .portfolio-item & {
+		color: #989898;
+		-moz-transition:color 0.3s ease-in;
+		-webkit-transition:color 0.3s ease-in;
+		-o-transition:color 0.3s ease-in;
+
+		&:hover {
+			color: #fff;	
+		}
+	} // END .video-holder <a>, .portfolio-item <a>
+
+	.cat-item & {
+		font-size: 13px;
+		line-height: 22px;
+		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+		float: left;
+	} // END .cat-item <a>
+
+	.cat-item li & {
+
+		&:hover {
+			text-decoration: none;
+			color: #fff;
+		}
+	} // END .cat-item <li><a>
+
+	.small-footer & {
+		color: #555;
+		font-weight: bold;
+		font-style: italic;
+		text-decoration: underline;
+	} // END .small-footer <a>
+
+} // END <a>
+
+/*	LISTS
+---------------------------------------------- */
+ul, ol {
+
+	.article-excerpt &, .portfolio-item-content & {
+		padding: 5px 0;
+	} // END .article-excerpt <ol>/<ul>, .portfolio-item-content <ol>/<ul>
+} // END <ol> && <ul>
+
+ol {
+	list-style: decimal outside none !important;
+} // END <ol>
+
+ul {
+
+	.page-content &, .widget & {
+		margin: 12px 0;
+
+		ul {
+			margin-top: 10px;
+		} // END .page-content <ul><ul>, .widget <ul><ul>
+
+	}
+
+	.article-excerpt &, .portfolio-item-content & {
+
+		li {
+			padding-left: 18px;
+			background: url(img/list-bullet.png) no-repeat top left;
+			margin-bottom: 10px;
+		}
+		
+	} // END .article-excerpt <ul>, .portfolio-item-content <ul>
+} // END <ul>
+
+li {
+
+	ol & {
+		margin-left: 18px;
+		margin-bottom: 10px;
+
+		pre & {
+			margin: 0;
+		} // END <pre><ol><li>
+
+	} // END <ol><li>
+
+	.labels & {
+		margin-bottom: 10px;
+	} // END .labels <li>
+
+	.sidebar ul & {
+		margin-left: 0 !important;
+	} // END .sidebar <ul><li>
+
+	.dotted ul &, .dotted & {
+		padding-left: 18px;
+		background: url(img/list-bullet.png) no-repeat top left;
+		margin-bottom: 10px
+	} // END .dotted <li>
+
+} // END <li>
+
+
+/*	BLOCKQUOTES, CODE, ETC
+---------------------------------------------- */
+blockquote {
+	font-family: 'Droid Serif', serif;
+	font-size: 15px;
+	line-height: 22px;
+	position: relative;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top: 0 !important;
+
+	&:after {
+		color: #CCCCCC;
+		content: open-quote;
+		font-family: 'Droid Serif',serif;
+		font-size: 5em;
+		left: -42px;
+		margin-right: 0.25em;
+		position: absolute;
+		top: 15px;
+	}
+} // END blockquote
+
+/*	WORDPRESS CLASS TYPOGRAPHY
+---------------------------------------------- */
+.page-title {
+	margin-bottom: 10px;
+}

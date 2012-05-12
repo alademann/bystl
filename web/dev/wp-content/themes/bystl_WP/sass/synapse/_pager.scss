@@ -1,0 +1,59 @@
+/*----------------------------------------------
+
+	PARTIAL:	_pager.scss
+	PARENT:		_theme-synapse.scss
+	
+ ----------------------------------------------*/
+ 
+.content-slider-pager {
+	margin-bottom: 35px;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.portfolio-pager {
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 35px;
+}
+
+.sidebar-blog-pager, .sidebar-testimonial-pager {
+	margin-bottom: 10px;
+}
+.testimonial-pager, .blog-pager, .sidebar-blog-pager, .sidebar-testimonial-pager {
+	text-align: center;
+	margin-top: 20px;
+}
+.slider-pager {
+	width: 575px;
+	margin: 20px 0;
+	text-align: center;
+}
+.footer #testimonial-pager a, .footer #blog-pager a {
+	background: url(img/dot.png) no-repeat top left !important;
+}
+.footer #testimonial-pager .activeSlide, .footer #blog-pager .activeSlide {
+	 background: url(img/dot-active.png) no-repeat top left !important;
+}
+#testimonial-pager a, #blog-pager a, #sidebar-blog-pager a, #sidebar-testimonial-pager a {
+	background: url(img/dot-alternate.png) no-repeat top left;
+	width: 11px;
+	height: 11px;
+	display: inline-block;
+	text-indent: -9999px;
+	margin: 0 5px;
+}
+#testimonial-pager .activeSlide, #blog-pager .activeSlide, #sidebar-blog-pager .activeSlide, #sidebar-testimonial-pager .activeSlide {
+	background: url(img/dot-alternate-active.png) no-repeat top left;
+}
+#portfolio-pager a, .slider-pagers a, #content-slider-pager a {
+	background: url(img/dot.png) no-repeat top left;
+	width: 11px;
+	height: 11px;
+	display: inline-block;
+	text-indent: -9999px;
+	margin: 0 5px;
+}
+#portfolio-pager .activeSlide, #content-slider-pager .activeSlide, .slider-pagers .activeSlide {
+	background: url(img/dot-active.png) no-repeat top left;
+}

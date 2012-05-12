@@ -1,0 +1,66 @@
+/*----------------------------------------------
+
+	PARTIAL:	_footer.scss
+	PARENT:		_theme-synapse.scss
+	
+ ----------------------------------------------*/
+ 
+ /*	BIG FOOTER
+ ---------------------------------------------- */
+ .footer {
+	background: url("img/footer-shadow.png") repeat-x scroll left top #FFFFFF;
+	padding: 40px 0 55px 0;
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	color: #555555;
+	font-size: 12px;
+	text-shadow: 1px 1px rgba(255, 255, 255, 0.8);
+	font-weight: normal;
+	line-height: 18px;
+	margin-bottom: 9px;
+
+	.small-btn {
+		padding: 7px 17px;
+	} // END .footer .small-btn
+	
+} // END .footer
+
+/*	SMALL FOOTER (end of page)
+---------------------------------------------- */
+.small-footer {
+	margin-top: 30px;
+}
+.footer-left {
+	float: left;
+}
+.footer-right {
+	float: right;
+}
+
+/*	NEXT / PREV (current unused)
+---------------------------------------------- */
+// .next {
+// 	background: url(img/arrow-right.png) no-repeat top left;
+// 	width: 11px;
+// 	height: 17px;
+// 	text-indent: -9999px;
+// 	float: right;
+// 	position: absolute;
+// 	top: -30px;
+// 	right: -30px;
+// }
+// .next:active {
+// 	background: url(img/arrow-right.png) no-repeat bottom left;
+// }
+// .prev {
+// 	background: url(img/arrow-left.png) no-repeat top left;
+// 	width: 11px;
+// 	height: 17px;
+// 	text-indent: -9999px;
+// 	float: left;
+// 	position: absolute;
+// }
+// .prev:active {
+// 	background: url(img/arrow-left.png) no-repeat bottom left;
+// }

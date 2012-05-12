@@ -1,0 +1,37 @@
+/*----------------------------------------------
+
+	PARTIAL:	_utilities.scss
+	PARENT:		_theme-synapse.scss
+	
+----------------------------------------------*/
+ 
+.alignright {
+	float: right;
+	margin: 30px 0 30px 30px;
+}
+.alignleft {
+	float: left;
+	margin: 30px 30px 30px 0;
+}
+.span-one-third {
+	z-index: 2;
+
+	&.isotope-hidden {
+		pointer-events: none;
+		z-index: 1;
+	}
+}
+.isotope-hidden.isotope-item {
+	pointer-events: none;
+	z-index: 1;
+}
+
+
+/*	HIDDEN / VISIBLE ITEMS
+---------------------------------------------- */
+.pp_social {
+	display: none;
+}
+.sticky, .bypostauthor  {
+	display: visible;
+}

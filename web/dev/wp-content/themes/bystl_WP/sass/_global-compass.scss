@@ -1,0 +1,44 @@
+/*----------------------------------------------
+
+	PARTIAL:	_global-compass.scss
+	PARENT:		style.scss
+	
+----------------------------------------------*/
+
+@import "compass";
+@import "compass/support";
+@import "compass/css3";
+@import "compass/typography";
+@import "compass/utilities";
+@import "compass/layout";
+@import "compass/reset";
+
+// COMPASS DEFAULTS
+// ----------------
+$default-text-shadow-color: #f2f2f2;
+$default-text-shadow-h-offset: 1px;
+$default-text-shadow-v-offset: 1px;
+$default-text-shadow-blur: 0;
+
+$default-box-shadow-inset: false;
+$default-box-shadow-h-offset: 0;
+$default-box-shadow-v-offset: 1px;
+$default-box-shadow-blur: 3px;
+$default-box-shadow-spread: 0;
+$default-box-shadow-color: rgba(#000000, 0.25);
+$default-box-shadow: -compass-space-list(compact(if($default-box-shadow-inset, inset, false), $default-box-shadow-h-offset, $default-box-shadow-v-offset, $default-box-shadow-blur, $default-box-shadow-spread, $default-box-shadow-color));
+
+$default-transition-property: all;
+$default-transition-duration: 1s;
+$default-transition-function: false;
+$default-transition-delay: false;
+$default-transition: -compass-space-list(compact($default-transition-property, $default-transition-duration, $default-transition-function, $default-transition-delay));
+
+$default-border-radius: 5px;
+
+$default-translate-x: 0;
+$default-translate-y: 0;
+$default-translate-z: 0;
+
+$default-skew-x: 0;
+$default-skew-y: 0;

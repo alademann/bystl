@@ -1,0 +1,12 @@
+/*----------------------------------------------
+
+	PARTIAL:	_grid.scss
+	PARENT:		_bootstrap.scss
+	
+----------------------------------------------*/
+
+// Fixed (940px)
+@include gridSystem-generate($gridColumns, $gridColumnWidth, $gridGutterWidth);
+
+// Fluid (940px)
+@include fluidGridSystem-generate($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth);

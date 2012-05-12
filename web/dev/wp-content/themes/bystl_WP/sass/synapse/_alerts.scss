@@ -1,0 +1,23 @@
+/*----------------------------------------------
+
+	PARTIAL:	_alerts.scss
+	PARENT:		_theme-synapse.scss
+	
+ ----------------------------------------------*/
+ 
+.alert-message {
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0, 0.2);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0, 0.2);
+	-o-box-shadow:0 1px 2px rgba(0,0,0, 0.2);
+}
+.alert-message p {
+	color: inherit;
+	text-shadow: 1px 1px rgba(0,0,0, 0.3);
+}
+.warning p {
+	text-shadow: 1px 1px rgba(255,255,255, 0.3);
+}
+.contact-error {
+	margin-top: 25px;
+	width: 380px;
+}

@@ -1,0 +1,402 @@
+/*----------------------------------------------
+
+	PARTIAL:	_navbar.scss
+	PARENT:		_bootstrap.scss
+	
+----------------------------------------------*/
+
+// COMMON STYLES
+// -------------
+
+.navbar {
+  overflow: visible;
+  margin-bottom: 1em;
+}
+
+// Gradient is applied to it's own element because overflow visible is not honored by IE when filter is present
+.navbar-inner {
+  padding-left:  20px;
+  padding-right: 20px;
+  @include gradient-vertical($navbarBackgroundHighlight, $navbarBackground);
+  @include tb_border-radius(4px);
+  $shadow: 0 1px 3px rgba_ie($black,.25), 0 -1px 0 rgba_ie($black,.1) inset;
+  @include tb_box-shadow($shadow);
+}
+
+// Navbar button for toggling navbar items in responsive layouts
+.btn-navbar {
+  @include float(right);
+  padding: 7px 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  @include buttonBackground($navbarBackgroundHighlight, $navbarBackground);
+  $shadow: 0 1px 0 rgba_ie($white, 0.1) inset, 0 1px 0 rgba_ie($white, .075);
+  @include tb_box-shadow($shadow);	
+	display: none;
+}
+.btn-navbar .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: darken($almostWhite, 2%);
+  @include tb_border-radius(1px);
+  @include tb_box-shadow(0 1px 0 rgba_ie($black,.25));
+}
+.btn-navbar .icon-bar + .icon-bar {
+  margin-top: 3px;
+}
+// Override the default collapsed state
+.nav-collapse.collapse {
+  height: auto;
+}
+
+
+// Brand, links, text, and buttons
+.navbar {
+  // Hover and active states
+  .brand:hover {
+    text-decoration: none;
+  }
+  // Website or project name
+  // in case the brand name is one the home page, in which case we would obviously want to make it be within an h1 elem for SEO purposes.
+  h1 { margin-bottom: 0; line-height: 1; } 
+  .brand {
+    @include float(left);
+    display: block;
+    padding: 8px 20px 12px;
+    // TODO: uncomment these to align with upstream defaults
+    // and override in my local aa template .scss file.
+    //margin-left: -20px; // negative indent to left-align the text down the page
+    //font-size: pxtoem(20);
+    font-weight: 200;
+    line-height: 1;
+    color: $white;
+  }
+  // Plain text in topbar
+  .navbar-text {
+    margin-bottom: 0;
+    line-height: 40px;
+    color: $navbarText;
+    a:hover {
+      color: $white;
+      background-color: transparent;
+    }
+  }
+  // Buttons in navbar
+  .btn,
+  .btn-group {
+    margin-top: 5px; // make buttons vertically centered in navbar
+  }
+  .btn-group .btn {
+    margin-top: 0; // then undo the margin here so we don't accidentally double it
+  }
+}
+
+// Navbar forms
+.navbar-form {
+  margin-bottom: 0; // remove default bottom margin
+  @include clearfix();
+  input,
+  select {
+    @include inline-block;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+  .radio,
+  .checkbox {
+    margin-top: 5px;
+  }
+  input[type="image"],
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-top: 3px;
+  }
+  .input-append,
+  .input-prepend {
+    margin-top: 6px;
+    white-space: nowrap; // preven two  items from separating within a .navbar-form that has .pull-left
+    input {
+      margin-top: 0; // remove the margin on top since it's on the parent
+    }
+  }
+}
+
+// Navbar search
+.navbar-search {
+	$query-vpad: 4;
+	$centeredLineHeight: $navbarHeight_int - ($query-vpad + 1);
+
+  position: relative;
+  @include float(left);
+  margin: 0;
+	padding: 0 10px;
+	// center vertically
+	line-height: pxtoem($centeredLineHeight);
+  .search-query {
+    padding: $query-vpad+0px 9px;
+    @include font-sans-serif($baseFontSize, $baseLineHeight, normal);
+    color: $white;
+    color: rgba_ie($white,.75);
+		@include rgba_bg($black,0.3);
+    border: 1px solid $almostBlack;
+    $shadow: inset 0 1px 2px rgba_ie($black,.1), 0 1px 0px rgba_ie($white,.15);
+    @include tb_box-shadow($shadow);
+    @include tb_transition(none);
+
+    // Placeholder text gets special styles; can't be bundled together though for some reason
+    @include placeholder($grayLighter);
+    
+    // Hover states
+    &:hover {
+      color: $white;
+      //background-color: $grayLight; // see below
+      background-color: rgba_bg($white, 0.1); // use a prebuilt function that adds the necessary ie tweaks if/when rgba isn't supported
+    }
+    // Focus states (we use .focused since IE7-8 and down doesn't support :focus)
+    &:focus,
+    &.focused {
+      padding: 5px 10px;
+      color: $grayDark;
+      text-shadow: 0 1px 0 $white;
+      background-color: $white;
+      border: 0;
+      @include tb_box-shadow(0 0 3px rgba_ie($black,.15));
+      outline: 0;
+    }
+  }
+}
+
+
+// FIXED NAVBAR
+// ------------
+
+.navbar-fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $zindexFixedNavbar;
+}
+.navbar-fixed-top .navbar-inner {
+  padding-left:  0;
+  padding-right: 0;
+  @include tb_border-radius(0);
+}
+
+
+// NAVIGATION
+// ----------
+
+.navbar { // nesting these within .navbar for easier grouping semantics
+
+	.nav {
+		position: relative;
+		left: 0;
+		display: block;
+		@include float(left);
+		margin: 0 0 0 10px;
+
+		&+ .nav, &:first-child { margin: 0 0 0 0; }
+
+		&.pull-right {
+			@include float(right); // redeclare due to specificity
+		}
+
+	
+		& > li {
+			display: block;
+			@include float(left);
+		}
+
+		// Links
+		& > li > a {
+			float: none;
+			padding: 10px 10px 11px;
+			line-height: 19px;
+			color: $navbarLinkColor !important;
+			text-decoration: none;
+			text-shadow: 0 -1px 0 rgba_ie($black,.25);
+		}
+		// Hover
+		& > li > a:hover {
+			background-color: $navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from .active
+			color: $navbarLinkColorHover !important;
+			text-decoration: none;
+		}
+
+		// Active nav items
+		// updated to work well with wordpress menu integration
+		& .active > a,
+		& .active > a:hover,
+		& .current-menu-item > a,
+		& .current-menu-item > a:hover,
+		& .current-page-item > a,
+		& .current-page-item > a:hover {
+			color: $navbarLinkColorHover !important;
+			text-decoration: none;
+			background-color: $navbarLinkBackgroundHover;
+			//background-color: rgba_ie($black,.5);
+		}
+
+		// Dividers (basically a vertical hr)
+		.divider-vertical {
+			height: $navbarHeight;
+			width: 1px;
+			margin: 0 9px;
+			overflow: hidden;
+			background-color: $navbarBackground;
+			border-right: 1px solid $navbarBackgroundHighlight;
+		}
+
+	// adding a "big" navbutton possibility, as well as a way to use the "divider-vertical" look without having to place
+	// a pointless <li> in your html markup
+		& > li.strong, & > li.bold,
+		& > li.big, & > li.divider,
+		&#primary-nav > li {
+			a {
+				padding: 10px 16px 11px;
+				// simulate the look 'n feel of .divider-vertical
+				@include tb_box-shadow(1px 0 0 0 $navbarBackground inset, 1px 0 0 0 $navbarBackground);
+				border-left: 1px solid $navbarBackgroundHighlight;
+			}
+			// right border on the last <li> in the nav
+			&:last-child {
+				a {
+					border-right: 1px solid $navbarBackgroundHighlight;
+				}
+			}
+		} // END .nav#primary-nav > li
+
+		& > li.big, &#primary-nav > li  {
+		
+			a {
+				font-weight: bold;
+				font-size: $baseFontSize + 2;
+			}
+		}
+
+	// END "big" navbutton
+
+		// Dropdown menus
+		// --------------
+
+		// Menu position and menu carets
+		.dropdown-menu {
+			margin-top: 1px;
+			@include border-bottom-left-radius(4px);
+			@include border-bottom-right-radius(4px);
+			//@include tb_border-radius(4px); // don't want the top two corners to be rounded since they sit flush against the bottom edge of the navbar
+			&:before {
+				content: '';
+				@include inline-block;
+				border-left:   7px solid transparent;
+				border-right:  7px solid transparent;
+				border-bottom: 7px solid darken($grayLighterD, 5);
+				border-bottom-color: rgba_ie($black,.2);
+				position: absolute;
+				top: -7px;
+				left: 9px;
+			}
+			&:after {
+				content: '';
+				@include inline-block;
+				border-left:   6px solid transparent;
+				border-right:  6px solid transparent;
+				border-bottom: 6px solid $white;
+				position: absolute;
+				top: -6px;
+				left: 10px;
+			}
+
+			&#seperated-nav {
+				li.divider:last-child {
+					display: none;
+				}
+			}
+
+		} // END .dropdown-menu
+
+		// Dropdown toggle caret
+		$caretInactive: darken($navbarLinkColor,25%);
+		$caretActive: darken($navbarLinkColorHover,15%);
+		
+		& .dropdown {
+		// .dropdown outer li
+
+			& > .dropdown-toggle {
+				// .dropdown anchor link
+				color: $navbarLinkColor;
+
+				.caret {
+					// .dropdown anchor link caret (arrow)
+					@include opacity(100);
+					border-top-color: $caretInactive;
+					//@include tb_rotate(180deg);	
+				}
+
+				// HOVERED .dropdown anchor link
+				&:hover {
+					color: $navbarLinkColorHover;
+
+					.caret {
+						border-top-color: $caretActive;
+					}
+
+				} // END HOVERED .dropdown anchor link
+
+			} // END .dropdown anchor link (.dropdown-toggle)
+
+			&.open {
+			// .dropdown outer li (OPEN)
+
+				& > .dropdown-toggle {
+					// .dropdown anchor link (OPEN)
+					color: lighten($navbarLinkColor, 20%);
+
+					.caret {
+						// .dropdown anchor link caret (arrow) (OPEN)
+						border-top-color: $caretInactive;
+						@include opacity(50);
+						@include tb_rotate(180deg);	
+					}
+
+					// HOVERED .dropdown anchor link (OPEN)
+					&:hover {
+						color: $navbarLinkColorHover;
+
+						.caret {
+							border-top-color: $caretActive;
+						}
+
+					} // END (OPEN) HOVERED .dropdown anchor link
+
+				} // END > .dropdown-toggle
+
+			} // END .dropdown outer li (OPEN)
+
+		} // END .nav .dropdown
+
+
+		// Right aligned menus need alt position
+		&.pull-right {
+			margin-left: 10px;
+			margin-right: 0;
+
+			.dropdown-menu {
+				left: auto;
+				right: 0;
+				&:before {
+					left: auto;
+					right: 12px;
+				}
+				&:after {
+					left: auto;
+					right: 13px;
+				}
+			} // END .nav.pull-right .dropdown-menu
+
+		} // END .nav.pull-right
+		
+	} // END .navbar .nav
+
+} // END .navbar

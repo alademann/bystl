@@ -1,0 +1,24 @@
+/*----------------------------------------------
+
+	PARTIAL:	_forms.scss
+	PARENT:		_theme-synapse.scss
+	
+----------------------------------------------*/
+
+#form-container { 
+	tr, td, th {
+		border: none !important;
+	}
+}
+#subject {
+	width: 220px;
+}
+label {
+	line-height: 26px !important;
+}
+textarea {
+	.your-message & { width: 565px !important; }
+}
+.demo-fieldset {
+	border: none;
+}

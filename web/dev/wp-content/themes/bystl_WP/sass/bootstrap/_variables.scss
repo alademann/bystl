@@ -1,0 +1,162 @@
+/*----------------------------------------------
+
+	PARTIAL:	_variables.scss
+	PARENT:		_bootstrap.scss
+
+	Variables to customize the look and feel of Bootstrap
+
+----------------------------------------------*/
+
+$warn_if_compass_not_default: false; // set this to true if you want to be warned when compass is not default
+// if you are importing compass stuff... mark here what you've imported, otherwise - mark it false
+$compass: true;
+$compass_support: true;
+$compass_css3: true;
+$compass_typography: true;
+$compass_util: true;
+$compass_layout: true;
+$compass_reset: true;
+
+// local var only
+$bodyBgImg:	none;
+//image-url("gridlocked/light/bg_pattern_gray_leather_subtler.png"); 
+
+// GLOBAL VALUES
+// --------------------------------------------------
+@mixin rgbaok {
+	@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+		$rgba: false;
+	}
+	@else {
+		$rgba: true;
+	}
+}
+@include rgbaok;
+
+// Links
+$linkColor:             #08c !default;
+$linkColorHover:        darken($linkColor, 20) !default;
+
+// contrast shades
+$black:                 #000 !default; // default is black
+$almostBlack:						#111 !default; // almostBlack
+$grayDarker:            #222 !default; // grayDarker
+$grayDark:              #333 !default; // grayDark
+$gray4:									#444 !default; // gray4
+$gray:                  #555 !default; // gray
+$gray6:									#666 !default; // gray8
+$grayMedium:						#777 !default; // grayMedium
+$grayLight:             #999 !default; // grayLight
+$grayLighterD:					#ddd !default; // grayLighterD
+$grayLighter:           #eee !default; // grayLighter
+$almostWhite:						#fcfcfc !default; // almostWhite
+$white:                 #fff !default; // white
+
+// Accent colors
+$blue:                  #049cdb !default;
+$blueDark:              #0064cd !default;
+$blueLight:							#52a8ec !default;  
+$teal:									#00b3ee !default;
+$green:                 #46a546 !default;
+$red:                   #9d261d !default;
+$yellow:                #ffc40d !default;
+$orange:                #f89406 !default;
+$pink:                  #c3325f !default;
+$hotPink:								#dd1144 !default;
+$purple:                #7a43b6 !default;
+$likeItColor:						#f56559 !default;
+
+// Primary elem colors
+$contrasted-dark-default: $black;
+$contrasted-light-default: $white;
+$contrasted-lightness-threshold: 30%;
+
+$textColor:             $grayDark !default;
+$textEmphasis:					darken($textColor, 30) !important;
+$bodyBgColor:						$grayLighter;
+
+// Typography
+$baseFontSizeInt:				13 !default;
+$goldenRule:						1.385;
+
+$baseFontSize:          $baseFontSizeInt+0px !default;
+$baseLineHeight:        $goldenRule+0em !default;
+$baseFontType:					sans-serif !default;
+$baseFontFamily:        $baseFontSansSerif !default;
+
+$baseH1Size:						30 !default;
+$baseH1Size_px:					pxtoem($baseH1Size);
+$headingRule:						1.2;
+$headingIncrement:			5;
+
+
+// Buttons
+$primaryButtonBackground:    $linkColor !default;
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+$zindexDropdown:					1000 !default;
+$zindexPopover:						1010 !default;
+$zindexTooltip:						1020 !default;
+$zindexFixedNavbar:				1030 !default;
+$zindexModalBackdrop:			1040 !default;
+$zindexModal:							1050 !default;
+
+// Sprite icons path
+$iconSpritePath:          image-url("icons/glyphicons-halflings.png");
+$iconWhiteSpritePath:     image-url("icons/glyphicons-halflings-white.png");
+
+// Input placeholder text color
+$placeholderText:					$grayLight !default;
+
+// Hr border color
+$hrBorder:								$grayLighter;
+
+// Form states and alerts
+$warningText:             #c09853 !default;
+$warningBackground:       #fcf8e3 !default;
+$warningBorder:           darken(adjust-hue($warningBackground, -10), 3%) !default;
+
+$errorText:               #b94a48 !default;
+$errorBackground:         #f2dede !default;
+$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%) !default;
+
+$successText:             #468847 !default;
+$successBackground:       #dff0d8 !default;
+$successBorder:           darken(adjust-hue($successBackground, -10), 5%) !default;
+
+$infoText:                #3a87ad !default;
+$infoBackground:          #d9edf7 !default;
+$infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
+
+$page-footer-height: 0;
+
+// Navbar
+$navbarHeight_int:								40;
+$navbarHeight:                    $navbarHeight_int+0px !default;
+$navbarBackground:                $grayDarker !default;
+$navbarBackgroundHighlight:       $grayDark !default;
+$navbarLinkBackgroundHover:       darken($navbarBackground, 50%);
+
+$navbarText:                      $grayLight !default;
+$navbarLinkColor:                 $grayLight !default;
+$navbarLinkColorHover:            $white !default;
+
+// GRID
+// ----
+
+// Default 940px grid
+$gridColumns:             12 !default;
+$gridColumnWidth:         60px !default;
+$gridGutterWidth:         20px !default;
+$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+
+// Fluid grid
+$fluidGridColumnWidth:    5.732655983% !default;
+$fluidGridGutterWidth:    2.837102564% !default;

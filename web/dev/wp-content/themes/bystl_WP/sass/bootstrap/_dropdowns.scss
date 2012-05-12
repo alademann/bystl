@@ -1,0 +1,187 @@
+/*----------------------------------------------
+
+  PARTIAL:  _dropdowns.scss
+  PARENT:   _bootstrap.scss
+  
+----------------------------------------------*/
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+// give details area the same effect as input:focus when the summary elem is hovered
+details, details.well, #bd details.well {
+	@extend .trans;
+	@extend .tp_all;
+	//@extend .tt_easeInOut;
+
+	&.hover {
+		@include input_focus();
+	}
+	summary {
+		
+		&:hover, &:hover:before {
+			//color: $linkColorHover;
+		}
+	}
+}
+
+details.well, #bd details.well {
+	overflow: hidden;
+	summary.h2 { 
+		.inner {
+			// cover up the inner shadow of the well
+			background: $bodyBgColor $bodyBgImg left top repeat;
+			@extend .inverse-well;
+			@include border-corner-radius(bottom, right, $wellCornerRadius);
+		}
+		// when the summary stacks atop the description
+			@media (max-width: 767px) { 
+				.inner {
+					@extend .inverse-well-stacked;
+					@include border-corner-radius(bottom, right, 0);
+				}
+				line-height: normal;
+			} // END @media
+	}
+}
+
+// Use the .menu class on any <li> element within the topbar or ul.tabs and you'll get some superfancy dropdowns
+.dropdown {
+  position: relative;
+}
+.dropdown-toggle {
+  // The caret makes the toggle a bit too tall in IE7
+  @include ie7(margin-bottom, -3px);
+}
+.dropdown-toggle:active,
+.open .dropdown-toggle {
+  outline: 0;
+}
+// Dropdown arrow/caret
+.caret {
+  @include inline-block;
+  width: 0;
+  height: 0;
+  text-indent: -99999px;
+  // IE7 won't do the border trick if there's a text indent, but it doesn't
+  // do the content that text-indent is hiding, either, so we're ok.
+  @include ie7(text-indent, 0);
+  vertical-align: top;
+  border-left:  4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top:   4px solid $black;
+}
+.caret, summary:before {
+	@include opacity(30);
+  content: "\2193";
+	font-family: $baseFontFamily;
+}
+summary { cursor: pointer; }
+summary:before {
+	content: "";
+	visibility: hidden;
+}
+summary:hover { cursor: pointer; }
+
+.dropdown .caret {
+	$caretSpacing: 2px;
+  margin-top: 8px;
+  margin-left: $caretSpacing;
+	.navbar & { margin-left: ($caretSpacing * 2); }
+}
+.dropdown:hover .caret,
+.open.dropdown .caret,
+details[open] summary:before, summary:hover:before {
+  @include opacity(100);
+}
+// The dropdown menu (ul)
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: $zindexDropdown;
+  @include float(left);
+  display: none; // none by default, but block on "open" of the menu
+  @include min-width(160px);
+  padding: 4px 0;
+  margin: 0; // override default ul
+  list-style: none;
+  background-color: $white;
+  border-color: darken($grayLighterD, 5);
+  border-color: rgba_ie($black,.2);
+  border-style: solid;
+  border-width: 1px;
+  @include tb_border-radius(0 0 5px 5px);
+  @include tb_box-shadow(0 5px 10px rgba_ie($black, 0.2));
+	@include tb_background-clip(padding-box);
+	@include ie7(border-right-width, 2px);
+	@include ie7(border-bottom-width, 2px);
+   
+  // Allow for dropdowns to go bottom up (aka, dropup-menu)
+  &.bottom-up {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 2px;
+  }
+
+  // Dividers (basically an hr) within the dropdown
+  .divider {
+    height: 1px;
+    margin: 5px 1px;
+    overflow: hidden;
+    background-color: #e5e5e5;
+    border-bottom: 1px solid $white;
+
+    // IE7 needs a set width since we gave a height. Restricting just
+    // to IE7 to keep the 1px left/right space in other browsers.
+    // It is unclear where IE is getting the extra space that we need
+    // to negative-margin away, but so it goes.
+		@include ie7(width, 2px);
+		@include ie7(width, 100%);
+		@include ie7(margin, -5px 0 5px);
+  }
+
+  // Links within the dropdown menu
+  a {
+    display: block;
+    padding: 3px 15px;
+    clear: both;
+    font-weight: normal;
+    line-height: $baseLineHeight;
+    color: $gray;
+    white-space: nowrap;
+  }
+}
+
+// Hover state
+.dropdown-menu li > a:hover,
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover {
+  color: $white !important;
+  text-decoration: none;
+  background-color: $linkColor;
+}
+
+// Open state for the dropdown
+.dropdown.open {
+  // IE7's z-index only goes to the nearest positioned ancestor, which would
+  // make the menu appear below buttons that appeared later on the page
+  @include ie7(z-index, $zindexDropdown);
+
+  .dropdown-toggle {
+    color: $white;
+    @include rgba_bg($black, 0.3);
+    //background: darken($grayLighterD, 5);
+    //background: rgba_ie($black,.3);
+  }
+  .dropdown-menu {
+    display: block;
+  }
+}
+
+// Typeahead
+.typeahead {
+  margin-top: 2px; // give it some space to breathe
+  @include tb_border-radius(4px);
+}

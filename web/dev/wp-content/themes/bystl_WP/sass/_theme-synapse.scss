@@ -1,0 +1,28 @@
+/*----------------------------------------------
+
+	PARTIAL:	_theme-synapse.scss
+	PARENT:		style.scss
+	
+----------------------------------------------*/
+
+@import "synapse/scaffolding";
+@import "synapse/utilities";
+@import "synapse/type";
+@import "synapse/header";
+@import "synapse/navs";
+@import "synapse/slider";
+@import "synapse/callout";
+@import "synapse/pager";
+@import "synapse/alternate";
+@import "synapse/footer";
+@import "synapse/images";
+@import "synapse/buttons";
+@import "synapse/forms";
+@import "synapse/alerts";
+@import "synapse/widgets";
+@import "synapse/portfolio";
+@import "synapse/article";
+@import "synapse/pagination";
+@import "synapse/comments";
+@import "synapse/gallery";
+@import "synapse/utilities"; // MUST be last to override

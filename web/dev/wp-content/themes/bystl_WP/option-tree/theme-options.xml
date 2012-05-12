@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+<wp_option_tree>
+  <row>
+    <id>1</id>
+    <item_id>general_default</item_id>
+    <item_title>Logo</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>2</id>
+    <item_id>custom_logo_img</item_id>
+    <item_title>Logo image</item_title>
+    <item_desc>Upload an image if you wish to use a custom logo.</item_desc>
+    <item_type>upload</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>3</id>
+    <item_id>tagline</item_id>
+    <item_title>Use tagline?</item_title>
+    <item_desc></item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>4</id>
+    <item_id>tagline_text</item_id>
+    <item_title>Tagline text</item_title>
+    <item_desc></item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>5</id>
+    <item_id>background</item_id>
+    <item_title>Background</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>6</id>
+    <item_id>choose_pattern</item_id>
+    <item_title>Choose Your Pattern</item_title>
+    <item_desc></item_desc>
+    <item_type>select</item_type>
+    <item_options>Graphy, Graphy2, Axiom, Brick, Connected, Fabric, Flower, Cube, Line, Noise, Square, Wood</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>7</id>
+    <item_id>background_pattern</item_id>
+    <item_title>Use Custom Background?</item_title>
+    <item_desc></item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>8</id>
+    <item_id>custom_bg</item_id>
+    <item_title>Custom Background</item_title>
+    <item_desc></item_desc>
+    <item_type>background</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>9</id>
+    <item_id>top_bar_icons</item_id>
+    <item_title>Top Bar Icons</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>10</id>
+    <item_id>twitter_icon</item_id>
+    <item_title>Twitter icon?</item_title>
+    <item_desc></item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>11</id>
+    <item_id>twitter_url</item_id>
+    <item_title>Twitter ID</item_title>
+    <item_desc></item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>12</id>
+    <item_id>facebook_icon</item_id>
+    <item_title>Facebook icon?</item_title>
+    <item_desc></item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>13</id>
+    <item_id>facebook_url</item_id>
+    <item_title>Facebook URL</item_title>
+    <item_desc></item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>14</id>
+    <item_id>phone_icon</item_id>
+    <item_title>Phone icon?</item_title>
+    <item_desc></item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>15</id>
+    <item_id>phone_url</item_id>
+    <item_title>Phone URL?</item_title>
+    <item_desc></item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>16</id>
+    <item_id>mail_icon</item_id>
+    <item_title>Mail icon?</item_title>
+    <item_desc></item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>17</id>
+    <item_id>mail_url</item_id>
+    <item_title>Mail URL?</item_title>
+    <item_desc></item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>18</id>
+    <item_id>home_options</item_id>
+    <item_title>Homepage Modules</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>19</id>
+    <item_id>slider_onoff</item_id>
+    <item_title>Display Slider?</item_title>
+    <item_desc></item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>20</id>
+    <item_id>cta_onoff</item_id>
+    <item_title>Display CTA?</item_title>
+    <item_desc></item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>21</id>
+    <item_id>portfolio_onoff</item_id>
+    <item_title>Display Portfolio?</item_title>
+    <item_desc></item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>22</id>
+    <item_id>cta_content</item_id>
+    <item_title>CTA Content</item_title>
+    <item_desc>You can use HTML here, I suggest H3 for title and wrap text in p /p tags for better rendering.</item_desc>
+    <item_type>textarea</item_type>
+    <item_options>4</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>23</id>
+    <item_id>cta_btn</item_id>
+    <item_title>Big CTA Button?</item_title>
+    <item_desc></item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes,No</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>24</id>
+    <item_id>cta_btn_text</item_id>
+    <item_title>CTA Button Text</item_title>
+    <item_desc></item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>25</id>
+    <item_id>cta_btn_url</item_id>
+    <item_title>CTA Button URL</item_title>
+    <item_desc></item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>26</id>
+    <item_id>slider</item_id>
+    <item_title>Homepage Slider</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>27</id>
+    <item_id>slider_select</item_id>
+    <item_title>Select Your Slider</item_title>
+    <item_desc></item_desc>
+    <item_type>select</item_type>
+    <item_options>Small Slider (Text), Small Slider (Thumbs), Full Width Slider (Text), Full Width Slider (Thumbs), Content Slider</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>28</id>
+    <item_id>slider_title</item_id>
+    <item_title>Slider Title</item_title>
+    <item_desc></item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>29</id>
+    <item_id>slider_text</item_id>
+    <item_title>Slider Text</item_title>
+    <item_desc></item_desc>
+    <item_type>textarea</item_type>
+    <item_options>3</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>30</id>
+    <item_id>button_text</item_id>
+    <item_title>Add A Button After Text?</item_title>
+    <item_desc></item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes, No</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>31</id>
+    <item_id>button_url</item_id>
+    <item_title>Button URL</item_title>
+    <item_desc></item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>32</id>
+    <item_id>button_text_text</item_id>
+    <item_title>Button Text</item_title>
+    <item_desc></item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>33</id>
+    <item_id>slides</item_id>
+    <item_title>Slides</item_title>
+    <item_desc></item_desc>
+    <item_type>slider</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>34</id>
+    <item_id>auto</item_id>
+    <item_title>Auto Slide</item_title>
+    <item_desc></item_desc>
+    <item_type>radio</item_type>
+    <item_options>Yes, No</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>35</id>
+    <item_id>color_scheme</item_id>
+    <item_title>Color Scheme</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>36</id>
+    <item_id>topbar_color</item_id>
+    <item_title>Top Bar Color</item_title>
+    <item_desc></item_desc>
+    <item_type>select</item_type>
+    <item_options>Blue, Red, Orange, Pink, Black</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>37</id>
+    <item_id>buttons_color</item_id>
+    <item_title>Buttons Color</item_title>
+    <item_desc></item_desc>
+    <item_type>select</item_type>
+    <item_options>Blue, Red, Orange, Pink, Black</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>38</id>
+    <item_id>footer</item_id>
+    <item_title>Footer</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>38</item_sort>
+  </row>
+  <row>
+    <id>39</id>
+    <item_id>footer_left_content</item_id>
+    <item_title>Footer Left Content</item_title>
+    <item_desc></item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>39</item_sort>
+  </row>
+  <row>
+    <id>40</id>
+    <item_id>footer_right_content</item_id>
+    <item_title>Footer Right Content</item_title>
+    <item_desc></item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>40</item_sort>
+  </row>
+</wp_option_tree>

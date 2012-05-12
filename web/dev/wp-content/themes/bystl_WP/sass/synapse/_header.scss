@@ -1,0 +1,29 @@
+/*----------------------------------------------
+
+    PARTIAL:    _header.scss
+    PARENT:     _theme-synapse.scss
+    
+ ----------------------------------------------*/
+ 
+.header {
+	background: url(img/top-bar-shadow.png) top left repeat-x #fff;
+	padding: 30px 0;
+	-moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+	-o-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+}
+.logo-container {
+    float: left;
+}
+.logo {
+	float: left;
+}
+.tagline {
+    color: #505050;
+    font-size: 13px;
+    border-left: 1px solid #eaeaea;
+    padding-left: 15px;
+    margin-left: 15px;
+    line-height: 38px;
+    font-style: italic;
+}

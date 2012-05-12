@@ -1,0 +1,26 @@
+/*----------------------------------------------
+
+  PARTIAL:  _breadcrumbs.scss
+  PARENT:   _bootstrap.scss
+  
+----------------------------------------------*/
+
+.breadcrumb {
+  padding: 7px 14px;
+  margin: 0 0 $baseLineHeight;
+  @include gradient-vertical($white, darken($almostWhite, 2%));
+  border: 1px solid $grayLighterD;
+  @include tb_border-radius(3px);
+  @include tb_box-shadow(0 1px 0 $white inset);
+  li {
+    display: inline;
+    text-shadow: 0 1px 0 $white;
+  }
+  .divider {
+    padding: 0 5px;
+    color: $grayLight;
+  }
+  .active a {
+    color: $grayDark;
+  }
+}

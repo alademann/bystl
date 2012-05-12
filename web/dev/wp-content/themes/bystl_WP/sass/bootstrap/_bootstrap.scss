@@ -1,0 +1,80 @@
+/*----------------------------------------------
+
+	PARTIAL:	_bootstrap.scss
+	PARENT:		style.scss
+	
+----------------------------------------------*/
+
+
+/*------------------------ WEBFONTS & FONT UTILITIES ------------------------*/
+// contains the mixins and vars necessary to load whatever is requested below
+@import "webfonts"; 
+// global webfont icons
+@include fontawesome_boiler;
+
+// Core variables and mixins
+@import "variables"; // Modify this for custom colors, font-sizes, etc
+@import "functions"; // these are my own special functions that i want to keep out of the variables file.
+@import "mixins";
+
+// CSS Reset
+@import "reset"; // is only include if mixin bs_reset is included
+
+@mixin do_reset{
+	@if not $compass_reset  { // $compass_reset can be changed in _variables.scss partial
+		@include bs_reset; // compass reset not in place
+		@debug "compass reset not found, using bootstrap reset instead";
+	}
+} // END do_reset
+
+@include do_reset;
+
+
+// Grid system and page structure
+@import "scaffolding";
+@import "grid";
+@import "layouts";
+
+// Base CSS
+@import "type";
+@import "code";
+@import "forms";
+@import "tables";
+
+// Components: common
+@import "sprites";
+@import "wells";
+@import "dropdowns";
+@import "component-animations";
+@import "close";
+
+// Components: Buttons & Alerts
+@import "buttons";
+@import "button-groups";
+@import "alerts"; // Note: alerts share common CSS with buttons and thus have styles in buttons
+
+// Components: Nav
+@import "navs";
+@import "navbar";
+@import "breadcrumbs";
+@import "pagination";
+@import "pager";
+
+// Components: Popovers
+@import "modals";
+@import "tooltip";
+@import "popovers";
+
+// Components: Misc
+@import "thumbnails";
+@import "labels";
+@import "progress-bars";
+@import "accordion";
+@import "carousel";
+@import "hero-unit";
+
+// Utility classes
+@import "utilities"; // Has to be last to override when necessary
+
+// Responsive Layouts
+@import "responsive"; // again - i opt to have responsive be a part of my compiles no matter what - not as a separate .css compile that can be included by choice. responsive and bootstrap are partials in my system.

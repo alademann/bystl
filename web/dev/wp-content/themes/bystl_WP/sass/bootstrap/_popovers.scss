@@ -1,0 +1,53 @@
+/*----------------------------------------------
+
+  PARTIAL:  _popovers.scss
+  PARENT:   _bootstrap.scss
+  
+----------------------------------------------*/
+
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $zindexPopover;
+  display: none;
+  padding: 5px;
+  &.top    { margin-top:  -5px; }
+  &.right  { margin-left:  5px; }
+  &.bottom { margin-top:   5px; }
+  &.left   { margin-left: -5px; }
+  &.top .arrow    { @include popoverArrow-top(); }
+  &.right .arrow  { @include popoverArrow-right(); }
+  &.bottom .arrow { @include popoverArrow-bottom(); }
+  &.left .arrow   { @include popoverArrow-left();  }
+  .arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+}
+.popover-inner {
+  padding: 3px;
+  width: 280px;
+  overflow: hidden;
+  background: $black; // has to be full background declaration for IE fallback
+  background: rgba_ie($black,.8);
+  @include tb_border-radius(6px);
+  @include tb_box-shadow(0 3px 7px rgba_ie($black,0.3));
+}
+.popover-title {
+  padding: 9px 15px;
+  line-height: 1;
+  background-color: darken($almostWhite, 2%);
+  border-bottom:1px solid $grayLighter;
+  @include tb_border-radius(3px 3px 0 0);
+}
+.popover-content {
+  padding: 14px;
+  background-color: $white;
+  @include tb_border-radius(0 0 3px 3px);
+  @include tb_background-clip(padding-box);
+  p, ul, ol {
+    margin-bottom: 0;
+  }
+}
