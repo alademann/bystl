@@ -107,12 +107,15 @@ jQuery('.images').cycle({
 	$colorschemeInclude = TEMPLATEPATH . "/includes/colorscheme.php"; 
 	include($colorschemeInclude); 
 ?>
-
+<style type="text/css">
+    /* stupid admin bar... go away! */
+    html { margin-top: 0 !important; }
+</style>
 <!-- END head -->
 </head>
 
 <!-- BEGIN body -->
-<body <?php body_class(); ?> onload="prettyPrint()">
+<body class="<?php body_class_alt(); ?> <?php echo $colorSchemeClass; ?>" onload="prettyPrint()">
 
   <div class="top-bar">
 
@@ -147,12 +150,15 @@ jQuery('.images').cycle({
 
                 <div class="logo-container">
 
-             <a class="logo" href="<?php bloginfo('url'); ?>"><img src="<?php echo get_option_tree('custom_logo_img') ?>" alt="" /></a>
+                    <a class="logo" href="<?php bloginfo('url'); ?>">
+                        <img src="<?php echo get_option_tree('custom_logo_img') ?>" alt="BYSTL Logo" />
+                        <?php if (get_option_tree('tagline') == 'Yes') { ?>
+                            <?php if(is_home()) { echo "<h1>"; } else { echo "<span class='h1'>"; } ?>
+                            <?php echo get_option_tree('tagline_text') ?>
+                            <?php if(is_home()) { echo "</h1>"; } else { echo "</span>"; } ?>
+                        <?php }  ?>
+                    </a>
 
-             <?php if (get_option_tree('tagline') == 'Yes') { ?>
-              <span class="tagline"><?php echo get_option_tree('tagline_text') ?></span>
-  <?php }  ?>
-  
                 </div>
 
                  <?php wp_nav_menu(array('container' => false, 'menu_id' => 'main-nav', 'theme_location' => 'main_menu',  'menu_class' => 'sf-menu', 'echo' => true, 'before' => '', 'after' => '', 'link_before' => '', 'fallback_cb' => 'display_home2', 'link_after' => '', 'depth' => 0 )); ?>

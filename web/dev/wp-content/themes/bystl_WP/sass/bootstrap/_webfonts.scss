@@ -6,9 +6,9 @@
 ----------------------------------------------*/
 
 $baseFontSansSerif:			("Helvetica Neue", Helvetica, Arial, sans-serif) !default;
-$baseFontSerif:					(Georgia, "Times New Roman", Times, serif) !default;
+$baseFontSerif:				(Georgia, "Times New Roman", Times, serif) !default;
 $baseFontMonospace:			(Consolas, Menlo, Monaco, "Courier New", monospace) !default; 
-$baseFontCursive:				("Apple Chancery", "Zapf Chancery", "Monotype Corsiva", cursive) !default;
+$baseFontCursive:			("Apple Chancery", "Zapf Chancery", "Monotype Corsiva", cursive) !default;
 
 // GLOBAL UTILITY MIXINS THAT MAKE THE WEBFONT WORLD GO ROUND
 // -------------------------
@@ -54,46 +54,6 @@ $webfont_global_dir: "/public/fonts/";
 } // END @mixin webfont()
 
 // mixins to call within individual style rules
-
-
-
-// INDIVIDUAL FONT LOADS
-// -------------------------
-
-@mixin helvetica_fonts($flavor: std, $weight: 500) {
-// load helvetica
-	$helv_dir:		"helvetica-nueve";
-	$helv_dir_s:	$helv_dir + "/Standard/";
-	$helv_dir_e:	$helv_dir + "/Extended/";
-	$helv_prefix: "helveticaneueltstd";
-
-	@if $flavor == std {
-		@if $weight == 300 {
-			@include webfont_src($helv_dir_s + $helv_prefix + "35-th-webfont", "Helv35");
-		}
-		@if $weight == 500 {
-		@include webfont_src($helv_dir_s + $helv_prefix + "55-th-webfont", "Helv55");
-		}
-		@if $weight == 600 {
-		@include webfont_src($helv_dir_s + $helv_prefix + "65-th-webfont", "Helv65");
-		}
-		@if $weight == 700 {
-		@include webfont_src($helv_dir_s + $helv_prefix + "75-th-webfont", "Helv75");
-		}
-		@if $weight == 800 {
-		@include webfont_src($helv_dir_s + $helv_prefix + "85-th-webfont", "Helv85");
-		}
-		@if $weight == 900 {
-		@include webfont_src($helv_dir_s + $helv_prefix + "95-th-webfont", "Helv95");
-		}
-	}
-	@if $flavor == ex {
-		@if $weight == 600 {
-			@include webfont_src($helv_dir_e + $helv_prefix + "63-md-ex-webfont","Helv63");
-		}
-	}
-
-}
 
 // fontawesome classes
 

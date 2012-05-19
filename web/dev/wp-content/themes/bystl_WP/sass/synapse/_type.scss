@@ -5,6 +5,10 @@
 	
  ----------------------------------------------*/
 
+/*	BYSTL Fonts
+---------------------------------------------- */
+// logo / heading font
+@mixin FetteMitteSchrift { @include webfont('fette-mittelschrift-regular-webfont', sans-serif); }
 
 /*	HEADINGS, PARAGRAPHS, EMPHASIS, ETC
 ---------------------------------------------- */
