@@ -14,7 +14,7 @@ $baseFontCursive:			("Apple Chancery", "Zapf Chancery", "Monotype Corsiva", curs
 // -------------------------
 $webfont_global_dir: "/public/fonts/";
 
-@mixin webfont_src($font_dir,$font_name){
+@mixin webfont_src($font_dir, $font_name){
 	$font_path: $webfont_global_dir + $font_dir;
 	$woff: $font_path + ".woff";
 	$ttf: $font_path + ".ttf";
@@ -32,7 +32,7 @@ $webfont_global_dir: "/public/fonts/";
 	// google webfont loader to prevent flickering
 	
 	// fix flickering
-	visibility: hidden;
+	//visibility: hidden;
 
 	$fallback_family: $baseFontFamily;
 	@if($font_type == sans-serif) { $fallback_family: $baseFontSansSerif; }
@@ -40,15 +40,12 @@ $webfont_global_dir: "/public/fonts/";
 	@if($font_type == monospace)	{ $fallback_family: $baseFontMonospace; }
 	@if($font_type == cursive)		{ $fallback_family: $baseFontCursive; }
 
-	font-family: $fallback_family;
+	//font-family: $fallback_family;
 
-	// load the real font now
-	html.js & { // .domloaded class no longer here because headmin.js doesn't load... TODO: FIX
-		visibility: visible;
-		font-family: $font_name, $fallback_family;
-		font-weight: normal;
-		font-style: normal;
-	}
+	visibility: visible;
+	font-family: $font_name, $fallback_family;
+	font-weight: normal;
+	font-style: normal;
 
 
 } // END @mixin webfont()

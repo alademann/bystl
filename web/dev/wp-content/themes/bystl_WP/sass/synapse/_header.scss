@@ -18,6 +18,12 @@
 .logo {
 	float: left;
 }
+
+// bystl logo text
+.logo h1, .logo .h1 {
+    @include FetteMitteSchrift;
+}
+
 .tagline {
     color: #505050;
     font-size: 13px;
