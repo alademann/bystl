@@ -6,7 +6,7 @@
  ----------------------------------------------*/
  
 .header {
-	background: url(img/top-bar-shadow.png) top left repeat-x #fff;
+	background: url(image-url("top-bar-shadow.png", true)) top left repeat-x #fff;
 	padding: 30px 0;
 	-moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
 	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
@@ -15,13 +15,22 @@
 .logo-container {
     float: left;
 }
-.logo {
-	float: left;
-}
 
+
+
+.logo {
+	position: relative;
+    text-decoration: none !important;
+    > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        speak: none; // so screen readers wont say the alt of the img
+    }
+}
 // bystl logo text
 .logo h1, .logo .h1 {
-    @include FetteMitteSchrift;
+    @include bystlLogoFont(true);
 }
 
 .tagline {

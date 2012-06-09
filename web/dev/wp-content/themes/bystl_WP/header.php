@@ -152,8 +152,14 @@ jQuery('.images').cycle({
                     <a class="logo" href="<?php bloginfo('url'); ?>">
                         <img src="<?php echo get_option_tree('custom_logo_img') ?>" alt="BYSTL Logo" />
                         <?php if (get_option_tree('tagline') == 'Yes') { ?>
-                            <?php if(is_home()) { echo "<h1>"; } else { echo "<span class='h1'>"; } ?>
-                            <?php echo get_option_tree('tagline_text') ?>
+
+                        <?php 
+                            // break up the tagline by words
+                            $bystl_tagline = get_option_tree('tagline_text');
+                            $bystl_wds = explode(" ", $bystl_tagline);
+                        ?>
+
+                            <?php if(is_home()) { echo "<h1>"; } else { echo "<span class='h1'>"; } ?><strong><?php echo $bystl_wds[0] . ' ' . $bystl_wds[1]; ?></strong> <?php echo $bystl_wds[2]; ?> <?php echo $bystl_wds[3]; ?>
                             <?php if(is_home()) { echo "</h1>"; } else { echo "</span>"; } ?>
                         <?php }  ?>
                     </a>

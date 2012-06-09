@@ -1,9 +1,27 @@
 @charset "UTF-8";
+@function isDev() {
+  $isDev: true !default;  
+  @if $isDev {
+    @return "/dev";
+  } @else {
+    @return "";
+  }
+}
 @import "theme-synapse_meta"; // THIS MUST BE FIRST (it is just the comments for wordpress info)
 /*!--- 
   compass helpers
 ---*/
 @import "global-compass";
+/*!--- 
+  bystl color palette
+---*/
+@import "bystl/colorpalette";
+/*!--- 
+  bystl webfonts
+---*/
+@import "bootstrap/webfonts"; 
+// global webfont icons
+@include fontawesome_boiler;
 /*!--- 
   bootstrap
 ---*/

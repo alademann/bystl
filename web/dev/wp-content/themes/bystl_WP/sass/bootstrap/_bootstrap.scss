@@ -5,13 +5,6 @@
 	
 ----------------------------------------------*/
 
-
-/*------------------------ WEBFONTS & FONT UTILITIES ------------------------*/
-// contains the mixins and vars necessary to load whatever is requested below
-@import "webfonts"; 
-// global webfont icons
-@include fontawesome_boiler;
-
 // Core variables and mixins
 @import "variables"; // Modify this for custom colors, font-sizes, etc
 @import "functions"; // these are my own special functions that i want to keep out of the variables file.

@@ -38,7 +38,7 @@ details.well, #bd details.well {
 		// when the summary stacks atop the description
 			@media (max-width: 767px) { 
 				.inner {
-					@extend .inverse-well-stacked;
+					@include inverseWellStacked;
 					@include border-corner-radius(bottom, right, 0);
 				}
 				line-height: normal;

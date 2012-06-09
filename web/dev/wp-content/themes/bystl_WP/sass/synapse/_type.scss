@@ -8,8 +8,46 @@
 /*	BYSTL Fonts
 ---------------------------------------------- */
 // logo / heading font
-@include webfont_src("","fette-mittelschrift-regular-webfont");
-@mixin FetteMitteSchrift { @include webfont('fette-mittelschrift-regular-webfont', sans-serif); }
+$font_path: "fette-mittelschrift-regular-webfont" !default;
+$font_name: "fette-mittelschrift" !default;
+@mixin bystlLogoFont($symbol: true) {
+	@if $symbol {
+		$logoImgW: image-width("bystl_header-logo_symbol.png") !default;
+		$logoImgH: image-height("bystl_header-logo_symbol.png") !default;
+    line-height: $logoImgH;
+    padding-left: $logoImgW + 10;
+	}
+		font-size: pxtoem(37);
+		font-family: "fette-mittelschrift";
+    text-transform: lowercase;
+    letter-spacing: normal;
+    font-weight: normal;
+    font-style: normal;
+    color: $bystl_logo_blueLight;
+    white-space: nowrap;
+    word-spacing: -3px;
+    > strong {
+    		word-spacing: -1px;
+        font-weight: normal;
+        color: $bystl_logo_blueDarkest;
+    }
+
+} // END: bystlLogoFont;
+
+@include font-face(
+  $font_name,
+  font-files(
+    "#{$font_path}.woff", woff,
+    "#{$font_path}.ttf", truetype,
+    "#{$font_path}.otf", opentype,
+    "#{$font_path}.svg#IcoMoon", svg),
+  '#{$font_path}.eot',
+  normal,
+  normal
+); 
+
+//@include webfont_src("","fette-mittelschrift-regular-webfont");
+//@mixin FetteMitteSchrift { @include webfont('fette-mittelschrift-regular-webfont', sans-serif); }
 
 /*	HEADINGS, PARAGRAPHS, EMPHASIS, ETC
 ---------------------------------------------- */

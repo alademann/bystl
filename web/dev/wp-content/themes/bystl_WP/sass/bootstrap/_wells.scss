@@ -11,8 +11,9 @@ $wellEdgeHighlight:				rgba_ie($white, 0.7);
 $wellInsetShadowColor:		rgba_ie($grayMedium, (opacity($wellBgColor) * 10));
 $wellInsetShadowHalf:			rgba_ie($grayMedium, (opacity($wellInsetShadowColor) / 2));
 
-.well {
-  min-height: 20px;
+// WELL MIXINS (so we can add well styles to other elems without having to use @extend quite as much)
+@mixin well {
+	min-height: 20px;
   margin-bottom: 2%;
 	@include tb_border-radius($wellCornerRadius);
   @include rgba_bg($wellBgColor); // custom mixin that takes care of non-rgba backgrounds, too
@@ -23,6 +24,28 @@ $wellInsetShadowHalf:			rgba_ie($grayMedium, (opacity($wellInsetShadowColor) / 2
 
 	// padding depending on if its inside a grid system
 	padding: $gridGutterWidth;
+}
+@mixin inverseWell {
+	@include tb_box-shadow(
+		-1px -1px 0 0 $wellEdgeHighlight inset, // highlight edge 
+		1px 1px 2px 0 $wellInsetShadowColor inset,
+		0 1px 7px 0 $wellInsetShadowColor // inner shadow
+	);
+}
+
+@mixin inverseWellStacked {
+  @include tb_box-shadow(
+    0 -1px 0 0 $wellEdgeHighlight inset, // highlight edge 
+    -1px 0 2px 0 $wellInsetShadowHalf inset,
+    1px 1px 2px 0 $wellInsetShadowHalf inset,
+    0 1px 7px 0 $wellInsetShadowColor // inner shadow
+  );
+}
+
+
+
+.well {
+  @include well;
 	
 	&[class*='span'], &[class*='fluid'] {
 		padding: 0;
@@ -40,17 +63,8 @@ $wellInsetShadowHalf:			rgba_ie($grayMedium, (opacity($wellInsetShadowColor) / 2
 } // END .well
 
 .inverse-well {
-	@include tb_box-shadow(
-		-1px -1px 0 0 $wellEdgeHighlight inset, // highlight edge 
-		1px 1px 2px 0 $wellInsetShadowColor inset,
-		0 1px 7px 0 $wellInsetShadowColor // inner shadow
-	);
+	@include inverseWell;
 }
 .inverse-well-stacked {
-	@include tb_box-shadow(
-		0 -1px 0 0 $wellEdgeHighlight inset, // highlight edge 
-		-1px 0 2px 0 $wellInsetShadowHalf inset,
-		1px 1px 2px 0 $wellInsetShadowHalf inset,
-		0 1px 7px 0 $wellInsetShadowColor // inner shadow
-	);
+	@include inverseWellStacked;
 }

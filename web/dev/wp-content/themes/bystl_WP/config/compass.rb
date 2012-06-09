@@ -4,7 +4,7 @@ require "rgbapng"
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "/" #has to be like this for a wordpress theme, and the sheet must be named "style.css"
-fonts_dir = "fonts"
+fonts_dir = "/fonts"
 sass_dir = "sass"
 images_dir = "img"
 javascripts_dir = "js"
