@@ -32,3 +32,4 @@ stats
 _resources/
 STAFFPHOTOS
 *.scssc
+web/dev/wp-content/plugins/*
