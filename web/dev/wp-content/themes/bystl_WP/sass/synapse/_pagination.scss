@@ -23,7 +23,7 @@
 #blog-pagination li {
 	float: left;
 	margin-right: 15px;
-	font-family: 'Droid Serif', serif;
+	font-family: $serifFontFamily;
 }
 .active-page {
 	background: $bystl_blue_navy; /* Old browsers */

@@ -4,6 +4,16 @@
 	PARENT:		_theme-synapse.scss
 	
 ----------------------------------------------*/
+@mixin darkBlueWidget {
+	background: $bystl_blue_navy; /* Old browsers */
+	@include background-image(linear-gradient($bystl_blue_navy, $bystl_blue_black));
+	@include filter-gradient($bystl_blue_navy, $bystl_blue_black);
+	border: 1px solid #1f1f1f;
+	border-bottom: 1px solid #161616;
+	@include box-shadow(inset 0 1px 0 rgba($white, 0.3), 0 1px 2px rgba($black, 0.35));
+	@include border-radius(5px);
+}
+
 .widget {
 	margin-bottom: 10px;
 }
@@ -54,7 +64,7 @@
 }
 .blog-widget-title {
 	color: #ababab !important;
-	font-size: 13px;
+	font-size: $baseFontSize;
 	text-shadow: -1px -1px rgba($black, 0.4);
 	line-height: 17px;
 	font-weight: bold;
@@ -73,14 +83,14 @@
 
 .blog-widget-meta {
 	color: #969696;
-	font-size: 12px;
+	font-size: $baseFontSize - 1;
 	text-shadow: -1px -1px rgba($black, 0.3);
 	line-height: 17px;
 	-moz-transition:color 0.3s ease-in;
 	-webkit-transition:color 0.3s ease-in;
 	-o-transition:color 0.3s ease-in;
 	padding: 2px 0;
-	font-family: 'Droid Serif',serif;
+	font-family: $serifFontFamily;
 	margin-top: 2px;
 }
 .blog-widget-meta a {
@@ -114,32 +124,17 @@
 	width: 116px !important;
 }
 .testimonials, .sidebar-testimonials {
-	background: $bystl_blue_navy; /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba($bystl_blue_navy,1) 0%, rgba($bystl_blue_black,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba($bystl_blue_navy,1)), color-stop(100%,rgba($bystl_blue_black,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba($bystl_blue_navy,1) 0%,rgba($bystl_blue_black,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba($bystl_blue_navy,1) 0%,rgba($bystl_blue_black,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba($bystl_blue_navy,1) 0%,rgba($bystl_blue_black,1) 100%); /* IE10+ */
-	background: linear-gradient(top,  rgba($bystl_blue_navy,1) 0%,rgba($bystl_blue_black,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bystl_blue_navy', endColorstr='$bystl_blue_black',GradientType=0 ); /* IE6-9 */
-	border: 1px solid #1f1f1f;
-	border-bottom: 1px solid #161616;
-	-moz-box-shadow: inset 0 1px 0 rgba($white, 0.3), 0 1px 2px rgba($black, 0.35);
-	-webkit-box-shadow:inset 0 1px 0 rgba($white, 0.3), 0 1px 2px rgba($black, 0.35);
-	-o-box-shadow: inset 0 1px 0 rgba($white, 0.3), 0 1px 2px rgba($black, 0.35);
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-o-border-radius: 5px;
+	@include darkBlueWidget;
 	margin-top: 20px;
 	color: #989898;
-	font-size: 13px;
+	font-size: $baseFontSize;
 	text-shadow: -1px -1px rgba($black, 0.4);
 	line-height: 17px;
 	font-weight: bold;
 }
 .testimonial p {
-	font-family: 'Droid Serif', serif;
-	font-size: 12px;
+	font-family: $serifFontFamily;
+	font-size: $baseFontSize - 1;
 	line-height: 22px;
 	font-weight: normal;
 	text-shadow: -1px -1px rgba($black, 0.4);
@@ -153,13 +148,9 @@
 	margin-bottom: 10px;
 }
 .testimonial-widget-info img {
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-o-border-radius: 5px;
+	@include border-radius(5px);
 	float: left;
-	-moz-box-shadow: 0 1px 2px rgba($black, 0.35);
-	-webkit-box-shadow: 0 1px 2px rgba($black, 0.35);
-	-o-box-shadow: 0 1px 2px rgba($black, 0.35);
+	@include box-shadow(0 1px 2px rgba($black, 0.35));
 }
 .sidebar .testimonial-widget-meta {
 	width: 148px;
@@ -175,9 +166,9 @@
 }
 .testimonial-widget-meta a {
 	color: #848484 !important;
-	font-family: 'Droid Serif',serif;
+	font-family: $serifFontFamily;
 	font-weight: normal;
-	font-size: 12px;
+	font-size: $baseFontSize - 1;
 	display: block;
 	font-style: italic;
 }
@@ -185,8 +176,8 @@
 	margin: 10px 10px 10px 40px;
 }
 .testimonials blockquote {
-	font-family: 'Droid Serif', serif;
-	font-size: 12px;
+	font-family: $serifFontFamily;
+	font-size: $baseFontSize - 1;
 	line-height: 22px;
 	position: relative;
 	margin-top: 20px;
@@ -198,9 +189,9 @@
 	position: relative;
 }
 .sidebar-testimonials blockquote:after {
-	color: #CCCCCC;
+	color: #ccc;
 	content: '"';
-	font-family: arial;
+	font-family: $sansFontFamily;
 	font-style: italic;
 	font-size: 3em;
 	left: -36px;
@@ -210,9 +201,9 @@
 	font-weight: normal;
 }
 .testimonials blockquote:after {
-	color: #CCCCCC;
+	color: #ccc;
 	content: '"';
-	font-family: arial;
+	font-family: $sansFontFamily;
 	font-style: italic;
 	font-size: 5em;
 	left: -42px;
@@ -224,27 +215,12 @@
 /*	TWITTER WIDGET
 ---------------------------------------------- */
 .sidebar-tweet {
-	background: $bystl_blue_navy; /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba($bystl_blue_navy,1) 0%, rgba($bystl_blue_black,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba($bystl_blue_navy,1)), color-stop(100%,rgba($bystl_blue_black,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba($bystl_blue_navy,1) 0%,rgba($bystl_blue_black,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba($bystl_blue_navy,1) 0%,rgba($bystl_blue_black,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba($bystl_blue_navy,1) 0%,rgba($bystl_blue_black,1) 100%); /* IE10+ */
-	background: linear-gradient(top,  rgba($bystl_blue_navy,1) 0%,rgba($bystl_blue_black,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bystl_blue_navy', endColorstr='$bystl_blue_black',GradientType=0 ); /* IE6-9 */
-	border: 1px solid #1f1f1f;
-	border-bottom: 1px solid #161616;
-	-moz-box-shadow: inset 0 1px 0 rgba($white, 0.3), 0 1px 2px rgba($black, 0.35);
-	-webkit-box-shadow:inset 0 1px 0 rgba($white, 0.3), 0 1px 2px rgba($black, 0.35);
-	-o-box-shadow: inset 0 1px 0 rgba($white, 0.3), 0 1px 2px rgba($black, 0.35);
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-o-border-radius: 5px;
+	@include darkBlueWidget;
 	padding: 20px;
 }
 
 .tweet span, .sidebar-tweet span {
-	font-size: 12px;
+	font-size: $baseFontSize - 1;
 	font-weight: normal;
 	line-height: 18px;
 	margin-bottom: 9px;
@@ -292,10 +268,10 @@
 		margin-top: 20px;
 		
 		a {
-			font-family: 'Droid Serif', serif;
+			font-family: $serifFontFamily;
 			font-style: italic;
 			font-weight: bold;
-			font-size: 11px;	
+			font-size: $baseFontSize - 2;	
 		} // END .tweet_list <li><a>
 	} // END .tweet_list <li>
 } // END .tweet_list
@@ -309,7 +285,7 @@
 	img {
 		margin: 9px 9px 0 0;
 		padding: 7px;
-		opacity: 1;
+		@include opacity(1);
 		-moz-transition:opacity 0.3s ease-in;
 		-webkit-transition:opacity 0.3s ease-in;
 		-o-transition:opacity 0.3s ease-in;
@@ -322,7 +298,7 @@
 .sidebar #flickr_badge_wrapper img {
 	margin: 0 15px 15px 0;
 	padding: 7px;
-	opacity: 1;
+	@include opacity(1);
 	-moz-transition:opacity 0.3s ease-in;
 	-webkit-transition:opacity 0.3s ease-in;
 	-o-transition:opacity 0.3s ease-in;
@@ -333,11 +309,8 @@
 
 	img {
 		border: 7px solid #fff;
-		-moz-border-radius: 5px;
-		-webkit-border-radius: 5px;
-		-o-border-radius: 5px;
-		border-radius: 5px;
-		box-shadow: 0 1px 1px rgba($black, 0.25);
+		@include border-radius(5px);
+		@include box-shadow(0 1px 1px rgba($black, 0.25));
 	}
 } // END .footer .flickr_badge_image
 
@@ -348,25 +321,16 @@
 	li span a {
 		float: right;
 		line-height: 10px;
-		font-size: 11px;
+		font-size: $baseFontSize - 2;
 		background: $bystl_blue_black; /* Old browsers */
-		background: -moz-linear-gradient(top,  rgba($bystl_blue_black,1) 1%, rgba(lighten($bystl_blue_black, 5%),1) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba($bystl_blue_black,1)), color-stop(100%,rgba(lighten($bystl_blue_black, 5%),1))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  rgba($bystl_blue_black,1) 1%,rgba(lighten($bystl_blue_black, 5%),1) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  rgba($bystl_blue_black,1) 1%,rgba(lighten($bystl_blue_black, 5%),1) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  rgba($bystl_blue_black,1) 1%,rgba(lighten($bystl_blue_black, 5%),1) 100%); /* IE10+ */
-		background: linear-gradient(top,  rgba($bystl_blue_black,1) 1%,rgba(lighten($bystl_blue_black, 5%),1) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bystl_blue_black', endColorstr='lighten($bystl_blue_black, 5%)',GradientType=0 ); /* IE6-9 */
+		@include background-image(linear-gradient($bystl_blue_black, lighten($bystl_blue_black, 5%)));
+		@include filter-gradient($bystl_blue_black, lighten($bystl_blue_black, 5%));
 		color: #cecece !important;
 		padding: 6px 10px;
 		margin-left: 30px;
 		position: relative;
-		-moz-border-radius: 99px 99px 99px 99px;
-		-webkit-border-radius: 99px 99px 99px 99px;
-		-o-border-radius: 99px 99px 99px 99px;
-		-moz-box-shadow: 0 1px 1px rgba($black, 0.6) inset;
-		-webkit-box-shadow: 0 1px 1px rgba($black, 0.6) inset;
-		-o-box-shadow: 0 1px 1px rgba($black, 0.6) inset;
+		@include border-radius(99px 99px 99px 99px);
+		@include box-shadow(0 1px 1px rgba($black, 0.6) inset);
 		text-shadow: 1px 1px 1px rgba($black, 0.4);
 	}
 } // END .category-widget

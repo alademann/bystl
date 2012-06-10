@@ -625,64 +625,6 @@
   @include tb_background-clip(padding-box);
 }
 
-
-
-// Gradients
-@mixin gradient-horizontal($startColor: $gray, $endColor: $grayDark) {
-	background-color: mix($startColor, $endColor, 60%); // fallback just in case all hell breaks loose
-	// this takes care of all the browser specific garbage for us except for IE.
-	@include background-image(linear-gradient(left, $startColor, $endColor));
-	// lt-ie9
-  @include filter-gradient($startColor, $endColor, horizontal);
-	@if $experimental-support-for-svg {
-		background-repeat: repeat-x; // Silly Opera
-	}
-}
-@mixin gradient-vertical($startColor: $gray, $endColor: $grayDark) {
-	background-color: mix($startColor, $endColor, 60%); // fallback just in case all hell breaks loose
-	// this takes care of all the browser specific garbage for us except for IE.
-	@include background-image(linear-gradient($startColor, $endColor));
-	// lt-ie9
-  @include filter-gradient($startColor, $endColor, vertical);
-	@if $experimental-support-for-svg {
-		background-repeat: repeat-y; // Silly Opera
-	}
-}
-@mixin gradient-directional($startColor: $gray, $endColor: $grayDark, $angle: left bottom) {
-	background-color: $endColor; // fallback just in case all hell breaks loose
-	// this takes care of all the browser specific garbage for us except for IE.
-	@include background-image(linear-gradient($angle, $startColor, $endColor));
-	// no ie support for directional except using svg (taken care of in above @include)
-	@if $experimental-support-for-svg {
-		background-repeat: no-repeat; // Silly Opera
-	}
-}
-@mixin gradient-vertical-three-colors($startColor: $teal, $midColor: $purple, $colorStop: 50%, $endColor: $pink) {
-  background-color: mix($midColor, $endColor, 80%); // fallback just in case all hell breaks loose
-	// this takes care of all the browser specific garbage for us except for IE.
-	@include background-image(linear-gradient($startColor, $midColor $colorStop, $endColor));
-	// lt-ie9
-  @include filter-gradient($startColor, $endColor, vertical); // can't do 3 colors in ie5-8
-	@if $experimental-support-for-svg {
-		background-repeat: repeat-y; // Silly Opera
-	}
-}
-@mixin gradient-radial($centerColor: $gray, $outsideColor: $grayDark)  {
-  background-color: $outsideColor; // fallback just in case all hell breaks loose
-	// this takes care of all the browser specific garbage for us except for IE.
-	@include background-image(radial-gradient(center center, $centerColor, $outsideColor));
-	// no ie support for radial except using svg (taken care of in above @include)
-  @if $experimental-support-for-svg {
-		background-repeat: no-repeat; // Silly Opera
-	}
-}
-@mixin gradient-striped($color, $angle: left top) {
-  background-color: $color;
-	$tint: rgba($white, 0.15);
-	// this takes care of all the browser specific garbage for us.
-	@include background-image(linear-gradient($angle, $tint 25%, transparent 25%, transparent 50%, $tint 50%, transparent 75%, transparent));
-}
-
 // Gradient Bar Colors for buttons and alerts
 @mixin gradientBar($wp_primaryColor, $secondaryColor) {
   @include gradient-vertical($wp_primaryColor, $secondaryColor);
@@ -690,12 +632,74 @@
   border-color: rgba($black, 0.1) rgba($black, 0.1) fade-in(rgba($black, 0.1), 0.15);
 }
 
+// Gradients
+@mixin gradient-horizontal($startColor: $gray, $endColor: $grayDark) {
+  background-color: $endColor;
+  background-image: -ms-linear-gradient(left, $startColor, $endColor); // IE10
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(left, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(left, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(left, $startColor, $endColor); // Le standard
+  background-image: -moz-linear-gradient(left, $startColor, $endColor); // FF 3.6+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$startColor}', endColorstr='#{$endColor}', GradientType=1); // IE9 and down
+}
+@mixin gradient-vertical($startColor: $gray, $endColor: $grayDark) {
+  background-color: mix($startColor, $endColor, 60%);
+  background-image: -ms-linear-gradient(top, $startColor, $endColor); // IE10
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
+  background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
+  background-image: linear-gradient(top, $startColor, $endColor); // The standard
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$startColor}', endColorstr='#{$endColor}', GradientType=0); // IE9 and down
+}
+@mixin gradient-directional($startColor: $gray, $endColor: $grayDark, $angle: left bottom) {
+  background-color: $endColor;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient($deg, $startColor, $endColor); // FF 3.6+
+  background-image: -ms-linear-gradient($deg, $startColor, $endColor); // IE10
+  background-image: -webkit-linear-gradient($deg, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient($deg, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient($deg, $startColor, $endColor); // The standard
+}
+
+@mixin gradient-vertical-three-colors($startColor: $teal, $midColor: $purple, $colorStop: 50%, $endColor: $pink) {
+  background-color: mix($midColor, $endColor, 80%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), color-stop($colorStop, $midColor), to($endColor));
+  background-image: -webkit-linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-image: -moz-linear-gradient(top, $startColor, $midColor $colorStop, $endColor);
+  background-image: -ms-linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-image: -o-linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-image: linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$startColor}', endColorstr='#{$endColor}', GradientType=0); // IE9 and down, gets no color-stop at all the proper fallback
+}
+@mixin gradient-radial($centerColor: $gray, $outsideColor: $grayDark)  {
+  background-color: $outerColor;
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from($innerColor), to($outerColor));
+  background-image: -webkit-radial-gradient(circle, $innerColor, $outerColor);
+  background-image: -moz-radial-gradient(circle, $innerColor, $outerColor);
+  background-image: -ms-radial-gradient(circle, $innerColor, $outerColor);
+  background-image: -o-radial-gradient(circle, $innerColor, $outerColor);
+  background-repeat: no-repeat;    
+}
+@mixin gradient-striped($color, $angle: left top) {
+  background-color: $color;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba($white,.15)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba($white,.15)), color-stop(.75, rgba($white,.15)), color-stop(.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient($angle, rgba($white,.15) 25%, transparent 25%, transparent 50%, rgba($white,.15) 50%, rgba($white,.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient($angle, rgba($white,.15) 25%, transparent 25%, transparent 50%, rgba($white,.15) 50%, rgba($white,.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient($angle, rgba($white,.15) 25%, transparent 25%, transparent 50%, rgba($white,.15) 50%, rgba($white,.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient($angle, rgba($white,.15) 25%, transparent 25%, transparent 50%, rgba($white,.15) 50%, rgba($white,.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient($angle, rgba($white,.15) 25%, transparent 25%, transparent 50%, rgba($white,.15) 50%, rgba($white,.15) 75%, transparent 75%, transparent);  
+}
+
 // Reset filters for IE
-@mixin reset-filter() {
-	@if $legacy-support-for-ie {
-		// should never add a filter: property to a stylesheet that is not rendering in IE
-		filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-	}
+@mixin reset-filter {
+  @if $legacy-support-for-ie {
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  }
 }
 
 // Mixin for generating button backgrounds

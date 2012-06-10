@@ -12,7 +12,7 @@
 	//@extend .navbar-fixed-top;
 }
 .top-bar a {
-	// font-size: 12px;
+	// font-size: $baseFontSize - 1;
 	// color: #919191;
 	// padding: 0 !important;
 	// text-shadow: -1px -1px black;
@@ -149,7 +149,7 @@
 	margin-left: 15px;
 	padding-left: 15px;
 	border-left: 1px solid #eaeaea;
-	font-size: 13px;
+	font-size: $baseFontSize;
 }
 #main-nav > li:first-child {
 	border-left: medium none;
@@ -179,7 +179,7 @@
 
 		a {
 			color: $gray;
-			font-size: 13px;
+			font-size: $baseFontSize;
 			text-shadow: 1px 1px rgba($white, 0.8);
 
 			&.active {

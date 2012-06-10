@@ -5,6 +5,34 @@
   
 ----------------------------------------------*/
 
+// contrast shades
+$black:                 #000 !default; // default is black
+$almostBlack:           #111 !default; // almostBlack
+$grayDarker:            #222 !default; // grayDarker
+$grayDark:              #333 !default; // grayDark
+$gray4:                 #444 !default; // gray4
+$gray:                  #555 !default; // gray
+$gray6:                 #666 !default; // gray8
+$grayMedium:            #777 !default; // grayMedium
+$grayLight:             #999 !default; // grayLight
+$grayLighterD:          #ddd !default; // grayLighterD
+$grayLighter:           #eee !default; // grayLighter
+$almostWhite:           #fcfcfc !default; // almostWhite
+$white:                 #fff !default; // white
+
+// Accent colors
+$blue:                  #049cdb !default;
+$blueDark:              #0064cd !default;
+$blueLight:             #52a8ec !default;  
+$teal:                  #00b3ee !default;
+$green:                 #46a546 !default;
+$red:                   #9d261d !default;
+$yellow:                #ffc40d !default;
+$orange:                #f89406 !default;
+$pink:                  #c3325f !default;
+$hotPink:               #dd1144 !default;
+$purple:                #7a43b6 !default;
+$likeItColor:           #f56559 !default;
 
 /*  BLUES
 ---------------------------------------------- */
@@ -47,14 +75,28 @@ $bystl_tan_darkest:       #75736d   !default;
 
 $almostWhiteF2:           #f2f2f2   !default;
 
-/*  PRIMARY INTERACTION COLORS
+/*  PRIMARY INTERACTION COLORS (tb overrides)
 ---------------------------------------------- */
+$gridColumns:                     16 !default;
+$bodyBackground:                  $bystl_tan_light !default;
 
-$navbarText:                $bystl_tan_medium !default; // tb_override
-$navbarLinkColor:           $bystl_tan_medium !default; // tb_override
-$navbarOpacity:             0.85 !default;
-$navbarBackgroundHighlight: rgba($bystl_brown_almstBlk, $navbarOpacity) !default; // tb_override
-$navbarBackground:          rgba($bystl_brown_black, $navbarOpacity) !default; // tb_override
+$linkColor:                       $bystl_link_blue  !default;
+$linkColorHover:                  $bystl_link_blueHover !default;
 
-$linkColor:                 $bystl_link_blue  !default; // tb_override
-$linkColorHover:            $bystl_link_blueHover !default; // tb_override
+$navbarOpacity:                   0.85 !default;
+$navbarHeight_int:                40 !default;
+$navbarBackground:                rgba($bystl_brown_black, $navbarOpacity) !default;
+$navbarBackgroundHighlight:       rgba($bystl_brown_almstBlk, $navbarOpacity) !default;
+
+$navbarText:                      $bystl_tan_medium !default;
+$navbarLinkColor:                 $bystl_tan_medium !default;
+$navbarLinkColorHover:            $white !default;
+$navbarLinkColorActive:           $navbarLinkColorHover !default;
+$navbarLinkBackgroundHover:       $navbarBackground !default;
+$navbarLinkBackgroundActive:      $navbarBackground !default;
+
+$navbarSearchBackground:          lighten($navbarBackground, 25%) !default;
+$navbarSearchBackgroundFocus:     $white !default;
+$navbarSearchBorder:              darken($navbarSearchBackground, 30%) !default;
+$navbarSearchPlaceholderColor:    lighten($navbarSearchBackground, 75%) !default;
+$navbarBrandColor:                $navbarLinkColor !default;

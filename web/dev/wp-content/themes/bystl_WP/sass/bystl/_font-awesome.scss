@@ -45,8 +45,9 @@ li[class*=" icon-"] {
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
     @include webfont($icoFont_name, "icon");
-    //display: inline-block;
+    display: inline-block;
     text-decoration: inherit;
+    padding-right: 7px;
 }
 
 a [class^="icon-"],
@@ -58,7 +59,7 @@ a [class*=" icon-"] {
 /* makes the font 33% larger relative to the icon container */
 .icon-large:before {
     vertical-align: top;
-    font-size: 4/3em;
+    font-size: (4 / 3) + 0em;
 }
 
 .btn {
@@ -79,7 +80,7 @@ li {
     .icon-large[class^="icon-"],
     .icon-large[class*=" icon-"]  {
         /* 1.5 increased font size for icon-large * 1.25 width */
-        width: 1.5*1.25em;
+        width: (1.5 * 1.25) + 0em;
     }
 }
 
@@ -93,7 +94,7 @@ li[class*=" icon-"] {
         text-align: center;
     }
     &.icon-large:before {
-        text-indent: -4/3em;
+        text-indent: (-1 * (4 / 3)) + 0em;
     }
 }
 

@@ -7,7 +7,7 @@
  
 body {
 	padding-bottom: 20px; 
-	background-color: $white;
+	background-color: $bodyBackground;
 	background-repeat: repeat;
 	background-image: image-url('patterns/Graphy2.png');
 	
@@ -63,7 +63,7 @@ body {
 	width: 578px;
 	@include box-shadow(0 1px 1px rgba($black, 0.15));
 	margin-bottom: 30px;
-	font-size: 12px;
+	font-size: $baseFontSize - 1;
 } // END .page-container > .page-content
 
 .full {

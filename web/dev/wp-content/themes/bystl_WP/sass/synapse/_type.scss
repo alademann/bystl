@@ -36,7 +36,7 @@ h3 {
 p {
 	text-shadow: 1px 1px rgba($white, 0.8);
 	color: $gray;
-	font-size: 12px;
+	font-size: $baseFontSize - 1;
 
 	.page-content & {
 		text-shadow: none;
@@ -49,16 +49,16 @@ p {
 
 	.video-holder &, .portfolio-item & {
 		color: #848484;
-		font-family: 'Droid Serif',serif;
+		font-family: $serifFontFamily;
 		font-weight: normal;
-		font-size: 12px;
+		font-size: $baseFontSize - 1;
 		font-style: italic;
 		text-shadow: -1px -1px rgba($black, 0.4);
 		margin: 15px 0 0 0;	
 	}
 
 	.footer & {
-		font-size: 12px;
+		font-size: $baseFontSize - 1;
 	}
 
 } // END <p>
@@ -90,7 +90,7 @@ a {
 	} // END .video-holder <a>, .portfolio-item <a>
 
 	.cat-item & {
-		font-size: 13px;
+		font-size: $baseFontSize;
 		line-height: 22px;
 		text-shadow: -1px -1px 0 rgba($black, 0.5);
 		float: left;
@@ -180,7 +180,7 @@ li {
 /*	BLOCKQUOTES, CODE, ETC
 ---------------------------------------------- */
 blockquote {
-	font-family: 'Droid Serif', serif;
+	font-family: $serifFontFamily;
 	font-size: 15px;
 	line-height: 22px;
 	position: relative;
@@ -191,7 +191,7 @@ blockquote {
 	&:after {
 		color: #CCCCCC;
 		content: open-quote;
-		font-family: 'Droid Serif',serif;
+		font-family: $serifFontFamily;
 		font-size: 5em;
 		left: -42px;
 		margin-right: 0.25em;

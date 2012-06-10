@@ -4,7 +4,15 @@
 	PARENT:		_theme-synapse.scss
 	
 ----------------------------------------------*/
- 
+
+
+/*  TEXT SHADOW GLOBALS
+---------------------------------------------- */
+::-moz-selection { text-shadow: none !important; }
+::selection { text-shadow: none !important; }
+
+//
+
 .alignright {
 	float: right;
 	margin: 30px 0 30px 30px;
@@ -34,4 +42,25 @@
 }
 .sticky, .bypostauthor  {
 	display: visible;
+}
+
+// Quick floats
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
+// Toggling content
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+// Visibility
+.invisible {
+  visibility: hidden;
 }

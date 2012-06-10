@@ -33,11 +33,12 @@
 // bystl logo text
 .logo h1, .logo .h1 {
     @include bystlLogoFont(true, "color");
+    //@include inset-text-shadow($black, $bystl_logo_blueDarkest, $white);
 }
 
 .tagline {
     color: #505050;
-    font-size: 13px;
+    font-size: $baseFontSize;
     border-left: 1px solid #eaeaea;
     padding-left: 15px;
     margin-left: 15px;
