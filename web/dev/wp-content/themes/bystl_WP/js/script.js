@@ -1,33 +1,49 @@
-jQuery(document).ready(function() {
+$(document).ready(function() {
 
-jQuery('.portfolio-hover').css({opacity: 0});
+    /* initiate core bootstrap functions -------------------------------------*/
 
-jQuery('.portfolio-hover').hover(function(){
+    // dropdowns
+    $('.dropdown-toggle').dropdown();
 
-    jQuery(this).addClass('current_project');
-    jQuery('.current_project').stop().animate({opacity: 1}, 400);
+    // alerts
+    $(".alert-message, .alert").alert();
+
+    // tabs
+    $('.nav-tabs li > a, .tabs li > a').click(function(e){
+        e.preventDefault();
+        $(this).tab("show");
+    }); // END .tabs
+
+    // END BOOTSTRAP FUNCTIONS
+
+$('.portfolio-hover').css({opacity: 0});
+
+$('.portfolio-hover').hover(function(){
+
+    $(this).addClass('current_project');
+    $('.current_project').stop().animate({opacity: 1}, 400);
 
 }, function(){
 
-     jQuery('.current_project').stop().animate({opacity: 0}, 300);
-     jQuery('.current_project').removeClass('current_project');
+     $('.current_project').stop().animate({opacity: 0}, 300);
+     $('.current_project').removeClass('current_project');
 
 });
 
 /* Isotope -------------------------------------*/
 
-	  if( jQuery().isotope ) {
+	  if( $().isotope ) {
 
-	    jQuery(function() {
+	    $(function() {
 
-            var container = jQuery('.portfolio-items'),
-                optionFilter = jQuery('#filters'),
+            var container = $('.portfolio-items'),
+                optionFilter = $('#filters'),
                 optionFilterLinks = optionFilter.find('a');
 
             optionFilterLinks.attr('href', '#');
 
             optionFilterLinks.click(function(){
-                var selector = jQuery(this).attr('data-filter');
+                var selector = $(this).attr('data-filter');
                 container.isotope({
                     filter : '.' + selector,
                     itemSelector : '.span-one-third',
@@ -37,7 +53,7 @@ jQuery('.portfolio-hover').hover(function(){
 
                 // Highlight the correct filter
                 optionFilterLinks.removeClass('active');
-                jQuery(this).addClass('active');
+                $(this).addClass('active');
                 return false;
             });
 
@@ -45,7 +61,7 @@ jQuery('.portfolio-hover').hover(function(){
 
 	}
 
-    jQuery('.blog-slider').cycle({
+    $('.blog-slider').cycle({
             'fx' : 'fade',
             before: before_cycle,
             speed:   400,
@@ -55,7 +71,7 @@ jQuery('.portfolio-hover').hover(function(){
 
         });
 
-        jQuery('.sidebar-blog-slider').cycle({
+        $('.sidebar-blog-slider').cycle({
             'fx' : 'fade',
             before: before_cycle,
             speed:   400,
@@ -67,9 +83,9 @@ jQuery('.portfolio-hover').hover(function(){
 
         // Submenues
 
-                //jQuery('ul.sf-menu').superfish();
+                //$('ul.sf-menu').superfish();
 
-        //jQuery('ul.sf-menu2').superfish();
+        //$('ul.sf-menu2').superfish();
         
 // Sliders
 
@@ -77,7 +93,7 @@ jQuery('.portfolio-hover').hover(function(){
 
 // Portfolio Slider
 
-        jQuery('.home-portfolio').cycle({
+        $('.home-portfolio').cycle({
             'fx' : 'scrollHorz',
             'timeout' : 0,
             'pager' : '#portfolio-pager'
@@ -87,7 +103,7 @@ jQuery('.portfolio-hover').hover(function(){
   
 // Widgets
 
-         jQuery('.testimonials').cycle({
+         $('.testimonials').cycle({
             'fx' : 'fade',
             before: before_cycle,
             speed:   400,
@@ -97,7 +113,7 @@ jQuery('.portfolio-hover').hover(function(){
 
         });
 
-         jQuery('.sidebar-testimonials').cycle({
+         $('.sidebar-testimonials').cycle({
             'fx' : 'fade',
             before: before_cycle,
             speed:   400,
@@ -107,7 +123,7 @@ jQuery('.portfolio-hover').hover(function(){
 
         });
 
-        jQuery('.simple-slider').cycle({
+        $('.simple-slider').cycle({
             'before' : before_cycle_simple_slider,
             'fx' : 'fade',
 
@@ -122,33 +138,27 @@ jQuery('.portfolio-hover').hover(function(){
         function before_cycle_simple_slider(curr, next, opts, fwd) {
 
             var index = opts.currSlide;
-            var jQueryht = jQuery(this).outerHeight();
-            jQuery(this).parent().animate({
+            var jQueryht = $(this).outerHeight();
+            $(this).parent().animate({
                 height: jQueryht
             }, 200);
 
         }
-
-        jQuery(".alert-message").alert()
-
-  
-            jQuery('.tabs').tabs()
-    
 
         function before_cycle(curr, next, opts, fwd) {
 
             var index = opts.currSlide;
-            var jQueryht = jQuery(this).outerHeight();
-            jQuery(this).parent().animate({
+            var jQueryht = $(this).outerHeight();
+            $(this).parent().animate({
                 height: jQueryht
             }, 200);
 
 
         }
 
-jQuery("a[rel^='prettyPhoto']").prettyPhoto();
+$("a[rel^='prettyPhoto']").prettyPhoto();
 
 
 
         
-    });
+    }); // END document.ready()
