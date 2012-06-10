@@ -5,6 +5,8 @@
     body {
       background: url(<?php echo $custom_bg[4] ?>) <?php echo $custom_bg[1] ?> <?php echo $custom_bg[2] ?> <?php echo $custom_bg[3] ?> <?php echo $custom_bg[0] ?> !important;
     }
+    /* stupid admin bar... go away! */
+    html { margin-top: 0 !important; }
 </style>
 <?php } ?>
 <?php 

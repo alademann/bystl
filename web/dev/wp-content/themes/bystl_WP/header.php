@@ -28,88 +28,15 @@
 
 <!-- Theme Hook -->
 <?php wp_head(); ?>
-
-
-<script type="text/javascript">
-
-<?php if (get_option_tree('auto') == 'Yes') {  $timeout = 1500; } else { $timeout = 0; } ?>
-
-
-jQuery('.images').cycle({
-            fx:     'fade',
-            speed:    1500,
-            timeout:  <?php echo $timeout; ?>,
-            pager:  '.slider-nav',
-            pagerAnchorBuilder: function(idx, slide) {
-                // return selector string for existing anchor
-                return '.slider-nav li:eq(' + idx + ') a';}
-        });
-
-          jQuery('.images-thumb').cycle({
-            fx:     'fade',
-            speed:    1500,
-            timeout:  <?php echo $timeout; ?>,
-            pager:  '.slider-nav-thumbs',
-            pagerAnchorBuilder: function(idx, slide) {
-                // return selector string for existing anchor
-                return '.slider-nav-thumbs li:eq(' + idx + ') a';}
-        });
-
-         jQuery('.images-wide').cycle({
-            fx:     'fade',
-            speed:    1500,
-            timeout:  <?php echo $timeout; ?>,
-            pager:  '.slider-nav-wide',
-            pagerAnchorBuilder: function(idx, slide) {
-                // return selector string for existing anchor
-                return '.slider-nav-wide li:eq(' + idx + ') a';}
-        });
-
-          jQuery('.images-wide-thumb').cycle({
-            fx:     'fade',
-            speed:    1500,
-            timeout:  <?php echo $timeout; ?>,
-            pager:  '.slider-nav-thumbs',
-            pagerAnchorBuilder: function(idx, slide) {
-                // return selector string for existing anchor
-                return '.slider-nav-thumbs li:eq(' + idx + ') a';}
-        });
-
-    jQuery('.content-slider').cycle({
-            'fx' : 'fade',
-            'timeout' : <?php echo $timeout; ?>,
-            'pager' : '#content-slider-pager',
-            'next':   '#next-arrow',
-            'pause':   1,
-    'prev':   '#prev-arrow'
-         });
-
-</script>
-
-<?php if (get_post_meta(get_the_id(), 'ddportfolioBG', true) != '') {
-
-    $portfolioBG = ddListGet('portfolioBG', get_the_ID());
-    
-    ?>
-                            
-    <script type="text/javascript">
-        
-         jQuery.backstretch("<?php echo $portfolioBG[0]['img_url']; ?>");
-         
-     </script>
-         
-<?php } ?>
-
 <?php  
     // TODO: make this change a body class or something - not load an entirely separate 
     // color specfic stylesheet....
 	$colorschemeInclude = TEMPLATEPATH . "/includes/colorscheme.php"; 
 	include($colorschemeInclude); 
 ?>
-<style type="text/css">
-    /* stupid admin bar... go away! */
-    html { margin-top: 0 !important; }
-</style>
+<!-- make sure these is always last. -->
+<script type="text/javascript" src="<?php echo get_bloginfo('template_url').'/js/modernizr-2.5.3.min.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo get_bloginfo('template_url').'/js/head.load.min.js'; ?>"></script>
 <!-- END head -->
 </head>
 

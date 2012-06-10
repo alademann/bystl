@@ -67,9 +67,9 @@ jQuery('.portfolio-hover').hover(function(){
 
         // Submenues
 
-                jQuery('ul.sf-menu').superfish();
+                //jQuery('ul.sf-menu').superfish();
 
-        jQuery('ul.sf-menu2').superfish();
+        //jQuery('ul.sf-menu2').superfish();
         
 // Sliders
 

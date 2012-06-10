@@ -3,16 +3,16 @@
  * change the vars below to determine what gets executed on your site
  * ========================================================== */
 var $alerts = true;
-var $typeahead = false;
+var $typeahead = true;
 var $transition = true;
-var $tooltip = false;
-var $tab = false;
-var $scrollspy = false;
-var $popover = false;
-var $modal = false;
+var $tooltip = true;
+var $tab = true;
+var $scrollspy = true;
+var $popover = true;
+var $modal = true;
 var $dropdown = true;
 var $collapse = true;
-var $carousel = false;
+var $carousel = true;
 var $button = true;
 
 if($alerts) {

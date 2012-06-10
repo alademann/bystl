@@ -318,56 +318,56 @@ function new_slider_fields( $image_slider_fields, $id ) {
 }
 
 
-function synapseScripts() {
+//function synapseScripts() {
 
 		//mousewheel js
-		wp_register_script( 'script', get_bloginfo('template_url').'/js/script.js');
+		//wp_register_script( 'script', get_bloginfo('template_url').'/js/script.js');
 
-                wp_register_script( 'superfish', get_bloginfo('template_url').'/js/superfish.js');
+                //wp_register_script( 'superfish', get_bloginfo('template_url').'/js/superfish.js');
 
-                wp_register_script( 'twitter', get_bloginfo('template_url').'/js/twitter.js');
+                //wp_register_script( 'twitter', get_bloginfo('template_url').'/js/twitter.js');
 
-                wp_register_script( 'cycle', get_bloginfo('template_url').'/js/jquery.cycle.all.js');
+                //wp_register_script( 'cycle', get_bloginfo('template_url').'/js/jquery.cycle.all.js');
 
-                wp_register_script( 'easing', get_bloginfo('template_url').'/js/jquery.easing.1.3.js');
+                //wp_register_script( 'easing', get_bloginfo('template_url').'/js/jquery.easing.1.3.js');
 
-                wp_register_script( 'prettyphoto', get_bloginfo('template_url').'/js/jquery.prettyPhoto.js');
+                //wp_register_script( 'prettyphoto', get_bloginfo('template_url').'/js/jquery.prettyPhoto.js');
 
-                wp_register_script( 'isotope', get_bloginfo('template_url').'/js/jquery.isotope.min.js');
+                //wp_register_script( 'isotope', get_bloginfo('template_url').'/js/jquery.isotope.min.js');
 
-                wp_register_script( 'backstretch', get_bloginfo('template_url').'/js/jquery.backstretch.min.js');
+                //wp_register_script( 'backstretch', get_bloginfo('template_url').'/js/jquery.backstretch.min.js');
 
-                wp_register_script( 'hoverintent', get_bloginfo('template_url').'/js/hoverIntent.js');
+                //wp_register_script( 'hoverintent', get_bloginfo('template_url').'/js/hoverIntent.js');
 
-                wp_register_script( 'tabs', get_bloginfo('template_url').'/js/bootstrap-tabs.js');
+                //wp_register_script( 'tabs', get_bloginfo('template_url').'/js/bootstrap-tabs.js');
 
-                wp_register_script( 'alerts', get_bloginfo('template_url').'/js/bootstrap-alerts.js');
+                //wp_register_script( 'alerts', get_bloginfo('template_url').'/js/bootstrap-alerts.js');
 
-                wp_register_script( 'prettify', get_bloginfo('template_url').'/js/prettify/prettify.js');
+                //wp_register_script( 'prettify', get_bloginfo('template_url').'/js/prettify/prettify.js');
 
 		//enqueues our scripts. let's enqueue jquery first to just make sure its loaded first in any case
 
-                wp_enqueue_script('jquery');
-    wp_enqueue_script('cycle');
-    wp_enqueue_script('easing');
-    wp_enqueue_script('twitter');
-    wp_enqueue_script('hoverintent');
-    wp_enqueue_script('superfish');
-    wp_enqueue_script('script');
+                //wp_enqueue_script('jquery');
+    // wp_enqueue_script('cycle');
+    // wp_enqueue_script('easing');
+    // wp_enqueue_script('twitter');
+    // wp_enqueue_script('hoverintent');
+    // wp_enqueue_script('superfish');
+     //wp_enqueue_script('script');
 
 
-    wp_enqueue_script('prettyphoto');
-    wp_enqueue_script('isotope');
+    // wp_enqueue_script('prettyphoto');
+    // wp_enqueue_script('isotope');
 
 
-    wp_enqueue_script('backstretch');
+    // wp_enqueue_script('backstretch');
 
-    wp_enqueue_script('tabs');
-    wp_enqueue_script('alerts');
-    wp_enqueue_script('prettify');
-}
+    // wp_enqueue_script('tabs');
+    // wp_enqueue_script('alerts');
+    // wp_enqueue_script('prettify');
+//}
 
-add_action('wp_enqueue_scripts', 'synapseScripts');
+//add_action('wp_enqueue_scripts', 'synapseScripts');
 
 
 
