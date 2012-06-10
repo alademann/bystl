@@ -24,9 +24,7 @@
 <link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo( 'rss_url' ); ?>" />
 <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo( 'atom_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
-
-<!-- Theme Hook -->
+<?php show_admin_bar(false); ?>
 <?php wp_head(); ?>
 <?php  
     // TODO: make this change a body class or something - not load an entirely separate 
