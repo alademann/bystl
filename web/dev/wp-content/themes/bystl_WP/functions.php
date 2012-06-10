@@ -92,7 +92,7 @@ register_sidebar(array(
 if (function_exists('register_sidebar')) {
 register_sidebar(array(
 'name' => 'Light Footer',
-'before_widget' => '<div class="span4">',
+'before_widget' => '<div class="span5">',
 'after_widget' => '</div>',
 'before_title' => '<h3>',
 'after_title' => '</h3>',

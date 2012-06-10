@@ -7,7 +7,7 @@
    <div class="page-container row-fluid clearfix">
 
 
-                    <div class="span4 sidebar">
+                    <div class="span5 sidebar">
 
                 <ul class="widgets">
 
@@ -17,7 +17,7 @@
                 
             </div>
                 
-                <div class="page-content span12">
+                <div class="page-content span11">
 
                     <ul class="blog-articles-list">
 

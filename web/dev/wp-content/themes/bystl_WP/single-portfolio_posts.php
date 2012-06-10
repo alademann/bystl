@@ -4,7 +4,7 @@
                 
                 <div class="blog-page">
 
-                <div class="page-content span12">
+                <div class="page-content span11">
 
               
  <?php
@@ -37,7 +37,7 @@
                             
                         </ul>
 
-                        <div class="container slider-pager">
+                        <div class="container-fluid slider-pager">
 
                             <div class="slider-pagers"></div>
 
@@ -97,7 +97,7 @@
                     </div>
 
 
-                <div class="span4 sidebar">
+                <div class="span5 sidebar">
 
                 <ul class="widgets">
 

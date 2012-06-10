@@ -5,7 +5,7 @@
                 
                 <div class="blog-page">
 
-                <div class="page-content span12">
+                <div class="page-content span11">
 
                     <ul class="blog-articles-list">
  <?php
@@ -75,7 +75,7 @@
                     </div>
 
 
-                <div class="span4 sidebar">
+                <div class="span5 sidebar">
 
                 <ul class="widgets">
 

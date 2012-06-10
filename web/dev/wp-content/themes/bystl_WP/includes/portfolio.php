@@ -39,7 +39,7 @@
 
 <?php if($i >= 4) { ?>
 
-<div class="container portfolio-pager">
+<div class="container-fluid portfolio-pager">
 
 
     <div id="portfolio-pager"></div>

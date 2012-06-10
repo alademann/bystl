@@ -1,24 +1,24 @@
 <script src="<?php bloginfo('template_url'); ?>/includes/metaboxes/js/ajaxupload.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 
-	jQuery(document).ready(function() {
+	head.ready(function(){
 		
-		jQuery('.ddListWidget').each(function() { jQuery(this).children('li').each(function() { jQuery(this).ddMetaCheckLength(); }) });
+		$('.ddListWidget').each(function() { $(this).children('li').each(function() { $(this).ddMetaCheckLength(); }) });
 		
 		//intiiate our content in the lis
-		if(jQuery('#<?php echo $idList; ?>_content').val() != '') { jQuery('#<?php echo $idList; ?>').ddMetaInit(); }
+		if($('#<?php echo $idList; ?>_content').val() != '') { $('#<?php echo $idList; ?>').ddMetaInit(); }
 		
 		//sprtable content
-		jQuery('#<?php echo $idList; ?>_ul').sortable({
+		$('#<?php echo $idList; ?>_ul').sortable({
 			
-			update: function(event, ui) { jQuery('#<?php echo $idList; ?>').ddMetaReSort(); },
+			update: function(event, ui) { $('#<?php echo $idList; ?>').ddMetaReSort(); },
 			placeholder: 'ddListPlaceHolder',
 			items: 'li:not(.ddListEmpty)'
 						
 		});
-		jQuery("#<?php echo $idList; ?>_ul").disableSelection();
+		$("#<?php echo $idList; ?>_ul").disableSelection();
 		
-		jQuery(document).keydown(function(e) {
+		$(document).keydown(function(e) {
 			
 			if(e.keyCode == 13) {
 				
@@ -26,14 +26,14 @@
 				
 					foreach($fields as $field) {
 						
-						echo "if(jQuery('*:focus').attr('id') == '".$idList."_".$field['name']."') { jQuery('#".$idList."').ddMetaAdd(); return false; }";
-						if($field['type'] == 'img') { echo "if(jQuery('*:focus').attr('id') == '".$idList."_".$field['name']."_upload') { jQuery('#".$idList."').ddMetaAdd(); return false; }"; }
+						echo "if($('*:focus').attr('id') == '".$idList."_".$field['name']."') { $('#".$idList."').ddMetaAdd(); return false; }";
+						if($field['type'] == 'img') { echo "if($('*:focus').attr('id') == '".$idList."_".$field['name']."_upload') { $('#".$idList."').ddMetaAdd(); return false; }"; }
 						
 					}
 				
 				?>
 				
-				if(jQuery('*:focus').attr('id') == '<?php echo $idList; ?>_title') { jQuery('#<?php echo $idList; ?>').ddMetaAdd(); return false; }
+				if($('*:focus').attr('id') == '<?php echo $idList; ?>_title') { $('#<?php echo $idList; ?>').ddMetaAdd(); return false; }
 				
 			}
 			
@@ -45,11 +45,11 @@
 				
 			<?php if($field['type'] == 'img') : //IF ITS AN IMAGE ?>
 			
-			jQuery('#<?php echo $idList; ?>_upload_<?php echo $field['name'] ?>').each(function(){
+			$('#<?php echo $idList; ?>_upload_<?php echo $field['name'] ?>').each(function(){
 				
-				var the_button = jQuery(this);
-				var image_input = jQuery('#<?php echo $idList; ?>_<?php echo $field['name'] ?>');
-				var image_id = jQuery(this).attr('id');
+				var the_button = $(this);
+				var image_input = $('#<?php echo $idList; ?>_<?php echo $field['name'] ?>');
+				var image_id = $(this).attr('id');
 				
 				new AjaxUpload(image_id, {
 					
@@ -120,7 +120,7 @@
 
 <p>
 
-	<input type="text" name="<?php echo $idList; ?>_title" id="<?php echo $idList; ?>_title" value="Item Title" class="widefat ddListTitle" onfocus="if(jQuery(this).val() == 'Item Title') { jQuery(this).val(''); }" style="margin-top: 5px;" />
+	<input type="text" name="<?php echo $idList; ?>_title" id="<?php echo $idList; ?>_title" value="Item Title" class="widefat ddListTitle" onfocus="if($(this).val() == 'Item Title') { $(this).val(''); }" style="margin-top: 5px;" />
 
 </p>
 
@@ -132,7 +132,7 @@
         
             <div style="float: left; width: 100%; position: relative;">
             
-                <input type="text" name="<?php echo $idList; ?>_<?php echo $field['name'] ?>" id="<?php echo $idList; ?>_<?php echo $field['name'] ?>" value="<?php echo $field['title'] ?>" class="widefat ddListImage" onfocus="if(jQuery(this).val() == '<?php echo $field['title'] ?>') { jQuery(this).val(''); }" />
+                <input type="text" name="<?php echo $idList; ?>_<?php echo $field['name'] ?>" id="<?php echo $idList; ?>_<?php echo $field['name'] ?>" value="<?php echo $field['title'] ?>" class="widefat ddListImage" onfocus="if($(this).val() == '<?php echo $field['title'] ?>') { $(this).val(''); }" />
                 <input name="<?php echo $idList; ?>_upload" class="ddListUpload" value="" type="button" id="<?php echo $idList; ?>_upload_<?php echo $field['name'] ?>" />
                 
             </div>
@@ -144,7 +144,7 @@
     
     	<p>
 
-            <input type="text" name="<?php echo $idList; ?>_<?php echo $field['name'] ?>" id="<?php echo $idList; ?>_<?php echo $field['name'] ?>" value="<?php echo $field['title'] ?>" class="widefat ddListTitle" onfocus="if(jQuery(this).val() == '<?php echo $field['title'] ?>') { jQuery(this).val(''); }" />
+            <input type="text" name="<?php echo $idList; ?>_<?php echo $field['name'] ?>" id="<?php echo $idList; ?>_<?php echo $field['name'] ?>" value="<?php echo $field['title'] ?>" class="widefat ddListTitle" onfocus="if($(this).val() == '<?php echo $field['title'] ?>') { $(this).val(''); }" />
         
         </p>
         
@@ -152,7 +152,7 @@
     
     	<p>
 
-            <textarea name="<?php echo $idList; ?>_<?php echo $field['name'] ?>" id="<?php echo $idList; ?>_<?php echo $field['name'] ?>" class="widefat ddListTextArea" onfocus="if(jQuery(this).val() == '<?php echo $field['title'] ?>') { jQuery(this).val(''); }" rows="4"><?php echo $field['title'] ?></textarea>
+            <textarea name="<?php echo $idList; ?>_<?php echo $field['name'] ?>" id="<?php echo $idList; ?>_<?php echo $field['name'] ?>" class="widefat ddListTextArea" onfocus="if($(this).val() == '<?php echo $field['title'] ?>') { $(this).val(''); }" rows="4"><?php echo $field['title'] ?></textarea>
         
         </p>
     
@@ -163,6 +163,6 @@
 <p style="text-align:right;">
 
 	<!-- <input type="button" name="<?php echo $idList; ?>_reset" class="button autowidth" id="<?php echo $idList; ?>_reset" value="Reset Fields" style="margin: 4px 3px 4px 0;" onchange="" /> -->
-	<input type="button" name="<?php echo $idList; ?>_add" class="button-primary autowidth" id="<?php echo $idList; ?>_add" value="Add Item" style="margin: 4px 7px 4px 0;" onclick="jQuery('#<?php echo $idList; ?>').ddMetaAdd();" />
+	<input type="button" name="<?php echo $idList; ?>_add" class="button-primary autowidth" id="<?php echo $idList; ?>_add" value="Add Item" style="margin: 4px 7px 4px 0;" onclick="$('#<?php echo $idList; ?>').ddMetaAdd();" />
 
 </p>

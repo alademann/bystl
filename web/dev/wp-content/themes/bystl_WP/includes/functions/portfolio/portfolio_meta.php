@@ -11,18 +11,18 @@ $portfolioImg = get_post_meta($post->ID, 'portfolioImg', true);
 
 <script type="text/javascript">
 
-	jQuery(document).ready(function() {
+	head.ready(function(){
 
-jQuery('#prettyPhoto').iphoneStyle();
+$('#prettyPhoto').iphoneStyle();
 
-                jQuery('#portfolio_prettyPhoto').iphoneStyle();
-				jQuery('#portfolioArticle').iphoneStyle();
+                $('#portfolio_prettyPhoto').iphoneStyle();
+				$('#portfolioArticle').iphoneStyle();
 
-		jQuery('#uploadPortfolio_1').each(function(){
+		$('#uploadPortfolio_1').each(function(){
 
-			var the_button = jQuery(this);
-			var image_input = jQuery('#portfolioImg');
-			var image_id = jQuery(this).attr('id');
+			var the_button = $(this);
+			var image_input = $('#portfolioImg');
+			var image_id = $(this).attr('id');
 
 			new AjaxUpload(image_id, {
 

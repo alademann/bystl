@@ -7,7 +7,7 @@
    <div class="page-container row-fluid clearfix">
 
 
-                <div class="page-content span12">
+                <div class="page-content span11">
     <?php
         if (have_posts ()) {
 
@@ -33,7 +33,7 @@
 
                 </div>
 
-                <div class="span4 sidebar">
+                <div class="span5 sidebar">
 
                 <ul class="widgets">
 

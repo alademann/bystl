@@ -116,7 +116,7 @@
             <div class="container-fluid">
                 <div class="row-fluid">
 
-                <div class="logo-container span4">
+                <div class="logo-container span5">
 
                     <a class="logo" href="<?php bloginfo('url'); ?>">
                         <img src="<?php echo get_option_tree('custom_logo_img') ?>" alt="BYSTL Logo" />
@@ -135,7 +135,7 @@
 
                 </div>
 
-                <div class="menu-container span12">
+                <div class="menu-container span11">
                  <?php wp_nav_menu(array('container' => false, 'menu_id' => 'main-nav', 'theme_location' => 'main_menu',  'menu_class' => 'sf-menu', 'echo' => true, 'before' => '', 'after' => '', 'link_before' => '', 'fallback_cb' => 'display_home2', 'link_after' => '', 'depth' => 0 )); ?>
                 </div>
 

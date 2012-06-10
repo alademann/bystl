@@ -7,18 +7,18 @@
 
 <script type="text/javascript">
 
-	jQuery(document).ready(function() {
+	head.ready(function(){
 
-jQuery('#prettyPhoto').iphoneStyle();
+$('#prettyPhoto').iphoneStyle();
 
-                jQuery('#testimonials_prettyPhoto').iphoneStyle();
-				jQuery('#testimonialsArticle').iphoneStyle();
+                $('#testimonials_prettyPhoto').iphoneStyle();
+				$('#testimonialsArticle').iphoneStyle();
 
-		jQuery('#uploadtestimonials_1').each(function(){
+		$('#uploadtestimonials_1').each(function(){
 
-			var the_button = jQuery(this);
-			var image_input = jQuery('#testimonialsImg');
-			var image_id = jQuery(this).attr('id');
+			var the_button = $(this);
+			var image_input = $('#testimonialsImg');
+			var image_id = $(this).attr('id');
 
 			new AjaxUpload(image_id, {
 

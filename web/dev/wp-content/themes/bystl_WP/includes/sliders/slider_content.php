@@ -45,7 +45,7 @@ if ( function_exists( 'get_option_tree' ) ) {
 
             </ul>
 
-            <div class="container content-slider-pager">
+            <div class="container-fluid content-slider-pager">
 
 
                 <div id="content-slider-pager"></div>

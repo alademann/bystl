@@ -68,7 +68,7 @@ class dd_tweet_widget extends WP_Widget {
 
    <script type='text/javascript'>
        
- jQuery(".tweet").tweet({
+ $(".tweet").tweet({
             username: "<?php echo $user ?>",
             join_text: "",
             count: <?php echo $postcount ?>,
