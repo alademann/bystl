@@ -32,7 +32,7 @@ pre {
   line-height: $baseLineHeight;
   background-color: darken($almostWhite, 2%);
   border: 1px solid darken($grayLighterD, 5); // fallback for IE7-8
-  border: 1px solid rgba_ie($black,.15);
+  border: 1px solid rgba($black,.15);
   @include tb_border-radius(4px);
   white-space: pre;
   white-space: pre-wrap;

@@ -31,7 +31,7 @@
   font-weight: bold;
   line-height: $baseLineHeight;
   color: $grayLight;
-  text-shadow: 0 1px 0 rgba_ie($white,.5);
+  text-shadow: 0 1px 0 rgba($white,.5);
   text-transform: uppercase;
 }
 // Space them out when they follow another list item (link)
@@ -52,7 +52,7 @@
 .nav-list .nav-header {
   margin-left:  -15px;
   margin-right: -15px;
-  text-shadow: 0 1px 0 rgba_ie($white,.5);
+  text-shadow: 0 1px 0 rgba($white,.5);
 }
 .nav-list > li > a {
   padding: 3px 15px;
@@ -60,7 +60,7 @@
 .nav-list .active > a,
 .nav-list .active > a:hover {
   color: $white;
-  text-shadow: 0 -1px 0 rgba_ie($black,.2);
+  text-shadow: 0 -1px 0 rgba($black,.2);
   background-color: $linkColor;
 }
 .nav-list [class^="icon-"] {
@@ -79,7 +79,7 @@
 }
 .nav-tabs > li,
 .nav-pills > li {
-  @include float(left);
+  float: left;
 }
 .nav-tabs > li > a,
 .nav-pills > li > a {
@@ -318,7 +318,7 @@
 
 // Tabs on the left
 .tabs-left .nav-tabs {
-  @include float(left);
+  float: left;
   margin-right: 19px;
   border-right: 1px solid $grayLighterD;
 }
@@ -337,7 +337,7 @@
 
 // Tabs on the right
 .tabs-right .nav-tabs {
-  @include float(right);
+  float: right;
   margin-left: 19px;
   border-left: 1px solid $grayLighterD;
 }

@@ -18,9 +18,9 @@
 	-moz-border-radius: 5px 5px 5px 5px;
 	-webkit-border-radius: 5px 5px 5px 5px;
 	-o-border-radius: 5px 5px 5px 5px;
-	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-	-o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 0 1px 2px rgba($black, 0.35);
+	-webkit-box-shadow: 0 1px 2px rgba($black, 0.35);
+	-o-box-shadow: 0 1px 2px rgba($black, 0.35);
 }
 .comment-info {
 	float: left;
@@ -51,9 +51,9 @@
 	 background: #fff;
 	padding: 25px 25px 25px 25px;
 	width: 578px;
-	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-	-o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 1px 1px rgba($black, 0.15);
+	-webkit-box-shadow: 0 1px 1px rgba($black, 0.15);
+	-o-box-shadow: 0 1px 1px rgba($black, 0.15);
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	-o-border-radius: 5px;
@@ -70,10 +70,10 @@
 .children li {
 	width: 525px;
 	margin-bottom: 0;
-	-webkit-box-shadow:rgba(0, 0, 0, 0.15) 0 1px 1px;
-	-moz-box-shadow:rgba(0, 0, 0, 0.15) 0 1px 1px;
-	-o-box-shadow:rgba(0, 0, 0, 0.15) 0 1px 1px;
-	box-shadow:rgba(0, 0, 0, 0.15) 0 1px 1px;
+	-webkit-box-shadow:rgba($black, 0.15) 0 1px 1px;
+	-moz-box-shadow:rgba($black, 0.15) 0 1px 1px;
+	-o-box-shadow:rgba($black, 0.15) 0 1px 1px;
+	box-shadow:rgba($black, 0.15) 0 1px 1px;
 	margin-top: 15px;
 	background: #eaf0f1;
 }
@@ -82,10 +82,10 @@
 }
 .children li .children li {
 	background: #fff;
-	 -webkit-box-shadow:rgba(0, 0, 0, 0.1) 0 1px 1px;
-	-moz-box-shadow:rgba(0, 0, 0, 0.1) 0 1px 1px;
-	-o-box-shadow:rgba(0, 0, 0, 0.1) 0 1px 1px;
-	box-shadow:rgba(0, 0, 0, 0.1) 0 1px 1px;
+	 -webkit-box-shadow:rgba($black, 0.1) 0 1px 1px;
+	-moz-box-shadow:rgba($black, 0.1) 0 1px 1px;
+	-o-box-shadow:rgba($black, 0.1) 0 1px 1px;
+	box-shadow:rgba($black, 0.1) 0 1px 1px;
 	width: 475px;
 }
 .children li .children li .comment-content {
@@ -93,10 +93,10 @@
 }
 .children li .children li .children li {
 	background: #eaf0f1;
-	-webkit-box-shadow:rgba(0, 0, 0, 0.15) 0 1px 1px;
-	-moz-box-shadow:rgba(0, 0, 0, 0.15) 0 1px 1px;
-	-o-box-shadow:rgba(0, 0, 0, 0.15) 0 1px 1px;
-	box-shadow:rgba(0, 0, 0, 0.15) 0 1px 1px;
+	-webkit-box-shadow:rgba($black, 0.15) 0 1px 1px;
+	-moz-box-shadow:rgba($black, 0.15) 0 1px 1px;
+	-o-box-shadow:rgba($black, 0.15) 0 1px 1px;
+	box-shadow:rgba($black, 0.15) 0 1px 1px;
 	width: 425px;
 }
 .children li .children li .children li .comment-content {
@@ -105,10 +105,10 @@
 
 .children li .children li .children li .children li {
 	background: #fff;
-	 -webkit-box-shadow:rgba(0, 0, 0, 0.1) 0 1px 1px;
-	-moz-box-shadow:rgba(0, 0, 0, 0.1) 0 1px 1px;
-	-o-box-shadow:rgba(0, 0, 0, 0.1) 0 1px 1px;
-	box-shadow:rgba(0, 0, 0, 0.1) 0 1px 1px;
+	 -webkit-box-shadow:rgba($black, 0.1) 0 1px 1px;
+	-moz-box-shadow:rgba($black, 0.1) 0 1px 1px;
+	-o-box-shadow:rgba($black, 0.1) 0 1px 1px;
+	box-shadow:rgba($black, 0.1) 0 1px 1px;
 	width: 375px;
 }
 .children li .children li .children li .children li .comment-content {

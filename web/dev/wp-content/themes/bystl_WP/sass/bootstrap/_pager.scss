@@ -27,8 +27,8 @@
   background-color: darken($almostWhite, 2%);
 }
 .pager .next a {
-  @include float(right);
+  float: right;
 }
 .pager .previous a {
-  @include float(left);
+  float: left;
 }

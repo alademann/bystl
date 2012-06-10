@@ -7,20 +7,20 @@
  
 .callout {
 	padding: 15px 25px;
-	background: rgb(255,255,255); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(242,242,242,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(242,242,242,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,242,242,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,242,242,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,242,242,1) 100%); /* IE10+ */
-	background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(242,242,242,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
+	background: $white; /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba($white,1) 0%, rgba($almostWhiteF2,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba($white,1)), color-stop(100%,rgba($almostWhiteF2,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba($white,1) 0%,rgba($almostWhiteF2,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba($white,1) 0%,rgba($almostWhiteF2,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba($white,1) 0%,rgba($almostWhiteF2,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba($white,1) 0%,rgba($almostWhiteF2,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='$almostWhiteF2',GradientType=0 ); /* IE6-9 */
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	-o-border-radius: 5px;
-	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-	-o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 1px 1px rgba($black, 0.15);
+	-webkit-box-shadow: 0 1px 1px rgba($black, 0.15);
+	-o-box-shadow: 0 1px 1px rgba($black, 0.15);
 	width: 890px;
 	margin-bottom: 40px;
 }

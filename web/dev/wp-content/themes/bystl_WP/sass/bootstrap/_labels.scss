@@ -11,7 +11,7 @@
   //font-size: $baseFontSize * .85; // i want the label to inherit the font size (so it can be used within headings, etc...)
   font-weight: bold;
   color: $white;
-  text-shadow: 0 -1px 0 rgba_ie($black,.25);
+  text-shadow: 0 -1px 0 rgba($black,.25);
   background-color: $grayLight;
   @include tb_border-radius(3px);
 }

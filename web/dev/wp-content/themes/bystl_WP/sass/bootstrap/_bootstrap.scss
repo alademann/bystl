@@ -5,6 +5,7 @@
 	
 ----------------------------------------------*/
 
+@import "webfonts";
 // Core variables and mixins
 @import "variables"; // Modify this for custom colors, font-sizes, etc
 @import "functions"; // these are my own special functions that i want to keep out of the variables file.
@@ -22,7 +23,6 @@
 
 @include do_reset;
 
-
 // Grid system and page structure
 @import "scaffolding";
 @import "grid";
@@ -35,7 +35,7 @@
 @import "tables";
 
 // Components: common
-@import "sprites";
+//@import "sprites"; we're using fontawesome instead of sprites.
 @import "wells";
 @import "dropdowns";
 @import "component-animations";

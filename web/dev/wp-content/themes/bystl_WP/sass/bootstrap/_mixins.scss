@@ -199,7 +199,7 @@
 	margin-left: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1)) + ($gridGutterWidth * 2);
 }
 @mixin gridSystem-gridColumn($gridGutterWidth) {
-	@include float(left);
+	float: left;
 	margin-left: $gridGutterWidth;
 }
 
@@ -233,7 +233,7 @@
   width: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1));
 } 
 @mixin fluidGridSystem-gridColumn($fluidGridGutterWidth) {
-  @include float(left);
+  float: left;
   margin-left: $fluidGridGutterWidth - ($fluidGridGutterWidth / 2);
 }
 // Take these values and mixins, and make 'em do their thang
@@ -290,7 +290,7 @@
   @include clearfix();
 }
 @mixin makeColumn($columns: 1) {
-  @include float(left);
+  float: left;
   margin-left: $gridGutterWidth;
   width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
 }
@@ -678,7 +678,7 @@
 }
 @mixin gradient-striped($color, $angle: left top) {
   background-color: $color;
-	$tint: rgba_ie($white, 0.15);
+	$tint: rgba($white, 0.15);
 	// this takes care of all the browser specific garbage for us.
 	@include background-image(linear-gradient($angle, $tint 25%, transparent 25%, transparent 50%, $tint 50%, transparent 75%, transparent));
 }
@@ -687,7 +687,7 @@
 @mixin gradientBar($wp_primaryColor, $secondaryColor) {
   @include gradient-vertical($wp_primaryColor, $secondaryColor);
   border-color: $secondaryColor $secondaryColor darken($secondaryColor, 15%);
-  border-color: rgba_ie($black, 0.1) rgba_ie($black, 0.1) fade-in(rgba_ie($black, 0.1), 0.15);
+  border-color: rgba($black, 0.1) rgba($black, 0.1) fade-in(rgba($black, 0.1), 0.15);
 }
 
 // Reset filters for IE

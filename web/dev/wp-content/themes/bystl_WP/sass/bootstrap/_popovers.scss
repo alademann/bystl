@@ -31,9 +31,9 @@
   width: 280px;
   overflow: hidden;
   background: $black; // has to be full background declaration for IE fallback
-  background: rgba_ie($black,.8);
+  background: rgba($black,.8);
   @include tb_border-radius(6px);
-  @include tb_box-shadow(0 3px 7px rgba_ie($black,0.3));
+  @include tb_box-shadow(0 3px 7px rgba($black,0.3));
 }
 .popover-title {
   padding: 9px 15px;

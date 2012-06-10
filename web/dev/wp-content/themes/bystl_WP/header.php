@@ -116,13 +116,39 @@ jQuery('.images').cycle({
 <!-- BEGIN body -->
 <body class="<?php body_class_alt(); ?> <?php echo $colorSchemeClass; ?>" onload="prettyPrint()">
 
-  <div class="top-bar">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
 
             <div class="container">
 
-                 <?php wp_nav_menu(array('container' => false, 'theme_location' => 'top_menu', 'menu_class' => 'nav sf-menu2', 'echo' => true, 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'depth' => 0 )); ?>
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
 
-                <ul class="social">
+              <div class="nav-collapse">
+
+                 <?php wp_nav_menu(array(
+                                'container' => false, 
+                                'theme_location' => 'top_menu', 
+                                //'container_class' => 'nav pull-right',
+                                'menu_class' => 'nav pull-right', 
+                                //'items_wrap' => '%3$s',
+                                'echo' => true, 
+                                //'before' => '<ul class="nav pull-right">', 
+                                //'after' => '</ul>', 
+                                'link_before' => '', 
+                                'link_after' => '', 
+                                'depth' => 0 
+                                )
+                 ); ?>
+
+                <!--<form class="navbar-search pull-left" action="">
+                  <input type="text" class="search-query span2" placeholder="Search">
+                </form>-->
+
+                <ul class="nav pull-left social">
 
                     <?php if (get_option_tree('twitter_icon') == 'Yes') { ?>
                     <li><a class="twitter" href="https://twitter.com/<?php echo get_option_tree('twitter_url') ?>">twitter</a></li>
@@ -140,8 +166,15 @@ jQuery('.images').cycle({
                 </ul>
 
             </div>
+            <!-- END: nav-collapse -->
+
+            </div>
+            <!-- END: container -->
 
         </div>
+        <!-- END: navbar-inner -->
+    </div>
+    <!-- END: navbar -->
 
      <div class="header">
 

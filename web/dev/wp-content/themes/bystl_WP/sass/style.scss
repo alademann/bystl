@@ -17,15 +17,15 @@
 ---*/
 @import "bystl/colorpalette";
 /*!--- 
-  bystl webfonts
----*/
-@import "bootstrap/webfonts"; 
-// global webfont icons
-@include fontawesome_boiler;
-/*!--- 
   bootstrap
 ---*/
 @import "bootstrap/bootstrap";
+/*!--- 
+  bystl webfonts
+---*/
+@import "bystl/webfonts"; 
+// global webfont icons
+@import "bystl/font-awesome"; // replaces bootstrap/sprites
 /*!--- 
   primary theme framework styles (SynapseWP)
 ---*/

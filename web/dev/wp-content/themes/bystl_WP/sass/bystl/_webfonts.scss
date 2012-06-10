@@ -1,0 +1,57 @@
+/*----------------------------------------------
+
+  PARTIAL:  bystl/_webfonts.scss
+  PARENT:   style.scs
+  
+ ----------------------------------------------*/
+
+$icoFont_path: "fontawesome/fontawesome-webfont" !default;
+$icoFont_name: "FontAwesome" !default;
+$logoFont_path: "bystl-logo-font/bystl-logo" !default; // FetteMittelSchrift-Regular
+$logoFont_name: "bystlLogoFont" !default;
+
+/*  EMBED THE WEBFONTS
+---------------------------------------------- */
+
+// icon font (replaces twitter bootstrap _sprites.scss)
+@include webfont_src($icoFont_path, $icoFont_name);
+// logo / heading font
+@include webfont_src($logoFont_path, $logoFont_name);
+
+
+/*  MIXIN TO USE THE FONTS WITHIN A STYLE DECLARATION
+---------------------------------------------- */
+
+@mixin bystlLogoFont($symbol: true, $style: "bw") {
+  
+  @include webfont($logoFont_name, "sans-serif");
+
+  @if $symbol {
+    $logoImgW: image-width("bystl_header-logo_symbol.png") !default;
+    $logoImgH: image-height("bystl_header-logo_symbol.png") !default;
+    line-height: $logoImgH;
+    padding-left: $logoImgW + 10;
+  }
+    font-size: pxtoem(37);
+    text-transform: lowercase;
+    letter-spacing: normal;
+    @if $style == "color" {
+      color: $bystl_logo_blueLight;  
+    } @else {
+      color: inherit;
+    }
+    
+    white-space: nowrap;
+    word-spacing: -3px;
+    > strong {
+        // dark blue (the rest is light blue)
+        word-spacing: -1px;
+        font-weight: normal;
+        @if $style == "color" {
+          color: $bystl_logo_blueDarkest;
+        } @else {
+          color: inherit;
+        }
+    }
+
+} // END: bystlLogoFont;

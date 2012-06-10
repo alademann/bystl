@@ -7,7 +7,7 @@
  
 body {
 	padding-bottom: 20px; 
-	background-color: #ffffff;
+	background-color: $white;
 	background-repeat: repeat;
 	background-image: image-url('patterns/Graphy2.png');
 	
@@ -58,15 +58,10 @@ body {
 /*	PAGE-CONTENT CHILDREN CONTAINERS
 ---------------------------------------------- */
 .page-content {
-	background: #fff;
+	background: $white;
 	padding: 15px 25px 25px 25px;
 	width: 578px;
-	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-	-o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-o-border-radius: 5px;
+	@include box-shadow(0 1px 1px rgba($black, 0.15));
 	margin-bottom: 30px;
 	font-size: 12px;
 } // END .page-container > .page-content
@@ -84,88 +79,59 @@ body {
 	margin-bottom: 35px;
 }
 
+$nbGradBoxShadowOpacity: 0.7 !default;
+$nbGradBoxBorderColor: #1f1f1f !default;
+$nbGradBoxBorderColor2: lighten($nbGradBoxBorderColor, .15%) !default;
+$nbGradBoxHighlightEdge: rgba($white, $nbGradBoxShadowOpacity / 2);
+@mixin navyBlueBgGradientBox {
+	border: 1px solid $nbGradBoxBorderColor;
+	background: $bystl_blue_navy; /* Old browsers */
+	@include background-image(linear-gradient( $bystl_blue_navy 0%, $bystl_blue_black 100%));
+	@include box-shadow(inset 0 1px 0 $nbGradBoxHighlightEdge, 0 1px 2px rgba($black, $nbGradBoxShadowOpacity));
+} // END darkBlueBgGradient
+
+.navyBlueBgGradientBox {
+	@include navyBlueBgGradientBox;
+}
+
 .sidebar {
 	padding: 15px 20px;
 	width: 250px;
 	margin-bottom: 35px;
-	background: rgb(70,75,77); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(70,75,77,1) 0%, rgba(48,51,53,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(70,75,77,1)), color-stop(100%,rgba(48,51,53,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(70,75,77,1) 0%,rgba(48,51,53,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(70,75,77,1) 0%,rgba(48,51,53,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(70,75,77,1) 0%,rgba(48,51,53,1) 100%); /* IE10+ */
-	background: linear-gradient(top,  rgba(70,75,77,1) 0%,rgba(48,51,53,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464b4d', endColorstr='#303335',GradientType=0 ); /* IE6-9 */
-	border: 1px solid #1f1f1f;
-	font-size: 11px !important;
-	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-	-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-	-o-box-shadow: inset 0 1px 0 rgba(255,255,255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-o-border-radius: 5px;
+	font-size: $baseFontSize - 2 !important;
+	@extend .navyBlueBgGradientBox;
+	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bystl_blue_navy', endColorstr='$bystl_blue_black',GradientType=0 ); /* IE6-9 */
 } // END .page-container > .sidebar
-
-
 
 /*	CONTENT-SPECIFIC ELEM CONTAINERS
 ---------------------------------------------- */
 .video-holder {
-	background: rgb(70,75,77); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(70,75,77,1) 0%, rgba(48,51,53,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(70,75,77,1)), color-stop(100%,rgba(48,51,53,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(70,75,77,1) 0%,rgba(48,51,53,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(70,75,77,1) 0%,rgba(48,51,53,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(70,75,77,1) 0%,rgba(48,51,53,1) 100%); /* IE10+ */
-	background: linear-gradient(top,  rgba(70,75,77,1) 0%,rgba(48,51,53,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464b4d', endColorstr='#303335',GradientType=0 ); /* IE6-9 */
-	border: 1px solid #1f1f1f;
-	border-bottom: 1px solid #161616;
-	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-	-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-	-o-box-shadow: inset 0 1px 0 rgba(255,255,255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-o-border-radius: 5px;
+	@extend .navyBlueBgGradientBox;
+	border-top: 1px solid $nbGradBoxBorderColor2;
+	//@debug "#161616 should equal #{$nbGradBoxBorderColor2}";
+	@include border-radius(5px);
 	margin-top: 20px;
 	padding: 20px;
 } // END .video-holder
 
 .cat-item {
+	@extend .navyBlueBgGradientBox;
 	width: 229px;
-	background: rgb(70,75,77); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(70,75,77,1) 0%, rgba(48,51,53,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(70,75,77,1)), color-stop(100%,rgba(48,51,53,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(70,75,77,1) 0%,rgba(48,51,53,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(70,75,77,1) 0%,rgba(48,51,53,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(70,75,77,1) 0%,rgba(48,51,53,1) 100%); /* IE10+ */
-	background: linear-gradient(top,  rgba(70,75,77,1) 0%,rgba(48,51,53,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464b4d', endColorstr='#303335',GradientType=0 ); /* IE6-9 */
-	border: 1px solid #1f1f1f;
-	border-bottom: 1px solid #161616;
-	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-	-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-	-o-box-shadow: inset 0 1px 0 rgba(255,255,255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-o-border-radius: 5px;
+	border-top: 1px solid $nbGradBoxBorderColor2;
+	@include box-shadow(inset 0 1px 0 $nbGradBoxHighlightEdge, rgba($black, $nbGradBoxShadowOpacity / 2));
+	@include border-radius(5px);
 	padding: 10px;
 	float: left;
 	margin: 5px 0;
 	text-align: right;
 
 	&:hover {
-		background: rgb(93,99,102); /* Old browsers */
-		background: -moz-linear-gradient(top,  rgba(93,99,102,1) 0%, rgba(67,72,75,1) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(93,99,102,1)), color-stop(100%,rgba(67,72,75,1))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  rgba(93,99,102,1) 0%,rgba(67,72,75,1) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  rgba(93,99,102,1) 0%,rgba(67,72,75,1) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  rgba(93,99,102,1) 0%,rgba(67,72,75,1) 100%); /* IE10+ */
-		background: linear-gradient(top,  rgba(93,99,102,1) 0%,rgba(67,72,75,1) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d6366', endColorstr='#43484b',GradientType=0 ); /* IE6-9 */
-		-moz-box-shadow: inset 0 1px 0 rgba(255,255,255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.35);
-		-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.35);
-		-o-box-shadow: inset 0 1px 0 rgba(255,255,255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.35);
+			background: $nbGradBoxHighlightEdge; /* Old browsers */
+			@include background-image(linear-gradient( darken($bystl_blue_navy, 20%) 0%, darken($bystl_blue_black, 20%) 100%));
+			//@debug "#43484b should equal #{darken($nbGradBoxHighlightEdge, 20%)}";
+			@include box-shadow(inset 0 1px 0 $nbGradBoxHighlightEdge, 0 1px 2px rgba($black, $nbGradBoxShadowOpacity));
+		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d6366', endColorstr='#43484b',GradientType=0 ); /* IE6-9 */
+		@include box-shadow(inset 0 1px 0 opacify($nbGradBoxHighlightEdge, .1), rgba($black, $nbGradBoxShadowOpacity / 2));
 	} // END .cat-item:hover
 
 } // END .cat-item

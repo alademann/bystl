@@ -8,100 +8,100 @@
 /*	TOP BAR NAV
 ---------------------------------------------- */
 .top-bar {
-	background-color: #000000;
-	padding: 10px 0;
-	@include box-shadow(0 0 2px rgba(0, 0, 0, 0.35), inset 0 15px 30px rgba(255, 255, 255, 0.2));
+	//@extend .navbar;
+	//@extend .navbar-fixed-top;
 }
 .top-bar a {
-	font-size: 12px;
-	color: #919191;
-	padding: 0 !important;
-	text-shadow: -1px -1px black;
-	@include single-transition(color, 0.3s, ease-in);
+	// font-size: 12px;
+	// color: #919191;
+	// padding: 0 !important;
+	// text-shadow: -1px -1px black;
+	// @include single-transition(color, 0.3s, ease-in);
 }
 
 // NAVBAR COLORS
 
-.topBarTheme_Black {
+// .topBarTheme_Black {
 
-	.top-bar {
-		background: #000000;
-		border-bottom: 1px solid #2a68bd;
-	    border-top: 1px solid #2a68bd;
+// 	// .top-bar {
 
-	    a {
-	    	color: #919191;
-	    	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-	    }
-	}
+// 	// 	// background: #000000;
+// 	// 	// border-bottom: 1px solid #2a68bd;
+// 	//  //    border-top: 1px solid #2a68bd;
 
-}
+// 	//  //    a {
+// 	//  //    	color: #919191;
+// 	//  //    	text-shadow: 1px 1px 1px rgba($black, 0.4);
+// 	//  //    }
+// 	// }
 
-.topBarTheme_Blue {
+// }
 
-	.top-bar {
-		background: #2c6bc3;
-		border-bottom: 1px solid #2a68bd;
-	    border-top: 1px solid #2a68bd;
+// .topBarTheme_Blue {
 
-	    a {
-	    	color: #e8e8e8;
-	    	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-	    }
-	}
+// 	.top-bar {
+// 		background: #2c6bc3;
+// 		border-bottom: 1px solid #2a68bd;
+// 	    border-top: 1px solid #2a68bd;
 
-}
+// 	    a {
+// 	    	color: #e8e8e8;
+// 	    	text-shadow: 1px 1px 1px rgba($black, 0.4);
+// 	    }
+// 	}
 
-.topBarTheme_Red {
+// }
 
-	.top-bar {
-		background: #c81414;
-		border-bottom: 1px solid #b71d1d;
-    	border-top: 1px solid #b71d1d;
+// .topBarTheme_Red {
 
-    	a {
-    		color: #e8e8e8;
-	    	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-    	}
-	}	
+// 	.top-bar {
+// 		background: #c81414;
+// 		border-bottom: 1px solid #b71d1d;
+//     	border-top: 1px solid #b71d1d;
 
-}
+//     	a {
+//     		color: #e8e8e8;
+// 	    	text-shadow: 1px 1px 1px rgba($black, 0.4);
+//     	}
+// 	}	
 
-.topBarTheme_Orange {
+// }
 
-	.top-bar {
-		background: #e97700;
-		border-bottom: 1px solid #e0801c;
-	    border-top: 1px solid #e0801c;
+// .topBarTheme_Orange {
 
-	    a {
-	    	color: #e8e8e8;
-	    	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-	    }
-	}	
+// 	.top-bar {
+// 		background: #e97700;
+// 		border-bottom: 1px solid #e0801c;
+// 	    border-top: 1px solid #e0801c;
 
-}
+// 	    a {
+// 	    	color: #e8e8e8;
+// 	    	text-shadow: 1px 1px 1px rgba($black, 0.4);
+// 	    }
+// 	}	
 
-.topBarTheme_Pink {
+// }
 
-	.top-bar {
-		background: #d2386a;
-		border-bottom: 1px solid #d2386a;
-	    border-top: 1px solid #d2386a;
+// .topBarTheme_Pink {
 
-	    a {
-	    	color: #e8e8e8;
-	    	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-	    }
-	}	
+// 	.top-bar {
+// 		background: #d2386a;
+// 		border-bottom: 1px solid #d2386a;
+// 	    border-top: 1px solid #d2386a;
 
-}
+// 	    a {
+// 	    	color: #e8e8e8;
+// 	    	text-shadow: 1px 1px 1px rgba($black, 0.4);
+// 	    }
+// 	}	
+
+// }
 
 // END NAVBAR COLORS
 
-.nav li {
-	padding-right: 20px;
-}
+// .nav li {
+// 	padding-right: 20px;
+// }
 .social {
 	float: right !important;
 	padding-top: 2px;
@@ -126,16 +126,16 @@
 	display: block;
 }
 .facebook {
-	background: url(img/icon-facebook.png) no-repeat;
+	background: url(image-url('icon-facebook.png', true)) no-repeat;
 }
 .twitter {
-	background: url(img/icon-twitter.png) no-repeat;
+	background: url(image-url('icon-twitter.png', true)) no-repeat;
 }
 .phone {
-	background: url(img/icon-phone.png) no-repeat;
+	background: url(image-url('icon-phone.png', true)) no-repeat;
 }
 .mail {
-	background: url(img/icon-mail.png) no-repeat;
+	background: url(image-url('icon-mail.png', true)) no-repeat;
 }
 
 /*	MAIN NAV (HEADER)
@@ -154,30 +154,15 @@
 #main-nav > li:first-child {
 	border-left: medium none;
 }
-.home .home-link a {
+.home .home-link a, .home li a.home-link {
 	padding: 8px 17px !important;
 }
-.home .home-link a, #main-nav .current-menu-item a, #main-nav .current_page_item a {
-	background: rgb(127,127,127); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(127,127,127,1) 0%, rgba(160,160,160,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(127,127,127,1)), color-stop(100%,rgba(160,160,160,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(127,127,127,1) 0%,rgba(160,160,160,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(127,127,127,1) 0%,rgba(160,160,160,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(127,127,127,1) 0%,rgba(160,160,160,1) 100%); /* IE10+ */
-	background: linear-gradient(top,  rgba(127,127,127,1) 0%,rgba(160,160,160,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f7f7f', endColorstr='#a0a0a0',GradientType=0 ); /* IE6-9 */
-	-moz-border-radius: 99px;
-	-webkit-border-radius: 999px;
-	-o-border-radius: 99px;
-	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.6);
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.6);
-	-o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.6);
-	padding: 8px 17px;
-	color: #fff !important;
-	font-weight: bold;
-	text-shadow: 1px 1px 1px rgba(0,0,0, 0.4);
-	-webkit-transition:opacity 0.3s ease-in;
-	-o-transition:opacity 0.3s ease-in;
+.home .home-link a, #main-nav .current-menu-item a, #main-nav .current_page_item a,
+.home li a.home-link, #main-nav li a.current-menu-item, #main-nav li a.current_page_item,
+#main-nav li a[class*="current"] {
+	// TODO: replace with nav pill stles;
+	//-webkit-transition:opacity 0.3s ease-in;
+	//-o-transition:opacity 0.3s ease-in;
 }
 #main-nav a {
 	padding: 8px 0
@@ -193,32 +178,12 @@
 		margin-right: 25px;
 
 		a {
-			color: #555555;
+			color: $gray;
 			font-size: 13px;
-			text-shadow: 1px 1px rgba(255, 255, 255, 0.8);
+			text-shadow: 1px 1px rgba($white, 0.8);
 
 			&.active {
-				color: #fff !important;
-				font-size: 13px;
-				background: rgb(127,127,127); /* Old browsers */
-				background: -moz-linear-gradient(top,  rgba(127,127,127,1) 0%, rgba(160,160,160,1) 100%); /* FF3.6+ */
-				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(127,127,127,1)), color-stop(100%,rgba(160,160,160,1))); /* Chrome,Safari4+ */
-				background: -webkit-linear-gradient(top,  rgba(127,127,127,1) 0%,rgba(160,160,160,1) 100%); /* Chrome10+,Safari5.1+ */
-				background: -o-linear-gradient(top,  rgba(127,127,127,1) 0%,rgba(160,160,160,1) 100%); /* Opera 11.10+ */
-				background: -ms-linear-gradient(top,  rgba(127,127,127,1) 0%,rgba(160,160,160,1) 100%); /* IE10+ */
-				background: linear-gradient(top,  rgba(127,127,127,1) 0%,rgba(160,160,160,1) 100%); /* W3C */
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f7f7f', endColorstr='#a0a0a0',GradientType=0 ); /* IE6-9 */
-				-moz-border-radius: 30px;
-				-webkit-border-radius: 30px;
-				-o-border-radius: 30px;
-				-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
-				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
-				-o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
-				border: none;
-				padding: 6px 15px 7px 15px;
-				font-weight: bold;
-				color: #fff !important;
-				text-shadow: 1px 1px 1px rgba(0,0,0, 0.4);
+				// TODO: replace with bootstrap nav pills;
 			} // END #filters <li><a class="active">
 
 			&:hover {

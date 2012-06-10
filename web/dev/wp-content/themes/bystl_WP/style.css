@@ -102,843 +102,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*  PRIMARY INTERACTION COLORS
 ---------------------------------------------- */
 /*--- 
-  bystl webfonts
----*/
-/*----------------------------------------------
-
-	PARTIAL:	_webfonts.scss
-	PARENT:		_bootstrap.scss
-	
-----------------------------------------------*/
-/* \f020 is not a valid unicode character. all shifted one down */
-@font-face {
-  font-family: "FontAwesome";
-  src: url(/public/fonts/fontawesome/fontawesome-webfont.eot);
-  src: url(/public/fonts/fontawesome/fontawesome-webfont.eot?#iefix) format('eot'), url(/public/fonts/fontawesome/fontawesome-webfont.woff) format('woff'), url(/public/fonts/fontawesome/fontawesome-webfont.ttf) format('truetype'), url(/public/fonts/fontawesome/fontawesome-webfont.svg#FontAwesome) format('svg');
-}
-
-/* sprites.less reset */
-/* line 62, sass/bootstrap/_webfonts.scss */
-[class^="icon-"],
-[class*=" icon-"] {
-  display: inline;
-  width: auto;
-  height: auto;
-  line-height: inherit;
-  vertical-align: baseline;
-  background-image: none;
-  background-position: 0% 0%;
-  background-repeat: repeat;
-}
-
-/* line 73, sass/bootstrap/_webfonts.scss */
-li[class^="icon-"],
-li[class*=" icon-"] {
-  display: block;
-}
-
-/*  Font Awesome styles
-    ------------------------------------------------------- */
-/* line 80, sass/bootstrap/_webfonts.scss */
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "FontAwesome" !important;
-  font-weight: normal;
-  font-style: normal;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  text-decoration: inherit;
-}
-/* line 7, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  *display: inline;
-}
-
-/* line 89, sass/bootstrap/_webfonts.scss */
-a [class^="icon-"],
-a [class*=" icon-"] {
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  text-decoration: inherit;
-}
-/* line 7, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
-a [class^="icon-"],
-a [class*=" icon-"] {
-  *display: inline;
-}
-
-/* makes the font 33% larger relative to the icon container */
-/* line 95, sass/bootstrap/_webfonts.scss */
-.icon-large:before {
-  vertical-align: top;
-  font-size: 4/3em;
-}
-
-/* line 102, sass/bootstrap/_webfonts.scss */
-.btn [class^="icon-"],
-.btn [class*=" icon-"] {
-  /* keeps button heights with and without icons the same */
-  line-height: .9em;
-}
-
-/* line 110, sass/bootstrap/_webfonts.scss */
-li [class^="icon-"],
-li [class*=" icon-"] {
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  width: 1.25em;
-  text-align: center;
-}
-/* line 7, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
-li [class^="icon-"],
-li [class*=" icon-"] {
-  *display: inline;
-}
-/* line 116, sass/bootstrap/_webfonts.scss */
-li .icon-large[class^="icon-"],
-li .icon-large[class*=" icon-"] {
-  /* 1.5 increased font size for icon-large * 1.25 width */
-  width: 1.875em;
-}
-
-/* line 123, sass/bootstrap/_webfonts.scss */
-li[class^="icon-"],
-li[class*=" icon-"] {
-  margin-left: 0;
-  list-style-type: none;
-}
-/* line 127, sass/bootstrap/_webfonts.scss */
-li[class^="icon-"]:before,
-li[class*=" icon-"]:before {
-  text-indent: -2em;
-  text-align: center;
-}
-/* line 131, sass/bootstrap/_webfonts.scss */
-li[class^="icon-"].icon-large:before,
-li[class*=" icon-"].icon-large:before {
-  text-indent: -4/3em;
-}
-
-/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
-    readers do not read off random characters that represent icons */
-/* line 138, sass/bootstrap/_webfonts.scss */
-.icon-glass:before {
-  content: "\f000";
-}
-
-/* line 139, sass/bootstrap/_webfonts.scss */
-.icon-music:before {
-  content: "\f001";
-}
-
-/* line 140, sass/bootstrap/_webfonts.scss */
-.icon-search:before {
-  content: "\f002";
-}
-
-/* line 141, sass/bootstrap/_webfonts.scss */
-.icon-envelope:before {
-  content: "\f003";
-}
-
-/* line 142, sass/bootstrap/_webfonts.scss */
-.icon-heart:before {
-  content: "\f004";
-}
-
-/* line 143, sass/bootstrap/_webfonts.scss */
-.icon-star:before {
-  content: "\f005";
-}
-
-/* line 144, sass/bootstrap/_webfonts.scss */
-.icon-star-empty:before {
-  content: "\f006";
-}
-
-/* line 145, sass/bootstrap/_webfonts.scss */
-.icon-user:before {
-  content: "\f007";
-}
-
-/* line 146, sass/bootstrap/_webfonts.scss */
-.icon-film:before {
-  content: "\f008";
-}
-
-/* line 147, sass/bootstrap/_webfonts.scss */
-.icon-th-large:before {
-  content: "\f009";
-}
-
-/* line 148, sass/bootstrap/_webfonts.scss */
-.icon-th:before {
-  content: "\f00a";
-}
-
-/* line 149, sass/bootstrap/_webfonts.scss */
-.icon-th-list:before {
-  content: "\f00b";
-}
-
-/* line 150, sass/bootstrap/_webfonts.scss */
-.icon-ok:before {
-  content: "\f00c";
-}
-
-/* line 151, sass/bootstrap/_webfonts.scss */
-.icon-remove:before {
-  content: "\f00d";
-}
-
-/* line 152, sass/bootstrap/_webfonts.scss */
-.icon-zoom-in:before {
-  content: "\f00e";
-}
-
-/* line 154, sass/bootstrap/_webfonts.scss */
-.icon-zoom-out:before {
-  content: "\f010";
-}
-
-/* line 155, sass/bootstrap/_webfonts.scss */
-.icon-off:before {
-  content: "\f011";
-}
-
-/* line 156, sass/bootstrap/_webfonts.scss */
-.icon-signal:before {
-  content: "\f012";
-}
-
-/* line 157, sass/bootstrap/_webfonts.scss */
-.icon-cog:before {
-  content: "\f013";
-}
-
-/* line 158, sass/bootstrap/_webfonts.scss */
-.icon-trash:before {
-  content: "\f014";
-}
-
-/* line 159, sass/bootstrap/_webfonts.scss */
-.icon-home:before {
-  content: "\f015";
-}
-
-/* line 160, sass/bootstrap/_webfonts.scss */
-.icon-file:before {
-  content: "\f016";
-}
-
-/* line 161, sass/bootstrap/_webfonts.scss */
-.icon-time:before {
-  content: "\f017";
-}
-
-/* line 162, sass/bootstrap/_webfonts.scss */
-.icon-road:before {
-  content: "\f018";
-}
-
-/* line 163, sass/bootstrap/_webfonts.scss */
-.icon-download-alt:before {
-  content: "\f019";
-}
-
-/* line 164, sass/bootstrap/_webfonts.scss */
-.icon-download:before {
-  content: "\f01a";
-}
-
-/* line 165, sass/bootstrap/_webfonts.scss */
-.icon-upload:before {
-  content: "\f01b";
-}
-
-/* line 166, sass/bootstrap/_webfonts.scss */
-.icon-inbox:before {
-  content: "\f01c";
-}
-
-/* line 167, sass/bootstrap/_webfonts.scss */
-.icon-play-circle:before {
-  content: "\f01d";
-}
-
-/* line 168, sass/bootstrap/_webfonts.scss */
-.icon-repeat:before {
-  content: "\f01e";
-}
-
-/* \f020 is not a valid unicode character. all shifted one down */
-/* line 171, sass/bootstrap/_webfonts.scss */
-.icon-refresh:before {
-  content: "\f021";
-}
-
-/* line 172, sass/bootstrap/_webfonts.scss */
-.icon-list-alt:before {
-  content: "\f022";
-}
-
-/* line 173, sass/bootstrap/_webfonts.scss */
-.icon-lock:before {
-  content: "\f023";
-}
-
-/* line 174, sass/bootstrap/_webfonts.scss */
-.icon-flag:before {
-  content: "\f024";
-}
-
-/* line 175, sass/bootstrap/_webfonts.scss */
-.icon-headphones:before {
-  content: "\f025";
-}
-
-/* line 176, sass/bootstrap/_webfonts.scss */
-.icon-volume-off:before {
-  content: "\f026";
-}
-
-/* line 177, sass/bootstrap/_webfonts.scss */
-.icon-volume-down:before {
-  content: "\f027";
-}
-
-/* line 178, sass/bootstrap/_webfonts.scss */
-.icon-volume-up:before {
-  content: "\f028";
-}
-
-/* line 179, sass/bootstrap/_webfonts.scss */
-.icon-qrcode:before {
-  content: "\f029";
-}
-
-/* line 180, sass/bootstrap/_webfonts.scss */
-.icon-barcode:before {
-  content: "\f02a";
-}
-
-/* line 181, sass/bootstrap/_webfonts.scss */
-.icon-tag:before {
-  content: "\f02b";
-}
-
-/* line 182, sass/bootstrap/_webfonts.scss */
-.icon-tags:before {
-  content: "\f02c";
-}
-
-/* line 183, sass/bootstrap/_webfonts.scss */
-.icon-book:before {
-  content: "\f02d";
-}
-
-/* line 184, sass/bootstrap/_webfonts.scss */
-.icon-bookmark:before {
-  content: "\f02e";
-}
-
-/* line 185, sass/bootstrap/_webfonts.scss */
-.icon-print:before {
-  content: "\f02f";
-}
-
-/* line 187, sass/bootstrap/_webfonts.scss */
-.icon-camera:before {
-  content: "\f030";
-}
-
-/* line 188, sass/bootstrap/_webfonts.scss */
-.icon-font:before {
-  content: "\f031";
-}
-
-/* line 189, sass/bootstrap/_webfonts.scss */
-.icon-bold:before {
-  content: "\f032";
-}
-
-/* line 190, sass/bootstrap/_webfonts.scss */
-.icon-italic:before {
-  content: "\f033";
-}
-
-/* line 191, sass/bootstrap/_webfonts.scss */
-.icon-text-height:before {
-  content: "\f034";
-}
-
-/* line 192, sass/bootstrap/_webfonts.scss */
-.icon-text-width:before {
-  content: "\f035";
-}
-
-/* line 193, sass/bootstrap/_webfonts.scss */
-.icon-align-left:before {
-  content: "\f036";
-}
-
-/* line 194, sass/bootstrap/_webfonts.scss */
-.icon-align-center:before {
-  content: "\f037";
-}
-
-/* line 195, sass/bootstrap/_webfonts.scss */
-.icon-align-right:before {
-  content: "\f038";
-}
-
-/* line 196, sass/bootstrap/_webfonts.scss */
-.icon-align-justify:before {
-  content: "\f039";
-}
-
-/* line 197, sass/bootstrap/_webfonts.scss */
-.icon-list:before {
-  content: "\f03a";
-}
-
-/* line 198, sass/bootstrap/_webfonts.scss */
-.icon-indent-left:before {
-  content: "\f03b";
-}
-
-/* line 199, sass/bootstrap/_webfonts.scss */
-.icon-indent-right:before {
-  content: "\f03c";
-}
-
-/* line 200, sass/bootstrap/_webfonts.scss */
-.icon-facetime-video:before {
-  content: "\f03d";
-}
-
-/* line 201, sass/bootstrap/_webfonts.scss */
-.icon-picture:before {
-  content: "\f03e";
-}
-
-/* line 203, sass/bootstrap/_webfonts.scss */
-.icon-pencil:before {
-  content: "\f040";
-}
-
-/* line 204, sass/bootstrap/_webfonts.scss */
-.icon-map-marker:before {
-  content: "\f041";
-}
-
-/* line 205, sass/bootstrap/_webfonts.scss */
-.icon-adjust:before {
-  content: "\f042";
-}
-
-/* line 206, sass/bootstrap/_webfonts.scss */
-.icon-tint:before {
-  content: "\f043";
-}
-
-/* line 207, sass/bootstrap/_webfonts.scss */
-.icon-edit:before {
-  content: "\f044";
-}
-
-/* line 208, sass/bootstrap/_webfonts.scss */
-.icon-share:before {
-  content: "\f045";
-}
-
-/* line 209, sass/bootstrap/_webfonts.scss */
-.icon-check:before {
-  content: "\f046";
-}
-
-/* line 210, sass/bootstrap/_webfonts.scss */
-.icon-move:before {
-  content: "\f047";
-}
-
-/* line 211, sass/bootstrap/_webfonts.scss */
-.icon-step-backward:before {
-  content: "\f048";
-}
-
-/* line 212, sass/bootstrap/_webfonts.scss */
-.icon-fast-backward:before {
-  content: "\f049";
-}
-
-/* line 213, sass/bootstrap/_webfonts.scss */
-.icon-backward:before {
-  content: "\f04a";
-}
-
-/* line 214, sass/bootstrap/_webfonts.scss */
-.icon-play:before {
-  content: "\f04b";
-}
-
-/* line 215, sass/bootstrap/_webfonts.scss */
-.icon-pause:before {
-  content: "\f04c";
-}
-
-/* line 216, sass/bootstrap/_webfonts.scss */
-.icon-stop:before {
-  content: "\f04d";
-}
-
-/* line 217, sass/bootstrap/_webfonts.scss */
-.icon-forward:before {
-  content: "\f04e";
-}
-
-/* line 219, sass/bootstrap/_webfonts.scss */
-.icon-fast-forward:before {
-  content: "\f050";
-}
-
-/* line 220, sass/bootstrap/_webfonts.scss */
-.icon-step-forward:before {
-  content: "\f051";
-}
-
-/* line 221, sass/bootstrap/_webfonts.scss */
-.icon-eject:before {
-  content: "\f052";
-}
-
-/* line 222, sass/bootstrap/_webfonts.scss */
-.icon-chevron-left:before {
-  content: "\f053";
-}
-
-/* line 223, sass/bootstrap/_webfonts.scss */
-.icon-chevron-right:before {
-  content: "\f054";
-}
-
-/* line 224, sass/bootstrap/_webfonts.scss */
-.icon-plus-sign:before {
-  content: "\f055";
-}
-
-/* line 225, sass/bootstrap/_webfonts.scss */
-.icon-minus-sign:before {
-  content: "\f056";
-}
-
-/* line 226, sass/bootstrap/_webfonts.scss */
-.icon-remove-sign:before {
-  content: "\f057";
-}
-
-/* line 227, sass/bootstrap/_webfonts.scss */
-.icon-ok-sign:before {
-  content: "\f058";
-}
-
-/* line 228, sass/bootstrap/_webfonts.scss */
-.icon-question-sign:before {
-  content: "\f059";
-}
-
-/* line 229, sass/bootstrap/_webfonts.scss */
-.icon-info-sign:before {
-  content: "\f05a";
-}
-
-/* line 230, sass/bootstrap/_webfonts.scss */
-.icon-screenshot:before {
-  content: "\f05b";
-}
-
-/* line 231, sass/bootstrap/_webfonts.scss */
-.icon-remove-circle:before {
-  content: "\f05c";
-}
-
-/* line 232, sass/bootstrap/_webfonts.scss */
-.icon-ok-circle:before {
-  content: "\f05d";
-}
-
-/* line 233, sass/bootstrap/_webfonts.scss */
-.icon-ban-circle:before {
-  content: "\f05e";
-}
-
-/* line 235, sass/bootstrap/_webfonts.scss */
-.icon-arrow-left:before {
-  content: "\f060";
-}
-
-/* line 236, sass/bootstrap/_webfonts.scss */
-.icon-arrow-right:before {
-  content: "\f061";
-}
-
-/* line 237, sass/bootstrap/_webfonts.scss */
-.icon-arrow-up:before {
-  content: "\f062";
-}
-
-/* line 238, sass/bootstrap/_webfonts.scss */
-.icon-arrow-down:before {
-  content: "\f063";
-}
-
-/* line 239, sass/bootstrap/_webfonts.scss */
-.icon-share-alt:before {
-  content: "\f064";
-}
-
-/* line 240, sass/bootstrap/_webfonts.scss */
-.icon-resize-full:before {
-  content: "\f065";
-}
-
-/* line 241, sass/bootstrap/_webfonts.scss */
-.icon-resize-small:before {
-  content: "\f066";
-}
-
-/* line 242, sass/bootstrap/_webfonts.scss */
-.icon-plus:before {
-  content: "\f067";
-}
-
-/* line 243, sass/bootstrap/_webfonts.scss */
-.icon-minus:before {
-  content: "\f068";
-}
-
-/* line 244, sass/bootstrap/_webfonts.scss */
-.icon-asterisk:before {
-  content: "\f069";
-}
-
-/* line 245, sass/bootstrap/_webfonts.scss */
-.icon-exclamation-sign:before {
-  content: "\f06a";
-}
-
-/* line 246, sass/bootstrap/_webfonts.scss */
-.icon-gift:before {
-  content: "\f06b";
-}
-
-/* line 247, sass/bootstrap/_webfonts.scss */
-.icon-leaf:before {
-  content: "\f06c";
-}
-
-/* line 248, sass/bootstrap/_webfonts.scss */
-.icon-fire:before {
-  content: "\f06d";
-}
-
-/* line 249, sass/bootstrap/_webfonts.scss */
-.icon-eye-open:before {
-  content: "\f06e";
-}
-
-/* line 251, sass/bootstrap/_webfonts.scss */
-.icon-eye-close:before {
-  content: "\f070";
-}
-
-/* line 252, sass/bootstrap/_webfonts.scss */
-.icon-warning-sign:before {
-  content: "\f071";
-}
-
-/* line 253, sass/bootstrap/_webfonts.scss */
-.icon-plane:before {
-  content: "\f072";
-}
-
-/* line 254, sass/bootstrap/_webfonts.scss */
-.icon-calendar:before {
-  content: "\f073";
-}
-
-/* line 255, sass/bootstrap/_webfonts.scss */
-.icon-random:before {
-  content: "\f074";
-}
-
-/* line 256, sass/bootstrap/_webfonts.scss */
-.icon-comment:before {
-  content: "\f075";
-}
-
-/* line 257, sass/bootstrap/_webfonts.scss */
-.icon-magnet:before {
-  content: "\f076";
-}
-
-/* line 258, sass/bootstrap/_webfonts.scss */
-.icon-chevron-up:before {
-  content: "\f077";
-}
-
-/* line 259, sass/bootstrap/_webfonts.scss */
-.icon-chevron-down:before {
-  content: "\f078";
-}
-
-/* line 260, sass/bootstrap/_webfonts.scss */
-.icon-retweet:before {
-  content: "\f079";
-}
-
-/* line 261, sass/bootstrap/_webfonts.scss */
-.icon-shopping-cart:before {
-  content: "\f07a";
-}
-
-/* line 262, sass/bootstrap/_webfonts.scss */
-.icon-folder-close:before {
-  content: "\f07b";
-}
-
-/* line 263, sass/bootstrap/_webfonts.scss */
-.icon-folder-open:before {
-  content: "\f07c";
-}
-
-/* line 264, sass/bootstrap/_webfonts.scss */
-.icon-resize-vertical:before {
-  content: "\f07d";
-}
-
-/* line 265, sass/bootstrap/_webfonts.scss */
-.icon-resize-horizontal:before {
-  content: "\f07e";
-}
-
-/* line 267, sass/bootstrap/_webfonts.scss */
-.icon-bar-chart:before {
-  content: "\f080";
-}
-
-/* line 268, sass/bootstrap/_webfonts.scss */
-.icon-twitter-sign:before {
-  content: "\f081";
-}
-
-/* line 269, sass/bootstrap/_webfonts.scss */
-.icon-facebook-sign:before {
-  content: "\f082";
-}
-
-/* line 270, sass/bootstrap/_webfonts.scss */
-.icon-camera-retro:before {
-  content: "\f083";
-}
-
-/* line 271, sass/bootstrap/_webfonts.scss */
-.icon-key:before {
-  content: "\f084";
-}
-
-/* line 272, sass/bootstrap/_webfonts.scss */
-.icon-cogs:before {
-  content: "\f085";
-}
-
-/* line 273, sass/bootstrap/_webfonts.scss */
-.icon-comments:before {
-  content: "\f086";
-}
-
-/* line 274, sass/bootstrap/_webfonts.scss */
-.icon-thumbs-up:before {
-  content: "\f087";
-}
-
-/* line 275, sass/bootstrap/_webfonts.scss */
-.icon-thumbs-down:before {
-  content: "\f088";
-}
-
-/* line 276, sass/bootstrap/_webfonts.scss */
-.icon-star-half:before {
-  content: "\f089";
-}
-
-/* line 277, sass/bootstrap/_webfonts.scss */
-.icon-heart-empty:before {
-  content: "\f08a";
-}
-
-/* line 278, sass/bootstrap/_webfonts.scss */
-.icon-signout:before {
-  content: "\f08b";
-}
-
-/* line 279, sass/bootstrap/_webfonts.scss */
-.icon-linkedin-sign:before {
-  content: "\f08c";
-}
-
-/* line 280, sass/bootstrap/_webfonts.scss */
-.icon-pushpin:before {
-  content: "\f08d";
-}
-
-/* line 281, sass/bootstrap/_webfonts.scss */
-.icon-external-link:before {
-  content: "\f08e";
-}
-
-/* line 283, sass/bootstrap/_webfonts.scss */
-.icon-signin:before {
-  content: "\f090";
-}
-
-/* line 284, sass/bootstrap/_webfonts.scss */
-.icon-trophy:before {
-  content: "\f091";
-}
-
-/* line 285, sass/bootstrap/_webfonts.scss */
-.icon-github-sign:before {
-  content: "\f092";
-}
-
-/* line 286, sass/bootstrap/_webfonts.scss */
-.icon-upload-alt:before {
-  content: "\f093";
-}
-
-/* line 287, sass/bootstrap/_webfonts.scss */
-.icon-lemon:before {
-  content: "\f094";
-}
-
-/*--- 
   bootstrap
 ---*/
 /*----------------------------------------------
 
 	PARTIAL:	_bootstrap.scss
 	PARENT:		style.scss
+	
+----------------------------------------------*/
+/*----------------------------------------------
+
+	PARTIAL:	_webfonts.scss
+	PARENT:		_bootstrap.scss
 	
 ----------------------------------------------*/
 /*----------------------------------------------
@@ -1140,7 +315,6 @@ a:hover {
 
 /* line 214, sass/bootstrap/_mixins.scss */
 [class*="span"] {
-  display: inline;
   float: left;
   margin-left: 20px;
 }
@@ -1281,7 +455,6 @@ a:hover {
 }
 /* line 247, sass/bootstrap/_mixins.scss */
 .row-fluid > [class*="span"] {
-  display: inline;
   float: left;
   margin-left: 1.419%;
 }
@@ -1618,7 +791,6 @@ blockquote small:before {
 }
 /* line 154, sass/bootstrap/_type.scss */
 blockquote.pull-right {
-  display: inline;
   float: right;
   padding-left: 0;
   padding-right: 15px;
@@ -1693,7 +865,7 @@ pre {
   line-height: 1.385em;
   background-color: #f7f7f7;
   border: 1px solid #d0d0d0;
-  border: 1px solid #cacaca;
+  border: 1px solid #cfcdca;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -1939,7 +1111,6 @@ input[type="hidden"] {
 /* line 194, sass/bootstrap/_forms.scss */
 .radio input[type="radio"],
 .checkbox input[type="checkbox"] {
-  display: inline;
   float: left;
   margin-left: -18px;
 }
@@ -1976,9 +1147,9 @@ input[type="hidden"] {
 /* line 231, sass/bootstrap/_forms.scss */
 input,
 textarea {
-  -webkit-box-shadow: 0 1px 1px #dcdcdc inset;
-  -moz-box-shadow: 0 1px 1px #dcdcdc inset;
-  box-shadow: 0 1px 1px #dcdcdc inset;
+  -webkit-box-shadow: 0 1px 1px #dedddc inset;
+  -moz-box-shadow: 0 1px 1px #dedddc inset;
+  box-shadow: 0 1px 1px #dedddc inset;
   -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
   -moz-transition: border linear 0.2s box-shadow linear 0.2s;
   -ms-transition: border linear 0.2s box-shadow linear 0.2s;
@@ -1989,9 +1160,9 @@ textarea {
 /* line 237, sass/bootstrap/_forms.scss */
 input:focus,
 textarea:focus {
-  -webkit-box-shadow: inset 0 1px 1px #dcdcdc, 0 0 8px #90c4ec;
-  -moz-box-shadow: inset 0 1px 1px #dcdcdc, 0 0 8px #90c4ec;
-  box-shadow: inset 0 1px 1px #dcdcdc, 0 0 8px #90c4ec;
+  -webkit-box-shadow: inset 0 1px 1px #dedddc, 0 0 8px #90c4ec;
+  -moz-box-shadow: inset 0 1px 1px #dedddc, 0 0 8px #90c4ec;
+  box-shadow: inset 0 1px 1px #dedddc, 0 0 8px #90c4ec;
   outline: 0;
   outline: thin dotted \9;
   /* IE9 and down */
@@ -2327,7 +1498,6 @@ select:focus:required:invalid:focus {
 /* line 393, sass/bootstrap/_forms.scss */
 .input-prepend .add-on,
 .input-append .add-on {
-  display: inline;
   float: left;
   display: block;
   width: auto;
@@ -2363,7 +1533,6 @@ select:focus:required:invalid:focus {
 /* line 422, sass/bootstrap/_forms.scss */
 .input-append input,
 .input-append .uneditable-input {
-  display: inline;
   float: left;
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
@@ -2522,7 +1691,6 @@ legend + .control-group {
 }
 /* line 527, sass/bootstrap/_forms.scss */
 .form-horizontal .control-group > label {
-  display: inline;
   float: left;
   width: 140px;
   padding-top: 5px;
@@ -2737,646 +1905,6 @@ table .span12 {
 
 /*----------------------------------------------
 
-  PARTIAL:  _sprites.scss
-  PARENT:   _bootstrap.scss
-  Glyphs and icons for buttons, nav, and more
-
-----------------------------------------------*/
-/* line 21, sass/bootstrap/_sprites.scss */
-[class^="icon-"],
-[class*=" icon-"] {
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  width: 14px;
-  height: 14px;
-  line-height: 14px;
-  vertical-align: text-top;
-  background-image: url(url('img/icons/glyphicons-halflings.png?1333591291'));
-  background-position: 14px 14px;
-  background-repeat: no-repeat;
-  *margin-right: 0.3em;
-}
-/* line 7, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
-[class^="icon-"],
-[class*=" icon-"] {
-  *display: inline;
-}
-/* line 91, sass/bootstrap/_mixins.scss */
-[class^="icon-"]:last-child,
-[class*=" icon-"]:last-child {
-  *margin-left: 0;
-}
-
-/* line 33, sass/bootstrap/_sprites.scss */
-.icon-white {
-  background-image: url(url('img/icons/glyphicons-halflings-white.png?1333591292'));
-}
-
-/* line 37, sass/bootstrap/_sprites.scss */
-.icon-glass {
-  background-position: 0      0;
-}
-
-/* line 38, sass/bootstrap/_sprites.scss */
-.icon-music {
-  background-position: -24px 0;
-}
-
-/* line 39, sass/bootstrap/_sprites.scss */
-.icon-search {
-  background-position: -48px 0;
-}
-
-/* line 40, sass/bootstrap/_sprites.scss */
-.icon-envelope {
-  background-position: -72px 0;
-}
-
-/* line 41, sass/bootstrap/_sprites.scss */
-.icon-heart {
-  background-position: -96px 0;
-}
-
-/* line 42, sass/bootstrap/_sprites.scss */
-.icon-star {
-  background-position: -120px 0;
-}
-
-/* line 43, sass/bootstrap/_sprites.scss */
-.icon-star-empty {
-  background-position: -144px 0;
-}
-
-/* line 44, sass/bootstrap/_sprites.scss */
-.icon-user {
-  background-position: -168px 0;
-}
-
-/* line 45, sass/bootstrap/_sprites.scss */
-.icon-film {
-  background-position: -192px 0;
-}
-
-/* line 46, sass/bootstrap/_sprites.scss */
-.icon-th-large {
-  background-position: -216px 0;
-}
-
-/* line 47, sass/bootstrap/_sprites.scss */
-.icon-th {
-  background-position: -240px 0;
-}
-
-/* line 48, sass/bootstrap/_sprites.scss */
-.icon-th-list {
-  background-position: -264px 0;
-}
-
-/* line 49, sass/bootstrap/_sprites.scss */
-.icon-ok {
-  background-position: -288px 0;
-}
-
-/* line 50, sass/bootstrap/_sprites.scss */
-.icon-remove {
-  background-position: -312px 0;
-}
-
-/* line 51, sass/bootstrap/_sprites.scss */
-.icon-zoom-in {
-  background-position: -336px 0;
-}
-
-/* line 52, sass/bootstrap/_sprites.scss */
-.icon-zoom-out {
-  background-position: -360px 0;
-}
-
-/* line 53, sass/bootstrap/_sprites.scss */
-.icon-off {
-  background-position: -384px 0;
-}
-
-/* line 54, sass/bootstrap/_sprites.scss */
-.icon-signal {
-  background-position: -408px 0;
-}
-
-/* line 55, sass/bootstrap/_sprites.scss */
-.icon-cog {
-  background-position: -432px 0;
-}
-
-/* line 56, sass/bootstrap/_sprites.scss */
-.icon-trash {
-  background-position: -456px 0;
-}
-
-/* line 58, sass/bootstrap/_sprites.scss */
-.icon-home {
-  background-position: 0 -24px;
-}
-
-/* line 59, sass/bootstrap/_sprites.scss */
-.icon-file {
-  background-position: -24px -24px;
-}
-
-/* line 60, sass/bootstrap/_sprites.scss */
-.icon-time {
-  background-position: -48px -24px;
-}
-
-/* line 61, sass/bootstrap/_sprites.scss */
-.icon-road {
-  background-position: -72px -24px;
-}
-
-/* line 62, sass/bootstrap/_sprites.scss */
-.icon-download-alt {
-  background-position: -96px -24px;
-}
-
-/* line 63, sass/bootstrap/_sprites.scss */
-.icon-download {
-  background-position: -120px -24px;
-}
-
-/* line 64, sass/bootstrap/_sprites.scss */
-.icon-upload {
-  background-position: -144px -24px;
-}
-
-/* line 65, sass/bootstrap/_sprites.scss */
-.icon-inbox {
-  background-position: -168px -24px;
-}
-
-/* line 66, sass/bootstrap/_sprites.scss */
-.icon-play-circle {
-  background-position: -192px -24px;
-}
-
-/* line 67, sass/bootstrap/_sprites.scss */
-.icon-repeat {
-  background-position: -216px -24px;
-}
-
-/* line 68, sass/bootstrap/_sprites.scss */
-.icon-refresh {
-  background-position: -240px -24px;
-}
-
-/* line 69, sass/bootstrap/_sprites.scss */
-.icon-list-alt {
-  background-position: -264px -24px;
-}
-
-/* line 70, sass/bootstrap/_sprites.scss */
-.icon-lock {
-  background-position: -287px -24px;
-}
-
-/* line 71, sass/bootstrap/_sprites.scss */
-.icon-flag {
-  background-position: -312px -24px;
-}
-
-/* line 72, sass/bootstrap/_sprites.scss */
-.icon-headphones {
-  background-position: -336px -24px;
-}
-
-/* line 73, sass/bootstrap/_sprites.scss */
-.icon-volume-off {
-  background-position: -360px -24px;
-}
-
-/* line 74, sass/bootstrap/_sprites.scss */
-.icon-volume-down {
-  background-position: -384px -24px;
-}
-
-/* line 75, sass/bootstrap/_sprites.scss */
-.icon-volume-up {
-  background-position: -408px -24px;
-}
-
-/* line 76, sass/bootstrap/_sprites.scss */
-.icon-qrcode {
-  background-position: -432px -24px;
-}
-
-/* line 77, sass/bootstrap/_sprites.scss */
-.icon-barcode {
-  background-position: -456px -24px;
-}
-
-/* line 79, sass/bootstrap/_sprites.scss */
-.icon-tag {
-  background-position: 0 -48px;
-}
-
-/* line 80, sass/bootstrap/_sprites.scss */
-.icon-tags {
-  background-position: -25px -48px;
-}
-
-/* line 81, sass/bootstrap/_sprites.scss */
-.icon-book {
-  background-position: -48px -48px;
-}
-
-/* line 82, sass/bootstrap/_sprites.scss */
-.icon-bookmark {
-  background-position: -72px -48px;
-}
-
-/* line 83, sass/bootstrap/_sprites.scss */
-.icon-print {
-  background-position: -96px -48px;
-}
-
-/* line 84, sass/bootstrap/_sprites.scss */
-.icon-camera {
-  background-position: -120px -48px;
-}
-
-/* line 85, sass/bootstrap/_sprites.scss */
-.icon-font {
-  background-position: -144px -48px;
-}
-
-/* line 86, sass/bootstrap/_sprites.scss */
-.icon-bold {
-  background-position: -167px -48px;
-}
-
-/* line 87, sass/bootstrap/_sprites.scss */
-.icon-italic {
-  background-position: -192px -48px;
-}
-
-/* line 88, sass/bootstrap/_sprites.scss */
-.icon-text-height {
-  background-position: -216px -48px;
-}
-
-/* line 89, sass/bootstrap/_sprites.scss */
-.icon-text-width {
-  background-position: -240px -48px;
-}
-
-/* line 90, sass/bootstrap/_sprites.scss */
-.icon-align-left {
-  background-position: -264px -48px;
-}
-
-/* line 91, sass/bootstrap/_sprites.scss */
-.icon-align-center {
-  background-position: -288px -48px;
-}
-
-/* line 92, sass/bootstrap/_sprites.scss */
-.icon-align-right {
-  background-position: -312px -48px;
-}
-
-/* line 93, sass/bootstrap/_sprites.scss */
-.icon-align-justify {
-  background-position: -336px -48px;
-}
-
-/* line 94, sass/bootstrap/_sprites.scss */
-.icon-list {
-  background-position: -360px -48px;
-}
-
-/* line 95, sass/bootstrap/_sprites.scss */
-.icon-indent-left {
-  background-position: -384px -48px;
-}
-
-/* line 96, sass/bootstrap/_sprites.scss */
-.icon-indent-right {
-  background-position: -408px -48px;
-}
-
-/* line 97, sass/bootstrap/_sprites.scss */
-.icon-facetime-video {
-  background-position: -432px -48px;
-}
-
-/* line 98, sass/bootstrap/_sprites.scss */
-.icon-picture {
-  background-position: -456px -48px;
-}
-
-/* line 100, sass/bootstrap/_sprites.scss */
-.icon-pencil {
-  background-position: 0 -72px;
-}
-
-/* line 101, sass/bootstrap/_sprites.scss */
-.icon-map-marker {
-  background-position: -24px -72px;
-}
-
-/* line 102, sass/bootstrap/_sprites.scss */
-.icon-adjust {
-  background-position: -48px -72px;
-}
-
-/* line 103, sass/bootstrap/_sprites.scss */
-.icon-tint {
-  background-position: -72px -72px;
-}
-
-/* line 104, sass/bootstrap/_sprites.scss */
-.icon-edit {
-  background-position: -96px -72px;
-}
-
-/* line 105, sass/bootstrap/_sprites.scss */
-.icon-share {
-  background-position: -120px -72px;
-}
-
-/* line 106, sass/bootstrap/_sprites.scss */
-.icon-check {
-  background-position: -144px -72px;
-}
-
-/* line 107, sass/bootstrap/_sprites.scss */
-.icon-move {
-  background-position: -168px -72px;
-}
-
-/* line 108, sass/bootstrap/_sprites.scss */
-.icon-step-backward {
-  background-position: -192px -72px;
-}
-
-/* line 109, sass/bootstrap/_sprites.scss */
-.icon-fast-backward {
-  background-position: -216px -72px;
-}
-
-/* line 110, sass/bootstrap/_sprites.scss */
-.icon-backward {
-  background-position: -240px -72px;
-}
-
-/* line 111, sass/bootstrap/_sprites.scss */
-.icon-play {
-  background-position: -264px -72px;
-}
-
-/* line 112, sass/bootstrap/_sprites.scss */
-.icon-pause {
-  background-position: -288px -72px;
-}
-
-/* line 113, sass/bootstrap/_sprites.scss */
-.icon-stop {
-  background-position: -312px -72px;
-}
-
-/* line 114, sass/bootstrap/_sprites.scss */
-.icon-forward {
-  background-position: -336px -72px;
-}
-
-/* line 115, sass/bootstrap/_sprites.scss */
-.icon-fast-forward {
-  background-position: -360px -72px;
-}
-
-/* line 116, sass/bootstrap/_sprites.scss */
-.icon-step-forward {
-  background-position: -384px -72px;
-}
-
-/* line 117, sass/bootstrap/_sprites.scss */
-.icon-eject {
-  background-position: -408px -72px;
-}
-
-/* line 118, sass/bootstrap/_sprites.scss */
-.icon-chevron-left {
-  background-position: -432px -72px;
-}
-
-/* line 119, sass/bootstrap/_sprites.scss */
-.icon-chevron-right {
-  background-position: -456px -72px;
-}
-
-/* line 121, sass/bootstrap/_sprites.scss */
-.icon-plus-sign {
-  background-position: 0 -96px;
-}
-
-/* line 122, sass/bootstrap/_sprites.scss */
-.icon-minus-sign {
-  background-position: -24px -96px;
-}
-
-/* line 123, sass/bootstrap/_sprites.scss */
-.icon-remove-sign {
-  background-position: -48px -96px;
-}
-
-/* line 124, sass/bootstrap/_sprites.scss */
-.icon-ok-sign {
-  background-position: -72px -96px;
-}
-
-/* line 125, sass/bootstrap/_sprites.scss */
-.icon-question-sign {
-  background-position: -96px -96px;
-}
-
-/* line 126, sass/bootstrap/_sprites.scss */
-.icon-info-sign {
-  background-position: -120px -96px;
-}
-
-/* line 127, sass/bootstrap/_sprites.scss */
-.icon-screenshot {
-  background-position: -144px -96px;
-}
-
-/* line 128, sass/bootstrap/_sprites.scss */
-.icon-remove-circle {
-  background-position: -168px -96px;
-}
-
-/* line 129, sass/bootstrap/_sprites.scss */
-.icon-ok-circle {
-  background-position: -192px -96px;
-}
-
-/* line 130, sass/bootstrap/_sprites.scss */
-.icon-ban-circle {
-  background-position: -216px -96px;
-}
-
-/* line 131, sass/bootstrap/_sprites.scss */
-.icon-arrow-left {
-  background-position: -240px -96px;
-}
-
-/* line 132, sass/bootstrap/_sprites.scss */
-.icon-arrow-right {
-  background-position: -264px -96px;
-}
-
-/* line 133, sass/bootstrap/_sprites.scss */
-.icon-arrow-up {
-  background-position: -289px -96px;
-}
-
-/* line 134, sass/bootstrap/_sprites.scss */
-.icon-arrow-down {
-  background-position: -312px -96px;
-}
-
-/* line 135, sass/bootstrap/_sprites.scss */
-.icon-share-alt {
-  background-position: -336px -96px;
-}
-
-/* line 136, sass/bootstrap/_sprites.scss */
-.icon-resize-full {
-  background-position: -360px -96px;
-}
-
-/* line 137, sass/bootstrap/_sprites.scss */
-.icon-resize-small {
-  background-position: -384px -96px;
-}
-
-/* line 138, sass/bootstrap/_sprites.scss */
-.icon-plus {
-  background-position: -408px -96px;
-}
-
-/* line 139, sass/bootstrap/_sprites.scss */
-.icon-minus {
-  background-position: -433px -96px;
-}
-
-/* line 140, sass/bootstrap/_sprites.scss */
-.icon-asterisk {
-  background-position: -456px -96px;
-}
-
-/* line 142, sass/bootstrap/_sprites.scss */
-.icon-exclamation-sign {
-  background-position: 0 -120px;
-}
-
-/* line 143, sass/bootstrap/_sprites.scss */
-.icon-gift {
-  background-position: -24px -120px;
-}
-
-/* line 144, sass/bootstrap/_sprites.scss */
-.icon-leaf {
-  background-position: -48px -120px;
-}
-
-/* line 145, sass/bootstrap/_sprites.scss */
-.icon-fire {
-  background-position: -72px -120px;
-}
-
-/* line 146, sass/bootstrap/_sprites.scss */
-.icon-eye-open {
-  background-position: -96px -120px;
-}
-
-/* line 147, sass/bootstrap/_sprites.scss */
-.icon-eye-close {
-  background-position: -120px -120px;
-}
-
-/* line 148, sass/bootstrap/_sprites.scss */
-.icon-warning-sign {
-  background-position: -144px -120px;
-}
-
-/* line 149, sass/bootstrap/_sprites.scss */
-.icon-plane {
-  background-position: -168px -120px;
-}
-
-/* line 150, sass/bootstrap/_sprites.scss */
-.icon-calendar {
-  background-position: -192px -120px;
-}
-
-/* line 151, sass/bootstrap/_sprites.scss */
-.icon-random {
-  background-position: -216px -120px;
-}
-
-/* line 152, sass/bootstrap/_sprites.scss */
-.icon-comment {
-  background-position: -240px -120px;
-}
-
-/* line 153, sass/bootstrap/_sprites.scss */
-.icon-magnet {
-  background-position: -264px -120px;
-}
-
-/* line 154, sass/bootstrap/_sprites.scss */
-.icon-chevron-up {
-  background-position: -288px -120px;
-}
-
-/* line 155, sass/bootstrap/_sprites.scss */
-.icon-chevron-down {
-  background-position: -313px -119px;
-}
-
-/* line 156, sass/bootstrap/_sprites.scss */
-.icon-retweet {
-  background-position: -336px -120px;
-}
-
-/* line 157, sass/bootstrap/_sprites.scss */
-.icon-shopping-cart {
-  background-position: -360px -120px;
-}
-
-/* line 158, sass/bootstrap/_sprites.scss */
-.icon-folder-close {
-  background-position: -384px -120px;
-}
-
-/* line 159, sass/bootstrap/_sprites.scss */
-.icon-folder-open {
-  background-position: -408px -120px;
-}
-
-/* line 160, sass/bootstrap/_sprites.scss */
-.icon-resize-vertical {
-  background-position: -432px -119px;
-}
-
-/* line 161, sass/bootstrap/_sprites.scss */
-.icon-resize-horizontal {
-  background-position: -456px -118px;
-}
-
-/*----------------------------------------------
-
 	PARTIAL:	_wells.scss
 	PARENT:		_bootstrap.scss
 	
@@ -3409,7 +1937,7 @@ table .span12 {
 }
 /* line 59, sass/bootstrap/_wells.scss */
 .well blockquote {
-  border-color: #cacaca;
+  border-color: #cfcdca;
 }
 
 /* line 65, sass/bootstrap/_wells.scss */
@@ -3439,9 +1967,9 @@ summary::-webkit-details-marker {
 
 /* line 18, sass/bootstrap/_dropdowns.scss */
 details.hover, details.well.hover, #bd details.well.hover {
-  -webkit-box-shadow: inset 0 1px 1px #dcdcdc, 0 0 8px #90c4ec;
-  -moz-box-shadow: inset 0 1px 1px #dcdcdc, 0 0 8px #90c4ec;
-  box-shadow: inset 0 1px 1px #dcdcdc, 0 0 8px #90c4ec;
+  -webkit-box-shadow: inset 0 1px 1px #dedddc, 0 0 8px #90c4ec;
+  -moz-box-shadow: inset 0 1px 1px #dedddc, 0 0 8px #90c4ec;
+  box-shadow: inset 0 1px 1px #dedddc, 0 0 8px #90c4ec;
   outline: 0;
   outline: thin dotted \9;
   /* IE9 and down */
@@ -3508,7 +2036,7 @@ details.well summary.h2 .inner, #bd details.well summary.h2 .inner {
   vertical-align: top;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 4px solid black;
+  border-top: 4px solid #201302;
 }
 /* line 7, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
 .caret {
@@ -3563,7 +2091,6 @@ details[open] summary:before, summary:hover:before {
   top: 100%;
   left: 0;
   z-index: 1000;
-  display: inline;
   float: left;
   display: none;
   min-width: 160px;
@@ -3574,7 +2101,7 @@ details[open] summary:before, summary:hover:before {
   list-style: none;
   background-color: white;
   border-color: #d0d0d0;
-  border-color: #bebebe;
+  border-color: #c4c2be;
   border-style: solid;
   border-width: 1px;
   -webkit-border-radius: 0 0 5px 5px;
@@ -3582,9 +2109,9 @@ details[open] summary:before, summary:hover:before {
   -ms-border-radius: 0 0 5px 5px;
   -o-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
-  -webkit-box-shadow: 0 5px 10px #bebebe;
-  -moz-box-shadow: 0 5px 10px #bebebe;
-  box-shadow: 0 5px 10px #bebebe;
+  -webkit-box-shadow: 0 5px 10px #c4c2be;
+  -moz-box-shadow: 0 5px 10px #c4c2be;
+  box-shadow: 0 5px 10px #c4c2be;
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -3635,11 +2162,9 @@ details[open] summary:before, summary:hover:before {
 /* line 172, sass/bootstrap/_dropdowns.scss */
 .dropdown.open .dropdown-toggle {
   color: white;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #b0aca7;
   zoom: 1;
-  background-color: transparent;
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#4D000000', endColorstr='#4D000000');
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#4D000000', endColorstr='#4D000000');
+  background-color: #201302;
 }
 /* line 178, sass/bootstrap/_dropdowns.scss */
 .dropdown.open .dropdown-menu {
@@ -3700,19 +2225,18 @@ details[open] summary:before, summary:hover:before {
 ----------------------------------------------*/
 /* line 8, sass/bootstrap/_close.scss */
 .close {
-  display: inline;
   float: right;
   font-size: 1.538em;
   font-weight: bold;
   line-height: 1.385em;
-  color: black;
+  color: #201302;
   text-shadow: 0 1px 0 white;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=2000);
   opacity: 20;
 }
 /* line 16, sass/bootstrap/_close.scss */
 .close:hover {
-  color: black;
+  color: #201302;
   text-decoration: none;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=4000);
   opacity: 40;
@@ -3750,7 +2274,7 @@ details[open] summary:before, summary:hover:before {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFE6E6E6');
   border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-  border-color: #d6d6d6 #d6d6d6 #d6d6d6;
+  border-color: #d9d8d6 #d9d8d6 #d9d8d6;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   border: 1px solid #d0d0d0;
   border-bottom-color: #bbb;
@@ -3759,9 +2283,9 @@ details[open] summary:before, summary:hover:before {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 0 #f1f1f1, 0 1px 2px #e2e2e2;
-  -moz-box-shadow: inset 0 1px 0 #f1f1f1, 0 1px 2px #e2e2e2;
-  box-shadow: inset 0 1px 0 #f1f1f1, 0 1px 2px #e2e2e2;
+  -webkit-box-shadow: inset 0 1px 0 #f1f1f1, 0 1px 2px #e3e3e2;
+  -moz-box-shadow: inset 0 1px 0 #f1f1f1, 0 1px 2px #e3e3e2;
+  box-shadow: inset 0 1px 0 #f1f1f1, 0 1px 2px #e3e3e2;
   cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   *margin-left: 0.3em;
@@ -3808,9 +2332,9 @@ details[open] summary:before, summary:hover:before {
 .btn.active,
 .btn:active {
   background-image: none;
-  -webkit-box-shadow: inset 0 2px 4px #cacaca, 0 1px 2px #e2e2e2;
-  -moz-box-shadow: inset 0 2px 4px #cacaca, 0 1px 2px #e2e2e2;
-  box-shadow: inset 0 2px 4px #cacaca, 0 1px 2px #e2e2e2;
+  -webkit-box-shadow: inset 0 2px 4px #cfcdca, 0 1px 2px #e3e3e2;
+  -moz-box-shadow: inset 0 2px 4px #cfcdca, 0 1px 2px #e3e3e2;
+  box-shadow: inset 0 2px 4px #cfcdca, 0 1px 2px #e3e3e2;
   background-color: #e6e6e6;
   background-color: #d9d9d9 \9;
   /* IE9 and down */
@@ -3879,7 +2403,7 @@ details[open] summary:before, summary:hover:before {
 .btn-info:hover,
 .btn-inverse,
 .btn-inverse:hover {
-  text-shadow: 0 -1px 0 #b2b2b2;
+  text-shadow: 0 -1px 0 #bab7b3;
   color: white;
 }
 
@@ -3905,7 +2429,7 @@ details[open] summary:before, summary:hover:before {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF1592CA', endColorstr='#FF1556CA');
   border-color: #1556ca #1556ca #0e3885;
-  border-color: #d6d6d6 #d6d6d6 #d6d6d6;
+  border-color: #d9d8d6 #d9d8d6 #d9d8d6;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 /* line 709, sass/bootstrap/_mixins.scss */
@@ -3930,7 +2454,7 @@ details[open] summary:before, summary:hover:before {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFBB450', endColorstr='#FFF89406');
   border-color: #f89406 #f89406 #ad6704;
-  border-color: #d6d6d6 #d6d6d6 #d6d6d6;
+  border-color: #d9d8d6 #d9d8d6 #d9d8d6;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 /* line 709, sass/bootstrap/_mixins.scss */
@@ -3955,7 +2479,7 @@ details[open] summary:before, summary:hover:before {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFEE5F5B', endColorstr='#FFBD362F');
   border-color: #bd362f #bd362f #802420;
-  border-color: #d6d6d6 #d6d6d6 #d6d6d6;
+  border-color: #d9d8d6 #d9d8d6 #d9d8d6;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 /* line 709, sass/bootstrap/_mixins.scss */
@@ -3980,7 +2504,7 @@ details[open] summary:before, summary:hover:before {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF62C462', endColorstr='#FF51A351');
   border-color: #51a351 #51a351 #387038;
-  border-color: #d6d6d6 #d6d6d6 #d6d6d6;
+  border-color: #d9d8d6 #d9d8d6 #d9d8d6;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 /* line 709, sass/bootstrap/_mixins.scss */
@@ -4005,7 +2529,7 @@ details[open] summary:before, summary:hover:before {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF5BC0DE', endColorstr='#FF2F96B4');
   border-color: #2f96b4 #2f96b4 #1f6377;
-  border-color: #d6d6d6 #d6d6d6 #d6d6d6;
+  border-color: #d9d8d6 #d9d8d6 #d9d8d6;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 /* line 709, sass/bootstrap/_mixins.scss */
@@ -4030,7 +2554,7 @@ details[open] summary:before, summary:hover:before {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF454545', endColorstr='#FF262626');
   border-color: #262626 #262626 black;
-  border-color: #d6d6d6 #d6d6d6 #d6d6d6;
+  border-color: #d9d8d6 #d9d8d6 #d9d8d6;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 /* line 709, sass/bootstrap/_mixins.scss */
@@ -4120,7 +2644,6 @@ input[type="submit"].btn.small {
 /* line 30, sass/bootstrap/_button-groups.scss */
 .btn-group .btn {
   position: relative;
-  display: inline;
   float: left;
   margin-left: -1px;
   -webkit-border-radius: 0;
@@ -4208,9 +2731,9 @@ input[type="submit"].btn.small {
 .btn-group .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px;
-  -webkit-box-shadow: inset 1px 0 0 #f0f0f0, inset 0 1px 0 #f1f1f1, 0 1px 2px #e2e2e2;
-  -moz-box-shadow: inset 1px 0 0 #f0f0f0, inset 0 1px 0 #f1f1f1, 0 1px 2px #e2e2e2;
-  box-shadow: inset 1px 0 0 #f0f0f0, inset 0 1px 0 #f1f1f1, 0 1px 2px #e2e2e2;
+  -webkit-box-shadow: inset 1px 0 0 #f0f0f0, inset 0 1px 0 #f1f1f1, 0 1px 2px #e3e3e2;
+  -moz-box-shadow: inset 1px 0 0 #f0f0f0, inset 0 1px 0 #f1f1f1, 0 1px 2px #e3e3e2;
+  box-shadow: inset 1px 0 0 #f0f0f0, inset 0 1px 0 #f1f1f1, 0 1px 2px #e3e3e2;
   *padding-top: 5px;
   *padding-bottom: 5px;
 }
@@ -4232,9 +2755,9 @@ input[type="submit"].btn.small {
 /* line 99, sass/bootstrap/_button-groups.scss */
 .btn-group.open .dropdown-toggle {
   background-image: none;
-  -webkit-box-shadow: inset 0 1px 6px #cacaca, 0 1px 2px #e2e2e2;
-  -moz-box-shadow: inset 0 1px 6px #cacaca, 0 1px 2px #e2e2e2;
-  box-shadow: inset 0 1px 6px #cacaca, 0 1px 2px #e2e2e2;
+  -webkit-box-shadow: inset 0 1px 6px #cfcdca, 0 1px 2px #e3e3e2;
+  -moz-box-shadow: inset 0 1px 6px #cfcdca, 0 1px 2px #e3e3e2;
+  box-shadow: inset 0 1px 6px #cfcdca, 0 1px 2px #e3e3e2;
 }
 
 /* line 107, sass/bootstrap/_button-groups.scss */
@@ -4420,7 +2943,7 @@ input[type="submit"].btn.small {
 .nav-list .active > a,
 .nav-list .active > a:hover {
   color: white;
-  text-shadow: 0 -1px 0 #bebebe;
+  text-shadow: 0 -1px 0 #c4c2be;
   background-color: #1592ca;
 }
 
@@ -4450,7 +2973,6 @@ input[type="submit"].btn.small {
 /* line 81, sass/bootstrap/_navs.scss */
 .nav-tabs > li,
 .nav-pills > li {
-  display: inline;
   float: left;
 }
 
@@ -4615,7 +3137,7 @@ input[type="submit"].btn.small {
 
 /* line 221, sass/bootstrap/_navs.scss */
 .nav > .dropdown.active > a:hover {
-  color: black;
+  color: #201302;
   cursor: pointer;
 }
 
@@ -4727,7 +3249,6 @@ input[type="submit"].btn.small {
 
 /* line 320, sass/bootstrap/_navs.scss */
 .tabs-left .nav-tabs {
-  display: inline;
   float: left;
   margin-right: 19px;
   border-right: 1px solid #dddddd;
@@ -4757,7 +3278,6 @@ input[type="submit"].btn.small {
 
 /* line 339, sass/bootstrap/_navs.scss */
 .tabs-right .nav-tabs {
-  display: inline;
   float: right;
   margin-left: 19px;
   border-left: 1px solid #dddddd;
@@ -4801,43 +3321,42 @@ input[type="submit"].btn.small {
 .navbar-inner {
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #2c2c2c;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #333333), color-stop(100%, #222222));
-  background-image: -webkit-linear-gradient(#333333, #222222);
-  background-image: -moz-linear-gradient(#333333, #222222);
-  background-image: -o-linear-gradient(#333333, #222222);
-  background-image: -ms-linear-gradient(#333333, #222222);
-  background-image: linear-gradient(#333333, #222222);
+  background-color: rgba(42, 25, 3, 0.85);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(50, 30, 4, 0.85)), color-stop(100%, rgba(32, 19, 2, 0.85)));
+  background-image: -webkit-linear-gradient(rgba(50, 30, 4, 0.85), rgba(32, 19, 2, 0.85));
+  background-image: -moz-linear-gradient(rgba(50, 30, 4, 0.85), rgba(32, 19, 2, 0.85));
+  background-image: -o-linear-gradient(rgba(50, 30, 4, 0.85), rgba(32, 19, 2, 0.85));
+  background-image: -ms-linear-gradient(rgba(50, 30, 4, 0.85), rgba(32, 19, 2, 0.85));
+  background-image: linear-gradient(rgba(50, 30, 4, 0.85), rgba(32, 19, 2, 0.85));
   *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF333333', endColorstr='#FF222222');
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#D9321E04', endColorstr='#D9201302');
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 3px #b2b2b2, 0 -1px 0 #d6d6d6 inset;
-  -moz-box-shadow: 0 1px 3px #b2b2b2, 0 -1px 0 #d6d6d6 inset;
-  box-shadow: 0 1px 3px #b2b2b2, 0 -1px 0 #d6d6d6 inset;
+  -webkit-box-shadow: 0 1px 3px #bab7b3, 0 -1px 0 #d9d8d6 inset;
+  -moz-box-shadow: 0 1px 3px #bab7b3, 0 -1px 0 #d9d8d6 inset;
+  box-shadow: 0 1px 3px #bab7b3, 0 -1px 0 #d9d8d6 inset;
 }
 
 /* line 27, sass/bootstrap/_navbar.scss */
 .btn-navbar {
-  display: inline;
   float: right;
   padding: 7px 10px;
   margin-left: 5px;
   margin-right: 5px;
-  background-color: #2c2c2c;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #333333), color-stop(100%, #222222));
-  background-image: -webkit-linear-gradient(#333333, #222222);
-  background-image: -moz-linear-gradient(#333333, #222222);
-  background-image: -o-linear-gradient(#333333, #222222);
-  background-image: -ms-linear-gradient(#333333, #222222);
-  background-image: linear-gradient(#333333, #222222);
+  background-color: rgba(42, 25, 3, 0.85);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(50, 30, 4, 0.85)), color-stop(100%, rgba(32, 19, 2, 0.85)));
+  background-image: -webkit-linear-gradient(rgba(50, 30, 4, 0.85), rgba(32, 19, 2, 0.85));
+  background-image: -moz-linear-gradient(rgba(50, 30, 4, 0.85), rgba(32, 19, 2, 0.85));
+  background-image: -o-linear-gradient(rgba(50, 30, 4, 0.85), rgba(32, 19, 2, 0.85));
+  background-image: -ms-linear-gradient(rgba(50, 30, 4, 0.85), rgba(32, 19, 2, 0.85));
+  background-image: linear-gradient(rgba(50, 30, 4, 0.85), rgba(32, 19, 2, 0.85));
   *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF333333', endColorstr='#FF222222');
-  border-color: #222222 #222222 black;
-  border-color: #d6d6d6 #d6d6d6 #d6d6d6;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#D9321E04', endColorstr='#D9201302');
+  border-color: rgba(32, 19, 2, 0.85) rgba(32, 19, 2, 0.85) rgba(0, 0, 0, 0.85);
+  border-color: #d9d8d6 #d9d8d6 #d9d8d6;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   -webkit-box-shadow: 0 1px 0 #efefef inset, 0 1px 0 #efefef;
   -moz-box-shadow: 0 1px 0 #efefef inset, 0 1px 0 #efefef;
@@ -4846,11 +3365,11 @@ input[type="submit"].btn.small {
 }
 /* line 709, sass/bootstrap/_mixins.scss */
 .btn-navbar:hover, .btn-navbar:active, .btn-navbar.active, .btn-navbar.disabled, .btn-navbar[disabled] {
-  background-color: #222222;
+  background-color: rgba(32, 19, 2, 0.85);
 }
 /* line 715, sass/bootstrap/_mixins.scss */
 .btn-navbar:active, .btn-navbar.active {
-  background-color: #090909 \9;
+  background-color: rgba(0, 0, 0, 0.85) \9;
   /* IE9 and down */
 }
 
@@ -4865,9 +3384,9 @@ input[type="submit"].btn.small {
   -ms-border-radius: 1px;
   -o-border-radius: 1px;
   border-radius: 1px;
-  -webkit-box-shadow: 0 1px 0 #b2b2b2;
-  -moz-box-shadow: 0 1px 0 #b2b2b2;
-  box-shadow: 0 1px 0 #b2b2b2;
+  -webkit-box-shadow: 0 1px 0 #bab7b3;
+  -moz-box-shadow: 0 1px 0 #bab7b3;
+  box-shadow: 0 1px 0 #bab7b3;
 }
 
 /* line 45, sass/bootstrap/_navbar.scss */
@@ -4891,7 +3410,6 @@ input[type="submit"].btn.small {
 }
 /* line 63, sass/bootstrap/_navbar.scss */
 .navbar .brand {
-  display: inline;
   float: left;
   display: block;
   padding: 8px 20px 12px;
@@ -4976,7 +3494,6 @@ input[type="submit"].btn.small {
 /* line 125, sass/bootstrap/_navbar.scss */
 .navbar-search {
   position: relative;
-  display: inline;
   float: left;
   margin: 0;
   padding: 0 10px;
@@ -4990,15 +3507,13 @@ input[type="submit"].btn.small {
   line-height: 1.385em;
   color: white;
   color: #fafafa;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #b0aca7;
   zoom: 1;
-  background-color: transparent;
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#4D000000', endColorstr='#4D000000');
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#4D000000', endColorstr='#4D000000');
+  background-color: #201302;
   border: 1px solid #111111;
-  -webkit-box-shadow: inset 0 1px 2px #d6d6d6, 0 1px 0px #f0f0f0;
-  -moz-box-shadow: inset 0 1px 2px #d6d6d6, 0 1px 0px #f0f0f0;
-  box-shadow: inset 0 1px 2px #d6d6d6, 0 1px 0px #f0f0f0;
+  -webkit-box-shadow: inset 0 1px 2px #d9d8d6, 0 1px 0px #f0f0f0;
+  -moz-box-shadow: inset 0 1px 2px #d9d8d6, 0 1px 0px #f0f0f0;
+  box-shadow: inset 0 1px 2px #d9d8d6, 0 1px 0px #f0f0f0;
   -webkit-transition: none;
   -moz-transition: none;
   -ms-transition: none;
@@ -5025,9 +3540,9 @@ input[type="submit"].btn.small {
   text-shadow: 0 1px 0 white;
   background-color: white;
   border: 0;
-  -webkit-box-shadow: 0 0 3px #cacaca;
-  -moz-box-shadow: 0 0 3px #cacaca;
-  box-shadow: 0 0 3px #cacaca;
+  -webkit-box-shadow: 0 0 3px #cfcdca;
+  -moz-box-shadow: 0 0 3px #cfcdca;
+  box-shadow: 0 0 3px #cfcdca;
   outline: 0;
 }
 
@@ -5039,8 +3554,11 @@ input[type="submit"].btn.small {
   left: 0;
   z-index: 1030;
 }
-
-/* line 180, sass/bootstrap/_navbar.scss */
+/* line 179, sass/bootstrap/_navbar.scss */
+.navbar-fixed-top, .navbar-fixed-top .navbar-inner {
+  height: 40px;
+}
+/* line 182, sass/bootstrap/_navbar.scss */
 .navbar-fixed-top .navbar-inner {
   padding-left: 0;
   padding-right: 0;
@@ -5051,78 +3569,81 @@ input[type="submit"].btn.small {
   border-radius: 0;
 }
 
-/* line 192, sass/bootstrap/_navbar.scss */
+/* line 200, sass/bootstrap/_navbar.scss */
 .navbar .nav {
   position: relative;
   left: 0;
   display: block;
-  display: inline;
   float: left;
   margin: 0 0 0 10px;
 }
-/* line 199, sass/bootstrap/_navbar.scss */
+/* line 207, sass/bootstrap/_navbar.scss */
 .navbar .nav + .nav, .navbar .nav:first-child {
   margin: 0 0 0 0;
 }
-/* line 201, sass/bootstrap/_navbar.scss */
+/* line 209, sass/bootstrap/_navbar.scss */
 .navbar .nav.pull-right {
-  display: inline;
   float: right;
 }
-/* line 206, sass/bootstrap/_navbar.scss */
+/* line 214, sass/bootstrap/_navbar.scss */
 .navbar .nav > li {
-  display: block;
-  display: inline;
   float: left;
 }
-/* line 212, sass/bootstrap/_navbar.scss */
+/* line 219, sass/bootstrap/_navbar.scss */
 .navbar .nav > li > a {
   float: none;
+  width: auto;
   padding: 10px 10px 11px;
   line-height: 19px;
   color: #c5c2ba !important;
   text-decoration: none;
-  text-shadow: 0 -1px 0 #b2b2b2;
+  text-shadow: 0 -1px 0 #bab7b3;
 }
-/* line 221, sass/bootstrap/_navbar.scss */
+/* line 229, sass/bootstrap/_navbar.scss */
 .navbar .nav > li > a:hover {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.85);
   color: white !important;
   text-decoration: none;
 }
-/* line 234, sass/bootstrap/_navbar.scss */
-.navbar .nav .active > a, .navbar .nav .active > a:hover, .navbar .nav .current-menu-item > a, .navbar .nav .current-menu-item > a:hover, .navbar .nav .current-page-item > a, .navbar .nav .current-page-item > a:hover {
+/* line 241, sass/bootstrap/_navbar.scss */
+.navbar .nav .active > a, .navbar .nav .active > a:hover, .navbar .nav [class*="current"] > a, .navbar .nav [class*="current"] > a:hover {
   color: white !important;
   text-decoration: none;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.85);
 }
-/* line 242, sass/bootstrap/_navbar.scss */
+/* line 250, sass/bootstrap/_navbar.scss */
+.navbar .nav li > a.active, .navbar .nav li > a.active:hover, .navbar .nav li > a[class*="current"], .navbar .nav li > a[class*="current"]:hover {
+  color: white !important;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+/* line 256, sass/bootstrap/_navbar.scss */
 .navbar .nav .divider-vertical {
   height: 40px;
   width: 1px;
   margin: 0 9px;
   overflow: hidden;
-  background-color: #222222;
-  border-right: 1px solid #333333;
+  background-color: rgba(32, 19, 2, 0.85);
+  border-right: 1px solid rgba(50, 30, 4, 0.85);
 }
-/* line 256, sass/bootstrap/_navbar.scss */
+/* line 270, sass/bootstrap/_navbar.scss */
 .navbar .nav > li.strong a, .navbar .nav > li.bold a, .navbar .nav > li.big a, .navbar .nav > li.divider a, .navbar .nav#primary-nav > li a {
   padding: 10px 16px 11px;
-  -webkit-box-shadow: 1px 0 0 0 #222222 inset, 1px 0 0 0 #222222;
-  -moz-box-shadow: 1px 0 0 0 #222222 inset, 1px 0 0 0 #222222;
-  box-shadow: 1px 0 0 0 #222222 inset, 1px 0 0 0 #222222;
-  border-left: 1px solid #333333;
+  -webkit-box-shadow: 1px 0 0 0 rgba(32, 19, 2, 0.85) inset, 1px 0 0 0 rgba(32, 19, 2, 0.85);
+  -moz-box-shadow: 1px 0 0 0 rgba(32, 19, 2, 0.85) inset, 1px 0 0 0 rgba(32, 19, 2, 0.85);
+  box-shadow: 1px 0 0 0 rgba(32, 19, 2, 0.85) inset, 1px 0 0 0 rgba(32, 19, 2, 0.85);
+  border-left: 1px solid rgba(50, 30, 4, 0.85);
 }
-/* line 264, sass/bootstrap/_navbar.scss */
+/* line 278, sass/bootstrap/_navbar.scss */
 .navbar .nav > li.strong:last-child a, .navbar .nav > li.bold:last-child a, .navbar .nav > li.big:last-child a, .navbar .nav > li.divider:last-child a, .navbar .nav#primary-nav > li:last-child a {
-  border-right: 1px solid #333333;
+  border-right: 1px solid rgba(50, 30, 4, 0.85);
 }
-/* line 272, sass/bootstrap/_navbar.scss */
+/* line 286, sass/bootstrap/_navbar.scss */
 .navbar .nav > li.big a, .navbar .nav#primary-nav > li a {
   font-weight: bold;
   font-size: 15px;
 }
-/* line 284, sass/bootstrap/_navbar.scss */
+/* line 298, sass/bootstrap/_navbar.scss */
 .navbar .nav .dropdown-menu {
   margin-top: 1px;
   -moz-border-radius-bottomleft: 4px;
@@ -5136,7 +3657,7 @@ input[type="submit"].btn.small {
   -o-border-bottom-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-/* line 289, sass/bootstrap/_navbar.scss */
+/* line 303, sass/bootstrap/_navbar.scss */
 .navbar .nav .dropdown-menu:before {
   content: '';
   display: -moz-inline-box;
@@ -5147,7 +3668,7 @@ input[type="submit"].btn.small {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   border-bottom: 7px solid #d0d0d0;
-  border-bottom-color: #bebebe;
+  border-bottom-color: #c4c2be;
   position: absolute;
   top: -7px;
   left: 9px;
@@ -5156,7 +3677,7 @@ input[type="submit"].btn.small {
 .navbar .nav .dropdown-menu:before {
   *display: inline;
 }
-/* line 300, sass/bootstrap/_navbar.scss */
+/* line 314, sass/bootstrap/_navbar.scss */
 .navbar .nav .dropdown-menu:after {
   content: '';
   display: -moz-inline-box;
@@ -5175,33 +3696,33 @@ input[type="submit"].btn.small {
 .navbar .nav .dropdown-menu:after {
   *display: inline;
 }
-/* line 312, sass/bootstrap/_navbar.scss */
+/* line 326, sass/bootstrap/_navbar.scss */
 .navbar .nav .dropdown-menu#seperated-nav li.divider:last-child {
   display: none;
 }
-/* line 326, sass/bootstrap/_navbar.scss */
+/* line 340, sass/bootstrap/_navbar.scss */
 .navbar .nav .dropdown > .dropdown-toggle {
   color: #c5c2ba;
 }
-/* line 330, sass/bootstrap/_navbar.scss */
+/* line 344, sass/bootstrap/_navbar.scss */
 .navbar .nav .dropdown > .dropdown-toggle .caret {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10000);
   opacity: 100;
   border-top-color: #8b8575;
 }
-/* line 338, sass/bootstrap/_navbar.scss */
+/* line 352, sass/bootstrap/_navbar.scss */
 .navbar .nav .dropdown > .dropdown-toggle:hover {
   color: white;
 }
-/* line 341, sass/bootstrap/_navbar.scss */
+/* line 355, sass/bootstrap/_navbar.scss */
 .navbar .nav .dropdown > .dropdown-toggle:hover .caret {
   border-top-color: #d9d9d9;
 }
-/* line 352, sass/bootstrap/_navbar.scss */
+/* line 366, sass/bootstrap/_navbar.scss */
 .navbar .nav .dropdown.open > .dropdown-toggle {
   color: #f4f3f1;
 }
-/* line 356, sass/bootstrap/_navbar.scss */
+/* line 370, sass/bootstrap/_navbar.scss */
 .navbar .nav .dropdown.open > .dropdown-toggle .caret {
   border-top-color: #8b8575;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=5000);
@@ -5212,30 +3733,30 @@ input[type="submit"].btn.small {
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-/* line 364, sass/bootstrap/_navbar.scss */
+/* line 378, sass/bootstrap/_navbar.scss */
 .navbar .nav .dropdown.open > .dropdown-toggle:hover {
   color: white;
 }
-/* line 367, sass/bootstrap/_navbar.scss */
+/* line 381, sass/bootstrap/_navbar.scss */
 .navbar .nav .dropdown.open > .dropdown-toggle:hover .caret {
   border-top-color: #d9d9d9;
 }
-/* line 381, sass/bootstrap/_navbar.scss */
+/* line 395, sass/bootstrap/_navbar.scss */
 .navbar .nav.pull-right {
   margin-left: 10px;
   margin-right: 0;
 }
-/* line 385, sass/bootstrap/_navbar.scss */
+/* line 399, sass/bootstrap/_navbar.scss */
 .navbar .nav.pull-right .dropdown-menu {
   left: auto;
   right: 0;
 }
-/* line 388, sass/bootstrap/_navbar.scss */
+/* line 402, sass/bootstrap/_navbar.scss */
 .navbar .nav.pull-right .dropdown-menu:before {
   left: auto;
   right: 12px;
 }
-/* line 392, sass/bootstrap/_navbar.scss */
+/* line 406, sass/bootstrap/_navbar.scss */
 .navbar .nav.pull-right .dropdown-menu:after {
   left: auto;
   right: 13px;
@@ -5311,9 +3832,9 @@ input[type="submit"].btn.small {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: 0 1px 2px #e2e2e2;
-  -moz-box-shadow: 0 1px 2px #e2e2e2;
-  box-shadow: 0 1px 2px #e2e2e2;
+  -webkit-box-shadow: 0 1px 2px #e3e3e2;
+  -moz-box-shadow: 0 1px 2px #e3e3e2;
+  box-shadow: 0 1px 2px #e3e3e2;
 }
 /* line 7, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
 .pagination ul {
@@ -5327,7 +3848,6 @@ input[type="submit"].btn.small {
 
 /* line 22, sass/bootstrap/_pagination.scss */
 .pagination a {
-  display: inline;
   float: left;
   padding: 0 14px;
   line-height: 0.77em;
@@ -5443,13 +3963,11 @@ input[type="submit"].btn.small {
 
 /* line 29, sass/bootstrap/_pager.scss */
 .pager .next a {
-  display: inline;
   float: right;
 }
 
 /* line 32, sass/bootstrap/_pager.scss */
 .pager .previous a {
-  display: inline;
   float: left;
 }
 
@@ -5484,7 +4002,7 @@ input[type="submit"].btn.small {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: black;
+  background-color: #201302;
 }
 /* line 26, sass/bootstrap/_modals.scss */
 .modal-backdrop.fade {
@@ -5509,17 +4027,17 @@ input[type="submit"].btn.small {
   width: 560px;
   margin: -250px 0 0 -280px;
   background-color: white;
-  border: 1px solid #a6a6a6;
-  border: 1px solid #a6a6a6;
-  *border: 1px solid #a6a6a6;
+  border: 1px solid #b0aca7;
+  border: 1px solid #b0aca7;
+  *border: 1px solid #b0aca7;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   border-radius: 6px;
-  -webkit-box-shadow: 0 3px 7px #a6a6a6;
-  -moz-box-shadow: 0 3px 7px #a6a6a6;
-  box-shadow: 0 3px 7px #a6a6a6;
+  -webkit-box-shadow: 0 3px 7px #b0aca7;
+  -moz-box-shadow: 0 3px 7px #b0aca7;
+  box-shadow: 0 3px 7px #b0aca7;
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -5585,7 +4103,6 @@ input[type="submit"].btn.small {
 }
 /* line 84, sass/bootstrap/_modals.scss */
 .modal-footer .btn {
-  display: inline;
   float: right;
   margin-left: 5px;
   margin-bottom: 0;
@@ -5636,7 +4153,7 @@ input[type="submit"].btn.small {
   margin-left: -5px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid black;
+  border-top: 5px solid #201302;
 }
 /* line 22, sass/bootstrap/_tooltip.scss */
 .tooltip.left .tooltip-arrow {
@@ -5645,7 +4162,7 @@ input[type="submit"].btn.small {
   margin-top: -5px;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 5px solid black;
+  border-left: 5px solid #201302;
 }
 /* line 23, sass/bootstrap/_tooltip.scss */
 .tooltip.bottom .tooltip-arrow {
@@ -5654,7 +4171,7 @@ input[type="submit"].btn.small {
   margin-left: -5px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid #201302;
 }
 /* line 24, sass/bootstrap/_tooltip.scss */
 .tooltip.right .tooltip-arrow {
@@ -5663,7 +4180,7 @@ input[type="submit"].btn.small {
   margin-top: -5px;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 5px solid black;
+  border-right: 5px solid #201302;
 }
 
 /* line 26, sass/bootstrap/_tooltip.scss */
@@ -5673,7 +4190,7 @@ input[type="submit"].btn.small {
   color: white;
   text-align: center;
   text-decoration: none;
-  background-color: black;
+  background-color: #201302;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -5726,7 +4243,7 @@ input[type="submit"].btn.small {
   margin-left: -5px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid black;
+  border-top: 5px solid #201302;
 }
 /* line 20, sass/bootstrap/_popovers.scss */
 .popover.right .arrow {
@@ -5735,7 +4252,7 @@ input[type="submit"].btn.small {
   margin-top: -5px;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 5px solid black;
+  border-right: 5px solid #201302;
 }
 /* line 21, sass/bootstrap/_popovers.scss */
 .popover.bottom .arrow {
@@ -5744,7 +4261,7 @@ input[type="submit"].btn.small {
   margin-left: -5px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid #201302;
 }
 /* line 22, sass/bootstrap/_popovers.scss */
 .popover.left .arrow {
@@ -5753,7 +4270,7 @@ input[type="submit"].btn.small {
   margin-top: -5px;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 5px solid black;
+  border-left: 5px solid #201302;
 }
 /* line 23, sass/bootstrap/_popovers.scss */
 .popover .arrow {
@@ -5767,16 +4284,16 @@ input[type="submit"].btn.small {
   padding: 3px;
   width: 280px;
   overflow: hidden;
-  background: black;
-  background: #2f2f2f;
+  background: #201302;
+  background: #493e31;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   border-radius: 6px;
-  -webkit-box-shadow: 0 3px 7px #a6a6a6;
-  -moz-box-shadow: 0 3px 7px #a6a6a6;
-  box-shadow: 0 3px 7px #a6a6a6;
+  -webkit-box-shadow: 0 3px 7px #b0aca7;
+  -moz-box-shadow: 0 3px 7px #b0aca7;
+  box-shadow: 0 3px 7px #b0aca7;
 }
 
 /* line 38, sass/bootstrap/_popovers.scss */
@@ -5834,7 +4351,6 @@ input[type="submit"].btn.small {
 
 /* line 13, sass/bootstrap/_thumbnails.scss */
 .thumbnails > li {
-  display: inline;
   float: left;
   margin: 0 0 1.385em 20px;
 }
@@ -5850,9 +4366,9 @@ input[type="submit"].btn.small {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 1px #dcdcdc;
-  -moz-box-shadow: 0 1px 1px #dcdcdc;
-  box-shadow: 0 1px 1px #dcdcdc;
+  -webkit-box-shadow: 0 1px 1px #dedddc;
+  -moz-box-shadow: 0 1px 1px #dedddc;
+  box-shadow: 0 1px 1px #dedddc;
 }
 
 /* line 26, sass/bootstrap/_thumbnails.scss */
@@ -5887,7 +4403,7 @@ a.thumbnail:hover {
   padding: 2px 4px 3px;
   font-weight: bold;
   color: white;
-  text-shadow: 0 -1px 0 #b2b2b2;
+  text-shadow: 0 -1px 0 #bab7b3;
   background-color: #999999;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -5998,9 +4514,9 @@ a.thumbnail:hover {
   background-image: linear-gradient(#f7f7f7, #f9f9f9);
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF7F7F7', endColorstr='#FFF9F9F9');
-  -webkit-box-shadow: 0 1px 2px #d6d6d6 inset;
-  -moz-box-shadow: 0 1px 2px #d6d6d6 inset;
-  box-shadow: 0 1px 2px #d6d6d6 inset;
+  -webkit-box-shadow: 0 1px 2px #d9d8d6 inset;
+  -moz-box-shadow: 0 1px 2px #d9d8d6 inset;
+  box-shadow: 0 1px 2px #d9d8d6 inset;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -6015,7 +4531,7 @@ a.thumbnail:hover {
   color: white;
   font-size: 0.923em;
   text-align: center;
-  text-shadow: 0 -1px 0 #b2b2b2;
+  text-shadow: 0 -1px 0 #bab7b3;
   background-color: #0d90d1;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #149bdf), color-stop(100%, #0480be));
   background-image: -webkit-linear-gradient(#149bdf, #0480be);
@@ -6025,9 +4541,9 @@ a.thumbnail:hover {
   background-image: linear-gradient(#149bdf, #0480be);
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF149BDF', endColorstr='#FF0480BE');
-  -webkit-box-shadow: 0 -1px 0 #cacaca inset;
-  -moz-box-shadow: 0 -1px 0 #cacaca inset;
-  box-shadow: 0 -1px 0 #cacaca inset;
+  -webkit-box-shadow: 0 -1px 0 #cfcdca inset;
+  -moz-box-shadow: 0 -1px 0 #cfcdca inset;
+  box-shadow: 0 -1px 0 #cfcdca inset;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -6289,7 +4805,7 @@ a.thumbnail:hover {
   bottom: 0;
   padding: 10px 15px 5px;
   background: #333333;
-  background: #3b3b3b;
+  background: #53493d;
 }
 
 /* line 123, sass/bootstrap/_carousel.scss */
@@ -6337,13 +4853,11 @@ a.thumbnail:hover {
 ----------------------------------------------*/
 /* line 10, sass/bootstrap/_utilities.scss */
 .pull-right {
-  display: inline;
   float: right;
 }
 
 /* line 13, sass/bootstrap/_utilities.scss */
 .pull-left {
-  display: inline;
   float: left;
 }
 
@@ -6511,7 +5025,6 @@ a.thumbnail:hover {
 
   /* line 214, sass/bootstrap/_mixins.scss */
   [class*="span"] {
-    display: inline;
     float: left;
     margin-left: 20px;
   }
@@ -6652,7 +5165,6 @@ a.thumbnail:hover {
   }
   /* line 247, sass/bootstrap/_mixins.scss */
   .row-fluid > [class*="span"] {
-    display: inline;
     float: left;
     margin-left: 1.419%;
   }
@@ -6863,7 +5375,7 @@ a.thumbnail:hover {
   /* line 211, sass/bootstrap/_responsive.scss */
   .navbar .nav > li > a:hover,
   .navbar .dropdown-menu a:hover {
-    background-color: #222222;
+    background-color: rgba(32, 19, 2, 0.85);
   }
 
   /* line 215, sass/bootstrap/_responsive.scss */
@@ -6921,8 +5433,8 @@ a.thumbnail:hover {
     float: none;
     padding: 0.693em 15px;
     margin: 0.693em 0;
-    border-top: 1px solid #222222;
-    border-bottom: 1px solid #222222;
+    border-top: 1px solid rgba(32, 19, 2, 0.85);
+    border-bottom: 1px solid rgba(32, 19, 2, 0.85);
     -webkit-box-shadow: inset 0 1px 0 #efefef, 0 1px 0 #efefef;
     -moz-box-shadow: inset 0 1px 0 #efefef, 0 1px 0 #efefef;
     box-shadow: inset 0 1px 0 #efefef, 0 1px 0 #efefef;
@@ -6975,7 +5487,6 @@ a.thumbnail:hover {
 
   /* line 214, sass/bootstrap/_mixins.scss */
   [class*="span"] {
-    display: inline;
     float: left;
     margin-left: 30px;
   }
@@ -7116,7 +5627,6 @@ a.thumbnail:hover {
   }
   /* line 247, sass/bootstrap/_mixins.scss */
   .row-fluid > [class*="span"] {
-    display: inline;
     float: left;
     margin-left: 1.419%;
   }
@@ -7261,6 +5771,843 @@ a.thumbnail:hover {
   }
 }
 /*--- 
+  bystl webfonts
+---*/
+/*----------------------------------------------
+
+  PARTIAL:  bystl/_webfonts.scss
+  PARENT:   style.scs
+  
+ ----------------------------------------------*/
+/*  EMBED THE WEBFONTS
+---------------------------------------------- */
+@font-face {
+  font-family: "FontAwesome";
+  src: url('fonts/fontawesome/fontawesome-webfont.eot.eot');
+  src: url('fonts/fontawesome/fontawesome-webfont.eot.eot?#iefix') format('eot'), url('fonts/fontawesome/fontawesome-webfont.woff') format('woff'), url('fonts/fontawesome/fontawesome-webfont.ttf') format('truetype'), url('fonts/fontawesome/fontawesome-webfont.svg#FontAwesome') format('svg');
+}
+
+@font-face {
+  font-family: "bystlLogoFont";
+  src: url('fonts/bystl-logo-font/bystl-logo.eot.eot');
+  src: url('fonts/bystl-logo-font/bystl-logo.eot.eot?#iefix') format('eot'), url('fonts/bystl-logo-font/bystl-logo.woff') format('woff'), url('fonts/bystl-logo-font/bystl-logo.ttf') format('truetype'), url('fonts/bystl-logo-font/bystl-logo.svg#bystlLogoFont') format('svg');
+}
+
+/*  MIXIN TO USE THE FONTS WITHIN A STYLE DECLARATION
+---------------------------------------------- */
+/*  Font Awesome
+    the iconic font designed for use with Twitter Bootstrap
+    -------------------------------------------------------
+    The full suite of pictographic icons, examples, and documentation
+    can be found at: http://fortawesome.github.com/Font-Awesome/
+
+    License
+    -------------------------------------------------------
+    The Font Awesome webfont, CSS, and LESS files are licensed under CC BY 3.0:
+    http://creativecommons.org/licenses/by/3.0/ A mention of
+    'Font Awesome - http://fortawesome.github.com/Font-Awesome' in human-readable
+    source code is considered acceptable attribution (most common on the web).
+    If human readable source code is not available to the end user, a mention in
+    an 'About' or 'Credits' screen is considered acceptable (most common in desktop
+    or mobile software).
+
+    Contact
+    -------------------------------------------------------
+    Email: dave@davegandy.com
+    Twitter: http://twitter.com/fortaweso_me
+    Work: http://lemonwi.se co-founder
+
+    */
+/* sprites.less reset */
+/* line 27, sass/bystl/_font-awesome.scss */
+[class^="icon-"],
+[class*=" icon-"] {
+  white-space: nowrap;
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+}
+
+/* line 39, sass/bystl/_font-awesome.scss */
+li[class^="icon-"],
+li[class*=" icon-"] {
+  display: block;
+}
+
+/*  Font Awesome styles
+    ------------------------------------------------------- */
+/* line 46, sass/bystl/_font-awesome.scss */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  visibility: visible;
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+}
+
+/* line 53, sass/bystl/_font-awesome.scss */
+a [class^="icon-"],
+a [class*=" icon-"] {
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+/* makes the font 33% larger relative to the icon container */
+/* line 59, sass/bystl/_font-awesome.scss */
+.icon-large:before {
+  vertical-align: top;
+  font-size: 4/3em;
+}
+
+/* line 66, sass/bystl/_font-awesome.scss */
+.btn [class^="icon-"],
+.btn [class*=" icon-"] {
+  /* keeps button heights with and without icons the same */
+  line-height: .9em;
+}
+
+/* line 74, sass/bystl/_font-awesome.scss */
+li [class^="icon-"],
+li [class*=" icon-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+}
+/* line 80, sass/bystl/_font-awesome.scss */
+li .icon-large[class^="icon-"],
+li .icon-large[class*=" icon-"] {
+  /* 1.5 increased font size for icon-large * 1.25 width */
+  width: 1.875em;
+}
+
+/* line 87, sass/bystl/_font-awesome.scss */
+li[class^="icon-"],
+li[class*=" icon-"] {
+  margin-left: 0;
+  list-style-type: none;
+}
+/* line 91, sass/bystl/_font-awesome.scss */
+li[class^="icon-"]:before,
+li[class*=" icon-"]:before {
+  text-indent: -2em;
+  text-align: center;
+}
+/* line 95, sass/bystl/_font-awesome.scss */
+li[class^="icon-"].icon-large:before,
+li[class*=" icon-"].icon-large:before {
+  text-indent: -4/3em;
+}
+
+/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+    readers do not read off random characters that represent icons */
+/* line 102, sass/bystl/_font-awesome.scss */
+.icon-glass:before {
+  content: "\f000";
+}
+
+/* line 103, sass/bystl/_font-awesome.scss */
+.icon-music:before {
+  content: "\f001";
+}
+
+/* line 104, sass/bystl/_font-awesome.scss */
+.icon-search:before {
+  content: "\f002";
+}
+
+/* line 105, sass/bystl/_font-awesome.scss */
+.icon-envelope:before {
+  content: "\f003";
+}
+
+/* line 106, sass/bystl/_font-awesome.scss */
+.icon-heart:before {
+  content: "\f004";
+}
+
+/* line 107, sass/bystl/_font-awesome.scss */
+.icon-star:before {
+  content: "\f005";
+}
+
+/* line 108, sass/bystl/_font-awesome.scss */
+.icon-star-empty:before {
+  content: "\f006";
+}
+
+/* line 109, sass/bystl/_font-awesome.scss */
+.icon-user:before {
+  content: "\f007";
+}
+
+/* line 110, sass/bystl/_font-awesome.scss */
+.icon-film:before {
+  content: "\f008";
+}
+
+/* line 111, sass/bystl/_font-awesome.scss */
+.icon-th-large:before {
+  content: "\f009";
+}
+
+/* line 112, sass/bystl/_font-awesome.scss */
+.icon-th:before {
+  content: "\f00a";
+}
+
+/* line 113, sass/bystl/_font-awesome.scss */
+.icon-th-list:before {
+  content: "\f00b";
+}
+
+/* line 114, sass/bystl/_font-awesome.scss */
+.icon-ok:before {
+  content: "\f00c";
+}
+
+/* line 115, sass/bystl/_font-awesome.scss */
+.icon-remove:before {
+  content: "\f00d";
+}
+
+/* line 116, sass/bystl/_font-awesome.scss */
+.icon-zoom-in:before {
+  content: "\f00e";
+}
+
+/* line 118, sass/bystl/_font-awesome.scss */
+.icon-zoom-out:before {
+  content: "\f010";
+}
+
+/* line 119, sass/bystl/_font-awesome.scss */
+.icon-off:before {
+  content: "\f011";
+}
+
+/* line 120, sass/bystl/_font-awesome.scss */
+.icon-signal:before {
+  content: "\f012";
+}
+
+/* line 121, sass/bystl/_font-awesome.scss */
+.icon-cog:before {
+  content: "\f013";
+}
+
+/* line 122, sass/bystl/_font-awesome.scss */
+.icon-trash:before {
+  content: "\f014";
+}
+
+/* line 123, sass/bystl/_font-awesome.scss */
+.icon-home:before {
+  content: "\f015";
+}
+
+/* line 124, sass/bystl/_font-awesome.scss */
+.icon-file:before {
+  content: "\f016";
+}
+
+/* line 125, sass/bystl/_font-awesome.scss */
+.icon-time:before {
+  content: "\f017";
+}
+
+/* line 126, sass/bystl/_font-awesome.scss */
+.icon-road:before {
+  content: "\f018";
+}
+
+/* line 127, sass/bystl/_font-awesome.scss */
+.icon-download-alt:before {
+  content: "\f019";
+}
+
+/* line 128, sass/bystl/_font-awesome.scss */
+.icon-download:before {
+  content: "\f01a";
+}
+
+/* line 129, sass/bystl/_font-awesome.scss */
+.icon-upload:before {
+  content: "\f01b";
+}
+
+/* line 130, sass/bystl/_font-awesome.scss */
+.icon-inbox:before {
+  content: "\f01c";
+}
+
+/* line 131, sass/bystl/_font-awesome.scss */
+.icon-play-circle:before {
+  content: "\f01d";
+}
+
+/* line 132, sass/bystl/_font-awesome.scss */
+.icon-repeat:before {
+  content: "\f01e";
+}
+
+/* \f020 is not a valid unicode character. all shifted one down */
+/* line 135, sass/bystl/_font-awesome.scss */
+.icon-refresh:before {
+  content: "\f021";
+}
+
+/* line 136, sass/bystl/_font-awesome.scss */
+.icon-list-alt:before {
+  content: "\f022";
+}
+
+/* line 137, sass/bystl/_font-awesome.scss */
+.icon-lock:before {
+  content: "\f023";
+}
+
+/* line 138, sass/bystl/_font-awesome.scss */
+.icon-flag:before {
+  content: "\f024";
+}
+
+/* line 139, sass/bystl/_font-awesome.scss */
+.icon-headphones:before {
+  content: "\f025";
+}
+
+/* line 140, sass/bystl/_font-awesome.scss */
+.icon-volume-off:before {
+  content: "\f026";
+}
+
+/* line 141, sass/bystl/_font-awesome.scss */
+.icon-volume-down:before {
+  content: "\f027";
+}
+
+/* line 142, sass/bystl/_font-awesome.scss */
+.icon-volume-up:before {
+  content: "\f028";
+}
+
+/* line 143, sass/bystl/_font-awesome.scss */
+.icon-qrcode:before {
+  content: "\f029";
+}
+
+/* line 144, sass/bystl/_font-awesome.scss */
+.icon-barcode:before {
+  content: "\f02a";
+}
+
+/* line 145, sass/bystl/_font-awesome.scss */
+.icon-tag:before {
+  content: "\f02b";
+}
+
+/* line 146, sass/bystl/_font-awesome.scss */
+.icon-tags:before {
+  content: "\f02c";
+}
+
+/* line 147, sass/bystl/_font-awesome.scss */
+.icon-book:before {
+  content: "\f02d";
+}
+
+/* line 148, sass/bystl/_font-awesome.scss */
+.icon-bookmark:before {
+  content: "\f02e";
+}
+
+/* line 149, sass/bystl/_font-awesome.scss */
+.icon-print:before {
+  content: "\f02f";
+}
+
+/* line 151, sass/bystl/_font-awesome.scss */
+.icon-camera:before {
+  content: "\f030";
+}
+
+/* line 152, sass/bystl/_font-awesome.scss */
+.icon-font:before {
+  content: "\f031";
+}
+
+/* line 153, sass/bystl/_font-awesome.scss */
+.icon-bold:before {
+  content: "\f032";
+}
+
+/* line 154, sass/bystl/_font-awesome.scss */
+.icon-italic:before {
+  content: "\f033";
+}
+
+/* line 155, sass/bystl/_font-awesome.scss */
+.icon-text-height:before {
+  content: "\f034";
+}
+
+/* line 156, sass/bystl/_font-awesome.scss */
+.icon-text-width:before {
+  content: "\f035";
+}
+
+/* line 157, sass/bystl/_font-awesome.scss */
+.icon-align-left:before {
+  content: "\f036";
+}
+
+/* line 158, sass/bystl/_font-awesome.scss */
+.icon-align-center:before {
+  content: "\f037";
+}
+
+/* line 159, sass/bystl/_font-awesome.scss */
+.icon-align-right:before {
+  content: "\f038";
+}
+
+/* line 160, sass/bystl/_font-awesome.scss */
+.icon-align-justify:before {
+  content: "\f039";
+}
+
+/* line 161, sass/bystl/_font-awesome.scss */
+.icon-list:before {
+  content: "\f03a";
+}
+
+/* line 162, sass/bystl/_font-awesome.scss */
+.icon-indent-left:before {
+  content: "\f03b";
+}
+
+/* line 163, sass/bystl/_font-awesome.scss */
+.icon-indent-right:before {
+  content: "\f03c";
+}
+
+/* line 164, sass/bystl/_font-awesome.scss */
+.icon-facetime-video:before {
+  content: "\f03d";
+}
+
+/* line 165, sass/bystl/_font-awesome.scss */
+.icon-picture:before {
+  content: "\f03e";
+}
+
+/* line 167, sass/bystl/_font-awesome.scss */
+.icon-pencil:before {
+  content: "\f040";
+}
+
+/* line 168, sass/bystl/_font-awesome.scss */
+.icon-map-marker:before {
+  content: "\f041";
+}
+
+/* line 169, sass/bystl/_font-awesome.scss */
+.icon-adjust:before {
+  content: "\f042";
+}
+
+/* line 170, sass/bystl/_font-awesome.scss */
+.icon-tint:before {
+  content: "\f043";
+}
+
+/* line 171, sass/bystl/_font-awesome.scss */
+.icon-edit:before {
+  content: "\f044";
+}
+
+/* line 172, sass/bystl/_font-awesome.scss */
+.icon-share:before {
+  content: "\f045";
+}
+
+/* line 173, sass/bystl/_font-awesome.scss */
+.icon-check:before {
+  content: "\f046";
+}
+
+/* line 174, sass/bystl/_font-awesome.scss */
+.icon-move:before {
+  content: "\f047";
+}
+
+/* line 175, sass/bystl/_font-awesome.scss */
+.icon-step-backward:before {
+  content: "\f048";
+}
+
+/* line 176, sass/bystl/_font-awesome.scss */
+.icon-fast-backward:before {
+  content: "\f049";
+}
+
+/* line 177, sass/bystl/_font-awesome.scss */
+.icon-backward:before {
+  content: "\f04a";
+}
+
+/* line 178, sass/bystl/_font-awesome.scss */
+.icon-play:before {
+  content: "\f04b";
+}
+
+/* line 179, sass/bystl/_font-awesome.scss */
+.icon-pause:before {
+  content: "\f04c";
+}
+
+/* line 180, sass/bystl/_font-awesome.scss */
+.icon-stop:before {
+  content: "\f04d";
+}
+
+/* line 181, sass/bystl/_font-awesome.scss */
+.icon-forward:before {
+  content: "\f04e";
+}
+
+/* line 183, sass/bystl/_font-awesome.scss */
+.icon-fast-forward:before {
+  content: "\f050";
+}
+
+/* line 184, sass/bystl/_font-awesome.scss */
+.icon-step-forward:before {
+  content: "\f051";
+}
+
+/* line 185, sass/bystl/_font-awesome.scss */
+.icon-eject:before {
+  content: "\f052";
+}
+
+/* line 186, sass/bystl/_font-awesome.scss */
+.icon-chevron-left:before {
+  content: "\f053";
+}
+
+/* line 187, sass/bystl/_font-awesome.scss */
+.icon-chevron-right:before {
+  content: "\f054";
+}
+
+/* line 188, sass/bystl/_font-awesome.scss */
+.icon-plus-sign:before {
+  content: "\f055";
+}
+
+/* line 189, sass/bystl/_font-awesome.scss */
+.icon-minus-sign:before {
+  content: "\f056";
+}
+
+/* line 190, sass/bystl/_font-awesome.scss */
+.icon-remove-sign:before {
+  content: "\f057";
+}
+
+/* line 191, sass/bystl/_font-awesome.scss */
+.icon-ok-sign:before {
+  content: "\f058";
+}
+
+/* line 192, sass/bystl/_font-awesome.scss */
+.icon-question-sign:before {
+  content: "\f059";
+}
+
+/* line 193, sass/bystl/_font-awesome.scss */
+.icon-info-sign:before {
+  content: "\f05a";
+}
+
+/* line 194, sass/bystl/_font-awesome.scss */
+.icon-screenshot:before {
+  content: "\f05b";
+}
+
+/* line 195, sass/bystl/_font-awesome.scss */
+.icon-remove-circle:before {
+  content: "\f05c";
+}
+
+/* line 196, sass/bystl/_font-awesome.scss */
+.icon-ok-circle:before {
+  content: "\f05d";
+}
+
+/* line 197, sass/bystl/_font-awesome.scss */
+.icon-ban-circle:before {
+  content: "\f05e";
+}
+
+/* line 199, sass/bystl/_font-awesome.scss */
+.icon-arrow-left:before {
+  content: "\f060";
+}
+
+/* line 200, sass/bystl/_font-awesome.scss */
+.icon-arrow-right:before {
+  content: "\f061";
+}
+
+/* line 201, sass/bystl/_font-awesome.scss */
+.icon-arrow-up:before {
+  content: "\f062";
+}
+
+/* line 202, sass/bystl/_font-awesome.scss */
+.icon-arrow-down:before {
+  content: "\f063";
+}
+
+/* line 203, sass/bystl/_font-awesome.scss */
+.icon-share-alt:before {
+  content: "\f064";
+}
+
+/* line 204, sass/bystl/_font-awesome.scss */
+.icon-resize-full:before {
+  content: "\f065";
+}
+
+/* line 205, sass/bystl/_font-awesome.scss */
+.icon-resize-small:before {
+  content: "\f066";
+}
+
+/* line 206, sass/bystl/_font-awesome.scss */
+.icon-plus:before {
+  content: "\f067";
+}
+
+/* line 207, sass/bystl/_font-awesome.scss */
+.icon-minus:before {
+  content: "\f068";
+}
+
+/* line 208, sass/bystl/_font-awesome.scss */
+.icon-asterisk:before {
+  content: "\f069";
+}
+
+/* line 209, sass/bystl/_font-awesome.scss */
+.icon-exclamation-sign:before {
+  content: "\f06a";
+}
+
+/* line 210, sass/bystl/_font-awesome.scss */
+.icon-gift:before {
+  content: "\f06b";
+}
+
+/* line 211, sass/bystl/_font-awesome.scss */
+.icon-leaf:before {
+  content: "\f06c";
+}
+
+/* line 212, sass/bystl/_font-awesome.scss */
+.icon-fire:before {
+  content: "\f06d";
+}
+
+/* line 213, sass/bystl/_font-awesome.scss */
+.icon-eye-open:before {
+  content: "\f06e";
+}
+
+/* line 215, sass/bystl/_font-awesome.scss */
+.icon-eye-close:before {
+  content: "\f070";
+}
+
+/* line 216, sass/bystl/_font-awesome.scss */
+.icon-warning-sign:before {
+  content: "\f071";
+}
+
+/* line 217, sass/bystl/_font-awesome.scss */
+.icon-plane:before {
+  content: "\f072";
+}
+
+/* line 218, sass/bystl/_font-awesome.scss */
+.icon-calendar:before {
+  content: "\f073";
+}
+
+/* line 219, sass/bystl/_font-awesome.scss */
+.icon-random:before {
+  content: "\f074";
+}
+
+/* line 220, sass/bystl/_font-awesome.scss */
+.icon-comment:before {
+  content: "\f075";
+}
+
+/* line 221, sass/bystl/_font-awesome.scss */
+.icon-magnet:before {
+  content: "\f076";
+}
+
+/* line 222, sass/bystl/_font-awesome.scss */
+.icon-chevron-up:before {
+  content: "\f077";
+}
+
+/* line 223, sass/bystl/_font-awesome.scss */
+.icon-chevron-down:before {
+  content: "\f078";
+}
+
+/* line 224, sass/bystl/_font-awesome.scss */
+.icon-retweet:before {
+  content: "\f079";
+}
+
+/* line 225, sass/bystl/_font-awesome.scss */
+.icon-shopping-cart:before {
+  content: "\f07a";
+}
+
+/* line 226, sass/bystl/_font-awesome.scss */
+.icon-folder-close:before {
+  content: "\f07b";
+}
+
+/* line 227, sass/bystl/_font-awesome.scss */
+.icon-folder-open:before {
+  content: "\f07c";
+}
+
+/* line 228, sass/bystl/_font-awesome.scss */
+.icon-resize-vertical:before {
+  content: "\f07d";
+}
+
+/* line 229, sass/bystl/_font-awesome.scss */
+.icon-resize-horizontal:before {
+  content: "\f07e";
+}
+
+/* line 231, sass/bystl/_font-awesome.scss */
+.icon-bar-chart:before {
+  content: "\f080";
+}
+
+/* line 232, sass/bystl/_font-awesome.scss */
+.icon-twitter-sign:before {
+  content: "\f081";
+}
+
+/* line 233, sass/bystl/_font-awesome.scss */
+.icon-facebook-sign:before {
+  content: "\f082";
+}
+
+/* line 234, sass/bystl/_font-awesome.scss */
+.icon-camera-retro:before {
+  content: "\f083";
+}
+
+/* line 235, sass/bystl/_font-awesome.scss */
+.icon-key:before {
+  content: "\f084";
+}
+
+/* line 236, sass/bystl/_font-awesome.scss */
+.icon-cogs:before {
+  content: "\f085";
+}
+
+/* line 237, sass/bystl/_font-awesome.scss */
+.icon-comments:before {
+  content: "\f086";
+}
+
+/* line 238, sass/bystl/_font-awesome.scss */
+.icon-thumbs-up:before {
+  content: "\f087";
+}
+
+/* line 239, sass/bystl/_font-awesome.scss */
+.icon-thumbs-down:before {
+  content: "\f088";
+}
+
+/* line 240, sass/bystl/_font-awesome.scss */
+.icon-star-half:before {
+  content: "\f089";
+}
+
+/* line 241, sass/bystl/_font-awesome.scss */
+.icon-heart-empty:before {
+  content: "\f08a";
+}
+
+/* line 242, sass/bystl/_font-awesome.scss */
+.icon-signout:before {
+  content: "\f08b";
+}
+
+/* line 243, sass/bystl/_font-awesome.scss */
+.icon-linkedin-sign:before {
+  content: "\f08c";
+}
+
+/* line 244, sass/bystl/_font-awesome.scss */
+.icon-pushpin:before {
+  content: "\f08d";
+}
+
+/* line 245, sass/bystl/_font-awesome.scss */
+.icon-external-link:before {
+  content: "\f08e";
+}
+
+/* line 247, sass/bystl/_font-awesome.scss */
+.icon-signin:before {
+  content: "\f090";
+}
+
+/* line 248, sass/bystl/_font-awesome.scss */
+.icon-trophy:before {
+  content: "\f091";
+}
+
+/* line 249, sass/bystl/_font-awesome.scss */
+.icon-github-sign:before {
+  content: "\f092";
+}
+
+/* line 250, sass/bystl/_font-awesome.scss */
+.icon-upload-alt:before {
+  content: "\f093";
+}
+
+/* line 251, sass/bystl/_font-awesome.scss */
+.icon-lemon:before {
+  content: "\f094";
+}
+
+/*--- 
   primary theme framework styles (SynapseWP)
 ---*/
 /* line 1, sass/_theme-synapse_fw_prettify.scss */
@@ -7307,8 +6654,8 @@ a.thumbnail:hover {
 .prettyprint {
   background: #fff9e8;
   /* Old browsers */
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #c4c2be;
+  box-shadow: 0 1px 2px #d9d8d6;
   padding: 9px;
 }
 
@@ -7320,7 +6667,7 @@ ol.linenums {
 /* line 35, sass/_theme-synapse_fw_prettify.scss */
 ol.linenums li {
   border-radius: 2px 2px 2px 2px;
-  color: rgba(0, 0, 0, 0.15);
+  color: #cfcdca;
   line-height: 20px;
   padding: 0 5px;
 }
@@ -7360,7 +6707,7 @@ ol.linenums li {
 /* line 63, sass/_theme-synapse_fw_prettify.scss */
 .example-code {
   letter-spacing: inherit;
-  color: #555;
+  color: #555555;
   font-size: 12px;
 }
 
@@ -7371,17 +6718,17 @@ div.pp_default .pp_top, div.pp_default .pp_top .pp_middle, div.pp_default .pp_to
 
 /* line 2, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_top .pp_left {
-  background: url(/css/images/prettyPhoto/default/sprite.png) -78px -93px no-repeat;
+  background: url(img/prettyPhoto/default/sprite.png?1333539395) -78px -93px no-repeat;
 }
 
 /* line 3, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_top .pp_middle {
-  background: url(/css/images/prettyPhoto/default/sprite_x.png) top left repeat-x;
+  background: url(img/prettyPhoto/default/sprite_x.png?1333539395) top left repeat-x;
 }
 
 /* line 4, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_top .pp_right {
-  background: url(/css/images/prettyPhoto/default/sprite.png) -112px -93px no-repeat;
+  background: url(img/prettyPhoto/default/sprite.png?1333539395) -112px -93px no-repeat;
 }
 
 /* line 5, sass/_theme-synapse_fw_prettyphoto.scss */
@@ -7391,31 +6738,31 @@ div.pp_default .pp_content .ppt {
 
 /* line 6, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_content_container .pp_left {
-  background: url(/css/images/prettyPhoto/default/sprite_y.png) -7px 0 repeat-y;
+  background: url(img/prettyPhoto/default/sprite_y.png?1333539395) -7px 0 repeat-y;
   padding-left: 13px;
 }
 
 /* line 7, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_content_container .pp_right {
-  background: url(/css/images/prettyPhoto/default/sprite_y.png) top right repeat-y;
+  background: url(img/prettyPhoto/default/sprite_y.png?1333539395) top right repeat-y;
   padding-right: 13px;
 }
 
 /* line 8, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_next:hover {
-  background: url(/css/images/prettyPhoto/default/sprite_next.png) center right no-repeat;
+  background: url(img/prettyPhoto/default/sprite_next.png?1333539395) center right no-repeat;
   cursor: pointer;
 }
 
 /* line 9, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_previous:hover {
-  background: url(/css/images/prettyPhoto/default/sprite_prev.png) center left no-repeat;
+  background: url(img/prettyPhoto/default/sprite_prev.png?1333539395) center left no-repeat;
   cursor: pointer;
 }
 
 /* line 10, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_expand {
-  background: url(/css/images/prettyPhoto/default/sprite.png) 0 -29px no-repeat;
+  background: url(img/prettyPhoto/default/sprite.png?1333539395) 0 -29px no-repeat;
   cursor: pointer;
   height: 28px;
   width: 28px;
@@ -7423,13 +6770,13 @@ div.pp_default .pp_expand {
 
 /* line 11, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_expand:hover {
-  background: url(/css/images/prettyPhoto/default/sprite.png) 0 -56px no-repeat;
+  background: url(img/prettyPhoto/default/sprite.png?1333539395) 0 -56px no-repeat;
   cursor: pointer;
 }
 
 /* line 12, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_contract {
-  background: url(/css/images/prettyPhoto/default/sprite.png) 0 -84px no-repeat;
+  background: url(img/prettyPhoto/default/sprite.png?1333539395) 0 -84px no-repeat;
   cursor: pointer;
   height: 28px;
   width: 28px;
@@ -7437,13 +6784,13 @@ div.pp_default .pp_contract {
 
 /* line 13, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_contract:hover {
-  background: url(/css/images/prettyPhoto/default/sprite.png) 0 -113px no-repeat;
+  background: url(img/prettyPhoto/default/sprite.png?1333539395) 0 -113px no-repeat;
   cursor: pointer;
 }
 
 /* line 14, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_close {
-  background: url(/css/images/prettyPhoto/default/sprite.png) 2px 1px no-repeat;
+  background: url(img/prettyPhoto/default/sprite.png?1333539395) 2px 1px no-repeat;
   cursor: pointer;
   height: 30px;
   width: 30px;
@@ -7451,7 +6798,7 @@ div.pp_default .pp_close {
 
 /* line 15, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_gallery ul li a {
-  background: url(/css/images/prettyPhoto/default/default_thumb.png) center center #f8f8f8;
+  background: url(img/prettyPhoto/default/default_thumb.png?1333539395) center center #f8f8f8;
   border: 1px solid #aaa;
 }
 
@@ -7468,7 +6815,7 @@ div.pp_default .pp_gallery a.pp_arrow_previous, div.pp_default .pp_gallery a.pp_
 
 /* line 18, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_nav .pp_play, div.pp_default .pp_nav .pp_pause {
-  background: url(/css/images/prettyPhoto/default/sprite.png) -51px 1px no-repeat;
+  background: url(img/prettyPhoto/default/sprite.png?1333539395) -51px 1px no-repeat;
   height: 30px;
   width: 30px;
 }
@@ -7480,7 +6827,7 @@ div.pp_default .pp_nav .pp_pause {
 
 /* line 20, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default a.pp_arrow_previous, div.pp_default a.pp_arrow_next {
-  background: url(/css/images/prettyPhoto/default/sprite.png) -31px -3px no-repeat;
+  background: url(img/prettyPhoto/default/sprite.png?1333539395) -31px -3px no-repeat;
   height: 20px;
   margin: 4px 0 0;
   width: 20px;
@@ -7534,73 +6881,73 @@ div.pp_default .pp_description {
 
 /* line 27, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_bottom .pp_left {
-  background: url(/css/images/prettyPhoto/default/sprite.png) -78px -127px no-repeat;
+  background: url(img/prettyPhoto/default/sprite.png?1333539395) -78px -127px no-repeat;
 }
 
 /* line 28, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_bottom .pp_middle {
-  background: url(/css/images/prettyPhoto/default/sprite_x.png) bottom left repeat-x;
+  background: url(img/prettyPhoto/default/sprite_x.png?1333539395) bottom left repeat-x;
 }
 
 /* line 29, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_bottom .pp_right {
-  background: url(/css/images/prettyPhoto/default/sprite.png) -112px -127px no-repeat;
+  background: url(img/prettyPhoto/default/sprite.png?1333539395) -112px -127px no-repeat;
 }
 
 /* line 30, sass/_theme-synapse_fw_prettyphoto.scss */
 div.pp_default .pp_loaderIcon {
-  background: url(/css/images/prettyPhoto/default/loader.gif) center center no-repeat;
+  background: url(img/prettyPhoto/default/loader.gif?1333539395) center center no-repeat;
 }
 
 /* line 31, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_rounded .pp_top .pp_left {
-  background: url(/css/images/prettyPhoto/light_rounded/sprite.png) -88px -53px no-repeat;
+  background: url(img/prettyPhoto/light_rounded/sprite.png?1333539396) -88px -53px no-repeat;
 }
 
 /* line 32, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_rounded .pp_top .pp_right {
-  background: url(/css/images/prettyPhoto/light_rounded/sprite.png) -110px -53px no-repeat;
+  background: url(img/prettyPhoto/light_rounded/sprite.png?1333539396) -110px -53px no-repeat;
 }
 
 /* line 33, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_rounded .pp_next:hover {
-  background: url(/css/images/prettyPhoto/light_rounded/btnNext.png) center right no-repeat;
+  background: url(img/prettyPhoto/light_rounded/btnNext.png?1333539396) center right no-repeat;
   cursor: pointer;
 }
 
 /* line 34, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_rounded .pp_previous:hover {
-  background: url(/css/images/prettyPhoto/light_rounded/btnPrevious.png) center left no-repeat;
+  background: url(img/prettyPhoto/light_rounded/btnPrevious.png?1333539396) center left no-repeat;
   cursor: pointer;
 }
 
 /* line 35, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_rounded .pp_expand {
-  background: url(/css/images/prettyPhoto/light_rounded/sprite.png) -31px -26px no-repeat;
+  background: url(img/prettyPhoto/light_rounded/sprite.png?1333539396) -31px -26px no-repeat;
   cursor: pointer;
 }
 
 /* line 36, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_rounded .pp_expand:hover {
-  background: url(/css/images/prettyPhoto/light_rounded/sprite.png) -31px -47px no-repeat;
+  background: url(img/prettyPhoto/light_rounded/sprite.png?1333539396) -31px -47px no-repeat;
   cursor: pointer;
 }
 
 /* line 37, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_rounded .pp_contract {
-  background: url(/css/images/prettyPhoto/light_rounded/sprite.png) 0 -26px no-repeat;
+  background: url(img/prettyPhoto/light_rounded/sprite.png?1333539396) 0 -26px no-repeat;
   cursor: pointer;
 }
 
 /* line 38, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_rounded .pp_contract:hover {
-  background: url(/css/images/prettyPhoto/light_rounded/sprite.png) 0 -47px no-repeat;
+  background: url(img/prettyPhoto/light_rounded/sprite.png?1333539396) 0 -47px no-repeat;
   cursor: pointer;
 }
 
 /* line 39, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_rounded .pp_close {
-  background: url(/css/images/prettyPhoto/light_rounded/sprite.png) -1px -1px no-repeat;
+  background: url(img/prettyPhoto/light_rounded/sprite.png?1333539396) -1px -1px no-repeat;
   cursor: pointer;
   height: 22px;
   width: 75px;
@@ -7608,97 +6955,97 @@ div.light_rounded .pp_close {
 
 /* line 40, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_rounded .pp_nav .pp_play {
-  background: url(/css/images/prettyPhoto/light_rounded/sprite.png) -1px -100px no-repeat;
+  background: url(img/prettyPhoto/light_rounded/sprite.png?1333539396) -1px -100px no-repeat;
   height: 15px;
   width: 14px;
 }
 
 /* line 41, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_rounded .pp_nav .pp_pause {
-  background: url(/css/images/prettyPhoto/light_rounded/sprite.png) -24px -100px no-repeat;
+  background: url(img/prettyPhoto/light_rounded/sprite.png?1333539396) -24px -100px no-repeat;
   height: 15px;
   width: 14px;
 }
 
 /* line 42, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_rounded .pp_arrow_previous {
-  background: url(/css/images/prettyPhoto/light_rounded/sprite.png) 0 -71px no-repeat;
+  background: url(img/prettyPhoto/light_rounded/sprite.png?1333539396) 0 -71px no-repeat;
 }
 
 /* line 43, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_rounded .pp_arrow_next {
-  background: url(/css/images/prettyPhoto/light_rounded/sprite.png) -22px -71px no-repeat;
+  background: url(img/prettyPhoto/light_rounded/sprite.png?1333539396) -22px -71px no-repeat;
 }
 
 /* line 44, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_rounded .pp_bottom .pp_left {
-  background: url(/css/images/prettyPhoto/light_rounded/sprite.png) -88px -80px no-repeat;
+  background: url(img/prettyPhoto/light_rounded/sprite.png?1333539396) -88px -80px no-repeat;
 }
 
 /* line 45, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_rounded .pp_bottom .pp_right {
-  background: url(/css/images/prettyPhoto/light_rounded/sprite.png) -110px -80px no-repeat;
+  background: url(img/prettyPhoto/light_rounded/sprite.png?1333539396) -110px -80px no-repeat;
 }
 
 /* line 46, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_top .pp_left {
-  background: url(/css/images/prettyPhoto/dark_rounded/sprite.png) -88px -53px no-repeat;
+  background: url(img/prettyPhoto/dark_rounded/sprite.png?1333539395) -88px -53px no-repeat;
 }
 
 /* line 47, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_top .pp_right {
-  background: url(/css/images/prettyPhoto/dark_rounded/sprite.png) -110px -53px no-repeat;
+  background: url(img/prettyPhoto/dark_rounded/sprite.png?1333539395) -110px -53px no-repeat;
 }
 
 /* line 48, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_content_container .pp_left {
-  background: url(/css/images/prettyPhoto/dark_rounded/contentPattern.png) top left repeat-y;
+  background: url(img/prettyPhoto/dark_rounded/contentPattern.png?1333539395) top left repeat-y;
 }
 
 /* line 49, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_content_container .pp_right {
-  background: url(/css/images/prettyPhoto/dark_rounded/contentPattern.png) top right repeat-y;
+  background: url(img/prettyPhoto/dark_rounded/contentPattern.png?1333539395) top right repeat-y;
 }
 
 /* line 50, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_next:hover {
-  background: url(/css/images/prettyPhoto/dark_rounded/btnNext.png) center right no-repeat;
+  background: url(img/prettyPhoto/dark_rounded/btnNext.png?1333539395) center right no-repeat;
   cursor: pointer;
 }
 
 /* line 51, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_previous:hover {
-  background: url(/css/images/prettyPhoto/dark_rounded/btnPrevious.png) center left no-repeat;
+  background: url(img/prettyPhoto/dark_rounded/btnPrevious.png?1333539395) center left no-repeat;
   cursor: pointer;
 }
 
 /* line 52, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_expand {
-  background: url(/css/images/prettyPhoto/dark_rounded/sprite.png) -31px -26px no-repeat;
+  background: url(img/prettyPhoto/dark_rounded/sprite.png?1333539395) -31px -26px no-repeat;
   cursor: pointer;
 }
 
 /* line 53, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_expand:hover {
-  background: url(/css/images/prettyPhoto/dark_rounded/sprite.png) -31px -47px no-repeat;
+  background: url(img/prettyPhoto/dark_rounded/sprite.png?1333539395) -31px -47px no-repeat;
   cursor: pointer;
 }
 
 /* line 54, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_contract {
-  background: url(/css/images/prettyPhoto/dark_rounded/sprite.png) 0 -26px no-repeat;
+  background: url(img/prettyPhoto/dark_rounded/sprite.png?1333539395) 0 -26px no-repeat;
   cursor: pointer;
 }
 
 /* line 55, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_contract:hover {
-  background: url(/css/images/prettyPhoto/dark_rounded/sprite.png) 0 -47px no-repeat;
+  background: url(img/prettyPhoto/dark_rounded/sprite.png?1333539395) 0 -47px no-repeat;
   cursor: pointer;
 }
 
 /* line 56, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_close {
-  background: url(/css/images/prettyPhoto/dark_rounded/sprite.png) -1px -1px no-repeat;
+  background: url(img/prettyPhoto/dark_rounded/sprite.png?1333539395) -1px -1px no-repeat;
   cursor: pointer;
   height: 22px;
   width: 75px;
@@ -7712,41 +7059,41 @@ div.dark_rounded .pp_description {
 
 /* line 58, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_nav .pp_play {
-  background: url(/css/images/prettyPhoto/dark_rounded/sprite.png) -1px -100px no-repeat;
+  background: url(img/prettyPhoto/dark_rounded/sprite.png?1333539395) -1px -100px no-repeat;
   height: 15px;
   width: 14px;
 }
 
 /* line 59, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_nav .pp_pause {
-  background: url(/css/images/prettyPhoto/dark_rounded/sprite.png) -24px -100px no-repeat;
+  background: url(img/prettyPhoto/dark_rounded/sprite.png?1333539395) -24px -100px no-repeat;
   height: 15px;
   width: 14px;
 }
 
 /* line 60, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_arrow_previous {
-  background: url(/css/images/prettyPhoto/dark_rounded/sprite.png) 0 -71px no-repeat;
+  background: url(img/prettyPhoto/dark_rounded/sprite.png?1333539395) 0 -71px no-repeat;
 }
 
 /* line 61, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_arrow_next {
-  background: url(/css/images/prettyPhoto/dark_rounded/sprite.png) -22px -71px no-repeat;
+  background: url(img/prettyPhoto/dark_rounded/sprite.png?1333539395) -22px -71px no-repeat;
 }
 
 /* line 62, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_bottom .pp_left {
-  background: url(/css/images/prettyPhoto/dark_rounded/sprite.png) -88px -80px no-repeat;
+  background: url(img/prettyPhoto/dark_rounded/sprite.png?1333539395) -88px -80px no-repeat;
 }
 
 /* line 63, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_bottom .pp_right {
-  background: url(/css/images/prettyPhoto/dark_rounded/sprite.png) -110px -80px no-repeat;
+  background: url(img/prettyPhoto/dark_rounded/sprite.png?1333539395) -110px -80px no-repeat;
 }
 
 /* line 64, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_loaderIcon {
-  background: url(/css/images/prettyPhoto/dark_rounded/loader.gif) center center no-repeat;
+  background: url(img/prettyPhoto/dark_rounded/loader.gif?1333539395) center center no-repeat;
 }
 
 /* line 65, sass/_theme-synapse_fw_prettyphoto.scss */
@@ -7762,36 +7109,36 @@ div.dark_square .pp_description {
 
 /* line 67, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_square .pp_loaderIcon {
-  background: url(/css/images/prettyPhoto/dark_square/loader.gif) center center no-repeat;
+  background: url(img/prettyPhoto/dark_square/loader.gif?1333539395) center center no-repeat;
 }
 
 /* line 68, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_square .pp_expand {
-  background: url(/css/images/prettyPhoto/dark_square/sprite.png) -31px -26px no-repeat;
+  background: url(img/prettyPhoto/dark_square/sprite.png?1333539395) -31px -26px no-repeat;
   cursor: pointer;
 }
 
 /* line 69, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_square .pp_expand:hover {
-  background: url(/css/images/prettyPhoto/dark_square/sprite.png) -31px -47px no-repeat;
+  background: url(img/prettyPhoto/dark_square/sprite.png?1333539395) -31px -47px no-repeat;
   cursor: pointer;
 }
 
 /* line 70, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_square .pp_contract {
-  background: url(/css/images/prettyPhoto/dark_square/sprite.png) 0 -26px no-repeat;
+  background: url(img/prettyPhoto/dark_square/sprite.png?1333539395) 0 -26px no-repeat;
   cursor: pointer;
 }
 
 /* line 71, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_square .pp_contract:hover {
-  background: url(/css/images/prettyPhoto/dark_square/sprite.png) 0 -47px no-repeat;
+  background: url(img/prettyPhoto/dark_square/sprite.png?1333539395) 0 -47px no-repeat;
   cursor: pointer;
 }
 
 /* line 72, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_square .pp_close {
-  background: url(/css/images/prettyPhoto/dark_square/sprite.png) -1px -1px no-repeat;
+  background: url(img/prettyPhoto/dark_square/sprite.png?1333539395) -1px -1px no-repeat;
   cursor: pointer;
   height: 22px;
   width: 75px;
@@ -7804,67 +7151,67 @@ div.dark_square .pp_nav {
 
 /* line 74, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_square .pp_nav .pp_play {
-  background: url(/css/images/prettyPhoto/dark_square/sprite.png) -1px -100px no-repeat;
+  background: url(img/prettyPhoto/dark_square/sprite.png?1333539395) -1px -100px no-repeat;
   height: 15px;
   width: 14px;
 }
 
 /* line 75, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_square .pp_nav .pp_pause {
-  background: url(/css/images/prettyPhoto/dark_square/sprite.png) -24px -100px no-repeat;
+  background: url(img/prettyPhoto/dark_square/sprite.png?1333539395) -24px -100px no-repeat;
   height: 15px;
   width: 14px;
 }
 
 /* line 76, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_square .pp_arrow_previous {
-  background: url(/css/images/prettyPhoto/dark_square/sprite.png) 0 -71px no-repeat;
+  background: url(img/prettyPhoto/dark_square/sprite.png?1333539395) 0 -71px no-repeat;
 }
 
 /* line 77, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_square .pp_arrow_next {
-  background: url(/css/images/prettyPhoto/dark_square/sprite.png) -22px -71px no-repeat;
+  background: url(img/prettyPhoto/dark_square/sprite.png?1333539395) -22px -71px no-repeat;
 }
 
 /* line 78, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_square .pp_next:hover {
-  background: url(/css/images/prettyPhoto/dark_square/btnNext.png) center right no-repeat;
+  background: url(img/prettyPhoto/dark_square/btnNext.png?1333539395) center right no-repeat;
   cursor: pointer;
 }
 
 /* line 79, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_square .pp_previous:hover {
-  background: url(/css/images/prettyPhoto/dark_square/btnPrevious.png) center left no-repeat;
+  background: url(img/prettyPhoto/dark_square/btnPrevious.png?1333539395) center left no-repeat;
   cursor: pointer;
 }
 
 /* line 80, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_square .pp_expand {
-  background: url(/css/images/prettyPhoto/light_square/sprite.png) -31px -26px no-repeat;
+  background: url(img/prettyPhoto/light_square/sprite.png?1333539396) -31px -26px no-repeat;
   cursor: pointer;
 }
 
 /* line 81, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_square .pp_expand:hover {
-  background: url(/css/images/prettyPhoto/light_square/sprite.png) -31px -47px no-repeat;
+  background: url(img/prettyPhoto/light_square/sprite.png?1333539396) -31px -47px no-repeat;
   cursor: pointer;
 }
 
 /* line 82, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_square .pp_contract {
-  background: url(/css/images/prettyPhoto/light_square/sprite.png) 0 -26px no-repeat;
+  background: url(img/prettyPhoto/light_square/sprite.png?1333539396) 0 -26px no-repeat;
   cursor: pointer;
 }
 
 /* line 83, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_square .pp_contract:hover {
-  background: url(/css/images/prettyPhoto/light_square/sprite.png) 0 -47px no-repeat;
+  background: url(img/prettyPhoto/light_square/sprite.png?1333539396) 0 -47px no-repeat;
   cursor: pointer;
 }
 
 /* line 84, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_square .pp_close {
-  background: url(/css/images/prettyPhoto/light_square/sprite.png) -1px -1px no-repeat;
+  background: url(img/prettyPhoto/light_square/sprite.png?1333539396) -1px -1px no-repeat;
   cursor: pointer;
   height: 22px;
   width: 75px;
@@ -7872,92 +7219,92 @@ div.light_square .pp_close {
 
 /* line 85, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_square .pp_nav .pp_play {
-  background: url(/css/images/prettyPhoto/light_square/sprite.png) -1px -100px no-repeat;
+  background: url(img/prettyPhoto/light_square/sprite.png?1333539396) -1px -100px no-repeat;
   height: 15px;
   width: 14px;
 }
 
 /* line 86, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_square .pp_nav .pp_pause {
-  background: url(/css/images/prettyPhoto/light_square/sprite.png) -24px -100px no-repeat;
+  background: url(img/prettyPhoto/light_square/sprite.png?1333539396) -24px -100px no-repeat;
   height: 15px;
   width: 14px;
 }
 
 /* line 87, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_square .pp_arrow_previous {
-  background: url(/css/images/prettyPhoto/light_square/sprite.png) 0 -71px no-repeat;
+  background: url(img/prettyPhoto/light_square/sprite.png?1333539396) 0 -71px no-repeat;
 }
 
 /* line 88, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_square .pp_arrow_next {
-  background: url(/css/images/prettyPhoto/light_square/sprite.png) -22px -71px no-repeat;
+  background: url(img/prettyPhoto/light_square/sprite.png?1333539396) -22px -71px no-repeat;
 }
 
 /* line 89, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_square .pp_next:hover {
-  background: url(/css/images/prettyPhoto/light_square/btnNext.png) center right no-repeat;
+  background: url(img/prettyPhoto/light_square/btnNext.png?1333539396) center right no-repeat;
   cursor: pointer;
 }
 
 /* line 90, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_square .pp_previous:hover {
-  background: url(/css/images/prettyPhoto/light_square/btnPrevious.png) center left no-repeat;
+  background: url(img/prettyPhoto/light_square/btnPrevious.png?1333539396) center left no-repeat;
   cursor: pointer;
 }
 
 /* line 91, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_top .pp_left {
-  background: url(/css/images/prettyPhoto/facebook/sprite.png) -88px -53px no-repeat;
+  background: url(img/prettyPhoto/facebook/sprite.png?1333539396) -88px -53px no-repeat;
 }
 
 /* line 92, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_top .pp_middle {
-  background: url(/css/images/prettyPhoto/facebook/contentPatternTop.png) top left repeat-x;
+  background: url(img/prettyPhoto/facebook/contentPatternTop.png?1333539396) top left repeat-x;
 }
 
 /* line 93, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_top .pp_right {
-  background: url(/css/images/prettyPhoto/facebook/sprite.png) -110px -53px no-repeat;
+  background: url(img/prettyPhoto/facebook/sprite.png?1333539396) -110px -53px no-repeat;
 }
 
 /* line 94, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_content_container .pp_left {
-  background: url(/css/images/prettyPhoto/facebook/contentPatternLeft.png) top left repeat-y;
+  background: url(img/prettyPhoto/facebook/contentPatternLeft.png?1333539396) top left repeat-y;
 }
 
 /* line 95, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_content_container .pp_right {
-  background: url(/css/images/prettyPhoto/facebook/contentPatternRight.png) top right repeat-y;
+  background: url(img/prettyPhoto/facebook/contentPatternRight.png?1333539396) top right repeat-y;
 }
 
 /* line 96, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_expand {
-  background: url(/css/images/prettyPhoto/facebook/sprite.png) -31px -26px no-repeat;
+  background: url(img/prettyPhoto/facebook/sprite.png?1333539396) -31px -26px no-repeat;
   cursor: pointer;
 }
 
 /* line 97, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_expand:hover {
-  background: url(/css/images/prettyPhoto/facebook/sprite.png) -31px -47px no-repeat;
+  background: url(img/prettyPhoto/facebook/sprite.png?1333539396) -31px -47px no-repeat;
   cursor: pointer;
 }
 
 /* line 98, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_contract {
-  background: url(/css/images/prettyPhoto/facebook/sprite.png) 0 -26px no-repeat;
+  background: url(img/prettyPhoto/facebook/sprite.png?1333539396) 0 -26px no-repeat;
   cursor: pointer;
 }
 
 /* line 99, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_contract:hover {
-  background: url(/css/images/prettyPhoto/facebook/sprite.png) 0 -47px no-repeat;
+  background: url(img/prettyPhoto/facebook/sprite.png?1333539396) 0 -47px no-repeat;
   cursor: pointer;
 }
 
 /* line 100, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_close {
-  background: url(/css/images/prettyPhoto/facebook/sprite.png) -1px -1px no-repeat;
+  background: url(img/prettyPhoto/facebook/sprite.png?1333539396) -1px -1px no-repeat;
   cursor: pointer;
   height: 22px;
   width: 22px;
@@ -7970,12 +7317,12 @@ div.facebook .pp_description {
 
 /* line 102, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_loaderIcon {
-  background: url(/css/images/prettyPhoto/facebook/loader.gif) center center no-repeat;
+  background: url(img/prettyPhoto/facebook/loader.gif?1333539396) center center no-repeat;
 }
 
 /* line 103, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_arrow_previous {
-  background: url(/css/images/prettyPhoto/facebook/sprite.png) 0 -71px no-repeat;
+  background: url(img/prettyPhoto/facebook/sprite.png?1333539396) 0 -71px no-repeat;
   height: 22px;
   margin-top: 0;
   width: 22px;
@@ -7989,7 +7336,7 @@ div.facebook .pp_arrow_previous.disabled {
 
 /* line 105, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_arrow_next {
-  background: url(/css/images/prettyPhoto/facebook/sprite.png) -32px -71px no-repeat;
+  background: url(img/prettyPhoto/facebook/sprite.png?1333539396) -32px -71px no-repeat;
   height: 22px;
   margin-top: 0;
   width: 22px;
@@ -8014,43 +7361,43 @@ div.facebook .pp_nav p {
 
 /* line 109, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_nav .pp_play {
-  background: url(/css/images/prettyPhoto/facebook/sprite.png) -1px -123px no-repeat;
+  background: url(img/prettyPhoto/facebook/sprite.png?1333539396) -1px -123px no-repeat;
   height: 22px;
   width: 22px;
 }
 
 /* line 110, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_nav .pp_pause {
-  background: url(/css/images/prettyPhoto/facebook/sprite.png) -32px -123px no-repeat;
+  background: url(img/prettyPhoto/facebook/sprite.png?1333539396) -32px -123px no-repeat;
   height: 22px;
   width: 22px;
 }
 
 /* line 111, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_next:hover {
-  background: url(/css/images/prettyPhoto/facebook/btnNext.png) center right no-repeat;
+  background: url(img/prettyPhoto/facebook/btnNext.png?1333539395) center right no-repeat;
   cursor: pointer;
 }
 
 /* line 112, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_previous:hover {
-  background: url(/css/images/prettyPhoto/facebook/btnPrevious.png) center left no-repeat;
+  background: url(img/prettyPhoto/facebook/btnPrevious.png?1333539395) center left no-repeat;
   cursor: pointer;
 }
 
 /* line 113, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_bottom .pp_left {
-  background: url(/css/images/prettyPhoto/facebook/sprite.png) -88px -80px no-repeat;
+  background: url(img/prettyPhoto/facebook/sprite.png?1333539396) -88px -80px no-repeat;
 }
 
 /* line 114, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_bottom .pp_middle {
-  background: url(/css/images/prettyPhoto/facebook/contentPatternBottom.png) top left repeat-x;
+  background: url(img/prettyPhoto/facebook/contentPatternBottom.png?1333539395) top left repeat-x;
 }
 
 /* line 115, sass/_theme-synapse_fw_prettyphoto.scss */
 div.facebook .pp_bottom .pp_right {
-  background: url(/css/images/prettyPhoto/facebook/sprite.png) -110px -80px no-repeat;
+  background: url(img/prettyPhoto/facebook/sprite.png?1333539396) -110px -80px no-repeat;
 }
 
 /* line 116, sass/_theme-synapse_fw_prettyphoto.scss */
@@ -8204,7 +7551,7 @@ a.pp_arrow_previous, a.pp_arrow_next {
 
 /* line 137, sass/_theme-synapse_fw_prettyphoto.scss */
 .pp_gallery ul a {
-  border: 1px rgba(0, 0, 0, 0.5) solid;
+  border: 1px #878078 solid;
   display: block;
   float: left;
   height: 33px;
@@ -8226,7 +7573,7 @@ a.pp_arrow_previous, a.pp_arrow_next {
 
 /* line 140, sass/_theme-synapse_fw_prettyphoto.scss */
 .pp_gallery li.default a {
-  background: url(/css/images/prettyPhoto/facebook/default_thumbnail.gif) 0 0 no-repeat;
+  background: url(img/prettyPhoto/facebook/default_thumbnail.gif?1333539396) 0 0 no-repeat;
   display: block;
   height: 33px;
   width: 50px;
@@ -8239,7 +7586,7 @@ a.pp_arrow_previous, a.pp_arrow_next {
 
 /* line 142, sass/_theme-synapse_fw_prettyphoto.scss */
 a.pp_next {
-  background: url(/css/images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
+  background: url(img/prettyPhoto/light_rounded/btnNext.png?1333539396) 10000px 10000px no-repeat;
   display: block;
   float: right;
   height: 100%;
@@ -8249,7 +7596,7 @@ a.pp_next {
 
 /* line 143, sass/_theme-synapse_fw_prettyphoto.scss */
 a.pp_previous {
-  background: url(/css/images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
+  background: url(img/prettyPhoto/light_rounded/btnNext.png?1333539396) 10000px 10000px no-repeat;
   display: block;
   float: left;
   height: 100%;
@@ -8364,12 +7711,12 @@ div.light_rounded .pp_arrow_next.disabled, div.dark_rounded .pp_arrow_next.disab
 
 /* line 160, sass/_theme-synapse_fw_prettyphoto.scss */
 div.light_rounded .pp_loaderIcon, div.light_square .pp_loaderIcon {
-  background: url(/css/images/prettyPhoto/light_rounded/loader.gif) center center no-repeat;
+  background: url(img/prettyPhoto/light_rounded/loader.gif?1333539396) center center no-repeat;
 }
 
 /* line 161, sass/_theme-synapse_fw_prettyphoto.scss */
 div.dark_rounded .pp_top .pp_middle, div.dark_rounded .pp_content, div.dark_rounded .pp_bottom .pp_middle {
-  background: url(/css/images/prettyPhoto/dark_rounded/contentPattern.png) top left repeat;
+  background: url(img/prettyPhoto/dark_rounded/contentPattern.png?1333539395) top left repeat;
 }
 
 /* line 162, sass/_theme-synapse_fw_prettyphoto.scss */
@@ -8582,9 +7929,9 @@ ul.sf-menu li li li.sfHover ul {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
-  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
-  -o-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 0 2px #a5a19b;
+  -webkit-box-shadow: 0 0 2px #a5a19b;
+  -o-box-shadow: 0 0 2px #a5a19b;
 }
 
 /* line 131, sass/_theme-synapse_fw_superfish.scss */
@@ -8716,9 +8063,9 @@ ul.sf-menu2 li li li.sfHover ul {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
-  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
-  -o-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 0 2px #a5a19b;
+  -webkit-box-shadow: 0 0 2px #a5a19b;
+  -o-box-shadow: 0 0 2px #a5a19b;
 }
 
 /* line 245, sass/_theme-synapse_fw_superfish.scss */
@@ -8741,117 +8088,107 @@ ul.sf-menu2 li li li.sfHover ul {
 	PARENT:		_theme-synapse.scss
 	
  ----------------------------------------------*/
-/*	BYSTL Fonts
----------------------------------------------- */
-@font-face {
-  font-family: "fette-mittelschrift";
-  src: url('fonts/fette-mittelschrift-regular-webfont.eot');
-  src: url('fonts/fette-mittelschrift-regular-webfont.eot?#iefix') format('eot'), url('fonts/fette-mittelschrift-regular-webfont.woff') format('woff'), url('fonts/fette-mittelschrift-regular-webfont.ttf') format('truetype'), url('fonts/fette-mittelschrift-regular-webfont.otf') format('opentype'), url('fonts/fette-mittelschrift-regular-webfont.svg#IcoMoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 /*	HEADINGS, PARAGRAPHS, EMPHASIS, ETC
 ---------------------------------------------- */
-/* line 54, sass/synapse/_type.scss */
+/* line 10, sass/synapse/_type.scss */
 h2, .h2 {
   margin-bottom: 10px;
 }
 
-/* line 60, sass/synapse/_type.scss */
+/* line 16, sass/synapse/_type.scss */
 .widget h3, .widget .h3 {
   border-bottom: 1px solid #6f6f6f;
   margin-bottom: 15px;
   padding-bottom: 7px;
   color: #fff;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 0 #878078;
 }
-/* line 68, sass/synapse/_type.scss */
+/* line 24, sass/synapse/_type.scss */
 .sidebar .blog-widget h3, .sidebar .blog-widget .h3 {
   margin-bottom: 0;
 }
-/* line 72, sass/synapse/_type.scss */
+/* line 28, sass/synapse/_type.scss */
 .footer h3, .footer .h3 {
   border-bottom: 1px solid #c9c9c9;
   padding-bottom: 5px;
   margin-bottom: 20px;
 }
 
-/* line 80, sass/synapse/_type.scss */
+/* line 36, sass/synapse/_type.scss */
 p {
-  text-shadow: 1px 1px rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px #fbfbfb;
   color: #555555;
   font-size: 12px;
 }
-/* line 85, sass/synapse/_type.scss */
+/* line 41, sass/synapse/_type.scss */
 .page-content p {
   text-shadow: none;
 }
-/* line 89, sass/synapse/_type.scss */
+/* line 45, sass/synapse/_type.scss */
 .sidebar p {
   color: #969696;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: -1px -1px 0 #878078;
 }
-/* line 94, sass/synapse/_type.scss */
+/* line 50, sass/synapse/_type.scss */
 .video-holder p, .portfolio-item p, .portfolio-item p {
   color: #848484;
   font-family: 'Droid Serif',serif;
   font-weight: normal;
   font-size: 12px;
   font-style: italic;
-  text-shadow: -1px -1px rgba(0, 0, 0, 0.4);
+  text-shadow: -1px -1px #9b968f;
   margin: 15px 0 0 0;
 }
-/* line 104, sass/synapse/_type.scss */
+/* line 60, sass/synapse/_type.scss */
 .footer p {
   font-size: 12px;
 }
 
-/* line 110, sass/synapse/_type.scss */
+/* line 66, sass/synapse/_type.scss */
 em {
   font-style: italic;
 }
 
 /*	LINKS
 ---------------------------------------------- */
-/* line 116, sass/synapse/_type.scss */
+/* line 72, sass/synapse/_type.scss */
 a {
   color: #235C98;
 }
-/* line 118, sass/synapse/_type.scss */
+/* line 74, sass/synapse/_type.scss */
 .sidebar a {
   color: #cdcdcd;
 }
-/* line 121, sass/synapse/_type.scss */
+/* line 77, sass/synapse/_type.scss */
 a:hover {
   color: #407fc1;
 }
-/* line 125, sass/synapse/_type.scss */
+/* line 81, sass/synapse/_type.scss */
 .video-holder a, .portfolio-item a, .portfolio-item a {
   color: #989898;
   -moz-transition: color 0.3s ease-in;
   -webkit-transition: color 0.3s ease-in;
   -o-transition: color 0.3s ease-in;
 }
-/* line 131, sass/synapse/_type.scss */
+/* line 87, sass/synapse/_type.scss */
 .video-holder a:hover, .portfolio-item a:hover, .portfolio-item a:hover {
   color: #fff;
 }
-/* line 136, sass/synapse/_type.scss */
+/* line 92, sass/synapse/_type.scss */
 .cat-item a {
   font-size: 13px;
   line-height: 22px;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: -1px -1px 0 #878078;
   float: left;
 }
-/* line 145, sass/synapse/_type.scss */
+/* line 101, sass/synapse/_type.scss */
 .cat-item li a:hover {
   text-decoration: none;
   color: #fff;
 }
-/* line 151, sass/synapse/_type.scss */
+/* line 107, sass/synapse/_type.scss */
 .small-footer a {
-  color: #555;
+  color: #555555;
   font-weight: bold;
   font-style: italic;
   text-decoration: underline;
@@ -8859,58 +8196,58 @@ a:hover {
 
 /*	LISTS
 ---------------------------------------------- */
-/* line 164, sass/synapse/_type.scss */
+/* line 120, sass/synapse/_type.scss */
 .article-excerpt ul, .portfolio-item-content ul, .article-excerpt ol, .portfolio-item-content ol {
   padding: 5px 0;
 }
 
-/* line 169, sass/synapse/_type.scss */
+/* line 125, sass/synapse/_type.scss */
 ol {
   list-style: decimal outside none !important;
 }
 
-/* line 175, sass/synapse/_type.scss */
+/* line 131, sass/synapse/_type.scss */
 .page-content ul, .widget ul {
   margin: 12px 0;
 }
-/* line 178, sass/synapse/_type.scss */
+/* line 134, sass/synapse/_type.scss */
 .page-content ul ul, .widget ul ul {
   margin-top: 10px;
 }
-/* line 186, sass/synapse/_type.scss */
+/* line 142, sass/synapse/_type.scss */
 .article-excerpt ul li, .portfolio-item-content ul li {
   padding-left: 18px;
-  background: url(img/list-bullet.png) no-repeat top left;
+  background: url(img/list-bullet.png?1333591341) no-repeat top left;
   margin-bottom: 10px;
 }
 
-/* line 197, sass/synapse/_type.scss */
+/* line 153, sass/synapse/_type.scss */
 ol li {
   margin-left: 18px;
   margin-bottom: 10px;
 }
-/* line 201, sass/synapse/_type.scss */
+/* line 157, sass/synapse/_type.scss */
 pre ol li {
   margin: 0;
 }
-/* line 207, sass/synapse/_type.scss */
+/* line 163, sass/synapse/_type.scss */
 .labels li {
   margin-bottom: 10px;
 }
-/* line 211, sass/synapse/_type.scss */
+/* line 167, sass/synapse/_type.scss */
 .sidebar ul li {
   margin-left: 0 !important;
 }
-/* line 215, sass/synapse/_type.scss */
+/* line 171, sass/synapse/_type.scss */
 .dotted ul li, .dotted li {
   padding-left: 18px;
-  background: url(img/list-bullet.png) no-repeat top left;
+  background: url(img/list-bullet.png?1333591341) no-repeat top left;
   margin-bottom: 10px;
 }
 
 /*	BLOCKQUOTES, CODE, ETC
 ---------------------------------------------- */
-/* line 226, sass/synapse/_type.scss */
+/* line 182, sass/synapse/_type.scss */
 blockquote {
   font-family: 'Droid Serif', serif;
   font-size: 15px;
@@ -8920,7 +8257,7 @@ blockquote {
   margin-bottom: 30px;
   padding-top: 0 !important;
 }
-/* line 235, sass/synapse/_type.scss */
+/* line 191, sass/synapse/_type.scss */
 blockquote:after {
   color: #CCCCCC;
   content: open-quote;
@@ -8934,7 +8271,7 @@ blockquote:after {
 
 /*	WORDPRESS CLASS TYPOGRAPHY
 ---------------------------------------------- */
-/* line 249, sass/synapse/_type.scss */
+/* line 205, sass/synapse/_type.scss */
 .page-title {
   margin-bottom: 10px;
 }
@@ -8948,7 +8285,7 @@ blockquote:after {
 /* line 8, sass/synapse/_scaffolding.scss */
 body {
   padding-bottom: 20px;
-  background-color: #ffffff;
+  background-color: white;
   background-repeat: repeat;
   background-image: url('img/patterns/Graphy2.png?1333591304');
 }
@@ -9010,151 +8347,103 @@ body.bg_Wood {
 ---------------------------------------------- */
 /* line 60, sass/synapse/_scaffolding.scss */
 .page-content {
-  background: #fff;
+  background: white;
   padding: 15px 25px 25px 25px;
   width: 578px;
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-box-shadow: 0 1px 1px #cfcdca;
+  -moz-box-shadow: 0 1px 1px #cfcdca;
+  box-shadow: 0 1px 1px #cfcdca;
   margin-bottom: 30px;
   font-size: 12px;
 }
 
-/* line 74, sass/synapse/_scaffolding.scss */
+/* line 69, sass/synapse/_scaffolding.scss */
 .full {
   width: 890px !important;
 }
 
-/* line 78, sass/synapse/_scaffolding.scss */
+/* line 73, sass/synapse/_scaffolding.scss */
 .blog-page, .portfolio-page {
   float: left;
   width: 628px;
 }
 
-/* line 83, sass/synapse/_scaffolding.scss */
+/* line 78, sass/synapse/_scaffolding.scss */
 .portfolio-full {
   margin-bottom: 35px;
 }
 
-/* line 87, sass/synapse/_scaffolding.scss */
+/* line 93, sass/synapse/_scaffolding.scss */
+.navyBlueBgGradientBox, .sidebar, .video-holder, .portfolio-item, .cat-item {
+  border: 1px solid #1f1f1f;
+  background: #002f41;
+  /* Old browsers */
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #002f41), color-stop(100%, #001d29));
+  background-image: -webkit-linear-gradient(#002f41 0%, #001d29 100%);
+  background-image: -moz-linear-gradient(#002f41 0%, #001d29 100%);
+  background-image: -o-linear-gradient(#002f41 0%, #001d29 100%);
+  background-image: -ms-linear-gradient(#002f41 0%, #001d29 100%);
+  background-image: linear-gradient(#002f41 0%, #001d29 100%);
+  -webkit-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
+  -moz-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
+  box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
+}
+
+/* line 97, sass/synapse/_scaffolding.scss */
 .sidebar {
   padding: 15px 20px;
   width: 250px;
   margin-bottom: 35px;
-  background: #464b4d;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #464b4d), color-stop(100%, #303335));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#464b4d', endColorstr='#303335',GradientType=0 );
-  /* IE6-9 */
-  border: 1px solid #1f1f1f;
   font-size: 11px !important;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
 }
 
 /*	CONTENT-SPECIFIC ELEM CONTAINERS
 ---------------------------------------------- */
-/* line 113, sass/synapse/_scaffolding.scss */
+/* line 108, sass/synapse/_scaffolding.scss */
 .video-holder, .portfolio-item {
-  background: #464b4d;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #464b4d), color-stop(100%, #303335));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#464b4d', endColorstr='#303335',GradientType=0 );
-  /* IE6-9 */
-  border: 1px solid #1f1f1f;
-  border-bottom: 1px solid #161616;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-  -moz-border-radius: 5px;
+  border-top: 1px solid #1f1f1f;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  border-radius: 5px;
   margin-top: 20px;
   padding: 20px;
 }
 
-/* line 134, sass/synapse/_scaffolding.scss */
+/* line 117, sass/synapse/_scaffolding.scss */
 .cat-item {
   width: 229px;
-  background: #464b4d;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #464b4d), color-stop(100%, #303335));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#464b4d', endColorstr='#303335',GradientType=0 );
-  /* IE6-9 */
-  border: 1px solid #1f1f1f;
-  border-bottom: 1px solid #161616;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-  -moz-border-radius: 5px;
+  border-top: 1px solid #1f1f1f;
+  -webkit-box-shadow: inset 0 1px 0 #f3f3f3, #a5a19b;
+  -moz-box-shadow: inset 0 1px 0 #f3f3f3, #a5a19b;
+  box-shadow: inset 0 1px 0 #f3f3f3, #a5a19b;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  border-radius: 5px;
   padding: 10px;
   float: left;
   margin: 5px 0;
   text-align: right;
 }
-/* line 157, sass/synapse/_scaffolding.scss */
+/* line 128, sass/synapse/_scaffolding.scss */
 .cat-item:hover {
-  background: #5d6366;
+  background: #f3f3f3;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #5d6366 0%, #43484b 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5d6366), color-stop(100%, #43484b));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #5d6366 0%, #43484b 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #5d6366 0%, #43484b 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #5d6366 0%, #43484b 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #5d6366 0%, #43484b 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5d6366', endColorstr='#43484b',GradientType=0 );
-  /* IE6-9 */
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.35);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.35);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #000000), color-stop(100%, #000000));
+  background-image: -webkit-linear-gradient(#000000 0%, #000000 100%);
+  background-image: -moz-linear-gradient(#000000 0%, #000000 100%);
+  background-image: -o-linear-gradient(#000000 0%, #000000 100%);
+  background-image: -ms-linear-gradient(#000000 0%, #000000 100%);
+  background-image: linear-gradient(#000000 0%, #000000 100%);
+  -webkit-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
+  -moz-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
+  box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
+  -webkit-box-shadow: inset 0 1px 0 #f3f3f3, #a5a19b;
+  -moz-box-shadow: inset 0 1px 0 #f3f3f3, #a5a19b;
+  box-shadow: inset 0 1px 0 #f3f3f3, #a5a19b;
 }
 
 /*----------------------------------------------
@@ -9165,24 +8454,26 @@ body.bg_Wood {
  ----------------------------------------------*/
 /* line 8, sass/synapse/_header.scss */
 .header {
+  margin-top: 40px;
   background: url(img/top-bar-shadow.png?1333591355) top left repeat-x white;
   padding: 30px 0;
-  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
-  -o-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 0 2px #a5a19b;
+  -moz-box-shadow: 0 0 2px #a5a19b;
+  box-shadow: 0 0 2px #a5a19b;
 }
 
-/* line 15, sass/synapse/_header.scss */
+/* line 16, sass/synapse/_header.scss */
 .logo-container {
   float: left;
 }
 
-/* line 21, sass/synapse/_header.scss */
+/* line 22, sass/synapse/_header.scss */
 .logo {
   position: relative;
+  float: left;
   text-decoration: none !important;
 }
-/* line 24, sass/synapse/_header.scss */
+/* line 26, sass/synapse/_header.scss */
 .logo > img {
   position: absolute;
   top: 0;
@@ -9190,28 +8481,29 @@ body.bg_Wood {
   speak: none;
 }
 
-/* line 32, sass/synapse/_header.scss */
+/* line 34, sass/synapse/_header.scss */
 .logo h1, .logo .h1, .logo .h1 {
+  visibility: visible;
+  font-family: "bystlLogoFont", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
   line-height: 35px;
   padding-left: 60px;
   font-size: 2.846em;
-  font-family: "fette-mittelschrift";
   text-transform: lowercase;
   letter-spacing: normal;
-  font-weight: normal;
-  font-style: normal;
   color: #7ec6e0;
   white-space: nowrap;
   word-spacing: -3px;
 }
-/* line 29, sass/synapse/_type.scss */
+/* line 46, sass/bystl/_webfonts.scss */
 .logo h1 > strong, .logo .h1 > strong, .logo .h1 > strong {
   word-spacing: -1px;
   font-weight: normal;
   color: #00709d;
 }
 
-/* line 36, sass/synapse/_header.scss */
+/* line 38, sass/synapse/_header.scss */
 .tagline {
   color: #505050;
   font-size: 13px;
@@ -9230,93 +8522,6 @@ body.bg_Wood {
  ----------------------------------------------*/
 /*	TOP BAR NAV
 ---------------------------------------------- */
-/* line 10, sass/synapse/_navs.scss */
-.top-bar {
-  background-color: #000000;
-  padding: 10px 0;
-  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35), inset 0 15px 30px rgba(255, 255, 255, 0.2);
-  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35), inset 0 15px 30px rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.35), inset 0 15px 30px rgba(255, 255, 255, 0.2);
-}
-
-/* line 15, sass/synapse/_navs.scss */
-.top-bar a {
-  font-size: 12px;
-  color: #919191;
-  padding: 0 !important;
-  text-shadow: -1px -1px black;
-  -webkit-transition: color 0.3s ease-in;
-  -moz-transition: color 0.3s ease-in;
-  -ms-transition: color 0.3s ease-in;
-  -o-transition: color 0.3s ease-in;
-  transition: color 0.3s ease-in;
-}
-
-/* line 27, sass/synapse/_navs.scss */
-.topBarTheme_Black .top-bar {
-  background: #000000;
-  border-bottom: 1px solid #2a68bd;
-  border-top: 1px solid #2a68bd;
-}
-/* line 32, sass/synapse/_navs.scss */
-.topBarTheme_Black .top-bar a {
-  color: #919191;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-/* line 42, sass/synapse/_navs.scss */
-.topBarTheme_Blue .top-bar {
-  background: #2c6bc3;
-  border-bottom: 1px solid #2a68bd;
-  border-top: 1px solid #2a68bd;
-}
-/* line 47, sass/synapse/_navs.scss */
-.topBarTheme_Blue .top-bar a {
-  color: #e8e8e8;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-/* line 57, sass/synapse/_navs.scss */
-.topBarTheme_Red .top-bar {
-  background: #c81414;
-  border-bottom: 1px solid #b71d1d;
-  border-top: 1px solid #b71d1d;
-}
-/* line 62, sass/synapse/_navs.scss */
-.topBarTheme_Red .top-bar a {
-  color: #e8e8e8;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-/* line 72, sass/synapse/_navs.scss */
-.topBarTheme_Orange .top-bar {
-  background: #e97700;
-  border-bottom: 1px solid #e0801c;
-  border-top: 1px solid #e0801c;
-}
-/* line 77, sass/synapse/_navs.scss */
-.topBarTheme_Orange .top-bar a {
-  color: #e8e8e8;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-/* line 87, sass/synapse/_navs.scss */
-.topBarTheme_Pink .top-bar {
-  background: #d2386a;
-  border-bottom: 1px solid #d2386a;
-  border-top: 1px solid #d2386a;
-}
-/* line 92, sass/synapse/_navs.scss */
-.topBarTheme_Pink .top-bar a {
-  color: #e8e8e8;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-/* line 102, sass/synapse/_navs.scss */
-.nav li {
-  padding-right: 20px;
-}
-
 /* line 105, sass/synapse/_navs.scss */
 .social {
   float: right !important;
@@ -9352,22 +8557,22 @@ body.bg_Wood {
 
 /* line 128, sass/synapse/_navs.scss */
 .facebook {
-  background: url(img/icon-facebook.png) no-repeat;
+  background: url(img/icon-facebook.png?1333591332) no-repeat;
 }
 
 /* line 131, sass/synapse/_navs.scss */
 .twitter {
-  background: url(img/icon-twitter.png) no-repeat;
+  background: url(img/icon-twitter.png?1333591337) no-repeat;
 }
 
 /* line 134, sass/synapse/_navs.scss */
 .phone {
-  background: url(img/icon-phone.png) no-repeat;
+  background: url(img/icon-phone.png?1333591336) no-repeat;
 }
 
 /* line 137, sass/synapse/_navs.scss */
 .mail {
-  background: url(img/icon-mail.png) no-repeat;
+  background: url(img/icon-mail.png?1333591335) no-repeat;
 }
 
 /*	MAIN NAV (HEADER)
@@ -9393,97 +8598,33 @@ body.bg_Wood {
 }
 
 /* line 157, sass/synapse/_navs.scss */
-.home .home-link a {
+.home .home-link a, .home li a.home-link {
   padding: 8px 17px !important;
 }
 
-/* line 160, sass/synapse/_navs.scss */
-.home .home-link a, #main-nav .current-menu-item a, #main-nav .current_page_item a {
-  background: #7f7f7f;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #7f7f7f 0%, #a0a0a0 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f7f7f), color-stop(100%, #a0a0a0));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #7f7f7f 0%, #a0a0a0 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #7f7f7f 0%, #a0a0a0 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #7f7f7f 0%, #a0a0a0 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #7f7f7f 0%, #a0a0a0 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7f7f7f', endColorstr='#a0a0a0',GradientType=0 );
-  /* IE6-9 */
-  -moz-border-radius: 99px;
-  -webkit-border-radius: 999px;
-  -o-border-radius: 99px;
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.6);
-  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.6);
-  padding: 8px 17px;
-  color: #fff !important;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-  -webkit-transition: opacity 0.3s ease-in;
-  -o-transition: opacity 0.3s ease-in;
-}
-
-/* line 182, sass/synapse/_navs.scss */
+/* line 167, sass/synapse/_navs.scss */
 #main-nav a {
   padding: 8px 0;
 }
 
 /*	FILTERS NAVIGATION (BELOW HEADER)
 ---------------------------------------------- */
-/* line 188, sass/synapse/_navs.scss */
+/* line 173, sass/synapse/_navs.scss */
 #filters {
   margin-bottom: 40px;
 }
-/* line 191, sass/synapse/_navs.scss */
+/* line 176, sass/synapse/_navs.scss */
 #filters li {
   float: left;
   margin-right: 25px;
 }
-/* line 195, sass/synapse/_navs.scss */
+/* line 180, sass/synapse/_navs.scss */
 #filters li a {
   color: #555555;
   font-size: 13px;
-  text-shadow: 1px 1px rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px #fbfbfb;
 }
-/* line 200, sass/synapse/_navs.scss */
-#filters li a.active {
-  color: #fff !important;
-  font-size: 13px;
-  background: #7f7f7f;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #7f7f7f 0%, #a0a0a0 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f7f7f), color-stop(100%, #a0a0a0));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #7f7f7f 0%, #a0a0a0 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #7f7f7f 0%, #a0a0a0 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #7f7f7f 0%, #a0a0a0 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #7f7f7f 0%, #a0a0a0 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7f7f7f', endColorstr='#a0a0a0',GradientType=0 );
-  /* IE6-9 */
-  -moz-border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -o-border-radius: 30px;
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
-  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
-  border: none;
-  padding: 6px 15px 7px 15px;
-  font-weight: bold;
-  color: #fff !important;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-/* line 224, sass/synapse/_navs.scss */
+/* line 189, sass/synapse/_navs.scss */
 #filters li a:hover {
   text-decoration: none;
 }
@@ -9506,7 +8647,7 @@ body.bg_Wood {
 
 /* line 18, sass/synapse/_slider.scss */
 #prev-arrow {
-  background: url(img/prev-arrow.png) no-repeat;
+  background: url(img/prev-arrow.png?1333591349) no-repeat;
   position: absolute;
   left: -80px;
   top: 40%;
@@ -9514,12 +8655,12 @@ body.bg_Wood {
 
 /* line 24, sass/synapse/_slider.scss */
 #prev-arrow:active {
-  background: url(img/prev-arrow.png) no-repeat bottom left;
+  background: url(img/prev-arrow.png?1333591349) no-repeat bottom left;
 }
 
 /* line 27, sass/synapse/_slider.scss */
 #next-arrow {
-  background: url(img/next-arrow.png) no-repeat;
+  background: url(img/next-arrow.png?1333591347) no-repeat;
   position: absolute;
   right: -80px;
   top: 40%;
@@ -9527,7 +8668,7 @@ body.bg_Wood {
 
 /* line 33, sass/synapse/_slider.scss */
 #next-arrow:active {
-  background: url(img/next-arrow.png) no-repeat bottom left;
+  background: url(img/next-arrow.png?1333591347) no-repeat bottom left;
 }
 
 /*	SLIDERS
@@ -9592,27 +8733,27 @@ body.bg_Wood {
 
 /* line 79, sass/synapse/_slider.scss */
 .slider-nav, .slider-nav-thumbs, .slider-nav-wide {
-  background: #464b4d;
+  background: #002f41;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -moz-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #464b4d), color-stop(100%, #303335));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #002f41), color-stop(100%, #001d29));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -webkit-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -o-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -ms-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* IE10+ */
-  background: linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: linear-gradient(top, #002f41 0%, #001d29 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#464b4d', endColorstr='#303335',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$bystl_blue_navy', endColorstr='$bystl_blue_black',GradientType=0 );
   /* IE6-9 */
   text-align: center;
   border: 1px solid #1f1f1f;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
+  -webkit-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
+  -o-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
   -moz-border-radius: 0 0 5px 5px;
   -webkit-border-radius: 0 0 5px 5px;
   -o-border-radius: 0 0 5px 5px;
@@ -9643,7 +8784,7 @@ body.bg_Wood {
 .slider-nav a, .slider-nav-thumbs a, .slider-nav-wide a {
   color: #969696;
   font-size: 13px;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: -1px -1px 0 #878078;
   margin-left: 15px;
   padding-left: 15px;
   font-weight: bold;
@@ -9683,9 +8824,9 @@ body.bg_Wood {
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
   border: 4px solid #fff;
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 3px #878078;
+  -webkit-box-shadow: 0 1px 3px #878078;
+  -o-box-shadow: 0 1px 3px #878078;
 }
 
 /* line 149, sass/synapse/_slider.scss */
@@ -9697,21 +8838,21 @@ body.bg_Wood {
 /* line 153, sass/synapse/_slider.scss */
 .slider-nav .activeSlide a, .slider-nav-wide .activeSlide a {
   font-size: 13px;
-  background: #242728;
+  background: #001d29;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #242728 1%, #282b2c 100%);
+  background: -moz-linear-gradient(top, #001d29 1%, #002f43 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #242728), color-stop(100%, #282b2c));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #001d29), color-stop(100%, #002f43));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #242728 1%, #282b2c 100%);
+  background: -webkit-linear-gradient(top, #001d29 1%, #002f43 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #242728 1%, #282b2c 100%);
+  background: -o-linear-gradient(top, #001d29 1%, #002f43 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #242728 1%, #282b2c 100%);
+  background: -ms-linear-gradient(top, #001d29 1%, #002f43 100%);
   /* IE10+ */
-  background: linear-gradient(top, #242728 1%, #282b2c 100%);
+  background: linear-gradient(top, #001d29 1%, #002f43 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#242728', endColorstr='#282b2c',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$bystl_blue_black', endColorstr='lighten($bystl_blue_black, 5%)',GradientType=0 );
   /* IE6-9 */
   color: #cecece !important;
   padding: 6px 17px;
@@ -9720,15 +8861,15 @@ body.bg_Wood {
   -moz-border-radius: 99px 99px 99px 99px;
   -webkit-border-radius: 99px 99px 99px 99px;
   -o-border-radius: 99px 99px 99px 99px;
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
-  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 1px #726a60 inset;
+  -webkit-box-shadow: 0 1px 1px #726a60 inset;
+  -o-box-shadow: 0 1px 1px #726a60 inset;
+  text-shadow: 1px 1px 1px #9b968f;
 }
 
 /* line 175, sass/synapse/_slider.scss */
 .slider-nav-thumbs .activeSlide a:before {
-  content: url("img/slider-nav-arrow.png");
+  content: url(img/slider-nav-arrow.png?1333591351);
   left: 40%;
   position: absolute;
   top: -71px;
@@ -9736,7 +8877,7 @@ body.bg_Wood {
 
 /* line 181, sass/synapse/_slider.scss */
 .activeSlide a:before {
-  content: url("img/slider-nav-arrow.png");
+  content: url(img/slider-nav-arrow.png?1333591351);
   left: 40%;
   position: absolute;
   top: -26px;
@@ -9755,9 +8896,9 @@ body.bg_Wood {
 /* line 193, sass/synapse/_slider.scss */
 .images, .images-thumb, .images-wide, .images-wide-thumb {
   margin-bottom: -2px;
-  -moz-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 1px #b0aca7;
+  -webkit-box-shadow: 0 3px 1px #b0aca7;
+  -o-box-shadow: 0 3px 1px #b0aca7;
   width: 620px;
   height: 330px;
   position: absolute;
@@ -9794,14 +8935,14 @@ body.bg_Wood {
   /* IE10+ */
   background: linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='$almostWhiteF2',GradientType=0 );
   /* IE6-9 */
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 1px #cfcdca;
+  -webkit-box-shadow: 0 1px 1px #cfcdca;
+  -o-box-shadow: 0 1px 1px #cfcdca;
   width: 890px;
   margin-bottom: 40px;
 }
@@ -9869,17 +9010,17 @@ body.bg_Wood {
 
 /* line 32, sass/synapse/_pager.scss */
 .footer #testimonial-pager a, .footer #blog-pager a {
-  background: url(img/dot.png) no-repeat top left !important;
+  background: url(img/dot.png?1333591321) no-repeat top left !important;
 }
 
 /* line 35, sass/synapse/_pager.scss */
 .footer #testimonial-pager .activeSlide, .footer #blog-pager .activeSlide {
-  background: url(img/dot-active.png) no-repeat top left !important;
+  background: url(img/dot-active.png?1333591322) no-repeat top left !important;
 }
 
 /* line 38, sass/synapse/_pager.scss */
 #testimonial-pager a, #blog-pager a, #sidebar-blog-pager a, #sidebar-testimonial-pager a {
-  background: url(img/dot-alternate.png) no-repeat top left;
+  background: url(img/dot-alternate.png?1333591323) no-repeat top left;
   width: 11px;
   height: 11px;
   display: inline-block;
@@ -9889,12 +9030,12 @@ body.bg_Wood {
 
 /* line 46, sass/synapse/_pager.scss */
 #testimonial-pager .activeSlide, #blog-pager .activeSlide, #sidebar-blog-pager .activeSlide, #sidebar-testimonial-pager .activeSlide {
-  background: url(img/dot-alternate-active.png) no-repeat top left;
+  background: url(img/dot-alternate-active.png?1333591325) no-repeat top left;
 }
 
 /* line 49, sass/synapse/_pager.scss */
 #portfolio-pager a, .slider-pagers a, #content-slider-pager a {
-  background: url(img/dot.png) no-repeat top left;
+  background: url(img/dot.png?1333591321) no-repeat top left;
   width: 11px;
   height: 11px;
   display: inline-block;
@@ -9904,7 +9045,7 @@ body.bg_Wood {
 
 /* line 57, sass/synapse/_pager.scss */
 #portfolio-pager .activeSlide, #content-slider-pager .activeSlide, .slider-pagers .activeSlide {
-  background: url(img/dot-active.png) no-repeat top left;
+  background: url(img/dot-active.png?1333591322) no-repeat top left;
 }
 
 /*----------------------------------------------
@@ -9917,35 +9058,35 @@ body.bg_Wood {
 #alternate {
   background: #2c2f32;
   border: 1px solid #1f1f1f;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
+  -webkit-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
+  -o-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
   padding: 40px 0;
 }
 
 /* line 16, sass/synapse/_alternate.scss */
 #alternate .tweet_list {
-  background: #464b4d;
+  background: #002f41;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -moz-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #464b4d), color-stop(100%, #303335));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #002f41), color-stop(100%, #001d29));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -webkit-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -o-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -ms-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* IE10+ */
-  background: linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: linear-gradient(top, #002f41 0%, #001d29 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#464b4d', endColorstr='#303335',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$bystl_blue_navy', endColorstr='$bystl_blue_black',GradientType=0 );
   /* IE6-9 */
   border: 1px solid #1f1f1f;
   border-bottom: 1px solid #161616;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #a5a19b;
+  -webkit-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #a5a19b;
+  -o-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #a5a19b;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -9959,7 +9100,7 @@ body.bg_Wood {
   padding-bottom: 15px;
   margin-bottom: 15px;
   padding-left: 40px;
-  background: url(img/icon-twitter-big.png) no-repeat 1px 4px;
+  background: url(img/icon-twitter-big.png?1333591338) no-repeat 1px 4px;
   border-bottom: 1px solid #5A5A5A;
 }
 
@@ -9973,7 +9114,7 @@ body.bg_Wood {
 /* line 50, sass/synapse/_alternate.scss */
 #alternate .tweet_list span {
   color: #969696 !important;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: -1px -1px 0 #878078;
 }
 
 /* line 54, sass/synapse/_alternate.scss */
@@ -9989,13 +9130,13 @@ body.bg_Wood {
 /* line 60, sass/synapse/_alternate.scss */
 #alternate h3, #alternate .h3 {
   color: #fff;
-  text-shadow: 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 2px #b0aca7;
 }
 
 /* line 64, sass/synapse/_alternate.scss */
 #alternate p {
   color: #969696;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: -1px -1px 0 #878078;
   margin-top: 10px;
 }
 
@@ -10009,14 +9150,14 @@ body.bg_Wood {
 ---------------------------------------------- */
 /* line 10, sass/synapse/_footer.scss */
 .footer {
-  background: url("img/footer-shadow.png") repeat-x scroll left top white;
+  background: white url(img/footer-shadow.png?1333591327) repeat-x scroll left top;
   padding: 40px 0 55px 0;
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 1px #cfcdca;
+  -webkit-box-shadow: 0 1px 1px #cfcdca;
+  -o-box-shadow: 0 1px 1px #cfcdca;
   color: #555555;
   font-size: 12px;
-  text-shadow: 1px 1px rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px #fbfbfb;
   font-weight: normal;
   line-height: 18px;
   margin-bottom: 9px;
@@ -10056,36 +9197,36 @@ body.bg_Wood {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
-  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-  -o-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 3px #d9d8d6;
+  -webkit-box-shadow: 0 2px 3px #d9d8d6;
+  -o-box-shadow: 0 2px 3px #d9d8d6;
 }
 
 /* line 17, sass/synapse/_images.scss */
 .blog-widget a img, #alternate #flickr_badge_wrapper img, .sidebar #flickr_badge_wrapper img {
   float: left;
-  background: #464b4d;
+  background: #002f41;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -moz-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #464b4d), color-stop(100%, #303335));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #002f41), color-stop(100%, #001d29));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -webkit-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -o-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -ms-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* IE10+ */
-  background: linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: linear-gradient(top, #002f41 0%, #001d29 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#464b4d', endColorstr='#303335',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$bystl_blue_navy', endColorstr='$bystl_blue_black',GradientType=0 );
   /* IE6-9 */
   border: 1px solid #1f1f1f;
   border-bottom: 1px solid #161616;
   padding: 5px;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #a5a19b;
+  -webkit-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #a5a19b;
+  -o-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #a5a19b;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -10139,13 +9280,13 @@ img.aligncenter {
   margin-top: 20px;
   font-size: 13px;
   float: left;
-  -moz-box-shadow: 0 1px 2px rgba(255, 255, 255, 0.4) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 1px 2px rgba(255, 255, 255, 0.4) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 1px 2px rgba(255, 255, 255, 0.4) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 2px #f4f4f4 inset, 0 1px 2px #878078;
+  -webkit-box-shadow: 0 1px 2px #f4f4f4 inset, 0 1px 2px #878078;
+  box-shadow: 0 1px 2px #f4f4f4 inset, 0 1px 2px #878078;
   color: #FFFFFF !important;
   font-weight: bold;
   padding: 9px 17px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 1px #9b968f;
 }
 
 /* line 44, sass/synapse/_buttons.scss */
@@ -10157,13 +9298,13 @@ img.aligncenter {
 .small-btn:active, .big-btn:active {
   font-size: 13px;
   border: none;
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
+  -moz-box-shadow: 0 1px 1px #726a60 inset;
+  -webkit-box-shadow: 0 1px 1px #726a60 inset;
+  box-shadow: 0 1px 1px #726a60 inset;
   color: #FFFFFF !important;
   font-weight: bold;
   padding: 10px 18px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 1px #9b968f;
 }
 
 /* line 60, sass/synapse/_buttons.scss */
@@ -10180,6 +9321,7 @@ img.aligncenter {
 
 /* line 75, sass/synapse/_buttons.scss */
 .btnTheme_Black .small-btn, .btnTheme_Black .big-btn {
+  /* TODO: swap this out for .btn-inverse extension; */
   border-top: 1px solid #474747;
   border-bottom: 1px solid #1c1c1c;
   border-left: 1px solid #3a3a3a;
@@ -10201,7 +9343,7 @@ img.aligncenter {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#626262', endColorstr='#1c1c1c',GradientType=0 );
   /* IE6-9 */
 }
-/* line 91, sass/synapse/_buttons.scss */
+/* line 92, sass/synapse/_buttons.scss */
 .btnTheme_Black .small-btn:hover, .btnTheme_Black .big-btn:hover {
   background: #6b6b6b;
   /* Old browsers */
@@ -10217,10 +9359,10 @@ img.aligncenter {
   /* IE10+ */
   background: linear-gradient(top, #6b6b6b 1%, #333333 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b6b6b', endColorstr='#333333',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b6b6b', endColorstr='$grayDark',GradientType=0 );
   /* IE6-9 */
 }
-/* line 102, sass/synapse/_buttons.scss */
+/* line 103, sass/synapse/_buttons.scss */
 .btnTheme_Black .small-btn:active, .btnTheme_Black .big-btn:active {
   background: #626262;
   /* Old browsers */
@@ -10240,7 +9382,7 @@ img.aligncenter {
   /* IE6-9 */
 }
 
-/* line 119, sass/synapse/_buttons.scss */
+/* line 120, sass/synapse/_buttons.scss */
 .btnTheme_Blue .small-btn, .btnTheme_Blue .big-btn {
   border-top: 1px solid #2e70cf;
   border-bottom: 1px solid #1c4783;
@@ -10261,7 +9403,7 @@ img.aligncenter {
   background: linear-gradient(top, #3f99dd 0%, #2860c9 100%);
   /* W3C */
 }
-/* line 132, sass/synapse/_buttons.scss */
+/* line 133, sass/synapse/_buttons.scss */
 .btnTheme_Blue .small-btn:hover, .btnTheme_Blue .big-btn:hover {
   background: #5ba4d8;
   /* Old browsers */
@@ -10280,7 +9422,7 @@ img.aligncenter {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5ba4d8', endColorstr='#3068c1',GradientType=0 );
   /* IE6-9 */
 }
-/* line 142, sass/synapse/_buttons.scss */
+/* line 143, sass/synapse/_buttons.scss */
 .btnTheme_Blue .small-btn:active, .btnTheme_Blue .big-btn:active {
   background: #3f99dd;
   /* Old browsers */
@@ -10297,192 +9439,6 @@ img.aligncenter {
   background: linear-gradient(top, #3f99dd 0%, #2860c9 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3f99dd', endColorstr='#2860c9',GradientType=0 );
-  /* IE6-9 */
-}
-
-/* line 158, sass/synapse/_buttons.scss */
-.btnTheme_Orange .small-btn, .btnTheme_Orange .big-btn {
-  border-top: 1px solid #c96600;
-  border-bottom: 1px solid #aa5600;
-  border-left: 1px solid #bc6105;
-  border-right: 1px solid #bc6105;
-  background: #eda838;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #eda838 0%, #da6c18 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eda838), color-stop(100%, #da6c18));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #eda838 0%, #da6c18 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: linear-gradient(top, #eda838 0%, #da6c18 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #eda838 0%, #da6c18 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #eda838 0%, #da6c18 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eda838', endColorstr='#da6c18',GradientType=0 );
-  /* IE6-9 */
-}
-/* line 172, sass/synapse/_buttons.scss */
-.btnTheme_Orange .small-btn:hover, .btnTheme_Orange .big-btn:hover {
-  background: #eaad4b;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #eaad4b 0%, #d87731 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eaad4b), color-stop(100%, #d87731));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #eaad4b 0%, #d87731 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: linear-gradient(top, #eaad4b 0%, #d87731 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #eaad4b 0%, #d87731 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #eaad4b 0%, #d87731 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eaad4b', endColorstr='#d87731',GradientType=0 );
-  /* IE6-9 */
-}
-/* line 182, sass/synapse/_buttons.scss */
-.btnTheme_Orange .small-btn:active, .btnTheme_Orange .big-btn:active {
-  background: #eda838;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #eda838 0%, #da6c18 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eda838), color-stop(100%, #da6c18));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #eda838 0%, #da6c18 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: linear-gradient(top, #eda838 0%, #da6c18 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #eda838 0%, #da6c18 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #eda838 0%, #da6c18 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eda838', endColorstr='#da6c18',GradientType=0 );
-  /* IE6-9 */
-}
-
-/* line 198, sass/synapse/_buttons.scss */
-.btnTheme_Pink .small-btn, .btnTheme_Pink .big-btn {
-  border-top: 1px solid #ca3271;
-  border-bottom: 1px solid #9c164d;
-  border-left: 1px solid #b32861;
-  border-right: 1px solid #b32861;
-  background: #df4e8e;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #df4e8e 0%, #cb2d58 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #df4e8e), color-stop(100%, #cb2d58));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #df4e8e 0%, #cb2d58 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: linear-gradient(top, #df4e8e 0%, #cb2d58 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #df4e8e 0%, #cb2d58 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #df4e8e 0%, #cb2d58 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#df4e8e', endColorstr='#cb2d58',GradientType=0 );
-  /* IE6-9 */
-}
-/* line 212, sass/synapse/_buttons.scss */
-.btnTheme_Pink .small-btn:hover, .btnTheme_Pink .big-btn:hover {
-  background: #dd6699;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #dd6699 0%, #c94467 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dd6699), color-stop(100%, #c94467));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #dd6699 0%, #c94467 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: linear-gradient(top, #dd6699 0%, #c94467 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #dd6699 0%, #c94467 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #dd6699 0%, #c94467 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dd6699', endColorstr='#c94467',GradientType=0 );
-  /* IE6-9 */
-}
-/* line 222, sass/synapse/_buttons.scss */
-.btnTheme_Pink .small-btn:active, .btnTheme_Pink .big-btn:active {
-  background: #df4e8e;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #df4e8e 0%, #cb2d58 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #df4e8e), color-stop(100%, #cb2d58));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #df4e8e 0%, #cb2d58 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: linear-gradient(top, #df4e8e 0%, #cb2d58 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #df4e8e 0%, #cb2d58 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #df4e8e 0%, #cb2d58 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#df4e8e', endColorstr='#cb2d58',GradientType=0 );
-  /* IE6-9 */
-}
-
-/* line 238, sass/synapse/_buttons.scss */
-.btnTheme_Red .small-btn, .btnTheme_Red .big-btn {
-  border-top: 1px solid #ac0707;
-  border-bottom: 1px solid #970909;
-  border-left: 1px solid #a20808;
-  border-right: 1px solid #a20808;
-  background: #f75252;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #f75252 0%, #c60a0a 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f75252), color-stop(100%, #c60a0a));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #f75252 0%, #c60a0a 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: linear-gradient(top, #f75252 0%, #c60a0a 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #f75252 0%, #c60a0a 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #f75252 0%, #c60a0a 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f75252', endColorstr='#c60a0a',GradientType=0 );
-  /* IE6-9 */
-}
-/* line 252, sass/synapse/_buttons.scss */
-.btnTheme_Red .small-btn:hover, .btnTheme_Red .big-btn:hover {
-  background: #f46666;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #f46666 0%, #c41919 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f46666), color-stop(100%, #c41919));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #f46666 0%, #c41919 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: linear-gradient(top, #f46666 0%, #c41919 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #f46666 0%, #c41919 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #f46666 0%, #c41919 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f46666', endColorstr='#c41919',GradientType=0 );
-  /* IE6-9 */
-}
-/* line 262, sass/synapse/_buttons.scss */
-.btnTheme_Red .small-btn:active, .btnTheme_Red .big-btn:active {
-  background: #f75252;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #f75252 0%, #c60a0a 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f75252), color-stop(100%, #c60a0a));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #f75252 0%, #c60a0a 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: linear-gradient(top, #f75252 0%, #c60a0a 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #f75252 0%, #c60a0a 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #f75252 0%, #c60a0a 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f75252', endColorstr='#c60a0a',GradientType=0 );
   /* IE6-9 */
 }
 
@@ -10525,20 +9481,20 @@ label {
  ----------------------------------------------*/
 /* line 8, sass/synapse/_alerts.scss */
 .alert-message {
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px #c4c2be;
+  -webkit-box-shadow: 0 1px 2px #c4c2be;
+  -o-box-shadow: 0 1px 2px #c4c2be;
 }
 
 /* line 13, sass/synapse/_alerts.scss */
 .alert-message p {
   color: inherit;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px #b0aca7;
 }
 
 /* line 17, sass/synapse/_alerts.scss */
 .warning p {
-  text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+  text-shadow: 1px 1px #f3f3f3;
 }
 
 /* line 20, sass/synapse/_alerts.scss */
@@ -10569,7 +9525,7 @@ label {
 /* line 18, sass/synapse/_widgets.scss */
 .blog-widget-article {
   margin-top: 20px;
-  border-bottom: 1px solid #5a5a5a;
+  border-bottom: 1px solid #626262;
   float: left;
   padding-bottom: 20px;
 }
@@ -10627,7 +9583,7 @@ label {
 .blog-widget-title {
   color: #ababab !important;
   font-size: 13px;
-  text-shadow: -1px -1px rgba(0, 0, 0, 0.4);
+  text-shadow: -1px -1px #9b968f;
   line-height: 17px;
   font-weight: bold;
   -moz-transition: color 0.3s ease-in;
@@ -10651,7 +9607,7 @@ label {
 .blog-widget-meta {
   color: #969696;
   font-size: 12px;
-  text-shadow: -1px -1px rgba(0, 0, 0, 0.3);
+  text-shadow: -1px -1px #b0aca7;
   line-height: 17px;
   -moz-transition: color 0.3s ease-in;
   -webkit-transition: color 0.3s ease-in;
@@ -10704,34 +9660,34 @@ label {
 
 /* line 116, sass/synapse/_widgets.scss */
 .testimonials, .sidebar-testimonials {
-  background: #464b4d;
+  background: #002f41;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -moz-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #464b4d), color-stop(100%, #303335));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #002f41), color-stop(100%, #001d29));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -webkit-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -o-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -ms-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* IE10+ */
-  background: linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: linear-gradient(top, #002f41 0%, #001d29 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#464b4d', endColorstr='#303335',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$bystl_blue_navy', endColorstr='$bystl_blue_black',GradientType=0 );
   /* IE6-9 */
   border: 1px solid #1f1f1f;
   border-bottom: 1px solid #161616;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #a5a19b;
+  -webkit-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #a5a19b;
+  -o-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #a5a19b;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
   margin-top: 20px;
   color: #989898;
   font-size: 13px;
-  text-shadow: -1px -1px rgba(0, 0, 0, 0.4);
+  text-shadow: -1px -1px #9b968f;
   line-height: 17px;
   font-weight: bold;
 }
@@ -10742,7 +9698,7 @@ label {
   font-size: 12px;
   line-height: 22px;
   font-weight: normal;
-  text-shadow: -1px -1px rgba(0, 0, 0, 0.4);
+  text-shadow: -1px -1px #9b968f;
   color: #959595;
 }
 
@@ -10763,9 +9719,9 @@ label {
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
   float: left;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 1px 2px #a5a19b;
+  -webkit-box-shadow: 0 1px 2px #a5a19b;
+  -o-box-shadow: 0 1px 2px #a5a19b;
 }
 
 /* line 164, sass/synapse/_widgets.scss */
@@ -10847,27 +9803,27 @@ label {
 ---------------------------------------------- */
 /* line 226, sass/synapse/_widgets.scss */
 .sidebar-tweet {
-  background: #464b4d;
+  background: #002f41;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -moz-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #464b4d), color-stop(100%, #303335));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #002f41), color-stop(100%, #001d29));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -webkit-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -o-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -ms-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* IE10+ */
-  background: linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: linear-gradient(top, #002f41 0%, #001d29 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#464b4d', endColorstr='#303335',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$bystl_blue_navy', endColorstr='$bystl_blue_black',GradientType=0 );
   /* IE6-9 */
   border: 1px solid #1f1f1f;
   border-bottom: 1px solid #161616;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #a5a19b;
+  -webkit-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #a5a19b;
+  -o-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #a5a19b;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -10880,7 +9836,7 @@ label {
   font-weight: normal;
   line-height: 18px;
   margin-bottom: 9px;
-  color: #555 !important;
+  color: #555555 !important;
 }
 
 /* line 254, sass/synapse/_widgets.scss */
@@ -10898,7 +9854,7 @@ label {
   padding-bottom: 15px;
   margin-bottom: 15px;
   padding-left: 40px;
-  background: url(img/icon-twitter-big.png) no-repeat 1px 4px;
+  background: url(img/icon-twitter-big.png?1333591338) no-repeat 1px 4px;
   border-bottom: 1px solid #5A5A5A;
 }
 /* line 269, sass/synapse/_widgets.scss */
@@ -10909,12 +9865,12 @@ label {
 }
 /* line 275, sass/synapse/_widgets.scss */
 .sidebar-twitter-widget .tweet_list li a {
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5) !important;
+  text-shadow: 1px 1px 1px #878078 !important;
 }
 /* line 281, sass/synapse/_widgets.scss */
 .sidebar-twitter-widget span {
   color: #969696 !important;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: -1px -1px 0 #878078;
 }
 
 /* line 288, sass/synapse/_widgets.scss */
@@ -10975,7 +9931,7 @@ label {
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 1px #bab7b3;
 }
 
 /*	CATEGORY WIDGET
@@ -10985,21 +9941,21 @@ label {
   float: right;
   line-height: 10px;
   font-size: 11px;
-  background: #242728;
+  background: #001d29;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #242728 1%, #282b2c 100%);
+  background: -moz-linear-gradient(top, #001d29 1%, #002f43 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #242728), color-stop(100%, #282b2c));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #001d29), color-stop(100%, #002f43));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #242728 1%, #282b2c 100%);
+  background: -webkit-linear-gradient(top, #001d29 1%, #002f43 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #242728 1%, #282b2c 100%);
+  background: -o-linear-gradient(top, #001d29 1%, #002f43 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #242728 1%, #282b2c 100%);
+  background: -ms-linear-gradient(top, #001d29 1%, #002f43 100%);
   /* IE10+ */
-  background: linear-gradient(top, #242728 1%, #282b2c 100%);
+  background: linear-gradient(top, #001d29 1%, #002f43 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#242728', endColorstr='#282b2c',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$bystl_blue_black', endColorstr='lighten($bystl_blue_black, 5%)',GradientType=0 );
   /* IE6-9 */
   color: #cecece !important;
   padding: 6px 10px;
@@ -11008,10 +9964,10 @@ label {
   -moz-border-radius: 99px 99px 99px 99px;
   -webkit-border-radius: 99px 99px 99px 99px;
   -o-border-radius: 99px 99px 99px 99px;
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
-  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 1px #726a60 inset;
+  -webkit-box-shadow: 0 1px 1px #726a60 inset;
+  -o-box-shadow: 0 1px 1px #726a60 inset;
+  text-shadow: 1px 1px 1px #9b968f;
 }
 
 /*----------------------------------------------
@@ -11038,27 +9994,27 @@ label {
 
 /* line 25, sass/synapse/_portfolio.scss */
 .home-portfolio-item span {
-  background: #464b4d;
+  background: #002f41;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -moz-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #464b4d), color-stop(100%, #303335));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #002f41), color-stop(100%, #001d29));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -webkit-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -o-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -ms-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* IE10+ */
-  background: linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: linear-gradient(top, #002f41 0%, #001d29 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#464b4d', endColorstr='#303335',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$bystl_blue_navy', endColorstr='$bystl_blue_black',GradientType=0 );
   /* IE6-9 */
   text-align: center;
   border: 1px solid #1f1f1f;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
+  -webkit-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
+  -o-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
   -moz-border-radius: 0 0 5px 5px;
   -webkit-border-radius: 0 0 5px 5px;
   -o-border-radius: 0 0 5px 5px;
@@ -11071,7 +10027,7 @@ label {
 .home-portfolio-item span a {
   color: #969696;
   font-size: 13px;
-  text-shadow: -1px -1px rgba(0, 0, 0, 0.5);
+  text-shadow: -1px -1px #878078;
   line-height: 17px;
   font-weight: bold;
   -moz-transition: color 0.3s ease-in;
@@ -11136,7 +10092,7 @@ label {
 }
 /* line 116, sass/synapse/_portfolio.scss */
 .portfolio-item .portfolio-hover {
-  background: url(img/hover-pattern.png) repeat;
+  background: url(img/hover-pattern.png?1333591330) repeat;
   position: absolute;
   top: 0;
   left: 0;
@@ -11155,7 +10111,7 @@ label {
   width: 44px;
   display: block;
   height: 47px;
-  background: url(img/icon-zoom.png) no-repeat;
+  background: url(img/icon-zoom.png?1333591340) no-repeat;
   position: absolute;
   left: 30%;
   top: 42%;
@@ -11166,7 +10122,7 @@ label {
   width: 44px;
   height: 47px;
   display: block;
-  background: url(img/icon-goto.png) no-repeat;
+  background: url(img/icon-goto.png?1333591334) no-repeat;
   position: absolute;
   left: 53%;
   top: 42%;
@@ -11285,19 +10241,19 @@ label {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
-  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 1px 1px #9b968f;
+  -webkit-box-shadow: inset 0 1px 1px #9b968f;
+  -o-box-shadow: inset 0 1px 1px #9b968f;
   padding: 11px 15px 10px 15px;
   font-weight: bold;
   color: #fff !important;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 1px #9b968f;
 }
 
 /* line 64, sass/synapse/_article.scss */
 .article-meta a {
   color: #fff !important;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 1px #9b968f;
   font-style: italic;
 }
 
@@ -11313,7 +10269,7 @@ label {
 
 /* line 75, sass/synapse/_article.scss */
 .article-comment {
-  background: url(img/icon-comments.png) no-repeat 0 1px;
+  background: url(img/icon-comments.png?1333591331) no-repeat 0 1px;
   padding-left: 20px;
 }
 
@@ -11354,7 +10310,7 @@ label {
   line-height: 34px;
   border-right: 1px solid;
   border-right-color: #DDD;
-  border-right-color: rgba(0, 0, 0, 0.15);
+  border-right-color: #cfcdca;
   text-decoration: none;
   background: #f7f7f7;
 }
@@ -11375,26 +10331,26 @@ label {
 
 /* line 28, sass/synapse/_pagination.scss */
 .active-page {
-  background: #464b4d;
+  background: #002f41;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -moz-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #464b4d), color-stop(100%, #303335));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #002f41), color-stop(100%, #001d29));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -webkit-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -o-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: -ms-linear-gradient(top, #002f41 0%, #001d29 100%);
   /* IE10+ */
-  background: linear-gradient(top, #464b4d 0%, #303335 100%);
+  background: linear-gradient(top, #002f41 0%, #001d29 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#464b4d', endColorstr='#303335',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$bystl_blue_navy', endColorstr='$bystl_blue_black',GradientType=0 );
   /* IE6-9 */
   border: 1px solid #1f1f1f;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
+  -webkit-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
+  -o-box-shadow: inset 0 1px 0 #f3f3f3, 0 1px 2px #5d5448;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -11432,9 +10388,9 @@ label {
   -moz-border-radius: 5px 5px 5px 5px;
   -webkit-border-radius: 5px 5px 5px 5px;
   -o-border-radius: 5px 5px 5px 5px;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 1px 2px #a5a19b;
+  -webkit-box-shadow: 0 1px 2px #a5a19b;
+  -o-box-shadow: 0 1px 2px #a5a19b;
 }
 
 /* line 25, sass/synapse/_comments.scss */
@@ -11476,9 +10432,9 @@ label {
   background: #fff;
   padding: 25px 25px 25px 25px;
   width: 578px;
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 1px #cfcdca;
+  -webkit-box-shadow: 0 1px 1px #cfcdca;
+  -o-box-shadow: 0 1px 1px #cfcdca;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -11501,10 +10457,10 @@ label {
 .children li {
   width: 525px;
   margin-bottom: 0;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 1px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 1px;
-  -o-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0 1px 1px;
+  -webkit-box-shadow: #cfcdca 0 1px 1px;
+  -moz-box-shadow: #cfcdca 0 1px 1px;
+  -o-box-shadow: #cfcdca 0 1px 1px;
+  box-shadow: #cfcdca 0 1px 1px;
   margin-top: 15px;
   background: #eaf0f1;
 }
@@ -11517,10 +10473,10 @@ label {
 /* line 83, sass/synapse/_comments.scss */
 .children li .children li {
   background: #fff;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
-  -o-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
+  -webkit-box-shadow: #d9d8d6 0 1px 1px;
+  -moz-box-shadow: #d9d8d6 0 1px 1px;
+  -o-box-shadow: #d9d8d6 0 1px 1px;
+  box-shadow: #d9d8d6 0 1px 1px;
   width: 475px;
 }
 
@@ -11532,10 +10488,10 @@ label {
 /* line 94, sass/synapse/_comments.scss */
 .children li .children li .children li {
   background: #eaf0f1;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 1px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 1px;
-  -o-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0 1px 1px;
+  -webkit-box-shadow: #cfcdca 0 1px 1px;
+  -moz-box-shadow: #cfcdca 0 1px 1px;
+  -o-box-shadow: #cfcdca 0 1px 1px;
+  box-shadow: #cfcdca 0 1px 1px;
   width: 425px;
 }
 
@@ -11547,10 +10503,10 @@ label {
 /* line 106, sass/synapse/_comments.scss */
 .children li .children li .children li .children li {
   background: #fff;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
-  -o-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
+  -webkit-box-shadow: #d9d8d6 0 1px 1px;
+  -moz-box-shadow: #d9d8d6 0 1px 1px;
+  -o-box-shadow: #d9d8d6 0 1px 1px;
+  box-shadow: #d9d8d6 0 1px 1px;
   width: 375px;
 }
 

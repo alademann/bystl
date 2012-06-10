@@ -15,7 +15,7 @@ $bystl_link_blue:         #1592ca   !default;
 $bystl_link_blueHover:    #53c1ea   !default;
 $bystl_logo_blueDarkest:  #00709D   !default;
 
-// replaces #464b4d in synapse defaults
+// replaces $bystl_blue_navy in synapse defaults
 $bystl_blue_navy:         #002f41   !default; // for "alternate" sections
 
 // replaces #7c7f81 in synapse defaults
@@ -30,11 +30,12 @@ $bystl_blue_black:        #001d29   !default; // for "alternate" sections
 ---------------------------------------------- */
 $bystl_brown:             #55350c   !default;
 
-// replaces #212121, rgba(33,33,33) in synapse defaults
+// replaces $bystl_brown_almstBlk, rgba($bystl_brown_almstBlk) in synapse defaults
 $bystl_brown_almstBlk:    #321e04   !default; // rgba(50,30,4)
 
-// replaces #000000, rgba(0,0,0) in synapse defaults
+// replaces #000000, rgba($black) in synapse defaults
 $bystl_brown_black:       #201302   !default; // rgba(32,19,2)
+$black:                   $bystl_brown_black !default; //tb_override
 
 $bystl_tan_light:         #e6e2d7   !default;
 
@@ -44,12 +45,16 @@ $bystl_tan_medium:        #c5c2ba   !default;
 $bystl_tan_dark:          #9e9b94   !default;
 $bystl_tan_darkest:       #75736d   !default;
 
+$almostWhiteF2:           #f2f2f2   !default;
 
 /*  PRIMARY INTERACTION COLORS
 ---------------------------------------------- */
 
-$navbarText:              $bystl_tan_medium !default; // tb_override
-$navbarLinkColor:         $bystl_tan_medium !default; // tb_override
+$navbarText:                $bystl_tan_medium !default; // tb_override
+$navbarLinkColor:           $bystl_tan_medium !default; // tb_override
+$navbarOpacity:             0.85 !default;
+$navbarBackgroundHighlight: rgba($bystl_brown_almstBlk, $navbarOpacity) !default; // tb_override
+$navbarBackground:          rgba($bystl_brown_black, $navbarOpacity) !default; // tb_override
 
-$linkColor:               $bystl_link_blue  !default; // tb_override
-$linkColorHover:          $bystl_link_blueHover !default; // tb_override
+$linkColor:                 $bystl_link_blue  !default; // tb_override
+$linkColorHover:            $bystl_link_blueHover !default; // tb_override

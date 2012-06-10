@@ -5,50 +5,6 @@
 	
  ----------------------------------------------*/
 
-/*	BYSTL Fonts
----------------------------------------------- */
-// logo / heading font
-$font_path: "fette-mittelschrift-regular-webfont" !default;
-$font_name: "fette-mittelschrift" !default;
-@mixin bystlLogoFont($symbol: true) {
-	@if $symbol {
-		$logoImgW: image-width("bystl_header-logo_symbol.png") !default;
-		$logoImgH: image-height("bystl_header-logo_symbol.png") !default;
-    line-height: $logoImgH;
-    padding-left: $logoImgW + 10;
-	}
-		font-size: pxtoem(37);
-		font-family: "fette-mittelschrift";
-    text-transform: lowercase;
-    letter-spacing: normal;
-    font-weight: normal;
-    font-style: normal;
-    color: $bystl_logo_blueLight;
-    white-space: nowrap;
-    word-spacing: -3px;
-    > strong {
-    		word-spacing: -1px;
-        font-weight: normal;
-        color: $bystl_logo_blueDarkest;
-    }
-
-} // END: bystlLogoFont;
-
-@include font-face(
-  $font_name,
-  font-files(
-    "#{$font_path}.woff", woff,
-    "#{$font_path}.ttf", truetype,
-    "#{$font_path}.otf", opentype,
-    "#{$font_path}.svg#IcoMoon", svg),
-  '#{$font_path}.eot',
-  normal,
-  normal
-); 
-
-//@include webfont_src("","fette-mittelschrift-regular-webfont");
-//@mixin FetteMitteSchrift { @include webfont('fette-mittelschrift-regular-webfont', sans-serif); }
-
 /*	HEADINGS, PARAGRAPHS, EMPHASIS, ETC
 ---------------------------------------------- */
 h2 {
@@ -62,7 +18,7 @@ h3 {
 		margin-bottom: 15px;
 		padding-bottom: 7px;
 		color: #fff;
-		text-shadow: 1px 1px 0 rgba(0,0,0, 0.5);
+		text-shadow: 1px 1px 0 rgba($black, 0.5);
 	} // END .widget <h3>
 
 	.sidebar .blog-widget & {
@@ -78,8 +34,8 @@ h3 {
 } // END <h3>
 
 p {
-	text-shadow: 1px 1px rgba(255,255,255, 0.8);
-	color: #555555;
+	text-shadow: 1px 1px rgba($white, 0.8);
+	color: $gray;
 	font-size: 12px;
 
 	.page-content & {
@@ -88,7 +44,7 @@ p {
 
 	.sidebar & {
 		color: #969696;
-		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+		text-shadow: -1px -1px 0 rgba($black, 0.5);
 	}
 
 	.video-holder &, .portfolio-item & {
@@ -97,7 +53,7 @@ p {
 		font-weight: normal;
 		font-size: 12px;
 		font-style: italic;
-		text-shadow: -1px -1px rgba(0, 0, 0, 0.4);
+		text-shadow: -1px -1px rgba($black, 0.4);
 		margin: 15px 0 0 0;	
 	}
 
@@ -136,7 +92,7 @@ a {
 	.cat-item & {
 		font-size: 13px;
 		line-height: 22px;
-		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+		text-shadow: -1px -1px 0 rgba($black, 0.5);
 		float: left;
 	} // END .cat-item <a>
 
@@ -149,7 +105,7 @@ a {
 	} // END .cat-item <li><a>
 
 	.small-footer & {
-		color: #555;
+		color: $gray;
 		font-weight: bold;
 		font-style: italic;
 		text-decoration: underline;
@@ -185,7 +141,7 @@ ul {
 
 		li {
 			padding-left: 18px;
-			background: url(img/list-bullet.png) no-repeat top left;
+			background: url(image-url('list-bullet.png', true)) no-repeat top left;
 			margin-bottom: 10px;
 		}
 		
@@ -214,7 +170,7 @@ li {
 
 	.dotted ul &, .dotted & {
 		padding-left: 18px;
-		background: url(img/list-bullet.png) no-repeat top left;
+		background: url(image-url('list-bullet.png', true)) no-repeat top left;
 		margin-bottom: 10px
 	} // END .dotted <li>
 

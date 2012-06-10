@@ -8,14 +8,14 @@
  /*	BIG FOOTER
  ---------------------------------------------- */
  .footer {
-	background: url("img/footer-shadow.png") repeat-x scroll left top #FFFFFF;
+	background:  $white url(image-url('footer-shadow.png', true)) repeat-x scroll left top;
 	padding: 40px 0 55px 0;
-	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-	-o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-	color: #555555;
+	-moz-box-shadow: 0 1px 1px rgba($black, 0.15);
+	-webkit-box-shadow: 0 1px 1px rgba($black, 0.15);
+	-o-box-shadow: 0 1px 1px rgba($black, 0.15);
+	color: $gray;
 	font-size: 12px;
-	text-shadow: 1px 1px rgba(255, 255, 255, 0.8);
+	text-shadow: 1px 1px rgba($white, 0.8);
 	font-weight: normal;
 	line-height: 18px;
 	margin-bottom: 9px;
@@ -41,7 +41,7 @@
 /*	NEXT / PREV (current unused)
 ---------------------------------------------- */
 // .next {
-// 	background: url(img/arrow-right.png) no-repeat top left;
+// 	background: url(image-url('arrow-right.png', true)) no-repeat top left;
 // 	width: 11px;
 // 	height: 17px;
 // 	text-indent: -9999px;
@@ -51,10 +51,10 @@
 // 	right: -30px;
 // }
 // .next:active {
-// 	background: url(img/arrow-right.png) no-repeat bottom left;
+// 	background: url(image-url('arrow-right.png', true)) no-repeat bottom left;
 // }
 // .prev {
-// 	background: url(img/arrow-left.png) no-repeat top left;
+// 	background: url(image-url('arrow-left.png', true)) no-repeat top left;
 // 	width: 11px;
 // 	height: 17px;
 // 	text-indent: -9999px;
@@ -62,5 +62,5 @@
 // 	position: absolute;
 // }
 // .prev:active {
-// 	background: url(img/arrow-left.png) no-repeat bottom left;
+// 	background: url(image-url('arrow-left.png', true)) no-repeat bottom left;
 // }

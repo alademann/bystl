@@ -30,13 +30,13 @@
 	text-align: center;
 }
 .footer #testimonial-pager a, .footer #blog-pager a {
-	background: url(img/dot.png) no-repeat top left !important;
+	background: url(image-url('dot.png', true)) no-repeat top left !important;
 }
 .footer #testimonial-pager .activeSlide, .footer #blog-pager .activeSlide {
-	 background: url(img/dot-active.png) no-repeat top left !important;
+	 background: url(image-url('dot-active.png', true)) no-repeat top left !important;
 }
 #testimonial-pager a, #blog-pager a, #sidebar-blog-pager a, #sidebar-testimonial-pager a {
-	background: url(img/dot-alternate.png) no-repeat top left;
+	background: url(image-url('dot-alternate.png', true)) no-repeat top left;
 	width: 11px;
 	height: 11px;
 	display: inline-block;
@@ -44,10 +44,10 @@
 	margin: 0 5px;
 }
 #testimonial-pager .activeSlide, #blog-pager .activeSlide, #sidebar-blog-pager .activeSlide, #sidebar-testimonial-pager .activeSlide {
-	background: url(img/dot-alternate-active.png) no-repeat top left;
+	background: url(image-url('dot-alternate-active.png', true)) no-repeat top left;
 }
 #portfolio-pager a, .slider-pagers a, #content-slider-pager a {
-	background: url(img/dot.png) no-repeat top left;
+	background: url(image-url('dot.png', true)) no-repeat top left;
 	width: 11px;
 	height: 11px;
 	display: inline-block;
@@ -55,5 +55,5 @@
 	margin: 0 5px;
 }
 #portfolio-pager .activeSlide, #content-slider-pager .activeSlide, .slider-pagers .activeSlide {
-	background: url(img/dot-active.png) no-repeat top left;
+	background: url(image-url('dot-active.png', true)) no-repeat top left;
 }

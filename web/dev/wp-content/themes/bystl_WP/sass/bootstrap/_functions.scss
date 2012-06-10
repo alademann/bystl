@@ -16,7 +16,7 @@
 
 // simply lighten rgb value when rgba is used in a place where filter cannot be used
 // by mixing the top color with the bottom color
-@function rgba_ie($color, $alpha, $bgcolor: $bodyBgColor){
+@function rgba($color, $alpha, $bgcolor: $bodyBgColor){
 	$alpha_base: $alpha * 100;
 	@if not ($alpha_base <= 100) { 
 		// user sent opacity like 100 or 80 instead of 1 or .8

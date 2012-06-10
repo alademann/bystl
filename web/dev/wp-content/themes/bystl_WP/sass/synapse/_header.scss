@@ -6,11 +6,12 @@
  ----------------------------------------------*/
  
 .header {
+    // since we're using the fixed top navbar
+    // we need to move this down
+    margin-top: $navbarHeight;
 	background: url(image-url("top-bar-shadow.png", true)) top left repeat-x #fff;
 	padding: 30px 0;
-	-moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
-	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
-	-o-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+    @include box-shadow(0 0 2px rgba($black, 0.35));
 }
 .logo-container {
     float: left;
@@ -20,6 +21,7 @@
 
 .logo {
 	position: relative;
+    float: left;
     text-decoration: none !important;
     > img {
         position: absolute;
@@ -30,7 +32,7 @@
 }
 // bystl logo text
 .logo h1, .logo .h1 {
-    @include bystlLogoFont(true);
+    @include bystlLogoFont(true, "color");
 }
 
 .tagline {

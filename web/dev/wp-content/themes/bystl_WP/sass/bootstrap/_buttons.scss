@@ -17,13 +17,13 @@
   line-height: $baseLineHeight;
   color: $grayDark;
   text-align: center;
-  text-shadow: 0 1px 1px rgba_ie($white, 0.75);
+  text-shadow: 0 1px 1px rgba($white, 0.75);
   vertical-align: middle;
   @include buttonBackground($white, darken($white, 10%));
   border: 1px solid darken($grayLighterD, 5);
   border-bottom-color: #bbb;
   @include tb_border-radius(4px);
-  $shadow: inset 0 1px 0 rgba_ie($white, 0.2), 0 1px 2px rgba_ie($black, .05);
+  $shadow: inset 0 1px 0 rgba($white, 0.2), 0 1px 2px rgba($black, .05);
   @include tb_box-shadow($shadow);
   cursor: pointer;
 
@@ -53,7 +53,7 @@
 .btn.active,
 .btn:active {
   background-image: none;
-  $shadow: inset 0 2px 4px rgba_ie($black, 0.15), 0 1px 2px rgba_ie($black, 0.05);
+  $shadow: inset 0 2px 4px rgba($black, 0.15), 0 1px 2px rgba($black, 0.05);
   @include tb_box-shadow($shadow);
   background-color: darken($white, 10%);
 	@include ie9(background-color, darken($white, 15%));
@@ -120,7 +120,7 @@
 .btn-info:hover,
 .btn-inverse,
 .btn-inverse:hover {
-  text-shadow: 0 -1px 0 rgba_ie($black,.25);
+  text-shadow: 0 -1px 0 rgba($black,.25);
   color: $white;
 }
 // Provide *some* extra contrast for those who can get it
@@ -130,7 +130,7 @@
 .btn-success.active,
 .btn-info.active,
 .btn-dark.active {
-  color: rgba_ie($white,.75);
+  color: rgba($white,.75);
 }
 
 // Set the backgrounds

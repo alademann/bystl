@@ -8,10 +8,10 @@
 
 // Quick floats
 .pull-right {
-  @include float(right);
+  float: right;
 }
 .pull-left {
-  @include float(left);
+  float: left;
 }
 
 // Toggling content
