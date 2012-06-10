@@ -44,7 +44,7 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
 
-            <div class="container">
+            <div class="container-fluid">
 
               <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
@@ -52,6 +52,16 @@
                 <span class="icon-bar"></span>
               </a>
 
+            <?php if (get_option_tree('tagline') == 'Yes') { ?>
+
+            <?php 
+                // break up the tagline by words
+                $bystl_tagline = get_option_tree('tagline_text');
+                $bystl_wds = explode(" ", $bystl_tagline);
+            ?>
+              <a class="brand hidden-desktop" href="<?php bloginfo('url'); ?>"><strong><?php echo $bystl_wds[0] . ' ' . $bystl_wds[1]; ?></strong> <?php echo $bystl_wds[2]; ?> <?php echo $bystl_wds[3]; ?>
+              </a>
+            <?php } ?>
               <div class="nav-collapse">
 
                  <?php wp_nav_menu(array(
@@ -100,12 +110,13 @@
         <!-- END: navbar-inner -->
     </div>
     <!-- END: navbar -->
+    <div class="container-fluid" id="pageWrapper">
 
-     <div class="header">
+        <div class="header">
+            <div class="container-fluid">
+                <div class="row-fluid">
 
-            <div class="container">
-
-                <div class="logo-container">
+                <div class="logo-container span4">
 
                     <a class="logo" href="<?php bloginfo('url'); ?>">
                         <img src="<?php echo get_option_tree('custom_logo_img') ?>" alt="BYSTL Logo" />
@@ -124,9 +135,11 @@
 
                 </div>
 
+                <div class="menu-container span12">
                  <?php wp_nav_menu(array('container' => false, 'menu_id' => 'main-nav', 'theme_location' => 'main_menu',  'menu_class' => 'sf-menu', 'echo' => true, 'before' => '', 'after' => '', 'link_before' => '', 'fallback_cb' => 'display_home2', 'link_after' => '', 'depth' => 0 )); ?>
+                </div>
 
-
+                </div>
             </div>
 
-        </div>
+    </div>

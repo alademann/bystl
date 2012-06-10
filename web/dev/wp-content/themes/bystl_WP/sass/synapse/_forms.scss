@@ -11,13 +11,17 @@
 	}
 }
 #subject {
-	width: 220px;
+	//max-width: 220px;
+	width: 100%;
 }
 label {
 	line-height: 26px !important;
 }
 textarea {
-	.your-message & { width: 565px !important; }
+	.your-message & { 
+		//max-width: 565px !important; 
+		width: 100%;
+	}
 }
 .demo-fieldset {
 	border: none;

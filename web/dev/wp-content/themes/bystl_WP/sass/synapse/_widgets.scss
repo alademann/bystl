@@ -4,15 +4,7 @@
 	PARENT:		_theme-synapse.scss
 	
 ----------------------------------------------*/
-@mixin darkBlueWidget {
-	background: $bystl_blue_navy; /* Old browsers */
-	@include background-image(linear-gradient($bystl_blue_navy, $bystl_blue_black));
-	@include filter-gradient($bystl_blue_navy, $bystl_blue_black);
-	border: 1px solid #1f1f1f;
-	border-bottom: 1px solid #161616;
-	@include box-shadow(inset 0 1px 0 rgba($white, 0.3), 0 1px 2px rgba($black, 0.35));
-	@include border-radius(5px);
-}
+
 
 .widget {
 	margin-bottom: 10px;
@@ -32,15 +24,18 @@
 	padding-bottom: 20px;
 }
 .sidebar .blog-widget-info {
-	width: 173px;
+	//max-width: 173px;
+	width: auto;
 }
 .blog-widget-info {
 	float: right;
 	margin-left: 20px;
-	width: 223px;
+	//max-width: 223px;
+	width: auto;
 }
 .footer .blog-widget-info {
-	width: 140px !important;
+	//max-width: 140px !important;
+	width: auto;
 }
 .footer .blog-widget-articles > li:first-child {
 	margin-top: 0 !important;
@@ -68,9 +63,7 @@
 	text-shadow: -1px -1px rgba($black, 0.4);
 	line-height: 17px;
 	font-weight: bold;
-	-moz-transition:color 0.3s ease-in;
-	-webkit-transition:color 0.3s ease-in;
-	-o-transition:color 0.3s ease-in;
+	@include transition(color 0.3s ease-in);
 	padding: 2px 0;
 }
 .blog-widget-title:hover {
@@ -86,9 +79,6 @@
 	font-size: $baseFontSize - 1;
 	text-shadow: -1px -1px rgba($black, 0.3);
 	line-height: 17px;
-	-moz-transition:color 0.3s ease-in;
-	-webkit-transition:color 0.3s ease-in;
-	-o-transition:color 0.3s ease-in;
 	padding: 2px 0;
 	font-family: $serifFontFamily;
 	margin-top: 2px;
@@ -115,13 +105,16 @@
 /*	TESTIMONIALS WIDGET
 ---------------------------------------------- */
 .footer .testimonials {
-	width: 218px !important;
+	//max-width: 218px;
+	width: auto !important;
 }
 .footer .testimonials blockquote {
-	width: 125px !important;
+	//max-width: 125px;
+	width: auto !important;
 }
 .footer .testimonial-widget-meta {
-	width: 116px !important;
+	//max-width: 116px;
+	width: auto !important;
 }
 .testimonials, .sidebar-testimonials {
 	@include darkBlueWidget;
@@ -153,12 +146,14 @@
 	@include box-shadow(0 1px 2px rgba($black, 0.35));
 }
 .sidebar .testimonial-widget-meta {
-	width: 148px;
+	//max-width: 148px;
+	width: auto;
 }
 .testimonial-widget-meta {
 	margin-left: 15px;
 	float: right;
-	width: 190px;
+	//max-width: 190px;
+	width: auto;
 	margin-top: 5px;
 }
 .testimonial-widget-meta span {
@@ -286,12 +281,10 @@
 		margin: 9px 9px 0 0;
 		padding: 7px;
 		@include opacity(1);
-		-moz-transition:opacity 0.3s ease-in;
-		-webkit-transition:opacity 0.3s ease-in;
-		-o-transition:opacity 0.3s ease-in;
+		@include transition(opacity 0.3s ease-in);
 
 		&:hover {
-			opacity: 0.6;
+			@include opacity(0.6);
 		}
 	}
 } // END #alternate #flickr_badge_wrapper
@@ -299,16 +292,14 @@
 	margin: 0 15px 15px 0;
 	padding: 7px;
 	@include opacity(1);
-	-moz-transition:opacity 0.3s ease-in;
-	-webkit-transition:opacity 0.3s ease-in;
-	-o-transition:opacity 0.3s ease-in;
+	@include transition(opacity 0.3s ease-in);
 } // END .sidebar #flickr_badge_wrapper
 .footer .flickr_badge_image {
 	float: left;
 	margin: 3px 18px 10px 0;
 
 	img {
-		border: 7px solid #fff;
+		border: 7px solid $white;
 		@include border-radius(5px);
 		@include box-shadow(0 1px 1px rgba($black, 0.25));
 	}

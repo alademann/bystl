@@ -5,7 +5,16 @@
   Base styles for various input types, form layouts, and states
   
 ----------------------------------------------*/
+$focus_blue: rgba($blueLight, 0.6);
+@mixin input_focus {
+  $shadow: inset 0 1px 1px rgba($black, 0.075), 0 0 8px rgba($blueLight, 0.6);
+  @include tb_box-shadow($shadow);
+  outline: 0;
+  @include ie9(outline, "thin dotted");
+}
 
+// GLOBAL FORM SIZES
+// --------------
 $controls-width: 160px;
 $default-input-width: $controls-width + 50;
 $label-margin: 5px;
@@ -16,7 +25,7 @@ $label-indent: 18px;
 
 // Make all forms have space below them
 form {
-  margin: 0 0 1em;
+  margin: 0 0 $baseLineHeight;
 }
 
 fieldset {
@@ -50,13 +59,13 @@ input,
 button,
 select,
 textarea {
-  @include font-sans-serif($baseFontSize, $baseLineHeight, normal);
+  @include font-sans-serif($baseFontSize, $baseLineHeight, normal); // Set size, line-height, weight here
 }
 input,
 button,
 select,
 textarea {
-  @include font-sans-serif(); // And only set font-family here for those that need it (note the missing label element)
+  font-family: $baseFontFamily; // And only set font-family here for those that need it (note the missing label element)
 }
 
 // Identify controls by their labels
@@ -72,15 +81,17 @@ textarea,
 select,
 .uneditable-input {
   @include inline-block;
-  width: $default-input-width;
-  height: 1em;
+  max-width: $default-input-width;
+  width: 100%;
+  height: $baseLineHeight;
   padding: $label-margin - 1;
   margin-bottom: $label-margin + ($label-margin - 1);
-  font-size: 1em;
+  font-size: $baseFontSize;
   line-height: $baseLineHeight;
   color: $gray;
-  border: 1px solid darken($grayLighter, 10);
-  @include tb_border-radius(3px);
+  background-color: $inputBackground;
+  border: 1px solid $inputBorder;
+  @include tb_border-radius($inputBorderRadius);
 }
 .uneditable-textarea {
   width: auto;
@@ -104,9 +115,10 @@ input[type="radio"], label.radio {
   margin: ($label-margin - 2) 0;
   @include ie7(margin-top, 0);
   line-height: normal;
-
-  @include tb_border-radius(0); // Nuke border-radius for IE9 only
-  @include ie9(border, 0);
+  cursor: pointer;
+  background-color: transparent;
+  @include ie9(border, 0); /* IE9 and down */
+  @include tb_border-radius(0);
 }
 input[type="image"] {
   border: 0;
@@ -117,45 +129,37 @@ input[type="file"] {
   width: auto;
   padding: initial;
   line-height: initial;
-  border: initial;
-  background-color: $white;
+  background-color: $inputBackground;
   background-color: initial;
+  border: initial;
   @include tb_box-shadow(none);
 }
 
 // Help out input buttons
-input[type=button],
-input[type=reset],
-input[type=submit] {
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   width: auto;
   height: auto;
-}
-input[type="image"],
-input[type="checkbox"], label.checkbox,
-input[type="radio"], label.radio,
-input[type=button],
-input[type=reset],
-input[type=submit] {
-	cursor: pointer;
 }
 
 // Set the height of select and file controls to match text inputs
 select,
 input[type="file"] {
-  height: 28px; // In IE7, the height of the select element cannot be changed by height, only font-size 
-  @include ie7(margin-top, $label-margin); // For IE7, add top margin to align select with labels
+  height: 28px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
+  @include ie7(margin-top, $label-margin - 1); /* For IE7, add top margin to align select with labels */
   line-height: 28px;
 }
 
 // Reset line-height for IE
 input[type="file"] {
-	@include ie9(line-height, 18px);
+  @include ie9(line-height, 18px);
 }
 
 // Chrome on Linux and Mobile Safari need background-color
 select {
   width: $default-input-width + 10; // default input width + 10px of padding that doesn't get applied
-  background-color: $white;
+  background-color: $inputBackground;
 }
 
 // Make multiple select elements height not fixed
@@ -188,6 +192,7 @@ input[type="hidden"] {
 // Indent the labels to position radios/checkboxes as hanging
 .radio,
 .checkbox {
+  min-height: $label-indent; // clear the floating input if there is no label text
   padding-left: $label-indent;
 }
 .radio input[type="radio"],
@@ -207,6 +212,7 @@ input[type="hidden"] {
 .radio.inline,
 .checkbox.inline {
   @include inline-block;
+  padding-top: $label-margin;
   margin-bottom: 0;
   vertical-align: middle;
 }
@@ -219,31 +225,27 @@ input[type="hidden"] {
 
 // FOCUS STATE
 // -----------
-$focus_blue: rgba($blueLight, 0.6);
-@mixin input_focus {
-  $shadow: inset 0 1px 1px rgba($black, 0.075), 0 0 8px rgba($blueLight, 0.6);
-  @include tb_box-shadow($shadow);
-  outline: 0;
-	@include ie9(outline, "thin dotted");
-}
 
 input,
 textarea {
-  @include tb_box-shadow(0 1px 1px rgba($black, 0.075) inset);
+  @include tb_box-shadow(inset 0 1px 1px rgba($black, .075));
   $transition: border linear .2s, box-shadow linear .2s;
   @include tb_transition($transition);
 }
 input:focus,
 textarea:focus {
-  @include input_focus;
-	border-color: $focus_blue;
+  border-color: rgba($blueLight,.8);
+  outline: 0;
+  @include ie9(outline, "thin dotted");  
+  $shadow: inset 0 1px 1px rgba($black,.075), 0 0 8px rgba($blueLight,.6);
+  @include tb_box-shadow($shadow);  
 }
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus,
 select:focus {
-  @include tb_box-shadow(none); // override for file inputs
   @include tab-focus();
+  @include tb_box-shadow(none); // override for file inputs
 }
 
 
@@ -252,18 +254,23 @@ select:focus {
 // -----------
 
 // General classes for quick sizes
-.input-mini       { width: $default-input-width - 150; }
-.input-small      { width: $default-input-width - 120; }
-.input-medium     { width: $default-input-width - 60; }
-.input-large      { width: $default-input-width; }
-.input-xlarge     { width: $default-input-width + 60; }
-.input-xxlarge    { width: $default-input-width + 320; }
+.input-mini       { max-width: $default-input-width - 150; }
+.input-small      { max-width: $default-input-width - 120; }
+.input-medium     { max-width: $default-input-width - 60; }
+.input-large      { max-width: $default-input-width; }
+.input-xlarge     { max-width: $default-input-width + 60; }
+.input-xxlarge    { max-width: $default-input-width + 320; }
 
 // Grid style input sizes
 input[class*="span"],
 select[class*="span"],
 textarea[class*="span"],
-.uneditable-input {
+.uneditable-input[class*="span"],
+// Redeclare since the fluid row class is more specific
+.row-fluid input[class*="span"],
+.row-fluid select[class*="span"],
+.row-fluid textarea[class*="span"],
+.row-fluid .uneditable-input[class*="span"] {
   float: none;
   margin-left: 0;
 }
@@ -273,7 +280,7 @@ textarea[class*="span"],
 // GRID SIZING FOR INPUTS
 // ----------------------
 
-@include inputGridSystem-generate($gridColumns, $gridColumnWidth, $gridGutterWidth);
+@include grid-input($gridColumnWidth, $gridGutterWidth);
 
 
 
@@ -288,9 +295,16 @@ textarea[disabled],
 input[readonly],
 select[readonly],
 textarea[readonly] {
-  background-color: darken($almostWhite, 5);
-  border-color: $grayLighterD;
   cursor: not-allowed;
+  background-color: $inputDisabledBackground;
+  border-color: $grayLighterD;
+}
+// Explicitly reset the colors here
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][readonly],
+input[type="checkbox"][readonly] {
+  background-color: transparent;
 }
 
 
@@ -331,20 +345,22 @@ select:focus:required:invalid {
 // ------------
 
 .form-actions {
-  padding: ($baseLineHeight - 1) ($label-margin * 4) 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  background-color: darken($almostWhite, 5);
+  padding: ($baseLineHeight - 1) ($label-margin * 4) $baseLineHeight;
+  margin-top: $baseLineHeight;
+  margin-bottom: $baseLineHeight;
+  background-color: $formActionsBackground;
   border-top: 1px solid $grayLighterD;
+  @include clearfix(); // Adding clearfix to allow for .pull-right button containers
 }
 
 // For text that needs to appear as an input but should not be an input
 .uneditable-input {
-  display: block;
-  background-color: $white;
-  border-color: $grayLighter;
-  @include tb_box-shadow(0 1px 2px rgba($black, .025) inset);
+  overflow: hidden; // prevent text from wrapping, but still cut it off like an input does
+  white-space: nowrap;
   cursor: not-allowed;
+  background-color: $inputBackground;
+  border-color: $grayLighter;
+  @include tb_box-shadow(inset 0 1px 2px rgba($black,.025));
 }
 
 // Placeholder text gets special styles; can't be bundled together though for some reason
@@ -355,16 +371,18 @@ select:focus:required:invalid {
 // HELP TEXT
 // ---------
 
+.help-block,
+.help-inline {
+  color: $gray; // lighten the text some for contrast
+}
+
 .help-block {
   display: block; // account for any element using help-block
-  margin-top: $label-margin;
-  margin-bottom: 0;
-  color: $grayLight;
+  margin-bottom: $baseLineHeight / 2;
 }
 
 .help-inline {
   @include inline-block;
-  margin-bottom: $label-margin + 4;
   vertical-align: middle;
   padding-left: $label-margin;
 }
@@ -378,12 +396,16 @@ select:focus:required:invalid {
 .input-prepend,
 .input-append {
   margin-bottom: $label-margin;
-  @include clearfix(); // Clear the float to prevent wrapping
   input,
+  select,
   .uneditable-input {
-    @include tb_border-radius(0 3px 3px 0);
+    position: relative; // placed here by default so that on :focus we can place the input above the .add-on for full border and box-shadow goodness
+    margin-bottom: 0; // prevent bottom margin from screwing up alignment in stacked forms
+    *margin-left: 0;
+    vertical-align: middle;
+    @include tb_border-radius(0 $inputBorderRadius $inputBorderRadius 0);
+    // Make input on top when focused so blue border and shadow always show
     &:focus {
-      position: relative;
       z-index: 2;
     }
   }
@@ -391,21 +413,23 @@ select:focus:required:invalid {
     border-left-color: darken($grayLighter, 10);
   }
   .add-on {
-    float: left;
-    display: block;
+    display: inline-block;
     width: auto;
+    height: $baseLineHeight;
     min-width: 16px;
-    height: 1em;
-    margin-right: -1px;
-    padding: ($label-margin - 1) $label-margin;
+    padding: 4px 5px;
     font-weight: normal;
     line-height: $baseLineHeight;
-    color: $grayLight;
     text-align: center;
     text-shadow: 0 1px 0 $white;
-    background-color: darken($almostWhite, 5);
-    border: 1px solid darken($grayLighter, 10);
-    @include tb_border-radius(3px 0 0 3px);
+    vertical-align: middle;
+    background-color: $grayLighter;
+    border: 1px solid #ccc;
+  }
+  .add-on,
+  .btn {
+    margin-left: -1px;
+    @include border-radius(0);
   }
   .active {
     background-color: lighten($green, 30);
@@ -413,33 +437,46 @@ select:focus:required:invalid {
   }
 }
 .input-prepend {
-  .add-on {
-    @include ie7(margin-top, 1px);
+  .add-on,
+  .btn {
+    margin-right: -1px;
+  }
+  .add-on:first-child,
+  .btn:first-child {
+    @include tb_border-radius($inputBorderRadius 0 0 $inputBorderRadius);
   }
 }
 .input-append {
   input,
+  select,
   .uneditable-input {
-    float: left;
-    @include tb_border-radius(3px 0 0 3px);
+    @include tb_border-radius($inputBorderRadius 0 0 $inputBorderRadius);
   }
   .uneditable-input {
+    border-right-color: darken($grayLighter, 10);
     border-left-color: $grayLighter;
-    border-right-color: darken($grayLighter, 10);    
   }
-  .add-on {
-    margin-right: 0;
+  .add-on:last-child,
+  .btn:last-child {
+    @include tb_border-radius(0 $inputBorderRadius $inputBorderRadius 0);
+  }
+}
+// Remove all border-radius for inputs with both prepend and append
+.input-prepend.input-append {
+  input,
+  select,
+  .uneditable-input {
+    @include tb_border-radius(0);
+  }
+  .add-on:first-child,
+  .btn:first-child {
+    margin-right: -1px;
+    @include border-radius($inputBorderRadius 0 0 $inputBorderRadius);
+  }
+  .add-on:last-child,
+  .btn:last-child {
     margin-left: -1px;
-    @include tb_border-radius(0 3px 3px 0);
-  }
-  input:first-child {
-    // In IE7, having a hasLayout container (from clearfix's zoom:1) can make the first input
-    // inherit the sum of its ancestors' margins.
-    @include ie7(margin-left, -$controls-width); // TODO: why -160? variable that we can make dynamic???
-
-    &+.add-on {
-	@include ie7(margin-left, -21px);
-    }
+    @include border-radius(0 $inputBorderRadius $inputBorderRadius 0);
   }
 }
 
@@ -449,8 +486,10 @@ select:focus:required:invalid {
 // -----------
 
 .search-query {
-  padding-left: 14px;
   padding-right: 14px;
+  @include ie9(padding-right, 4px);
+  padding-left: 14px;
+  @include ie9(padding-left, 4px); /* IE7-8 doesn't have border-radius, so don't indent the padding */
   margin-bottom: 0; // remove the default margin on all inputs
   @include tb_border-radius(14px);
 }
@@ -470,7 +509,9 @@ select:focus:required:invalid {
   textarea,
   select,
   .help-inline,
-  .uneditable-input {
+  .uneditable-input,
+  .input-prepend,
+  .input-append {
     @include inline-block;
     margin-bottom: 0;
   }
@@ -480,28 +521,35 @@ select:focus:required:invalid {
   }
 }
 .form-search label,
-.form-inline label,
+.form-inline label {
+  @include inline-block;
+}
+// Remove margin for input-prepend/-append
 .form-search .input-append,
 .form-inline .input-append,
 .form-search .input-prepend,
 .form-inline .input-prepend {
-  @include inline-block;
+  margin-bottom: 0;
 }
-// Make the prepend and append add-on vertical-align: middle;
-.form-search .input-append .add-on,
-.form-inline .input-prepend .add-on,
-.form-search .input-append .add-on,
-.form-inline .input-prepend .add-on {
-  vertical-align: middle;
-}
-// Inline checkbox/radio labels
+// Inline checkbox/radio labels (remove padding on left)
 .form-search .radio,
-.form-inline .radio,
 .form-search .checkbox,
+.form-inline .radio,
 .form-inline .checkbox {
+  padding-left: 0;
   margin-bottom: 0;
   vertical-align: middle;
 }
+// Remove float and margin, set to inline-block
+.form-search .radio input[type="radio"],
+.form-search .checkbox input[type="checkbox"],
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"] {
+  float: left;
+  margin-right: 3px;
+  margin-left: 0;
+}
+
 
 // Margin to space out fieldsets
 .control-group {
@@ -510,7 +558,7 @@ select:focus:required:invalid {
 
 // Legend collapses margin, so next element is responsible for spacing
 legend + .control-group {
-  margin-top: 1em;
+  margin-top: $baseLineHeight;
   -webkit-margin-top-collapse: separate;
 }
 
@@ -520,19 +568,33 @@ legend + .control-group {
 .form-horizontal {
   // Increase spacing between groups
   .control-group {
-    margin-bottom: 1em;
+    margin-bottom: $baseLineHeight;
     @include clearfix();
   }
   // Float the labels left
-  .control-group > label {
+  .control-label {
     float: left;
-    width: $controls-width - 20;
+    max-width: $controls-width - 20;
+    width: auto;
     padding-top: $label-margin;
     text-align: right;
   }
   // Move over all input controls and content
   .controls {
+    // Super jank IE7 fix to ensure the inputs in .input-append and input-prepend
+    // don't inherit the margin of the parent, in this case .controls
+    @include ie7(display, inline-block);
+    @include ie7(padding-left, 20px);
     margin-left: $controls-width;
+    @include ie7(margin-left, 0);
+    &:first-child {
+      @include ie7(padding-left, $controls-width);
+    }
+  }
+  // Remove bottom margin on block level help text since that's accounted for on .control-group
+  .help-block {
+    margin-top: $baseLineHeight / 2;
+    margin-bottom: 0;
   }
   // Move over buttons in .form-actions to align with .controls
   .form-actions {

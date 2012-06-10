@@ -36,13 +36,19 @@
 
 /*	SLIDERS
 ---------------------------------------------- */ 
-.simple-slider li {
-	height: 407px;
+.simple-slider {
+	&, li {
+		//max-width: 575px;
+		width: auto !important;
+	}
+	li {
+		max-height: 407px;
+	}
 }
 .content-slider {
 	padding-bottom: 20px;
 	position: relative;
-	height: 315px;
+	max-height: 315px;
 	background: none !important;
 	overflow: hidden;
 }
@@ -55,18 +61,21 @@
 }
 .slider-intro {
 	margin-right: 45px;
-	width: 255px;
+	//max-width: 255px;
+	width: auto !important;
 	margin-top: 20px;
 }
 .slider-intro-right {
-	margin-left: 45px !important;
-	width: 275px;
+	margin-left: 45px;
+	//max-width: 275px;
+	width: auto !important;
 	margin-top: 20px;
 }
 .slider-intro-left {
 	margin-top: 20px;
 	margin-right: 45px;
-	width: 255px;
+	//max-width: 255px;
+	width: auto !important;
 }
 #slider {
 	position: relative;
@@ -88,13 +97,15 @@
 	z-index: 2;
 	bottom: -388px;
 	left: 0;
-	width: 618px;
+	//max-width: 618px;
+	width: 100%;
 }
 .slider-nav-thumbs {
 	bottom: -426px;
 }
 .slider-nav-wide, .slider-nav-wide-thumbs {
-	width: 938px;
+	//max-width: 938px;
+	width: auto !important;
 }
 .slider-nav li, .slider-nav-thumbs li, .slider-nav-wide li {
 	float: left;
@@ -111,13 +122,13 @@
 }
 .slider-nav a:hover, .slider-nav-thumbs a:hover, .slider-nav-wide a:hover {
 	text-decoration: none;
-	color: #fff;
+	color: $white;
 }
 .slider-nav-wide-thumbs a {
 	padding-left: 8px !important;
 }
 .slider-nav-thumbs a {
-	opacity: 0.3;
+	@include opacity(.3);
 	padding-left: 6px;
 	@include transition(opacity 0.3s ease-in);
 }
@@ -158,7 +169,8 @@
 	top: -26px;
 }
 .large-slider, .large-slider .images-wide, .large-slider .images-wide-thumb  {
-	width: 940px;
+	//max-width: 940px;
+	width: auto !important;
 }
 .images, .images-wide, .images-wide-thumb, .images-thumb {
 	overflow: hidden;
@@ -166,8 +178,9 @@
 .images, .images-thumb, .images-wide, .images-wide-thumb {
 	margin-bottom: -2px;
 	@include box-shadow(0 3px 1px rgba($black, 0.3));
-	width: 620px;
-	height: 330px;
+	//max-width: 620px;
+	width: auto !important;
+	max-height: 330px;
 	position: absolute;
 	z-index: 1;
 }

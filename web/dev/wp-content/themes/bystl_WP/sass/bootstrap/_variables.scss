@@ -242,12 +242,18 @@ $infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
 
 // Default 940px grid
 // -------------------------
-$gridColumns:             12 !default;
-$gridColumnWidth:         60px !default;
-$gridGutterWidth:         20px !default;
+$gridColumns:             16 !default;
+$gridColumnWidth:         (720 / $gridColumns) + 0px !default;
+$gridGutterWidth:         (220 / ($gridColumns - 1)) + 0px !default;
 $gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
 
 // Fluid grid
 // -------------------------
-$fluidGridColumnWidth:    6.382978723% !default;
-$fluidGridGutterWidth:    2.127659574% !default;
+$columnWidth: (76.595744676 / $gridColumns);
+$gutterWidth: (23.404255314 / ($gridColumns - 1));
+$crossCheck: ($columnWidth * $gridColumns) + ($gutterWidth * ($gridColumns - 1));
+@debug "fluidGrid is #{$crossCheck}% accurate.";
+
+$fluidGridColumnWidth:    $columnWidth + 0% !default;
+$fluidGridGutterWidth:    $gutterWidth + 0% !default;
+

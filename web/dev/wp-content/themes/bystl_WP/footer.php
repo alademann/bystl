@@ -1,8 +1,8 @@
- <div id="alternate">
+ <div id="alternate" class="container-fluid">
 
-            <div class="container clearfix">
+            <div class="row-fluid clearfix">
 
-                <ul class="row">
+                <ul class="span16">
 
                
 
@@ -17,27 +17,32 @@
         </div>
 
 
-        <div class="footer">
+        <div class="footer container-fluid">
 
-            <div class="container">
+            <div class="row-fluid">
 
-                <div class="row">
+                
+                    <div class="span16">
 
  <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Light Footer")); ?>
+                    </div>
 
-                </div>
+                
 
             </div>
 
         </div>
 
-        <div class="small-footer container">
+        <div class="small-footer container-fluid">
+            <div class="row-fluid">
+                <div class="footer-left span8"><p><?php echo get_option_tree('footer_left_content') ?></p></div>
 
-            <div class="footer-left"><p><?php echo get_option_tree('footer_left_content') ?></p></div>
-
-            <div class="footer-right"><p><?php echo get_option_tree('footer_right_content') ?></p></div>
-
+                <div class="footer-right span8"><p><?php echo get_option_tree('footer_right_content') ?></p></div>
+            </div>
         </div>
+
+    </div>
+    <!-- END: container-fluid -->
 
 <!-- SCRIPTS GO HERE -->
 <script type="text/javascript">

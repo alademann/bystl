@@ -1,0 +1,35 @@
+// PORTRAIT TABLET TO DEFAULT DESKTOP
+// ----------------------------------
+
+// Updates for SASS:
+//  - replace #grid > .style with @include grid-style
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+  // Fixed grid
+  $TabletFixedColumnWidth:         (504 / $gridColumns) + 0px !default;
+  $TabletFixedGutterWidth:         (220 / ($gridColumns - 1)) + 0px !default;
+  @include grid-core($TabletFixedColumnWidth, $TabletFixedGutterWidth);
+
+  // Input grid
+  @include grid-input($TabletFixedColumnWidth, $TabletFixedGutterWidth);
+
+  // Fluid grid
+  $TabletColumnWidth: (71.794871796 / $gridColumns);
+  $TabletGutterWidth: (28.205128204 / ($gridColumns - 1));
+  $TabletCrossCheck: ($TabletColumnWidth * $gridColumns) + ($TabletGutterWidth * ($gridColumns - 1));
+  @debug "fluidGridTablet is #{$TabletCrossCheck}% accurate.";
+
+  $TabletFluidGridColumnWidth:    $TabletColumnWidth + 0% !default;
+  $TabletFluidGridGutterWidth:    $TabletGutterWidth + 0% !default;
+
+  @include grid-fluid($TabletFluidGridColumnWidth, $TabletFluidGridGutterWidth);
+
+  .container-fluid {
+    padding-left: $TabletFluidGridGutterWidth;
+    padding-right: $TabletFluidGridGutterWidth;
+  }
+
+  // No need to reset .thumbnails here since it's the same
+
+}

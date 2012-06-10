@@ -8,16 +8,14 @@
 .header {
     // since we're using the fixed top navbar
     // we need to move this down
-    margin-top: $navbarHeight;
-	background: url(image-url("top-bar-shadow.png", true)) top left repeat-x #fff;
-	padding: 30px 0;
+	background: url(image-url("top-bar-shadow.png", true)) top left repeat-x $white;
+	padding-top: 30px;
+    padding-bottom: 30px;
     @include box-shadow(0 0 2px rgba($black, 0.35));
 }
 .logo-container {
     float: left;
 }
-
-
 
 .logo {
 	position: relative;
@@ -33,6 +31,7 @@
 // bystl logo text
 .logo h1, .logo .h1 {
     @include bystlLogoFont(true, "color");
+    font-size: pxtoem(37);
     //@include inset-text-shadow($black, $bystl_logo_blueDarkest, $white);
 }
 

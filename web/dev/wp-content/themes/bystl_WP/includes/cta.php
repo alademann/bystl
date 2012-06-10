@@ -1,4 +1,4 @@
-<div class="callout container clearfix">
+<div class="callout container-fluid clearfix">
 
             <div class="callout-info">
 

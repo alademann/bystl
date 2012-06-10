@@ -178,127 +178,154 @@
 
 
 
-// GRID SYSTEM
-// --------------------------------------------------
+// Grid System
+// -----------
 
-// Site container
-// -------------------------
+// Centered container element
 @mixin container-fixed() {
-  width: $gridRowWidth;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   @include clearfix();
 }
 
-// Le grid system
-// -------------------------
-@mixin gridSystem-columns ($gridGutterWidth, $gridColumnWidth, $gridRowWidth, $columns) {
-	width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
-} 
-@mixin gridSystem-offset($gridColumnWidth, $gridGutterWidth, $columns) {
-	margin-left: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1)) + ($gridGutterWidth * 2);
+// Table columns
+@mixin tableColumns($columnSpan: 1) {
+  float: none; // undo default grid column styles
+  width: (($gridColumnWidth) * $columnSpan) + ($gridGutterWidth * ($columnSpan - 1)) - 16; // 16 is total padding on left and right of table cells
+  margin-left: 0; // undo default grid column styles
 }
-@mixin gridSystem-gridColumn($gridGutterWidth) {
-	float: left;
-	margin-left: $gridGutterWidth;
-}
-
-// Take these values and mixins, and make 'em do their thang
-@mixin gridSystem-generate($gridColumns, $gridColumnWidth, $gridGutterWidth) {
-  // Row surrounds the columns
-  .row {
-    margin-left: $gridGutterWidth * -1;
-    @include clearfix();
-  }
-  // Find all .span# classes within .row and give them the necessary properties for grid columns (supported by all browsers back to IE7, thanks $dhg)
-  [class*="span"] {
-    @include gridSystem-gridColumn($gridGutterWidth);
-  }
-  // Default columns
-  @for $i from 1 through $gridColumns {
-    .span#{$i} { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, $i); }
-  }
-
-  .container { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 12); }
-  
-  // Offset column options
-  @for $i from 1 through $gridColumns - 1 {
-    .offset#{$i} { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, $i); }
-  }
-}
-
-// Fluid grid system
-// -------------------------
-@mixin fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, $columns) {
-  width: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1));
-} 
-@mixin fluidGridSystem-gridColumn($fluidGridGutterWidth) {
-  float: left;
-  margin-left: $fluidGridGutterWidth - ($fluidGridGutterWidth / 2);
-}
-// Take these values and mixins, and make 'em do their thang
-@mixin fluidGridSystem-generate($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth) {      
-  // Row surrounds the columns
-  .row-fluid {
-    width: 100%;
-    @include clearfix();
-
-    // Find all .span# classes within .row and give them the necessary properties for grid columns (supported by all browsers back to IE7, thanks $dhg)
-    > [class*="span"] {
-      @include fluidGridSystem-gridColumn($fluidGridGutterWidth);
-    }
-    > [class*="span"]:first-child {
-      margin-left: 0;
-    }
-		> [class*="span12"] {
-			margin-left: 0;
-		}
-    // Default columns
-    @for $i from 1 through $gridColumns {
-      > .span#{$i} { @include fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, $i); }
-    }
-  }
-}
-
-
-
-// Input grid system
-// -------------------------
-@mixin inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, $columns) {
-  width: (($gridColumnWidth) * $columns) + ($gridGutterWidth * ($columns - 1)) - 10;
-}
-@mixin inputGridSystem-generate($gridColumns, $gridColumnWidth, $gridGutterWidth) {
-  input,
-  textarea,
-  .uneditable-input {
-    @for $i from 1 through $gridColumns {
-      &.span#{$i} { @include inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, $i); }
-    }
-  }
-}
-
-
-
-
-
 
 // Make a Grid
-// -------------------------
 // Use .makeRow and .makeColumn to assign semantic layouts grid system behavior
 @mixin makeRow() {
   margin-left: $gridGutterWidth * -1;
   @include clearfix();
 }
-@mixin makeColumn($columns: 1) {
+@mixin makeColumn($columns: 1, $offset: 0) {
   float: left;
-  margin-left: $gridGutterWidth;
+  margin-left: ($gridColumnWidth * $offset) + ($gridGutterWidth * ($offset - 1)) + ($gridGutterWidth * 2);
   width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
+}
+
+// The Grid
+@mixin core-offset($columns, $gridColumnWidth, $gridGutterWidth) {
+  margin-left: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns + 1));
+}
+
+@mixin core-span($columns, $gridColumnWidth, $gridGutterWidth) {
+  width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
+}
+
+@mixin grid-core($gridColumnWidth, $gridGutterWidth) {
+  .row {
+    margin-left: $gridGutterWidth * -1;
+    @include clearfix();
+  }
+
+  [class*="span"] {
+    float: left;
+    margin-left: $gridGutterWidth;
+  }
+
+  // Set the container width, and override it for fixed navbars in media queries
+  .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    @include core-span($gridColumns, $gridColumnWidth, $gridGutterWidth);
+  }
+
+  // generate .spanX and .offsetX
+  $i: $gridColumns;
+  @while $i > 0 {
+    .span#{$i} { @include core-span($i, $gridColumnWidth, $gridGutterWidth); }
+    $i: $i - 1;
+  }
+
+  $i: $gridColumns;
+  @while $i > 0 {
+    .offset#{$i} { @include core-offset($i, $gridColumnWidth, $gridGutterWidth); }
+    $i: $i - 1;
+  }
+}
+
+@mixin fluid-span($columns, $fluidGridColumnWidth, $fluidGridGutterWidth) {
+  $newWidth: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1));
+  width: $newWidth;
+  //@debug "numColumns: #{$columns} : #{$newWidth}";
+  @include ie7(width, ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) - (.5 / $gridRowWidth * 100px * 1%)); 
+}
+
+@mixin grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth) {
+  
+  // Set the container width, and override it for fixed navbars in media queries
+    .container-fluid,
+    .navbar-fixed-top .container-fluid,
+    .navbar-fixed-bottom .container-fluid {
+      /*! fluid span */
+      @include fluid-span($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth);
+    }
+
+  .row-fluid {
+    width: 100%;
+    @include clearfix();
+    [class*="span"] {
+      @include input-block-level();
+      float: left;
+      margin-left: $fluidGridGutterWidth;
+      @include ie7(margin-left, $fluidGridGutterWidth - (.5 / $gridRowWidth * 100px * 1%));
+    }
+    [class*="span"]:first-child {
+      margin-left: 0;
+    }
+
+    // generate .spanX
+    $i: $gridColumns;
+
+    @while $i > 0 {
+      .span#{$i} {
+        @include fluid-span($i, $fluidGridColumnWidth, $fluidGridGutterWidth);
+      }
+      $i: $i - 1;
+    }
+  }
+}
+
+@mixin input-span($columns, $gridColumnWidth, $gridGutterWidth) {
+  width: (($gridColumnWidth) * $columns) + ($gridGutterWidth * ($columns - 1)) - 10;
+}
+
+@mixin grid-input($gridColumnWidth, $gridGutterWidth) {
+  input,
+  textarea,
+  .uneditable-input {
+    margin-left: 0; // override margin-left from core grid system
+  }
+
+  // generate .spanX
+  $i: $gridColumns;
+  @while $i > 0 {
+    input.span#{$i},
+    textarea.span#{$i},
+    .uneditable-input.span#{$i} {
+      @include input-span($i, $gridColumnWidth, $gridGutterWidth);
+    }
+    $i: $i - 1;
+  }
 }
 
 
 
-// Form field states (used in forms.less)
+// FORMS
 // --------------------------------------------------
+
+// Block level inputs
+@mixin input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;        // Make inputs at least the height of their button counterpart
+  @include box-sizing(border-box); // Makes inputs behave like true block-level elements
+}
+
 
 // Mixin for form field states
 @mixin formFieldState($textColor: $gray, $borderColor: darken($grayLighterD, 5), $backgroundColor: darken($almostWhite, 2%)) {
@@ -721,6 +748,13 @@
   }
 }
 
+// Navbar vertical align
+// -------------------------
+// Vertically center elements in the navbar.
+// Example: an element has a height of 30px, so write out `.navbarVerticalAlign(30px);` to calculate the appropriate top margin.
+@mixin navbarVerticalAlign($elementHeight) {
+  margin-top: ($navbarHeight - $elementHeight) / 2;
+}
 
 // COMPONENT MIXINS
 // --------------------------------------------------

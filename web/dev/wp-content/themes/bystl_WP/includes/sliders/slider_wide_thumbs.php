@@ -1,8 +1,8 @@
 <div class="slider clearfix">
 
-            <div class="container">
+            <div class="container-fluid">
 
-                <div class="row">
+                <div class="row-fluid">
 
                     <div class="large-slider span-two-thirds">
 

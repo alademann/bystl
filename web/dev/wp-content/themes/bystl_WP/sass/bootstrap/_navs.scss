@@ -17,6 +17,7 @@
 // Make links block level
 .nav > li > a {
   display: block;
+  width: auto;
 }
 .nav > li > a:hover {
   text-decoration: none;

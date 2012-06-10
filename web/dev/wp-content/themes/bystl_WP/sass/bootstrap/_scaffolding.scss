@@ -18,6 +18,9 @@ body {
   background-color: $bodyBgColor;
 }
 
+#pageWrapper {
+  margin-top: $navbarHeight;
+}
 
 // LINKS
 // -----

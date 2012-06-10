@@ -1,50 +1,45 @@
-/*----------------------------------------------
+// NAVBAR (FIXED AND STATIC)
+// -------------------------
 
-	PARTIAL:	_navbar.scss
-	PARENT:		_bootstrap.scss
-	
-----------------------------------------------*/
+// Updates for SASS:
+//  - replace @ with $
+//  - replace . with @include for mixins
 
 // COMMON STYLES
 // -------------
 
+@mixin centerBrandNameVertically($fontSize: 20px){
+  // Vertically center the text given $navbarHeight
+  padding: ((($navbarHeight - $fontSize) / 2) - 2) $fontSize ((($navbarHeight - $fontSize) / 2) + 2);
+  font-size: $fontSize;
+}
+
 .navbar {
+  // Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar
+  @include ie7(position, relative);
+  @include ie7(z-index, 2);
+
   overflow: visible;
-  margin-bottom: 1em;
+  margin-bottom: $baseLineHeight;
 }
 
 // Gradient is applied to it's own element because overflow visible is not honored by IE when filter is present
 .navbar-inner {
+  min-height: $navbarHeight;
   padding-left:  20px;
   padding-right: 20px;
   @include gradient-vertical($navbarBackgroundHighlight, $navbarBackground);
   @include tb_border-radius(4px);
-  $shadow: 0 1px 3px rgba($black,.25), 0 -1px 0 rgba($black,.1) inset;
+  $shadow: 0 1px 3px rgba($black,.25), inset 0 -1px 0 rgba($black,.1);
   @include tb_box-shadow($shadow);
 }
 
-// Navbar button for toggling navbar items in responsive layouts
-.btn-navbar {
-  float: right;
-  padding: 7px 10px;
-  margin-left: 5px;
-  margin-right: 5px;
-  @include buttonBackground($navbarBackgroundHighlight, $navbarBackground);
-  $shadow: 0 1px 0 rgba($white, 0.1) inset, 0 1px 0 rgba($white, .075);
-  @include tb_box-shadow($shadow);	
-	display: none;
+// Set width to auto for default container
+// We then reset it for fixed navbars in the #gridSystem mixin
+.navbar .container {
+  width: auto;
 }
-.btn-navbar .icon-bar {
-  display: block;
-  width: 18px;
-  height: 2px;
-  background-color: darken($almostWhite, 2%);
-  @include tb_border-radius(1px);
-  @include tb_box-shadow(0 1px 0 rgba($black,.25));
-}
-.btn-navbar .icon-bar + .icon-bar {
-  margin-top: 3px;
-}
+
 // Override the default collapsed state
 .nav-collapse.collapse {
   height: auto;
@@ -53,42 +48,40 @@
 
 // Brand, links, text, and buttons
 .navbar {
+  color: $navbarText;
   // Hover and active states
   .brand:hover {
     text-decoration: none;
   }
   // Website or project name
-  // in case the brand name is one the home page, in which case we would obviously want to make it be within an h1 elem for SEO purposes.
-  h1 { margin-bottom: 0; line-height: 1; } 
   .brand {
     float: left;
+    margin-left: -20px; // negative indent to left-align the text down the page
     display: block;
-    padding: 8px 20px 12px;
-    // TODO: uncomment these to align with upstream defaults
-    // and override in my local aa template .scss file.
-    //margin-left: -20px; // negative indent to left-align the text down the page
-    //font-size: pxtoem(20);
     font-weight: 200;
     line-height: 1;
-    color: $white;
+    color: $navbarBrandColor;
+    @include centerBrandNameVertically(20px);
   }
   // Plain text in topbar
   .navbar-text {
     margin-bottom: 0;
-    line-height: 40px;
-    color: $navbarText;
-    a:hover {
-      color: $white;
-      background-color: transparent;
+    line-height: $navbarHeight;
+  }
+  // Janky solution for now to account for links outside the .nav
+  .navbar-link {
+    color: $navbarLinkColor;
+    &:hover {
+      color: $navbarLinkColorHover;
     }
   }
   // Buttons in navbar
   .btn,
   .btn-group {
-    margin-top: 5px; // make buttons vertically centered in navbar
+    @include navbarVerticalAlign(30px); // Vertically center in navbar
   }
   .btn-group .btn {
-    margin-top: 0; // then undo the margin here so we don't accidentally double it
+    margin: 0; // then undo the margin here so we don't accidentally double it
   }
 }
 
@@ -97,14 +90,15 @@
   margin-bottom: 0; // remove default bottom margin
   @include clearfix();
   input,
-  select {
-    @include inline-block;
-    margin-top: 5px;
-    margin-bottom: 0;
-  }
+  select,
   .radio,
   .checkbox {
-    margin-top: 5px;
+    @include navbarVerticalAlign(30px); // Vertically center in navbar
+  }
+  input,
+  select {
+    display: inline-block;
+    margin-bottom: 0;
   }
   input[type="image"],
   input[type="checkbox"],
@@ -123,42 +117,35 @@
 
 // Navbar search
 .navbar-search {
-	$query-vpad: 4;
-	$centeredLineHeight: $navbarHeight_int - ($query-vpad + 1);
-
   position: relative;
   float: left;
-  margin: 0;
-	padding: 0 10px;
-	// center vertically
-	line-height: pxtoem($centeredLineHeight);
+  @include navbarVerticalAlign(28px); // Vertically center in navbar
+  margin-bottom: 0;
   .search-query {
-    padding: $query-vpad+0px 9px;
-    @include font-sans-serif($baseFontSize, $baseLineHeight, normal);
+    padding: 4px 9px;
+    @include font-sans-serif(13px, normal, 1);
     color: $white;
-    color: rgba($white,.75);
-		@include rgba_bg($black,0.3);
-    border: 1px solid $almostBlack;
-    $shadow: inset 0 1px 2px rgba($black,.1), 0 1px 0px rgba($white,.15);
-    @include tb_box-shadow($shadow);
-    @include tb_transition(none);
+    background-color: $navbarSearchBackground;
+    border: 1px solid $navbarSearchBorder;
+    $shadow: inset 0 1px 2px rgba($black, .1), 0 1px 0 rgba($white, .15);
+    @include box-shadow($shadow);
+    @include transition(none);
 
-    // Placeholder text gets special styles; can't be bundled together though for some reason
-    @include placeholder($grayLighter);
-    
-    // Hover states
-    &:hover {
-      color: $white;
-      //background-color: $grayLight; // see below
-      background-color: rgba_bg($white, 0.1); // use a prebuilt function that adds the necessary ie tweaks if/when rgba isn't supported
+    // Placeholder text gets special styles; can't be a grouped selector
+    &:-moz-placeholder {
+      color: $navbarSearchPlaceholderColor;
     }
+    &::-webkit-input-placeholder {
+      color: $navbarSearchPlaceholderColor;
+    }
+
     // Focus states (we use .focused since IE7-8 and down doesn't support :focus)
     &:focus,
     &.focused {
       padding: 5px 10px;
       color: $grayDark;
       text-shadow: 0 1px 0 $white;
-      background-color: $white;
+      background-color: $navbarSearchBackgroundFocus;
       border: 0;
       @include tb_box-shadow(0 0 3px rgba($black,.15));
       outline: 0;
@@ -167,250 +154,235 @@
 }
 
 
+
 // FIXED NAVBAR
 // ------------
 
-.navbar-fixed-top {
+// Shared (top/bottom) styles
+.navbar-fixed-top,
+.navbar-fixed-bottom {
   position: fixed;
-  top: 0;
   right: 0;
   left: 0;
   z-index: $zindexFixedNavbar;
-  &, .navbar-inner {
-    height: $navbarHeight;
-  }
-  .navbar-inner {
-    padding-left:  0;
-    padding-right: 0;
-    @include tb_border-radius(0);
-  }
+  margin-bottom: 0; // remove 18px margin for static navbar
 }
+.navbar-fixed-top .navbar-inner,
+.navbar-fixed-bottom .navbar-inner {
+  padding-left:  0;
+  padding-right: 0;
+  @include tb_border-radius(0);
+}
+
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  @include core-span($gridColumns);
+}
+
+// Fixed to top
+.navbar-fixed-top {
+  top: 0;
+}
+
+// Fixed to bottom
+.navbar-fixed-bottom {
+  bottom: 0;
+}
+
 
 
 // NAVIGATION
 // ----------
-@mixin activeNavbarLink {
-  color: $navbarLinkColorHover !important;
-  text-decoration: none;
-  background-color: $navbarLinkBackgroundHover;
-  //background-color: rgba($black,.5);
+
+.navbar .nav {
+  position: relative;
+  left: 0;
+  display: block;
+  float: left;
+  margin: 0 10px 0 0;
 }
-.navbar { // nesting these within .navbar for easier grouping semantics
+.navbar .nav.pull-right {
+  float: right; // redeclare due to specificity
+}
+.navbar .nav > li {
+  display: block;
+  float: left;
+}
 
-	.nav {
-		position: relative;
-		left: 0;
-		display: block;
-		float: left;
-		margin: 0 0 0 10px;
+// Links
+.navbar .nav > li > a {
+  float: none;
+  // Vertically center the text given $navbarHeight
+  $elementHeight: 20px;
+  padding: (($navbarHeight - $elementHeight) / 2 - 1) 10px (($navbarHeight - $elementHeight) / 2 + 1);
+  line-height: 19px;
+  color: $navbarLinkColor;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba($black,.25);
+}
+// Buttons
+.navbar .btn {
+  display: inline-block;
+  padding: 4px 10px 4px;
+  // Vertically center the button given @navbarHeight
+  $elementHeight: 28px;
+  $topMargin: ($navbarHeight - $elementHeight) / 2 - 1;
+  $bottomMargin: ($navbarHeight - $elementHeight) / 2;
+  margin: $topMargin 5px $bottomMargin;
+  line-height: $baseLineHeight;
+}
+.navbar .btn-group {
+  margin: 0;
+  // Vertically center the button given @navbarHeight
+  $elementHeight: 28px;
+  padding: (($navbarHeight - $elementHeight) / 2 - 1) 5px (($navbarHeight - $elementHeight) / 2);
+}
+// Hover
+.navbar .nav > li > a:hover {
+  background-color: $navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from .active
+  color: $navbarLinkColorHover;
+  text-decoration: none;
+}
 
-		&+ .nav, &:first-child { margin: 0 0 0 0; }
+// Active nav items
+// updated to work well with wordpress menus
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover,
+.navbar .nav .current-menu-item > a,
+.navbar .nav .current-menu-item > a:hover,
+.navbar .nav .current-page-item > a,
+.navbar .nav .current-page-item > a:hover,
+.navbar .nav [class*="current"] > a,
+.navbar .nav [class*="current"] > a:hover,
+.navbar .nav li > a.current-menu-item, 
+.navbar .nav li > a.current-menu-item:hover,
+.navbar .nav li > a.current-page-item,
+.navbar .nav li > a.current-page-item:hover,
+.navbar .nav li > a[class*="current"],
+.navbar .nav li > a[class*="current"]:hover {
+  color: $navbarLinkColorActive;
+  text-decoration: none;
+  background-color: $navbarLinkBackgroundActive;
+}
 
-		&.pull-right {
-			float: right; // redeclare due to specificity
-		}
+// Dividers (basically a vertical hr)
+.navbar .divider-vertical {
+  height: $navbarHeight;
+  width: 1px;
+  margin: 0 9px;
+  overflow: hidden;
+  background-color: $navbarBackground;
+  border-right: 1px solid $navbarBackgroundHighlight;
+}
 
-	
-		& > li {
-			float: left;
-		}
+// Secondary (floated right) nav in topbar
+.navbar .nav.pull-right {
+  margin-left: 10px;
+  margin-right: 0;
+}
 
-		// Links
-		& > li > a {
-			float: none;
-      width: auto;
-			padding: 10px 10px 11px;
-			line-height: 19px;
-			color: $navbarLinkColor !important;
-			text-decoration: none;
-			text-shadow: 0 -1px 0 rgba($black,.25);
-		}
-		// Hover
-		& > li > a:hover {
-			background-color: $navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from .active
-			color: $navbarLinkColorHover !important;
-			text-decoration: none;
-		}
-
-		// Active nav items
-		// updated to work well with wordpress menu integration
-    
-		& .active > a,
-		& .active > a:hover,
-    & [class*="current"] > a,
-    & [class*="current"] > a:hover {
-			@include activeNavbarLink;
-		}
-
-    // sometimes the active state is on the <a> tag, not the <li>
-    li > a {
-      &.active, 
-      &.active:hover,
-      &[class*="current"],
-      &[class*="current"]:hover {
-        @include activeNavbarLink;
-      }
-    }
-
-		// Dividers (basically a vertical hr)
-		.divider-vertical {
-			height: $navbarHeight;
-			width: 1px;
-			margin: 0 9px;
-			overflow: hidden;
-			background-color: $navbarBackground;
-			border-right: 1px solid $navbarBackgroundHighlight;
-		}
-
-	// adding a "big" navbutton possibility, as well as a way to use the "divider-vertical" look without having to place
-	// a pointless <li> in your html markup
-		& > li.strong, & > li.bold,
-		& > li.big, & > li.divider,
-		&#primary-nav > li {
-			a {
-				padding: 10px 16px 11px;
-				// simulate the look 'n feel of .divider-vertical
-				@include tb_box-shadow(1px 0 0 0 $navbarBackground inset, 1px 0 0 0 $navbarBackground);
-				border-left: 1px solid $navbarBackgroundHighlight;
-			}
-			// right border on the last <li> in the nav
-			&:last-child {
-				a {
-					border-right: 1px solid $navbarBackgroundHighlight;
-				}
-			}
-		} // END .nav#primary-nav > li
-
-		& > li.big, &#primary-nav > li  {
-		
-			a {
-				font-weight: bold;
-				font-size: $baseFontSize + 2;
-			}
-		}
-
-	// END "big" navbutton
-
-		// Dropdown menus
-		// --------------
-
-		// Menu position and menu carets
-		.dropdown-menu {
-			margin-top: 1px;
-			@include border-bottom-left-radius(4px);
-			@include border-bottom-right-radius(4px);
-			//@include tb_border-radius(4px); // don't want the top two corners to be rounded since they sit flush against the bottom edge of the navbar
-			&:before {
-				content: '';
-				@include inline-block;
-				border-left:   7px solid transparent;
-				border-right:  7px solid transparent;
-				border-bottom: 7px solid darken($grayLighterD, 5);
-				border-bottom-color: rgba($black,.2);
-				position: absolute;
-				top: -7px;
-				left: 9px;
-			}
-			&:after {
-				content: '';
-				@include inline-block;
-				border-left:   6px solid transparent;
-				border-right:  6px solid transparent;
-				border-bottom: 6px solid $white;
-				position: absolute;
-				top: -6px;
-				left: 10px;
-			}
-
-			&#seperated-nav {
-				li.divider:last-child {
-					display: none;
-				}
-			}
-
-		} // END .dropdown-menu
-
-		// Dropdown toggle caret
-		$caretInactive: darken($navbarLinkColor,25%);
-		$caretActive: darken($navbarLinkColorHover,15%);
-		
-		& .dropdown {
-		// .dropdown outer li
-
-			& > .dropdown-toggle {
-				// .dropdown anchor link
-				color: $navbarLinkColor;
-
-				.caret {
-					// .dropdown anchor link caret (arrow)
-					@include opacity(100);
-					border-top-color: $caretInactive;
-					//@include tb_rotate(180deg);	
-				}
-
-				// HOVERED .dropdown anchor link
-				&:hover {
-					color: $navbarLinkColorHover;
-
-					.caret {
-						border-top-color: $caretActive;
-					}
-
-				} // END HOVERED .dropdown anchor link
-
-			} // END .dropdown anchor link (.dropdown-toggle)
-
-			&.open {
-			// .dropdown outer li (OPEN)
-
-				& > .dropdown-toggle {
-					// .dropdown anchor link (OPEN)
-					color: lighten($navbarLinkColor, 20%);
-
-					.caret {
-						// .dropdown anchor link caret (arrow) (OPEN)
-						border-top-color: $caretInactive;
-						@include opacity(50);
-						@include tb_rotate(180deg);	
-					}
-
-					// HOVERED .dropdown anchor link (OPEN)
-					&:hover {
-						color: $navbarLinkColorHover;
-
-						.caret {
-							border-top-color: $caretActive;
-						}
-
-					} // END (OPEN) HOVERED .dropdown anchor link
-
-				} // END > .dropdown-toggle
-
-			} // END .dropdown outer li (OPEN)
-
-		} // END .nav .dropdown
+// Navbar button for toggling navbar items in responsive layouts
+// These definitions need to come after '.navbar .btn'
+.navbar .btn-navbar {
+  display: none;
+  float: right;
+  padding: 7px 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  @include buttonBackground($navbarBackgroundHighlight, $navbarBackground);
+  $shadow: inset 0 1px 0 rgba($white,.1), 0 1px 0 rgba($white,.075);
+  @include box-shadow($shadow);
+}
+.navbar .btn-navbar .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #f5f5f5;
+  @include border-radius(1px);
+  @include box-shadow(0 1px 0 rgba($black,.25));
+}
+.btn-navbar .icon-bar + .icon-bar {
+  margin-top: 3px;
+}
 
 
-		// Right aligned menus need alt position
-		&.pull-right {
-			margin-left: 10px;
-			margin-right: 0;
+// Dropdown menus
+// --------------
 
-			.dropdown-menu {
-				left: auto;
-				right: 0;
-				&:before {
-					left: auto;
-					right: 12px;
-				}
-				&:after {
-					left: auto;
-					right: 13px;
-				}
-			} // END .nav.pull-right .dropdown-menu
+// Menu position and menu carets
+.navbar .dropdown-menu {
+  &:before {
+    content: '';
+    display: inline-block;
+    border-left:   7px solid transparent;
+    border-right:  7px solid transparent;
+    border-bottom: 7px solid #ccc;
+    border-bottom-color: $dropdownBorder;
+    position: absolute;
+    top: -7px;
+    left: 9px;
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    border-left:   6px solid transparent;
+    border-right:  6px solid transparent;
+    border-bottom: 6px solid $dropdownBackground;
+    position: absolute;
+    top: -6px;
+    left: 10px;
+  }
+}
+// Menu position and menu caret support for dropups via extra dropup class
+.navbar-fixed-bottom .dropdown-menu {
+  &:before {
+    border-top: 7px solid #ccc;
+    border-top-color: $dropdownBorder;
+    border-bottom: 0;
+    bottom: -7px;
+    top: auto;
+  }
+  &:after {
+    border-top: 6px solid $dropdownBackground;
+    border-bottom: 0;
+    bottom: -6px;
+    top: auto;
+  }
+}
+// Dropdown toggle caret
+.navbar .nav li.dropdown .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open .caret {
+  border-top-color: $white;
+  border-bottom-color: $white;
+}
+.navbar .nav li.dropdown.active .caret {
+  @include tb_opacity(100);
+}
 
-		} // END .nav.pull-right
-		
-	} // END .navbar .nav
+// Remove background color from open dropdown
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  background-color: transparent;
+}
 
-} // END .navbar
+// Dropdown link on hover
+.navbar .nav li.dropdown.active > .dropdown-toggle:hover {
+  color: $white;
+}
+
+// Right aligned menus need alt position
+// TODO: rejigger this at some point to simplify the selectors
+.navbar .pull-right .dropdown-menu,
+.navbar .dropdown-menu.pull-right {
+  left: auto;
+  right: 0;
+  &:before {
+    left: auto;
+    right: 12px;
+  }
+  &:after {
+    left: auto;
+    right: 13px;
+  }
+}

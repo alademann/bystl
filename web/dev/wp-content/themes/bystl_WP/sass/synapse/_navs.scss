@@ -7,17 +7,17 @@
  
 /*	TOP BAR NAV
 ---------------------------------------------- */
-.top-bar {
-	//@extend .navbar;
-	//@extend .navbar-fixed-top;
-}
-.top-bar a {
-	// font-size: $baseFontSize - 1;
-	// color: #919191;
-	// padding: 0 !important;
-	// text-shadow: -1px -1px black;
-	// @include single-transition(color, 0.3s, ease-in);
-}
+// .top-bar {
+// 	//@extend .navbar;
+// 	//@extend .navbar-fixed-top;
+// }
+// .top-bar a {
+// 	// font-size: $baseFontSize - 1;
+// 	// color: #919191;
+// 	// padding: 0 !important;
+// 	// text-shadow: -1px -1px black;
+// 	// @include single-transition(color, 0.3s, ease-in);
+// }
 
 // NAVBAR COLORS
 
@@ -112,13 +112,11 @@
 	float: left;
 }
 .social li a {
-	opacity: 0.4;
-	-moz-transition:opacity 0.3s ease-in;
-	-webkit-transition:opacity 0.3s ease-in;
-	-o-transition:opacity 0.3s ease-in;
+	@include opacity(.4);
+	@include transition(opacity 0.3s ease-in);
 }
 .social li a:hover {
-	opacity: 1;
+	@include opacity(1);
 }
 .facebook, .twitter, .phone, .mail {
 	width: 17px;
@@ -160,9 +158,10 @@
 .home .home-link a, #main-nav .current-menu-item a, #main-nav .current_page_item a,
 .home li a.home-link, #main-nav li a.current-menu-item, #main-nav li a.current_page_item,
 #main-nav li a[class*="current"] {
-	// TODO: replace with nav pill stles;
+	// TODO: replace with nav pill styles;
 	//-webkit-transition:opacity 0.3s ease-in;
 	//-o-transition:opacity 0.3s ease-in;
+	@include transition(opacity .3s ease-in);
 }
 #main-nav a {
 	padding: 8px 0

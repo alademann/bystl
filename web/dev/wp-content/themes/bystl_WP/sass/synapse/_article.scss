@@ -11,7 +11,7 @@
 }
 .title-no-img {
 	color:#474747;
-	font-family:'Droid Serif', serif;
+	font-family: $serifFontFamily;
 	font-size:20px;
 	font-style:italic;
 	font-weight:bold;
@@ -20,7 +20,7 @@
 	display: block;
 }
 .article-title {
-	background: #fff;
+	background: $white;
 	position: absolute;
 	left: -2px;
 	bottom: -2px;
@@ -31,38 +31,26 @@
 	font-weight: bold;
 	line-height: 28px;
 	padding: 20px 20px 0 0;
-	width: 400px;
-	-moz-border-radius: 0 5px 5px 0;
-	-webkit-border-radius: 0 5px 5px 0;
-	-o-border-radius: 0 5px 5px 0;
+	////max-width: 400px;
+	width: 100%;
+	@include border-radius(5px);
 }
 .article-thumb img {
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-o-border-radius: 5px;
+	@include border-radius(5px);
 }
 .article-meta {
-	background: rgb(127,127,127); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(rgb(127,127,127),1) 0%, rgba(rgb(160,160,160),1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(rgb(127,127,127),1)), color-stop(100%,rgba(rgb(160,160,160),1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(rgb(127,127,127),1) 0%,rgba(rgb(160,160,160),1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(rgb(127,127,127),1) 0%,rgba(rgb(160,160,160),1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(rgb(127,127,127),1) 0%,rgba(rgb(160,160,160),1) 100%); /* IE10+ */
-	background: linear-gradient(top,  rgba(rgb(127,127,127),1) 0%,rgba(rgb(160,160,160),1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f7f7f', endColorstr='#a0a0a0',GradientType=0 ); /* IE6-9 */
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-o-border-radius: 5px;
-	-moz-box-shadow: inset 0 1px 1px rgba($black, 0.4);
-	-webkit-box-shadow: inset 0 1px 1px rgba($black, 0.4);
-	-o-box-shadow: inset 0 1px 1px rgba($black, 0.4);
+	background: #7f7f7f; /* Old browsers */
+	@include background-image(linear-gradient(#7f7f7f, #a0a0a0));
+	@include filter-gradient(#7f7f7f, #a0a0a0);
+	@include border-radius(5px);
+	@include box-shadow(inset 0 1px 1px rgba($black, 0.4));
 	padding: 11px 15px 10px 15px;
 	font-weight: bold;
-	color: #fff !important;
+	color: $white !important;
 	text-shadow: 1px 1px 1px rgba($black, 0.4);
 }
 .article-meta a {
-	color: #fff !important;
+	color: $white !important;
 	text-shadow: 1px 1px 1px rgba($black, 0.4);
 	font-style: italic;
 }

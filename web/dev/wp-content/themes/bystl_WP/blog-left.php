@@ -4,9 +4,8 @@
 
 <?php get_header(); ?>
 
-   <div class="page-container container clearfix">
+   <div class="page-container row-fluid clearfix">
 
-            <div class="row">
 
                     <div class="span4 sidebar">
 
@@ -101,6 +100,6 @@
             
 
             </div>
-   </div>
+
 
 <?php get_footer(); ?>

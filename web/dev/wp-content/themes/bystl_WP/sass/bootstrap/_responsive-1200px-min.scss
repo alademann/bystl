@@ -1,0 +1,46 @@
+// LARGE DESKTOP & UP
+// ------------------
+
+// Updates for SASS:
+//  - replace #grid > .style with @include grid-style
+
+@media (min-width: 1200px) {
+
+  // Fixed grid
+  $fixedColumnWidth1200:         (840 / $gridColumns) + 0px !default;
+  $fixedGutterWidth1200:         (330 / ($gridColumns - 1)) + 0px !default;
+  @include grid-core($fixedColumnWidth1200, $fixedGutterWidth1200);
+
+  // Input grid
+  @include grid-input($fixedColumnWidth1200, $fixedGutterWidth1200);
+
+  // Fluid grid
+  //71.794871796
+  //28.205128204
+  $columnWidth1200: (76.595744676 / $gridColumns);
+  $gutterWidth1200: (23.404255314 / ($gridColumns - 1));
+  $crossCheck1200: ($columnWidth1200 * $gridColumns) + ($gutterWidth1200 * ($gridColumns - 1));
+  @debug "fluidGrid1200 is #{$crossCheck1200}% accurate.";
+
+  $fluidGridColumnWidth1200:    $columnWidth1200 + 0% !default;
+  $fluidGridGutterWidth1200:    $gutterWidth1200 + 0% !default;
+
+  @include grid-fluid($fluidGridColumnWidth1200, $fluidGridGutterWidth1200);
+
+  .container-fluid {
+    padding-left: $fluidGridGutterWidth1200;
+    padding-right: $fluidGridGutterWidth1200;
+  }
+
+  // Thumbnails
+  .thumbnails {
+    margin-left: -30px;
+  }
+  .thumbnails > li {
+    margin-left: 30px;
+  }
+  .row-fluid .thumbnails {
+    margin-left: 0;
+  }
+
+}

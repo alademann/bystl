@@ -1,10 +1,9 @@
 <?php get_header(); ?>
 
-   <div class="page-container container clearfix">
+   <div class="page-container row-fluid clearfix">
 
-            <div class="row">
                 
-                <div class="blog-page span12">
+                <div class="blog-page">
 
                 <div class="page-content span12">
 
@@ -87,6 +86,6 @@
             </div>
 
             </div>
-   </div>
+
 
 <?php get_footer(); ?>

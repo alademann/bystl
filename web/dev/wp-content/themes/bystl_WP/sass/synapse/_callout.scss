@@ -8,31 +8,24 @@
 .callout {
 	padding: 15px 25px;
 	background: $white; /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba($white,1) 0%, rgba($almostWhiteF2,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba($white,1)), color-stop(100%,rgba($almostWhiteF2,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba($white,1) 0%,rgba($almostWhiteF2,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba($white,1) 0%,rgba($almostWhiteF2,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba($white,1) 0%,rgba($almostWhiteF2,1) 100%); /* IE10+ */
-	background: linear-gradient(top,  rgba($white,1) 0%,rgba($almostWhiteF2,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='$almostWhiteF2',GradientType=0 ); /* IE6-9 */
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-o-border-radius: 5px;
-	-moz-box-shadow: 0 1px 1px rgba($black, 0.15);
-	-webkit-box-shadow: 0 1px 1px rgba($black, 0.15);
-	-o-box-shadow: 0 1px 1px rgba($black, 0.15);
-	width: 890px;
+	@include background-image(linear-gradient($white, $almostWhiteF2));
+	@include filter-gradient($white, $almostWhiteF2);
+	@include border-radius(5px);
+	@include box-shadow(0 1px 1px rgba($black, 0.15));
+	////max-width: 890px;
+	width: 100%;
 	margin-bottom: 40px;
 }
 .callout{   /* IE7 */
-		  *margin-top: 130px;
+	@include ie7(margin-top, 130px);
 }
 .callout p {
 	color: #686868;
 }
 .callout-info {
 	float: left;
-	width: 630px;
+	////max-width: 630px;
+	width: 100%;
 }
 .callout .big-btn {
 	float: right;

@@ -6,18 +6,26 @@
  ----------------------------------------------*/
  
 .alert-message {
-	-moz-box-shadow: 0 1px 2px rgba($black, 0.2);
-	-webkit-box-shadow: 0 1px 2px rgba($black, 0.2);
-	-o-box-shadow:0 1px 2px rgba($black, 0.2);
+	@extend .alert;
+	&.success {
+		@extend .alert-success;
+	}
+	&.warning {
+		@extend .alert-warning;
+	}
+	&.danger, &.error {
+		@extend .alert-danger;
+	}
+	&.info {
+		@extend .alert-info;
+	}
 }
-.alert-message p {
-	color: inherit;
-	text-shadow: 1px 1px rgba($black, 0.3);
-}
-.warning p {
-	text-shadow: 1px 1px rgba($white, 0.3);
+.alert-message strong, .alert-message .alert-heading {
+	@extend .alert-heading;
 }
 .contact-error {
+	@extend .alert-error;
 	margin-top: 25px;
-	width: 380px;
+	//max-width: 380px;
+	width: 100%;
 }

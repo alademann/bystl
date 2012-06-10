@@ -60,78 +60,52 @@ body {
 .page-content {
 	background: $white;
 	padding: 15px 25px 25px 25px;
-	width: 578px;
+	//max-width: 578px;
+	width: auto;
 	@include box-shadow(0 1px 1px rgba($black, 0.15));
 	margin-bottom: 30px;
 	font-size: $baseFontSize - 1;
 } // END .page-container > .page-content
 
 .full {
-	width: 890px !important;
+	//max-width: 890px !important;
+	width: 100%;
 } // END .page-container > .full
 
 .blog-page, .portfolio-page {
 	float: left;
-	width: 628px;
+	//max-width: 628px;
+	width: auto;
 }
 
 .portfolio-full  {
 	margin-bottom: 35px;
 }
 
-$nbGradBoxShadowOpacity: 0.7 !default;
-$nbGradBoxBorderColor: #1f1f1f !default;
-$nbGradBoxBorderColor2: lighten($nbGradBoxBorderColor, .15%) !default;
-$nbGradBoxHighlightEdge: rgba($white, $nbGradBoxShadowOpacity / 2);
-@mixin navyBlueBgGradientBox {
-	border: 1px solid $nbGradBoxBorderColor;
-	background: $bystl_blue_navy; /* Old browsers */
-	@include background-image(linear-gradient( $bystl_blue_navy 0%, $bystl_blue_black 100%));
-	@include box-shadow(inset 0 1px 0 $nbGradBoxHighlightEdge, 0 1px 2px rgba($black, $nbGradBoxShadowOpacity));
-} // END darkBlueBgGradient
-
-.navyBlueBgGradientBox {
-	@include navyBlueBgGradientBox;
-}
-
 .sidebar {
 	padding: 15px 20px;
-	width: 250px;
+	//max-width: 250px;
+	width: auto;
 	margin-bottom: 35px;
 	font-size: $baseFontSize - 2 !important;
-	@extend .navyBlueBgGradientBox;
-	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bystl_blue_navy', endColorstr='$bystl_blue_black',GradientType=0 ); /* IE6-9 */
+	@include darkBlueWidget;
 } // END .page-container > .sidebar
 
 /*	CONTENT-SPECIFIC ELEM CONTAINERS
 ---------------------------------------------- */
 .video-holder {
-	@extend .navyBlueBgGradientBox;
-	border-top: 1px solid $nbGradBoxBorderColor2;
-	//@debug "#161616 should equal #{$nbGradBoxBorderColor2}";
-	@include border-radius(5px);
+	@include darkBlueWidget;
 	margin-top: 20px;
 	padding: 20px;
 } // END .video-holder
 
 .cat-item {
-	@extend .navyBlueBgGradientBox;
-	width: 229px;
-	border-top: 1px solid $nbGradBoxBorderColor2;
-	@include box-shadow(inset 0 1px 0 $nbGradBoxHighlightEdge, rgba($black, $nbGradBoxShadowOpacity / 2));
-	@include border-radius(5px);
+	@include darkBlueWidget;
+	//max-width: 229px;
+	width: 100%;
 	padding: 10px;
 	float: left;
 	margin: 5px 0;
 	text-align: right;
-
-	&:hover {
-			background: $nbGradBoxHighlightEdge; /* Old browsers */
-			@include background-image(linear-gradient( darken($bystl_blue_navy, 20%) 0%, darken($bystl_blue_black, 20%) 100%));
-			//@debug "#43484b should equal #{darken($nbGradBoxHighlightEdge, 20%)}";
-			@include box-shadow(inset 0 1px 0 $nbGradBoxHighlightEdge, 0 1px 2px rgba($black, $nbGradBoxShadowOpacity));
-		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d6366', endColorstr='#43484b',GradientType=0 ); /* IE6-9 */
-		@include box-shadow(inset 0 1px 0 opacify($nbGradBoxHighlightEdge, .1), rgba($black, $nbGradBoxShadowOpacity / 2));
-	} // END .cat-item:hover
 
 } // END .cat-item

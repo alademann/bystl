@@ -19,9 +19,9 @@
                 dd_set_query($portfolio_query);
 ?>
 
-<div class="page-container container clearfix">
+<div class="page-container row-fluid clearfix">
     
-    <ul id="filters" class="clearfix">
+    <ul id="filters" class="span16 clearfix">
         
         <li><a class="active" href="#" data-filter="span-one-third"><?php _e('Show All', 'localization'); ?></a></li>
                 
@@ -43,7 +43,7 @@
             
     </ul>
     
-    <div class="row">
+
 
         <div class="portfolio-full span16">
             
@@ -88,6 +88,6 @@
 
     </div>
 
-</div>
+
 
 <?php get_footer(); ?>

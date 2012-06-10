@@ -68,6 +68,3 @@
 
 // Utility classes
 @import "utilities"; // Has to be last to override when necessary
-
-// Responsive Layouts
-@import "responsive"; // again - i opt to have responsive be a part of my compiles no matter what - not as a separate .css compile that can be included by choice. responsive and bootstrap are partials in my system.

@@ -4,11 +4,10 @@
 
 <?php get_header(); ?>
 
-   <div class="page-container container clearfix">
+   <div class="page-container row-fluid clearfix">
 
-            <div class="row">
 
-                <div class="page-content full span12">
+                <div class="page-content full span16">
     <?php
         if (have_posts ()) {
 
@@ -35,6 +34,6 @@
                 </div>
 
             </div>
-   </div>
+
 
 <?php get_footer(); ?>

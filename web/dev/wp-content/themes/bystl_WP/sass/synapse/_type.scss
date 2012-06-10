@@ -17,7 +17,7 @@ h3 {
 		border-bottom: 1px solid #6f6f6f;
 		margin-bottom: 15px;
 		padding-bottom: 7px;
-		color: #fff;
+		color: $white;
 		text-shadow: 1px 1px 0 rgba($black, 0.5);
 	} // END .widget <h3>
 
@@ -85,7 +85,7 @@ a {
 		-o-transition:color 0.3s ease-in;
 
 		&:hover {
-			color: #fff;	
+			color: $white;	
 		}
 	} // END .video-holder <a>, .portfolio-item <a>
 
@@ -100,7 +100,7 @@ a {
 
 		&:hover {
 			text-decoration: none;
-			color: #fff;
+			color: $white;
 		}
 	} // END .cat-item <li><a>
 
@@ -128,7 +128,9 @@ ol {
 
 ul {
 
-	.page-content &, .widget & {
+	list-style: none;
+
+	.page-content &, .widget &, &.widgets {
 		margin: 12px 0;
 
 		ul {

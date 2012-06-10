@@ -10,9 +10,7 @@
  .footer {
 	background:  $white url(image-url('footer-shadow.png', true)) repeat-x scroll left top;
 	padding: 40px 0 55px 0;
-	-moz-box-shadow: 0 1px 1px rgba($black, 0.15);
-	-webkit-box-shadow: 0 1px 1px rgba($black, 0.15);
-	-o-box-shadow: 0 1px 1px rgba($black, 0.15);
+	@include box-shadow(0 1px 1px rgba($black, 0.15));
 	color: $gray;
 	font-size: $baseFontSize - 1;
 	text-shadow: 1px 1px rgba($white, 0.8);

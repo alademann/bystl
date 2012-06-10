@@ -1,4 +1,4 @@
-<div class="home-portfolio container clearfix">
+<div class="home-portfolio container-fluid clearfix">
 
         <?php
         global $paged;

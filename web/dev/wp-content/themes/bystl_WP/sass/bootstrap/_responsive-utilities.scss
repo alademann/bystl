@@ -1,0 +1,60 @@
+// RESPONSIVE CLASSES
+// ------------------
+
+// Updates for SASS:
+//  - none!
+
+// Hide from screenreaders and browsers
+// Credit: HTML5 Boilerplate
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.nav-collapse { overflow: visible; } // so the dropdown menus will show up properly
+
+// Visibility utilities
+
+// For desktops
+.visible-phone     { display: none !important; }
+.visible-tablet    { display: none !important; }
+.visible-desktop   { } // Don't set initially
+.hidden-phone      { }
+.hidden-tablet     { }
+.hidden-desktop    { display: none !important; }
+
+// Phones only
+@media (max-width: 767px) {
+  // Show
+  .visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
+  // Hide
+  .hidden-phone      { display: none !important; }
+  // Hide everything else
+  .hidden-desktop    { display: inherit !important; }
+  .visible-desktop   { display: none !important; }
+
+// don't need all the padding / white space since 
+  // the body has 20px already
+  .page-content {
+    background-color: transparent;
+    border: 0 none;
+    padding: 0;
+    // enlarge reading size
+    p, ul, ol, li, a, td, th {
+      font-size: $baseFontSize + 2;
+      line-height: $baseLineHeight + 2;
+    }
+  }
+
+}
+
+// Tablets & small desktops only
+@media (min-width: 768px) and (max-width: 979px) {
+  // Show
+  .visible-tablet    { display: inherit !important; }
+  // Hide
+  .hidden-tablet     { display: none !important; }
+  // Hide everything else
+  .hidden-desktop    { display: inherit !important; }
+  .visible-desktop   { display: none !important ; }
+}

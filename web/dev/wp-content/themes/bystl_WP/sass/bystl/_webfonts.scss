@@ -32,7 +32,6 @@ $logoFont_name: "bystlLogoFont" !default;
     line-height: $logoImgH;
     padding-left: $logoImgW + 10;
   }
-    font-size: pxtoem(37);
     text-transform: lowercase;
     letter-spacing: normal;
     @if $style == "color" {

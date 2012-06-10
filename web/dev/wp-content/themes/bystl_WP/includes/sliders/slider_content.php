@@ -1,4 +1,4 @@
-<div class="slider container clearfix">
+<div class="slider container-fluid clearfix">
 
             <a id="prev-arrow" href="#">Previous</a>
             <a id="next-arrow" href="#">Next</a>
@@ -14,7 +14,7 @@ if ( function_exists( 'get_option_tree' ) ) {
     echo '
     <li class="container">
 
-        <div class="row">
+        <div class="row-fluid">
 
 
             <div class="span-one-third slider-intro-left">
