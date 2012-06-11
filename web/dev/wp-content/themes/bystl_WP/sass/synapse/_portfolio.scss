@@ -33,7 +33,7 @@
 		margin-top: -2px;
 
 		a {
-			color: #969696;
+			color: lighten($bystl_blue_medium, 2%);
 			font-size: $baseFontSize;
 			text-shadow: -1px -1px rgba($black, 0.5);
 			line-height: 17px;
@@ -110,7 +110,7 @@
 // but will leave generic in case they are used elsewhere
 .zoom {
 	width: 44px;
-	display: block;
+	@include display(block);
 	height: 47px;
 	background: url(image-url('icon-zoom.png', true)) no-repeat;
 	position: absolute;
@@ -120,7 +120,7 @@
 .goto {
 	width: 44px;
 	height: 47px;
-	display: block;
+	@include display(block);
 	background: url(image-url('icon-goto.png', true)) no-repeat;
 	position: absolute;
 	left: 53%;
@@ -141,7 +141,7 @@
 	width: 155px;
 }
 .portfolio-item-meta .portfolio-span {
-	display: block;
+	@include display(block);
 	font-weight: bold;
 	margin-bottom: 5px;
   

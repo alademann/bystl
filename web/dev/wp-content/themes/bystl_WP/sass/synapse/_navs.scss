@@ -102,6 +102,7 @@
 // .nav li {
 // 	padding-right: 20px;
 // }
+
 .social {
 	float: right !important;
 	padding-top: 2px;
@@ -121,7 +122,7 @@
 .facebook, .twitter, .phone, .mail {
 	width: 17px;
 	height: 16px;
-	display: block;
+	@include display(block);
 }
 .facebook {
 	background: url(image-url('icon-facebook.png', true)) no-repeat;
@@ -138,6 +139,9 @@
 
 /*	MAIN NAV (HEADER)
 ---------------------------------------------- */
+.header .nav {
+	margin-bottom: 0;
+}
 #main-nav {
 	float: right;
 	padding-top: 6px;

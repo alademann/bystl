@@ -75,7 +75,7 @@
                                 //'after' => '</ul>', 
                                 'link_before' => '', 
                                 'link_after' => '', 
-                                'depth' => 0 
+                                'depth' => 0 // TODO: make this 1 and have it tuck in a dd? 
                                 )
                  ); ?>
 
@@ -136,6 +136,26 @@
                 </div>
 
                 <div class="menu-container span11">
+
+                    <ul class="nav nav-pills pull-right">
+                        <?php 
+                            function is_subpage(){
+                                global $post;
+                                if(is_page() && $post->post_parent){
+                                    return $post->post_parent;
+                                } else {
+                                    return false;
+                                }
+                            }
+                            if(is_subpage()){
+                                wp_list_pages('title_li=&child_of='.$post->post_parent);     
+                            } else {
+                                wp_list_pages('title_li=&child_of='.$post->ID); 
+                            }
+                            
+                        ?>
+                    </ul>
+
                  <?php wp_nav_menu(array('container' => false, 'menu_id' => 'main-nav', 'theme_location' => 'main_menu',  'menu_class' => 'sf-menu', 'echo' => true, 'before' => '', 'after' => '', 'link_before' => '', 'fallback_cb' => 'display_home2', 'link_after' => '', 'depth' => 0 )); ?>
                 </div>
 

@@ -14,7 +14,7 @@ h2 {
 h3 {
 
 	.widget & {
-		border-bottom: 1px solid #6f6f6f;
+		border-bottom: 1px solid darken(#3e536b, 15%);
 		margin-bottom: 15px;
 		padding-bottom: 7px;
 		color: $white;
@@ -43,7 +43,7 @@ p {
 	}
 
 	.sidebar & {
-		color: #969696;
+		color: lighten($bystl_blue_medium, 2%);
 		text-shadow: -1px -1px 0 rgba($black, 0.5);
 	}
 
@@ -70,22 +70,22 @@ em {
 /*	LINKS
 ---------------------------------------------- */
 a {
-	color: #235C98;
+	color: $linkColor;
 	.sidebar & { 
-		color: #cdcdcd; 
+		color: lighten($bystl_blue_medium, 20%); 
+		&:hover {
+			color: $bystl_blue_medium;
+		}
 	}
 	&:hover { 
-		color: #407fc1; 
+		color: $linkColorHover; 
 	}
 
 	.video-holder &, .portfolio-item & {
-		color: #989898;
-		-moz-transition:color 0.3s ease-in;
-		-webkit-transition:color 0.3s ease-in;
-		-o-transition:color 0.3s ease-in;
-
+		color: lighten($bystl_blue_medium, 20%);
+		@include transition(color 0.3s ease-in);
 		&:hover {
-			color: $white;	
+			color: $bystl_blue_medium;	
 		}
 	} // END .video-holder <a>, .portfolio-item <a>
 

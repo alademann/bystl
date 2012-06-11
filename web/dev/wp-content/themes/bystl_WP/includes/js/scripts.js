@@ -2,13 +2,13 @@ function ddPanelSections() {
 	
 	//adds the ids of each section menu
 	var i = 1;
-	jQuery('#ddpanel-menu > ul > li').each(function() {
+	$('#ddpanel-menu > ul > li').each(function() {
 		
 		//if its the first one adds the current class
-		if(i === 1) { jQuery(this).addClass('current'); }
+		if(i === 1) { $(this).addClass('current'); }
 		
 		//adds the id
-		jQuery(this).attr('id', 'ddsec_'+i);
+		$(this).attr('id', 'ddsec_'+i);
 		
 		i++;
 		
@@ -16,36 +16,36 @@ function ddPanelSections() {
 	
 	//adds the id of each section item,
 	var i = 1;
-	jQuery('#ddpanel-sections > li').each(function() {
+	$('#ddpanel-sections > li').each(function() {
 		
-		if(i===1) { jQuery(this).addClass('current'); }
+		if(i===1) { $(this).addClass('current'); }
 		
-		jQuery(this).attr('id', 'ddsec2_'+i);
+		$(this).attr('id', 'ddsec2_'+i);
 		
 		i++;
 		
 	});
 	
 	//when the users clicks a section
-	jQuery('#ddpanel-menu > ul > li').click(function() {
+	$('#ddpanel-menu > ul > li').click(function() {
 		
 		//gets the class and the id of the clicked item
-		var thisClass = jQuery(this).attr('class');
-		var thisId = jQuery(this).attr('id').split('_');
+		var thisClass = $(this).attr('class');
+		var thisId = $(this).attr('id').split('_');
 		var thisId = thisId[1];
 		
 		//if the item is NOT current
 		if(thisClass != 'current') {
 			
 			//changes the button states
-			jQuery('#ddpanel-menu ul li.current').removeClass('current');
-			jQuery('#ddpanel-menu ul li#ddsec_'+thisId).addClass('current');
+			$('#ddpanel-menu ul li.current').removeClass('current');
+			$('#ddpanel-menu ul li#ddsec_'+thisId).addClass('current');
 			
 			//hides the current section
-			jQuery('#ddpanel-sections > li.current').hide().removeClass('current');
+			$('#ddpanel-sections > li.current').hide().removeClass('current');
 			
 			//shows the clicked one
-			jQuery('#ddpanel-sections > li#ddsec2_'+thisId).show().addClass('current');
+			$('#ddpanel-sections > li#ddsec2_'+thisId).show().addClass('current');
 			ddPanelChangeInfo();
 			
 		}
@@ -57,36 +57,36 @@ function ddPanelSections() {
 function ddPanelTabs() {
 	
 	//adds classes to all tabs
-	jQuery('.ddpanel-tabs').each(function() { var i = 1; jQuery(this).children('li').each(function() {
+	$('.ddpanel-tabs').each(function() { var i = 1; $(this).children('li').each(function() {
 		
 		//adds the class to the tab
-		jQuery(this).addClass('ddtab_'+i);
+		$(this).addClass('ddtab_'+i);
 		
 		i++;
 		
 	}); });
 	
 	//adds classes to all atbbed
-	jQuery('.ddpanel-tabbed').each(function() { var i = 1; jQuery(this).children('li').each(function() {
+	$('.ddpanel-tabbed').each(function() { var i = 1; $(this).children('li').each(function() {
 		
 		//adds the class
-		jQuery(this).addClass('ddtabbed_'+i);
+		$(this).addClass('ddtabbed_'+i);
 		
 		i++;
 		
 	}); });
 	
 	//adds the current class to the first tab and tabbed
-	jQuery('#ddpanel-sections > li').each(function() { jQuery(this).children('.ddpanel-tabs').children('li:first').addClass('current'); });
-	jQuery('#ddpanel-sections > li').each(function() { jQuery(this).children('.ddpanel-tabbed').children('li:first').addClass('current'); });
+	$('#ddpanel-sections > li').each(function() { $(this).children('.ddpanel-tabs').children('li:first').addClass('current'); });
+	$('#ddpanel-sections > li').each(function() { $(this).children('.ddpanel-tabbed').children('li:first').addClass('current'); });
 	
 	ddPanelChangeInfo();
 	
 	//when user clicks a tab
-	jQuery('#ddpanel-sections > li > ul.ddpanel-tabs > li').click(function() {
+	$('#ddpanel-sections > li > ul.ddpanel-tabs > li').click(function() {
 		
 		//get the current clicked item
-		var thisClass = jQuery(this).attr('class').split(' ');
+		var thisClass = $(this).attr('class').split(' ');
 		
 		//if its not current
 		if(thisClass[1] != 'current') {
@@ -95,12 +95,12 @@ function ddPanelTabs() {
 			var thisClass = thisClass[1];
 			
 			//changes the current state of the tab
-			jQuery('#ddpanel-sections > li.current > ul.ddpanel-tabs > li.current').removeClass('current');
-			jQuery('#ddpanel-sections > li.current > ul.ddpanel-tabs > li.ddtab_'+thisClass).addClass('current');
+			$('#ddpanel-sections > li.current > ul.ddpanel-tabs > li.current').removeClass('current');
+			$('#ddpanel-sections > li.current > ul.ddpanel-tabs > li.ddtab_'+thisClass).addClass('current');
 			
 			//changes the tabbed area
-			jQuery('#ddpanel-sections > li.current > ul.ddpanel-tabbed > li.current').removeClass('current').hide();
-			jQuery('#ddpanel-sections > li.current > ul.ddpanel-tabbed > li.ddtabbed_'+thisClass).addClass('current').show();
+			$('#ddpanel-sections > li.current > ul.ddpanel-tabbed > li.current').removeClass('current').hide();
+			$('#ddpanel-sections > li.current > ul.ddpanel-tabbed > li.ddtabbed_'+thisClass).addClass('current').show();
 			
 			ddPanelChangeInfo();
 			
@@ -112,22 +112,22 @@ function ddPanelTabs() {
 
 function ddPanelHelp() {
 	
-	jQuery('.ddpanel-block > .help').click(function() {
+	$('.ddpanel-block > .help').click(function() {
 		
 		dontClose = 1;
 		
 		//main vars
-		var mainClick = jQuery(this);
-		var mainCont = jQuery(this).parent();
+		var mainClick = $(this);
+		var mainCont = $(this).parent();
 		var helpText = mainCont.children('.help-text').html();
 			
 		var thisClass = mainCont.children('.help').attr('class').split(' ');
 		
 		//adds the active class to it
-		jQuery(this).addClass('active');
+		$(this).addClass('active');
 		
 		//check if theres any current help box open
-		if(jQuery('.help-box').length >= 1) {
+		if($('.help-box').length >= 1) {
 			
 			//if there one opened lets close it first
 			
@@ -135,23 +135,23 @@ function ddPanelHelp() {
 			if(thisClass[1] != 'active') {
 			
 				//if there one opened lets close it first
-				jQuery('.help-box').slideUp(250, function() {
+				$('.help-box').slideUp(250, function() {
 					
-					jQuery(this).remove();
-					jQuery('.ddpanel-block > .active').removeClass('active');
+					$(this).remove();
+					$('.ddpanel-block > .active').removeClass('active');
 					mainCont.children('.help').addClass('active');
 				
 					//lets create the help box right after the current block
 					mainCont.after('<div class="help-box"><span>'+helpText+'</span><span class="arrow"></span></div>');
 					
 					//animates the box
-					jQuery('.help-box').slideDown(250, function() { dontClose = 0 });
+					$('.help-box').slideDown(250, function() { dontClose = 0 });
 					
 				});
 				
 			} else {
 				
-				jQuery('.help-box').slideUp(250, function() { jQuery('.ddpanel-block > .active').removeClass('active'); jQuery(this).remove(); });
+				$('.help-box').slideUp(250, function() { $('.ddpanel-block > .active').removeClass('active'); $(this).remove(); });
 				
 			}
 			
@@ -161,18 +161,18 @@ function ddPanelHelp() {
 			mainCont.after('<div class="help-box"><span>'+helpText+'</span><span class="arrow"></span></div>');
 			
 			//animates the box
-			jQuery('.help-box').slideDown(250, function() { dontClose = 0 });
+			$('.help-box').slideDown(250, function() { dontClose = 0 });
 			
 		}
 		
 	});
 	
 	//erases any current help boxes when the user clicks anywhere
-	jQuery(window).click(function() {
+	$(window).click(function() {
 		
 		if(dontClose === 0) {
 			
-			jQuery('.help-box').slideUp(200, function() { jQuery(this).remove(); jQuery('.ddpanel-block > .active').removeClass('active'); });
+			$('.help-box').slideUp(200, function() { $(this).remove(); $('.ddpanel-block > .active').removeClass('active'); });
 			
 		}
 		
@@ -185,28 +185,28 @@ function ddPanelSelect() {
 	dontCloseSelect = 0;
 	
 	//let's start by removing the borders and updating the current item
-	jQuery('.ddpanel-select').each(function() {
+	$('.ddpanel-select').each(function() {
 		
 		//main vars
-		var mainCont = jQuery(this).parent();
+		var mainCont = $(this).parent();
 		var initialItem = mainCont.children('input').val();
 		
-		if(initialItem == '') { var initialItem = jQuery(this).children('ul').children('li:first').text(); }
+		if(initialItem == '') { var initialItem = $(this).children('ul').children('li:first').text(); }
 		
 		//removes the last border
-		jQuery(this).children('ul').children('li:last').css({ border: 'none' })
+		$(this).children('ul').children('li:last').css({ border: 'none' })
 		
 		//updates the current item
-		jQuery(this).children('.current-select').text(initialItem);
+		$(this).children('.current-select').text(initialItem);
 		
 	});
 	
 	//when the users click to open the dropdown
-	jQuery('.ddpanel-select > .ddPanel-button, .ddpanel-select > .current-select').click(function() {
+	$('.ddpanel-select > .ddPanel-button, .ddpanel-select > .current-select').click(function() {
 		
 		//main vars
-		var mainCont = jQuery(this).parent().parent();
-		var selCont = jQuery(this).parent();
+		var mainCont = $(this).parent().parent();
+		var selCont = $(this).parent();
 		var thisClass = selCont.children('.ddPanel-button').attr('class').split(' ');
 		
 		//if its not active
@@ -236,13 +236,13 @@ function ddPanelSelect() {
 	});
 	
 	//when users clicks the item
-	jQuery('.ddpanel-select > ul > li').click(function() {
+	$('.ddpanel-select > ul > li').click(function() {
 		
 		//main vars
-		var mainCont = jQuery(this).parent().parent().parent();
-		var selCont = jQuery(this).parent().parent();
-		var ulCont = jQuery(this).parent();
-		var thisItem = jQuery(this).text();
+		var mainCont = $(this).parent().parent().parent();
+		var selCont = $(this).parent().parent();
+		var ulCont = $(this).parent();
+		var thisItem = $(this).text();
 		
 		//updates the hidden input and the current item
 		mainCont.children('input').val(thisItem);
@@ -255,22 +255,22 @@ function ddPanelSelect() {
 		
 	});
 	
-	jQuery(document).click(function() {
+	$(document).click(function() {
 		
 		if(dontCloseSelect === 0) {
 		
 			//slides up the container
-			jQuery('.ddpanel-select > ul').each(function() {
+			$('.ddpanel-select > ul').each(function() {
 				
-				if(jQuery(this).css('display') == 'block') {
+				if($(this).css('display') == 'block') {
 					
-					jQuery('.ddpanel-select > ul').slideUp(200, function() { jQuery(this).parent().parent().css({ 'z-index': 10 }); });
+					$('.ddpanel-select > ul').slideUp(200, function() { $(this).parent().parent().css({ 'z-index': 10 }); });
 					
 				}
 				
 			});
-			//jQuery('.ddpanel-select > ul').slideUp(200, function() { jQuery(this).parent().parent().css({ 'z-index': 10 }); });
-			jQuery('.ddpanel-select > .active').removeClass('active');
+			//$('.ddpanel-select > ul').slideUp(200, function() { $(this).parent().parent().css({ 'z-index': 10 }); });
+			$('.ddpanel-select > .active').removeClass('active');
 			
 		}
 		
@@ -281,51 +281,51 @@ function ddPanelSelect() {
 function ddPanelRibbon() {
 	
 	//adds the basic ribbon
-	jQuery('.ddpanel-block').each(function() {
+	$('.ddpanel-block').each(function() {
 		
 		//get the id
-		var thisId = jQuery(this).attr('id');
+		var thisId = $(this).attr('id');
 		
 		//id the cookie is set to true
-		if(jQuery.cookie(thisId) == 'true') {
+		if($.cookie(thisId) == 'true') {
 			
-			jQuery(this).append('<span class="ddHigh ribbon"></span>');
+			$(this).append('<span class="ddHigh ribbon"></span>');
 			
 		} else {
 			
-			jQuery(this).append('<span class="ddHigh flip"></span>');
+			$(this).append('<span class="ddHigh flip"></span>');
 			
 		}
 		
 	});
 	
 	//when users click the ribbon
-	jQuery('.ddHigh').click(function() {
+	$('.ddHigh').click(function() {
 		
 		//get its class
-		var thisClass = jQuery(this).attr('class').split(' ');
+		var thisClass = $(this).attr('class').split(' ');
 		
 		if(thisClass[1] == 'ribbon') {
 		
 			//changes the flip into ribbon
-			jQuery(this).removeClass('ribbon').addClass('flip');
+			$(this).removeClass('ribbon').addClass('flip');
 			
 			//gets the id of the container
-			var thisId = jQuery(this).parent().attr('id');
+			var thisId = $(this).parent().attr('id');
 			
 			//sets the cookie
-			jQuery.cookie(thisId, null);
+			$.cookie(thisId, null);
 			
 		} else {
 		
 			//changes the flip into ribbon
-			jQuery(this).removeClass('flip').addClass('ribbon');
+			$(this).removeClass('flip').addClass('ribbon');
 			
 			//gets the id of the container
-			var thisId = jQuery(this).parent().attr('id');
+			var thisId = $(this).parent().attr('id');
 			
 			//sets the cookie
-			jQuery.cookie(thisId, true, { expires: 60 });
+			$.cookie(thisId, true, { expires: 60 });
 			
 		}
 		
@@ -336,7 +336,7 @@ function ddPanelRibbon() {
 
 
 
-jQuery.cookie = function(name, value, options) {
+$.cookie = function(name, value, options) {
     if (typeof value != 'undefined') { // name and value given, set cookie
         options = options || {};
         if (value === null) {
@@ -366,7 +366,7 @@ jQuery.cookie = function(name, value, options) {
         if (document.cookie && document.cookie != '') {
             var cookies = document.cookie.split(';');
             for (var i = 0; i < cookies.length; i++) {
-                var cookie = jQuery.trim(cookies[i]);
+                var cookie = $.trim(cookies[i]);
                 // Does this cookie string begin with the name we want?
                 if (cookie.substring(0, name.length + 1) == (name + '=')) {
                     cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
@@ -396,22 +396,22 @@ function ddPanelCheckNumber(el) {
 	 
 	 dontCloseReset = 0;
 	 
-	 jQuery('#ddpanel-reset').click(function() {
+	 $('#ddpanel-reset').click(function() {
 		 
 		 dontCloseReset = 1;
 		 
 		 //open the reset box
-		 jQuery('#ddpanel-reset-confirm').slideDown(200, function() { dontCloseReset = 0; });
+		 $('#ddpanel-reset-confirm').slideDown(200, function() { dontCloseReset = 0; });
 		 
 		 return false;
 		 
 	 });
 	 
-	 jQuery(document).click(function() {
+	 $(document).click(function() {
 		 
 		if(dontCloseReset === 0) {
 		
-			jQuery('#ddpanel-reset-confirm').slideUp(200);
+			$('#ddpanel-reset-confirm').slideUp(200);
 			
 		}
 		 
@@ -422,16 +422,16 @@ function ddPanelCheckNumber(el) {
  function ddPanelChangeInfo() {
 	 
 	 //get the info of the current tab.
-	 var thisInfo = jQuery('#ddpanel-sections > li.current > .ddpanel-tabbed > li.current > .tab-info');
+	 var thisInfo = $('#ddpanel-sections > li.current > .ddpanel-tabbed > li.current > .tab-info');
 	 
 	 if(thisInfo.length > 0) {
 		 
-		 jQuery('#ddpanel-content-header > span').remove();
-		 jQuery('#ddpanel-content-header').append('<span>'+thisInfo.text()+'</span>');
+		 $('#ddpanel-content-header > span').remove();
+		 $('#ddpanel-content-header').append('<span>'+thisInfo.text()+'</span>');
 		 
 	 } else {
 		 
-		 jQuery('#ddpanel-content-header > span').remove();
+		 $('#ddpanel-content-header > span').remove();
 		 
 	 }
 	 
@@ -440,7 +440,7 @@ function ddPanelCheckNumber(el) {
  function ddPanelFontFramework() {
 	 
 	 //main vars
-	 var mainCont = jQuery('.ddpanel-fonts');
+	 var mainCont = $('.ddpanel-fonts');
 	 var selCont = mainCont.children('div:first');
 	 var cufonCont = mainCont.children('.ddpanel-font-cufon');
 	 var googleCont = mainCont.children('.ddpanel-font-google');
@@ -493,7 +493,7 @@ function ddPanelCheckNumber(el) {
  
  function ddPanelGoogleSelectInit() {
 	 
-	 var mainCont = jQuery('.ddpanel-google-select').parent();
+	 var mainCont = $('.ddpanel-google-select').parent();
 	 
 	 //gets the font family of the selected item
 	 var curFont = mainCont.children('input').val();
@@ -510,7 +510,7 @@ function ddPanelCheckNumber(el) {
 	 var goodName = fontName.split(' ').join('+');
 	 
 	 //updates the css and the field styling
-	 jQuery('#googleFont').attr('href', 'http://fonts.googleapis.com/css?family='+goodName);
+	 $('#googleFont').attr('href', 'http://fonts.googleapis.com/css?family='+goodName);
 	 el.css({ 'font-family': fontName+' ,Arial' });
 	 
  }

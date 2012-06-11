@@ -1,23 +1,27 @@
- <div id="alternate" class="container-fluid">
+ <div id="alternate">
 
-            <div class="row-fluid clearfix">
+    <div class="container-fluid">
 
-                <ul class="span16">
+        <div class="row-fluid clearfix">
 
-               
+            <ul class="span16">
 
-                      <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Dark Footer")); ?>
+           
 
-                    
+                  <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Dark Footer")); ?>
 
-                </ul>
+                
 
-            </div>
+            </ul>
 
         </div>
 
+    </div>
+</div>
 
-        <div class="footer container-fluid">
+        <div class="footer">
+
+            <div class="container-fluid">
 
             <div class="row-fluid">
 
@@ -30,15 +34,17 @@
                 
 
             </div>
-
         </div>
+    </div>
 
-        <div class="small-footer container-fluid">
+        <div class="small-footer">
+            <div class="container-fluid">
             <div class="row-fluid">
                 <div class="footer-left span8"><p><?php echo get_option_tree('footer_left_content') ?></p></div>
 
                 <div class="footer-right span8"><p><?php echo get_option_tree('footer_right_content') ?></p></div>
             </div>
+        </div>
         </div>
 
     </div>
@@ -63,6 +69,12 @@
             {prettifyCode:  "<?php echo get_bloginfo('template_url').'/js/prettify/prettify.js'; ?>"},
             {bootstrap:     "<?php echo get_bloginfo('template_url').'/js/bootstrap/bootstrap.js'; ?>"}
         );
+
+        
+        var wp_active = $(".nav li[class*='current']");
+        $.each(wp_active, function(){
+            $(this).addClass("active");
+        });
 
     }); // END head.ready(jquery)
     

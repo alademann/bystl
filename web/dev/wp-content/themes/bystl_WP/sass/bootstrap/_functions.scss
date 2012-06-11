@@ -5,6 +5,14 @@
 	
 ----------------------------------------------*/
 
+@mixin display($opt: block){
+	display: $opt;
+	@if $opt == block {
+		//@debug "its block";
+		box-sizing: border-box;
+	}
+}
+
 // Convert px to em
 @function pxtoem($target, $container: $baseFontSizeInt){
   @return ($target/$container)+0em;

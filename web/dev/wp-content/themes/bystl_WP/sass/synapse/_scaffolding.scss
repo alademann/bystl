@@ -65,6 +65,7 @@ body {
 	@include box-shadow(0 1px 1px rgba($black, 0.15));
 	margin-bottom: 30px;
 	font-size: $baseFontSize - 1;
+	@include border-radius(5px);
 } // END .page-container > .page-content
 
 .full {
@@ -99,7 +100,7 @@ body {
 	padding: 20px;
 } // END .video-holder
 
-.cat-item {
+.cat-item a {
 	@include darkBlueWidget;
 	//max-width: 229px;
 	width: 100%;
@@ -107,5 +108,5 @@ body {
 	float: left;
 	margin: 5px 0;
 	text-align: right;
-
+	@include display(block);
 } // END .cat-item

@@ -11,7 +11,7 @@
 
 #prev-arrow, #next-arrow {
 	text-indent: -9999px !important;
-	display: block;
+	@include display(block);
 	width: 20px;
 	height: 32px;
 }
@@ -112,7 +112,7 @@
 	padding: 20px 0;
 }
 .slider-nav a, .slider-nav-thumbs a, .slider-nav-wide a {
-	color: #969696;
+	color: lighten($bystl_blue_medium, 2%);
 	font-size: $baseFontSize;
 	text-shadow: -1px -1px 0 rgba($black, 0.5);
 	margin-left: 15px;

@@ -119,6 +119,7 @@ $outerSh: rgba($black, 0.35) !default;
   border-bottom-color: darken($bystl_blue_black, 15%); // should be 161616
   @include box-shadow(inset 0 1px 0 $insetBd, 0 1px 2px $outerSh);
   @include border-radius(5px);
+  color: lighten($bystl_blue_medium, 10%) !important;
 
   &:hover {
     
