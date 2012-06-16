@@ -85,12 +85,15 @@
   .navbar-fixed-top,
   .navbar-fixed-bottom, 
   .container-fluid .container-fluid, 
-  .container-fluid .header {
+  .container-fluid .header, .container-fluid #alternate, 
+  .container-fluid .footer, .container-fluid .small-footer {
     margin-left:  -#{$mobileGutter};
     margin-right: -#{$mobileGutter};
   }
   .container-fluid .container-fluid,
-  .container-fluid .header {
+  .container-fluid .header,
+  .container-fluid #alternate, 
+  .container-fluid .footer, .container-fluid .small-footer {
     padding-left: $mobileGutter !important;
     padding-right:  $mobileGutter !important;
   }

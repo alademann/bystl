@@ -18,15 +18,27 @@
 // For desktops
 .visible-phone     { display: none !important; }
 .visible-tablet    { display: none !important; }
+.visible-collapsedNavbar { display: none !important; }
 .visible-desktop   { } // Don't set initially
 .hidden-phone      { }
 .hidden-tablet     { }
 .hidden-desktop    { display: none !important; }
 
+// Retina / hi-res mobile displays
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 2) {
+
+  #{elements-of-type(block)}, #{elements-of-type(inline)}, #{elements-of-type(list-item)}, 
+  #{elements-of-type(table-cell)}, #{elements-of-type(html5)} {
+    text-rendering: optimizeLegibility;
+  }
+
+} // END @media hi-res / retina displays
+
 // Phones only
 @media (max-width: 767px) {
   // Show
   .visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
+  .visible-collapsedNavbar { display: inherit !important; }
   // Hide
   .hidden-phone      { display: none !important; }
   // Hide everything else
@@ -39,11 +51,13 @@
     background-color: transparent;
     border: 0 none;
     padding: 0;
+    @include box-shadow(none);
     // enlarge reading size
     p, ul, ol, li, a, td, th {
       font-size: $baseFontSize + 2;
       line-height: $baseLineHeight + 2;
     }
+    @include headingSize-generate($baseH1Size - 10, $headingRule - .2, $headingIncrement);
   }
 
 }

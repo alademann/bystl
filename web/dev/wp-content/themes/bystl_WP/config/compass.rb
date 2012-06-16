@@ -1,5 +1,5 @@
 # Require any additional compass plugins here.
-require "rgbapng"
+#require "rgbapng"
 
 # Set this to the root of your project when deployed:
 http_path = "/"
@@ -8,6 +8,8 @@ fonts_dir = "/fonts"
 sass_dir = "sass"
 images_dir = "img"
 javascripts_dir = "js"
+
+project_type = :stand_alone
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
@@ -20,7 +22,7 @@ javascripts_dir = "js"
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 # line_comments = false
 
-
+  asset_cache_buster :none
 
 
 # If you prefer the indented syntax, you might want to regenerate this

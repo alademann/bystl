@@ -114,7 +114,13 @@
 				font-size: pxtoem($headingBasis - ($headingBasis / $increment));
 			}
 		}
-		.h#{$i} { @extend h#{$i}; }
+		.h#{$i} { 
+      font-size: pxtoem($headingBasis); 
+      line-height: pxtoem($headingBasis * $lineheight); 
+      small {
+        font-size: pxtoem($headingBasis - ($headingBasis / $increment));
+      }
+    }
 		// next time it loops through, heading basis will be the next smallest.
 		$headingBasis: $headingBasis - ($headingBasis / $increment);
 	}

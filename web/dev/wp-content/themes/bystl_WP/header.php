@@ -7,8 +7,7 @@
 <!-- BEGIN head -->
 <head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <!-- Meta Tags -->
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
@@ -59,7 +58,10 @@
                 $bystl_tagline = get_option_tree('tagline_text');
                 $bystl_wds = explode(" ", $bystl_tagline);
             ?>
-              <a class="brand hidden-desktop" href="<?php bloginfo('url'); ?>"><strong><?php echo $bystl_wds[0] . ' ' . $bystl_wds[1]; ?></strong> <?php echo $bystl_wds[2]; ?> <?php echo $bystl_wds[3]; ?>
+              <a class="brand" href="<?php bloginfo('url'); ?>">
+                <img src="<?php echo get_bloginfo('template_url') ?>/img/bystl_header-logo_symbol_navbar.png" alt="BYSTL Logo" />
+                <span><strong><?php echo $bystl_wds[0] . ' ' . $bystl_wds[1]; ?></strong> <?php echo $bystl_wds[2]; ?> <?php echo $bystl_wds[3]; ?></span>
+                <i> bystl</i>
               </a>
             <?php } ?>
               <div class="nav-collapse">
@@ -119,7 +121,7 @@
                 <div class="logo-container span5">
 
                     <a class="logo" href="<?php bloginfo('url'); ?>">
-                        <img src="<?php echo get_option_tree('custom_logo_img') ?>" alt="BYSTL Logo" />
+                        <img src="<?php echo get_bloginfo('template_url') ?>/img/bystl_header-logo_symbol.png" alt="BYSTL Logo" />
                         <?php if (get_option_tree('tagline') == 'Yes') { ?>
 
                         <?php 
@@ -130,9 +132,10 @@
 
                             <?php if(is_home()) { echo "<h1>"; } else { echo "<span class='h1'>"; } ?><strong><?php echo $bystl_wds[0] . ' ' . $bystl_wds[1]; ?></strong> <?php echo $bystl_wds[2]; ?> <?php echo $bystl_wds[3]; ?>
                             <?php if(is_home()) { echo "</h1>"; } else { echo "</span>"; } ?>
+                            <i> bystl</i>
                         <?php }  ?>
                     </a>
-
+                    
                 </div>
 
                 <div class="menu-container span11">
@@ -154,12 +157,16 @@
                             }
                             
                         ?>
+                        <li class="testiphonelandscapelink"><a href="javascript:window.open('http://yogastlouis.com/dev/about/', '', 'width=320,height=480')">test iphone landscape</a></li>
                     </ul>
 
                  <?php wp_nav_menu(array('container' => false, 'menu_id' => 'main-nav', 'theme_location' => 'main_menu',  'menu_class' => 'sf-menu', 'echo' => true, 'before' => '', 'after' => '', 'link_before' => '', 'fallback_cb' => 'display_home2', 'link_after' => '', 'depth' => 0 )); ?>
                 </div>
 
+                <div class="clearFix"></div>
+
                 </div>
             </div>
 
-    </div>
+        </div>
+        <!-- END: header -->

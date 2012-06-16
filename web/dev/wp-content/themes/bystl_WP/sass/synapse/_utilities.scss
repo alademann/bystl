@@ -94,4 +94,11 @@ img, object, embed, video {
   @extend .container-fluid;
 }
 
+abbr {
+  font-size: inherit;
+  text-transform: none;
+  border-bottom: none;
+  cursor: inherit;
+}
+
 

@@ -10,6 +10,9 @@ $icoFont_name: "FontAwesome" !default;
 $logoFont_path: "bystl-logo-font/bystl-logo" !default; // FetteMittelSchrift-Regular
 $logoFont_name: "bystlLogoFont" !default;
 
+$headerLogoImg: image-url("bystl_header-logo_symbol.png", true);
+$navbarLogoImg: image-url("bystl_header-logo_symbol_navbar.png", true);
+
 /*  EMBED THE WEBFONTS
 ---------------------------------------------- */
 
@@ -27,10 +30,20 @@ $logoFont_name: "bystlLogoFont" !default;
   @include webfont($logoFont_name, "sans-serif");
 
   @if $symbol {
-    $logoImgW: image-width("bystl_header-logo_symbol.png") !default;
-    $logoImgH: image-height("bystl_header-logo_symbol.png") !default;
-    line-height: $logoImgH;
-    padding-left: $logoImgW + 10;
+    @if $style == "bw" { 
+      $logoImgW: image-width($navbarLogoImg) !default;
+      $logoImgH: image-height($navbarLogoImg) !default;
+      @debug "navbarImgW: #{$logoImgW}";
+      line-height: $logoImgH / 2;
+      padding-left: ($logoImgW  / 2) + 4;
+    } @else { 
+      $logoImgW: image-width($headerLogoImg) !default;
+      $logoImgH: image-height($headerLogoImg) !default;
+      @debug "headerImgW: #{$logoImgW}";
+      line-height: $logoImgH / 2;
+      padding-left: ($logoImgW / 2) + 10;
+    }
+    
   }
     text-transform: lowercase;
     letter-spacing: normal;
@@ -42,7 +55,7 @@ $logoFont_name: "bystlLogoFont" !default;
     
     white-space: nowrap;
     word-spacing: -3px;
-    > strong {
+    strong {
         // dark blue (the rest is light blue)
         word-spacing: -1px;
         font-weight: normal;

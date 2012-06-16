@@ -2,13 +2,29 @@
 //  - replace @ with $
 //  - replace . with @include for mixins
 
-// TABLETS AND BELOW
-// -----------------
-@media (max-width: 979px) {
+.navbar .brand { display: none; }
+
+
+@mixin collapsedNavBar {
+
+  // for BYSTL only: hide the .header logo, move logo to .brand in top navbar
+  .navbar .brand { 
+    display: block; 
+  }
+  .header { 
+    .logo-container { display: none !important; }
+    .menu-container { 
+      width: 100% !important;
+      .nav { 
+        float: left !important;
+      } 
+    }
+  }
 
   // UNFIX THE TOPBAR
   // ----------------
   // Remove any padding from the body
+  $navbarPadX: 5px !default;
   body {
     padding-top: 0;
   }
@@ -18,7 +34,7 @@
     //margin-bottom: $baseLineHeight;
   }
   .navbar-fixed-top .navbar-inner {
-    padding: 5px;
+    padding: $navbarPadX;
   }
   .navbar .container {
     width: auto;
@@ -26,34 +42,22 @@
   }
   // Account for brand name
   .navbar .brand {
-    padding-left: 10px;
-    padding-right: 10px;
-    //margin: 0 0 0 -5px;
+    margin-left: 0;
+    padding: 0;
+    left: $navbarPadX;
     
-    @include bystlLogoFont(false, "bw");
-
-    @include centerBrandNameVertically(26px); // pass the font size
-    word-spacing: normal;
-    > strong { word-spacing: normal; }
+    span, i {
+      @include bystlLogoFont(true, "bw");
+      font-size: 26px;
+      //@include centerBrandNameVertically(26px); // pass the font size
+      word-spacing: normal;
+      > strong { word-spacing: normal; }
+    }
 
   }
 
   // update the adjacent div since its no longer static
   #pageWrapper { margin-top: 0; }
-
-  // update the two-tier nav system
-  // so that the logo moves into the brand area of top navbar
-  // and the header is completely reserved for second tier stuff
-  .header {
-    // reduce height since logo is no longer embedded here
-    padding-top: 15px;
-    padding-bottom: 15px; 
-    .menu-container { width: 100% !important; 
-    }
-    .logo-container {
-      display: none !important;
-    }
-  } // END .header
 
 
   // COLLAPSIBLE NAVBAR
@@ -161,7 +165,54 @@
     padding-left:  10px;
     padding-right: 10px;
   }
+
+} // END @mixin collapsedNavBar
+
+@mixin smallerHeaderLogo {
+
+  .header {
+    padding-top: 15px;
+    padding-bottom: 15px; 
+    .logo h1, .logo .h1 {
+      display: none;
+    }
+    .logo i {
+      display: block;
+    }
+  }
+
+} // END @mixin smallerHeaderLogo
+
+@mixin smallerNavbarLogo {
+
+  .navbar .brand {
+    span { display: none; }
+    i { display: block; }
+  }
+
+} // END @mixin smallerNavbarLogo
+
+
+// TABLETS AND BELOW
+// -----------------
+@media (max-width: 979px) {
+  @include smallerHeaderLogo;
+} // END TABLETS AND BELOW @media (max-width: 979px)
+
+// PHONES ONLY
+// -----------------
+@media (max-width: 767px) {
+  @include collapsedNavBar;
+} // END PHONES ONLY @media (max-width: 767px)
+
+// PHONES ONLY (PORTRAIT)
+// -----------------------
+@media (max-width: 320px) {
+  @include smallerNavbarLogo;
+  .testiphonelandscapelink { display: none; }
+  .header { padding-bottom: 0 !important; } // this is a strange bug... possibly has something to do with needing a clear both
 }
+
 
 
 // DEFAULT DESKTOP

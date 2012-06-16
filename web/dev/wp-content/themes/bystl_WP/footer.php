@@ -1,3 +1,15 @@
+<?php if(function_exists('bcn_display')) { ?>
+<div class="container-fluid visible-collapsedNavbar">
+    <div class="row-fluid">
+        <div id="crumbs" class="span16">
+            <ul class="breadcrumb">
+                <?php bcn_display(); ?>
+            </ul>
+        </div>
+    </div>
+</div>
+<?php } ?>
+
  <div id="alternate">
 
     <div class="container-fluid">
@@ -59,6 +71,7 @@
     head.ready("jquery", function(){
 
         head.js(
+            {iosOrientation:"<?php echo get_bloginfo('template_url').'/js/ios-orientationchange-fix.js'; ?>" },
             {cycle:         "<?php echo get_bloginfo('template_url').'/js/jquery.cycle.all.js'; ?>"},
             {easing:        "<?php echo get_bloginfo('template_url').'/js/jquery.easing.1.3.js'; ?>"},
             {twitter:       "<?php echo get_bloginfo('template_url').'/js/twitter.js'; ?>"},
