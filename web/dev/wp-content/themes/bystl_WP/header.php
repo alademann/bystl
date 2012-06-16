@@ -157,7 +157,7 @@
                             }
                             
                         ?>
-                        <li class="testiphonelandscapelink"><a href="javascript:window.open('http://yogastlouis.com/dev/about/', '', 'width=320,height=480')">test iphone landscape</a></li>
+                        <!--<li class="testiphonelandscapelink"><a href="javascript:window.open('http://yogastlouis.com/dev/about/', '', 'width=320,height=480')">test iphone landscape</a></li>-->
                     </ul>
 
                  <?php wp_nav_menu(array('container' => false, 'menu_id' => 'main-nav', 'theme_location' => 'main_menu',  'menu_class' => 'sf-menu', 'echo' => true, 'before' => '', 'after' => '', 'link_before' => '', 'fallback_cb' => 'display_home2', 'link_after' => '', 'depth' => 0 )); ?>
