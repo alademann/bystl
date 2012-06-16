@@ -13,7 +13,7 @@
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
 <!-- Title -->
-<title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
+<title><?php wp_title('|', true, 'right'); ?></title>
 
 <!-- Stylesheets -->
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
@@ -151,9 +151,9 @@
                                 }
                             }
                             if(is_subpage()){
-                                wp_list_pages('title_li=&child_of='.$post->post_parent);     
+                                wp_list_pages('post_status=publish&title_li=&child_of='.$post->post_parent);     
                             } else {
-                                wp_list_pages('title_li=&child_of='.$post->ID); 
+                                wp_list_pages('post_status=publish&title_li=&child_of='.$post->ID); 
                             }
                             
                         ?>
