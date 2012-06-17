@@ -1,5 +1,5 @@
 <?php if(function_exists('bcn_display')) { ?>
-<div class="container-fluid visible-collapsedNavbar">
+<div class="container-fluid">
     <div class="row-fluid">
         <div id="crumbs" class="span16">
             <ul class="breadcrumb">
