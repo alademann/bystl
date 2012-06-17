@@ -7,15 +7,17 @@
 
 /*	HEADINGS, PARAGRAPHS, EMPHASIS, ETC
 ---------------------------------------------- */
-h2 {
-	margin-bottom: 10px;
-} // END <h2>
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	text-shadow: 1px 1px rgba($white, 0.8);
+}
+
 
 h3 {
 
 	.widget & {
 		//border-bottom: 1px solid darken(#3e536b, 15%);
-		margin-bottom: 15px;
+		//margin-bottom: 15px;
 		//padding-bottom: 7px;
 		color: $white;
 		text-shadow: 1px 1px 0 rgba($black, 0.5);
@@ -26,17 +28,21 @@ h3 {
 	} // END .sidebar .blog-widget <h3>
 
 	.footer & {
-		border-bottom: 1px solid #c9c9c9;
+		border-bottom: 1px solid #3e536b;
 		padding-bottom: 5px;
-		margin-bottom: 20px;
+		//margin-bottom: 20px;
 	} // END .footer <h3>
 
 } // END <h3>
 
 p {
 	text-shadow: 1px 1px rgba($white, 0.8);
-	color: $gray;
+	color: $bystl_brown_almstBlk;
 	font-size: $baseFontSize;
+
+	strong, b {
+		color: $bystl_brown_black;
+	}
 
 	.page-content & {
 		text-shadow: none;

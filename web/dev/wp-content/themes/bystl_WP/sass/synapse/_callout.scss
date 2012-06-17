@@ -1,4 +1,4 @@
-foo/*----------------------------------------------
+/*----------------------------------------------
 
 	PARTIAL:	_callout.scss
 	PARENT:		_theme-synapse.scss
@@ -13,19 +13,19 @@ foo/*----------------------------------------------
 	@include border-radius(5px);
 	@include box-shadow(0 1px 1px rgba($black, 0.15));
 	////max-width: 890px;
-	width: 100%;
+	width: auto;
 	margin-bottom: 40px;
-}
-.callout{   /* IE7 */
 	@include ie7(margin-top, 130px);
+
+	h3, .h3 {
+		font-size: 18px;
+	}
 }
-.callout p {
-	color: #686868;
-}
+
 .callout-info {
 	float: left;
 	////max-width: 630px;
-	width: 100%;
+	width: auto;
 }
 .callout .big-btn {
 	float: right;

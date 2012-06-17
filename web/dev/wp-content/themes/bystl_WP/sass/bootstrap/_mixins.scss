@@ -108,17 +108,21 @@
 
 	@for $i from 1 through 6 {
 		h#{$i} { 
-			font-size: pxtoem($headingBasis); 
-			line-height: pxtoem($headingBasis * $lineheight); 
+			font-size: #{round($headingBasis)}px; 
+			line-height: #{round($headingBasis * $lineheight)}px; 
+      margin-bottom: #{round($headingBasis / 2)}px;
 			small {
-				font-size: pxtoem($headingBasis - ($headingBasis / $increment));
+				font-size: #{round($headingBasis - ($headingBasis / $increment))}px;
+        margin-bottom: #{round(($headingBasis - ($headingBasis / $increment)) / 2)}px;
 			}
 		}
 		.h#{$i} { 
-      font-size: pxtoem($headingBasis); 
-      line-height: pxtoem($headingBasis * $lineheight); 
+      font-size: #{round($headingBasis)}px; 
+      line-height: #{round($headingBasis * $lineheight)}px; 
+      margin-bottom: #{round($headingBasis / 2)}px;
       small {
-        font-size: pxtoem($headingBasis - ($headingBasis / $increment));
+        font-size: #{round($headingBasis - ($headingBasis / $increment))}px;
+        margin-bottom: #{round(($headingBasis - ($headingBasis / $increment)) / 2)}px;
       }
     }
 		// next time it loops through, heading basis will be the next smallest.
