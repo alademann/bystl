@@ -80,7 +80,7 @@
             {isotope:       "<?php echo get_bloginfo('template_url').'/js/jquery.isotope.min.js'; ?>"},
             {backstretch:   "<?php echo get_bloginfo('template_url').'/js/jquery.backstretch.min.js'; ?>"},
             {prettifyCode:  "<?php echo get_bloginfo('template_url').'/js/prettify/prettify.js'; ?>"},
-            {bootstrap:     "<?php echo get_bloginfo('template_url').'/js/bootstrap/bootstrap.js'; ?>"}
+            {bootstrap:     "<?php echo get_bloginfo('template_url').'/js/bootstrap/bootstrap.min.js'; ?>"}
         );
 
         
