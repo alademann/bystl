@@ -131,7 +131,8 @@ require_once TEMPLATEPATH . '/includes/comment-list.php';
 // Register our custom image sizes
 // add_image_size( $name, $width, $height, $crop ); 
 if ( function_exists( 'add_image_size' ) ) {
-	add_image_size( 'slider-wide', 940, 330, true );
+  add_image_size('full-screen', 980, 652, false);
+	add_image_size('slider-wide', 940, 500, true ); // was 330 originally
 	add_image_size('slider-thumb', 45, 45, true );
 }
 
