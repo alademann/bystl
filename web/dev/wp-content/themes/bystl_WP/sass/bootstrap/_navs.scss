@@ -132,14 +132,14 @@
   padding-bottom: 8px;
   margin-top: 2px;
   margin-bottom: 2px;
-  @include tb_border-radius(5px);
+  @include border-radius(5px);
 }
 
 // Active state
 .nav-pills .active > a,
 .nav-pills .active > a:hover {
   color: $white;
-  background-color: $linkColor;
+  background-color: $navbarBackgroundHighlight;
 }
 
 
@@ -194,7 +194,7 @@
   border-width: 1px;
 }
 .nav-pills .dropdown-menu {
-  @include tb_border-radius(4px);
+  @include border-radius(4px);
 }
 
 // Default dropdown links
@@ -237,7 +237,7 @@
 .nav .open.active .caret,
 .nav .open a:hover .caret {
   border-top-color: $white;
-  @include opacity(100);
+  @include opacity(1);
 }
 
 // Dropdowns in stacked tabs

@@ -39,9 +39,9 @@
 	@include border-radius(5px);
 }
 .article-meta {
-	background: #7f7f7f; /* Old browsers */
-	@include background-image(linear-gradient(#7f7f7f, #a0a0a0));
-	@include filter-gradient(#7f7f7f, #a0a0a0);
+	background: #73797e; /* Old browsers */
+	@include background-image(linear-gradient(#73797e, #90979f));
+	@include filter-gradient(#73797e, #90979f);
 	@include border-radius(5px);
 	@include box-shadow(inset 0 1px 1px rgba($black, 0.4));
 	padding: 11px 15px 10px 15px;

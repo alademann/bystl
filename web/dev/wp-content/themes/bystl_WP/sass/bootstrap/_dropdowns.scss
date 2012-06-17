@@ -37,7 +37,6 @@ summary::-webkit-details-marker {
 }
 .caret {
 	@include opacity(.3);
-  @include transition(opacity .1s ease-in);
   content: "\2193";
 	font-family: $baseFontFamily;
 }
@@ -64,13 +63,10 @@ summary::-webkit-details-marker {
   padding: 4px 0;
   margin: 0; // override default ul
   list-style: none;
-  background-color: $white;
-  border-color: darken($grayLighterD, 5);
-  border-color: rgba($black,.2);
-  border-style: solid;
-  border-width: 1px;
+  background-color: $dropdownBackground;
+  border: 1px solid $dropdownBorder;
   @include tb_border-radius(0 0 5px 5px);
-  @include tb_box-shadow(0 5px 10px rgba($black, 0.2));
+  @include tb_box-shadow(0 5px 10px rgba($bystl_brown_black, 0.3));
 	@include tb_background-clip(padding-box);
 	@include ie7(border-right-width, 2px);
 	@include ie7(border-bottom-width, 2px);
@@ -87,8 +83,8 @@ summary::-webkit-details-marker {
     height: 1px;
     margin: 5px 1px;
     overflow: hidden;
-    background-color: #e5e5e5;
-    border-bottom: 1px solid $white;
+    background-color: $e5e5e5;
+    border-bottom: 1px solid $dropdownBackground;
 
     // IE7 needs a set width since we gave a height. Restricting just
     // to IE7 to keep the 1px left/right space in other browsers.
@@ -106,7 +102,7 @@ summary::-webkit-details-marker {
     clear: both;
     font-weight: normal;
     line-height: $baseLineHeight;
-    color: $gray;
+    color: $dropdownLinkColor;
     white-space: nowrap;
   }
 }
@@ -115,9 +111,9 @@ summary::-webkit-details-marker {
 .dropdown-menu li > a:hover,
 .dropdown-menu .active > a,
 .dropdown-menu .active > a:hover {
-  color: $white !important;
+  color: $dropdownLinkColorHover !important;
   text-decoration: none;
-  background-color: $linkColor;
+  background-color: $dropdownLinkBackgroundHover;
 }
 
 // Open state for the dropdown
@@ -134,7 +130,6 @@ summary::-webkit-details-marker {
   }
   .dropdown-menu {
     display: block;
-    @include opacity(1);
   }
 }
 

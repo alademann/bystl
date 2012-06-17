@@ -48,7 +48,8 @@
 .content-slider {
 	padding-bottom: 20px;
 	position: relative;
-	max-height: 315px;
+	//max-height: 315px;
+	height: auto;
 	background: none !important;
 	overflow: hidden;
 }
@@ -79,26 +80,22 @@
 }
 #slider {
 	position: relative;
-	margin-bottom: 428px;
+	margin-bottom: 428px; // TODO: need a way for this to be automatic
 }
 #slider-thumbs {
 	position: relative;
-	margin-bottom: 465px;
+	margin-bottom: 465px; // TODO: need a way for this to be automatic
 }
 .slider-nav, .slider-nav-thumbs, .slider-nav-wide {
-	background: $bystl_blue_navy; // old browsers
-	@include background(linear-gradient($bystl_blue_navy, $bystl_blue_black));
-	@include filter-gradient($bystl_blue_black, $bystl_blue_navy);
-	text-align: center;
-	border: 1px solid #1f1f1f;
-	@include box-shadow(inset 0 1px 0 rgba($white, 0.3), 0 1px 2px rgba($black, 0.7));
-	@include border-radius(0 0 5px 5px);
-	position: absolute;
 	z-index: 2;
-	bottom: -388px;
+	position: absolute;
+	bottom: -388px; // need this to be dynamic
 	left: 0;
 	//max-width: 618px;
 	width: 100%;
+	text-align: center;
+	@include darkBlueWidget(0.7);
+	@include border-top-radius(0); // flat on top (override mixin)
 }
 .slider-nav-thumbs {
 	bottom: -426px;

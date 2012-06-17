@@ -56,7 +56,7 @@
   // Website or project name
   .brand {
     float: left;
-    margin-left: -20px; // negative indent to left-align the text down the page
+    margin-left: -#{$mobileGutter}; // negative indent to left-align the text down the page
     display: block;
     font-weight: 200;
     line-height: 1;
@@ -215,11 +215,11 @@
   float: none;
   // Vertically center the text given $navbarHeight
   $elementHeight: 20px;
-  padding: (($navbarHeight - $elementHeight) / 2 - 1) 10px (($navbarHeight - $elementHeight) / 2 + 1);
-  line-height: 19px;
+  padding: (($navbarHeight - $elementHeight) / 2) $navbarLinkPadX (($navbarHeight - $elementHeight) / 2 + 1);
+  line-height: $elementHeight - 1;
   color: $navbarLinkColor;
   text-decoration: none;
-  text-shadow: 0 -1px 0 rgba($black,.25);
+  text-shadow: 0 -1px 0 rgba($bystl_brown_black, 0.8);
 }
 // Buttons
 $btnPadBasis: 8px;
@@ -234,12 +234,13 @@ $btnPadBasis: 8px;
   // Vertically center the button given @navbarHeight
   $elementHeight: 28px;
   $topMargin: ($navbarHeight - $elementHeight) / 2 - 1;
-  $bottomMargin: ($navbarHeight - $elementHeight) / 2;
+  $bottomMargin: ($navbarHeight - $elementHeight) / 2 - 1;
   margin: $topMargin 5px $bottomMargin;
   line-height: $baseLineHeight;
 
   color: $navbarLinkColor;
-  text-shadow: 0 1px 1px darken($navbarBackground, 5%);
+  text-shadow: 0 -1px 0 rgba($bystl_brown_black,.25); // should match .nav > li > a style
+  //text-shadow: 0 1px 1px darken($navbarBackground, 5%);
   &:hover {
     color: $navbarLinkColorHover;
   }
@@ -247,7 +248,7 @@ $btnPadBasis: 8px;
   [class^="icon-"]:before,
   [class*=" icon-"]:before {
     color: inherit;
-    @include opacity(.8);
+    @include opacity(.7);
     font-size: $baseFontSize + 4;
     text-shadow: inherit;
     &:hover {
@@ -336,32 +337,54 @@ $btnPadBasis: 8px;
 
 // Menu position and menu carets
 .navbar .dropdown-menu {
+  // we don't want the main navbar dropdown to look like the regular button dropdowns.
+  // we want it to look like the big dropdown does when the hidden navbar is responsive
+  //@include background-image(linear-gradient($navbarLinkBackgroundActive, $navbarBackground));
+  background: $navbarLinkBackgroundActive;
+  margin-top: -1px;
+  border: 1px solid $navbarBackground; // old browsers
+  border: 1px solid rgba($navbarBackground, 0.8);
+  padding: 5px 0;
+
+  li a {
+    color: $navbarText;
+    text-shadow: 0 -1px 0 rgba($bystl_brown_black, 0.8);
+    padding: 5px 15px;
+  }
+
+  li.active a, li a:hover, li.active a:hover {
+    color: $white;
+    background: $navbarLinkBackgroundHover; 
+  }
+
   &:before {
     content: '';
     display: inline-block;
     border-left:   7px solid transparent;
     border-right:  7px solid transparent;
-    border-bottom: 7px solid #ccc;
-    border-bottom-color: $dropdownBorder;
+    border-bottom: 7px solid $ccc;
+    border-bottom-color: $navbarBackgroundHighlight;
     position: absolute;
     top: -7px;
     left: 9px;
+    display: none;
   }
   &:after {
     content: '';
     display: inline-block;
     border-left:   6px solid transparent;
     border-right:  6px solid transparent;
-    border-bottom: 6px solid $dropdownBackground;
+    border-bottom: 6px solid $navbarBackground;
     position: absolute;
     top: -6px;
     left: 10px;
+    display: none;
   }
 }
 // Menu position and menu caret support for dropups via extra dropup class
 .navbar-fixed-bottom .dropdown-menu {
   &:before {
-    border-top: 7px solid #ccc;
+    border-top: 7px solid $ccc;
     border-top-color: $dropdownBorder;
     border-bottom: 0;
     bottom: -7px;
@@ -381,14 +404,14 @@ $btnPadBasis: 8px;
   border-bottom-color: $white;
 }
 .navbar .nav li.dropdown.active .caret {
-  @include tb_opacity(100);
+  @include opacity(1);
 }
 
 // Remove background color from open dropdown
-.navbar .nav li.dropdown.open > .dropdown-toggle,
-.navbar .nav li.dropdown.open.active > .dropdown-toggle {
-  background-color: transparent;
-}
+// .navbar .nav li.dropdown.open > .dropdown-toggle,
+// .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+//   background-color: transparent;
+// }
 
 // Dropdown link on hover
 .navbar .nav li.dropdown.active > .dropdown-toggle:hover {
@@ -403,10 +426,10 @@ $btnPadBasis: 8px;
   right: 0;
   &:before {
     left: auto;
-    right: 12px;
+    right: $navbarLinkPadX - 4; // line up with the caret
   }
   &:after {
     left: auto;
-    right: 13px;
+    right: $navbarLinkPadX - 3;
   }
 }

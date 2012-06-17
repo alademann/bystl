@@ -131,7 +131,7 @@ ul.btn-group {
 }
 .btn:hover .caret,
 .open.btn-group .caret {
-  @include opacity(100);
+  @include opacity(1);
 }
 
 
@@ -142,7 +142,7 @@ ul.btn-group {
 .btn-success {
   .caret {
     border-top-color: $white;
-    @include opacity(75);
+    @include opacity(0.75);
   }
 }
 

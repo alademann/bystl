@@ -45,7 +45,7 @@
 	background: url(image-url("top-bar-shadow.png", true)) top left repeat-x $white;
 	padding-top: 30px; // this is changed according to @media query in _responsive-navbar.scss
     padding-bottom: 30px;
-    @include box-shadow(0 0 2px rgba($black, 0.35));
+    @include box-shadow(0 0 2px rgba($bystl_brown_black, 0.55));
 
     &.mobile {
         background-image: none;
