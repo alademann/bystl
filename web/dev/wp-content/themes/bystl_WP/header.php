@@ -94,7 +94,7 @@ if(is_subpage()){
 
 <!-- BEGIN body -->
 <body class="<?php body_class_alt(); ?> <?php echo $colorSchemeClass; ?>">
-
+    <?php wp_reset_query(); ?>
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
 
@@ -205,7 +205,8 @@ if(is_subpage()){
                         }
                     ?>
                     <!-- TODO: For mobile, instead of making them all buttons... make them part of a dropdown (maybe within the breadcrumb???) basically, we wantthe H1 to be much more clear at the top on mobile - instead of having a cluster of buttons. -->
-                    <ul class="<?php if(!$is_mobile){ echo 'nav nav-pills pull-right'; } else { echo 'btn-group hide'; }?> ">  
+                    <?php if(!is_home() && !is_front_page()){ ?>
+                    <ul class="<?php if(!$is_mobile){ echo 'nav nav-pills pull-right'; } else { echo 'hide'; }?> ">  
                         <?php
                             if(is_subpage()){
                                 //wp_list_pages('post_status=publish&title_li=&include='.$post->post_parent);
@@ -217,6 +218,7 @@ if(is_subpage()){
                         ?>
                         <!--<li class="testiphonelandscapelink"><a href="javascript:window.open('http://yogastlouis.com/dev/about/', '', 'width=320,height=480')">test iphone landscape</a></li>-->
                     </ul>
+                    <?php } ?>
 
                  <!--<php wp_nav_menu(array('container' => false, 'menu_id' => 'main-nav', 'theme_location' => 'main_menu',  'menu_class' => 'sf-menu', 'echo' => true, 'before' => '', 'after' => '', 'link_before' => '', 'fallback_cb' => 'display_home2', 'link_after' => '', 'depth' => 0 )); ?>-->
                 </div>

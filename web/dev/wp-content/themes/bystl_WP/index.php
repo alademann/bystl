@@ -1,3 +1,4 @@
+<?php $is_home = "true"; ?>
 <?php get_header(); ?>
 
 <?php if (get_option_tree('slider_onoff') == 'Yes') { ?>
