@@ -12,6 +12,51 @@
 <!-- Meta Tags -->
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
+<?php
+
+// aaronl custom stuff
+// Simple browser detection
+$is_lynx = $is_gecko = $is_winIE = $is_macIE = $is_opera = $is_NS4 = $is_safari = $is_chrome = $is_iphone = $is_mobile = false;
+
+if ( isset($_SERVER['HTTP_USER_AGENT']) ) {
+  if ( strpos($_SERVER['HTTP_USER_AGENT'], 'Lynx') !== false ) {
+    $is_lynx = true;
+  } elseif ( stripos($_SERVER['HTTP_USER_AGENT'], 'chrome') !== false ) {
+    if ( stripos( $_SERVER['HTTP_USER_AGENT'], 'chromeframe' ) !== false ) {
+      if ( $is_chrome = apply_filters( 'use_google_chrome_frame', is_admin() ) )
+        header( 'X-UA-Compatible: chrome=1' );
+      $is_winIE = ! $is_chrome;
+    } else {
+      $is_chrome = true;
+    }
+  } elseif ( stripos($_SERVER['HTTP_USER_AGENT'], 'safari') !== false ) {
+    $is_safari = true;
+  } elseif ( strpos($_SERVER['HTTP_USER_AGENT'], 'Gecko') !== false ) {
+    $is_gecko = true;
+  } elseif ( strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false && strpos($_SERVER['HTTP_USER_AGENT'], 'Win') !== false ) {
+    $is_winIE = true;
+  } elseif ( strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false && strpos($_SERVER['HTTP_USER_AGENT'], 'Mac') !== false ) {
+    $is_macIE = true;
+  } elseif ( strpos($_SERVER['HTTP_USER_AGENT'], 'Opera') !== false ) {
+    $is_opera = true;
+  } elseif ( strpos($_SERVER['HTTP_USER_AGENT'], 'Nav') !== false && strpos($_SERVER['HTTP_USER_AGENT'], 'Mozilla/4.') !== false ) {
+    $is_NS4 = true;
+  }
+}
+
+if(stripos($_SERVER['HTTP_USER_AGENT'], 'mobile') !== false) {
+  $is_mobile = true;
+}
+
+if ( $is_safari && $is_mobile ) {
+  $is_iphone = true;
+}
+
+$is_IE = ( $is_macIE || $is_winIE );
+// end aaronl custom stuff
+
+?>
+
 <?php 
 if(is_subpage()){
     $parent_title = get_the_title($post->post_parent);
@@ -48,14 +93,14 @@ if(is_subpage()){
 </head>
 
 <!-- BEGIN body -->
-<body class="<?php body_class_alt(); ?> <?php echo $colorSchemeClass; ?>" onload="prettyPrint()">
+<body class="<?php body_class_alt(); ?> <?php echo $colorSchemeClass; ?>">
 
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
 
             <div class="container-fluid">
 
-              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <a class="btn btn-navbar mainmenu" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -75,17 +120,17 @@ if(is_subpage()){
               </a>
             <?php } ?>
 
-            <!-- <div class="btn-group" data-no-collapse="true"> -->
+            <div id="socialNavbar" class="pull-right" data-no-collapse="true">
                 <?php if (get_option_tree('twitter_icon') == 'Yes') { ?>
-                <a class="btn btn-navbar" href="https://twitter.com/<?php echo get_option_tree('twitter_url') ?>"><span class="icon-twitter-sign icon-only"></span></a>
+                <a class="btn btn-navbar" href="https://twitter.com/<?php echo get_option_tree('twitter_url') ?>"><span class="icon-twitter icon-only"></span></a>
                 <?php } ?><?php if (get_option_tree('facebook_icon') == 'Yes') { ?>
-                <a class="btn btn-navbar" href="<?php echo get_option_tree('facebook_url') ?>"><span class="icon-facebook-sign icon-only"></span></a>
+                <a class="btn btn-navbar" href="<?php echo get_option_tree('facebook_url') ?>"><span class="icon-facebook icon-only"></span></a>
                 <?php } ?><?php if (get_option_tree('phone_icon') == 'Yes') { ?>
                 <a class="btn btn-navbar" href="<?php echo site_url() . get_option_tree('phone_url') ?>"><span class="icon-phone icon-only"></span></a>
                 <?php } ?><?php if (get_option_tree('mail_icon') == 'Yes') { ?>
                 <a class="btn btn-navbar" href="<?php echo site_url() . get_option_tree('mail_url') ?>"><span class="icon-envelope icon-only"></span></a>
                 <?php } ?>
-            <!-- </div> -->
+            </div>
 
               <div class="nav-collapse">
 
@@ -124,7 +169,7 @@ if(is_subpage()){
     <!-- END: navbar -->
     <div class="container-fluid" id="pageWrapper">
 
-        <div class="header">
+        <div class="header <?php if($is_mobile){ echo 'mobile'; } ?>">
             <div class="container-fluid">
                 <div class="row-fluid">
 
@@ -149,17 +194,19 @@ if(is_subpage()){
                 </div>
 
                 <div class="menu-container span11">
-
-                    <ul class="nav nav-pills pull-right">
-                        <?php 
-                            function is_subpage(){
-                                global $post;
-                                if(is_page() && $post->post_parent){
-                                    return $post->post_parent;
-                                } else {
-                                    return false;
-                                }
+                    <?php 
+                        function is_subpage(){
+                            global $post;
+                            if(is_page() && $post->post_parent){
+                                return $post->post_parent;
+                            } else {
+                                return false;
                             }
+                        }
+                    ?>
+                    <!-- TODO: For mobile, instead of making them all buttons... make them part of a dropdown (maybe within the breadcrumb???) basically, we wantthe H1 to be much more clear at the top on mobile - instead of having a cluster of buttons. -->
+                    <ul class="<?php if(!$is_mobile){ echo 'nav nav-pills pull-right'; } else { echo 'btn-group hide'; }?> ">  
+                        <?php
                             if(is_subpage()){
                                 //wp_list_pages('post_status=publish&title_li=&include='.$post->post_parent);
                                 wp_list_pages('post_status=publish&title_li=&child_of='.$post->post_parent);     
@@ -171,7 +218,7 @@ if(is_subpage()){
                         <!--<li class="testiphonelandscapelink"><a href="javascript:window.open('http://yogastlouis.com/dev/about/', '', 'width=320,height=480')">test iphone landscape</a></li>-->
                     </ul>
 
-                 <?php wp_nav_menu(array('container' => false, 'menu_id' => 'main-nav', 'theme_location' => 'main_menu',  'menu_class' => 'sf-menu', 'echo' => true, 'before' => '', 'after' => '', 'link_before' => '', 'fallback_cb' => 'display_home2', 'link_after' => '', 'depth' => 0 )); ?>
+                 <!--<php wp_nav_menu(array('container' => false, 'menu_id' => 'main-nav', 'theme_location' => 'main_menu',  'menu_class' => 'sf-menu', 'echo' => true, 'before' => '', 'after' => '', 'link_before' => '', 'fallback_cb' => 'display_home2', 'link_after' => '', 'depth' => 0 )); ?>-->
                 </div>
 
                 <div class="clearFix"></div>

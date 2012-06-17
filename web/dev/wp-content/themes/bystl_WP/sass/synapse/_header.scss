@@ -46,6 +46,19 @@
 	padding-top: 30px; // this is changed according to @media query in _responsive-navbar.scss
     padding-bottom: 30px;
     @include box-shadow(0 0 2px rgba($black, 0.35));
+
+    &.mobile {
+        background-image: none;
+        background-color: transparent;
+        padding-top: 10px;
+        padding-bottom: 0;
+        @include box-shadow(none);
+
+        .menu-container .btn-group li[class*='current'] {  
+            display: none !important;
+        }
+
+    }
 }
 .logo-container {
     float: left;

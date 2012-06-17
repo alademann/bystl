@@ -41,23 +41,23 @@
   }
   // Move over buttons in .form-actions to align with .controls
   .form-horizontal .form-actions {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: $mobileGutter / 2;
+    padding-right: $mobileGutter / 2;
   }
 
   // Modals
   .modal {
     position: absolute;
-    top:   10px;
-    left:  10px;
-    right: 10px;
+    top:   $mobileGutter / 2;
+    left:  $mobileGutter / 2;
+    right: $mobileGutter / 2;
     width: auto;
     margin: 0;
     &.fade.in { top: auto; }
   }
   .modal-header .close {
-    padding: 10px;
-    margin: -10px;
+    padding: $mobileGutter / 2;
+    margin: -#{$mobileGutter / 2};
   }
 
   // Carousel
@@ -74,7 +74,6 @@
 
 @media (max-width: 767px) {
 
-  $mobileGutter: 20px !default;
   // Padding to set content in a bit
   body {
     padding-left: $mobileGutter;
@@ -97,11 +96,18 @@
     padding-left: $mobileGutter !important;
     padding-right:  $mobileGutter !important;
   }
-  .container-fluid .page-container.row-fluid { 
-    margin-left: 0; 
-    margin-right: 0;
+  .container-fluid .page-container.row-fluid,
+  .container-fluid .header.mobile, 
+  .container-fluid .header.mobile .container-fluid { 
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+  .container-fluid .page-container.row-fluid,
+  .container-fluid .header.mobile .container-fluid {
+    margin-left: 0; 
+    margin-right: 0;
+  }
+  .container-fluid .page-container.row-fluid {
     margin-top: $navbarHeight / 2;
   }
   // Remove padding on container given explicit padding set on body

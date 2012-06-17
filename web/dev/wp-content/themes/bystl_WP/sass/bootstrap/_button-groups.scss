@@ -26,20 +26,36 @@
   }
 }
 
+ul.btn-group {
+  margin: 0;
+  padding: 0;
+}
+.btn-group li {
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.btn-group li a { @extend .btn; }
+.btn-group li[class*='current'] a { @extend .btn.active; }
 // Float them, remove border radius, then re-add to first and last elements
-.btn-group .btn {
+.btn-group .btn,
+.header .btn-group li a,
+.header .btn-group li a:first-child,
+.header .btn-group li a:last-child {
   position: relative;
   float: left;
-  margin-left: -1px;
-  @include tb_border-radius(0);
+  margin-left: -1px !important;
+  @include border-radius(0);
 }
 // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
-.btn-group .btn:first-child {
-  margin-left: 0;
+.btn-group .btn:first-child,
+.header .btn-group li:first-child a {
+  margin-left: 0 !important;
 	@include border-corner-radius(top, left, 4px);
 	@include border-corner-radius(bottom, left, 4px);
 }
 .btn-group .btn:last-child,
+.header .btn-group li:last-child a,
 .btn-group .dropdown-toggle {
 	@include border-corner-radius(top, right, 4px);
 	@include border-corner-radius(bottom, right, 4px);
@@ -60,7 +76,12 @@
 .btn-group .btn:hover,
 .btn-group .btn:focus,
 .btn-group .btn:active,
-.btn-group .btn.active {
+.btn-group .btn.active,
+.btn-group li a:hover,
+.btn-group li a:focus,
+.btn-group li a:active,
+.btn-group .active a,
+.btn-group [class*='current'] a {
   z-index: 2;
 }
 

@@ -101,9 +101,9 @@ $headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontF
 $headingsFontWeight:    bold !default;    // instead of browser default, bold
 $headingsColor:         inherit !default; // empty to use BS default, $textColor
 
-$baseH1Size:            40 !default;
-$baseH1Size_px:         pxtoem($baseH1Size);
-$headingRule:           1.2;
+$baseH1Size:            32 !default;
+$baseH1Size_px:         #{$baseH1Size}px;
+$headingRule:           1.0;
 $headingIncrement:      5;
 
 // Tables

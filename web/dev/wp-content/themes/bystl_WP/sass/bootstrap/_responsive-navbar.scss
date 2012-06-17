@@ -3,9 +3,15 @@
 //  - replace . with @include for mixins
 
 .navbar .brand { display: none; }
-
+#socialNavbar { 
+  float: left !important;
+}
 
 @mixin collapsedNavBar {
+
+  #socialNavbar {
+    float: right !important;
+  }
 
   // for BYSTL only: hide the .header logo, move logo to .brand in top navbar
   .navbar .brand { 
@@ -24,7 +30,6 @@
   // UNFIX THE TOPBAR
   // ----------------
   // Remove any padding from the body
-  $navbarPadX: 5px !default;
   body {
     padding-top: 0;
   }
@@ -62,108 +67,141 @@
 
   // COLLAPSIBLE NAVBAR
   // ------------------
-  // Nav collapse clears brand
-  .nav-collapse {
-    clear: both;
-  }
-  // Block-level the nav
-  .nav-collapse .nav {
-    float: none;
-    margin: 0 0 ($baseLineHeight / 2);
-  }
-  .nav-collapse .nav > li {
-    float: none;
-  }
-  .nav-collapse .nav > li > a {
-    margin-bottom: 2px;
-  }
-  .nav-collapse .nav > .divider-vertical {
-    display: none;
-  }
-  .nav-collapse .nav .nav-header {
-    color: $navbarText;
-    text-shadow: none;
-  }
-  // Nav and dropdown links in navbar
-  .nav-collapse .nav > li > a,
-  .nav-collapse .dropdown-menu a {
-    padding: 6px 15px;
-    font-weight: bold;
-    color: $navbarLinkColor;
-    @include border-radius(3px);
-  }
-  // Buttons
-  .nav-collapse .btn {
-    padding: 4px 10px 4px;
-    font-weight: normal;
-    @include border-radius(4px);
-  }
-  .nav-collapse .dropdown-menu li + li a {
-    margin-bottom: 2px;
-  }
-  .nav-collapse .nav > li > a:hover,
-  .nav-collapse .dropdown-menu a:hover {
-    background-color: $navbarBackground;
-  }
-  // Buttons in the navbar
-  .nav-collapse.in .btn-group {
-    margin-top: 5px;
-    padding: 0;
-  }
-  // Dropdowns in the navbar
-  .nav-collapse .dropdown-menu {
-    position: static;
-    top: auto;
-    left: auto;
-    float: none;
-    display: block;
-    max-width: none;
-    margin: 0 15px;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    @include border-radius(0);
-    @include box-shadow(none);
-  }
-  .nav-collapse .dropdown-menu:before,
-  .nav-collapse .dropdown-menu:after {
-    display: none;
-  }
-  .nav-collapse .dropdown-menu .divider {
-    display: none;
-  }
-  // Forms in navbar
-  .nav-collapse .navbar-form,
-  .nav-collapse .navbar-search {
-    float: none;
-    padding: ($baseLineHeight / 2) 15px;
-    margin: ($baseLineHeight / 2) 0;
-    border-top: 1px solid $navbarBackground;
-    border-bottom: 1px solid $navbarBackground;
-    $shadow: inset 0 1px 0 rgba($white,.1), 0 1px 0 rgba($white,.1);
-    @include box-shadow($shadow);
-  }
-  // Pull right (secondary) nav content
-  .navbar .nav-collapse .nav.pull-right {
-    float: none;
-    margin-left: 0;
-  }
-  // Hide everything in the navbar save .brand and toggle button */
-  .nav-collapse,
-  .nav-collapse.collapse {
-    overflow: hidden;
-    height: 0;
-  }
-  // Navbar button
-  .navbar .btn-navbar {
-    display: block;
-  }
+  .nav-collapse { 
+    clear: both; // Nav collapse clears brand
+    // Hide everything in the navbar save .brand and toggle button
+    &, &.collapse {  
+      overflow: hidden;
+      height: 0;
+    }
 
-  // STATIC NAVBAR
-  // -------------
-  .navbar-static .navbar-inner {
-    padding-left:  10px;
-    padding-right: 10px;
+    // Block-level the nav
+    .nav {
+      float: none;
+      margin: 0 0 ($baseLineHeight / 2);
+
+      // clear the floats from the pull-left/right classes
+      &.pull-left, &.pull-right {
+        float: none;
+        margin: 0;
+      }
+
+      > li { 
+        float: none;
+
+        &.divider-vertical {
+          display: none;
+        }
+
+        > a { 
+          margin-bottom: 2px;
+        } // END .nav li > a
+
+      } // END .nav > li
+
+      // Nav and dropdown links in navbar
+      > li > a, .dropdown-menu a {
+        padding: 6px ($mobileGutter - $navbarPadX);
+        font-weight: bold;
+        color: $navbarLinkColor;
+        @include border-radius(3px);
+
+        &:hover {
+          background-color: $navbarBackground;
+        } // END Nav and dropdown HOVERED links in navbar 
+
+      } // END Nav and dropdown links in navbar
+
+      .dropdown-menu li + li a {
+        margin-bottom: 2px;
+      }
+
+      .nav-header { 
+        color: $navbarText;
+        text-shadow: none;
+      } // END div.nav-collapse ul.nav .nav-header
+
+      // DROPDOWN MENUS WITHIN COLLAPSED NAV
+      .dropdown {
+
+        // these collapses are disabled...
+        //background-color: darken($navbarBackground, 5%);
+        border-bottom: 1px solid $bystl_brown_black;
+        border-top: 1px solid desaturate(lighten($bystl_brown_almstBlk, 3%), 30%);
+        &:first-child { 
+          border-top: none;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .dropdown-toggle {
+          &, &:hover {
+            color: darken($navbarLinkColor, 20%) !important;
+            background-color: transparent !important;
+            cursor: default; // doesn't function as a link
+          }
+
+          > b.caret { 
+            display: none; 
+          }
+
+        } // END li.dropdown a.dropdown-toggle
+
+        // SUBMENU 
+        .dropdown-menu {
+          position: static;
+          top: auto;
+          left: auto;
+          float: none;
+          display: block; // this makes dropdowns not work at all...
+          max-width: none;
+          margin: 0;
+          padding: 0;
+          background-color: transparent;
+          border: none;
+          @include border-radius(0);
+          @include box-shadow(none);
+
+          &:before, &:after, .divider {
+            display: none;
+          }
+
+        } // END div.nav-collapse ul.nav li.dropdown ul.dropdown-menu
+
+
+      } // END div.nav-collapse ul.nav li.dropdown
+
+    } // END div.nav-collapse ul.nav
+
+    &.in .btn-group { 
+      padding: 0; 
+    } // END .nav-collapse.in .btn-group
+
+    .btn {
+      padding: 4px 10px 4px;
+      font-weight: normal;
+      @include border-radius(4px);
+    } // END .nav-collapse .btn
+
+    // Forms in navbar
+    .navbar-form, .navbar-search {
+      float: none;
+      padding: ($baseLineHeight / 2) 15px;
+      margin: ($baseLineHeight / 2) 0;
+      border-top: 1px solid $navbarBackground;
+      border-bottom: 1px solid $navbarBackground;
+      $shadow: inset 0 1px 0 rgba($white,.1), 0 1px 0 rgba($white,.1);
+      @include box-shadow($shadow);
+    }
+    
+
+  } // END div.nav-collapse
+  
+  // Navbar button
+  .navbar .btn-navbar, 
+  .navbar .btn-navbar.mainmenu {
+    display: block;
   }
 
 } // END @mixin collapsedNavBar

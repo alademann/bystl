@@ -53,7 +53,8 @@ table {
 // CONDENSED TABLE W/ HALF PADDING
 // -------------------------------
 
-.table-condensed {
+.table-condensed, .condensed-table {
+  @extend .table;
   th,
   td {
     padding: 4px 5px;
@@ -64,7 +65,8 @@ table {
 // BORDERED VERSION
 // ----------------
 
-.table-bordered {
+.table-bordered, .bordered-table {
+  @extend .table;
   border: 1px solid $grayLighterD;
   border-collapse: separate; // Done so we can round those corners!
   @include ie7(border-collapse, collapsed); // IE7 can't round corners anyway
@@ -106,7 +108,8 @@ table {
 // --------------
 
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
-.table-striped {
+.table-striped, .zebra-striped {
+  @extend .table;
   tbody {
     tr:nth-child(odd) td,
     tr:nth-child(odd) th {

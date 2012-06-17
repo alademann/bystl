@@ -103,27 +103,34 @@
 // 	padding-right: 20px;
 // }
 
-.social {
-	float: right !important;
-	padding-top: 2px;
-}
-.social li {
-	text-indent: -99999px;
-	padding-left: 20px;
-	float: left;
-}
-.social li a {
-	@include opacity(.4);
-	@include transition(opacity 0.3s ease-in);
-}
-.social li a:hover {
-	@include opacity(1);
-}
-.facebook, .twitter, .phone, .mail {
-	width: 17px;
-	height: 16px;
-	@include display(block);
-}
+// .social {
+// 	float: right;
+// 	//padding-top: 2px;
+// }
+// .social li, .social li a { text-align: center; }
+// .social li i {
+// 	display: none;
+// 	//padding-left: 20px;
+// 	//float: left;
+// }
+// .social li a {
+// 	&:before {
+// 		font-size: 1.7em;
+// 		text-align: center;
+// 	}
+// 	padding: 8px 10px 10px !important;
+// 	@include opacity(.6);
+// 	@include transition(opacity 0.2s ease-in);
+// }
+// .social li a:hover {
+// 	@include opacity(1);
+// }
+//.facebook, .twitter, .phone, .mail {
+	//width: 17px;
+	//height: 16px;
+	//@include display(block);
+//}
+/*
 .facebook {
 	background: url(image-url('icon-facebook.png', true)) no-repeat;
 }
@@ -136,6 +143,7 @@
 .mail {
 	background: url(image-url('icon-mail.png', true)) no-repeat;
 }
+*/
 
 /*	MAIN NAV (HEADER)
 ---------------------------------------------- */

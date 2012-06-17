@@ -14,9 +14,9 @@ h2 {
 h3 {
 
 	.widget & {
-		border-bottom: 1px solid darken(#3e536b, 15%);
+		//border-bottom: 1px solid darken(#3e536b, 15%);
 		margin-bottom: 15px;
-		padding-bottom: 7px;
+		//padding-bottom: 7px;
 		color: $white;
 		text-shadow: 1px 1px 0 rgba($black, 0.5);
 	} // END .widget <h3>
@@ -36,7 +36,7 @@ h3 {
 p {
 	text-shadow: 1px 1px rgba($white, 0.8);
 	color: $gray;
-	font-size: $baseFontSize - 1;
+	font-size: $baseFontSize;
 
 	.page-content & {
 		text-shadow: none;
@@ -66,6 +66,12 @@ p {
 em {
 	font-style: italic;
 } // END <em>
+strong {
+	font-weight: bold;
+}
+b {
+	@extend strong;
+}
 
 /*	LINKS
 ---------------------------------------------- */
@@ -130,7 +136,7 @@ ul {
 
 	list-style: none;
 
-	.page-content &, .widget &, &.widgets {
+	.widget &, &.widgets {
 		margin: 12px 0;
 
 		ul {

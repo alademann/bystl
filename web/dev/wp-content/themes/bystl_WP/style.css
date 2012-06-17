@@ -25,7 +25,7 @@ html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
+small, strike, strong, b, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -130,7 +130,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	
 ----------------------------------------------*/
 /* line 420, sass/bootstrap/_mixins.scss */
-.trans, details, details.well, #bd details.well {
+.trans {
   -webkit-transition-duration: 0.7s;
   -moz-transition-duration: 0.7s;
   -ms-transition-duration: 0.7s;
@@ -202,7 +202,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 446, sass/bootstrap/_mixins.scss */
-.tp_all, details, details.well, #bd details.well {
+.tp_all {
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -ms-transition-property: all;
@@ -704,122 +704,122 @@ h6 {
 
 /* line 110, sass/bootstrap/_mixins.scss */
 h1 {
-  font-size: 3.077em;
-  line-height: 3.692em;
+  font-size: 2.462em;
+  line-height: 2.462em;
 }
 /* line 113, sass/bootstrap/_mixins.scss */
 h1 small {
-  font-size: 2.462em;
+  font-size: 1.969em;
 }
 
 /* line 117, sass/bootstrap/_mixins.scss */
 .h1 {
-  font-size: 3.077em;
-  line-height: 3.692em;
+  font-size: 2.462em;
+  line-height: 2.462em;
 }
 /* line 120, sass/bootstrap/_mixins.scss */
 .h1 small {
-  font-size: 2.462em;
+  font-size: 1.969em;
 }
 
 /* line 110, sass/bootstrap/_mixins.scss */
 h2 {
-  font-size: 2.462em;
-  line-height: 2.954em;
+  font-size: 1.969em;
+  line-height: 1.969em;
 }
 /* line 113, sass/bootstrap/_mixins.scss */
 h2 small {
-  font-size: 1.969em;
+  font-size: 1.575em;
 }
 
 /* line 117, sass/bootstrap/_mixins.scss */
 .h2 {
-  font-size: 2.462em;
-  line-height: 2.954em;
+  font-size: 1.969em;
+  line-height: 1.969em;
 }
 /* line 120, sass/bootstrap/_mixins.scss */
 .h2 small {
-  font-size: 1.969em;
+  font-size: 1.575em;
 }
 
 /* line 110, sass/bootstrap/_mixins.scss */
 h3 {
-  font-size: 1.969em;
-  line-height: 2.363em;
+  font-size: 1.575em;
+  line-height: 1.575em;
 }
 /* line 113, sass/bootstrap/_mixins.scss */
 h3 small {
-  font-size: 1.575em;
+  font-size: 1.26em;
 }
 
 /* line 117, sass/bootstrap/_mixins.scss */
 .h3 {
-  font-size: 1.969em;
-  line-height: 2.363em;
+  font-size: 1.575em;
+  line-height: 1.575em;
 }
 /* line 120, sass/bootstrap/_mixins.scss */
 .h3 small {
-  font-size: 1.575em;
+  font-size: 1.26em;
 }
 
 /* line 110, sass/bootstrap/_mixins.scss */
 h4 {
-  font-size: 1.575em;
-  line-height: 1.89em;
+  font-size: 1.26em;
+  line-height: 1.26em;
 }
 /* line 113, sass/bootstrap/_mixins.scss */
 h4 small {
-  font-size: 1.26em;
+  font-size: 1.008em;
 }
 
 /* line 117, sass/bootstrap/_mixins.scss */
 .h4 {
-  font-size: 1.575em;
-  line-height: 1.89em;
+  font-size: 1.26em;
+  line-height: 1.26em;
 }
 /* line 120, sass/bootstrap/_mixins.scss */
 .h4 small {
-  font-size: 1.26em;
+  font-size: 1.008em;
 }
 
 /* line 110, sass/bootstrap/_mixins.scss */
 h5 {
-  font-size: 1.26em;
-  line-height: 1.512em;
+  font-size: 1.008em;
+  line-height: 1.008em;
 }
 /* line 113, sass/bootstrap/_mixins.scss */
 h5 small {
-  font-size: 1.008em;
+  font-size: 0.807em;
 }
 
 /* line 117, sass/bootstrap/_mixins.scss */
 .h5 {
-  font-size: 1.26em;
-  line-height: 1.512em;
+  font-size: 1.008em;
+  line-height: 1.008em;
 }
 /* line 120, sass/bootstrap/_mixins.scss */
 .h5 small {
-  font-size: 1.008em;
+  font-size: 0.807em;
 }
 
 /* line 110, sass/bootstrap/_mixins.scss */
 h6 {
-  font-size: 1.008em;
-  line-height: 1.21em;
+  font-size: 0.807em;
+  line-height: 0.807em;
 }
 /* line 113, sass/bootstrap/_mixins.scss */
 h6 small {
-  font-size: 0.807em;
+  font-size: 0.645em;
 }
 
 /* line 117, sass/bootstrap/_mixins.scss */
 .h6 {
-  font-size: 1.008em;
-  line-height: 1.21em;
+  font-size: 0.807em;
+  line-height: 0.807em;
 }
 /* line 120, sass/bootstrap/_mixins.scss */
 .h6 small {
-  font-size: 0.807em;
+  font-size: 0.645em;
 }
 
 /* line 50, sass/bootstrap/_type.scss */
@@ -900,7 +900,7 @@ hr {
 }
 
 /* line 117, sass/bootstrap/_type.scss */
-strong {
+strong, b {
   font-weight: bold;
 }
 
@@ -1733,10 +1733,14 @@ select:focus:required:invalid:focus {
 /* line 430, sass/bootstrap/_forms.scss */
 .input-prepend .add-on,
 .input-prepend .btn,
+.input-prepend .btn-group li a,
+.btn-group li .input-prepend a,
 .input-prepend .small-btn,
 .input-prepend .big-btn,
 .input-append .add-on,
 .input-append .btn,
+.input-append .btn-group li a,
+.btn-group li .input-append a,
 .input-append .small-btn,
 .input-append .big-btn {
   margin-left: -1px;
@@ -1756,6 +1760,8 @@ select:focus:required:invalid:focus {
 /* line 441, sass/bootstrap/_forms.scss */
 .input-prepend .add-on,
 .input-prepend .btn,
+.input-prepend .btn-group li a,
+.btn-group li .input-prepend a,
 .input-prepend .small-btn,
 .input-prepend .big-btn {
   margin-right: -1px;
@@ -1763,6 +1769,8 @@ select:focus:required:invalid:focus {
 /* line 445, sass/bootstrap/_forms.scss */
 .input-prepend .add-on:first-child,
 .input-prepend .btn:first-child,
+.input-prepend .btn-group li a:first-child,
+.btn-group li .input-prepend a:first-child,
 .input-prepend .small-btn:first-child,
 .input-prepend .big-btn:first-child {
   -webkit-border-radius: 3px 0 0 3px;
@@ -1790,6 +1798,8 @@ select:focus:required:invalid:focus {
 /* line 460, sass/bootstrap/_forms.scss */
 .input-append .add-on:last-child,
 .input-append .btn:last-child,
+.input-append .btn-group li a:last-child,
+.btn-group li .input-append a:last-child,
 .input-append .small-btn:last-child,
 .input-append .big-btn:last-child {
   -webkit-border-radius: 0 3px 3px 0;
@@ -1812,6 +1822,8 @@ select:focus:required:invalid:focus {
 /* line 472, sass/bootstrap/_forms.scss */
 .input-prepend.input-append .add-on:first-child,
 .input-prepend.input-append .btn:first-child,
+.input-prepend.input-append .btn-group li a:first-child,
+.btn-group li .input-prepend.input-append a:first-child,
 .input-prepend.input-append .small-btn:first-child,
 .input-prepend.input-append .big-btn:first-child {
   margin-right: -1px;
@@ -1824,6 +1836,8 @@ select:focus:required:invalid:focus {
 /* line 477, sass/bootstrap/_forms.scss */
 .input-prepend.input-append .add-on:last-child,
 .input-prepend.input-append .btn:last-child,
+.input-prepend.input-append .btn-group li a:last-child,
+.btn-group li .input-prepend.input-append a:last-child,
 .input-prepend.input-append .small-btn:last-child,
 .input-prepend.input-append .big-btn:last-child {
   margin-left: -1px;
@@ -2023,13 +2037,19 @@ table {
 }
 
 /* line 21, sass/bootstrap/_tables.scss */
-.table {
+.table, .table-condensed, .condensed-table, .table-bordered, .bordered-table, .table-striped, .zebra-striped {
   width: 100%;
   margin-bottom: 1em;
 }
 /* line 26, sass/bootstrap/_tables.scss */
-.table th,
-.table td {
+.table th, .table-condensed th, .condensed-table th, .table-bordered th, .bordered-table th, .table-striped th, .zebra-striped th,
+.table td,
+.table-condensed td,
+.condensed-table td,
+.table-bordered td,
+.bordered-table td,
+.table-striped td,
+.zebra-striped td {
   padding: 8px;
   line-height: 18px;
   text-align: left;
@@ -2037,31 +2057,37 @@ table {
   border-top: 1px solid #dddddd;
 }
 /* line 33, sass/bootstrap/_tables.scss */
-.table th {
+.table th, .table-condensed th, .condensed-table th, .table-bordered th, .bordered-table th, .table-striped th, .zebra-striped th {
   font-weight: bold;
 }
 /* line 37, sass/bootstrap/_tables.scss */
-.table thead th {
+.table thead th, .table-condensed thead th, .condensed-table thead th, .table-bordered thead th, .bordered-table thead th, .table-striped thead th, .zebra-striped thead th {
   vertical-align: bottom;
 }
 /* line 42, sass/bootstrap/_tables.scss */
-.table thead:first-child tr th,
-.table thead:first-child tr td {
+.table thead:first-child tr th, .table-condensed thead:first-child tr th, .condensed-table thead:first-child tr th, .table-bordered thead:first-child tr th, .bordered-table thead:first-child tr th, .table-striped thead:first-child tr th, .zebra-striped thead:first-child tr th,
+.table thead:first-child tr td,
+.table-condensed thead:first-child tr td,
+.condensed-table thead:first-child tr td,
+.table-bordered thead:first-child tr td,
+.bordered-table thead:first-child tr td,
+.table-striped thead:first-child tr td,
+.zebra-striped thead:first-child tr td {
   border-top: 0;
 }
 /* line 46, sass/bootstrap/_tables.scss */
-.table tbody + tbody {
+.table tbody + tbody, .table-condensed tbody + tbody, .condensed-table tbody + tbody, .table-bordered tbody + tbody, .bordered-table tbody + tbody, .table-striped tbody + tbody, .zebra-striped tbody + tbody {
   border-top: 2px solid #dddddd;
 }
 
-/* line 58, sass/bootstrap/_tables.scss */
+/* line 59, sass/bootstrap/_tables.scss */
 .table-condensed th,
-.table-condensed td {
+.table-condensed td, .condensed-table th, .condensed-table td {
   padding: 4px 5px;
 }
 
-/* line 67, sass/bootstrap/_tables.scss */
-.table-bordered {
+/* line 68, sass/bootstrap/_tables.scss */
+.table-bordered, .bordered-table {
   border: 1px solid #dddddd;
   border-collapse: separate;
   *border-collapse: collapsed;
@@ -2071,49 +2097,49 @@ table {
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 75, sass/bootstrap/_tables.scss */
+/* line 77, sass/bootstrap/_tables.scss */
 .table-bordered th + th,
 .table-bordered td + td,
 .table-bordered th + td,
-.table-bordered td + th {
+.table-bordered td + th, .bordered-table th + th, .bordered-table td + td, .bordered-table th + td, .bordered-table td + th {
   border-left: 1px solid #dddddd;
 }
-/* line 81, sass/bootstrap/_tables.scss */
+/* line 83, sass/bootstrap/_tables.scss */
 .table-bordered thead:first-child tr:first-child th,
 .table-bordered tbody:first-child tr:first-child th,
-.table-bordered tbody:first-child tr:first-child td {
+.table-bordered tbody:first-child tr:first-child td, .bordered-table thead:first-child tr:first-child th, .bordered-table tbody:first-child tr:first-child th, .bordered-table tbody:first-child tr:first-child td {
   border-top: 0;
 }
-/* line 86, sass/bootstrap/_tables.scss */
+/* line 88, sass/bootstrap/_tables.scss */
 .table-bordered thead:first-child tr:first-child th:first-child,
-.table-bordered tbody:first-child tr:first-child td:first-child {
+.table-bordered tbody:first-child tr:first-child td:first-child, .bordered-table thead:first-child tr:first-child th:first-child, .bordered-table tbody:first-child tr:first-child td:first-child {
   -webkit-border-radius: 4px 0 0 0;
   -moz-border-radius: 4px 0 0 0;
   -ms-border-radius: 4px 0 0 0;
   -o-border-radius: 4px 0 0 0;
   border-radius: 4px 0 0 0;
 }
-/* line 90, sass/bootstrap/_tables.scss */
+/* line 92, sass/bootstrap/_tables.scss */
 .table-bordered thead:first-child tr:first-child th:last-child,
-.table-bordered tbody:first-child tr:first-child td:last-child {
+.table-bordered tbody:first-child tr:first-child td:last-child, .bordered-table thead:first-child tr:first-child th:last-child, .bordered-table tbody:first-child tr:first-child td:last-child {
   -webkit-border-radius: 0 4px 0 0;
   -moz-border-radius: 0 4px 0 0;
   -ms-border-radius: 0 4px 0 0;
   -o-border-radius: 0 4px 0 0;
   border-radius: 0 4px 0 0;
 }
-/* line 95, sass/bootstrap/_tables.scss */
+/* line 97, sass/bootstrap/_tables.scss */
 .table-bordered thead:last-child tr:last-child th:first-child,
-.table-bordered tbody:last-child tr:last-child td:first-child {
+.table-bordered tbody:last-child tr:last-child td:first-child, .bordered-table thead:last-child tr:last-child th:first-child, .bordered-table tbody:last-child tr:last-child td:first-child {
   -webkit-border-radius: 0 0 0 4px;
   -moz-border-radius: 0 0 0 4px;
   -ms-border-radius: 0 0 0 4px;
   -o-border-radius: 0 0 0 4px;
   border-radius: 0 0 0 4px;
 }
-/* line 99, sass/bootstrap/_tables.scss */
+/* line 101, sass/bootstrap/_tables.scss */
 .table-bordered thead:last-child tr:last-child th:last-child,
-.table-bordered tbody:last-child tr:last-child td:last-child {
+.table-bordered tbody:last-child tr:last-child td:last-child, .bordered-table thead:last-child tr:last-child th:last-child, .bordered-table tbody:last-child tr:last-child td:last-child {
   -webkit-border-radius: 0 0 4px 0;
   -moz-border-radius: 0 0 4px 0;
   -ms-border-radius: 0 0 4px 0;
@@ -2121,85 +2147,91 @@ table {
   border-radius: 0 0 4px 0;
 }
 
-/* line 112, sass/bootstrap/_tables.scss */
+/* line 115, sass/bootstrap/_tables.scss */
 .table-striped tbody tr:nth-child(odd) td,
-.table-striped tbody tr:nth-child(odd) th {
+.table-striped tbody tr:nth-child(odd) th, .zebra-striped tbody tr:nth-child(odd) td, .zebra-striped tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
 
-/* line 124, sass/bootstrap/_tables.scss */
-.table tbody tr:hover td,
-.table tbody tr:hover th {
+/* line 127, sass/bootstrap/_tables.scss */
+.table tbody tr:hover td, .table-condensed tbody tr:hover td, .condensed-table tbody tr:hover td, .table-bordered tbody tr:hover td, .bordered-table tbody tr:hover td, .table-striped tbody tr:hover td, .zebra-striped tbody tr:hover td,
+.table tbody tr:hover th,
+.table-condensed tbody tr:hover th,
+.condensed-table tbody tr:hover th,
+.table-bordered tbody tr:hover th,
+.bordered-table tbody tr:hover th,
+.table-striped tbody tr:hover th,
+.zebra-striped tbody tr:hover th {
   background-color: #f7f7f7;
 }
 
-/* line 140, sass/bootstrap/_tables.scss */
+/* line 143, sass/bootstrap/_tables.scss */
 table .span1 {
   float: none;
   width: 29px;
   margin-left: 0;
 }
-/* line 141, sass/bootstrap/_tables.scss */
+/* line 144, sass/bootstrap/_tables.scss */
 table .span2 {
   float: none;
   width: 88.667px;
   margin-left: 0;
 }
-/* line 142, sass/bootstrap/_tables.scss */
+/* line 145, sass/bootstrap/_tables.scss */
 table .span3 {
   float: none;
   width: 148.333px;
   margin-left: 0;
 }
-/* line 143, sass/bootstrap/_tables.scss */
+/* line 146, sass/bootstrap/_tables.scss */
 table .span4 {
   float: none;
   width: 208px;
   margin-left: 0;
 }
-/* line 144, sass/bootstrap/_tables.scss */
+/* line 147, sass/bootstrap/_tables.scss */
 table .span5 {
   float: none;
   width: 267.667px;
   margin-left: 0;
 }
-/* line 145, sass/bootstrap/_tables.scss */
+/* line 148, sass/bootstrap/_tables.scss */
 table .span6 {
   float: none;
   width: 327.333px;
   margin-left: 0;
 }
-/* line 146, sass/bootstrap/_tables.scss */
+/* line 149, sass/bootstrap/_tables.scss */
 table .span7 {
   float: none;
   width: 387px;
   margin-left: 0;
 }
-/* line 147, sass/bootstrap/_tables.scss */
+/* line 150, sass/bootstrap/_tables.scss */
 table .span8 {
   float: none;
   width: 446.667px;
   margin-left: 0;
 }
-/* line 148, sass/bootstrap/_tables.scss */
+/* line 151, sass/bootstrap/_tables.scss */
 table .span9 {
   float: none;
   width: 506.333px;
   margin-left: 0;
 }
-/* line 149, sass/bootstrap/_tables.scss */
+/* line 152, sass/bootstrap/_tables.scss */
 table .span10 {
   float: none;
   width: 566px;
   margin-left: 0;
 }
-/* line 150, sass/bootstrap/_tables.scss */
+/* line 153, sass/bootstrap/_tables.scss */
 table .span11 {
   float: none;
   width: 625.667px;
   margin-left: 0;
 }
-/* line 151, sass/bootstrap/_tables.scss */
+/* line 154, sass/bootstrap/_tables.scss */
 table .span12 {
   float: none;
   width: 685.333px;
@@ -2246,7 +2278,7 @@ table .span12 {
 }
 
 /* line 65, sass/bootstrap/_wells.scss */
-.inverse-well, details.well summary.h2 .inner, #bd details.well summary.h2 .inner {
+.inverse-well {
   -webkit-box-shadow: -1px -1px 0 0 rgba(255, 255, 255, 0.7) inset, 1px 1px 2px 0 rgba(119, 119, 119, 0.3) inset, 0 1px 7px 0 rgba(119, 119, 119, 0.3);
   -moz-box-shadow: -1px -1px 0 0 rgba(255, 255, 255, 0.7) inset, 1px 1px 2px 0 rgba(119, 119, 119, 0.3) inset, 0 1px 7px 0 rgba(119, 119, 119, 0.3);
   box-shadow: -1px -1px 0 0 rgba(255, 255, 255, 0.7) inset, 1px 1px 2px 0 rgba(119, 119, 119, 0.3) inset, 0 1px 7px 0 rgba(119, 119, 119, 0.3);
@@ -2270,64 +2302,23 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-/* line 18, sass/bootstrap/_dropdowns.scss */
-details.hover, details.well.hover, #bd details.well.hover {
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  outline: 0;
-  outline: thin dotted \9;
-  /* IE9 and down */
-}
-
-/* line 29, sass/bootstrap/_dropdowns.scss */
-details.well, #bd details.well {
-  overflow: hidden;
-}
-/* line 32, sass/bootstrap/_dropdowns.scss */
-details.well summary.h2 .inner, #bd details.well summary.h2 .inner {
-  background: #e6e2d7 none left top repeat;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  -ms-border-bottom-right-radius: 4px;
-  -o-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-@media (max-width: 767px) {
-  /* line 31, sass/bootstrap/_dropdowns.scss */
-  details.well summary.h2, #bd details.well summary.h2 {
-    line-height: normal;
-  }
-  /* line 40, sass/bootstrap/_dropdowns.scss */
-  details.well summary.h2 .inner, #bd details.well summary.h2 .inner {
-    -webkit-box-shadow: 0 -1px 0 0 rgba(255, 255, 255, 0.7) inset, -1px 0 2px 0 rgba(119, 119, 119, 0.15) inset, 1px 1px 2px 0 rgba(119, 119, 119, 0.15) inset, 0 1px 7px 0 rgba(119, 119, 119, 0.3);
-    -moz-box-shadow: 0 -1px 0 0 rgba(255, 255, 255, 0.7) inset, -1px 0 2px 0 rgba(119, 119, 119, 0.15) inset, 1px 1px 2px 0 rgba(119, 119, 119, 0.15) inset, 0 1px 7px 0 rgba(119, 119, 119, 0.3);
-    box-shadow: 0 -1px 0 0 rgba(255, 255, 255, 0.7) inset, -1px 0 2px 0 rgba(119, 119, 119, 0.15) inset, 1px 1px 2px 0 rgba(119, 119, 119, 0.15) inset, 0 1px 7px 0 rgba(119, 119, 119, 0.3);
-    -moz-border-radius-bottomright: 0;
-    -webkit-border-bottom-right-radius: 0;
-    -ms-border-bottom-right-radius: 0;
-    -o-border-bottom-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-}
-
-/* line 50, sass/bootstrap/_dropdowns.scss */
+/* line 13, sass/bootstrap/_dropdowns.scss */
 .dropdown {
   position: relative;
 }
 
-/* line 53, sass/bootstrap/_dropdowns.scss */
+/* line 16, sass/bootstrap/_dropdowns.scss */
 .dropdown-toggle {
   *margin-bottom: -3px;
 }
 
-/* line 58, sass/bootstrap/_dropdowns.scss */
+/* line 21, sass/bootstrap/_dropdowns.scss */
 .dropdown-toggle:active,
 .open .dropdown-toggle {
   outline: 0;
 }
 
-/* line 62, sass/bootstrap/_dropdowns.scss */
+/* line 25, sass/bootstrap/_dropdowns.scss */
 .caret {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -2348,49 +2339,37 @@ details.well summary.h2 .inner, #bd details.well summary.h2 .inner {
   *display: inline;
 }
 
-/* line 75, sass/bootstrap/_dropdowns.scss */
-.caret, summary:before {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=3000);
-  opacity: 30;
+/* line 38, sass/bootstrap/_dropdowns.scss */
+.caret {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+  -webkit-transition: opacity 0.1s ease-in;
+  -moz-transition: opacity 0.1s ease-in;
+  -ms-transition: opacity 0.1s ease-in;
+  -o-transition: opacity 0.1s ease-in;
+  transition: opacity 0.1s ease-in;
   content: "\2193";
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* line 80, sass/bootstrap/_dropdowns.scss */
-summary {
-  cursor: pointer;
-}
-
-/* line 81, sass/bootstrap/_dropdowns.scss */
-summary:before {
-  content: "";
-  visibility: hidden;
-}
-
-/* line 85, sass/bootstrap/_dropdowns.scss */
-summary:hover {
-  cursor: pointer;
-}
-
-/* line 87, sass/bootstrap/_dropdowns.scss */
+/* line 45, sass/bootstrap/_dropdowns.scss */
 .dropdown .caret {
   margin-top: 8px;
   margin-left: 2px;
 }
-/* line 91, sass/bootstrap/_dropdowns.scss */
+/* line 49, sass/bootstrap/_dropdowns.scss */
 .navbar .dropdown .caret {
   margin-left: 4px;
 }
 
-/* line 95, sass/bootstrap/_dropdowns.scss */
+/* line 52, sass/bootstrap/_dropdowns.scss */
 .dropdown:hover .caret,
-.open.dropdown .caret,
-details[open] summary:before, summary:hover:before {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10000);
-  opacity: 100;
+.open.dropdown .caret {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }
 
-/* line 99, sass/bootstrap/_dropdowns.scss */
+/* line 56, sass/bootstrap/_dropdowns.scss */
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -2423,13 +2402,13 @@ details[open] summary:before, summary:hover:before {
   *border-right-width: 2px;
   *border-bottom-width: 2px;
 }
-/* line 122, sass/bootstrap/_dropdowns.scss */
+/* line 79, sass/bootstrap/_dropdowns.scss */
 .dropdown-menu.bottom-up {
   top: auto;
   bottom: 100%;
   margin-bottom: 2px;
 }
-/* line 129, sass/bootstrap/_dropdowns.scss */
+/* line 86, sass/bootstrap/_dropdowns.scss */
 .dropdown-menu .divider {
   height: 1px;
   margin: 5px 1px;
@@ -2440,7 +2419,7 @@ details[open] summary:before, summary:hover:before {
   *width: 100%;
   *margin: -5px 0 5px;
 }
-/* line 146, sass/bootstrap/_dropdowns.scss */
+/* line 103, sass/bootstrap/_dropdowns.scss */
 .dropdown-menu a {
   display: block;
   padding: 3px 15px;
@@ -2451,7 +2430,7 @@ details[open] summary:before, summary:hover:before {
   white-space: nowrap;
 }
 
-/* line 160, sass/bootstrap/_dropdowns.scss */
+/* line 117, sass/bootstrap/_dropdowns.scss */
 .dropdown-menu li > a:hover,
 .dropdown-menu .active > a,
 .dropdown-menu .active > a:hover {
@@ -2460,25 +2439,22 @@ details[open] summary:before, summary:hover:before {
   background-color: #1592ca;
 }
 
-/* line 167, sass/bootstrap/_dropdowns.scss */
+/* line 124, sass/bootstrap/_dropdowns.scss */
 .dropdown.open {
   *z-index: 1000;
 }
-/* line 172, sass/bootstrap/_dropdowns.scss */
+/* line 129, sass/bootstrap/_dropdowns.scss */
 .dropdown.open .dropdown-toggle {
   color: white;
-  background-color: rgba(0, 0, 0, 0.3);
-  zoom: 1;
-  background-color: transparent;
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#4D000000', endColorstr='#4D000000');
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#4D000000', endColorstr='#4D000000');
 }
-/* line 178, sass/bootstrap/_dropdowns.scss */
+/* line 135, sass/bootstrap/_dropdowns.scss */
 .dropdown.open .dropdown-menu {
   display: block;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }
 
-/* line 184, sass/bootstrap/_dropdowns.scss */
+/* line 142, sass/bootstrap/_dropdowns.scss */
 .typeahead {
   margin-top: 2px;
   -webkit-border-radius: 4px;
@@ -2557,7 +2533,7 @@ details[open] summary:before, summary:hover:before {
   
 ----------------------------------------------*/
 /* line 12, sass/bootstrap/_buttons.scss */
-.btn, .small-btn, .big-btn {
+.btn, .btn-group li a, .small-btn, .big-btn {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -2600,25 +2576,25 @@ details[open] summary:before, summary:hover:before {
   cursor: pointer;
 }
 /* line 7, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
-.btn, .small-btn, .big-btn {
+.btn, .btn-group li a, .small-btn, .big-btn {
   *display: inline;
 }
 /* line 746, sass/bootstrap/_mixins.scss */
-.btn:hover, .small-btn:hover, .big-btn:hover, .btn:active, .small-btn:active, .big-btn:active, .btn.active, .active.small-btn, .active.big-btn, .btn.disabled, .disabled.small-btn, .disabled.big-btn, .btn[disabled], [disabled].small-btn, [disabled].big-btn {
+.btn:hover, .btn-group li a:hover, .small-btn:hover, .big-btn:hover, .btn:active, .btn-group li a:active, .small-btn:active, .big-btn:active, .btn.active, .btn-group li a.active, .btn-group li[class*='current'] a, .active.small-btn, .active.big-btn, .btn.disabled, .btn-group li a.disabled, .disabled.small-btn, .disabled.big-btn, .btn[disabled], .btn-group li a[disabled], [disabled].small-btn, [disabled].big-btn {
   background-color: #e6e6e6;
 }
 /* line 752, sass/bootstrap/_mixins.scss */
-.btn:active, .small-btn:active, .big-btn:active, .btn.active, .active.small-btn, .active.big-btn {
+.btn:active, .btn-group li a:active, .small-btn:active, .big-btn:active, .btn.active, .btn-group li a.active, .btn-group li[class*='current'] a, .active.small-btn, .active.big-btn {
   background-color: #cccccc \9;
   /* IE9 and down */
 }
 /* line 83, sass/bootstrap/_mixins.scss */
-.btn:first-child, .small-btn:first-child, .big-btn:first-child {
+.btn:first-child, .btn-group li a:first-child, .small-btn:first-child, .big-btn:first-child {
   *margin-left: 0;
 }
 
 /* line 37, sass/bootstrap/_buttons.scss */
-.btn:hover, .small-btn:hover, .big-btn:hover {
+.btn:hover, .btn-group li a:hover, .small-btn:hover, .big-btn:hover {
   color: #333333;
   text-decoration: none;
   background-color: #e6e6e6;
@@ -2633,15 +2609,16 @@ details[open] summary:before, summary:hover:before {
 }
 
 /* line 50, sass/bootstrap/_buttons.scss */
-.btn:focus, .small-btn:focus, .big-btn:focus {
+.btn:focus, .btn-group li a:focus, .small-btn:focus, .big-btn:focus {
   outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
 /* line 56, sass/bootstrap/_buttons.scss */
-.btn.active, .active.small-btn, .active.big-btn,
+.btn.active, .btn-group li a.active, .btn-group li[class*='current'] a, .active.small-btn, .active.big-btn,
 .btn:active,
+.btn-group li a:active,
 .small-btn:active,
 .big-btn:active {
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -2655,8 +2632,9 @@ details[open] summary:before, summary:hover:before {
 }
 
 /* line 69, sass/bootstrap/_buttons.scss */
-.btn.disabled, .disabled.small-btn, .disabled.big-btn,
+.btn.disabled, .btn-group li a.disabled, .disabled.small-btn, .disabled.big-btn,
 .btn[disabled],
+.btn-group li a[disabled],
 [disabled].small-btn,
 [disabled].big-btn {
   cursor: default;
@@ -2775,7 +2753,7 @@ details[open] summary:before, summary:hover:before {
 }
 
 /* line 142, sass/bootstrap/_buttons.scss */
-.btn, .small-btn, .big-btn {
+.btn, .btn-group li a, .small-btn, .big-btn {
   border-color: #ccc;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
@@ -3020,11 +2998,27 @@ input[type="submit"].btn-mini.big-btn {
   *display: inline;
 }
 
-/* line 30, sass/bootstrap/_button-groups.scss */
-.btn-group .btn, .btn-group .small-btn, .btn-group .big-btn {
+/* line 29, sass/bootstrap/_button-groups.scss */
+ul.btn-group {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 33, sass/bootstrap/_button-groups.scss */
+.btn-group li {
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* line 44, sass/bootstrap/_button-groups.scss */
+.btn-group .btn, .btn-group li a, .btn-group .small-btn, .btn-group .big-btn,
+.header .btn-group li a,
+.header .btn-group li a:first-child,
+.header .btn-group li a:last-child {
   position: relative;
   float: left;
-  margin-left: -1px;
+  margin-left: -1px !important;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -3032,9 +3026,10 @@ input[type="submit"].btn-mini.big-btn {
   border-radius: 0;
 }
 
-/* line 37, sass/bootstrap/_button-groups.scss */
-.btn-group .btn:first-child, .btn-group .small-btn:first-child, .btn-group .big-btn:first-child {
-  margin-left: 0;
+/* line 52, sass/bootstrap/_button-groups.scss */
+.btn-group .btn:first-child, .btn-group li a:first-child, .btn-group .small-btn:first-child, .btn-group .big-btn:first-child,
+.header .btn-group li:first-child a {
+  margin-left: 0 !important;
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
   -ms-border-top-left-radius: 4px;
@@ -3047,8 +3042,9 @@ input[type="submit"].btn-mini.big-btn {
   border-bottom-left-radius: 4px;
 }
 
-/* line 43, sass/bootstrap/_button-groups.scss */
-.btn-group .btn:last-child, .btn-group .small-btn:last-child, .btn-group .big-btn:last-child,
+/* line 59, sass/bootstrap/_button-groups.scss */
+.btn-group .btn:last-child, .btn-group li a:last-child, .btn-group .small-btn:last-child, .btn-group .big-btn:last-child,
+.header .btn-group li:last-child a,
 .btn-group .dropdown-toggle {
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
@@ -3062,8 +3058,8 @@ input[type="submit"].btn-mini.big-btn {
   border-bottom-right-radius: 4px;
 }
 
-/* line 48, sass/bootstrap/_button-groups.scss */
-.btn-group .btn.large:first-child, .btn-group .large.small-btn:first-child, .btn-group .large.big-btn:first-child {
+/* line 64, sass/bootstrap/_button-groups.scss */
+.btn-group .btn.large:first-child, .btn-group li a.large:first-child, .btn-group .large.small-btn:first-child, .btn-group .large.big-btn:first-child {
   margin-left: 0;
   -moz-border-radius-topleft: 6px;
   -webkit-border-top-left-radius: 6px;
@@ -3077,8 +3073,8 @@ input[type="submit"].btn-mini.big-btn {
   border-bottom-left-radius: 6px;
 }
 
-/* line 54, sass/bootstrap/_button-groups.scss */
-.btn-group .btn.large:last-child, .btn-group .large.small-btn:last-child, .btn-group .large.big-btn:last-child,
+/* line 70, sass/bootstrap/_button-groups.scss */
+.btn-group .btn.large:last-child, .btn-group li a.large:last-child, .btn-group .large.small-btn:last-child, .btn-group .large.big-btn:last-child,
 .btn-group .large.dropdown-toggle {
   -moz-border-radius-topright: 6px;
   -webkit-border-top-right-radius: 6px;
@@ -3092,27 +3088,36 @@ input[type="submit"].btn-mini.big-btn {
   border-bottom-right-radius: 6px;
 }
 
-/* line 63, sass/bootstrap/_button-groups.scss */
-.btn-group .btn:hover, .btn-group .small-btn:hover, .btn-group .big-btn:hover,
+/* line 84, sass/bootstrap/_button-groups.scss */
+.btn-group .btn:hover, .btn-group li a:hover, .btn-group .small-btn:hover, .btn-group .big-btn:hover,
 .btn-group .btn:focus,
+.btn-group li a:focus,
 .btn-group .small-btn:focus,
 .btn-group .big-btn:focus,
 .btn-group .btn:active,
+.btn-group li a:active,
 .btn-group .small-btn:active,
 .btn-group .big-btn:active,
 .btn-group .btn.active,
+.btn-group li a.active,
+.btn-group li[class*='current'] a,
 .btn-group .active.small-btn,
-.btn-group .active.big-btn {
+.btn-group .active.big-btn,
+.btn-group li a:hover,
+.btn-group li a:focus,
+.btn-group li a:active,
+.btn-group .active a,
+.btn-group [class*='current'] a {
   z-index: 2;
 }
 
-/* line 69, sass/bootstrap/_button-groups.scss */
+/* line 90, sass/bootstrap/_button-groups.scss */
 .btn-group .dropdown-toggle:active,
 .btn-group.open .dropdown-toggle {
   outline: 0;
 }
 
-/* line 78, sass/bootstrap/_button-groups.scss */
+/* line 99, sass/bootstrap/_button-groups.scss */
 .btn-group .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px;
@@ -3123,11 +3128,11 @@ input[type="submit"].btn-mini.big-btn {
   *padding-bottom: 5px;
 }
 
-/* line 87, sass/bootstrap/_button-groups.scss */
+/* line 108, sass/bootstrap/_button-groups.scss */
 .btn-group.open {
   *z-index: 1000;
 }
-/* line 93, sass/bootstrap/_button-groups.scss */
+/* line 114, sass/bootstrap/_button-groups.scss */
 .btn-group.open .dropdown-menu {
   display: block;
   margin-top: 1px;
@@ -3137,7 +3142,7 @@ input[type="submit"].btn-mini.big-btn {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 99, sass/bootstrap/_button-groups.scss */
+/* line 120, sass/bootstrap/_button-groups.scss */
 .btn-group.open .dropdown-toggle {
   background-image: none;
   -webkit-box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -3145,20 +3150,20 @@ input[type="submit"].btn-mini.big-btn {
   box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 107, sass/bootstrap/_button-groups.scss */
-.btn .caret, .small-btn .caret, .big-btn .caret {
+/* line 128, sass/bootstrap/_button-groups.scss */
+.btn .caret, .btn-group li a .caret, .small-btn .caret, .big-btn .caret {
   margin-top: 7px;
   margin-left: 0;
 }
 
-/* line 112, sass/bootstrap/_button-groups.scss */
-.btn:hover .caret, .small-btn:hover .caret, .big-btn:hover .caret,
+/* line 133, sass/bootstrap/_button-groups.scss */
+.btn:hover .caret, .btn-group li a:hover .caret, .small-btn:hover .caret, .big-btn:hover .caret,
 .open.btn-group .caret {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10000);
   opacity: 100;
 }
 
-/* line 122, sass/bootstrap/_button-groups.scss */
+/* line 143, sass/bootstrap/_button-groups.scss */
 .btn-primary .caret, .small-btn .caret, .big-btn .caret, .btnTheme_Blue .small-btn .caret, .small-btn.blue .caret, .btnTheme_Blue .big-btn .caret, .big-btn.blue .caret,
 .btn-danger .caret,
 .btnTheme_Red .small-btn .caret,
@@ -3172,7 +3177,7 @@ input[type="submit"].btn-mini.big-btn {
   opacity: 75;
 }
 
-/* line 129, sass/bootstrap/_button-groups.scss */
+/* line 150, sass/bootstrap/_button-groups.scss */
 .btn-small .caret {
   margin-top: 4px;
 }
@@ -3231,6 +3236,7 @@ input[type="submit"].btn-mini.big-btn {
 .alert, .alert-message,
 .alert-heading,
 .alert-message strong,
+.alert-message b,
 .alert-message .alert-heading {
   color: #c09853;
 }
@@ -3248,6 +3254,9 @@ input[type="submit"].btn-mini.big-btn {
 .alert-success .alert-message strong,
 .alert-message .alert-success strong,
 .alert-message.success strong,
+.alert-success .alert-message b,
+.alert-message .alert-success b,
+.alert-message.success b,
 .alert-success .alert-message .alert-heading,
 .alert-message .alert-success .alert-heading,
 .alert-message.success .alert-heading {
@@ -3273,6 +3282,10 @@ input[type="submit"].btn-mini.big-btn {
 .alert-message .alert-danger strong,
 .alert-message.danger strong,
 .alert-message.error strong,
+.alert-danger .alert-message b,
+.alert-message .alert-danger b,
+.alert-message.danger b,
+.alert-message.error b,
 .alert-danger .alert-message .alert-heading,
 .alert-message .alert-danger .alert-heading,
 .alert-message.danger .alert-heading,
@@ -3283,6 +3296,10 @@ input[type="submit"].btn-mini.big-btn {
 .alert-message .alert-error strong,
 .contact-error .alert-message strong,
 .alert-message .contact-error strong,
+.alert-error .alert-message b,
+.alert-message .alert-error b,
+.contact-error .alert-message b,
+.alert-message .contact-error b,
 .alert-error .alert-message .alert-heading,
 .alert-message .alert-error .alert-heading,
 .contact-error .alert-message .alert-heading,
@@ -3303,6 +3320,9 @@ input[type="submit"].btn-mini.big-btn {
 .alert-info .alert-message strong,
 .alert-message .alert-info strong,
 .alert-message.info strong,
+.alert-info .alert-message b,
+.alert-message .alert-info b,
+.alert-message.info b,
 .alert-info .alert-message .alert-heading,
 .alert-message .alert-info .alert-heading,
 .alert-message.info .alert-heading {
@@ -3829,16 +3849,19 @@ input[type="submit"].btn-mini.big-btn {
   color: white;
 }
 /* line 80, sass/bootstrap/_navbar.scss */
-.navbar .btn, .navbar .small-btn, .navbar .big-btn,
+.navbar .btn, .navbar .btn-group li a, .btn-group li .navbar a, .navbar .small-btn, .navbar .big-btn,
 .navbar .btn-group {
   margin-top: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* line 83, sass/bootstrap/_navbar.scss */
-.navbar .btn-group .btn, .navbar .btn-group .small-btn, .navbar .btn-group .big-btn {
+/* line 84, sass/bootstrap/_navbar.scss */
+.navbar .btn-group .btn, .navbar .btn-group li a, .navbar .btn-group .small-btn, .navbar .btn-group .big-btn {
   margin: 0;
 }
 
-/* line 89, sass/bootstrap/_navbar.scss */
+/* line 90, sass/bootstrap/_navbar.scss */
 .navbar-form {
   margin-bottom: 0;
   *zoom: 1;
@@ -3852,45 +3875,45 @@ input[type="submit"].btn-mini.big-btn {
 .navbar-form:after {
   clear: both;
 }
-/* line 95, sass/bootstrap/_navbar.scss */
+/* line 96, sass/bootstrap/_navbar.scss */
 .navbar-form input,
 .navbar-form select,
 .navbar-form .radio,
 .navbar-form .checkbox {
   margin-top: 5px;
 }
-/* line 99, sass/bootstrap/_navbar.scss */
+/* line 100, sass/bootstrap/_navbar.scss */
 .navbar-form input,
 .navbar-form select {
   display: inline-block;
   margin-bottom: 0;
 }
-/* line 105, sass/bootstrap/_navbar.scss */
+/* line 106, sass/bootstrap/_navbar.scss */
 .navbar-form input[type="image"],
 .navbar-form input[type="checkbox"],
 .navbar-form input[type="radio"] {
   margin-top: 3px;
 }
-/* line 109, sass/bootstrap/_navbar.scss */
+/* line 110, sass/bootstrap/_navbar.scss */
 .navbar-form .input-append,
 .navbar-form .input-prepend {
   margin-top: 6px;
   white-space: nowrap;
 }
-/* line 112, sass/bootstrap/_navbar.scss */
+/* line 113, sass/bootstrap/_navbar.scss */
 .navbar-form .input-append input,
 .navbar-form .input-prepend input {
   margin-top: 0;
 }
 
-/* line 119, sass/bootstrap/_navbar.scss */
+/* line 120, sass/bootstrap/_navbar.scss */
 .navbar-search {
   position: relative;
   float: left;
   margin-top: 6px;
   margin-bottom: 0;
 }
-/* line 124, sass/bootstrap/_navbar.scss */
+/* line 125, sass/bootstrap/_navbar.scss */
 .navbar-search .search-query {
   padding: 4px 9px;
   font-family: Helvetica, Arial, sans-serif;
@@ -3909,15 +3932,15 @@ input[type="submit"].btn-mini.big-btn {
   -o-transition: none;
   transition: none;
 }
-/* line 135, sass/bootstrap/_navbar.scss */
+/* line 136, sass/bootstrap/_navbar.scss */
 .navbar-search .search-query:-moz-placeholder {
   color: rgba(255, 255, 255, 0.85);
 }
-/* line 138, sass/bootstrap/_navbar.scss */
+/* line 139, sass/bootstrap/_navbar.scss */
 .navbar-search .search-query::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.85);
 }
-/* line 144, sass/bootstrap/_navbar.scss */
+/* line 145, sass/bootstrap/_navbar.scss */
 .navbar-search .search-query:focus, .navbar-search .search-query.focused {
   padding: 5px 10px;
   color: #333333;
@@ -3930,7 +3953,7 @@ input[type="submit"].btn-mini.big-btn {
   outline: 0;
 }
 
-/* line 163, sass/bootstrap/_navbar.scss */
+/* line 164, sass/bootstrap/_navbar.scss */
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
@@ -3940,7 +3963,7 @@ input[type="submit"].btn-mini.big-btn {
   margin-bottom: 0;
 }
 
-/* line 171, sass/bootstrap/_navbar.scss */
+/* line 172, sass/bootstrap/_navbar.scss */
 .navbar-fixed-top .navbar-inner,
 .navbar-fixed-bottom .navbar-inner {
   padding-left: 0;
@@ -3952,23 +3975,23 @@ input[type="submit"].btn-mini.big-btn {
   border-radius: 0;
 }
 
-/* line 178, sass/bootstrap/_navbar.scss */
+/* line 179, sass/bootstrap/_navbar.scss */
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
   width: 940px;
 }
 
-/* line 183, sass/bootstrap/_navbar.scss */
+/* line 184, sass/bootstrap/_navbar.scss */
 .navbar-fixed-top {
   top: 0;
 }
 
-/* line 188, sass/bootstrap/_navbar.scss */
+/* line 189, sass/bootstrap/_navbar.scss */
 .navbar-fixed-bottom {
   bottom: 0;
 }
 
-/* line 197, sass/bootstrap/_navbar.scss */
+/* line 198, sass/bootstrap/_navbar.scss */
 .navbar .nav {
   position: relative;
   left: 0;
@@ -3977,18 +4000,18 @@ input[type="submit"].btn-mini.big-btn {
   margin: 0 10px 0 0;
 }
 
-/* line 204, sass/bootstrap/_navbar.scss */
+/* line 205, sass/bootstrap/_navbar.scss */
 .navbar .nav.pull-right {
   float: right;
 }
 
-/* line 207, sass/bootstrap/_navbar.scss */
+/* line 208, sass/bootstrap/_navbar.scss */
 .navbar .nav > li {
   display: block;
   float: left;
 }
 
-/* line 213, sass/bootstrap/_navbar.scss */
+/* line 214, sass/bootstrap/_navbar.scss */
 .navbar .nav > li > a {
   float: none;
   padding: 9px 10px 11px;
@@ -3998,28 +4021,61 @@ input[type="submit"].btn-mini.big-btn {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 224, sass/bootstrap/_navbar.scss */
-.navbar .btn, .navbar .small-btn, .navbar .big-btn {
+/* line 226, sass/bootstrap/_navbar.scss */
+.navbar .btn, .navbar .btn-group li a, .btn-group li .navbar a, .navbar .small-btn, .navbar .big-btn {
   display: inline-block;
-  padding: 4px 10px 4px;
+  padding: 7px 8px 3px;
   margin: 5px 5px 6px;
   line-height: 18px;
+  color: #c5c2ba;
+  text-shadow: 0 1px 1px rgba(8, 5, 1, 0.85);
+}
+/* line 230, sass/bootstrap/_navbar.scss */
+.navbar .btn[data-toggle="collapse"], .navbar .btn-group li a[data-toggle="collapse"], .btn-group li .navbar a[data-toggle="collapse"], .navbar [data-toggle="collapse"].small-btn, .navbar [data-toggle="collapse"].big-btn {
+  padding: 8px 10px;
+}
+/* line 243, sass/bootstrap/_navbar.scss */
+.navbar .btn:hover, .navbar .btn-group li a:hover, .btn-group li .navbar a:hover, .navbar .small-btn:hover, .navbar .big-btn:hover {
+  color: white;
+}
+/* line 248, sass/bootstrap/_navbar.scss */
+.navbar .btn [class^="icon-"]:before, .navbar .btn-group li a [class^="icon-"]:before, .btn-group li .navbar a [class^="icon-"]:before, .navbar .small-btn [class^="icon-"]:before, .navbar .big-btn [class^="icon-"]:before,
+.navbar .btn [class*=" icon-"]:before,
+.navbar .btn-group li a [class*=" icon-"]:before,
+.btn-group li .navbar a [class*=" icon-"]:before,
+.navbar .small-btn [class*=" icon-"]:before,
+.navbar .big-btn [class*=" icon-"]:before {
+  color: inherit;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  font-size: 17px;
+  text-shadow: inherit;
+}
+/* line 253, sass/bootstrap/_navbar.scss */
+.navbar .btn [class^="icon-"]:before:hover, .navbar .btn-group li a [class^="icon-"]:before:hover, .btn-group li .navbar a [class^="icon-"]:before:hover, .navbar .small-btn [class^="icon-"]:before:hover, .navbar .big-btn [class^="icon-"]:before:hover,
+.navbar .btn [class*=" icon-"]:before:hover,
+.navbar .btn-group li a [class*=" icon-"]:before:hover,
+.btn-group li .navbar a [class*=" icon-"]:before:hover,
+.navbar .small-btn [class*=" icon-"]:before:hover,
+.navbar .big-btn [class*=" icon-"]:before:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }
 
-/* line 234, sass/bootstrap/_navbar.scss */
+/* line 259, sass/bootstrap/_navbar.scss */
 .navbar .btn-group {
   margin: 0;
   padding: 5px 5px 6px;
 }
 
-/* line 241, sass/bootstrap/_navbar.scss */
+/* line 266, sass/bootstrap/_navbar.scss */
 .navbar .nav > li > a:hover {
   background-color: rgba(32, 19, 2, 0.85);
   color: white;
   text-decoration: none;
 }
 
-/* line 262, sass/bootstrap/_navbar.scss */
+/* line 287, sass/bootstrap/_navbar.scss */
 .navbar .nav .active > a,
 .navbar .nav .active > a:hover,
 .navbar .nav .current-menu-item > a,
@@ -4039,7 +4095,7 @@ input[type="submit"].btn-mini.big-btn {
   background-color: rgba(32, 19, 2, 0.85);
 }
 
-/* line 269, sass/bootstrap/_navbar.scss */
+/* line 294, sass/bootstrap/_navbar.scss */
 .navbar .divider-vertical {
   height: 40px;
   width: 1px;
@@ -4049,17 +4105,15 @@ input[type="submit"].btn-mini.big-btn {
   border-right: 1px solid rgba(50, 30, 4, 0.85);
 }
 
-/* line 279, sass/bootstrap/_navbar.scss */
+/* line 304, sass/bootstrap/_navbar.scss */
 .navbar .nav.pull-right {
   margin-left: 10px;
   margin-right: 0;
 }
 
-/* line 286, sass/bootstrap/_navbar.scss */
+/* line 311, sass/bootstrap/_navbar.scss */
 .navbar .btn-navbar {
-  display: none;
   float: right;
-  padding: 7px 10px;
   margin-left: 5px;
   margin-right: 5px;
   background-color: rgba(42, 25, 3, 0.85);
@@ -4078,6 +4132,10 @@ input[type="submit"].btn-mini.big-btn {
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
 }
+/* line 312, sass/bootstrap/_navbar.scss */
+.navbar .btn-navbar.mainmenu {
+  display: none;
+}
 /* line 746, sass/bootstrap/_mixins.scss */
 .navbar .btn-navbar:hover, .navbar .btn-navbar:active, .navbar .btn-navbar.active, .navbar .btn-navbar.disabled, .navbar .btn-navbar[disabled] {
   background-color: rgba(32, 19, 2, 0.85);
@@ -4088,7 +4146,7 @@ input[type="submit"].btn-mini.big-btn {
   /* IE9 and down */
 }
 
-/* line 296, sass/bootstrap/_navbar.scss */
+/* line 321, sass/bootstrap/_navbar.scss */
 .navbar .btn-navbar .icon-bar {
   display: block;
   width: 18px;
@@ -4104,12 +4162,12 @@ input[type="submit"].btn-mini.big-btn {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 304, sass/bootstrap/_navbar.scss */
+/* line 329, sass/bootstrap/_navbar.scss */
 .btn-navbar .icon-bar + .icon-bar {
   margin-top: 3px;
 }
 
-/* line 314, sass/bootstrap/_navbar.scss */
+/* line 339, sass/bootstrap/_navbar.scss */
 .navbar .dropdown-menu:before {
   content: '';
   display: inline-block;
@@ -4121,7 +4179,7 @@ input[type="submit"].btn-mini.big-btn {
   top: -7px;
   left: 9px;
 }
-/* line 325, sass/bootstrap/_navbar.scss */
+/* line 350, sass/bootstrap/_navbar.scss */
 .navbar .dropdown-menu:after {
   content: '';
   display: inline-block;
@@ -4133,7 +4191,7 @@ input[type="submit"].btn-mini.big-btn {
   left: 10px;
 }
 
-/* line 338, sass/bootstrap/_navbar.scss */
+/* line 363, sass/bootstrap/_navbar.scss */
 .navbar-fixed-bottom .dropdown-menu:before {
   border-top: 7px solid #ccc;
   border-top-color: rgba(0, 0, 0, 0.2);
@@ -4141,7 +4199,7 @@ input[type="submit"].btn-mini.big-btn {
   bottom: -7px;
   top: auto;
 }
-/* line 345, sass/bootstrap/_navbar.scss */
+/* line 370, sass/bootstrap/_navbar.scss */
 .navbar-fixed-bottom .dropdown-menu:after {
   border-top: 6px solid white;
   border-bottom: 0;
@@ -4149,44 +4207,43 @@ input[type="submit"].btn-mini.big-btn {
   top: auto;
 }
 
-/* line 354, sass/bootstrap/_navbar.scss */
+/* line 379, sass/bootstrap/_navbar.scss */
 .navbar .nav li.dropdown .dropdown-toggle .caret,
 .navbar .nav li.dropdown.open .caret {
   border-top-color: white;
   border-bottom-color: white;
 }
 
-/* line 358, sass/bootstrap/_navbar.scss */
+/* line 383, sass/bootstrap/_navbar.scss */
 .navbar .nav li.dropdown.active .caret {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10000);
   opacity: 100;
 }
 
-/* line 365, sass/bootstrap/_navbar.scss */
+/* line 389, sass/bootstrap/_navbar.scss */
 .navbar .nav li.dropdown.open > .dropdown-toggle,
-.navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
   background-color: transparent;
 }
 
-/* line 370, sass/bootstrap/_navbar.scss */
+/* line 394, sass/bootstrap/_navbar.scss */
 .navbar .nav li.dropdown.active > .dropdown-toggle:hover {
   color: white;
 }
 
-/* line 377, sass/bootstrap/_navbar.scss */
+/* line 401, sass/bootstrap/_navbar.scss */
 .navbar .pull-right .dropdown-menu,
 .navbar .dropdown-menu.pull-right {
   left: auto;
   right: 0;
 }
-/* line 380, sass/bootstrap/_navbar.scss */
+/* line 404, sass/bootstrap/_navbar.scss */
 .navbar .pull-right .dropdown-menu:before,
 .navbar .dropdown-menu.pull-right:before {
   left: auto;
   right: 12px;
 }
-/* line 384, sass/bootstrap/_navbar.scss */
+/* line 408, sass/bootstrap/_navbar.scss */
 .navbar .pull-right .dropdown-menu:after,
 .navbar .dropdown-menu.pull-right:after {
   left: auto;
@@ -4533,7 +4590,7 @@ input[type="submit"].btn-mini.big-btn {
   clear: both;
 }
 /* line 84, sass/bootstrap/_modals.scss */
-.modal-footer .btn, .modal-footer .small-btn, .modal-footer .big-btn {
+.modal-footer .btn, .modal-footer .btn-group li a, .btn-group li .modal-footer a, .modal-footer .small-btn, .modal-footer .big-btn {
   float: right;
   margin-left: 5px;
   margin-bottom: 0;
@@ -5387,10 +5444,23 @@ li[class*=" icon-"] {
   font-style: normal;
   display: inline-block;
   text-decoration: inherit;
+  color: black;
+  font-size: 17px;
   padding-right: 7px;
 }
 
 /* line 54, sass/bystl/_font-awesome.scss */
+.icon-only:before {
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+/* line 58, sass/bystl/_font-awesome.scss */
+.icon-white:before {
+  color: white;
+}
+
+/* line 63, sass/bystl/_font-awesome.scss */
 a [class^="icon-"],
 a [class*=" icon-"] {
   display: inline-block;
@@ -5398,754 +5468,1112 @@ a [class*=" icon-"] {
 }
 
 /* makes the font 33% larger relative to the icon container */
-/* line 60, sass/bystl/_font-awesome.scss */
+/* line 69, sass/bystl/_font-awesome.scss */
 .icon-large:before {
   vertical-align: top;
   font-size: 1.333em;
 }
 
-/* line 67, sass/bystl/_font-awesome.scss */
-.btn [class^="icon-"], .small-btn [class^="icon-"], .big-btn [class^="icon-"],
+/* line 76, sass/bystl/_font-awesome.scss */
+.btn [class^="icon-"], .btn-group li a [class^="icon-"], .small-btn [class^="icon-"], .big-btn [class^="icon-"],
 .btn [class*=" icon-"],
+.btn-group li a [class*=" icon-"],
 .small-btn [class*=" icon-"],
-.big-btn [class*=" icon-"] {
+.big-btn [class*=" icon-"], .nav-tabs [class^="icon-"], .nav-tabs [class*=" icon-"] {
   /* keeps button heights with and without icons the same */
   line-height: .9em;
 }
 
-/* line 75, sass/bystl/_font-awesome.scss */
+/* line 84, sass/bystl/_font-awesome.scss */
 li [class^="icon-"],
 li [class*=" icon-"] {
   display: inline-block;
   width: 1.25em;
   text-align: center;
-}
-/* line 81, sass/bystl/_font-awesome.scss */
-li .icon-large[class^="icon-"],
-li .icon-large[class*=" icon-"] {
-  /* 1.5 increased font size for icon-large * 1.25 width */
-  width: 1.875em;
-}
-
-/* line 88, sass/bystl/_font-awesome.scss */
-li[class^="icon-"],
-li[class*=" icon-"] {
   margin-left: 0;
   list-style-type: none;
 }
 /* line 92, sass/bystl/_font-awesome.scss */
-li[class^="icon-"]:before,
-li[class*=" icon-"]:before {
-  text-indent: -2em;
-  text-align: center;
+li .icon-large,
+li .icon-large {
+  /* 1.5 increased font size for icon-large * 1.25 width */
+  width: 1.875em !important;
 }
-/* line 96, sass/bystl/_font-awesome.scss */
-li[class^="icon-"].icon-large:before,
-li[class*=" icon-"].icon-large:before {
+/* line 95, sass/bystl/_font-awesome.scss */
+li .icon-large:before,
+li .icon-large:before {
   text-indent: -1.333em;
+}
+
+/* line 101, sass/bystl/_font-awesome.scss */
+ul.icons {
+  list-style-type: none;
+  margin-left: 2em;
+  text-indent: -0.8em;
+}
+/* line 108, sass/bystl/_font-awesome.scss */
+ul.icons li [class^="icon-"],
+ul.icons li [class*=" icon-"] {
+  width: .8em;
+}
+/* line 112, sass/bystl/_font-awesome.scss */
+ul.icons li .icon-large:before,
+ul.icons li .icon-large:before {
+  /* 1.5 increased font size for icon-large * 1.25 width */
+  vertical-align: initial;
 }
 
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
     readers do not read off random characters that represent icons */
-/* line 103, sass/bystl/_font-awesome.scss */
+/* line 123, sass/bystl/_font-awesome.scss */
 .icon-glass:before {
   content: "\f000";
 }
 
-/* line 104, sass/bystl/_font-awesome.scss */
+/* line 124, sass/bystl/_font-awesome.scss */
 .icon-music:before {
   content: "\f001";
 }
 
-/* line 105, sass/bystl/_font-awesome.scss */
+/* line 125, sass/bystl/_font-awesome.scss */
 .icon-search:before {
   content: "\f002";
 }
 
-/* line 106, sass/bystl/_font-awesome.scss */
+/* line 126, sass/bystl/_font-awesome.scss */
 .icon-envelope:before {
   content: "\f003";
 }
 
-/* line 107, sass/bystl/_font-awesome.scss */
+/* line 127, sass/bystl/_font-awesome.scss */
 .icon-heart:before {
   content: "\f004";
 }
 
-/* line 108, sass/bystl/_font-awesome.scss */
+/* line 128, sass/bystl/_font-awesome.scss */
 .icon-star:before {
   content: "\f005";
 }
 
-/* line 109, sass/bystl/_font-awesome.scss */
+/* line 129, sass/bystl/_font-awesome.scss */
 .icon-star-empty:before {
   content: "\f006";
 }
 
-/* line 110, sass/bystl/_font-awesome.scss */
+/* line 130, sass/bystl/_font-awesome.scss */
 .icon-user:before {
   content: "\f007";
 }
 
-/* line 111, sass/bystl/_font-awesome.scss */
+/* line 131, sass/bystl/_font-awesome.scss */
 .icon-film:before {
   content: "\f008";
 }
 
-/* line 112, sass/bystl/_font-awesome.scss */
+/* line 132, sass/bystl/_font-awesome.scss */
 .icon-th-large:before {
   content: "\f009";
 }
 
-/* line 113, sass/bystl/_font-awesome.scss */
+/* line 133, sass/bystl/_font-awesome.scss */
 .icon-th:before {
   content: "\f00a";
 }
 
-/* line 114, sass/bystl/_font-awesome.scss */
+/* line 134, sass/bystl/_font-awesome.scss */
 .icon-th-list:before {
   content: "\f00b";
 }
 
-/* line 115, sass/bystl/_font-awesome.scss */
+/* line 135, sass/bystl/_font-awesome.scss */
 .icon-ok:before {
   content: "\f00c";
 }
 
-/* line 116, sass/bystl/_font-awesome.scss */
+/* line 136, sass/bystl/_font-awesome.scss */
 .icon-remove:before {
   content: "\f00d";
 }
 
-/* line 117, sass/bystl/_font-awesome.scss */
+/* line 137, sass/bystl/_font-awesome.scss */
 .icon-zoom-in:before {
   content: "\f00e";
 }
 
-/* line 119, sass/bystl/_font-awesome.scss */
+/* line 139, sass/bystl/_font-awesome.scss */
 .icon-zoom-out:before {
   content: "\f010";
 }
 
-/* line 120, sass/bystl/_font-awesome.scss */
+/* line 140, sass/bystl/_font-awesome.scss */
 .icon-off:before {
   content: "\f011";
 }
 
-/* line 121, sass/bystl/_font-awesome.scss */
+/* line 141, sass/bystl/_font-awesome.scss */
 .icon-signal:before {
   content: "\f012";
 }
 
-/* line 122, sass/bystl/_font-awesome.scss */
+/* line 142, sass/bystl/_font-awesome.scss */
 .icon-cog:before {
   content: "\f013";
 }
 
-/* line 123, sass/bystl/_font-awesome.scss */
+/* line 143, sass/bystl/_font-awesome.scss */
 .icon-trash:before {
   content: "\f014";
 }
 
-/* line 124, sass/bystl/_font-awesome.scss */
+/* line 144, sass/bystl/_font-awesome.scss */
 .icon-home:before {
   content: "\f015";
 }
 
-/* line 125, sass/bystl/_font-awesome.scss */
+/* line 145, sass/bystl/_font-awesome.scss */
 .icon-file:before {
   content: "\f016";
 }
 
-/* line 126, sass/bystl/_font-awesome.scss */
+/* line 146, sass/bystl/_font-awesome.scss */
 .icon-time:before {
   content: "\f017";
 }
 
-/* line 127, sass/bystl/_font-awesome.scss */
+/* line 147, sass/bystl/_font-awesome.scss */
 .icon-road:before {
   content: "\f018";
 }
 
-/* line 128, sass/bystl/_font-awesome.scss */
+/* line 148, sass/bystl/_font-awesome.scss */
 .icon-download-alt:before {
   content: "\f019";
 }
 
-/* line 129, sass/bystl/_font-awesome.scss */
+/* line 149, sass/bystl/_font-awesome.scss */
 .icon-download:before {
   content: "\f01a";
 }
 
-/* line 130, sass/bystl/_font-awesome.scss */
+/* line 150, sass/bystl/_font-awesome.scss */
 .icon-upload:before {
   content: "\f01b";
 }
 
-/* line 131, sass/bystl/_font-awesome.scss */
+/* line 151, sass/bystl/_font-awesome.scss */
 .icon-inbox:before {
   content: "\f01c";
 }
 
-/* line 132, sass/bystl/_font-awesome.scss */
+/* line 152, sass/bystl/_font-awesome.scss */
 .icon-play-circle:before {
   content: "\f01d";
 }
 
-/* line 133, sass/bystl/_font-awesome.scss */
+/* line 153, sass/bystl/_font-awesome.scss */
 .icon-repeat:before {
   content: "\f01e";
 }
 
-/* \f020 is not a valid unicode character. all shifted one down */
-/* line 136, sass/bystl/_font-awesome.scss */
+/* \f020 doesn't work in Safari. all shifted one down */
+/* line 156, sass/bystl/_font-awesome.scss */
 .icon-refresh:before {
   content: "\f021";
 }
 
-/* line 137, sass/bystl/_font-awesome.scss */
+/* line 157, sass/bystl/_font-awesome.scss */
 .icon-list-alt:before {
   content: "\f022";
 }
 
-/* line 138, sass/bystl/_font-awesome.scss */
+/* line 158, sass/bystl/_font-awesome.scss */
 .icon-lock:before {
   content: "\f023";
 }
 
-/* line 139, sass/bystl/_font-awesome.scss */
+/* line 159, sass/bystl/_font-awesome.scss */
 .icon-flag:before {
   content: "\f024";
 }
 
-/* line 140, sass/bystl/_font-awesome.scss */
+/* line 160, sass/bystl/_font-awesome.scss */
 .icon-headphones:before {
   content: "\f025";
 }
 
-/* line 141, sass/bystl/_font-awesome.scss */
+/* line 161, sass/bystl/_font-awesome.scss */
 .icon-volume-off:before {
   content: "\f026";
 }
 
-/* line 142, sass/bystl/_font-awesome.scss */
+/* line 162, sass/bystl/_font-awesome.scss */
 .icon-volume-down:before {
   content: "\f027";
 }
 
-/* line 143, sass/bystl/_font-awesome.scss */
+/* line 163, sass/bystl/_font-awesome.scss */
 .icon-volume-up:before {
   content: "\f028";
 }
 
-/* line 144, sass/bystl/_font-awesome.scss */
+/* line 164, sass/bystl/_font-awesome.scss */
 .icon-qrcode:before {
   content: "\f029";
 }
 
-/* line 145, sass/bystl/_font-awesome.scss */
+/* line 165, sass/bystl/_font-awesome.scss */
 .icon-barcode:before {
   content: "\f02a";
 }
 
-/* line 146, sass/bystl/_font-awesome.scss */
+/* line 166, sass/bystl/_font-awesome.scss */
 .icon-tag:before {
   content: "\f02b";
 }
 
-/* line 147, sass/bystl/_font-awesome.scss */
+/* line 167, sass/bystl/_font-awesome.scss */
 .icon-tags:before {
   content: "\f02c";
 }
 
-/* line 148, sass/bystl/_font-awesome.scss */
+/* line 168, sass/bystl/_font-awesome.scss */
 .icon-book:before {
   content: "\f02d";
 }
 
-/* line 149, sass/bystl/_font-awesome.scss */
+/* line 169, sass/bystl/_font-awesome.scss */
 .icon-bookmark:before {
   content: "\f02e";
 }
 
-/* line 150, sass/bystl/_font-awesome.scss */
+/* line 170, sass/bystl/_font-awesome.scss */
 .icon-print:before {
   content: "\f02f";
 }
 
-/* line 152, sass/bystl/_font-awesome.scss */
+/* line 172, sass/bystl/_font-awesome.scss */
 .icon-camera:before {
   content: "\f030";
 }
 
-/* line 153, sass/bystl/_font-awesome.scss */
+/* line 173, sass/bystl/_font-awesome.scss */
 .icon-font:before {
   content: "\f031";
 }
 
-/* line 154, sass/bystl/_font-awesome.scss */
+/* line 174, sass/bystl/_font-awesome.scss */
 .icon-bold:before {
   content: "\f032";
 }
 
-/* line 155, sass/bystl/_font-awesome.scss */
+/* line 175, sass/bystl/_font-awesome.scss */
 .icon-italic:before {
   content: "\f033";
 }
 
-/* line 156, sass/bystl/_font-awesome.scss */
+/* line 176, sass/bystl/_font-awesome.scss */
 .icon-text-height:before {
   content: "\f034";
 }
 
-/* line 157, sass/bystl/_font-awesome.scss */
+/* line 177, sass/bystl/_font-awesome.scss */
 .icon-text-width:before {
   content: "\f035";
 }
 
-/* line 158, sass/bystl/_font-awesome.scss */
+/* line 178, sass/bystl/_font-awesome.scss */
 .icon-align-left:before {
   content: "\f036";
 }
 
-/* line 159, sass/bystl/_font-awesome.scss */
+/* line 179, sass/bystl/_font-awesome.scss */
 .icon-align-center:before {
   content: "\f037";
 }
 
-/* line 160, sass/bystl/_font-awesome.scss */
+/* line 180, sass/bystl/_font-awesome.scss */
 .icon-align-right:before {
   content: "\f038";
 }
 
-/* line 161, sass/bystl/_font-awesome.scss */
+/* line 181, sass/bystl/_font-awesome.scss */
 .icon-align-justify:before {
   content: "\f039";
 }
 
-/* line 162, sass/bystl/_font-awesome.scss */
+/* line 182, sass/bystl/_font-awesome.scss */
 .icon-list:before {
   content: "\f03a";
 }
 
-/* line 163, sass/bystl/_font-awesome.scss */
+/* line 183, sass/bystl/_font-awesome.scss */
 .icon-indent-left:before {
   content: "\f03b";
 }
 
-/* line 164, sass/bystl/_font-awesome.scss */
+/* line 184, sass/bystl/_font-awesome.scss */
 .icon-indent-right:before {
   content: "\f03c";
 }
 
-/* line 165, sass/bystl/_font-awesome.scss */
+/* line 185, sass/bystl/_font-awesome.scss */
 .icon-facetime-video:before {
   content: "\f03d";
 }
 
-/* line 166, sass/bystl/_font-awesome.scss */
+/* line 186, sass/bystl/_font-awesome.scss */
 .icon-picture:before {
   content: "\f03e";
 }
 
-/* line 168, sass/bystl/_font-awesome.scss */
+/* line 188, sass/bystl/_font-awesome.scss */
 .icon-pencil:before {
   content: "\f040";
 }
 
-/* line 169, sass/bystl/_font-awesome.scss */
+/* line 189, sass/bystl/_font-awesome.scss */
 .icon-map-marker:before {
   content: "\f041";
 }
 
-/* line 170, sass/bystl/_font-awesome.scss */
+/* line 190, sass/bystl/_font-awesome.scss */
 .icon-adjust:before {
   content: "\f042";
 }
 
-/* line 171, sass/bystl/_font-awesome.scss */
+/* line 191, sass/bystl/_font-awesome.scss */
 .icon-tint:before {
   content: "\f043";
 }
 
-/* line 172, sass/bystl/_font-awesome.scss */
+/* line 192, sass/bystl/_font-awesome.scss */
 .icon-edit:before {
   content: "\f044";
 }
 
-/* line 173, sass/bystl/_font-awesome.scss */
+/* line 193, sass/bystl/_font-awesome.scss */
 .icon-share:before {
   content: "\f045";
 }
 
-/* line 174, sass/bystl/_font-awesome.scss */
+/* line 194, sass/bystl/_font-awesome.scss */
 .icon-check:before {
   content: "\f046";
 }
 
-/* line 175, sass/bystl/_font-awesome.scss */
+/* line 195, sass/bystl/_font-awesome.scss */
 .icon-move:before {
   content: "\f047";
 }
 
-/* line 176, sass/bystl/_font-awesome.scss */
+/* line 196, sass/bystl/_font-awesome.scss */
 .icon-step-backward:before {
   content: "\f048";
 }
 
-/* line 177, sass/bystl/_font-awesome.scss */
+/* line 197, sass/bystl/_font-awesome.scss */
 .icon-fast-backward:before {
   content: "\f049";
 }
 
-/* line 178, sass/bystl/_font-awesome.scss */
+/* line 198, sass/bystl/_font-awesome.scss */
 .icon-backward:before {
   content: "\f04a";
 }
 
-/* line 179, sass/bystl/_font-awesome.scss */
+/* line 199, sass/bystl/_font-awesome.scss */
 .icon-play:before {
   content: "\f04b";
 }
 
-/* line 180, sass/bystl/_font-awesome.scss */
+/* line 200, sass/bystl/_font-awesome.scss */
 .icon-pause:before {
   content: "\f04c";
 }
 
-/* line 181, sass/bystl/_font-awesome.scss */
+/* line 201, sass/bystl/_font-awesome.scss */
 .icon-stop:before {
   content: "\f04d";
 }
 
-/* line 182, sass/bystl/_font-awesome.scss */
+/* line 202, sass/bystl/_font-awesome.scss */
 .icon-forward:before {
   content: "\f04e";
 }
 
-/* line 184, sass/bystl/_font-awesome.scss */
+/* line 204, sass/bystl/_font-awesome.scss */
 .icon-fast-forward:before {
   content: "\f050";
 }
 
-/* line 185, sass/bystl/_font-awesome.scss */
+/* line 205, sass/bystl/_font-awesome.scss */
 .icon-step-forward:before {
   content: "\f051";
 }
 
-/* line 186, sass/bystl/_font-awesome.scss */
+/* line 206, sass/bystl/_font-awesome.scss */
 .icon-eject:before {
   content: "\f052";
 }
 
-/* line 187, sass/bystl/_font-awesome.scss */
+/* line 207, sass/bystl/_font-awesome.scss */
 .icon-chevron-left:before {
   content: "\f053";
 }
 
-/* line 188, sass/bystl/_font-awesome.scss */
+/* line 208, sass/bystl/_font-awesome.scss */
 .icon-chevron-right:before {
   content: "\f054";
 }
 
-/* line 189, sass/bystl/_font-awesome.scss */
+/* line 209, sass/bystl/_font-awesome.scss */
 .icon-plus-sign:before {
   content: "\f055";
 }
 
-/* line 190, sass/bystl/_font-awesome.scss */
+/* line 210, sass/bystl/_font-awesome.scss */
 .icon-minus-sign:before {
   content: "\f056";
 }
 
-/* line 191, sass/bystl/_font-awesome.scss */
+/* line 211, sass/bystl/_font-awesome.scss */
 .icon-remove-sign:before {
   content: "\f057";
 }
 
-/* line 192, sass/bystl/_font-awesome.scss */
+/* line 212, sass/bystl/_font-awesome.scss */
 .icon-ok-sign:before {
   content: "\f058";
 }
 
-/* line 193, sass/bystl/_font-awesome.scss */
+/* line 213, sass/bystl/_font-awesome.scss */
 .icon-question-sign:before {
   content: "\f059";
 }
 
-/* line 194, sass/bystl/_font-awesome.scss */
+/* line 214, sass/bystl/_font-awesome.scss */
 .icon-info-sign:before {
   content: "\f05a";
 }
 
-/* line 195, sass/bystl/_font-awesome.scss */
+/* line 215, sass/bystl/_font-awesome.scss */
 .icon-screenshot:before {
   content: "\f05b";
 }
 
-/* line 196, sass/bystl/_font-awesome.scss */
+/* line 216, sass/bystl/_font-awesome.scss */
 .icon-remove-circle:before {
   content: "\f05c";
 }
 
-/* line 197, sass/bystl/_font-awesome.scss */
+/* line 217, sass/bystl/_font-awesome.scss */
 .icon-ok-circle:before {
   content: "\f05d";
 }
 
-/* line 198, sass/bystl/_font-awesome.scss */
+/* line 218, sass/bystl/_font-awesome.scss */
 .icon-ban-circle:before {
   content: "\f05e";
 }
 
-/* line 200, sass/bystl/_font-awesome.scss */
+/* line 220, sass/bystl/_font-awesome.scss */
 .icon-arrow-left:before {
   content: "\f060";
 }
 
-/* line 201, sass/bystl/_font-awesome.scss */
+/* line 221, sass/bystl/_font-awesome.scss */
 .icon-arrow-right:before {
   content: "\f061";
 }
 
-/* line 202, sass/bystl/_font-awesome.scss */
+/* line 222, sass/bystl/_font-awesome.scss */
 .icon-arrow-up:before {
   content: "\f062";
 }
 
-/* line 203, sass/bystl/_font-awesome.scss */
+/* line 223, sass/bystl/_font-awesome.scss */
 .icon-arrow-down:before {
   content: "\f063";
 }
 
-/* line 204, sass/bystl/_font-awesome.scss */
+/* line 224, sass/bystl/_font-awesome.scss */
 .icon-share-alt:before {
   content: "\f064";
 }
 
-/* line 205, sass/bystl/_font-awesome.scss */
+/* line 225, sass/bystl/_font-awesome.scss */
 .icon-resize-full:before {
   content: "\f065";
 }
 
-/* line 206, sass/bystl/_font-awesome.scss */
+/* line 226, sass/bystl/_font-awesome.scss */
 .icon-resize-small:before {
   content: "\f066";
 }
 
-/* line 207, sass/bystl/_font-awesome.scss */
+/* line 227, sass/bystl/_font-awesome.scss */
 .icon-plus:before {
   content: "\f067";
 }
 
-/* line 208, sass/bystl/_font-awesome.scss */
+/* line 228, sass/bystl/_font-awesome.scss */
 .icon-minus:before {
   content: "\f068";
 }
 
-/* line 209, sass/bystl/_font-awesome.scss */
+/* line 229, sass/bystl/_font-awesome.scss */
 .icon-asterisk:before {
   content: "\f069";
 }
 
-/* line 210, sass/bystl/_font-awesome.scss */
+/* line 230, sass/bystl/_font-awesome.scss */
 .icon-exclamation-sign:before {
   content: "\f06a";
 }
 
-/* line 211, sass/bystl/_font-awesome.scss */
+/* line 231, sass/bystl/_font-awesome.scss */
 .icon-gift:before {
   content: "\f06b";
 }
 
-/* line 212, sass/bystl/_font-awesome.scss */
+/* line 232, sass/bystl/_font-awesome.scss */
 .icon-leaf:before {
   content: "\f06c";
 }
 
-/* line 213, sass/bystl/_font-awesome.scss */
+/* line 233, sass/bystl/_font-awesome.scss */
 .icon-fire:before {
   content: "\f06d";
 }
 
-/* line 214, sass/bystl/_font-awesome.scss */
+/* line 234, sass/bystl/_font-awesome.scss */
 .icon-eye-open:before {
   content: "\f06e";
 }
 
-/* line 216, sass/bystl/_font-awesome.scss */
+/* line 236, sass/bystl/_font-awesome.scss */
 .icon-eye-close:before {
   content: "\f070";
 }
 
-/* line 217, sass/bystl/_font-awesome.scss */
+/* line 237, sass/bystl/_font-awesome.scss */
 .icon-warning-sign:before {
   content: "\f071";
 }
 
-/* line 218, sass/bystl/_font-awesome.scss */
+/* line 238, sass/bystl/_font-awesome.scss */
 .icon-plane:before {
   content: "\f072";
 }
 
-/* line 219, sass/bystl/_font-awesome.scss */
+/* line 239, sass/bystl/_font-awesome.scss */
 .icon-calendar:before {
   content: "\f073";
 }
 
-/* line 220, sass/bystl/_font-awesome.scss */
+/* line 240, sass/bystl/_font-awesome.scss */
 .icon-random:before {
   content: "\f074";
 }
 
-/* line 221, sass/bystl/_font-awesome.scss */
+/* line 241, sass/bystl/_font-awesome.scss */
 .icon-comment:before {
   content: "\f075";
 }
 
-/* line 222, sass/bystl/_font-awesome.scss */
+/* line 242, sass/bystl/_font-awesome.scss */
 .icon-magnet:before {
   content: "\f076";
 }
 
-/* line 223, sass/bystl/_font-awesome.scss */
+/* line 243, sass/bystl/_font-awesome.scss */
 .icon-chevron-up:before {
   content: "\f077";
 }
 
-/* line 224, sass/bystl/_font-awesome.scss */
+/* line 244, sass/bystl/_font-awesome.scss */
 .icon-chevron-down:before {
   content: "\f078";
 }
 
-/* line 225, sass/bystl/_font-awesome.scss */
+/* line 245, sass/bystl/_font-awesome.scss */
 .icon-retweet:before {
   content: "\f079";
 }
 
-/* line 226, sass/bystl/_font-awesome.scss */
+/* line 246, sass/bystl/_font-awesome.scss */
 .icon-shopping-cart:before {
   content: "\f07a";
 }
 
-/* line 227, sass/bystl/_font-awesome.scss */
+/* line 247, sass/bystl/_font-awesome.scss */
 .icon-folder-close:before {
   content: "\f07b";
 }
 
-/* line 228, sass/bystl/_font-awesome.scss */
+/* line 248, sass/bystl/_font-awesome.scss */
 .icon-folder-open:before {
   content: "\f07c";
 }
 
-/* line 229, sass/bystl/_font-awesome.scss */
+/* line 249, sass/bystl/_font-awesome.scss */
 .icon-resize-vertical:before {
   content: "\f07d";
 }
 
-/* line 230, sass/bystl/_font-awesome.scss */
+/* line 250, sass/bystl/_font-awesome.scss */
 .icon-resize-horizontal:before {
   content: "\f07e";
 }
 
-/* line 232, sass/bystl/_font-awesome.scss */
+/* line 252, sass/bystl/_font-awesome.scss */
 .icon-bar-chart:before {
   content: "\f080";
 }
 
-/* line 233, sass/bystl/_font-awesome.scss */
+/* line 253, sass/bystl/_font-awesome.scss */
 .icon-twitter-sign:before {
   content: "\f081";
 }
 
-/* line 234, sass/bystl/_font-awesome.scss */
+/* line 254, sass/bystl/_font-awesome.scss */
 .icon-facebook-sign:before {
   content: "\f082";
 }
 
-/* line 235, sass/bystl/_font-awesome.scss */
+/* line 255, sass/bystl/_font-awesome.scss */
 .icon-camera-retro:before {
   content: "\f083";
 }
 
-/* line 236, sass/bystl/_font-awesome.scss */
+/* line 256, sass/bystl/_font-awesome.scss */
 .icon-key:before {
   content: "\f084";
 }
 
-/* line 237, sass/bystl/_font-awesome.scss */
+/* line 257, sass/bystl/_font-awesome.scss */
 .icon-cogs:before {
   content: "\f085";
 }
 
-/* line 238, sass/bystl/_font-awesome.scss */
+/* line 258, sass/bystl/_font-awesome.scss */
 .icon-comments:before {
   content: "\f086";
 }
 
-/* line 239, sass/bystl/_font-awesome.scss */
+/* line 259, sass/bystl/_font-awesome.scss */
 .icon-thumbs-up:before {
   content: "\f087";
 }
 
-/* line 240, sass/bystl/_font-awesome.scss */
+/* line 260, sass/bystl/_font-awesome.scss */
 .icon-thumbs-down:before {
   content: "\f088";
 }
 
-/* line 241, sass/bystl/_font-awesome.scss */
+/* line 261, sass/bystl/_font-awesome.scss */
 .icon-star-half:before {
   content: "\f089";
 }
 
-/* line 242, sass/bystl/_font-awesome.scss */
+/* line 262, sass/bystl/_font-awesome.scss */
 .icon-heart-empty:before {
   content: "\f08a";
 }
 
-/* line 243, sass/bystl/_font-awesome.scss */
+/* line 263, sass/bystl/_font-awesome.scss */
 .icon-signout:before {
   content: "\f08b";
 }
 
-/* line 244, sass/bystl/_font-awesome.scss */
+/* line 264, sass/bystl/_font-awesome.scss */
 .icon-linkedin-sign:before {
   content: "\f08c";
 }
 
-/* line 245, sass/bystl/_font-awesome.scss */
+/* line 265, sass/bystl/_font-awesome.scss */
 .icon-pushpin:before {
   content: "\f08d";
 }
 
-/* line 246, sass/bystl/_font-awesome.scss */
+/* line 266, sass/bystl/_font-awesome.scss */
 .icon-external-link:before {
   content: "\f08e";
 }
 
-/* line 248, sass/bystl/_font-awesome.scss */
+/* line 268, sass/bystl/_font-awesome.scss */
 .icon-signin:before {
   content: "\f090";
 }
 
-/* line 249, sass/bystl/_font-awesome.scss */
+/* line 269, sass/bystl/_font-awesome.scss */
 .icon-trophy:before {
   content: "\f091";
 }
 
-/* line 250, sass/bystl/_font-awesome.scss */
+/* line 270, sass/bystl/_font-awesome.scss */
 .icon-github-sign:before {
   content: "\f092";
 }
 
-/* line 251, sass/bystl/_font-awesome.scss */
+/* line 271, sass/bystl/_font-awesome.scss */
 .icon-upload-alt:before {
   content: "\f093";
 }
 
-/* line 252, sass/bystl/_font-awesome.scss */
+/* line 272, sass/bystl/_font-awesome.scss */
 .icon-lemon:before {
   content: "\f094";
+}
+
+/* line 273, sass/bystl/_font-awesome.scss */
+.icon-phone:before {
+  content: "\f095";
+}
+
+/* line 274, sass/bystl/_font-awesome.scss */
+.icon-check-empty:before {
+  content: "\f096";
+}
+
+/* line 275, sass/bystl/_font-awesome.scss */
+.icon-bookmark-empty:before {
+  content: "\f097";
+}
+
+/* line 276, sass/bystl/_font-awesome.scss */
+.icon-phone-sign:before {
+  content: "\f098";
+}
+
+/* line 277, sass/bystl/_font-awesome.scss */
+.icon-twitter:before {
+  content: "\f099";
+}
+
+/* line 278, sass/bystl/_font-awesome.scss */
+.icon-facebook:before {
+  content: "\f09a";
+}
+
+/* line 279, sass/bystl/_font-awesome.scss */
+.icon-github:before {
+  content: "\f09b";
+}
+
+/* line 280, sass/bystl/_font-awesome.scss */
+.icon-unlock:before {
+  content: "\f09c";
+}
+
+/* line 281, sass/bystl/_font-awesome.scss */
+.icon-credit-card:before {
+  content: "\f09d";
+}
+
+/* line 282, sass/bystl/_font-awesome.scss */
+.icon-rss:before {
+  content: "\f09e";
+}
+
+/* line 284, sass/bystl/_font-awesome.scss */
+.icon-hdd:before {
+  content: "\f0a0";
+}
+
+/* line 285, sass/bystl/_font-awesome.scss */
+.icon-bullhorn:before {
+  content: "\f0a1";
+}
+
+/* line 286, sass/bystl/_font-awesome.scss */
+.icon-bell:before {
+  content: "\f0a2";
+}
+
+/* line 287, sass/bystl/_font-awesome.scss */
+.icon-certificate:before {
+  content: "\f0a3";
+}
+
+/* line 288, sass/bystl/_font-awesome.scss */
+.icon-hand-right:before {
+  content: "\f0a4";
+}
+
+/* line 289, sass/bystl/_font-awesome.scss */
+.icon-hand-left:before {
+  content: "\f0a5";
+}
+
+/* line 290, sass/bystl/_font-awesome.scss */
+.icon-hand-up:before {
+  content: "\f0a6";
+}
+
+/* line 291, sass/bystl/_font-awesome.scss */
+.icon-hand-down:before {
+  content: "\f0a7";
+}
+
+/* line 292, sass/bystl/_font-awesome.scss */
+.icon-circle-arrow-left:before {
+  content: "\f0a8";
+}
+
+/* line 293, sass/bystl/_font-awesome.scss */
+.icon-circle-arrow-right:before {
+  content: "\f0a9";
+}
+
+/* line 294, sass/bystl/_font-awesome.scss */
+.icon-circle-arrow-up:before {
+  content: "\f0aa";
+}
+
+/* line 295, sass/bystl/_font-awesome.scss */
+.icon-circle-arrow-down:before {
+  content: "\f0ab";
+}
+
+/* line 296, sass/bystl/_font-awesome.scss */
+.icon-globe:before {
+  content: "\f0ac";
+}
+
+/* line 297, sass/bystl/_font-awesome.scss */
+.icon-wrench:before {
+  content: "\f0ad";
+}
+
+/* line 298, sass/bystl/_font-awesome.scss */
+.icon-tasks:before {
+  content: "\f0ae";
+}
+
+/* line 300, sass/bystl/_font-awesome.scss */
+.icon-filter:before {
+  content: "\f0b0";
+}
+
+/* line 301, sass/bystl/_font-awesome.scss */
+.icon-briefcase:before {
+  content: "\f0b1";
+}
+
+/* line 302, sass/bystl/_font-awesome.scss */
+.icon-fullscreen:before {
+  content: "\f0b2";
+}
+
+/* line 304, sass/bystl/_font-awesome.scss */
+.icon-group:before {
+  content: "\f0c0";
+}
+
+/* line 305, sass/bystl/_font-awesome.scss */
+.icon-link:before {
+  content: "\f0c1";
+}
+
+/* line 306, sass/bystl/_font-awesome.scss */
+.icon-cloud:before {
+  content: "\f0c2";
+}
+
+/* line 307, sass/bystl/_font-awesome.scss */
+.icon-beaker:before {
+  content: "\f0c3";
+}
+
+/* line 308, sass/bystl/_font-awesome.scss */
+.icon-cut:before {
+  content: "\f0c4";
+}
+
+/* line 309, sass/bystl/_font-awesome.scss */
+.icon-copy:before {
+  content: "\f0c5";
+}
+
+/* line 310, sass/bystl/_font-awesome.scss */
+.icon-paper-clip:before {
+  content: "\f0c6";
+}
+
+/* line 311, sass/bystl/_font-awesome.scss */
+.icon-save:before {
+  content: "\f0c7";
+}
+
+/* line 312, sass/bystl/_font-awesome.scss */
+.icon-sign-blank:before {
+  content: "\f0c8";
+}
+
+/* line 313, sass/bystl/_font-awesome.scss */
+.icon-reorder:before {
+  content: "\f0c9";
+}
+
+/* line 314, sass/bystl/_font-awesome.scss */
+.icon-list-ul:before {
+  content: "\f0ca";
+}
+
+/* line 315, sass/bystl/_font-awesome.scss */
+.icon-list-ol:before {
+  content: "\f0cb";
+}
+
+/* line 316, sass/bystl/_font-awesome.scss */
+.icon-strikethrough:before {
+  content: "\f0cc";
+}
+
+/* line 317, sass/bystl/_font-awesome.scss */
+.icon-underline:before {
+  content: "\f0cd";
+}
+
+/* line 318, sass/bystl/_font-awesome.scss */
+.icon-table:before {
+  content: "\f0ce";
+}
+
+/* line 320, sass/bystl/_font-awesome.scss */
+.icon-magic:before {
+  content: "\f0d0";
+}
+
+/* line 321, sass/bystl/_font-awesome.scss */
+.icon-truck:before {
+  content: "\f0d1";
+}
+
+/* line 322, sass/bystl/_font-awesome.scss */
+.icon-pinterest:before {
+  content: "\f0d2";
+}
+
+/* line 323, sass/bystl/_font-awesome.scss */
+.icon-pinterest-sign:before {
+  content: "\f0d3";
+}
+
+/* line 324, sass/bystl/_font-awesome.scss */
+.icon-google-plus-sign:before {
+  content: "\f0d4";
+}
+
+/* line 325, sass/bystl/_font-awesome.scss */
+.icon-google-plus:before {
+  content: "\f0d5";
+}
+
+/* line 326, sass/bystl/_font-awesome.scss */
+.icon-money:before {
+  content: "\f0d6";
+}
+
+/* line 327, sass/bystl/_font-awesome.scss */
+.icon-caret-down:before {
+  content: "\f0d7";
+}
+
+/* line 328, sass/bystl/_font-awesome.scss */
+.icon-caret-up:before {
+  content: "\f0d8";
+}
+
+/* line 329, sass/bystl/_font-awesome.scss */
+.icon-caret-left:before {
+  content: "\f0d9";
+}
+
+/* line 330, sass/bystl/_font-awesome.scss */
+.icon-caret-right:before {
+  content: "\f0da";
+}
+
+/* line 331, sass/bystl/_font-awesome.scss */
+.icon-columns:before {
+  content: "\f0db";
+}
+
+/* line 332, sass/bystl/_font-awesome.scss */
+.icon-sort:before {
+  content: "\f0dc";
+}
+
+/* line 333, sass/bystl/_font-awesome.scss */
+.icon-sort-down:before {
+  content: "\f0dd";
+}
+
+/* line 334, sass/bystl/_font-awesome.scss */
+.icon-sort-up:before {
+  content: "\f0de";
+}
+
+/* line 336, sass/bystl/_font-awesome.scss */
+.icon-envelope-alt:before {
+  content: "\f0e0";
+}
+
+/* line 337, sass/bystl/_font-awesome.scss */
+.icon-linkedin:before {
+  content: "\f0e1";
+}
+
+/* line 338, sass/bystl/_font-awesome.scss */
+.icon-undo:before {
+  content: "\f0e2";
+}
+
+/* line 339, sass/bystl/_font-awesome.scss */
+.icon-legal:before {
+  content: "\f0e3";
+}
+
+/* line 340, sass/bystl/_font-awesome.scss */
+.icon-dashboard:before {
+  content: "\f0e4";
+}
+
+/* line 341, sass/bystl/_font-awesome.scss */
+.icon-comment-alt:before {
+  content: "\f0e5";
+}
+
+/* line 342, sass/bystl/_font-awesome.scss */
+.icon-comments-alt:before {
+  content: "\f0e6";
+}
+
+/* line 343, sass/bystl/_font-awesome.scss */
+.icon-bolt:before {
+  content: "\f0e7";
+}
+
+/* line 344, sass/bystl/_font-awesome.scss */
+.icon-sitemap:before {
+  content: "\f0e8";
+}
+
+/* line 345, sass/bystl/_font-awesome.scss */
+.icon-umbrella:before {
+  content: "\f0e9";
+}
+
+/* line 346, sass/bystl/_font-awesome.scss */
+.icon-paste:before {
+  content: "\f0ea";
+}
+
+/* line 348, sass/bystl/_font-awesome.scss */
+.icon-user-md:before {
+  content: "\f200";
 }
 
 /*--- 
@@ -7241,9 +7669,7 @@ h2 {
 
 /* line 16, sass/synapse/_type.scss */
 .widget h3 {
-  border-bottom: 1px solid #222d3b;
   margin-bottom: 15px;
-  padding-bottom: 7px;
   color: white;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
@@ -7262,7 +7688,7 @@ h2 {
 p {
   text-shadow: 1px 1px rgba(255, 255, 255, 0.8);
   color: #555555;
-  font-size: 12px;
+  font-size: 13px;
 }
 /* line 41, sass/synapse/_type.scss */
 .page-content p {
@@ -7293,25 +7719,30 @@ em {
   font-style: italic;
 }
 
+/* line 69, sass/synapse/_type.scss */
+strong, b {
+  font-weight: bold;
+}
+
 /*	LINKS
 ---------------------------------------------- */
-/* line 72, sass/synapse/_type.scss */
+/* line 78, sass/synapse/_type.scss */
 a {
   color: #1592ca;
 }
-/* line 74, sass/synapse/_type.scss */
+/* line 80, sass/synapse/_type.scss */
 .sidebar a {
   color: #cde4ea;
 }
-/* line 76, sass/synapse/_type.scss */
+/* line 82, sass/synapse/_type.scss */
 .sidebar a:hover {
   color: #84bdcd;
 }
-/* line 80, sass/synapse/_type.scss */
+/* line 86, sass/synapse/_type.scss */
 a:hover {
   color: #53c1ea;
 }
-/* line 84, sass/synapse/_type.scss */
+/* line 90, sass/synapse/_type.scss */
 .video-holder a, .portfolio-item a, .portfolio-item a {
   color: #cde4ea;
   -webkit-transition: color 0.3s ease-in;
@@ -7320,23 +7751,23 @@ a:hover {
   -o-transition: color 0.3s ease-in;
   transition: color 0.3s ease-in;
 }
-/* line 87, sass/synapse/_type.scss */
+/* line 93, sass/synapse/_type.scss */
 .video-holder a:hover, .portfolio-item a:hover, .portfolio-item a:hover {
   color: #84bdcd;
 }
-/* line 92, sass/synapse/_type.scss */
+/* line 98, sass/synapse/_type.scss */
 .cat-item a {
   font-size: 13px;
   line-height: 22px;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
   float: left;
 }
-/* line 101, sass/synapse/_type.scss */
+/* line 107, sass/synapse/_type.scss */
 .cat-item li a:hover {
   text-decoration: none;
   color: white;
 }
-/* line 107, sass/synapse/_type.scss */
+/* line 113, sass/synapse/_type.scss */
 .small-footer a {
   color: #555555;
   font-weight: bold;
@@ -7346,53 +7777,53 @@ a:hover {
 
 /*	LISTS
 ---------------------------------------------- */
-/* line 120, sass/synapse/_type.scss */
+/* line 126, sass/synapse/_type.scss */
 .article-excerpt ul, .portfolio-item-content ul, .article-excerpt ol, .portfolio-item-content ol {
   padding: 5px 0;
 }
 
-/* line 125, sass/synapse/_type.scss */
+/* line 131, sass/synapse/_type.scss */
 ol {
   list-style: decimal outside none !important;
 }
 
-/* line 129, sass/synapse/_type.scss */
+/* line 135, sass/synapse/_type.scss */
 ul {
   list-style: none;
 }
-/* line 133, sass/synapse/_type.scss */
-.page-content ul, .widget ul, ul.widgets {
+/* line 139, sass/synapse/_type.scss */
+.widget ul, ul.widgets {
   margin: 12px 0;
 }
-/* line 136, sass/synapse/_type.scss */
-.page-content ul ul, .widget ul ul, ul.widgets ul {
+/* line 142, sass/synapse/_type.scss */
+.widget ul ul, ul.widgets ul {
   margin-top: 10px;
 }
-/* line 144, sass/synapse/_type.scss */
+/* line 150, sass/synapse/_type.scss */
 .article-excerpt ul li, .portfolio-item-content ul li {
   padding-left: 18px;
   background: url(img/list-bullet.png) no-repeat top left;
   margin-bottom: 10px;
 }
 
-/* line 155, sass/synapse/_type.scss */
+/* line 161, sass/synapse/_type.scss */
 ol li {
   margin-left: 18px;
   margin-bottom: 10px;
 }
-/* line 159, sass/synapse/_type.scss */
+/* line 165, sass/synapse/_type.scss */
 pre ol li {
   margin: 0;
 }
-/* line 165, sass/synapse/_type.scss */
+/* line 171, sass/synapse/_type.scss */
 .labels li {
   margin-bottom: 10px;
 }
-/* line 169, sass/synapse/_type.scss */
+/* line 175, sass/synapse/_type.scss */
 .sidebar ul li {
   margin-left: 0 !important;
 }
-/* line 173, sass/synapse/_type.scss */
+/* line 179, sass/synapse/_type.scss */
 .dotted ul li, .dotted li {
   padding-left: 18px;
   background: url(img/list-bullet.png) no-repeat top left;
@@ -7401,7 +7832,7 @@ pre ol li {
 
 /*	BLOCKQUOTES, CODE, ETC
 ---------------------------------------------- */
-/* line 184, sass/synapse/_type.scss */
+/* line 190, sass/synapse/_type.scss */
 blockquote {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 15px;
@@ -7411,7 +7842,7 @@ blockquote {
   margin-bottom: 30px;
   padding-top: 0 !important;
 }
-/* line 193, sass/synapse/_type.scss */
+/* line 199, sass/synapse/_type.scss */
 blockquote:after {
   color: #CCCCCC;
   content: open-quote;
@@ -7425,7 +7856,7 @@ blockquote:after {
 
 /*	WORDPRESS CLASS TYPOGRAPHY
 ---------------------------------------------- */
-/* line 207, sass/synapse/_type.scss */
+/* line 213, sass/synapse/_type.scss */
 .page-title {
   margin-bottom: 10px;
 }
@@ -7714,19 +8145,33 @@ body.bg_Wood {
   -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
 }
-
 /* line 50, sass/synapse/_header.scss */
+.header.mobile {
+  background-image: none;
+  background-color: transparent;
+  padding-top: 10px;
+  padding-bottom: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 57, sass/synapse/_header.scss */
+.header.mobile .menu-container .btn-group li[class*='current'] {
+  display: none !important;
+}
+
+/* line 63, sass/synapse/_header.scss */
 .logo-container {
   float: left;
 }
 
-/* line 54, sass/synapse/_header.scss */
+/* line 67, sass/synapse/_header.scss */
 .logo {
   float: left;
   text-decoration: none !important;
 }
 
-/* line 60, sass/synapse/_header.scss */
+/* line 73, sass/synapse/_header.scss */
 .logo h1, .logo .h1, .logo i {
   visibility: visible;
   font-family: "bystlLogoFont", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -7742,17 +8187,17 @@ body.bg_Wood {
   font-size: 2.846em;
 }
 /* line 58, sass/bystl/_webfonts.scss */
-.logo h1 strong, .logo .h1 strong, .logo i strong {
+.logo h1 strong, .logo h1 b, .logo .h1 strong, .logo .h1 b, .logo i strong, .logo i b {
   word-spacing: -1px;
   font-weight: normal;
   color: #00709d;
 }
-/* line 64, sass/synapse/_header.scss */
+/* line 77, sass/synapse/_header.scss */
 .logo i {
   color: #00709d;
 }
 
-/* line 70, sass/synapse/_header.scss */
+/* line 83, sass/synapse/_header.scss */
 .tagline {
   color: #505050;
   font-size: 13px;
@@ -7771,78 +8216,34 @@ body.bg_Wood {
  ----------------------------------------------*/
 /*	TOP BAR NAV
 ---------------------------------------------- */
-/* line 106, sass/synapse/_navs.scss */
-.social {
-  float: right !important;
-  padding-top: 2px;
-}
-
-/* line 110, sass/synapse/_navs.scss */
-.social li {
-  text-indent: -99999px;
-  padding-left: 20px;
-  float: left;
-}
-
-/* line 115, sass/synapse/_navs.scss */
-.social li a {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
-  opacity: 0.4;
-  -webkit-transition: opacity 0.3s ease-in;
-  -moz-transition: opacity 0.3s ease-in;
-  -ms-transition: opacity 0.3s ease-in;
-  -o-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
-}
-
-/* line 119, sass/synapse/_navs.scss */
-.social li a:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
-/* line 122, sass/synapse/_navs.scss */
-.facebook, .twitter, .phone, .mail {
-  width: 17px;
-  height: 16px;
-  display: block;
-  box-sizing: border-box;
-}
-
-/* line 127, sass/synapse/_navs.scss */
+/*
 .facebook {
-  background: url(img/icon-facebook.png) no-repeat;
+	background: url(image-url('icon-facebook.png', true)) no-repeat;
 }
-
-/* line 130, sass/synapse/_navs.scss */
 .twitter {
-  background: url(img/icon-twitter.png) no-repeat;
+	background: url(image-url('icon-twitter.png', true)) no-repeat;
 }
-
-/* line 133, sass/synapse/_navs.scss */
 .phone {
-  background: url(img/icon-phone.png) no-repeat;
+	background: url(image-url('icon-phone.png', true)) no-repeat;
 }
-
-/* line 136, sass/synapse/_navs.scss */
 .mail {
-  background: url(img/icon-mail.png) no-repeat;
+	background: url(image-url('icon-mail.png', true)) no-repeat;
 }
-
+*/
 /*	MAIN NAV (HEADER)
 ---------------------------------------------- */
-/* line 142, sass/synapse/_navs.scss */
+/* line 150, sass/synapse/_navs.scss */
 .header .nav {
   margin-bottom: 0;
 }
 
-/* line 145, sass/synapse/_navs.scss */
+/* line 153, sass/synapse/_navs.scss */
 #main-nav {
   float: right;
   padding-top: 6px;
 }
 
-/* line 149, sass/synapse/_navs.scss */
+/* line 157, sass/synapse/_navs.scss */
 #main-nav li {
   float: left;
   margin-left: 15px;
@@ -7851,17 +8252,17 @@ body.bg_Wood {
   font-size: 13px;
 }
 
-/* line 156, sass/synapse/_navs.scss */
+/* line 164, sass/synapse/_navs.scss */
 #main-nav > li:first-child {
   border-left: medium none;
 }
 
-/* line 159, sass/synapse/_navs.scss */
+/* line 167, sass/synapse/_navs.scss */
 .home .home-link a, .home li a.home-link {
   padding: 8px 17px !important;
 }
 
-/* line 164, sass/synapse/_navs.scss */
+/* line 172, sass/synapse/_navs.scss */
 .home .home-link a, #main-nav .current-menu-item a, #main-nav .current_page_item a,
 .home li a.home-link, #main-nav li a.current-menu-item, #main-nav li a.current_page_item,
 #main-nav li a[class*="current"] {
@@ -7872,29 +8273,29 @@ body.bg_Wood {
   transition: opacity 0.3s ease-in;
 }
 
-/* line 170, sass/synapse/_navs.scss */
+/* line 178, sass/synapse/_navs.scss */
 #main-nav a {
   padding: 8px 0;
 }
 
 /*	FILTERS NAVIGATION (BELOW HEADER)
 ---------------------------------------------- */
-/* line 178, sass/synapse/_navs.scss */
+/* line 186, sass/synapse/_navs.scss */
 #filters {
   margin-bottom: 40px;
 }
-/* line 181, sass/synapse/_navs.scss */
+/* line 189, sass/synapse/_navs.scss */
 #filters li {
   float: left;
   margin-right: 25px;
 }
-/* line 185, sass/synapse/_navs.scss */
+/* line 193, sass/synapse/_navs.scss */
 #filters li a {
   color: #555555;
   font-size: 13px;
   text-shadow: 1px 1px rgba(255, 255, 255, 0.8);
 }
-/* line 194, sass/synapse/_navs.scss */
+/* line 202, sass/synapse/_navs.scss */
 #filters li a:hover {
   text-decoration: none;
 }
@@ -9167,7 +9568,6 @@ label {
 /* line 231, sass/synapse/_widgets.scss */
 .sidebar-twitter-widget .tweet_list li {
   margin: 0;
-  width: 163px;
   padding-bottom: 15px;
   margin-bottom: 15px;
   padding-left: 40px;
@@ -10133,7 +10533,7 @@ abbr {
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 2) {
   /* line 31, sass/bootstrap/_responsive-utilities.scss */
-  address, article, aside, blockquote, center, dir, div, dd, details, dl, dt, fieldset, figcaption, figure, form, footer, frameset, h1, h2, h3, h4, h5, h6, hr, header, hgroup, isindex, menu, nav, noframes, noscript, ol, p, pre, section, summary, ul, a, abbr, acronym, audio, b, basefont, bdo, big, br, canvas, cite, code, command, datalist, dfn, em, embed, font, i, img, input, keygen, kbd, label, mark, meter, output, progress, q, rp, rt, ruby, s, samp, select, small, span, strike, strong, sub, sup, textarea, time, tt, u, var, video, wbr, li,
+  address, article, aside, blockquote, center, dir, div, dd, details, dl, dt, fieldset, figcaption, figure, form, footer, frameset, h1, h2, h3, h4, h5, h6, hr, header, hgroup, isindex, menu, nav, noframes, noscript, ol, p, pre, section, summary, ul, a, abbr, acronym, audio, b, basefont, bdo, big, br, canvas, cite, code, command, datalist, dfn, em, embed, font, i, img, input, keygen, kbd, label, mark, meter, output, progress, q, rp, rt, ruby, s, samp, select, small, span, strike, strong, b, sub, sup, textarea, time, tt, u, var, video, wbr, li,
   th, td, article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, mark, menu, meter, nav, output, progress, rp, rt, ruby, section, summary, time, video, wbr {
     text-rendering: optimizeLegibility;
   }
@@ -10180,111 +10580,111 @@ abbr {
   }
   /* line 110, sass/bootstrap/_mixins.scss */
   .page-content h1 {
-    font-size: 2.308em;
-    line-height: 2.308em;
+    font-size: 1.692em;
+    line-height: 1.354em;
   }
   /* line 113, sass/bootstrap/_mixins.scss */
   .page-content h1 small {
-    font-size: 1.846em;
+    font-size: 1.354em;
   }
   /* line 117, sass/bootstrap/_mixins.scss */
   .page-content .h1 {
-    font-size: 2.308em;
-    line-height: 2.308em;
+    font-size: 1.692em;
+    line-height: 1.354em;
   }
   /* line 120, sass/bootstrap/_mixins.scss */
   .page-content .h1 small {
-    font-size: 1.846em;
+    font-size: 1.354em;
   }
   /* line 110, sass/bootstrap/_mixins.scss */
   .page-content h2 {
-    font-size: 1.846em;
-    line-height: 1.846em;
+    font-size: 1.354em;
+    line-height: 1.083em;
   }
   /* line 113, sass/bootstrap/_mixins.scss */
   .page-content h2 small {
-    font-size: 1.477em;
+    font-size: 1.083em;
   }
   /* line 117, sass/bootstrap/_mixins.scss */
   .page-content .h2 {
-    font-size: 1.846em;
-    line-height: 1.846em;
+    font-size: 1.354em;
+    line-height: 1.083em;
   }
   /* line 120, sass/bootstrap/_mixins.scss */
   .page-content .h2 small {
-    font-size: 1.477em;
+    font-size: 1.083em;
   }
   /* line 110, sass/bootstrap/_mixins.scss */
   .page-content h3 {
-    font-size: 1.477em;
-    line-height: 1.477em;
+    font-size: 1.083em;
+    line-height: 0.866em;
   }
   /* line 113, sass/bootstrap/_mixins.scss */
   .page-content h3 small {
-    font-size: 1.182em;
+    font-size: 0.866em;
   }
   /* line 117, sass/bootstrap/_mixins.scss */
   .page-content .h3 {
-    font-size: 1.477em;
-    line-height: 1.477em;
+    font-size: 1.083em;
+    line-height: 0.866em;
   }
   /* line 120, sass/bootstrap/_mixins.scss */
   .page-content .h3 small {
-    font-size: 1.182em;
+    font-size: 0.866em;
   }
   /* line 110, sass/bootstrap/_mixins.scss */
   .page-content h4 {
-    font-size: 1.182em;
-    line-height: 1.182em;
+    font-size: 0.866em;
+    line-height: 0.693em;
   }
   /* line 113, sass/bootstrap/_mixins.scss */
   .page-content h4 small {
-    font-size: 0.945em;
+    font-size: 0.693em;
   }
   /* line 117, sass/bootstrap/_mixins.scss */
   .page-content .h4 {
-    font-size: 1.182em;
-    line-height: 1.182em;
+    font-size: 0.866em;
+    line-height: 0.693em;
   }
   /* line 120, sass/bootstrap/_mixins.scss */
   .page-content .h4 small {
-    font-size: 0.945em;
+    font-size: 0.693em;
   }
   /* line 110, sass/bootstrap/_mixins.scss */
   .page-content h5 {
-    font-size: 0.945em;
-    line-height: 0.945em;
+    font-size: 0.693em;
+    line-height: 0.555em;
   }
   /* line 113, sass/bootstrap/_mixins.scss */
   .page-content h5 small {
-    font-size: 0.756em;
+    font-size: 0.555em;
   }
   /* line 117, sass/bootstrap/_mixins.scss */
   .page-content .h5 {
-    font-size: 0.945em;
-    line-height: 0.945em;
+    font-size: 0.693em;
+    line-height: 0.555em;
   }
   /* line 120, sass/bootstrap/_mixins.scss */
   .page-content .h5 small {
-    font-size: 0.756em;
+    font-size: 0.555em;
   }
   /* line 110, sass/bootstrap/_mixins.scss */
   .page-content h6 {
-    font-size: 0.756em;
-    line-height: 0.756em;
+    font-size: 0.555em;
+    line-height: 0.444em;
   }
   /* line 113, sass/bootstrap/_mixins.scss */
   .page-content h6 small {
-    font-size: 0.605em;
+    font-size: 0.444em;
   }
   /* line 117, sass/bootstrap/_mixins.scss */
   .page-content .h6 {
-    font-size: 0.756em;
-    line-height: 0.756em;
+    font-size: 0.555em;
+    line-height: 0.444em;
   }
   /* line 120, sass/bootstrap/_mixins.scss */
   .page-content .h6 small {
-    font-size: 0.605em;
+    font-size: 0.444em;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
@@ -10376,13 +10776,13 @@ abbr {
   }
 }
 @media (max-width: 767px) {
-  /* line 79, sass/bootstrap/_responsive-767px-max.scss */
+  /* line 78, sass/bootstrap/_responsive-767px-max.scss */
   body {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  /* line 89, sass/bootstrap/_responsive-767px-max.scss */
+  /* line 88, sass/bootstrap/_responsive-767px-max.scss */
   .navbar-fixed-top,
   .navbar-fixed-bottom,
   .container-fluid .container-fluid,
@@ -10397,7 +10797,7 @@ abbr {
     margin-right: -20px;
   }
 
-  /* line 96, sass/bootstrap/_responsive-767px-max.scss */
+  /* line 95, sass/bootstrap/_responsive-767px-max.scss */
   .container-fluid .container-fluid, .page-container.row-fluid .container-fluid, .container-fluid .page-container.row-fluid, .page-container.row-fluid .page-container.row-fluid,
   .container-fluid .header,
   .page-container.row-fluid .header,
@@ -10409,49 +10809,67 @@ abbr {
     padding-right: 20px !important;
   }
 
-  /* line 100, sass/bootstrap/_responsive-767px-max.scss */
-  .container-fluid .page-container.row-fluid, .page-container.row-fluid .page-container.row-fluid {
-    margin-left: 0;
-    margin-right: 0;
+  /* line 101, sass/bootstrap/_responsive-767px-max.scss */
+  .container-fluid .page-container.row-fluid, .page-container.row-fluid .page-container.row-fluid,
+  .container-fluid .header.mobile,
+  .page-container.row-fluid .header.mobile,
+  .container-fluid .header.mobile .container-fluid,
+  .page-container.row-fluid .header.mobile .container-fluid,
+  .container-fluid .header.mobile .page-container.row-fluid,
+  .page-container.row-fluid .header.mobile .page-container.row-fluid {
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+
+  /* line 106, sass/bootstrap/_responsive-767px-max.scss */
+  .container-fluid .page-container.row-fluid, .page-container.row-fluid .page-container.row-fluid,
+  .container-fluid .header.mobile .container-fluid,
+  .page-container.row-fluid .header.mobile .container-fluid,
+  .container-fluid .header.mobile .page-container.row-fluid,
+  .page-container.row-fluid .header.mobile .page-container.row-fluid {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 110, sass/bootstrap/_responsive-767px-max.scss */
+  .container-fluid .page-container.row-fluid, .page-container.row-fluid .page-container.row-fluid {
     margin-top: 20px;
   }
 
-  /* line 108, sass/bootstrap/_responsive-767px-max.scss */
+  /* line 114, sass/bootstrap/_responsive-767px-max.scss */
   .container-fluid, .page-container.row-fluid {
     padding: 0 !important;
   }
 
-  /* line 116, sass/bootstrap/_responsive-767px-max.scss */
+  /* line 122, sass/bootstrap/_responsive-767px-max.scss */
   .dl-horizontal dt {
     float: none;
     clear: none;
     width: auto;
     text-align: left;
   }
-  /* line 122, sass/bootstrap/_responsive-767px-max.scss */
+  /* line 128, sass/bootstrap/_responsive-767px-max.scss */
   .dl-horizontal dd {
     margin-left: 0;
   }
 
-  /* line 130, sass/bootstrap/_responsive-767px-max.scss */
+  /* line 136, sass/bootstrap/_responsive-767px-max.scss */
   .container, .container-fluid, .page-container.row-fluid {
     width: auto !important;
   }
 
-  /* line 134, sass/bootstrap/_responsive-767px-max.scss */
+  /* line 140, sass/bootstrap/_responsive-767px-max.scss */
   .row-fluid {
     width: 100% !important;
   }
 
-  /* line 139, sass/bootstrap/_responsive-767px-max.scss */
+  /* line 145, sass/bootstrap/_responsive-767px-max.scss */
   .row,
   .thumbnails {
     margin-left: 0;
   }
 
-  /* line 144, sass/bootstrap/_responsive-767px-max.scss */
+  /* line 150, sass/bootstrap/_responsive-767px-max.scss */
   [class*="span"],
   .row-fluid [class*="span"] {
     float: none;
@@ -10460,7 +10878,7 @@ abbr {
     margin-left: 0;
   }
 
-  /* line 160, sass/bootstrap/_responsive-767px-max.scss */
+  /* line 166, sass/bootstrap/_responsive-767px-max.scss */
   .input-large,
   .input-xlarge,
   .input-xxlarge,
@@ -10476,7 +10894,7 @@ abbr {
     box-sizing: border-box;
   }
 
-  /* line 167, sass/bootstrap/_responsive-767px-max.scss */
+  /* line 173, sass/bootstrap/_responsive-767px-max.scss */
   .input-prepend input,
   .input-append input,
   .input-prepend input[class*="span"],
@@ -11377,68 +11795,78 @@ abbr {
   display: none;
 }
 
+/* line 6, sass/bootstrap/_responsive-navbar.scss */
+#socialNavbar {
+  float: left !important;
+}
+
 @media (max-width: 979px) {
-  /* line 173, sass/bootstrap/_responsive-navbar.scss */
+  /* line 211, sass/bootstrap/_responsive-navbar.scss */
   .header {
     padding-top: 15px;
     padding-bottom: 15px;
   }
-  /* line 176, sass/bootstrap/_responsive-navbar.scss */
+  /* line 214, sass/bootstrap/_responsive-navbar.scss */
   .header .logo h1, .header .logo .h1 {
     display: none;
   }
-  /* line 179, sass/bootstrap/_responsive-navbar.scss */
+  /* line 217, sass/bootstrap/_responsive-navbar.scss */
   .header .logo i {
     display: block;
   }
 }
 @media (max-width: 767px) {
-  /* line 11, sass/bootstrap/_responsive-navbar.scss */
+  /* line 12, sass/bootstrap/_responsive-navbar.scss */
+  #socialNavbar {
+    float: right !important;
+  }
+
+  /* line 17, sass/bootstrap/_responsive-navbar.scss */
   .navbar .brand {
     display: block;
   }
 
-  /* line 15, sass/bootstrap/_responsive-navbar.scss */
+  /* line 21, sass/bootstrap/_responsive-navbar.scss */
   .header .logo-container {
     display: none !important;
   }
-  /* line 16, sass/bootstrap/_responsive-navbar.scss */
+  /* line 22, sass/bootstrap/_responsive-navbar.scss */
   .header .menu-container {
     width: 100% !important;
   }
-  /* line 18, sass/bootstrap/_responsive-navbar.scss */
+  /* line 24, sass/bootstrap/_responsive-navbar.scss */
   .header .menu-container .nav {
     float: left !important;
   }
 
-  /* line 28, sass/bootstrap/_responsive-navbar.scss */
+  /* line 33, sass/bootstrap/_responsive-navbar.scss */
   body {
     padding-top: 0;
   }
 
-  /* line 32, sass/bootstrap/_responsive-navbar.scss */
+  /* line 37, sass/bootstrap/_responsive-navbar.scss */
   .navbar-fixed-top {
     position: static;
   }
 
-  /* line 36, sass/bootstrap/_responsive-navbar.scss */
+  /* line 41, sass/bootstrap/_responsive-navbar.scss */
   .navbar-fixed-top .navbar-inner {
     padding: 5px;
   }
 
-  /* line 39, sass/bootstrap/_responsive-navbar.scss */
+  /* line 44, sass/bootstrap/_responsive-navbar.scss */
   .navbar .container {
     width: auto;
     padding: 0;
   }
 
-  /* line 44, sass/bootstrap/_responsive-navbar.scss */
+  /* line 49, sass/bootstrap/_responsive-navbar.scss */
   .navbar .brand {
     margin-left: 0;
     padding: 0;
     left: 5px;
   }
-  /* line 49, sass/bootstrap/_responsive-navbar.scss */
+  /* line 54, sass/bootstrap/_responsive-navbar.scss */
   .navbar .brand span, .navbar .brand i {
     visibility: visible;
     font-family: "bystlLogoFont", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -11455,56 +11883,54 @@ abbr {
     word-spacing: normal;
   }
   /* line 58, sass/bystl/_webfonts.scss */
-  .navbar .brand span strong, .navbar .brand i strong {
+  .navbar .brand span strong, .navbar .brand span b, .navbar .brand i strong, .navbar .brand i b {
     word-spacing: -1px;
     font-weight: normal;
     color: inherit;
   }
-  /* line 54, sass/bootstrap/_responsive-navbar.scss */
-  .navbar .brand span > strong, .navbar .brand i > strong {
+  /* line 59, sass/bootstrap/_responsive-navbar.scss */
+  .navbar .brand span > strong, .navbar .brand span > b, .navbar .brand i > strong, .navbar .brand i > b {
     word-spacing: normal;
   }
 
-  /* line 60, sass/bootstrap/_responsive-navbar.scss */
+  /* line 65, sass/bootstrap/_responsive-navbar.scss */
   #pageWrapper {
     margin-top: 0;
   }
 
-  /* line 66, sass/bootstrap/_responsive-navbar.scss */
+  /* line 70, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse {
     clear: both;
   }
-
-  /* line 70, sass/bootstrap/_responsive-navbar.scss */
+  /* line 73, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse, .nav-collapse.collapse {
+    overflow: hidden;
+    height: 0;
+  }
+  /* line 79, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav {
     float: none;
     margin: 0 0 9px;
   }
-
-  /* line 74, sass/bootstrap/_responsive-navbar.scss */
+  /* line 84, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav.pull-left, .nav-collapse .nav.pull-right {
+    float: none;
+    margin: 0;
+  }
+  /* line 89, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav > li {
     float: none;
   }
-
-  /* line 77, sass/bootstrap/_responsive-navbar.scss */
+  /* line 92, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav > li.divider-vertical {
+    display: none;
+  }
+  /* line 96, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav > li > a {
     margin-bottom: 2px;
   }
-
-  /* line 80, sass/bootstrap/_responsive-navbar.scss */
-  .nav-collapse .nav > .divider-vertical {
-    display: none;
-  }
-
-  /* line 83, sass/bootstrap/_responsive-navbar.scss */
-  .nav-collapse .nav .nav-header {
-    color: #c5c2ba;
-    text-shadow: none;
-  }
-
-  /* line 89, sass/bootstrap/_responsive-navbar.scss */
-  .nav-collapse .nav > li > a,
-  .nav-collapse .dropdown-menu a {
+  /* line 103, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav > li > a, .nav-collapse .nav .dropdown-menu a {
     padding: 6px 15px;
     font-weight: bold;
     color: #c5c2ba;
@@ -11514,44 +11940,51 @@ abbr {
     -o-border-radius: 3px;
     border-radius: 3px;
   }
-
-  /* line 96, sass/bootstrap/_responsive-navbar.scss */
-  .nav-collapse .btn, .nav-collapse .small-btn, .nav-collapse .big-btn {
-    padding: 4px 10px 4px;
-    font-weight: normal;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-    border-radius: 4px;
-  }
-
-  /* line 101, sass/bootstrap/_responsive-navbar.scss */
-  .nav-collapse .dropdown-menu li + li a {
-    margin-bottom: 2px;
-  }
-
-  /* line 105, sass/bootstrap/_responsive-navbar.scss */
-  .nav-collapse .nav > li > a:hover,
-  .nav-collapse .dropdown-menu a:hover {
+  /* line 109, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav > li > a:hover, .nav-collapse .nav .dropdown-menu a:hover {
     background-color: rgba(32, 19, 2, 0.85);
   }
-
-  /* line 109, sass/bootstrap/_responsive-navbar.scss */
-  .nav-collapse.in .btn-group {
-    margin-top: 5px;
-    padding: 0;
+  /* line 115, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav .dropdown-menu li + li a {
+    margin-bottom: 2px;
   }
-
-  /* line 114, sass/bootstrap/_responsive-navbar.scss */
-  .nav-collapse .dropdown-menu {
+  /* line 119, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav .nav-header {
+    color: #c5c2ba;
+    text-shadow: none;
+  }
+  /* line 125, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav .dropdown {
+    border-bottom: 1px solid #201302;
+    border-top: 1px solid #362510;
+  }
+  /* line 131, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav .dropdown:first-child {
+    border-top: none;
+  }
+  /* line 134, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav .dropdown:last-child {
+    border-bottom: none;
+  }
+  /* line 139, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav .dropdown .dropdown-toggle, .nav-collapse .nav .dropdown .dropdown-toggle:hover {
+    color: #969183 !important;
+    background-color: transparent !important;
+    cursor: default;
+  }
+  /* line 145, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav .dropdown .dropdown-toggle > b.caret {
+    display: none;
+  }
+  /* line 152, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav .dropdown .dropdown-menu {
     position: static;
     top: auto;
     left: auto;
     float: none;
     display: block;
     max-width: none;
-    margin: 0 15px;
+    margin: 0;
     padding: 0;
     background-color: transparent;
     border: none;
@@ -11564,21 +11997,26 @@ abbr {
     -moz-box-shadow: none;
     box-shadow: none;
   }
-
-  /* line 129, sass/bootstrap/_responsive-navbar.scss */
-  .nav-collapse .dropdown-menu:before,
-  .nav-collapse .dropdown-menu:after {
+  /* line 166, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .nav .dropdown .dropdown-menu:before, .nav-collapse .nav .dropdown .dropdown-menu:after, .nav-collapse .nav .dropdown .dropdown-menu .divider {
     display: none;
   }
-
-  /* line 132, sass/bootstrap/_responsive-navbar.scss */
-  .nav-collapse .dropdown-menu .divider {
-    display: none;
+  /* line 177, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse.in .btn-group {
+    padding: 0;
   }
-
-  /* line 137, sass/bootstrap/_responsive-navbar.scss */
-  .nav-collapse .navbar-form,
-  .nav-collapse .navbar-search {
+  /* line 181, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .btn, .nav-collapse .btn-group li a, .btn-group li .nav-collapse a, .nav-collapse .small-btn, .nav-collapse .big-btn {
+    padding: 4px 10px 4px;
+    font-weight: normal;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+  }
+  /* line 188, sass/bootstrap/_responsive-navbar.scss */
+  .nav-collapse .navbar-form, .nav-collapse .navbar-search {
     float: none;
     padding: 9px 15px;
     margin: 9px 0;
@@ -11589,52 +12027,34 @@ abbr {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 
-  /* line 147, sass/bootstrap/_responsive-navbar.scss */
-  .navbar .nav-collapse .nav.pull-right {
-    float: none;
-    margin-left: 0;
-  }
-
-  /* line 153, sass/bootstrap/_responsive-navbar.scss */
-  .nav-collapse,
-  .nav-collapse.collapse {
-    overflow: hidden;
-    height: 0;
-  }
-
-  /* line 158, sass/bootstrap/_responsive-navbar.scss */
-  .navbar .btn-navbar {
+  /* line 203, sass/bootstrap/_responsive-navbar.scss */
+  .navbar .btn-navbar,
+  .navbar .btn-navbar.mainmenu {
     display: block;
-  }
-
-  /* line 164, sass/bootstrap/_responsive-navbar.scss */
-  .navbar-static .navbar-inner {
-    padding-left: 10px;
-    padding-right: 10px;
   }
 }
 @media (max-width: 320px) {
-  /* line 189, sass/bootstrap/_responsive-navbar.scss */
+  /* line 227, sass/bootstrap/_responsive-navbar.scss */
   .navbar .brand span {
     display: none;
   }
-  /* line 190, sass/bootstrap/_responsive-navbar.scss */
+  /* line 228, sass/bootstrap/_responsive-navbar.scss */
   .navbar .brand i {
     display: block;
   }
 
-  /* line 212, sass/bootstrap/_responsive-navbar.scss */
+  /* line 250, sass/bootstrap/_responsive-navbar.scss */
   .testiphonelandscapelink {
     display: none;
   }
 
-  /* line 213, sass/bootstrap/_responsive-navbar.scss */
+  /* line 251, sass/bootstrap/_responsive-navbar.scss */
   .header {
     padding-bottom: 0 !important;
   }
 }
 @media (min-width: 980px) {
-  /* line 223, sass/bootstrap/_responsive-navbar.scss */
+  /* line 261, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse.collapse {
     height: auto !important;
     overflow: visible !important;
