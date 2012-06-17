@@ -12,8 +12,18 @@
 <!-- Meta Tags -->
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
+<?php 
+if(is_subpage()){
+    $parent_title = get_the_title($post->post_parent);
+    if($parent_title != "About"){
+        $parent_title = "";
+    }
+} else {
+    $parent_title = "";
+}
+?>
 <!-- Title -->
-<title><?php wp_title('|', true, 'right'); ?></title>
+<title><?php echo $parent_title . " "; ?><?php wp_title('|', true, 'right'); ?></title>
 
 <!-- Stylesheets -->
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
@@ -64,6 +74,19 @@
                 <i> bystl</i>
               </a>
             <?php } ?>
+
+            <!-- <div class="btn-group" data-no-collapse="true"> -->
+                <?php if (get_option_tree('twitter_icon') == 'Yes') { ?>
+                <a class="btn btn-navbar" href="https://twitter.com/<?php echo get_option_tree('twitter_url') ?>"><span class="icon-twitter-sign icon-only"></span></a>
+                <?php } ?><?php if (get_option_tree('facebook_icon') == 'Yes') { ?>
+                <a class="btn btn-navbar" href="<?php echo get_option_tree('facebook_url') ?>"><span class="icon-facebook-sign icon-only"></span></a>
+                <?php } ?><?php if (get_option_tree('phone_icon') == 'Yes') { ?>
+                <a class="btn btn-navbar" href="<?php echo site_url() . get_option_tree('phone_url') ?>"><span class="icon-phone icon-only"></span></a>
+                <?php } ?><?php if (get_option_tree('mail_icon') == 'Yes') { ?>
+                <a class="btn btn-navbar" href="<?php echo site_url() . get_option_tree('mail_url') ?>"><span class="icon-envelope icon-only"></span></a>
+                <?php } ?>
+            <!-- </div> -->
+
               <div class="nav-collapse">
 
                  <?php wp_nav_menu(array(
@@ -72,12 +95,14 @@
                                 //'container_class' => 'nav pull-right',
                                 'menu_class' => 'nav pull-right', 
                                 //'items_wrap' => '%3$s',
-                                'echo' => true, 
+                                //'echo' => true, 
                                 //'before' => '<ul class="nav pull-right">', 
                                 //'after' => '</ul>', 
-                                'link_before' => '', 
-                                'link_after' => '', 
-                                'depth' => 0 // TODO: make this 1 and have it tuck in a dd? 
+                                //'link_before' => '', 
+                                //'link_after' => '', 
+                                'depth' => 2, 
+                                'walker' => new Bootstrap_Walker_Nav_Menu()
+
                                 )
                  ); ?>
 
@@ -85,22 +110,7 @@
                   <input type="text" class="search-query span2" placeholder="Search">
                 </form>-->
 
-                <ul class="nav pull-left social">
-
-                    <?php if (get_option_tree('twitter_icon') == 'Yes') { ?>
-                    <li><a class="twitter" href="https://twitter.com/<?php echo get_option_tree('twitter_url') ?>">twitter</a></li>
-                     <?php } ?>
-                    <?php if (get_option_tree('facebook_icon') == 'Yes') { ?>
-                    <li><a class="facebook" href="<?php echo get_option_tree('facebook_url') ?>">facebook</a></li>
-                    <?php } ?>
-                    <?php if (get_option_tree('phone_icon') == 'Yes') { ?>
-                    <li><a class="phone" href="<?php echo get_option_tree('phone_url') ?>">phone</a></li>
-                    <?php } ?>
-                    <?php if (get_option_tree('mail_icon') == 'Yes') { ?>
-                    <li><a class="mail" href="<?php echo get_option_tree('mail_url') ?>">mail</a></li>
-                    <?php } ?>
-
-                </ul>
+                
 
             </div>
             <!-- END: nav-collapse -->
@@ -151,6 +161,7 @@
                                 }
                             }
                             if(is_subpage()){
+                                //wp_list_pages('post_status=publish&title_li=&include='.$post->post_parent);
                                 wp_list_pages('post_status=publish&title_li=&child_of='.$post->post_parent);     
                             } else {
                                 wp_list_pages('post_status=publish&title_li=&child_of='.$post->ID); 
