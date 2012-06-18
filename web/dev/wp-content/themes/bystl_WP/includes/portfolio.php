@@ -21,7 +21,7 @@
 
                 <li class="home-portfolio-item span-one-third">
 
-                    <a href="<?php the_permalink(); ?>"><img width="300" height="182" src="<?php echo get_post_meta($post->ID, 'portfolioImg', true) ?>" alt="" /></a>
+                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_post_meta($post->ID, 'portfolioImg', true) ?>" alt="" /></a>
 
                     <span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
 

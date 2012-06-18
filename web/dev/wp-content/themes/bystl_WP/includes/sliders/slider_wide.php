@@ -5,7 +5,7 @@
       <?php if ( function_exists( 'get_option_tree' ) ) {
         $slides = get_option_tree( 'slides', $option_tree, false, true, -1 );
         foreach( $slides as $slide ) {
-        echo '<div class="item"><img width="940" height="500" src="'.$slide['image'].'" alt="'.$slide['title'].'" /></div>';
+        echo '<div class="item"><img src="'.$slide['image'].'" alt="'.$slide['title'].'" /></div>';
         }
       } ?>
 

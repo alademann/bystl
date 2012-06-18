@@ -15,7 +15,7 @@ if ( function_exists( 'get_option_tree' ) ) {
   $slides = get_option_tree( 'slides', $option_tree, false, true, -1 );
   foreach( $slides as $slide ) {
     echo '
-    <li><a href="'.$slide['link'].'"><img width="940" height="500" src="'.$slide['image'].'" alt="'.$slide['title'].'" /></a></li>';
+    <li><a href="'.$slide['link'].'"><img src="'.$slide['image'].'" alt="'.$slide['title'].'" /></a></li>';
 
   }
 }
@@ -29,7 +29,7 @@ if ( function_exists( 'get_option_tree' ) ) {
 if ( function_exists( 'get_option_tree' ) ) {
   $slides = get_option_tree( 'slides', $option_tree, false, true, -1 );
   foreach( $slides as $slide ) {
-   echo '<li><a href="#"><img width="45" height="45" src="'.$slide['image'].'" /></a></li>';
+   echo '<li><a href="#"><img src="'.$slide['image'].'" /></a></li>';
 
   }
 }

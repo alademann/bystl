@@ -100,7 +100,7 @@ class dd_testimonials_sidebar_widget extends WP_Widget {
 							//OUR THUMBNAILS
 							$testimonials = ddListGet('testimonials', get_the_ID());?>
 
-                                  <img width="45" height="45" src="<?php echo $testimonials[0]['testimonials_avatar']; ?>" alt="" />
+                                  <img src="<?php echo $testimonials[0]['testimonials_avatar']; ?>" alt="" />
 
 
                                    <?php endif; ?>

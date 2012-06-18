@@ -35,7 +35,7 @@ if(function_exists('get_option_tree')) {
 
 			if($i <= 8) {
 
-				echo '<li><a href="'.$slide['link'].'"><img width="620" height="330" src="'.$slide['image'].'" alt="'.$slide['title'].'" /></a></li>';
+				echo '<li><a href="'.$slide['link'].'"><img src="'.$slide['image'].'" alt="'.$slide['title'].'" /></a></li>';
 
 			} else { break; }
 
@@ -61,7 +61,7 @@ if(function_exists('get_option_tree')) {
 
 			if($i <= 8) {
 
-				echo '<li><a href="#"><img width="45" height="45" src="'.$slide['image'].'" alt="'.$slide['title'].'" /></a></li>';
+				echo '<li><a href="#"><img src="'.$slide['image'].'" alt="'.$slide['title'].'" /></a></li>';
 
 			} else { break; }
 

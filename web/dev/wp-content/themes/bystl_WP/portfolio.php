@@ -67,7 +67,7 @@
 
                                     </div>
 
-                                 <img width="258" height="250" src="<?php echo get_post_meta($post->ID, 'portfolioImg', true) ?>" alt="" />
+                                 <img src="<?php echo get_post_meta($post->ID, 'portfolioImg', true) ?>" alt="" />
                   
                                 </div>
 

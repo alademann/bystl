@@ -27,7 +27,7 @@
                 foreach ($my_retrieved_array as $item) { ?>
                     
        
-                         <li> <a href="<?php echo $item['img_url']; ?>" rel="prettyPhoto[gallery2]" title="<?php echo $item['field_name']; ?>"><img width="575" height="405" src="<?php echo $item['img_url']; ?>" alt="" /></a>
+                         <li> <a href="<?php echo $item['img_url']; ?>" rel="prettyPhoto[gallery2]" title="<?php echo $item['field_name']; ?>"><img src="<?php echo $item['img_url']; ?>" alt="" /></a>
 </li>
                     
                     
@@ -46,7 +46,7 @@
                                 <?php } else { ?>
                     
                     
-                       <img width="575" height="405" class="portfolio-single-img" src="<?php echo get_post_meta($post->ID, 'portfolioImg', true) ?>" alt="" />
+                       <img class="portfolio-single-img" src="<?php echo get_post_meta($post->ID, 'portfolioImg', true) ?>" alt="" />
                     
                     
                                 <?php } ?>
