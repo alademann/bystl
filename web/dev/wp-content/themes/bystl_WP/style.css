@@ -5228,15 +5228,23 @@ a.thumbnail:hover {
   position: relative;
 }
 
+/* line 22, sass/bootstrap/_carousel.scss */
+.carousel {
+  -webkit-transition: height 0.4s ease;
+  -moz-transition: height 0.4s ease;
+  -ms-transition: height 0.4s ease;
+  -o-transition: height 0.4s ease;
+  transition: height 0.4s ease;
+}
 /* line 24, sass/bootstrap/_carousel.scss */
 .carousel .item {
   display: none;
   position: relative;
-  -webkit-transition: 1.3s ease-in-out left;
-  -moz-transition: 1.3s ease-in-out left;
-  -ms-transition: 1.3s ease-in-out left;
-  -o-transition: 1.3s ease-in-out left;
-  transition: 1.3s ease-in-out left;
+  -webkit-transition: left 1.3s ease-in-out;
+  -moz-transition: left 1.3s ease-in-out;
+  -ms-transition: left 1.3s ease-in-out;
+  -o-transition: left 1.3s ease-in-out;
+  transition: left 1.3s ease-in-out;
 }
 /* line 31, sass/bootstrap/_carousel.scss */
 .carousel .item > img {
@@ -5304,12 +5312,16 @@ a.thumbnail:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 99, sass/bootstrap/_carousel.scss */
+/* line 75, sass/bootstrap/_carousel.scss */
+.js .carousel-control {
+  display: none;
+}
+/* line 102, sass/bootstrap/_carousel.scss */
 .carousel-control.right {
   left: auto;
   right: 15px;
 }
-/* line 105, sass/bootstrap/_carousel.scss */
+/* line 108, sass/bootstrap/_carousel.scss */
 .carousel-control:hover {
   color: white;
   text-decoration: none;
@@ -5317,7 +5329,7 @@ a.thumbnail:hover {
   opacity: 0.9;
 }
 
-/* line 115, sass/bootstrap/_carousel.scss */
+/* line 118, sass/bootstrap/_carousel.scss */
 .carousel-caption {
   position: absolute;
   left: 0;
@@ -5328,7 +5340,7 @@ a.thumbnail:hover {
   background: rgba(0, 0, 0, 0.75);
 }
 
-/* line 125, sass/bootstrap/_carousel.scss */
+/* line 128, sass/bootstrap/_carousel.scss */
 .carousel-caption h4,
 .carousel-caption p {
   color: white;

@@ -81,15 +81,15 @@
 
         head.js(
             {iosOrientation:"<?php echo get_bloginfo('template_url').'/js/ios-orientationchange-fix.js'; ?>" },
-            {cycle:         "<?php echo get_bloginfo('template_url').'/js/jquery.cycle.all.js'; ?>"},
+            //{cycle:         "<?php echo get_bloginfo('template_url').'/js/jquery.cycle.all.js'; ?>"},
             {easing:        "<?php echo get_bloginfo('template_url').'/js/jquery.easing.1.3.js'; ?>"},
+            {bootstrap:     "<?php echo get_bloginfo('template_url').'/js/bootstrap/bootstrap.min.js'; ?>"},
             {twitter:       "<?php echo get_bloginfo('template_url').'/js/twitter.js'; ?>"},
             {synapse:       "<?php echo get_bloginfo('template_url').'/js/script.js'; ?>"},
             {prettyphoto:   "<?php echo get_bloginfo('template_url').'/js/jquery.prettyPhoto.js'; ?>"},
             {isotope:       "<?php echo get_bloginfo('template_url').'/js/jquery.isotope.min.js'; ?>"},
             {backstretch:   "<?php echo get_bloginfo('template_url').'/js/jquery.backstretch.min.js'; ?>"},
-            {prettifyCode:  "<?php echo get_bloginfo('template_url').'/js/prettify/prettify.js'; ?>"},
-            {bootstrap:     "<?php echo get_bloginfo('template_url').'/js/bootstrap/bootstrap.min.js'; ?>"}
+            {prettifyCode:  "<?php echo get_bloginfo('template_url').'/js/prettify/prettify.js'; ?>"}
         );
 
         
@@ -103,7 +103,7 @@
 </script>
 <script type="text/javascript">
 
-head.ready(function() {
+head.ready("bootstrap", function() {
 
     <?php if (get_option_tree('auto') == 'Yes') {  $timeout = 4000; } else { $timeout = 0; } ?>
 
@@ -113,9 +113,9 @@ head.ready(function() {
 
     $('.carousel').carousel({
         interval: <?php echo $timeout; ?>
-    }).bind("slid", function(){
-        $img = $(".active img", this);
-        $img.attr("src", $img.data("lazy-load-src"));
+    });
+    $('.carousel').bind('slide', function(){
+        $(".carousel-control.left, .carousel-control.right", this).delay(500).show();
     });
 
 /*

@@ -20,11 +20,11 @@
 }
 
 .carousel {
-
+  @include transition(height .4s ease);
   .item {
     display: none;
     position: relative;
-    @include transition(1.3s ease-in-out left);
+    @include transition(left 1.3s ease-in-out);
   }
 
   // Account for jankitude on images
@@ -72,6 +72,9 @@
 // ---------------------------
 
 .carousel-control {
+  .js & {
+    display: none;
+  }
   position: absolute;
   top: 40%;
   left: 15px;
