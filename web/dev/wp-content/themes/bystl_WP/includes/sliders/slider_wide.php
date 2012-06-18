@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" id="slider">
   <div id="large-slider" class="carousel slide">
     <div class="carousel-inner">
 

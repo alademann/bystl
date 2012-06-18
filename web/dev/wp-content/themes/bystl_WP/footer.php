@@ -114,9 +114,9 @@ head.ready("bootstrap", function() {
     $('.carousel').carousel({
         interval: <?php echo $timeout; ?>
     });
-    $('.carousel').bind('slide', function(){
-        $(".carousel-control.left, .carousel-control.right", this).delay(500).show();
-    });
+    // $('.carousel').bind('slide', function(){
+    //     $(".carousel-control.left, .carousel-control.right", this).delay(500).show();
+    // });
 
 /*
     jQuery('.images').cycle({

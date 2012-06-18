@@ -126,9 +126,9 @@ if(is_subpage()){
                 <?php } ?><?php if (get_option_tree('facebook_icon') == 'Yes') { ?>
                 <a class="btn btn-navbar" href="<?php echo get_option_tree('facebook_url') ?>"><span class="icon-facebook icon-only"></span></a>
                 <?php } ?><?php if (get_option_tree('phone_icon') == 'Yes') { ?>
-                <a class="btn btn-navbar" href="<?php echo site_url() . get_option_tree('phone_url') ?>"><span class="icon-phone icon-only"></span></a>
+                <a class="hidden-phone btn btn-navbar" href="<?php echo site_url() . get_option_tree('phone_url') ?>"><span class="icon-phone icon-only"></span></a>
                 <?php } ?><?php if (get_option_tree('mail_icon') == 'Yes') { ?>
-                <a class="btn btn-navbar" href="<?php echo site_url() . get_option_tree('mail_url') ?>"><span class="icon-envelope icon-only"></span></a>
+                <a class="hidden-phone btn btn-navbar" href="<?php echo site_url() . get_option_tree('mail_url') ?>"><span class="icon-envelope icon-only"></span></a>
                 <?php } ?>
             </div>
 

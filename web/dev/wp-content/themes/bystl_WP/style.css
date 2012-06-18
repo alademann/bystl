@@ -356,7 +356,7 @@ a:hover {
 }
 
 /* line 250, sass/bootstrap/_mixins.scss */
-.span11, .span-two-thirds {
+.span11 {
   width: 641.667px;
 }
 
@@ -386,7 +386,7 @@ a:hover {
 }
 
 /* line 250, sass/bootstrap/_mixins.scss */
-.span5, .span-one-third {
+.span5 {
   width: 283.667px;
 }
 
@@ -557,7 +557,7 @@ a:hover {
   *width: 74.557%;
 }
 /* line 295, sass/bootstrap/_mixins.scss */
-.row-fluid .span11, .row-fluid .span-two-thirds {
+.row-fluid .span11 {
   width: 68.262%;
   *width: 68.209%;
 }
@@ -587,7 +587,7 @@ a:hover {
   *width: 36.472%;
 }
 /* line 295, sass/bootstrap/_mixins.scss */
-.row-fluid .span5, .row-fluid .span-one-third {
+.row-fluid .span5 {
   width: 30.177%;
   *width: 30.124%;
 }
@@ -1445,11 +1445,9 @@ textarea.span12,
 }
 
 /* line 319, sass/bootstrap/_mixins.scss */
-input.span11, input.span-two-thirds,
+input.span11,
 textarea.span11,
-textarea.span-two-thirds,
-.uneditable-input.span11,
-.uneditable-input.span-two-thirds {
+.uneditable-input.span11 {
   width: 631.667px;
 }
 
@@ -1489,11 +1487,9 @@ textarea.span6,
 }
 
 /* line 319, sass/bootstrap/_mixins.scss */
-input.span5, input.span-one-third,
+input.span5,
 textarea.span5,
-textarea.span-one-third,
-.uneditable-input.span5,
-.uneditable-input.span-one-third {
+.uneditable-input.span5 {
   width: 273.667px;
 }
 
@@ -2218,7 +2214,7 @@ table .span4 {
   margin-left: 0;
 }
 /* line 147, sass/bootstrap/_tables.scss */
-table .span5, table .span-one-third {
+table .span5 {
   float: none;
   width: 267.667px;
   margin-left: 0;
@@ -2254,7 +2250,7 @@ table .span10 {
   margin-left: 0;
 }
 /* line 153, sass/bootstrap/_tables.scss */
-table .span11, table .span-two-thirds {
+table .span11 {
   float: none;
   width: 625.667px;
   margin-left: 0;
@@ -5228,18 +5224,11 @@ a.thumbnail:hover {
   position: relative;
 }
 
-/* line 22, sass/bootstrap/_carousel.scss */
-.carousel {
-  -webkit-transition: height 0.4s ease;
-  -moz-transition: height 0.4s ease;
-  -ms-transition: height 0.4s ease;
-  -o-transition: height 0.4s ease;
-  transition: height 0.4s ease;
-}
-/* line 24, sass/bootstrap/_carousel.scss */
+/* line 23, sass/bootstrap/_carousel.scss */
 .carousel .item {
   display: none;
   position: relative;
+  -webkit-transform: translate3d(0, 0, 0);
   -webkit-transition: left 1.3s ease-in-out;
   -moz-transition: left 1.3s ease-in-out;
   -ms-transition: left 1.3s ease-in-out;
@@ -5329,7 +5318,26 @@ a.thumbnail:hover {
   opacity: 0.9;
 }
 
-/* line 118, sass/bootstrap/_carousel.scss */
+@media only screen and (max-width: 979px) {
+  /* line 117, sass/bootstrap/_carousel.scss */
+  .carousel-control {
+    display: none;
+  }
+
+  /* line 119, sass/bootstrap/_carousel.scss */
+  .carousel {
+    margin-top: 0;
+  }
+
+  /* line 122, sass/bootstrap/_carousel.scss */
+  #slider {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: -mobileGutter;
+    margin-right: -mobileGutter;
+  }
+}
+/* line 133, sass/bootstrap/_carousel.scss */
 .carousel-caption {
   position: absolute;
   left: 0;
@@ -5340,7 +5348,7 @@ a.thumbnail:hover {
   background: rgba(0, 0, 0, 0.75);
 }
 
-/* line 128, sass/bootstrap/_carousel.scss */
+/* line 143, sass/bootstrap/_carousel.scss */
 .carousel-caption h4,
 .carousel-caption p {
   color: white;
@@ -8404,294 +8412,6 @@ body.bg_Wood {
 
 /*----------------------------------------------
 
-	PARTIAL:	_slider.scss
-	PARENT:		_theme-synapse.scss
-
- ----------------------------------------------*/
-/* line 13, sass/synapse/_slider_orig.scss */
-.slider ul {
-  margin: 0 !important;
-  position: relative;
-  overflow: visible;
-}
-/* line 18, sass/synapse/_slider_orig.scss */
-.slider ul li {
-  width: 100%;
-}
-
-/*	SLIDER ARROWS
----------------------------------------------- */
-/* line 34, sass/synapse/_slider_orig.scss */
-#prev-arrow, #next-arrow {
-  text-indent: -9999px !important;
-  display: block;
-  width: 20px;
-  height: 32px;
-}
-
-/* line 40, sass/synapse/_slider_orig.scss */
-#prev-arrow {
-  background: url("img/prev-arrow.png") no-repeat;
-  position: absolute;
-  left: -80px;
-  top: 40%;
-}
-
-/* line 46, sass/synapse/_slider_orig.scss */
-#prev-arrow:active {
-  background: url("img/prev-arrow.png") no-repeat bottom left;
-}
-
-/* line 49, sass/synapse/_slider_orig.scss */
-#next-arrow {
-  background: url("img/next-arrow.png") no-repeat;
-  position: absolute;
-  right: -80px;
-  top: 40%;
-}
-
-/* line 55, sass/synapse/_slider_orig.scss */
-#next-arrow:active {
-  background: url("img/next-arrow.png") no-repeat bottom left;
-}
-
-/*	SLIDERS
----------------------------------------------- */
-/* line 63, sass/synapse/_slider_orig.scss */
-.js .slider li {
-  display: none;
-}
-
-/* line 67, sass/synapse/_slider_orig.scss */
-.simple-slider li {
-  height: 407px;
-}
-
-/* line 70, sass/synapse/_slider_orig.scss */
-.content-slider {
-  min-height: 330px;
-  height: auto;
-  background: none !important;
-}
-
-/* line 77, sass/synapse/_slider_orig.scss */
-.images-wide {
-  min-height: 500px;
-  height: auto;
-  background: none !important;
-}
-
-/* line 83, sass/synapse/_slider_orig.scss */
-.content-slider li, .images-wide li {
-  background: none !important;
-  width: 100% !important;
-  height: auto !important;
-}
-
-/* line 89, sass/synapse/_slider_orig.scss */
-.slider, .slider-intro, .slider-intro-right, .slider-intro-left {
-  margin-top: 20px;
-}
-
-/* line 92, sass/synapse/_slider_orig.scss */
-.slider {
-  position: relative;
-}
-
-/* line 114, sass/synapse/_slider_orig.scss */
-.slider-nav, .slider-nav-thumbs, .slider-nav-wide {
-  background: #464b4d;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #464b4d), color-stop(100%, #303335));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #464b4d 0%, #303335 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#464b4d', endColorstr='#303335',GradientType=0 );
-  /* IE6-9 */
-  text-align: center;
-  border: 1px solid #1f1f1f;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
-  -moz-border-radius: 0 0 5px 5px;
-  -webkit-border-radius: 0 0 5px 5px;
-  -o-border-radius: 0 0 5px 5px;
-  position: absolute;
-  z-index: 2;
-  bottom: -388px;
-  left: 0;
-  width: 618px;
-}
-
-/* line 137, sass/synapse/_slider_orig.scss */
-.slider-nav-thumbs {
-  bottom: -426px;
-}
-
-/* line 140, sass/synapse/_slider_orig.scss */
-.slider-nav-wide, .slider-nav-wide-thumbs {
-  width: 938px;
-}
-
-/* line 143, sass/synapse/_slider_orig.scss */
-.slider-nav li, .slider-nav-thumbs li, .slider-nav-wide li {
-  float: left;
-  padding: 20px 0;
-}
-
-/* line 147, sass/synapse/_slider_orig.scss */
-.slider-nav a, .slider-nav-thumbs a, .slider-nav-wide a {
-  color: #969696;
-  font-size: 13px;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
-  margin-left: 15px;
-  padding-left: 15px;
-  font-weight: bold;
-  -moz-transition: color 0.3s ease-in;
-  -webkit-transition: color 0.3s ease-in;
-  -o-transition: color 0.3s ease-in;
-}
-
-/* line 158, sass/synapse/_slider_orig.scss */
-.slider-nav a:hover, .slider-nav-thumbs a:hover, .slider-nav-wide a:hover {
-  text-decoration: none;
-  color: #fff;
-}
-
-/* line 162, sass/synapse/_slider_orig.scss */
-.slider-nav-wide-thumbs a {
-  padding-left: 8px !important;
-}
-
-/* line 165, sass/synapse/_slider_orig.scss */
-.slider-nav-thumbs a {
-  opacity: 0.3;
-  padding-left: 6px;
-  -moz-transition: opacity 0.3s ease-in;
-  -webkit-transition: opacity 0.3s ease-in;
-  -o-transition: opacity 0.3s ease-in;
-}
-
-/* line 172, sass/synapse/_slider_orig.scss */
-.slider-nav-thumbs a:hover {
-  opacity: 1;
-}
-
-/* line 175, sass/synapse/_slider_orig.scss */
-.slider-nav-thumbs a img {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  border: 4px solid #fff;
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-/* line 184, sass/synapse/_slider_orig.scss */
-.slider-nav-thumbs .activeSlide a {
-  position: relative;
-  opacity: 1;
-}
-
-/* line 188, sass/synapse/_slider_orig.scss */
-.slider-nav .activeSlide a, .slider-nav-wide .activeSlide a {
-  font-size: 13px;
-  background: #242728;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #242728 1%, #282b2c 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #242728), color-stop(100%, #282b2c));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #242728 1%, #282b2c 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #242728 1%, #282b2c 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #242728 1%, #282b2c 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #242728 1%, #282b2c 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#242728', endColorstr='#282b2c',GradientType=0 );
-  /* IE6-9 */
-  color: #cecece !important;
-  padding: 6px 17px;
-  margin-left: 30px;
-  position: relative;
-  -moz-border-radius: 99px 99px 99px 99px;
-  -webkit-border-radius: 99px 99px 99px 99px;
-  -o-border-radius: 99px 99px 99px 99px;
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
-  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-/* line 210, sass/synapse/_slider_orig.scss */
-.slider-nav-thumbs .activeSlide a:before {
-  content: url("img/slider-nav-arrow.png");
-  left: 40%;
-  position: absolute;
-  top: -71px;
-}
-
-/* line 216, sass/synapse/_slider_orig.scss */
-.activeSlide a:before {
-  content: url("img/slider-nav-arrow.png");
-  left: 40%;
-  position: absolute;
-  top: -26px;
-}
-
-/* line 250, sass/synapse/_slider_orig.scss */
-.simple-slider img, .img-container img, .portfolio-single-img {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-}
-
-/* line 255, sass/synapse/_slider_orig.scss */
-.images img, .images-thumb img, .images-wide img, .images-wide-thumb img {
-  -moz-border-radius-topleft: 5px;
-  -webkit-border-top-left-radius: 5px;
-  -ms-border-top-left-radius: 5px;
-  -o-border-top-left-radius: 5px;
-  border-top-left-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  -webkit-border-top-right-radius: 5px;
-  -ms-border-top-right-radius: 5px;
-  -o-border-top-right-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-/* RESPONSIVE SLIDER STYLES */
-@media (max-width: 767px) {
-  /* line 264, sass/synapse/_slider_orig.scss */
-  .row-fluid .slider .span-one-third, .row-fluid .slider .span-two-thirds,
-  .row-fluid .slider [class*="span"] {
-    width: auto !important;
-    float: right !important;
-  }
-
-  /* line 266, sass/synapse/_slider_orig.scss */
-  .content-slider {
-    min-height: 435px;
-  }
-}
-/*----------------------------------------------
-
 	PARTIAL:	_callout.scss
 	PARENT:		_theme-synapse.scss
 	
@@ -11065,7 +10785,7 @@ abbr {
   }
 
   /* line 250, sass/bootstrap/_mixins.scss */
-  .span11, .span-two-thirds {
+  .span11 {
     width: 493.167px;
   }
 
@@ -11095,7 +10815,7 @@ abbr {
   }
 
   /* line 250, sass/bootstrap/_mixins.scss */
-  .span5, .span-one-third {
+  .span5 {
     width: 216.167px;
   }
 
@@ -11242,11 +10962,9 @@ abbr {
   }
 
   /* line 319, sass/bootstrap/_mixins.scss */
-  input.span11, input.span-two-thirds,
+  input.span11,
   textarea.span11,
-  textarea.span-two-thirds,
-  .uneditable-input.span11,
-  .uneditable-input.span-two-thirds {
+  .uneditable-input.span11 {
     width: 483.167px;
   }
 
@@ -11286,11 +11004,9 @@ abbr {
   }
 
   /* line 319, sass/bootstrap/_mixins.scss */
-  input.span5, input.span-one-third,
+  input.span5,
   textarea.span5,
-  textarea.span-one-third,
-  .uneditable-input.span5,
-  .uneditable-input.span-one-third {
+  .uneditable-input.span5 {
     width: 206.167px;
   }
 
@@ -11389,7 +11105,7 @@ abbr {
     *width: 74.477%;
   }
   /* line 295, sass/bootstrap/_mixins.scss */
-  .row-fluid .span11, .row-fluid .span-two-thirds {
+  .row-fluid .span11 {
     width: 68.162%;
     *width: 68.109%;
   }
@@ -11419,7 +11135,7 @@ abbr {
     *width: 36.272%;
   }
   /* line 295, sass/bootstrap/_mixins.scss */
-  .row-fluid .span5, .row-fluid .span-one-third {
+  .row-fluid .span5 {
     width: 29.957%;
     *width: 29.904%;
   }
@@ -11505,7 +11221,7 @@ abbr {
   }
 
   /* line 250, sass/bootstrap/_mixins.scss */
-  .span11, .span-two-thirds {
+  .span11 {
     width: 797.5px;
   }
 
@@ -11535,7 +11251,7 @@ abbr {
   }
 
   /* line 250, sass/bootstrap/_mixins.scss */
-  .span5, .span-one-third {
+  .span5 {
     width: 350.5px;
   }
 
@@ -11682,11 +11398,9 @@ abbr {
   }
 
   /* line 319, sass/bootstrap/_mixins.scss */
-  input.span11, input.span-two-thirds,
+  input.span11,
   textarea.span11,
-  textarea.span-two-thirds,
-  .uneditable-input.span11,
-  .uneditable-input.span-two-thirds {
+  .uneditable-input.span11 {
     width: 787.5px;
   }
 
@@ -11726,11 +11440,9 @@ abbr {
   }
 
   /* line 319, sass/bootstrap/_mixins.scss */
-  input.span5, input.span-one-third,
+  input.span5,
   textarea.span5,
-  textarea.span-one-third,
-  .uneditable-input.span5,
-  .uneditable-input.span-one-third {
+  .uneditable-input.span5 {
     width: 340.5px;
   }
 
@@ -11829,7 +11541,7 @@ abbr {
     *width: 74.557%;
   }
   /* line 295, sass/bootstrap/_mixins.scss */
-  .row-fluid .span11, .row-fluid .span-two-thirds {
+  .row-fluid .span11 {
     width: 68.262%;
     *width: 68.209%;
   }
@@ -11859,7 +11571,7 @@ abbr {
     *width: 36.472%;
   }
   /* line 295, sass/bootstrap/_mixins.scss */
-  .row-fluid .span5, .row-fluid .span-one-third {
+  .row-fluid .span5 {
     width: 30.177%;
     *width: 30.124%;
   }

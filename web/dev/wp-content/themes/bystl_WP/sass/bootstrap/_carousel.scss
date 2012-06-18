@@ -20,10 +20,10 @@
 }
 
 .carousel {
-  @include transition(height .4s ease);
   .item {
     display: none;
     position: relative;
+    -webkit-transform: translate3d(0, 0, 0); // activate the GPU
     @include transition(left 1.3s ease-in-out);
   }
 
@@ -109,6 +109,21 @@
     color: $white;
     text-decoration: none;
     @include opacity(0.9);
+  }
+}
+
+// tablets and mobile devices
+@media only screen and (max-width: 979px) {
+  .carousel-control { display: none; }
+  // TODO: touch gesture controls?
+  .carousel {
+    margin-top: 0;
+  }
+  #slider {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: -#{mobileGutter};
+    margin-right: -#{mobileGutter};
   }
 }
 
