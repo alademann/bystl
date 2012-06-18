@@ -99,7 +99,7 @@ class dd_post_widget extends WP_Widget {
 
                     $blogImg = ddListGet('blogImg', get_the_ID()); ?>
 
-                    <a href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_url'); ?>/includes/timthumb.php?q=100&amp;w=45&amp;h=45&amp;zc=1&amp;src=<?php echo $blogImg[0]['img_url']; ?>" alt="" /></a>
+                    <a href="<?php the_permalink(); ?>"><img width="45" height="45" src="<?php echo $blogImg[0]['img_url']; ?>" alt="" /></a>
 
                     <?php endif; ?>
                     

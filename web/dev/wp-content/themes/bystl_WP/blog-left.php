@@ -49,7 +49,7 @@
                             <div class="article-thumb">
 
 
-                                 <a href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_url'); ?>/includes/timthumb.php?q=100&amp;w=575&amp;h=405&amp;zc=1&amp;src=<?php echo $blogImg[0]['img_url']; ?>" alt="" /></a>
+                                 <a href="<?php the_permalink(); ?>"><img width="575" height="405" src="<?php echo $blogImg[0]['img_url']; ?>" alt="" /></a>
 
 
                                 <a class="article-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>

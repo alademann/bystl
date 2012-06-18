@@ -67,7 +67,7 @@
 
                                     </div>
 
-                                 <img src="<?php bloginfo('template_url'); ?>/includes/timthumb.php?q=100&amp;w=258&amp;h=250&amp;zc=1&amp;src=<?php echo get_post_meta($post->ID, 'portfolioImg', true) ?>" alt="" />
+                                 <img width="258" height="250" src="<?php echo get_post_meta($post->ID, 'portfolioImg', true) ?>" alt="" />
                   
                                 </div>
 

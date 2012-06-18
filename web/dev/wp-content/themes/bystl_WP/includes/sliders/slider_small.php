@@ -31,7 +31,7 @@
 
 			if($i <= 8) {
 
-				echo '<li><a href="'.$slide['link'].'"><img src="'.get_bloginfo('template_url').'/includes/timthumb.php?q=100&amp;w=620&amp;h=330&amp;zc=1&amp;src='.$slide['image'].'" alt="'.$slide['title'].'" /></a></li>';
+				echo '<li><a href="'.$slide['link'].'"><img width="620" height="330" src="'.$slide['image'].'" alt="'.$slide['title'].'" /></a></li>';
 
 			} else { break; }
 

@@ -100,7 +100,7 @@ class dd_testimonials_widget extends WP_Widget {
 							//OUR THUMBNAILS
 							$testimonials = ddListGet('testimonials', get_the_ID());?>
 
-                                  <img src="<?php bloginfo('template_url'); ?>/includes/timthumb.php?q=100&amp;w=45&amp;h=45&amp;zc=1&amp;src=<?php echo $testimonials[0]['testimonials_avatar']; ?>" alt="" />
+                                  <img width="45" height="45" src="<?php echo $testimonials[0]['testimonials_avatar']; ?>" alt="" />
 
 
                                    <?php endif; ?>
