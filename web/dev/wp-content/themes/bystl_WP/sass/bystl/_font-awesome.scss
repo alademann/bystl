@@ -24,7 +24,7 @@
    
 /* sprites.less reset */
 [class^="icon-"],
-[class*=" icon-"] {
+[class*=" icon-"], [class*="navicon-"] > a {
     white-space: nowrap;
     display: inline;
     width: auto;
@@ -36,14 +36,15 @@
     background-repeat: repeat;
 }
 li[class^="icon-"],
-li[class*=" icon-"] {
+li[class*=" icon-"], [class*="navicon-"] {
     display: block;
 }
 
 /*  Font Awesome styles
     ------------------------------------------------------- */
 [class^="icon-"]:before,
-[class*=" icon-"]:before {
+[class*=" icon-"]:before, 
+[class*="navicon-"] > a:before, [class*="navicon-"] > a:after {
     @include webfont($icoFont_name, "icon");
     display: inline-block;
     text-decoration: inherit;
@@ -51,6 +52,45 @@ li[class*=" icon-"] {
     font-size: $baseFontSize + 4;
     padding-right: 7px;
 }
+
+// styles for wordpress specific wp_nav_menu syntax
+@mixin naviconStyle($hover: false){
+    @if $hover {
+        color: $navbarLinkColorHover;
+        @include opacity(1.0);
+    } @else {
+        color: $navbarLinkColor;
+        @include opacity(0.6);
+    }
+        text-decoration: none;
+        font-size: 1.1em;
+        text-shadow: $navbarLinkTextShadow;
+}
+
+[class*="navicon-"] {
+    // valid combination of class and :after or :before
+    > a:before, &[class*="right"] > a:after {
+        @include naviconStyle;
+    }
+    > a:hover:before, &[class*="right"] > a:hover:after {
+        @include naviconStyle(true);
+    }
+    
+    // reverse the padding for right aligned icons
+    &[class*="right"] > a:after {
+        padding-right: 0;
+        padding-left: 7px;
+    }
+
+    // invalid combination of class and :after or :before
+    // remove content, zero out padding
+    > a:after, &[class*="right"] > a:before {
+        content: "" !important;
+        padding-right: 0;
+    }
+    
+} // END wp_nav_menu styles
+
 .icon-only:before {
     padding-right: 2px;
     padding-left: 2px;
@@ -120,229 +160,238 @@ ul.icons {
 
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
     readers do not read off random characters that represent icons */
-.icon-glass:before                { content: "\f000"; }
-.icon-music:before                { content: "\f001"; }
-.icon-search:before               { content: "\f002"; }
-.icon-envelope:before             { content: "\f003"; }
-.icon-heart:before                { content: "\f004"; }
-.icon-star:before                 { content: "\f005"; }
-.icon-star-empty:before           { content: "\f006"; }
-.icon-user:before                 { content: "\f007"; }
-.icon-film:before                 { content: "\f008"; }
-.icon-th-large:before             { content: "\f009"; }
-.icon-th:before                   { content: "\f00a"; }
-.icon-th-list:before              { content: "\f00b"; }
-.icon-ok:before                   { content: "\f00c"; }
-.icon-remove:before               { content: "\f00d"; }
-.icon-zoom-in:before              { content: "\f00e"; }
+@mixin iconGlyphClasses($prefix: "icon-", $el: ":before") {
 
-.icon-zoom-out:before             { content: "\f010"; }
-.icon-off:before                  { content: "\f011"; }
-.icon-signal:before               { content: "\f012"; }
-.icon-cog:before                  { content: "\f013"; }
-.icon-trash:before                { content: "\f014"; }
-.icon-home:before                 { content: "\f015"; }
-.icon-file:before                 { content: "\f016"; }
-.icon-time:before                 { content: "\f017"; }
-.icon-road:before                 { content: "\f018"; }
-.icon-download-alt:before         { content: "\f019"; }
-.icon-download:before             { content: "\f01a"; }
-.icon-upload:before               { content: "\f01b"; }
-.icon-inbox:before                { content: "\f01c"; }
-.icon-play-circle:before          { content: "\f01d"; }
-.icon-repeat:before               { content: "\f01e"; }
+    .#{$prefix}glass#{$el}                { content: "\f000"; }
+    .#{$prefix}music#{$el}                { content: "\f001"; }
+    .#{$prefix}search#{$el}               { content: "\f002"; }
+    .#{$prefix}envelope#{$el}             { content: "\f003"; }
+    .#{$prefix}heart#{$el}                { content: "\f004"; }
+    .#{$prefix}star#{$el}                 { content: "\f005"; }
+    .#{$prefix}star-empty#{$el}           { content: "\f006"; }
+    .#{$prefix}user#{$el}                 { content: "\f007"; }
+    .#{$prefix}film#{$el}                 { content: "\f008"; }
+    .#{$prefix}th-large#{$el}             { content: "\f009"; }
+    .#{$prefix}th#{$el}                   { content: "\f00a"; }
+    .#{$prefix}th-list#{$el}              { content: "\f00b"; }
+    .#{$prefix}ok#{$el}                   { content: "\f00c"; }
+    .#{$prefix}remove#{$el}               { content: "\f00d"; }
+    .#{$prefix}zoom-in#{$el}              { content: "\f00e"; }
 
-/* \f020 doesn't work in Safari. all shifted one down */
-.icon-refresh:before              { content: "\f021"; }
-.icon-list-alt:before             { content: "\f022"; }
-.icon-lock:before                 { content: "\f023"; }
-.icon-flag:before                 { content: "\f024"; }
-.icon-headphones:before           { content: "\f025"; }
-.icon-volume-off:before           { content: "\f026"; }
-.icon-volume-down:before          { content: "\f027"; }
-.icon-volume-up:before            { content: "\f028"; }
-.icon-qrcode:before               { content: "\f029"; }
-.icon-barcode:before              { content: "\f02a"; }
-.icon-tag:before                  { content: "\f02b"; }
-.icon-tags:before                 { content: "\f02c"; }
-.icon-book:before                 { content: "\f02d"; }
-.icon-bookmark:before             { content: "\f02e"; }
-.icon-print:before                { content: "\f02f"; }
+    .#{$prefix}zoom-out#{$el}             { content: "\f010"; }
+    .#{$prefix}off#{$el}                  { content: "\f011"; }
+    .#{$prefix}signal#{$el}               { content: "\f012"; }
+    .#{$prefix}cog#{$el}                  { content: "\f013"; }
+    .#{$prefix}trash#{$el}                { content: "\f014"; }
+    .#{$prefix}home#{$el}                 { content: "\f015"; }
+    .#{$prefix}file#{$el}                 { content: "\f016"; }
+    .#{$prefix}time#{$el}                 { content: "\f017"; }
+    .#{$prefix}road#{$el}                 { content: "\f018"; }
+    .#{$prefix}download-alt#{$el}         { content: "\f019"; }
+    .#{$prefix}download#{$el}             { content: "\f01a"; }
+    .#{$prefix}upload#{$el}               { content: "\f01b"; }
+    .#{$prefix}inbox#{$el}                { content: "\f01c"; }
+    .#{$prefix}play-circle#{$el}          { content: "\f01d"; }
+    .#{$prefix}repeat#{$el}               { content: "\f01e"; }
 
-.icon-camera:before               { content: "\f030"; }
-.icon-font:before                 { content: "\f031"; }
-.icon-bold:before                 { content: "\f032"; }
-.icon-italic:before               { content: "\f033"; }
-.icon-text-height:before          { content: "\f034"; }
-.icon-text-width:before           { content: "\f035"; }
-.icon-align-left:before           { content: "\f036"; }
-.icon-align-center:before         { content: "\f037"; }
-.icon-align-right:before          { content: "\f038"; }
-.icon-align-justify:before        { content: "\f039"; }
-.icon-list:before                 { content: "\f03a"; }
-.icon-indent-left:before          { content: "\f03b"; }
-.icon-indent-right:before         { content: "\f03c"; }
-.icon-facetime-video:before       { content: "\f03d"; }
-.icon-picture:before              { content: "\f03e"; }
+    /* \f020 doesn't work in Safari. all shifted one down */
+    .#{$prefix}refresh#{$el}              { content: "\f021"; }
+    .#{$prefix}list-alt#{$el}             { content: "\f022"; }
+    .#{$prefix}lock#{$el}                 { content: "\f023"; }
+    .#{$prefix}flag#{$el}                 { content: "\f024"; }
+    .#{$prefix}headphones#{$el}           { content: "\f025"; }
+    .#{$prefix}volume-off#{$el}           { content: "\f026"; }
+    .#{$prefix}volume-down#{$el}          { content: "\f027"; }
+    .#{$prefix}volume-up#{$el}            { content: "\f028"; }
+    .#{$prefix}qrcode#{$el}               { content: "\f029"; }
+    .#{$prefix}barcode#{$el}              { content: "\f02a"; }
+    .#{$prefix}tag#{$el}                  { content: "\f02b"; }
+    .#{$prefix}tags#{$el}                 { content: "\f02c"; }
+    .#{$prefix}book#{$el}                 { content: "\f02d"; }
+    .#{$prefix}bookmark#{$el}             { content: "\f02e"; }
+    .#{$prefix}print#{$el}                { content: "\f02f"; }
 
-.icon-pencil:before               { content: "\f040"; }
-.icon-map-marker:before           { content: "\f041"; }
-.icon-adjust:before               { content: "\f042"; }
-.icon-tint:before                 { content: "\f043"; }
-.icon-edit:before                 { content: "\f044"; }
-.icon-share:before                { content: "\f045"; }
-.icon-check:before                { content: "\f046"; }
-.icon-move:before                 { content: "\f047"; }
-.icon-step-backward:before        { content: "\f048"; }
-.icon-fast-backward:before        { content: "\f049"; }
-.icon-backward:before             { content: "\f04a"; }
-.icon-play:before                 { content: "\f04b"; }
-.icon-pause:before                { content: "\f04c"; }
-.icon-stop:before                 { content: "\f04d"; }
-.icon-forward:before              { content: "\f04e"; }
+    .#{$prefix}camera#{$el}               { content: "\f030"; }
+    .#{$prefix}font#{$el}                 { content: "\f031"; }
+    .#{$prefix}bold#{$el}                 { content: "\f032"; }
+    .#{$prefix}italic#{$el}               { content: "\f033"; }
+    .#{$prefix}text-height#{$el}          { content: "\f034"; }
+    .#{$prefix}text-width#{$el}           { content: "\f035"; }
+    .#{$prefix}align-left#{$el}           { content: "\f036"; }
+    .#{$prefix}align-center#{$el}         { content: "\f037"; }
+    .#{$prefix}align-right#{$el}          { content: "\f038"; }
+    .#{$prefix}align-justify#{$el}        { content: "\f039"; }
+    .#{$prefix}list#{$el}                 { content: "\f03a"; }
+    .#{$prefix}indent-left#{$el}          { content: "\f03b"; }
+    .#{$prefix}indent-right#{$el}         { content: "\f03c"; }
+    .#{$prefix}facetime-video#{$el}       { content: "\f03d"; }
+    .#{$prefix}picture#{$el}              { content: "\f03e"; }
 
-.icon-fast-forward:before         { content: "\f050"; }
-.icon-step-forward:before         { content: "\f051"; }
-.icon-eject:before                { content: "\f052"; }
-.icon-chevron-left:before         { content: "\f053"; }
-.icon-chevron-right:before        { content: "\f054"; }
-.icon-plus-sign:before            { content: "\f055"; }
-.icon-minus-sign:before           { content: "\f056"; }
-.icon-remove-sign:before          { content: "\f057"; }
-.icon-ok-sign:before              { content: "\f058"; }
-.icon-question-sign:before        { content: "\f059"; }
-.icon-info-sign:before            { content: "\f05a"; }
-.icon-screenshot:before           { content: "\f05b"; }
-.icon-remove-circle:before        { content: "\f05c"; }
-.icon-ok-circle:before            { content: "\f05d"; }
-.icon-ban-circle:before           { content: "\f05e"; }
+    .#{$prefix}pencil#{$el}               { content: "\f040"; }
+    .#{$prefix}map-marker#{$el}           { content: "\f041"; }
+    .#{$prefix}adjust#{$el}               { content: "\f042"; }
+    .#{$prefix}tint#{$el}                 { content: "\f043"; }
+    .#{$prefix}edit#{$el}                 { content: "\f044"; }
+    .#{$prefix}share#{$el}                { content: "\f045"; }
+    .#{$prefix}check#{$el}                { content: "\f046"; }
+    .#{$prefix}move#{$el}                 { content: "\f047"; }
+    .#{$prefix}step-backward#{$el}        { content: "\f048"; }
+    .#{$prefix}fast-backward#{$el}        { content: "\f049"; }
+    .#{$prefix}backward#{$el}             { content: "\f04a"; }
+    .#{$prefix}play#{$el}                 { content: "\f04b"; }
+    .#{$prefix}pause#{$el}                { content: "\f04c"; }
+    .#{$prefix}stop#{$el}                 { content: "\f04d"; }
+    .#{$prefix}forward#{$el}              { content: "\f04e"; }
 
-.icon-arrow-left:before           { content: "\f060"; }
-.icon-arrow-right:before          { content: "\f061"; }
-.icon-arrow-up:before             { content: "\f062"; }
-.icon-arrow-down:before           { content: "\f063"; }
-.icon-share-alt:before            { content: "\f064"; }
-.icon-resize-full:before          { content: "\f065"; }
-.icon-resize-small:before         { content: "\f066"; }
-.icon-plus:before                 { content: "\f067"; }
-.icon-minus:before                { content: "\f068"; }
-.icon-asterisk:before             { content: "\f069"; }
-.icon-exclamation-sign:before     { content: "\f06a"; }
-.icon-gift:before                 { content: "\f06b"; }
-.icon-leaf:before                 { content: "\f06c"; }
-.icon-fire:before                 { content: "\f06d"; }
-.icon-eye-open:before             { content: "\f06e"; }
+    .#{$prefix}fast-forward#{$el}         { content: "\f050"; }
+    .#{$prefix}step-forward#{$el}         { content: "\f051"; }
+    .#{$prefix}eject#{$el}                { content: "\f052"; }
+    .#{$prefix}chevron-left#{$el}         { content: "\f053"; }
+    .#{$prefix}chevron-right#{$el}        { content: "\f054"; }
+    .#{$prefix}plus-sign#{$el}            { content: "\f055"; }
+    .#{$prefix}minus-sign#{$el}           { content: "\f056"; }
+    .#{$prefix}remove-sign#{$el}          { content: "\f057"; }
+    .#{$prefix}ok-sign#{$el}              { content: "\f058"; }
+    .#{$prefix}question-sign#{$el}        { content: "\f059"; }
+    .#{$prefix}info-sign#{$el}            { content: "\f05a"; }
+    .#{$prefix}screenshot#{$el}           { content: "\f05b"; }
+    .#{$prefix}remove-circle#{$el}        { content: "\f05c"; }
+    .#{$prefix}ok-circle#{$el}            { content: "\f05d"; }
+    .#{$prefix}ban-circle#{$el}           { content: "\f05e"; }
 
-.icon-eye-close:before            { content: "\f070"; }
-.icon-warning-sign:before         { content: "\f071"; }
-.icon-plane:before                { content: "\f072"; }
-.icon-calendar:before             { content: "\f073"; }
-.icon-random:before               { content: "\f074"; }
-.icon-comment:before              { content: "\f075"; }
-.icon-magnet:before               { content: "\f076"; }
-.icon-chevron-up:before           { content: "\f077"; }
-.icon-chevron-down:before         { content: "\f078"; }
-.icon-retweet:before              { content: "\f079"; }
-.icon-shopping-cart:before        { content: "\f07a"; }
-.icon-folder-close:before         { content: "\f07b"; }
-.icon-folder-open:before          { content: "\f07c"; }
-.icon-resize-vertical:before      { content: "\f07d"; }
-.icon-resize-horizontal:before    { content: "\f07e"; }
+    .#{$prefix}arrow-left#{$el}           { content: "\f060"; }
+    .#{$prefix}arrow-right#{$el}          { content: "\f061"; }
+    .#{$prefix}arrow-up#{$el}             { content: "\f062"; }
+    .#{$prefix}arrow-down#{$el}           { content: "\f063"; }
+    .#{$prefix}share-alt#{$el}            { content: "\f064"; }
+    .#{$prefix}resize-full#{$el}          { content: "\f065"; }
+    .#{$prefix}resize-small#{$el}         { content: "\f066"; }
+    .#{$prefix}plus#{$el}                 { content: "\f067"; }
+    .#{$prefix}minus#{$el}                { content: "\f068"; }
+    .#{$prefix}asterisk#{$el}             { content: "\f069"; }
+    .#{$prefix}exclamation-sign#{$el}     { content: "\f06a"; }
+    .#{$prefix}gift#{$el}                 { content: "\f06b"; }
+    .#{$prefix}leaf#{$el}                 { content: "\f06c"; }
+    .#{$prefix}fire#{$el}                 { content: "\f06d"; }
+    .#{$prefix}eye-open#{$el}             { content: "\f06e"; }
 
-.icon-bar-chart:before            { content: "\f080"; }
-.icon-twitter-sign:before         { content: "\f081"; }
-.icon-facebook-sign:before        { content: "\f082"; }
-.icon-camera-retro:before         { content: "\f083"; }
-.icon-key:before                  { content: "\f084"; }
-.icon-cogs:before                 { content: "\f085"; }
-.icon-comments:before             { content: "\f086"; }
-.icon-thumbs-up:before            { content: "\f087"; }
-.icon-thumbs-down:before          { content: "\f088"; }
-.icon-star-half:before            { content: "\f089"; }
-.icon-heart-empty:before          { content: "\f08a"; }
-.icon-signout:before              { content: "\f08b"; }
-.icon-linkedin-sign:before        { content: "\f08c"; }
-.icon-pushpin:before              { content: "\f08d"; }
-.icon-external-link:before        { content: "\f08e"; }
+    .#{$prefix}eye-close#{$el}            { content: "\f070"; }
+    .#{$prefix}warning-sign#{$el}         { content: "\f071"; }
+    .#{$prefix}plane#{$el}                { content: "\f072"; }
+    .#{$prefix}calendar#{$el}             { content: "\f073"; }
+    .#{$prefix}random#{$el}               { content: "\f074"; }
+    .#{$prefix}comment#{$el}              { content: "\f075"; }
+    .#{$prefix}magnet#{$el}               { content: "\f076"; }
+    .#{$prefix}chevron-up#{$el}           { content: "\f077"; }
+    .#{$prefix}chevron-down#{$el}         { content: "\f078"; }
+    .#{$prefix}retweet#{$el}              { content: "\f079"; }
+    .#{$prefix}shopping-cart#{$el}        { content: "\f07a"; }
+    .#{$prefix}folder-close#{$el}         { content: "\f07b"; }
+    .#{$prefix}folder-open#{$el}          { content: "\f07c"; }
+    .#{$prefix}resize-vertical#{$el}      { content: "\f07d"; }
+    .#{$prefix}resize-horizontal#{$el}    { content: "\f07e"; }
 
-.icon-signin:before               { content: "\f090"; }
-.icon-trophy:before               { content: "\f091"; }
-.icon-github-sign:before          { content: "\f092"; }
-.icon-upload-alt:before           { content: "\f093"; }
-.icon-lemon:before                { content: "\f094"; }
-.icon-phone:before                { content: "\f095"; }
-.icon-check-empty:before          { content: "\f096"; }
-.icon-bookmark-empty:before       { content: "\f097"; }
-.icon-phone-sign:before           { content: "\f098"; }
-.icon-twitter:before              { content: "\f099"; }
-.icon-facebook:before             { content: "\f09a"; }
-.icon-github:before               { content: "\f09b"; }
-.icon-unlock:before               { content: "\f09c"; }
-.icon-credit-card:before          { content: "\f09d"; }
-.icon-rss:before                  { content: "\f09e"; }
+    .#{$prefix}bar-chart#{$el}            { content: "\f080"; }
+    .#{$prefix}twitter-sign#{$el}         { content: "\f081"; }
+    .#{$prefix}facebook-sign#{$el}        { content: "\f082"; }
+    .#{$prefix}camera-retro#{$el}         { content: "\f083"; }
+    .#{$prefix}key#{$el}                  { content: "\f084"; }
+    .#{$prefix}cogs#{$el}                 { content: "\f085"; }
+    .#{$prefix}comments#{$el}             { content: "\f086"; }
+    .#{$prefix}thumbs-up#{$el}            { content: "\f087"; }
+    .#{$prefix}thumbs-down#{$el}          { content: "\f088"; }
+    .#{$prefix}star-half#{$el}            { content: "\f089"; }
+    .#{$prefix}heart-empty#{$el}          { content: "\f08a"; }
+    .#{$prefix}signout#{$el}              { content: "\f08b"; }
+    .#{$prefix}linkedin-sign#{$el}        { content: "\f08c"; }
+    .#{$prefix}pushpin#{$el}              { content: "\f08d"; }
+    .#{$prefix}external-link#{$el}        { content: "\f08e"; }
 
-.icon-hdd:before                  { content: "\f0a0"; }
-.icon-bullhorn:before             { content: "\f0a1"; }
-.icon-bell:before                 { content: "\f0a2"; }
-.icon-certificate:before          { content: "\f0a3"; }
-.icon-hand-right:before           { content: "\f0a4"; }
-.icon-hand-left:before            { content: "\f0a5"; }
-.icon-hand-up:before              { content: "\f0a6"; }
-.icon-hand-down:before            { content: "\f0a7"; }
-.icon-circle-arrow-left:before    { content: "\f0a8"; }
-.icon-circle-arrow-right:before   { content: "\f0a9"; }
-.icon-circle-arrow-up:before      { content: "\f0aa"; }
-.icon-circle-arrow-down:before    { content: "\f0ab"; }
-.icon-globe:before                { content: "\f0ac"; }
-.icon-wrench:before               { content: "\f0ad"; }
-.icon-tasks:before                { content: "\f0ae"; }
+    .#{$prefix}signin#{$el}               { content: "\f090"; }
+    .#{$prefix}trophy#{$el}               { content: "\f091"; }
+    .#{$prefix}github-sign#{$el}          { content: "\f092"; }
+    .#{$prefix}upload-alt#{$el}           { content: "\f093"; }
+    .#{$prefix}lemon#{$el}                { content: "\f094"; }
+    .#{$prefix}phone#{$el}                { content: "\f095"; }
+    .#{$prefix}check-empty#{$el}          { content: "\f096"; }
+    .#{$prefix}bookmark-empty#{$el}       { content: "\f097"; }
+    .#{$prefix}phone-sign#{$el}           { content: "\f098"; }
+    .#{$prefix}twitter#{$el}              { content: "\f099"; }
+    .#{$prefix}facebook#{$el}             { content: "\f09a"; }
+    .#{$prefix}github#{$el}               { content: "\f09b"; }
+    .#{$prefix}unlock#{$el}               { content: "\f09c"; }
+    .#{$prefix}credit-card#{$el}          { content: "\f09d"; }
+    .#{$prefix}rss#{$el}                  { content: "\f09e"; }
 
-.icon-filter:before               { content: "\f0b0"; }
-.icon-briefcase:before            { content: "\f0b1"; }
-.icon-fullscreen:before           { content: "\f0b2"; }
+    .#{$prefix}hdd#{$el}                  { content: "\f0a0"; }
+    .#{$prefix}bullhorn#{$el}             { content: "\f0a1"; }
+    .#{$prefix}bell#{$el}                 { content: "\f0a2"; }
+    .#{$prefix}certificate#{$el}          { content: "\f0a3"; }
+    .#{$prefix}hand-right#{$el}           { content: "\f0a4"; }
+    .#{$prefix}hand-left#{$el}            { content: "\f0a5"; }
+    .#{$prefix}hand-up#{$el}              { content: "\f0a6"; }
+    .#{$prefix}hand-down#{$el}            { content: "\f0a7"; }
+    .#{$prefix}circle-arrow-left#{$el}    { content: "\f0a8"; }
+    .#{$prefix}circle-arrow-right#{$el}   { content: "\f0a9"; }
+    .#{$prefix}circle-arrow-up#{$el}      { content: "\f0aa"; }
+    .#{$prefix}circle-arrow-down#{$el}    { content: "\f0ab"; }
+    .#{$prefix}globe#{$el}                { content: "\f0ac"; }
+    .#{$prefix}wrench#{$el}               { content: "\f0ad"; }
+    .#{$prefix}tasks#{$el}                { content: "\f0ae"; }
 
-.icon-group:before                { content: "\f0c0"; }
-.icon-link:before                 { content: "\f0c1"; }
-.icon-cloud:before                { content: "\f0c2"; }
-.icon-beaker:before               { content: "\f0c3"; }
-.icon-cut:before                  { content: "\f0c4"; }
-.icon-copy:before                 { content: "\f0c5"; }
-.icon-paper-clip:before           { content: "\f0c6"; }
-.icon-save:before                 { content: "\f0c7"; }
-.icon-sign-blank:before           { content: "\f0c8"; }
-.icon-reorder:before              { content: "\f0c9"; }
-.icon-list-ul:before              { content: "\f0ca"; }
-.icon-list-ol:before              { content: "\f0cb"; }
-.icon-strikethrough:before        { content: "\f0cc"; }
-.icon-underline:before            { content: "\f0cd"; }
-.icon-table:before                { content: "\f0ce"; }
+    .#{$prefix}filter#{$el}               { content: "\f0b0"; }
+    .#{$prefix}briefcase#{$el}            { content: "\f0b1"; }
+    .#{$prefix}fullscreen#{$el}           { content: "\f0b2"; }
 
-.icon-magic:before                { content: "\f0d0"; }
-.icon-truck:before                { content: "\f0d1"; }
-.icon-pinterest:before            { content: "\f0d2"; }
-.icon-pinterest-sign:before       { content: "\f0d3"; }
-.icon-google-plus-sign:before     { content: "\f0d4"; }
-.icon-google-plus:before          { content: "\f0d5"; }
-.icon-money:before                { content: "\f0d6"; }
-.icon-caret-down:before           { content: "\f0d7"; }
-.icon-caret-up:before             { content: "\f0d8"; }
-.icon-caret-left:before           { content: "\f0d9"; }
-.icon-caret-right:before          { content: "\f0da"; }
-.icon-columns:before              { content: "\f0db"; }
-.icon-sort:before                 { content: "\f0dc"; }
-.icon-sort-down:before            { content: "\f0dd"; }
-.icon-sort-up:before              { content: "\f0de"; }
+    .#{$prefix}group#{$el}                { content: "\f0c0"; }
+    .#{$prefix}link#{$el}                 { content: "\f0c1"; }
+    .#{$prefix}cloud#{$el}                { content: "\f0c2"; }
+    .#{$prefix}beaker#{$el}               { content: "\f0c3"; }
+    .#{$prefix}cut#{$el}                  { content: "\f0c4"; }
+    .#{$prefix}copy#{$el}                 { content: "\f0c5"; }
+    .#{$prefix}paper-clip#{$el}           { content: "\f0c6"; }
+    .#{$prefix}save#{$el}                 { content: "\f0c7"; }
+    .#{$prefix}sign-blank#{$el}           { content: "\f0c8"; }
+    .#{$prefix}reorder#{$el}              { content: "\f0c9"; }
+    .#{$prefix}list-ul#{$el}              { content: "\f0ca"; }
+    .#{$prefix}list-ol#{$el}              { content: "\f0cb"; }
+    .#{$prefix}strikethrough#{$el}        { content: "\f0cc"; }
+    .#{$prefix}underline#{$el}            { content: "\f0cd"; }
+    .#{$prefix}table#{$el}                { content: "\f0ce"; }
 
-.icon-envelope-alt:before         { content: "\f0e0"; }
-.icon-linkedin:before             { content: "\f0e1"; }
-.icon-undo:before                 { content: "\f0e2"; }
-.icon-legal:before                { content: "\f0e3"; }
-.icon-dashboard:before            { content: "\f0e4"; }
-.icon-comment-alt:before          { content: "\f0e5"; }
-.icon-comments-alt:before         { content: "\f0e6"; }
-.icon-bolt:before                 { content: "\f0e7"; }
-.icon-sitemap:before              { content: "\f0e8"; }
-.icon-umbrella:before             { content: "\f0e9"; }
-.icon-paste:before                { content: "\f0ea"; }
+    .#{$prefix}magic#{$el}                { content: "\f0d0"; }
+    .#{$prefix}truck#{$el}                { content: "\f0d1"; }
+    .#{$prefix}pinterest#{$el}            { content: "\f0d2"; }
+    .#{$prefix}pinterest-sign#{$el}       { content: "\f0d3"; }
+    .#{$prefix}google-plus-sign#{$el}     { content: "\f0d4"; }
+    .#{$prefix}google-plus#{$el}          { content: "\f0d5"; }
+    .#{$prefix}money#{$el}                { content: "\f0d6"; }
+    .#{$prefix}caret-down#{$el}           { content: "\f0d7"; }
+    .#{$prefix}caret-up#{$el}             { content: "\f0d8"; }
+    .#{$prefix}caret-left#{$el}           { content: "\f0d9"; }
+    .#{$prefix}caret-right#{$el}          { content: "\f0da"; }
+    .#{$prefix}columns#{$el}              { content: "\f0db"; }
+    .#{$prefix}sort#{$el}                 { content: "\f0dc"; }
+    .#{$prefix}sort-down#{$el}            { content: "\f0dd"; }
+    .#{$prefix}sort-up#{$el}              { content: "\f0de"; }
 
-.icon-user-md:before              { content: "\f200"; }
+    .#{$prefix}envelope-alt#{$el}         { content: "\f0e0"; }
+    .#{$prefix}linkedin#{$el}             { content: "\f0e1"; }
+    .#{$prefix}undo#{$el}                 { content: "\f0e2"; }
+    .#{$prefix}legal#{$el}                { content: "\f0e3"; }
+    .#{$prefix}dashboard#{$el}            { content: "\f0e4"; }
+    .#{$prefix}comment-alt#{$el}          { content: "\f0e5"; }
+    .#{$prefix}comments-alt#{$el}         { content: "\f0e6"; }
+    .#{$prefix}bolt#{$el}                 { content: "\f0e7"; }
+    .#{$prefix}sitemap#{$el}              { content: "\f0e8"; }
+    .#{$prefix}umbrella#{$el}             { content: "\f0e9"; }
+    .#{$prefix}paste#{$el}                { content: "\f0ea"; }
+
+    .#{$prefix}user-md#{$el}              { content: "\f200"; }
+
+} // END @mixin iconGlyphClasses
+
+// output standard iconGlyphClasses
+@include iconGlyphClasses;
+// output wordpress syntax used on custom css classes in wp_nav_menu
+@include iconGlyphClasses('navicon-', ' > a:before');

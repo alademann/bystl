@@ -92,6 +92,15 @@
       > li { 
         float: none;
 
+        // nav items that need a horizontal divider
+        &.dropdown, &.divided {
+          border-bottom: 1px solid $bystl_brown_black;
+          border-top: 1px solid desaturate(lighten($bystl_brown_almstBlk, 3%), 30%);
+        }
+        // used for chiseled borders seen in .dropdown and .divided li's (above)
+        &:last-child { border-bottom: none; } 
+        &:first-child { border-top: none; }
+        
         &.divider-vertical {
           display: none;
         }
@@ -124,20 +133,11 @@
         text-shadow: none;
       } // END div.nav-collapse ul.nav .nav-header
 
+
       // DROPDOWN MENUS WITHIN COLLAPSED NAV
       .dropdown {
 
         // these collapses are disabled...
-        //background-color: darken($navbarBackground, 5%);
-        border-bottom: 1px solid $bystl_brown_black;
-        border-top: 1px solid desaturate(lighten($bystl_brown_almstBlk, 3%), 30%);
-        &:first-child { 
-          border-top: none;
-        }
-        &:last-child {
-          border-bottom: none;
-        }
-
         .dropdown-toggle {
           &, &:hover {
             color: darken($navbarLinkColor, 20%) !important;

@@ -219,7 +219,7 @@
   line-height: $elementHeight - 1;
   color: $navbarLinkColor;
   text-decoration: none;
-  text-shadow: 0 -1px 0 rgba($bystl_brown_black, 0.8);
+  text-shadow: $navbarLinkTextShadow;
 }
 // Buttons
 $btnPadBasis: 8px;
@@ -239,7 +239,7 @@ $btnPadBasis: 8px;
   line-height: $baseLineHeight;
 
   color: $navbarLinkColor;
-  text-shadow: 0 -1px 0 rgba($bystl_brown_black,.25); // should match .nav > li > a style
+  text-shadow: $navbarLinkTextShadow; // should match .nav > li > a style
   //text-shadow: 0 1px 1px darken($navbarBackground, 5%);
   &:hover {
     color: $navbarLinkColorHover;

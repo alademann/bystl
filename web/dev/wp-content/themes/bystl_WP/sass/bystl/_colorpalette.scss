@@ -101,6 +101,7 @@ $navbarLinkColorHover:            $white !default;
 $navbarLinkColorActive:           $navbarLinkColorHover !default;
 $navbarLinkBackgroundHover:       $navbarBackground !default;
 $navbarLinkBackgroundActive:      lighten(desaturate($navbarBackgroundHighlight, 50%), 3%) !default;
+$navbarLinkTextShadow:            0 -1px 0 rgba($bystl_brown_black,.25) !default;
 
 $navbarSearchBackground:          lighten($navbarBackground, 25%) !default;
 $navbarSearchBackgroundFocus:     $white !default;
