@@ -129,7 +129,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	PARENT:		_bootstrap.scss
 	
 ----------------------------------------------*/
-/* line 420, sass/bootstrap/_mixins.scss */
+/* line 424, sass/bootstrap/_mixins.scss */
 .trans {
   -webkit-transition-duration: 0.7s;
   -moz-transition-duration: 0.7s;
@@ -138,7 +138,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition-duration: 0.7s;
 }
 
-/* line 425, sass/bootstrap/_mixins.scss */
+/* line 429, sass/bootstrap/_mixins.scss */
 .tp_alpha {
   -webkit-transition-property: opacity;
   -moz-transition-property: opacity;
@@ -147,7 +147,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition-property: opacity;
 }
 
-/* line 428, sass/bootstrap/_mixins.scss */
+/* line 432, sass/bootstrap/_mixins.scss */
 .tp_shadow {
   -webkit-transition-property: box-shadow, text-shadow;
   -moz-transition-property: box-shadow, text-shadow;
@@ -156,7 +156,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition-property: box-shadow, text-shadow;
 }
 
-/* line 431, sass/bootstrap/_mixins.scss */
+/* line 435, sass/bootstrap/_mixins.scss */
 .tp_scale {
   -webkit-transition-property: height, min-height, max-height, width, min-width, max-width, font-size, line-height;
   -moz-transition-property: height, min-height, max-height, width, min-width, max-width, font-size, line-height;
@@ -165,7 +165,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition-property: height, min-height, max-height, width, min-width, max-width, font-size, line-height;
 }
 
-/* line 434, sass/bootstrap/_mixins.scss */
+/* line 438, sass/bootstrap/_mixins.scss */
 .tp_position {
   -webkit-transition-property: top, right, bottom, left, margin, padding, vertical-aligns;
   -moz-transition-property: top, right, bottom, left, margin, padding, vertical-aligns;
@@ -174,7 +174,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition-property: top, right, bottom, left, margin, padding, vertical-aligns;
 }
 
-/* line 437, sass/bootstrap/_mixins.scss */
+/* line 441, sass/bootstrap/_mixins.scss */
 .tp_bg {
   -webkit-transition-property: background;
   -moz-transition-property: background;
@@ -183,7 +183,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition-property: background;
 }
 
-/* line 440, sass/bootstrap/_mixins.scss */
+/* line 444, sass/bootstrap/_mixins.scss */
 .tp_color {
   -webkit-transition-property: color, border-color, outline-color, background-color, background-image, opacity;
   -moz-transition-property: color, border-color, outline-color, background-color, background-image, opacity;
@@ -192,7 +192,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition-property: color, border-color, outline-color, background-color, background-image, opacity;
 }
 
-/* line 443, sass/bootstrap/_mixins.scss */
+/* line 447, sass/bootstrap/_mixins.scss */
 .border {
   -webkit-transition-property: border;
   -moz-transition-property: border;
@@ -201,7 +201,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition-property: border;
 }
 
-/* line 446, sass/bootstrap/_mixins.scss */
+/* line 450, sass/bootstrap/_mixins.scss */
 .tp_all {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -210,7 +210,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition-property: all;
 }
 
-/* line 451, sass/bootstrap/_mixins.scss */
+/* line 455, sass/bootstrap/_mixins.scss */
 .tt_ease {
   -webkit-transition-timing-function: ease;
   -moz-transition-timing-function: ease;
@@ -219,7 +219,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition-timing-function: ease;
 }
 
-/* line 454, sass/bootstrap/_mixins.scss */
+/* line 458, sass/bootstrap/_mixins.scss */
 .tt_linear {
   -webkit-transition-timing-function: linear;
   -moz-transition-timing-function: linear;
@@ -228,7 +228,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition-timing-function: linear;
 }
 
-/* line 457, sass/bootstrap/_mixins.scss */
+/* line 461, sass/bootstrap/_mixins.scss */
 .tt_easeIn {
   -webkit-transition-timing-function: ease-in;
   -moz-transition-timing-function: ease-in;
@@ -237,7 +237,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition-timing-function: ease-in;
 }
 
-/* line 460, sass/bootstrap/_mixins.scss */
+/* line 464, sass/bootstrap/_mixins.scss */
 .tt_easeOut {
   -webkit-transition-timing-function: ease-out;
   -moz-transition-timing-function: ease-out;
@@ -246,7 +246,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition-timing-function: ease-out;
 }
 
-/* line 463, sass/bootstrap/_mixins.scss */
+/* line 467, sass/bootstrap/_mixins.scss */
 .tt_easeInOut {
   -webkit-transition-timing-function: ease-in-out;
   -moz-transition-timing-function: ease-in-out;
@@ -302,7 +302,7 @@ a:hover {
 	PARENT:		_bootstrap.scss
 	
 ----------------------------------------------*/
-/* line 226, sass/bootstrap/_mixins.scss */
+/* line 230, sass/bootstrap/_mixins.scss */
 .row {
   margin-left: -14.667px;
   *zoom: 1;
@@ -317,180 +317,180 @@ a:hover {
   clear: both;
 }
 
-/* line 231, sass/bootstrap/_mixins.scss */
+/* line 235, sass/bootstrap/_mixins.scss */
 [class*="span"] {
   float: left;
   margin-left: 14.667px;
 }
 
-/* line 239, sass/bootstrap/_mixins.scss */
+/* line 243, sass/bootstrap/_mixins.scss */
 .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
   width: 940px;
 }
 
-/* line 246, sass/bootstrap/_mixins.scss */
+/* line 250, sass/bootstrap/_mixins.scss */
 .span16 {
   width: 940px;
 }
 
-/* line 246, sass/bootstrap/_mixins.scss */
+/* line 250, sass/bootstrap/_mixins.scss */
 .span15 {
   width: 880.333px;
 }
 
-/* line 246, sass/bootstrap/_mixins.scss */
+/* line 250, sass/bootstrap/_mixins.scss */
 .span14 {
   width: 820.667px;
 }
 
-/* line 246, sass/bootstrap/_mixins.scss */
+/* line 250, sass/bootstrap/_mixins.scss */
 .span13 {
   width: 761px;
 }
 
-/* line 246, sass/bootstrap/_mixins.scss */
+/* line 250, sass/bootstrap/_mixins.scss */
 .span12 {
   width: 701.333px;
 }
 
-/* line 246, sass/bootstrap/_mixins.scss */
-.span11 {
+/* line 250, sass/bootstrap/_mixins.scss */
+.span11, .span-two-thirds {
   width: 641.667px;
 }
 
-/* line 246, sass/bootstrap/_mixins.scss */
+/* line 250, sass/bootstrap/_mixins.scss */
 .span10 {
   width: 582px;
 }
 
-/* line 246, sass/bootstrap/_mixins.scss */
+/* line 250, sass/bootstrap/_mixins.scss */
 .span9 {
   width: 522.333px;
 }
 
-/* line 246, sass/bootstrap/_mixins.scss */
+/* line 250, sass/bootstrap/_mixins.scss */
 .span8 {
   width: 462.667px;
 }
 
-/* line 246, sass/bootstrap/_mixins.scss */
+/* line 250, sass/bootstrap/_mixins.scss */
 .span7 {
   width: 403px;
 }
 
-/* line 246, sass/bootstrap/_mixins.scss */
+/* line 250, sass/bootstrap/_mixins.scss */
 .span6 {
   width: 343.333px;
 }
 
-/* line 246, sass/bootstrap/_mixins.scss */
-.span5 {
+/* line 250, sass/bootstrap/_mixins.scss */
+.span5, .span-one-third {
   width: 283.667px;
 }
 
-/* line 246, sass/bootstrap/_mixins.scss */
+/* line 250, sass/bootstrap/_mixins.scss */
 .span4 {
   width: 224px;
 }
 
-/* line 246, sass/bootstrap/_mixins.scss */
+/* line 250, sass/bootstrap/_mixins.scss */
 .span3 {
   width: 164.333px;
 }
 
-/* line 246, sass/bootstrap/_mixins.scss */
+/* line 250, sass/bootstrap/_mixins.scss */
 .span2 {
   width: 104.667px;
 }
 
-/* line 246, sass/bootstrap/_mixins.scss */
+/* line 250, sass/bootstrap/_mixins.scss */
 .span1 {
   width: 45px;
 }
 
-/* line 252, sass/bootstrap/_mixins.scss */
+/* line 256, sass/bootstrap/_mixins.scss */
 .offset16 {
   margin-left: 969.333px;
 }
 
-/* line 252, sass/bootstrap/_mixins.scss */
+/* line 256, sass/bootstrap/_mixins.scss */
 .offset15 {
   margin-left: 909.667px;
 }
 
-/* line 252, sass/bootstrap/_mixins.scss */
+/* line 256, sass/bootstrap/_mixins.scss */
 .offset14 {
   margin-left: 850px;
 }
 
-/* line 252, sass/bootstrap/_mixins.scss */
+/* line 256, sass/bootstrap/_mixins.scss */
 .offset13 {
   margin-left: 790.333px;
 }
 
-/* line 252, sass/bootstrap/_mixins.scss */
+/* line 256, sass/bootstrap/_mixins.scss */
 .offset12 {
   margin-left: 730.667px;
 }
 
-/* line 252, sass/bootstrap/_mixins.scss */
+/* line 256, sass/bootstrap/_mixins.scss */
 .offset11 {
   margin-left: 671px;
 }
 
-/* line 252, sass/bootstrap/_mixins.scss */
+/* line 256, sass/bootstrap/_mixins.scss */
 .offset10 {
   margin-left: 611.333px;
 }
 
-/* line 252, sass/bootstrap/_mixins.scss */
+/* line 256, sass/bootstrap/_mixins.scss */
 .offset9 {
   margin-left: 551.667px;
 }
 
-/* line 252, sass/bootstrap/_mixins.scss */
+/* line 256, sass/bootstrap/_mixins.scss */
 .offset8 {
   margin-left: 492px;
 }
 
-/* line 252, sass/bootstrap/_mixins.scss */
+/* line 256, sass/bootstrap/_mixins.scss */
 .offset7 {
   margin-left: 432.333px;
 }
 
-/* line 252, sass/bootstrap/_mixins.scss */
+/* line 256, sass/bootstrap/_mixins.scss */
 .offset6 {
   margin-left: 372.667px;
 }
 
-/* line 252, sass/bootstrap/_mixins.scss */
+/* line 256, sass/bootstrap/_mixins.scss */
 .offset5 {
   margin-left: 313px;
 }
 
-/* line 252, sass/bootstrap/_mixins.scss */
+/* line 256, sass/bootstrap/_mixins.scss */
 .offset4 {
   margin-left: 253.333px;
 }
 
-/* line 252, sass/bootstrap/_mixins.scss */
+/* line 256, sass/bootstrap/_mixins.scss */
 .offset3 {
   margin-left: 193.667px;
 }
 
-/* line 252, sass/bootstrap/_mixins.scss */
+/* line 256, sass/bootstrap/_mixins.scss */
 .offset2 {
   margin-left: 134px;
 }
 
-/* line 252, sass/bootstrap/_mixins.scss */
+/* line 256, sass/bootstrap/_mixins.scss */
 .offset1 {
   margin-left: 74.333px;
 }
 
-/* line 269, sass/bootstrap/_mixins.scss */
+/* line 273, sass/bootstrap/_mixins.scss */
 .container-fluid, .page-container.row-fluid,
 .navbar-fixed-top .container-fluid,
 .navbar-fixed-top .page-container.row-fluid,
@@ -501,7 +501,7 @@ a:hover {
   *width: 99.947%;
 }
 
-/* line 274, sass/bootstrap/_mixins.scss */
+/* line 278, sass/bootstrap/_mixins.scss */
 .row-fluid {
   width: 100%;
   *zoom: 1;
@@ -515,7 +515,7 @@ a:hover {
 .row-fluid:after {
   clear: both;
 }
-/* line 277, sass/bootstrap/_mixins.scss */
+/* line 281, sass/bootstrap/_mixins.scss */
 .row-fluid [class*="span"] {
   display: block;
   width: 100%;
@@ -527,86 +527,86 @@ a:hover {
   margin-left: 1.56%;
   *margin-left: 1.507%;
 }
-/* line 283, sass/bootstrap/_mixins.scss */
+/* line 287, sass/bootstrap/_mixins.scss */
 .row-fluid [class*="span"]:first-child {
   margin-left: 0;
 }
-/* line 291, sass/bootstrap/_mixins.scss */
+/* line 295, sass/bootstrap/_mixins.scss */
 .row-fluid .span16 {
   width: 100.0%;
   *width: 99.947%;
 }
-/* line 291, sass/bootstrap/_mixins.scss */
+/* line 295, sass/bootstrap/_mixins.scss */
 .row-fluid .span15 {
   width: 93.652%;
   *width: 93.599%;
 }
-/* line 291, sass/bootstrap/_mixins.scss */
+/* line 295, sass/bootstrap/_mixins.scss */
 .row-fluid .span14 {
   width: 87.305%;
   *width: 87.252%;
 }
-/* line 291, sass/bootstrap/_mixins.scss */
+/* line 295, sass/bootstrap/_mixins.scss */
 .row-fluid .span13 {
   width: 80.957%;
   *width: 80.904%;
 }
-/* line 291, sass/bootstrap/_mixins.scss */
+/* line 295, sass/bootstrap/_mixins.scss */
 .row-fluid .span12 {
   width: 74.61%;
   *width: 74.557%;
 }
-/* line 291, sass/bootstrap/_mixins.scss */
-.row-fluid .span11 {
+/* line 295, sass/bootstrap/_mixins.scss */
+.row-fluid .span11, .row-fluid .span-two-thirds {
   width: 68.262%;
   *width: 68.209%;
 }
-/* line 291, sass/bootstrap/_mixins.scss */
+/* line 295, sass/bootstrap/_mixins.scss */
 .row-fluid .span10 {
   width: 61.915%;
   *width: 61.862%;
 }
-/* line 291, sass/bootstrap/_mixins.scss */
+/* line 295, sass/bootstrap/_mixins.scss */
 .row-fluid .span9 {
   width: 55.567%;
   *width: 55.514%;
 }
-/* line 291, sass/bootstrap/_mixins.scss */
+/* line 295, sass/bootstrap/_mixins.scss */
 .row-fluid .span8 {
   width: 49.22%;
   *width: 49.167%;
 }
-/* line 291, sass/bootstrap/_mixins.scss */
+/* line 295, sass/bootstrap/_mixins.scss */
 .row-fluid .span7 {
   width: 42.872%;
   *width: 42.819%;
 }
-/* line 291, sass/bootstrap/_mixins.scss */
+/* line 295, sass/bootstrap/_mixins.scss */
 .row-fluid .span6 {
   width: 36.525%;
   *width: 36.472%;
 }
-/* line 291, sass/bootstrap/_mixins.scss */
-.row-fluid .span5 {
+/* line 295, sass/bootstrap/_mixins.scss */
+.row-fluid .span5, .row-fluid .span-one-third {
   width: 30.177%;
   *width: 30.124%;
 }
-/* line 291, sass/bootstrap/_mixins.scss */
+/* line 295, sass/bootstrap/_mixins.scss */
 .row-fluid .span4 {
   width: 23.83%;
   *width: 23.777%;
 }
-/* line 291, sass/bootstrap/_mixins.scss */
+/* line 295, sass/bootstrap/_mixins.scss */
 .row-fluid .span3 {
   width: 17.482%;
   *width: 17.429%;
 }
-/* line 291, sass/bootstrap/_mixins.scss */
+/* line 295, sass/bootstrap/_mixins.scss */
 .row-fluid .span2 {
   width: 11.135%;
   *width: 11.082%;
 }
-/* line 291, sass/bootstrap/_mixins.scss */
+/* line 295, sass/bootstrap/_mixins.scss */
 .row-fluid .span1 {
   width: 4.787%;
   *width: 4.734%;
@@ -704,122 +704,146 @@ h6 {
 
 /* line 110, sass/bootstrap/_mixins.scss */
 h1 {
-  font-size: 2.462em;
-  line-height: 2.462em;
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 16px;
 }
-/* line 113, sass/bootstrap/_mixins.scss */
+/* line 114, sass/bootstrap/_mixins.scss */
 h1 small {
-  font-size: 1.969em;
+  font-size: 27px;
+  margin-bottom: 13px;
 }
 
-/* line 117, sass/bootstrap/_mixins.scss */
+/* line 119, sass/bootstrap/_mixins.scss */
 .h1 {
-  font-size: 2.462em;
-  line-height: 2.462em;
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 16px;
 }
-/* line 120, sass/bootstrap/_mixins.scss */
+/* line 123, sass/bootstrap/_mixins.scss */
 .h1 small {
-  font-size: 1.969em;
+  font-size: 27px;
+  margin-bottom: 13px;
 }
 
 /* line 110, sass/bootstrap/_mixins.scss */
 h2 {
-  font-size: 1.969em;
-  line-height: 1.969em;
+  font-size: 27px;
+  line-height: 32px;
+  margin-bottom: 13px;
 }
-/* line 113, sass/bootstrap/_mixins.scss */
+/* line 114, sass/bootstrap/_mixins.scss */
 h2 small {
-  font-size: 1.575em;
+  font-size: 22px;
+  margin-bottom: 11px;
 }
 
-/* line 117, sass/bootstrap/_mixins.scss */
+/* line 119, sass/bootstrap/_mixins.scss */
 .h2 {
-  font-size: 1.969em;
-  line-height: 1.969em;
+  font-size: 27px;
+  line-height: 32px;
+  margin-bottom: 13px;
 }
-/* line 120, sass/bootstrap/_mixins.scss */
+/* line 123, sass/bootstrap/_mixins.scss */
 .h2 small {
-  font-size: 1.575em;
+  font-size: 22px;
+  margin-bottom: 11px;
 }
 
 /* line 110, sass/bootstrap/_mixins.scss */
 h3 {
-  font-size: 1.575em;
-  line-height: 1.575em;
+  font-size: 22px;
+  line-height: 27px;
+  margin-bottom: 11px;
 }
-/* line 113, sass/bootstrap/_mixins.scss */
+/* line 114, sass/bootstrap/_mixins.scss */
 h3 small {
-  font-size: 1.26em;
+  font-size: 19px;
+  margin-bottom: 9px;
 }
 
-/* line 117, sass/bootstrap/_mixins.scss */
+/* line 119, sass/bootstrap/_mixins.scss */
 .h3 {
-  font-size: 1.575em;
-  line-height: 1.575em;
+  font-size: 22px;
+  line-height: 27px;
+  margin-bottom: 11px;
 }
-/* line 120, sass/bootstrap/_mixins.scss */
+/* line 123, sass/bootstrap/_mixins.scss */
 .h3 small {
-  font-size: 1.26em;
+  font-size: 19px;
+  margin-bottom: 9px;
 }
 
 /* line 110, sass/bootstrap/_mixins.scss */
 h4 {
-  font-size: 1.26em;
-  line-height: 1.26em;
+  font-size: 19px;
+  line-height: 22px;
+  margin-bottom: 9px;
 }
-/* line 113, sass/bootstrap/_mixins.scss */
+/* line 114, sass/bootstrap/_mixins.scss */
 h4 small {
-  font-size: 1.008em;
+  font-size: 15px;
+  margin-bottom: 8px;
 }
 
-/* line 117, sass/bootstrap/_mixins.scss */
+/* line 119, sass/bootstrap/_mixins.scss */
 .h4 {
-  font-size: 1.26em;
-  line-height: 1.26em;
+  font-size: 19px;
+  line-height: 22px;
+  margin-bottom: 9px;
 }
-/* line 120, sass/bootstrap/_mixins.scss */
+/* line 123, sass/bootstrap/_mixins.scss */
 .h4 small {
-  font-size: 1.008em;
+  font-size: 15px;
+  margin-bottom: 8px;
 }
 
 /* line 110, sass/bootstrap/_mixins.scss */
 h5 {
-  font-size: 1.008em;
-  line-height: 1.008em;
+  font-size: 15px;
+  line-height: 19px;
+  margin-bottom: 8px;
 }
-/* line 113, sass/bootstrap/_mixins.scss */
+/* line 114, sass/bootstrap/_mixins.scss */
 h5 small {
-  font-size: 0.807em;
+  font-size: 13px;
+  margin-bottom: 6px;
 }
 
-/* line 117, sass/bootstrap/_mixins.scss */
+/* line 119, sass/bootstrap/_mixins.scss */
 .h5 {
-  font-size: 1.008em;
-  line-height: 1.008em;
+  font-size: 15px;
+  line-height: 19px;
+  margin-bottom: 8px;
 }
-/* line 120, sass/bootstrap/_mixins.scss */
+/* line 123, sass/bootstrap/_mixins.scss */
 .h5 small {
-  font-size: 0.807em;
+  font-size: 13px;
+  margin-bottom: 6px;
 }
 
 /* line 110, sass/bootstrap/_mixins.scss */
 h6 {
-  font-size: 0.807em;
-  line-height: 0.807em;
+  font-size: 13px;
+  line-height: 15px;
+  margin-bottom: 6px;
 }
-/* line 113, sass/bootstrap/_mixins.scss */
+/* line 114, sass/bootstrap/_mixins.scss */
 h6 small {
-  font-size: 0.645em;
+  font-size: 11px;
+  margin-bottom: 5px;
 }
 
-/* line 117, sass/bootstrap/_mixins.scss */
+/* line 119, sass/bootstrap/_mixins.scss */
 .h6 {
-  font-size: 0.807em;
-  line-height: 0.807em;
+  font-size: 13px;
+  line-height: 15px;
+  margin-bottom: 6px;
 }
-/* line 120, sass/bootstrap/_mixins.scss */
+/* line 123, sass/bootstrap/_mixins.scss */
 .h6 small {
-  font-size: 0.645em;
+  font-size: 11px;
+  margin-bottom: 5px;
 }
 
 /* line 50, sass/bootstrap/_type.scss */
@@ -1378,119 +1402,123 @@ textarea[class*="span"],
   margin-left: 0;
 }
 
-/* line 306, sass/bootstrap/_mixins.scss */
+/* line 310, sass/bootstrap/_mixins.scss */
 input,
 textarea,
 .uneditable-input {
   margin-left: 0;
 }
 
-/* line 315, sass/bootstrap/_mixins.scss */
+/* line 319, sass/bootstrap/_mixins.scss */
 input.span16,
 textarea.span16,
 .uneditable-input.span16 {
   width: 930px;
 }
 
-/* line 315, sass/bootstrap/_mixins.scss */
+/* line 319, sass/bootstrap/_mixins.scss */
 input.span15,
 textarea.span15,
 .uneditable-input.span15 {
   width: 870.333px;
 }
 
-/* line 315, sass/bootstrap/_mixins.scss */
+/* line 319, sass/bootstrap/_mixins.scss */
 input.span14,
 textarea.span14,
 .uneditable-input.span14 {
   width: 810.667px;
 }
 
-/* line 315, sass/bootstrap/_mixins.scss */
+/* line 319, sass/bootstrap/_mixins.scss */
 input.span13,
 textarea.span13,
 .uneditable-input.span13 {
   width: 751px;
 }
 
-/* line 315, sass/bootstrap/_mixins.scss */
+/* line 319, sass/bootstrap/_mixins.scss */
 input.span12,
 textarea.span12,
 .uneditable-input.span12 {
   width: 691.333px;
 }
 
-/* line 315, sass/bootstrap/_mixins.scss */
-input.span11,
+/* line 319, sass/bootstrap/_mixins.scss */
+input.span11, input.span-two-thirds,
 textarea.span11,
-.uneditable-input.span11 {
+textarea.span-two-thirds,
+.uneditable-input.span11,
+.uneditable-input.span-two-thirds {
   width: 631.667px;
 }
 
-/* line 315, sass/bootstrap/_mixins.scss */
+/* line 319, sass/bootstrap/_mixins.scss */
 input.span10,
 textarea.span10,
 .uneditable-input.span10 {
   width: 572px;
 }
 
-/* line 315, sass/bootstrap/_mixins.scss */
+/* line 319, sass/bootstrap/_mixins.scss */
 input.span9,
 textarea.span9,
 .uneditable-input.span9 {
   width: 512.333px;
 }
 
-/* line 315, sass/bootstrap/_mixins.scss */
+/* line 319, sass/bootstrap/_mixins.scss */
 input.span8,
 textarea.span8,
 .uneditable-input.span8 {
   width: 452.667px;
 }
 
-/* line 315, sass/bootstrap/_mixins.scss */
+/* line 319, sass/bootstrap/_mixins.scss */
 input.span7,
 textarea.span7,
 .uneditable-input.span7 {
   width: 393px;
 }
 
-/* line 315, sass/bootstrap/_mixins.scss */
+/* line 319, sass/bootstrap/_mixins.scss */
 input.span6,
 textarea.span6,
 .uneditable-input.span6 {
   width: 333.333px;
 }
 
-/* line 315, sass/bootstrap/_mixins.scss */
-input.span5,
+/* line 319, sass/bootstrap/_mixins.scss */
+input.span5, input.span-one-third,
 textarea.span5,
-.uneditable-input.span5 {
+textarea.span-one-third,
+.uneditable-input.span5,
+.uneditable-input.span-one-third {
   width: 273.667px;
 }
 
-/* line 315, sass/bootstrap/_mixins.scss */
+/* line 319, sass/bootstrap/_mixins.scss */
 input.span4,
 textarea.span4,
 .uneditable-input.span4 {
   width: 214px;
 }
 
-/* line 315, sass/bootstrap/_mixins.scss */
+/* line 319, sass/bootstrap/_mixins.scss */
 input.span3,
 textarea.span3,
 .uneditable-input.span3 {
   width: 154.333px;
 }
 
-/* line 315, sass/bootstrap/_mixins.scss */
+/* line 319, sass/bootstrap/_mixins.scss */
 input.span2,
 textarea.span2,
 .uneditable-input.span2 {
   width: 94.667px;
 }
 
-/* line 315, sass/bootstrap/_mixins.scss */
+/* line 319, sass/bootstrap/_mixins.scss */
 input.span1,
 textarea.span1,
 .uneditable-input.span1 {
@@ -1517,20 +1545,20 @@ input[type="checkbox"][readonly] {
   background-color: transparent;
 }
 
-/* line 341, sass/bootstrap/_mixins.scss */
+/* line 345, sass/bootstrap/_mixins.scss */
 .control-group.warning > label,
 .control-group.warning .help-block,
 .control-group.warning .help-inline {
   color: #c09853;
 }
-/* line 347, sass/bootstrap/_mixins.scss */
+/* line 351, sass/bootstrap/_mixins.scss */
 .control-group.warning input,
 .control-group.warning select,
 .control-group.warning textarea {
   color: #c09853;
   border-color: #c09853;
 }
-/* line 350, sass/bootstrap/_mixins.scss */
+/* line 354, sass/bootstrap/_mixins.scss */
 .control-group.warning input:focus,
 .control-group.warning select:focus,
 .control-group.warning textarea:focus {
@@ -1539,7 +1567,7 @@ input[type="checkbox"][readonly] {
   -moz-box-shadow: 0 0 6px #dbc59e;
   box-shadow: 0 0 6px #dbc59e;
 }
-/* line 357, sass/bootstrap/_mixins.scss */
+/* line 361, sass/bootstrap/_mixins.scss */
 .control-group.warning .input-prepend .add-on,
 .control-group.warning .input-append .add-on {
   color: #c09853;
@@ -1547,46 +1575,46 @@ input[type="checkbox"][readonly] {
   border-color: #c09853;
 }
 
-/* line 341, sass/bootstrap/_mixins.scss */
+/* line 345, sass/bootstrap/_mixins.scss */
 .control-group.error > label, .control-group.error .help-block, .control-group.error .help-inline {
   color: #b94a48;
 }
-/* line 347, sass/bootstrap/_mixins.scss */
+/* line 351, sass/bootstrap/_mixins.scss */
 .control-group.error input, .control-group.error select, .control-group.error textarea {
   color: #b94a48;
   border-color: #b94a48;
 }
-/* line 350, sass/bootstrap/_mixins.scss */
+/* line 354, sass/bootstrap/_mixins.scss */
 .control-group.error input:focus, .control-group.error select:focus, .control-group.error textarea:focus {
   border-color: #953b39;
   -webkit-box-shadow: 0 0 6px #d59392;
   -moz-box-shadow: 0 0 6px #d59392;
   box-shadow: 0 0 6px #d59392;
 }
-/* line 357, sass/bootstrap/_mixins.scss */
+/* line 361, sass/bootstrap/_mixins.scss */
 .control-group.error .input-prepend .add-on, .control-group.error .input-append .add-on {
   color: #b94a48;
   background-color: #f2dede;
   border-color: #b94a48;
 }
 
-/* line 341, sass/bootstrap/_mixins.scss */
+/* line 345, sass/bootstrap/_mixins.scss */
 .control-group.success > label, .control-group.success .help-block, .control-group.success .help-inline {
   color: #468847;
 }
-/* line 347, sass/bootstrap/_mixins.scss */
+/* line 351, sass/bootstrap/_mixins.scss */
 .control-group.success input, .control-group.success select, .control-group.success textarea {
   color: #468847;
   border-color: #468847;
 }
-/* line 350, sass/bootstrap/_mixins.scss */
+/* line 354, sass/bootstrap/_mixins.scss */
 .control-group.success input:focus, .control-group.success select:focus, .control-group.success textarea:focus {
   border-color: #356635;
   -webkit-box-shadow: 0 0 6px #7aba7b;
   -moz-box-shadow: 0 0 6px #7aba7b;
   box-shadow: 0 0 6px #7aba7b;
 }
-/* line 357, sass/bootstrap/_mixins.scss */
+/* line 361, sass/bootstrap/_mixins.scss */
 .control-group.success .input-prepend .add-on, .control-group.success .input-append .add-on {
   color: #468847;
   background-color: #dff0d8;
@@ -1641,12 +1669,12 @@ select:focus:required:invalid:focus {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
 }
 
-/* line 133, sass/bootstrap/_mixins.scss */
+/* line 137, sass/bootstrap/_mixins.scss */
 :-moz-placeholder {
   color: #999999;
 }
 
-/* line 136, sass/bootstrap/_mixins.scss */
+/* line 140, sass/bootstrap/_mixins.scss */
 ::-webkit-input-placeholder {
   color: #999999;
 }
@@ -2190,7 +2218,7 @@ table .span4 {
   margin-left: 0;
 }
 /* line 147, sass/bootstrap/_tables.scss */
-table .span5 {
+table .span5, table .span-one-third {
   float: none;
   width: 267.667px;
   margin-left: 0;
@@ -2226,7 +2254,7 @@ table .span10 {
   margin-left: 0;
 }
 /* line 153, sass/bootstrap/_tables.scss */
-table .span11 {
+table .span11, table .span-two-thirds {
   float: none;
   width: 625.667px;
   margin-left: 0;
@@ -2569,11 +2597,11 @@ summary::-webkit-details-marker {
 .btn, .btn-group li a, .small-btn, .big-btn {
   *display: inline;
 }
-/* line 746, sass/bootstrap/_mixins.scss */
+/* line 750, sass/bootstrap/_mixins.scss */
 .btn:hover, .btn-group li a:hover, .small-btn:hover, .big-btn:hover, .btn:active, .btn-group li a:active, .small-btn:active, .big-btn:active, .btn.active, .btn-group li a.active, .btn-group li[class*='current'] a, .active.small-btn, .active.big-btn, .btn.disabled, .btn-group li a.disabled, .disabled.small-btn, .disabled.big-btn, .btn[disabled], .btn-group li a[disabled], [disabled].small-btn, [disabled].big-btn {
   background-color: #f5f2dd;
 }
-/* line 752, sass/bootstrap/_mixins.scss */
+/* line 756, sass/bootstrap/_mixins.scss */
 .btn:active, .btn-group li a:active, .small-btn:active, .big-btn:active, .btn.active, .btn-group li a.active, .btn-group li[class*='current'] a, .active.small-btn, .active.big-btn {
   background-color: #e9e2b6 \9;
   /* IE9 and down */
@@ -2763,11 +2791,11 @@ summary::-webkit-details-marker {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-/* line 746, sass/bootstrap/_mixins.scss */
+/* line 750, sass/bootstrap/_mixins.scss */
 .btn-primary:hover, .small-btn:hover, .big-btn:hover, .btnTheme_Blue .small-btn:hover, .small-btn.blue:hover, .btnTheme_Blue .big-btn:hover, .big-btn.blue:hover, .btn-primary:active, .small-btn:active, .big-btn:active, .btnTheme_Blue .small-btn:active, .small-btn.blue:active, .btnTheme_Blue .big-btn:active, .big-btn.blue:active, .btn-primary.active, .active.small-btn, .active.big-btn, .btnTheme_Blue .active.small-btn, .active.small-btn.blue, .btnTheme_Blue .active.big-btn, .active.big-btn.blue, .btn-primary.disabled, .disabled.small-btn, .disabled.big-btn, .btnTheme_Blue .disabled.small-btn, .disabled.small-btn.blue, .btnTheme_Blue .disabled.big-btn, .disabled.big-btn.blue, .btn-primary[disabled], [disabled].small-btn, [disabled].big-btn, .btnTheme_Blue [disabled].small-btn, [disabled].small-btn.blue, .btnTheme_Blue [disabled].big-btn, [disabled].big-btn.blue {
   background-color: #1565ca;
 }
-/* line 752, sass/bootstrap/_mixins.scss */
+/* line 756, sass/bootstrap/_mixins.scss */
 .btn-primary:active, .small-btn:active, .big-btn:active, .btnTheme_Blue .small-btn:active, .small-btn.blue:active, .btnTheme_Blue .big-btn:active, .big-btn.blue:active, .btn-primary.active, .active.small-btn, .active.big-btn, .btnTheme_Blue .active.small-btn, .active.small-btn.blue, .btnTheme_Blue .active.big-btn, .active.big-btn.blue {
   background-color: #104e9c \9;
   /* IE9 and down */
@@ -2788,11 +2816,11 @@ summary::-webkit-details-marker {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-/* line 746, sass/bootstrap/_mixins.scss */
+/* line 750, sass/bootstrap/_mixins.scss */
 .btn-warning:hover, .btnTheme_Orange .small-btn:hover, .small-btn.orange:hover, .btnTheme_Orange .big-btn:hover, .big-btn.orange:hover, .btn-warning:active, .btnTheme_Orange .small-btn:active, .small-btn.orange:active, .btnTheme_Orange .big-btn:active, .big-btn.orange:active, .btn-warning.active, .btnTheme_Orange .active.small-btn, .active.small-btn.orange, .btnTheme_Orange .active.big-btn, .active.big-btn.orange, .btn-warning.disabled, .btnTheme_Orange .disabled.small-btn, .disabled.small-btn.orange, .btnTheme_Orange .disabled.big-btn, .disabled.big-btn.orange, .btn-warning[disabled], .btnTheme_Orange [disabled].small-btn, [disabled].small-btn.orange, .btnTheme_Orange [disabled].big-btn, [disabled].big-btn.orange {
   background-color: #f89406;
 }
-/* line 752, sass/bootstrap/_mixins.scss */
+/* line 756, sass/bootstrap/_mixins.scss */
 .btn-warning:active, .btnTheme_Orange .small-btn:active, .small-btn.orange:active, .btnTheme_Orange .big-btn:active, .big-btn.orange:active, .btn-warning.active, .btnTheme_Orange .active.small-btn, .active.small-btn.orange, .btnTheme_Orange .active.big-btn, .active.big-btn.orange {
   background-color: #c67605 \9;
   /* IE9 and down */
@@ -2813,11 +2841,11 @@ summary::-webkit-details-marker {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-/* line 746, sass/bootstrap/_mixins.scss */
+/* line 750, sass/bootstrap/_mixins.scss */
 .btn-danger:hover, .btnTheme_Red .small-btn:hover, .small-btn.red:hover, .btnTheme_Red .big-btn:hover, .big-btn.red:hover, .btn-danger:active, .btnTheme_Red .small-btn:active, .small-btn.red:active, .btnTheme_Red .big-btn:active, .big-btn.red:active, .btn-danger.active, .btnTheme_Red .active.small-btn, .active.small-btn.red, .btnTheme_Red .active.big-btn, .active.big-btn.red, .btn-danger.disabled, .btnTheme_Red .disabled.small-btn, .disabled.small-btn.red, .btnTheme_Red .disabled.big-btn, .disabled.big-btn.red, .btn-danger[disabled], .btnTheme_Red [disabled].small-btn, [disabled].small-btn.red, .btnTheme_Red [disabled].big-btn, [disabled].big-btn.red {
   background-color: #bd362f;
 }
-/* line 752, sass/bootstrap/_mixins.scss */
+/* line 756, sass/bootstrap/_mixins.scss */
 .btn-danger:active, .btnTheme_Red .small-btn:active, .small-btn.red:active, .btnTheme_Red .big-btn:active, .big-btn.red:active, .btn-danger.active, .btnTheme_Red .active.small-btn, .active.small-btn.red, .btnTheme_Red .active.big-btn, .active.big-btn.red {
   background-color: #942a25 \9;
   /* IE9 and down */
@@ -2838,11 +2866,11 @@ summary::-webkit-details-marker {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-/* line 746, sass/bootstrap/_mixins.scss */
+/* line 750, sass/bootstrap/_mixins.scss */
 .btn-success:hover, .btn-success:active, .btn-success.active, .btn-success.disabled, .btn-success[disabled] {
   background-color: #51a351;
 }
-/* line 752, sass/bootstrap/_mixins.scss */
+/* line 756, sass/bootstrap/_mixins.scss */
 .btn-success:active, .btn-success.active {
   background-color: #408140 \9;
   /* IE9 and down */
@@ -2863,11 +2891,11 @@ summary::-webkit-details-marker {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-/* line 746, sass/bootstrap/_mixins.scss */
+/* line 750, sass/bootstrap/_mixins.scss */
 .btn-info:hover, .btn-info:active, .btn-info.active, .btn-info.disabled, .btn-info[disabled] {
   background-color: #2f96b4;
 }
-/* line 752, sass/bootstrap/_mixins.scss */
+/* line 756, sass/bootstrap/_mixins.scss */
 .btn-info:active, .btn-info.active {
   background-color: #24748c \9;
   /* IE9 and down */
@@ -2888,11 +2916,11 @@ summary::-webkit-details-marker {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-/* line 746, sass/bootstrap/_mixins.scss */
+/* line 750, sass/bootstrap/_mixins.scss */
 .btn-inverse:hover, .btnTheme_Black .small-btn:hover, .small-btn.black:hover, .btnTheme_Black .big-btn:hover, .big-btn.black:hover, .btn-inverse:active, .btnTheme_Black .small-btn:active, .small-btn.black:active, .btnTheme_Black .big-btn:active, .big-btn.black:active, .btn-inverse.active, .btnTheme_Black .active.small-btn, .active.small-btn.black, .btnTheme_Black .active.big-btn, .active.big-btn.black, .btn-inverse.disabled, .btnTheme_Black .disabled.small-btn, .disabled.small-btn.black, .btnTheme_Black .disabled.big-btn, .disabled.big-btn.black, .btn-inverse[disabled], .btnTheme_Black [disabled].small-btn, [disabled].small-btn.black, .btnTheme_Black [disabled].big-btn, [disabled].big-btn.black {
   background-color: #222222;
 }
-/* line 752, sass/bootstrap/_mixins.scss */
+/* line 756, sass/bootstrap/_mixins.scss */
 .btn-inverse:active, .btnTheme_Black .small-btn:active, .small-btn.black:active, .btnTheme_Black .big-btn:active, .big-btn.black:active, .btn-inverse.active, .btnTheme_Black .active.small-btn, .active.small-btn.black, .btnTheme_Black .active.big-btn, .active.big-btn.black {
   background-color: #090909 \9;
   /* IE9 and down */
@@ -4126,11 +4154,11 @@ ul.btn-group {
 .navbar .btn-navbar.mainmenu {
   display: none;
 }
-/* line 746, sass/bootstrap/_mixins.scss */
+/* line 750, sass/bootstrap/_mixins.scss */
 .navbar .btn-navbar:hover, .navbar .btn-navbar:active, .navbar .btn-navbar.active, .navbar .btn-navbar.disabled, .navbar .btn-navbar[disabled] {
   background-color: #201302;
 }
-/* line 752, sass/bootstrap/_mixins.scss */
+/* line 756, sass/bootstrap/_mixins.scss */
 .navbar .btn-navbar:active, .navbar .btn-navbar.active {
   background-color: black \9;
   /* IE9 and down */
@@ -5189,7 +5217,7 @@ a.thumbnail:hover {
 /* line 8, sass/bootstrap/_carousel.scss */
 .carousel {
   position: relative;
-  margin-bottom: 1em;
+  margin: 20px 0;
   line-height: 1;
 }
 
@@ -5200,97 +5228,96 @@ a.thumbnail:hover {
   position: relative;
 }
 
-/* line 22, sass/bootstrap/_carousel.scss */
+/* line 24, sass/bootstrap/_carousel.scss */
 .carousel .item {
   display: none;
   position: relative;
-  -webkit-transition: 0.6s ease-in-out left;
-  -moz-transition: 0.6s ease-in-out left;
-  -ms-transition: 0.6s ease-in-out left;
-  -o-transition: 0.6s ease-in-out left;
-  transition: 0.6s ease-in-out left;
+  -webkit-transition: 1.3s ease-in-out left;
+  -moz-transition: 1.3s ease-in-out left;
+  -ms-transition: 1.3s ease-in-out left;
+  -o-transition: 1.3s ease-in-out left;
+  transition: 1.3s ease-in-out left;
 }
-/* line 29, sass/bootstrap/_carousel.scss */
+/* line 31, sass/bootstrap/_carousel.scss */
 .carousel .item > img {
   display: block;
   line-height: 1;
 }
-/* line 36, sass/bootstrap/_carousel.scss */
+/* line 38, sass/bootstrap/_carousel.scss */
 .carousel .active,
 .carousel .next,
 .carousel .prev {
   display: block;
 }
-/* line 38, sass/bootstrap/_carousel.scss */
+/* line 40, sass/bootstrap/_carousel.scss */
 .carousel .active {
   left: 0;
 }
-/* line 43, sass/bootstrap/_carousel.scss */
+/* line 45, sass/bootstrap/_carousel.scss */
 .carousel .next,
 .carousel .prev {
   position: absolute;
   top: 0;
   width: 100%;
 }
-/* line 49, sass/bootstrap/_carousel.scss */
+/* line 51, sass/bootstrap/_carousel.scss */
 .carousel .next {
   left: 100%;
 }
-/* line 52, sass/bootstrap/_carousel.scss */
+/* line 54, sass/bootstrap/_carousel.scss */
 .carousel .prev {
   left: -100%;
 }
-/* line 56, sass/bootstrap/_carousel.scss */
+/* line 58, sass/bootstrap/_carousel.scss */
 .carousel .next.left,
 .carousel .prev.right {
   left: 0;
 }
-/* line 60, sass/bootstrap/_carousel.scss */
+/* line 62, sass/bootstrap/_carousel.scss */
 .carousel .active.left {
   left: -100%;
 }
-/* line 63, sass/bootstrap/_carousel.scss */
+/* line 65, sass/bootstrap/_carousel.scss */
 .carousel .active.right {
   left: 100%;
 }
 
-/* line 72, sass/bootstrap/_carousel.scss */
+/* line 74, sass/bootstrap/_carousel.scss */
 .carousel-control {
   position: absolute;
   top: 40%;
   left: 15px;
   width: 40px;
   height: 40px;
-  margin-top: -20px;
   font-size: 60px;
   font-weight: 100;
   line-height: 30px;
   color: white;
   text-align: center;
   background: #222222;
-  border: 3px solid white;
+  border: 3px solid rgba(255, 255, 255, 0.7);
   -webkit-border-radius: 23px;
   -moz-border-radius: 23px;
   -ms-border-radius: 23px;
   -o-border-radius: 23px;
   border-radius: 23px;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=5000);
-  opacity: 50;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
 }
-/* line 97, sass/bootstrap/_carousel.scss */
+/* line 99, sass/bootstrap/_carousel.scss */
 .carousel-control.right {
   left: auto;
   right: 15px;
 }
-/* line 103, sass/bootstrap/_carousel.scss */
+/* line 105, sass/bootstrap/_carousel.scss */
 .carousel-control:hover {
   color: white;
   text-decoration: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=9000);
-  opacity: 90;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
 }
 
-/* line 113, sass/bootstrap/_carousel.scss */
+/* line 115, sass/bootstrap/_carousel.scss */
 .carousel-caption {
   position: absolute;
   left: 0;
@@ -5301,7 +5328,7 @@ a.thumbnail:hover {
   background: rgba(0, 0, 0, 0.75);
 }
 
-/* line 123, sass/bootstrap/_carousel.scss */
+/* line 125, sass/bootstrap/_carousel.scss */
 .carousel-caption h4,
 .carousel-caption p {
   color: white;
@@ -7667,44 +7694,47 @@ div.dark_rounded #pp_full_res .pp_inline, div.dark_square #pp_full_res .pp_inlin
  ----------------------------------------------*/
 /*	HEADINGS, PARAGRAPHS, EMPHASIS, ETC
 ---------------------------------------------- */
-/* line 10, sass/synapse/_type.scss */
-h2 {
-  margin-bottom: 10px;
+/* line 11, sass/synapse/_type.scss */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.8);
 }
 
-/* line 16, sass/synapse/_type.scss */
+/* line 18, sass/synapse/_type.scss */
 .widget h3 {
-  margin-bottom: 15px;
   color: white;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
-/* line 24, sass/synapse/_type.scss */
+/* line 26, sass/synapse/_type.scss */
 .sidebar .blog-widget h3 {
   margin-bottom: 0;
 }
-/* line 28, sass/synapse/_type.scss */
+/* line 30, sass/synapse/_type.scss */
 .footer h3 {
-  border-bottom: 1px solid #c9c9c9;
+  border-bottom: 1px solid #3e536b;
   padding-bottom: 5px;
-  margin-bottom: 20px;
 }
 
-/* line 36, sass/synapse/_type.scss */
+/* line 38, sass/synapse/_type.scss */
 p {
   text-shadow: 1px 1px rgba(255, 255, 255, 0.8);
-  color: #555555;
+  color: #321e04;
   font-size: 13px;
 }
-/* line 41, sass/synapse/_type.scss */
+/* line 43, sass/synapse/_type.scss */
+p strong, p b, p b {
+  color: #201302;
+}
+/* line 47, sass/synapse/_type.scss */
 .page-content p {
   text-shadow: none;
 }
-/* line 45, sass/synapse/_type.scss */
+/* line 51, sass/synapse/_type.scss */
 .sidebar p {
   color: #8bc1d0;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
 }
-/* line 50, sass/synapse/_type.scss */
+/* line 56, sass/synapse/_type.scss */
 .video-holder p, .portfolio-item p, .portfolio-item p {
   color: #848484;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -7714,40 +7744,40 @@ p {
   text-shadow: -1px -1px rgba(0, 0, 0, 0.4);
   margin: 15px 0 0 0;
 }
-/* line 60, sass/synapse/_type.scss */
+/* line 66, sass/synapse/_type.scss */
 .footer p {
   font-size: 12px;
 }
 
-/* line 66, sass/synapse/_type.scss */
+/* line 72, sass/synapse/_type.scss */
 em {
   font-style: italic;
 }
 
-/* line 69, sass/synapse/_type.scss */
+/* line 75, sass/synapse/_type.scss */
 strong, b {
   font-weight: bold;
 }
 
 /*	LINKS
 ---------------------------------------------- */
-/* line 78, sass/synapse/_type.scss */
+/* line 84, sass/synapse/_type.scss */
 a {
   color: #1592ca;
 }
-/* line 80, sass/synapse/_type.scss */
+/* line 86, sass/synapse/_type.scss */
 .sidebar a {
   color: #cde4ea;
 }
-/* line 82, sass/synapse/_type.scss */
+/* line 88, sass/synapse/_type.scss */
 .sidebar a:hover {
   color: #84bdcd;
 }
-/* line 86, sass/synapse/_type.scss */
+/* line 92, sass/synapse/_type.scss */
 a:hover {
   color: #53c1ea;
 }
-/* line 90, sass/synapse/_type.scss */
+/* line 96, sass/synapse/_type.scss */
 .video-holder a, .portfolio-item a, .portfolio-item a {
   color: #cde4ea;
   -webkit-transition: color 0.3s ease-in;
@@ -7756,79 +7786,108 @@ a:hover {
   -o-transition: color 0.3s ease-in;
   transition: color 0.3s ease-in;
 }
-/* line 93, sass/synapse/_type.scss */
+/* line 99, sass/synapse/_type.scss */
 .video-holder a:hover, .portfolio-item a:hover, .portfolio-item a:hover {
   color: #84bdcd;
 }
-/* line 98, sass/synapse/_type.scss */
+/* line 104, sass/synapse/_type.scss */
 .cat-item a {
   font-size: 13px;
   line-height: 22px;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
   float: left;
 }
-/* line 107, sass/synapse/_type.scss */
+/* line 113, sass/synapse/_type.scss */
 .cat-item li a:hover {
   text-decoration: none;
   color: white;
 }
-/* line 113, sass/synapse/_type.scss */
+
+/* line 121, sass/synapse/_type.scss */
+.small-footer {
+  color: #75736d;
+  text-shadow: 0 1px 0 white;
+}
+/* line 124, sass/synapse/_type.scss */
 .small-footer a {
-  color: #555555;
-  font-weight: bold;
-  font-style: italic;
-  text-decoration: underline;
+  color: #321e04;
+}
+/* line 126, sass/synapse/_type.scss */
+.small-footer a:hover {
+  color: #53c1ea;
+  text-decoration: none;
+}
+/* line 131, sass/synapse/_type.scss */
+.small-footer .breadcrumb {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0 none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 139, sass/synapse/_type.scss */
+.small-footer .breadcrumb li:after {
+  color: #8f8d86;
+  margin: 0 2px;
+  content: " / ";
+}
+/* line 144, sass/synapse/_type.scss */
+.small-footer .breadcrumb li:last-child:after {
+  margin: 0;
+  content: "";
 }
 
 /*	LISTS
 ---------------------------------------------- */
-/* line 126, sass/synapse/_type.scss */
+/* line 156, sass/synapse/_type.scss */
 .article-excerpt ul, .portfolio-item-content ul, .article-excerpt ol, .portfolio-item-content ol {
   padding: 5px 0;
 }
 
-/* line 131, sass/synapse/_type.scss */
+/* line 161, sass/synapse/_type.scss */
 ol {
   list-style: decimal outside none !important;
 }
 
-/* line 135, sass/synapse/_type.scss */
+/* line 165, sass/synapse/_type.scss */
 ul {
   list-style: none;
 }
-/* line 139, sass/synapse/_type.scss */
+/* line 169, sass/synapse/_type.scss */
 .widget ul, ul.widgets {
   margin: 12px 0;
 }
-/* line 142, sass/synapse/_type.scss */
+/* line 172, sass/synapse/_type.scss */
 .widget ul ul, ul.widgets ul {
   margin-top: 10px;
 }
-/* line 150, sass/synapse/_type.scss */
+/* line 180, sass/synapse/_type.scss */
 .article-excerpt ul li, .portfolio-item-content ul li {
   padding-left: 18px;
   background: url(img/list-bullet.png) no-repeat top left;
   margin-bottom: 10px;
 }
 
-/* line 161, sass/synapse/_type.scss */
+/* line 191, sass/synapse/_type.scss */
 ol li {
   margin-left: 18px;
   margin-bottom: 10px;
 }
-/* line 165, sass/synapse/_type.scss */
+/* line 195, sass/synapse/_type.scss */
 pre ol li {
   margin: 0;
 }
-/* line 171, sass/synapse/_type.scss */
+/* line 201, sass/synapse/_type.scss */
 .labels li {
   margin-bottom: 10px;
 }
-/* line 175, sass/synapse/_type.scss */
+/* line 205, sass/synapse/_type.scss */
 .sidebar ul li {
   margin-left: 0 !important;
 }
-/* line 179, sass/synapse/_type.scss */
+/* line 209, sass/synapse/_type.scss */
 .dotted ul li, .dotted li {
   padding-left: 18px;
   background: url(img/list-bullet.png) no-repeat top left;
@@ -7837,7 +7896,7 @@ pre ol li {
 
 /*	BLOCKQUOTES, CODE, ETC
 ---------------------------------------------- */
-/* line 190, sass/synapse/_type.scss */
+/* line 220, sass/synapse/_type.scss */
 blockquote {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 15px;
@@ -7847,7 +7906,7 @@ blockquote {
   margin-bottom: 30px;
   padding-top: 0 !important;
 }
-/* line 199, sass/synapse/_type.scss */
+/* line 229, sass/synapse/_type.scss */
 blockquote:after {
   color: #CCCCCC;
   content: open-quote;
@@ -7861,7 +7920,7 @@ blockquote:after {
 
 /*	WORDPRESS CLASS TYPOGRAPHY
 ---------------------------------------------- */
-/* line 213, sass/synapse/_type.scss */
+/* line 243, sass/synapse/_type.scss */
 .page-title {
   margin-bottom: 10px;
 }
@@ -8150,7 +8209,12 @@ body.bg_Wood {
   -moz-box-shadow: 0 0 2px rgba(32, 19, 2, 0.55);
   box-shadow: 0 0 2px rgba(32, 19, 2, 0.55);
 }
-/* line 50, sass/synapse/_header.scss */
+/* line 48, sass/synapse/_header.scss */
+.home .header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/* line 54, sass/synapse/_header.scss */
 .header.mobile {
   background-image: none;
   background-color: transparent;
@@ -8160,23 +8224,23 @@ body.bg_Wood {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 57, sass/synapse/_header.scss */
+/* line 61, sass/synapse/_header.scss */
 .header.mobile .menu-container .btn-group li[class*='current'] {
   display: none !important;
 }
 
-/* line 63, sass/synapse/_header.scss */
+/* line 67, sass/synapse/_header.scss */
 .logo-container {
   float: left;
 }
 
-/* line 67, sass/synapse/_header.scss */
+/* line 71, sass/synapse/_header.scss */
 .logo {
   float: left;
   text-decoration: none !important;
 }
 
-/* line 73, sass/synapse/_header.scss */
+/* line 77, sass/synapse/_header.scss */
 .logo h1, .logo .h1, .logo i {
   visibility: visible;
   font-family: "bystlLogoFont", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -8197,12 +8261,12 @@ body.bg_Wood {
   font-weight: normal;
   color: #00709d;
 }
-/* line 77, sass/synapse/_header.scss */
+/* line 81, sass/synapse/_header.scss */
 .logo i {
   color: #00709d;
 }
 
-/* line 83, sass/synapse/_header.scss */
+/* line 87, sass/synapse/_header.scss */
 .tagline {
   color: #505050;
   font-size: 13px;
@@ -8332,315 +8396,295 @@ body.bg_Wood {
 	PARENT:		_theme-synapse.scss
 
  ----------------------------------------------*/
+/* line 13, sass/synapse/_slider_orig.scss */
+.slider ul {
+  margin: 0 !important;
+  position: relative;
+  overflow: visible;
+}
+/* line 18, sass/synapse/_slider_orig.scss */
+.slider ul li {
+  width: 100%;
+}
+
 /*	SLIDER ARROWS
 ---------------------------------------------- */
-/* line 12, sass/synapse/_slider.scss */
+/* line 34, sass/synapse/_slider_orig.scss */
 #prev-arrow, #next-arrow {
   text-indent: -9999px !important;
   display: block;
-  box-sizing: border-box;
   width: 20px;
   height: 32px;
 }
 
-/* line 18, sass/synapse/_slider.scss */
+/* line 40, sass/synapse/_slider_orig.scss */
 #prev-arrow {
-  background: url(img/prev-arrow.png) no-repeat;
+  background: url("img/prev-arrow.png") no-repeat;
   position: absolute;
   left: -80px;
   top: 40%;
 }
 
-/* line 24, sass/synapse/_slider.scss */
+/* line 46, sass/synapse/_slider_orig.scss */
 #prev-arrow:active {
-  background: url(img/prev-arrow.png) no-repeat bottom left;
+  background: url("img/prev-arrow.png") no-repeat bottom left;
 }
 
-/* line 27, sass/synapse/_slider.scss */
+/* line 49, sass/synapse/_slider_orig.scss */
 #next-arrow {
-  background: url(img/next-arrow.png) no-repeat;
+  background: url("img/next-arrow.png") no-repeat;
   position: absolute;
   right: -80px;
   top: 40%;
 }
 
-/* line 33, sass/synapse/_slider.scss */
+/* line 55, sass/synapse/_slider_orig.scss */
 #next-arrow:active {
-  background: url(img/next-arrow.png) no-repeat bottom left;
+  background: url("img/next-arrow.png") no-repeat bottom left;
 }
 
 /*	SLIDERS
 ---------------------------------------------- */
-/* line 40, sass/synapse/_slider.scss */
-.simple-slider, .simple-slider li {
-  width: auto !important;
-}
-/* line 44, sass/synapse/_slider.scss */
-.simple-slider li {
-  max-height: 407px;
+/* line 63, sass/synapse/_slider_orig.scss */
+.js .slider li {
+  display: none;
 }
 
-/* line 48, sass/synapse/_slider.scss */
+/* line 67, sass/synapse/_slider_orig.scss */
+.simple-slider li {
+  height: 407px;
+}
+
+/* line 70, sass/synapse/_slider_orig.scss */
 .content-slider {
-  padding-bottom: 20px;
-  position: relative;
+  min-height: 330px;
   height: auto;
   background: none !important;
-  overflow: hidden;
 }
 
-/* line 56, sass/synapse/_slider.scss */
-.content-slider li {
+/* line 77, sass/synapse/_slider_orig.scss */
+.images-wide {
+  min-height: 500px;
+  height: auto;
   background: none !important;
 }
 
-/* line 59, sass/synapse/_slider.scss */
+/* line 83, sass/synapse/_slider_orig.scss */
+.content-slider li, .images-wide li {
+  background: none !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* line 89, sass/synapse/_slider_orig.scss */
+.slider, .slider-intro, .slider-intro-right, .slider-intro-left {
+  margin-top: 20px;
+}
+
+/* line 92, sass/synapse/_slider_orig.scss */
 .slider {
-  margin-top: 40px;
   position: relative;
 }
 
-/* line 63, sass/synapse/_slider.scss */
-.slider-intro {
-  margin-right: 45px;
-  width: auto !important;
-  margin-top: 20px;
-}
-
-/* line 69, sass/synapse/_slider.scss */
-.slider-intro-right {
-  margin-left: 45px;
-  width: auto !important;
-  margin-top: 20px;
-}
-
-/* line 75, sass/synapse/_slider.scss */
-.slider-intro-left {
-  margin-top: 20px;
-  margin-right: 45px;
-  width: auto !important;
-}
-
-/* line 81, sass/synapse/_slider.scss */
-#slider {
-  position: relative;
-  margin-bottom: 428px;
-}
-
-/* line 85, sass/synapse/_slider.scss */
-#slider-thumbs {
-  position: relative;
-  margin-bottom: 465px;
-}
-
-/* line 89, sass/synapse/_slider.scss */
+/* line 114, sass/synapse/_slider_orig.scss */
 .slider-nav, .slider-nav-thumbs, .slider-nav-wide {
-  z-index: 2;
+  background: #464b4d;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #464b4d 0%, #303335 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #464b4d), color-stop(100%, #303335));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #464b4d 0%, #303335 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #464b4d 0%, #303335 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #464b4d 0%, #303335 100%);
+  /* IE10+ */
+  background: linear-gradient(top, #464b4d 0%, #303335 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#464b4d', endColorstr='#303335',GradientType=0 );
+  /* IE6-9 */
+  text-align: center;
+  border: 1px solid #1f1f1f;
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  -o-border-radius: 0 0 5px 5px;
   position: absolute;
+  z-index: 2;
   bottom: -388px;
   left: 0;
-  width: 100%;
-  text-align: center;
-  color: #a8d0dc !important;
-  border: 1px solid #141b23;
-  border-bottom-color: #0b0e13;
-  background: #3d5269;
-  /* Old browsers */
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3d5269), color-stop(100%, #273443));
-  background-image: -webkit-linear-gradient(#3d5269, #273443);
-  background-image: -moz-linear-gradient(#3d5269, #273443);
-  background-image: -o-linear-gradient(#3d5269, #273443);
-  background-image: -ms-linear-gradient(#3d5269, #273443);
-  background-image: linear-gradient(#3d5269, #273443);
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF3D5269', endColorstr='#FF273443');
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(39, 52, 67, 0.7);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(39, 52, 67, 0.7);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(39, 52, 67, 0.7);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  -moz-border-radius-topleft: 0;
-  -webkit-border-top-left-radius: 0;
-  -ms-border-top-left-radius: 0;
-  -o-border-top-left-radius: 0;
-  border-top-left-radius: 0;
-  -moz-border-radius-topright: 0;
-  -webkit-border-top-right-radius: 0;
-  -ms-border-top-right-radius: 0;
-  -o-border-top-right-radius: 0;
-  border-top-right-radius: 0;
-}
-/* line 151, sass/bystl/_colorpalette.scss */
-.slider-nav:hover, .slider-nav-thumbs:hover, .slider-nav-wide:hover {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3b4f66), color-stop(100%, #253140));
-  background-image: -webkit-linear-gradient(#3b4f66, #253140);
-  background-image: -moz-linear-gradient(#3b4f66, #253140);
-  background-image: -o-linear-gradient(#3b4f66, #253140);
-  background-image: -ms-linear-gradient(#3b4f66, #253140);
-  background-image: linear-gradient(#3b4f66, #253140);
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF3B4F66', endColorstr='#FF253140');
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), rgba(39, 52, 67, 0.8);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), rgba(39, 52, 67, 0.8);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), rgba(39, 52, 67, 0.8);
+  width: 618px;
 }
 
-/* line 100, sass/synapse/_slider.scss */
+/* line 137, sass/synapse/_slider_orig.scss */
 .slider-nav-thumbs {
   bottom: -426px;
 }
 
-/* line 103, sass/synapse/_slider.scss */
+/* line 140, sass/synapse/_slider_orig.scss */
 .slider-nav-wide, .slider-nav-wide-thumbs {
-  width: auto !important;
+  width: 938px;
 }
 
-/* line 107, sass/synapse/_slider.scss */
+/* line 143, sass/synapse/_slider_orig.scss */
 .slider-nav li, .slider-nav-thumbs li, .slider-nav-wide li {
   float: left;
   padding: 20px 0;
 }
 
-/* line 111, sass/synapse/_slider.scss */
+/* line 147, sass/synapse/_slider_orig.scss */
 .slider-nav a, .slider-nav-thumbs a, .slider-nav-wide a {
-  color: #8bc1d0;
+  color: #969696;
   font-size: 13px;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
   margin-left: 15px;
   padding-left: 15px;
   font-weight: bold;
-  -webkit-transition: color 0.3s ease-in;
   -moz-transition: color 0.3s ease-in;
-  -ms-transition: color 0.3s ease-in;
+  -webkit-transition: color 0.3s ease-in;
   -o-transition: color 0.3s ease-in;
-  transition: color 0.3s ease-in;
 }
 
-/* line 120, sass/synapse/_slider.scss */
+/* line 158, sass/synapse/_slider_orig.scss */
 .slider-nav a:hover, .slider-nav-thumbs a:hover, .slider-nav-wide a:hover {
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 
-/* line 124, sass/synapse/_slider.scss */
+/* line 162, sass/synapse/_slider_orig.scss */
 .slider-nav-wide-thumbs a {
   padding-left: 8px !important;
 }
 
-/* line 127, sass/synapse/_slider.scss */
+/* line 165, sass/synapse/_slider_orig.scss */
 .slider-nav-thumbs a {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   opacity: 0.3;
   padding-left: 6px;
-  -webkit-transition: opacity 0.3s ease-in;
   -moz-transition: opacity 0.3s ease-in;
-  -ms-transition: opacity 0.3s ease-in;
+  -webkit-transition: opacity 0.3s ease-in;
   -o-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
 }
 
-/* line 132, sass/synapse/_slider.scss */
+/* line 172, sass/synapse/_slider_orig.scss */
 .slider-nav-thumbs a:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-/* line 135, sass/synapse/_slider.scss */
+/* line 175, sass/synapse/_slider_orig.scss */
 .slider-nav-thumbs a img {
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
+  -webkit-border-radius: 5px;
   -o-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  border: 4px solid #fff;
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  border: 4px solid white;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* line 140, sass/synapse/_slider.scss */
+/* line 184, sass/synapse/_slider_orig.scss */
 .slider-nav-thumbs .activeSlide a {
   position: relative;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-/* line 144, sass/synapse/_slider.scss */
+/* line 188, sass/synapse/_slider_orig.scss */
 .slider-nav .activeSlide a, .slider-nav-wide .activeSlide a {
   font-size: 13px;
+  background: #242728;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #242728 1%, #282b2c 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #242728), color-stop(100%, #282b2c));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #242728 1%, #282b2c 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #242728 1%, #282b2c 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #242728 1%, #282b2c 100%);
+  /* IE10+ */
+  background: linear-gradient(top, #242728 1%, #282b2c 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#242728', endColorstr='#282b2c',GradientType=0 );
+  /* IE6-9 */
   color: #cecece !important;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
   padding: 6px 17px;
   margin-left: 30px;
   position: relative;
-  background: #273443;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #273443), color-stop(100%, #304153));
-  background: -webkit-linear-gradient(#273443, #304153);
-  background: -moz-linear-gradient(#273443, #304153);
-  background: -o-linear-gradient(#273443, #304153);
-  background: -ms-linear-gradient(#273443, #304153);
-  background: linear-gradient(#273443, #304153);
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF273443', endColorstr='#FF3D5269');
-  -webkit-border-radius: 99px 99px 99px 99px;
   -moz-border-radius: 99px 99px 99px 99px;
-  -ms-border-radius: 99px 99px 99px 99px;
+  -webkit-border-radius: 99px 99px 99px 99px;
   -o-border-radius: 99px 99px 99px 99px;
-  border-radius: 99px 99px 99px 99px;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
+  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
-/* line 156, sass/synapse/_slider.scss */
+/* line 210, sass/synapse/_slider_orig.scss */
 .slider-nav-thumbs .activeSlide a:before {
-  content: img/slider-nav-arrow.png;
+  content: url("img/slider-nav-arrow.png");
   left: 40%;
   position: absolute;
   top: -71px;
 }
 
-/* line 162, sass/synapse/_slider.scss */
+/* line 216, sass/synapse/_slider_orig.scss */
 .activeSlide a:before {
-  content: img/slider-nav-arrow.png;
+  content: url("img/slider-nav-arrow.png");
   left: 40%;
   position: absolute;
   top: -26px;
 }
 
-/* line 168, sass/synapse/_slider.scss */
-.large-slider, .large-slider .images-wide, .large-slider .images-wide-thumb {
-  width: auto !important;
+/* line 250, sass/synapse/_slider_orig.scss */
+.simple-slider img, .img-container img, .portfolio-single-img {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* line 172, sass/synapse/_slider.scss */
-.images, .images-wide, .images-wide-thumb, .images-thumb {
-  overflow: hidden;
-}
-
-/* line 175, sass/synapse/_slider.scss */
-.images, .images-thumb, .images-wide, .images-wide-thumb {
-  margin-bottom: -2px;
-  -webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.3);
-  width: auto !important;
-  max-height: 330px;
-  position: absolute;
-  z-index: 1;
-}
-
-/* line 184, sass/synapse/_slider.scss */
+/* line 255, sass/synapse/_slider_orig.scss */
 .images img, .images-thumb img, .images-wide img, .images-wide-thumb img {
-  -webkit-border-radius: 5px 5px 0 0;
-  -moz-border-radius: 5px 5px 0 0;
-  -ms-border-radius: 5px 5px 0 0;
-  -o-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -ms-border-top-left-radius: 5px;
+  -o-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -ms-border-top-right-radius: 5px;
+  -o-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
+/* RESPONSIVE SLIDER STYLES */
+@media (max-width: 767px) {
+  /* line 264, sass/synapse/_slider_orig.scss */
+  .row-fluid .slider .span-one-third, .row-fluid .slider .span-two-thirds,
+  .row-fluid .slider [class*="span"] {
+    width: auto !important;
+    float: right !important;
+  }
+
+  /* line 266, sass/synapse/_slider_orig.scss */
+  .content-slider {
+    min-height: 435px;
+  }
+}
+/*----------------------------------------------
+
+	PARTIAL:	_callout.scss
+	PARENT:		_theme-synapse.scss
+	
+ ----------------------------------------------*/
 /* line 8, sass/synapse/_callout.scss */
-foo
 .callout {
   padding: 15px 25px;
   background: white;
@@ -8661,25 +8705,19 @@ foo
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  width: 100%;
+  width: auto;
   margin-bottom: 40px;
-}
-
-/* line 19, sass/synapse/_callout.scss */
-.callout {
-  /* IE7 */
   *margin-top: 130px;
 }
-
-/* line 22, sass/synapse/_callout.scss */
-.callout p {
-  color: #686868;
+/* line 20, sass/synapse/_callout.scss */
+.callout h3, .callout .h3 {
+  font-size: 18px;
 }
 
 /* line 25, sass/synapse/_callout.scss */
 .callout-info {
   float: left;
-  width: 100%;
+  width: auto;
 }
 
 /* line 30, sass/synapse/_callout.scss */
@@ -8922,16 +8960,6 @@ foo
 	
  ----------------------------------------------*/
 /* line 8, sass/synapse/_images.scss */
-.simple-slider img, .img-container img, .portfolio-single-img {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-  -o-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-}
-
-/* line 17, sass/synapse/_images.scss */
 .blog-widget a img, #alternate #flickr_badge_wrapper img, .sidebar #flickr_badge_wrapper img {
   float: left;
   background: #3d5269;
@@ -8961,7 +8989,7 @@ foo
   -o-border-radius: 5px;
 }
 
-/* line 38, sass/synapse/_images.scss */
+/* line 29, sass/synapse/_images.scss */
 img.aligncenter {
   margin-left: auto;
   margin-right: auto;
@@ -9023,11 +9051,11 @@ img.aligncenter {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-/* line 746, sass/bootstrap/_mixins.scss */
+/* line 750, sass/bootstrap/_mixins.scss */
 .small-btn:hover, .small-btn:active, .small-btn.active, .small-btn.disabled, .small-btn[disabled], .big-btn:hover, .big-btn:active, .big-btn.active, .big-btn.disabled, .big-btn[disabled] {
   background-color: #2860c9;
 }
-/* line 752, sass/bootstrap/_mixins.scss */
+/* line 756, sass/bootstrap/_mixins.scss */
 .small-btn:active, .small-btn.active, .big-btn:active, .big-btn.active {
   background-color: #204c9e \9;
   /* IE9 and down */
@@ -9048,11 +9076,11 @@ img.aligncenter {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-/* line 746, sass/bootstrap/_mixins.scss */
+/* line 750, sass/bootstrap/_mixins.scss */
 .btnTheme_Black .small-btn:hover, .btnTheme_Black .small-btn:active, .btnTheme_Black .small-btn.active, .btnTheme_Black .small-btn.disabled, .btnTheme_Black .small-btn[disabled], .small-btn.black:hover, .small-btn.black:active, .small-btn.black.active, .small-btn.black.disabled, .small-btn.black[disabled], .btnTheme_Black .big-btn:hover, .btnTheme_Black .big-btn:active, .btnTheme_Black .big-btn.active, .btnTheme_Black .big-btn.disabled, .btnTheme_Black .big-btn[disabled], .big-btn.black:hover, .big-btn.black:active, .big-btn.black.active, .big-btn.black.disabled, .big-btn.black[disabled] {
   background-color: #1c1c1c;
 }
-/* line 752, sass/bootstrap/_mixins.scss */
+/* line 756, sass/bootstrap/_mixins.scss */
 .btnTheme_Black .small-btn:active, .btnTheme_Black .small-btn.active, .small-btn.black:active, .small-btn.black.active, .btnTheme_Black .big-btn:active, .btnTheme_Black .big-btn.active, .big-btn.black:active, .big-btn.black.active {
   background-color: #030303 \9;
   /* IE9 and down */
@@ -9073,11 +9101,11 @@ img.aligncenter {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-/* line 746, sass/bootstrap/_mixins.scss */
+/* line 750, sass/bootstrap/_mixins.scss */
 .btnTheme_Blue .small-btn:hover, .btnTheme_Blue .small-btn:active, .btnTheme_Blue .small-btn.active, .btnTheme_Blue .small-btn.disabled, .btnTheme_Blue .small-btn[disabled], .small-btn.blue:hover, .small-btn.blue:active, .small-btn.blue.active, .small-btn.blue.disabled, .small-btn.blue[disabled], .btnTheme_Blue .big-btn:hover, .btnTheme_Blue .big-btn:active, .btnTheme_Blue .big-btn.active, .btnTheme_Blue .big-btn.disabled, .btnTheme_Blue .big-btn[disabled], .big-btn.blue:hover, .big-btn.blue:active, .big-btn.blue.active, .big-btn.blue.disabled, .big-btn.blue[disabled] {
   background-color: #2860c9;
 }
-/* line 752, sass/bootstrap/_mixins.scss */
+/* line 756, sass/bootstrap/_mixins.scss */
 .btnTheme_Blue .small-btn:active, .btnTheme_Blue .small-btn.active, .small-btn.blue:active, .small-btn.blue.active, .btnTheme_Blue .big-btn:active, .btnTheme_Blue .big-btn.active, .big-btn.blue:active, .big-btn.blue.active {
   background-color: #204c9e \9;
   /* IE9 and down */
@@ -9098,11 +9126,11 @@ img.aligncenter {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-/* line 746, sass/bootstrap/_mixins.scss */
+/* line 750, sass/bootstrap/_mixins.scss */
 .btnTheme_Orange .small-btn:hover, .btnTheme_Orange .small-btn:active, .btnTheme_Orange .small-btn.active, .btnTheme_Orange .small-btn.disabled, .btnTheme_Orange .small-btn[disabled], .small-btn.orange:hover, .small-btn.orange:active, .small-btn.orange.active, .small-btn.orange.disabled, .small-btn.orange[disabled], .btnTheme_Orange .big-btn:hover, .btnTheme_Orange .big-btn:active, .btnTheme_Orange .big-btn.active, .btnTheme_Orange .big-btn.disabled, .btnTheme_Orange .big-btn[disabled], .big-btn.orange:hover, .big-btn.orange:active, .big-btn.orange.active, .big-btn.orange.disabled, .big-btn.orange[disabled] {
   background-color: #da6c18;
 }
-/* line 752, sass/bootstrap/_mixins.scss */
+/* line 756, sass/bootstrap/_mixins.scss */
 .btnTheme_Orange .small-btn:active, .btnTheme_Orange .small-btn.active, .small-btn.orange:active, .small-btn.orange.active, .btnTheme_Orange .big-btn:active, .btnTheme_Orange .big-btn.active, .big-btn.orange:active, .big-btn.orange.active {
   background-color: #ac5513 \9;
   /* IE9 and down */
@@ -9123,11 +9151,11 @@ img.aligncenter {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-/* line 746, sass/bootstrap/_mixins.scss */
+/* line 750, sass/bootstrap/_mixins.scss */
 .btnTheme_Pink .small-btn:hover, .btnTheme_Pink .small-btn:active, .btnTheme_Pink .small-btn.active, .btnTheme_Pink .small-btn.disabled, .btnTheme_Pink .small-btn[disabled], .small-btn.pink:hover, .small-btn.pink:active, .small-btn.pink.active, .small-btn.pink.disabled, .small-btn.pink[disabled], .btnTheme_Pink .big-btn:hover, .btnTheme_Pink .big-btn:active, .btnTheme_Pink .big-btn.active, .btnTheme_Pink .big-btn.disabled, .btnTheme_Pink .big-btn[disabled], .big-btn.pink:hover, .big-btn.pink:active, .big-btn.pink.active, .big-btn.pink.disabled, .big-btn.pink[disabled] {
   background-color: #cb2d58;
 }
-/* line 752, sass/bootstrap/_mixins.scss */
+/* line 756, sass/bootstrap/_mixins.scss */
 .btnTheme_Pink .small-btn:active, .btnTheme_Pink .small-btn.active, .small-btn.pink:active, .small-btn.pink.active, .btnTheme_Pink .big-btn:active, .btnTheme_Pink .big-btn.active, .big-btn.pink:active, .big-btn.pink.active {
   background-color: #a12446 \9;
   /* IE9 and down */
@@ -9147,11 +9175,11 @@ img.aligncenter {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-/* line 746, sass/bootstrap/_mixins.scss */
+/* line 750, sass/bootstrap/_mixins.scss */
 .btnTheme_Pink .small-btn:hover:hover, .btnTheme_Pink .small-btn:hover:active, .btnTheme_Pink .small-btn:hover.active, .btnTheme_Pink .small-btn:hover.disabled, .btnTheme_Pink .small-btn:hover[disabled], .small-btn.pink:hover:hover, .small-btn.pink:hover:active, .small-btn.pink:hover.active, .small-btn.pink:hover.disabled, .small-btn.pink:hover[disabled], .btnTheme_Pink .big-btn:hover:hover, .btnTheme_Pink .big-btn:hover:active, .btnTheme_Pink .big-btn:hover.active, .btnTheme_Pink .big-btn:hover.disabled, .btnTheme_Pink .big-btn:hover[disabled], .big-btn.pink:hover:hover, .big-btn.pink:hover:active, .big-btn.pink:hover.active, .big-btn.pink:hover.disabled, .big-btn.pink:hover[disabled] {
   background-color: #c94467;
 }
-/* line 752, sass/bootstrap/_mixins.scss */
+/* line 756, sass/bootstrap/_mixins.scss */
 .btnTheme_Pink .small-btn:hover:active, .btnTheme_Pink .small-btn:hover.active, .small-btn.pink:hover:active, .small-btn.pink:hover.active, .btnTheme_Pink .big-btn:hover:active, .btnTheme_Pink .big-btn:hover.active, .big-btn.pink:hover:active, .big-btn.pink:hover.active {
   background-color: #a93151 \9;
   /* IE9 and down */
@@ -9171,11 +9199,11 @@ img.aligncenter {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-/* line 746, sass/bootstrap/_mixins.scss */
+/* line 750, sass/bootstrap/_mixins.scss */
 .btnTheme_Pink .small-btn:active:hover, .btnTheme_Pink .small-btn:active:active, .btnTheme_Pink .small-btn:active.active, .btnTheme_Pink .small-btn:active.disabled, .btnTheme_Pink .small-btn:active[disabled], .small-btn.pink:active:hover, .small-btn.pink:active:active, .small-btn.pink:active.active, .small-btn.pink:active.disabled, .small-btn.pink:active[disabled], .btnTheme_Pink .big-btn:active:hover, .btnTheme_Pink .big-btn:active:active, .btnTheme_Pink .big-btn:active.active, .btnTheme_Pink .big-btn:active.disabled, .btnTheme_Pink .big-btn:active[disabled], .big-btn.pink:active:hover, .big-btn.pink:active:active, .big-btn.pink:active.active, .big-btn.pink:active.disabled, .big-btn.pink:active[disabled] {
   background-color: #cb2d58;
 }
-/* line 752, sass/bootstrap/_mixins.scss */
+/* line 756, sass/bootstrap/_mixins.scss */
 .btnTheme_Pink .small-btn:active:active, .btnTheme_Pink .small-btn:active.active, .small-btn.pink:active:active, .small-btn.pink:active.active, .btnTheme_Pink .big-btn:active:active, .btnTheme_Pink .big-btn:active.active, .big-btn.pink:active:active, .big-btn.pink:active.active {
   background-color: #a12446 \9;
   /* IE9 and down */
@@ -9196,11 +9224,11 @@ img.aligncenter {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-/* line 746, sass/bootstrap/_mixins.scss */
+/* line 750, sass/bootstrap/_mixins.scss */
 .btnTheme_Red .small-btn:hover, .btnTheme_Red .small-btn:active, .btnTheme_Red .small-btn.active, .btnTheme_Red .small-btn.disabled, .btnTheme_Red .small-btn[disabled], .small-btn.red:hover, .small-btn.red:active, .small-btn.red.active, .small-btn.red.disabled, .small-btn.red[disabled], .btnTheme_Red .big-btn:hover, .btnTheme_Red .big-btn:active, .btnTheme_Red .big-btn.active, .btnTheme_Red .big-btn.disabled, .btnTheme_Red .big-btn[disabled], .big-btn.red:hover, .big-btn.red:active, .big-btn.red.active, .big-btn.red.disabled, .big-btn.red[disabled] {
   background-color: #c60a0a;
 }
-/* line 752, sass/bootstrap/_mixins.scss */
+/* line 756, sass/bootstrap/_mixins.scss */
 .btnTheme_Red .small-btn:active, .btnTheme_Red .small-btn.active, .small-btn.red:active, .small-btn.red.active, .btnTheme_Red .big-btn:active, .btnTheme_Red .big-btn.active, .big-btn.red:active, .big-btn.red.active {
   background-color: #950808 \9;
   /* IE9 and down */
@@ -9246,7 +9274,7 @@ label {
 /* line 26, sass/synapse/_alerts.scss */
 .contact-error {
   margin-top: 25px;
-  width: 100%;
+  width: auto;
 }
 
 /*----------------------------------------------
@@ -10013,7 +10041,7 @@ label {
   font-weight: bold;
   line-height: 28px;
   padding: 20px 20px 0 0;
-  width: 100%;
+  width: auto;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -10199,7 +10227,7 @@ label {
 
 /* line 14, sass/synapse/_comments.scss */
 #textarea3 {
-  width: 100%;
+  width: auto;
 }
 
 /* line 18, sass/synapse/_comments.scss */
@@ -10222,7 +10250,7 @@ label {
 /* line 25, sass/synapse/_comments.scss */
 .comment-content {
   float: right;
-  width: 100%;
+  width: auto;
 }
 
 /* line 30, sass/synapse/_comments.scss */
@@ -10253,7 +10281,7 @@ label {
   margin-bottom: 20px;
   background: white;
   padding: 25px 25px 25px 25px;
-  width: 100%;
+  width: auto;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -10279,7 +10307,7 @@ label {
 
 /* line 65, sass/synapse/_comments.scss */
 .children li {
-  width: 100%;
+  width: auto;
   margin-bottom: 0;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
@@ -10290,7 +10318,7 @@ label {
 
 /* line 73, sass/synapse/_comments.scss */
 .children li .comment-content {
-  width: 100%;
+  width: auto;
 }
 
 /* line 77, sass/synapse/_comments.scss */
@@ -10299,12 +10327,12 @@ label {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: auto;
 }
 
 /* line 83, sass/synapse/_comments.scss */
 .children li .children li .comment-content {
-  width: 100%;
+  width: auto;
 }
 
 /* line 87, sass/synapse/_comments.scss */
@@ -10313,12 +10341,12 @@ label {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  width: 100%;
+  width: auto;
 }
 
 /* line 93, sass/synapse/_comments.scss */
 .children li .children li .children li .comment-content {
-  width: 100%;
+  width: auto;
 }
 
 /* line 98, sass/synapse/_comments.scss */
@@ -10327,12 +10355,12 @@ label {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: auto;
 }
 
 /* line 104, sass/synapse/_comments.scss */
 .children li .children li .children li .children li .comment-content {
-  width: 100%;
+  width: auto;
 }
 
 /* line 109, sass/synapse/_comments.scss */
@@ -10431,16 +10459,6 @@ label {
 ----------------------------------------------*/
 /*  TEXT SHADOW GLOBALS
 ---------------------------------------------- */
-/* line 11, sass/synapse/_utilities.scss */
-::-moz-selection {
-  text-shadow: none !important;
-}
-
-/* line 12, sass/synapse/_utilities.scss */
-::selection {
-  text-shadow: none !important;
-}
-
 /* line 16, sass/synapse/_utilities.scss */
 .alignright {
   float: right;
@@ -10633,111 +10651,135 @@ abbr {
   }
   /* line 110, sass/bootstrap/_mixins.scss */
   .page-content h1 {
-    font-size: 1.692em;
-    line-height: 1.354em;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 11px;
   }
-  /* line 113, sass/bootstrap/_mixins.scss */
+  /* line 114, sass/bootstrap/_mixins.scss */
   .page-content h1 small {
-    font-size: 1.354em;
+    font-size: 18px;
+    margin-bottom: 9px;
   }
-  /* line 117, sass/bootstrap/_mixins.scss */
+  /* line 119, sass/bootstrap/_mixins.scss */
   .page-content .h1 {
-    font-size: 1.692em;
-    line-height: 1.354em;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 11px;
   }
-  /* line 120, sass/bootstrap/_mixins.scss */
+  /* line 123, sass/bootstrap/_mixins.scss */
   .page-content .h1 small {
-    font-size: 1.354em;
+    font-size: 18px;
+    margin-bottom: 9px;
   }
   /* line 110, sass/bootstrap/_mixins.scss */
   .page-content h2 {
-    font-size: 1.354em;
-    line-height: 1.083em;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 9px;
   }
-  /* line 113, sass/bootstrap/_mixins.scss */
+  /* line 114, sass/bootstrap/_mixins.scss */
   .page-content h2 small {
-    font-size: 1.083em;
+    font-size: 15px;
+    margin-bottom: 8px;
   }
-  /* line 117, sass/bootstrap/_mixins.scss */
+  /* line 119, sass/bootstrap/_mixins.scss */
   .page-content .h2 {
-    font-size: 1.354em;
-    line-height: 1.083em;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 9px;
   }
-  /* line 120, sass/bootstrap/_mixins.scss */
+  /* line 123, sass/bootstrap/_mixins.scss */
   .page-content .h2 small {
-    font-size: 1.083em;
+    font-size: 15px;
+    margin-bottom: 8px;
   }
   /* line 110, sass/bootstrap/_mixins.scss */
   .page-content h3 {
-    font-size: 1.083em;
-    line-height: 0.866em;
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom: 8px;
   }
-  /* line 113, sass/bootstrap/_mixins.scss */
+  /* line 114, sass/bootstrap/_mixins.scss */
   .page-content h3 small {
-    font-size: 0.866em;
+    font-size: 13px;
+    margin-bottom: 6px;
   }
-  /* line 117, sass/bootstrap/_mixins.scss */
+  /* line 119, sass/bootstrap/_mixins.scss */
   .page-content .h3 {
-    font-size: 1.083em;
-    line-height: 0.866em;
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom: 8px;
   }
-  /* line 120, sass/bootstrap/_mixins.scss */
+  /* line 123, sass/bootstrap/_mixins.scss */
   .page-content .h3 small {
-    font-size: 0.866em;
+    font-size: 13px;
+    margin-bottom: 6px;
   }
   /* line 110, sass/bootstrap/_mixins.scss */
   .page-content h4 {
-    font-size: 0.866em;
-    line-height: 0.693em;
+    font-size: 13px;
+    line-height: 13px;
+    margin-bottom: 6px;
   }
-  /* line 113, sass/bootstrap/_mixins.scss */
+  /* line 114, sass/bootstrap/_mixins.scss */
   .page-content h4 small {
-    font-size: 0.693em;
+    font-size: 11px;
+    margin-bottom: 5px;
   }
-  /* line 117, sass/bootstrap/_mixins.scss */
+  /* line 119, sass/bootstrap/_mixins.scss */
   .page-content .h4 {
-    font-size: 0.866em;
-    line-height: 0.693em;
+    font-size: 13px;
+    line-height: 13px;
+    margin-bottom: 6px;
   }
-  /* line 120, sass/bootstrap/_mixins.scss */
+  /* line 123, sass/bootstrap/_mixins.scss */
   .page-content .h4 small {
-    font-size: 0.693em;
+    font-size: 11px;
+    margin-bottom: 5px;
   }
   /* line 110, sass/bootstrap/_mixins.scss */
   .page-content h5 {
-    font-size: 0.693em;
-    line-height: 0.555em;
+    font-size: 11px;
+    line-height: 11px;
+    margin-bottom: 5px;
   }
-  /* line 113, sass/bootstrap/_mixins.scss */
+  /* line 114, sass/bootstrap/_mixins.scss */
   .page-content h5 small {
-    font-size: 0.555em;
+    font-size: 9px;
+    margin-bottom: 4px;
   }
-  /* line 117, sass/bootstrap/_mixins.scss */
+  /* line 119, sass/bootstrap/_mixins.scss */
   .page-content .h5 {
-    font-size: 0.693em;
-    line-height: 0.555em;
+    font-size: 11px;
+    line-height: 11px;
+    margin-bottom: 5px;
   }
-  /* line 120, sass/bootstrap/_mixins.scss */
+  /* line 123, sass/bootstrap/_mixins.scss */
   .page-content .h5 small {
-    font-size: 0.555em;
+    font-size: 9px;
+    margin-bottom: 4px;
   }
   /* line 110, sass/bootstrap/_mixins.scss */
   .page-content h6 {
-    font-size: 0.555em;
-    line-height: 0.444em;
+    font-size: 9px;
+    line-height: 9px;
+    margin-bottom: 4px;
   }
-  /* line 113, sass/bootstrap/_mixins.scss */
+  /* line 114, sass/bootstrap/_mixins.scss */
   .page-content h6 small {
-    font-size: 0.444em;
+    font-size: 7px;
+    margin-bottom: 4px;
   }
-  /* line 117, sass/bootstrap/_mixins.scss */
+  /* line 119, sass/bootstrap/_mixins.scss */
   .page-content .h6 {
-    font-size: 0.555em;
-    line-height: 0.444em;
+    font-size: 9px;
+    line-height: 9px;
+    margin-bottom: 4px;
   }
-  /* line 120, sass/bootstrap/_mixins.scss */
+  /* line 123, sass/bootstrap/_mixins.scss */
   .page-content .h6 small {
-    font-size: 0.444em;
+    font-size: 7px;
+    margin-bottom: 4px;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
@@ -10957,7 +10999,7 @@ abbr {
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  /* line 226, sass/bootstrap/_mixins.scss */
+  /* line 230, sass/bootstrap/_mixins.scss */
   .row {
     margin-left: -14.667px;
     *zoom: 1;
@@ -10972,299 +11014,303 @@ abbr {
     clear: both;
   }
 
-  /* line 231, sass/bootstrap/_mixins.scss */
+  /* line 235, sass/bootstrap/_mixins.scss */
   [class*="span"] {
     float: left;
     margin-left: 14.667px;
   }
 
-  /* line 239, sass/bootstrap/_mixins.scss */
+  /* line 243, sass/bootstrap/_mixins.scss */
   .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
     width: 724px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span16 {
     width: 724px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span15 {
     width: 677.833px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span14 {
     width: 631.667px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span13 {
     width: 585.5px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span12 {
     width: 539.333px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
-  .span11 {
+  /* line 250, sass/bootstrap/_mixins.scss */
+  .span11, .span-two-thirds {
     width: 493.167px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span10 {
     width: 447px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span9 {
     width: 400.833px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span8 {
     width: 354.667px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span7 {
     width: 308.5px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span6 {
     width: 262.333px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
-  .span5 {
+  /* line 250, sass/bootstrap/_mixins.scss */
+  .span5, .span-one-third {
     width: 216.167px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span4 {
     width: 170px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span3 {
     width: 123.833px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span2 {
     width: 77.667px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span1 {
     width: 31.5px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset16 {
     margin-left: 753.333px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset15 {
     margin-left: 707.167px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset14 {
     margin-left: 661px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset13 {
     margin-left: 614.833px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset12 {
     margin-left: 568.667px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset11 {
     margin-left: 522.5px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset10 {
     margin-left: 476.333px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset9 {
     margin-left: 430.167px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset8 {
     margin-left: 384px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset7 {
     margin-left: 337.833px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset6 {
     margin-left: 291.667px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset5 {
     margin-left: 245.5px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset4 {
     margin-left: 199.333px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset3 {
     margin-left: 153.167px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset2 {
     margin-left: 107px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset1 {
     margin-left: 60.833px;
   }
 
-  /* line 306, sass/bootstrap/_mixins.scss */
+  /* line 310, sass/bootstrap/_mixins.scss */
   input,
   textarea,
   .uneditable-input {
     margin-left: 0;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span16,
   textarea.span16,
   .uneditable-input.span16 {
     width: 714px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span15,
   textarea.span15,
   .uneditable-input.span15 {
     width: 667.833px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span14,
   textarea.span14,
   .uneditable-input.span14 {
     width: 621.667px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span13,
   textarea.span13,
   .uneditable-input.span13 {
     width: 575.5px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span12,
   textarea.span12,
   .uneditable-input.span12 {
     width: 529.333px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
-  input.span11,
+  /* line 319, sass/bootstrap/_mixins.scss */
+  input.span11, input.span-two-thirds,
   textarea.span11,
-  .uneditable-input.span11 {
+  textarea.span-two-thirds,
+  .uneditable-input.span11,
+  .uneditable-input.span-two-thirds {
     width: 483.167px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span10,
   textarea.span10,
   .uneditable-input.span10 {
     width: 437px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span9,
   textarea.span9,
   .uneditable-input.span9 {
     width: 390.833px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span8,
   textarea.span8,
   .uneditable-input.span8 {
     width: 344.667px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span7,
   textarea.span7,
   .uneditable-input.span7 {
     width: 298.5px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span6,
   textarea.span6,
   .uneditable-input.span6 {
     width: 252.333px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
-  input.span5,
+  /* line 319, sass/bootstrap/_mixins.scss */
+  input.span5, input.span-one-third,
   textarea.span5,
-  .uneditable-input.span5 {
+  textarea.span-one-third,
+  .uneditable-input.span5,
+  .uneditable-input.span-one-third {
     width: 206.167px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span4,
   textarea.span4,
   .uneditable-input.span4 {
     width: 160px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span3,
   textarea.span3,
   .uneditable-input.span3 {
     width: 113.833px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span2,
   textarea.span2,
   .uneditable-input.span2 {
     width: 67.667px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span1,
   textarea.span1,
   .uneditable-input.span1 {
     width: 21.5px;
   }
 
-  /* line 269, sass/bootstrap/_mixins.scss */
+  /* line 273, sass/bootstrap/_mixins.scss */
   .container-fluid, .page-container.row-fluid,
   .navbar-fixed-top .container-fluid,
   .navbar-fixed-top .page-container.row-fluid,
@@ -11275,7 +11321,7 @@ abbr {
     *width: 99.947%;
   }
 
-  /* line 274, sass/bootstrap/_mixins.scss */
+  /* line 278, sass/bootstrap/_mixins.scss */
   .row-fluid {
     width: 100%;
     *zoom: 1;
@@ -11289,7 +11335,7 @@ abbr {
   .row-fluid:after {
     clear: both;
   }
-  /* line 277, sass/bootstrap/_mixins.scss */
+  /* line 281, sass/bootstrap/_mixins.scss */
   .row-fluid [class*="span"] {
     display: block;
     width: 100%;
@@ -11301,86 +11347,86 @@ abbr {
     margin-left: 1.88%;
     *margin-left: 1.827%;
   }
-  /* line 283, sass/bootstrap/_mixins.scss */
+  /* line 287, sass/bootstrap/_mixins.scss */
   .row-fluid [class*="span"]:first-child {
     margin-left: 0;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span16 {
     width: 100%;
     *width: 99.947%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span15 {
     width: 93.632%;
     *width: 93.579%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span14 {
     width: 87.265%;
     *width: 87.212%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span13 {
     width: 80.897%;
     *width: 80.844%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span12 {
     width: 74.53%;
     *width: 74.477%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
-  .row-fluid .span11 {
+  /* line 295, sass/bootstrap/_mixins.scss */
+  .row-fluid .span11, .row-fluid .span-two-thirds {
     width: 68.162%;
     *width: 68.109%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span10 {
     width: 61.795%;
     *width: 61.742%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span9 {
     width: 55.427%;
     *width: 55.374%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span8 {
     width: 49.06%;
     *width: 49.007%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span7 {
     width: 42.692%;
     *width: 42.639%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span6 {
     width: 36.325%;
     *width: 36.272%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
-  .row-fluid .span5 {
+  /* line 295, sass/bootstrap/_mixins.scss */
+  .row-fluid .span5, .row-fluid .span-one-third {
     width: 29.957%;
     *width: 29.904%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span4 {
     width: 23.59%;
     *width: 23.537%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span3 {
     width: 17.222%;
     *width: 17.169%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span2 {
     width: 10.855%;
     *width: 10.802%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span1 {
     width: 4.487%;
     *width: 4.434%;
@@ -11393,7 +11439,7 @@ abbr {
   }
 }
 @media (min-width: 1200px) {
-  /* line 226, sass/bootstrap/_mixins.scss */
+  /* line 230, sass/bootstrap/_mixins.scss */
   .row {
     margin-left: -22px;
     *zoom: 1;
@@ -11408,299 +11454,303 @@ abbr {
     clear: both;
   }
 
-  /* line 231, sass/bootstrap/_mixins.scss */
+  /* line 235, sass/bootstrap/_mixins.scss */
   [class*="span"] {
     float: left;
     margin-left: 22px;
   }
 
-  /* line 239, sass/bootstrap/_mixins.scss */
+  /* line 243, sass/bootstrap/_mixins.scss */
   .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
     width: 1170px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span16 {
     width: 1170px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span15 {
     width: 1095.5px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span14 {
     width: 1021px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span13 {
     width: 946.5px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span12 {
     width: 872px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
-  .span11 {
+  /* line 250, sass/bootstrap/_mixins.scss */
+  .span11, .span-two-thirds {
     width: 797.5px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span10 {
     width: 723px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span9 {
     width: 648.5px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span8 {
     width: 574px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span7 {
     width: 499.5px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span6 {
     width: 425px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
-  .span5 {
+  /* line 250, sass/bootstrap/_mixins.scss */
+  .span5, .span-one-third {
     width: 350.5px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span4 {
     width: 276px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span3 {
     width: 201.5px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span2 {
     width: 127px;
   }
 
-  /* line 246, sass/bootstrap/_mixins.scss */
+  /* line 250, sass/bootstrap/_mixins.scss */
   .span1 {
     width: 52.5px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset16 {
     margin-left: 1214px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset15 {
     margin-left: 1139.5px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset14 {
     margin-left: 1065px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset13 {
     margin-left: 990.5px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset12 {
     margin-left: 916px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset11 {
     margin-left: 841.5px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset10 {
     margin-left: 767px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset9 {
     margin-left: 692.5px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset8 {
     margin-left: 618px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset7 {
     margin-left: 543.5px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset6 {
     margin-left: 469px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset5 {
     margin-left: 394.5px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset4 {
     margin-left: 320px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset3 {
     margin-left: 245.5px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset2 {
     margin-left: 171px;
   }
 
-  /* line 252, sass/bootstrap/_mixins.scss */
+  /* line 256, sass/bootstrap/_mixins.scss */
   .offset1 {
     margin-left: 96.5px;
   }
 
-  /* line 306, sass/bootstrap/_mixins.scss */
+  /* line 310, sass/bootstrap/_mixins.scss */
   input,
   textarea,
   .uneditable-input {
     margin-left: 0;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span16,
   textarea.span16,
   .uneditable-input.span16 {
     width: 1160px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span15,
   textarea.span15,
   .uneditable-input.span15 {
     width: 1085.5px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span14,
   textarea.span14,
   .uneditable-input.span14 {
     width: 1011px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span13,
   textarea.span13,
   .uneditable-input.span13 {
     width: 936.5px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span12,
   textarea.span12,
   .uneditable-input.span12 {
     width: 862px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
-  input.span11,
+  /* line 319, sass/bootstrap/_mixins.scss */
+  input.span11, input.span-two-thirds,
   textarea.span11,
-  .uneditable-input.span11 {
+  textarea.span-two-thirds,
+  .uneditable-input.span11,
+  .uneditable-input.span-two-thirds {
     width: 787.5px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span10,
   textarea.span10,
   .uneditable-input.span10 {
     width: 713px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span9,
   textarea.span9,
   .uneditable-input.span9 {
     width: 638.5px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span8,
   textarea.span8,
   .uneditable-input.span8 {
     width: 564px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span7,
   textarea.span7,
   .uneditable-input.span7 {
     width: 489.5px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span6,
   textarea.span6,
   .uneditable-input.span6 {
     width: 415px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
-  input.span5,
+  /* line 319, sass/bootstrap/_mixins.scss */
+  input.span5, input.span-one-third,
   textarea.span5,
-  .uneditable-input.span5 {
+  textarea.span-one-third,
+  .uneditable-input.span5,
+  .uneditable-input.span-one-third {
     width: 340.5px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span4,
   textarea.span4,
   .uneditable-input.span4 {
     width: 266px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span3,
   textarea.span3,
   .uneditable-input.span3 {
     width: 191.5px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span2,
   textarea.span2,
   .uneditable-input.span2 {
     width: 117px;
   }
 
-  /* line 315, sass/bootstrap/_mixins.scss */
+  /* line 319, sass/bootstrap/_mixins.scss */
   input.span1,
   textarea.span1,
   .uneditable-input.span1 {
     width: 42.5px;
   }
 
-  /* line 269, sass/bootstrap/_mixins.scss */
+  /* line 273, sass/bootstrap/_mixins.scss */
   .container-fluid, .page-container.row-fluid,
   .navbar-fixed-top .container-fluid,
   .navbar-fixed-top .page-container.row-fluid,
@@ -11711,7 +11761,7 @@ abbr {
     *width: 99.947%;
   }
 
-  /* line 274, sass/bootstrap/_mixins.scss */
+  /* line 278, sass/bootstrap/_mixins.scss */
   .row-fluid {
     width: 100%;
     *zoom: 1;
@@ -11725,7 +11775,7 @@ abbr {
   .row-fluid:after {
     clear: both;
   }
-  /* line 277, sass/bootstrap/_mixins.scss */
+  /* line 281, sass/bootstrap/_mixins.scss */
   .row-fluid [class*="span"] {
     display: block;
     width: 100%;
@@ -11737,86 +11787,86 @@ abbr {
     margin-left: 1.56%;
     *margin-left: 1.507%;
   }
-  /* line 283, sass/bootstrap/_mixins.scss */
+  /* line 287, sass/bootstrap/_mixins.scss */
   .row-fluid [class*="span"]:first-child {
     margin-left: 0;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span16 {
     width: 100.0%;
     *width: 99.947%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span15 {
     width: 93.652%;
     *width: 93.599%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span14 {
     width: 87.305%;
     *width: 87.252%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span13 {
     width: 80.957%;
     *width: 80.904%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span12 {
     width: 74.61%;
     *width: 74.557%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
-  .row-fluid .span11 {
+  /* line 295, sass/bootstrap/_mixins.scss */
+  .row-fluid .span11, .row-fluid .span-two-thirds {
     width: 68.262%;
     *width: 68.209%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span10 {
     width: 61.915%;
     *width: 61.862%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span9 {
     width: 55.567%;
     *width: 55.514%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span8 {
     width: 49.22%;
     *width: 49.167%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span7 {
     width: 42.872%;
     *width: 42.819%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span6 {
     width: 36.525%;
     *width: 36.472%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
-  .row-fluid .span5 {
+  /* line 295, sass/bootstrap/_mixins.scss */
+  .row-fluid .span5, .row-fluid .span-one-third {
     width: 30.177%;
     *width: 30.124%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span4 {
     width: 23.83%;
     *width: 23.777%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span3 {
     width: 17.482%;
     *width: 17.429%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span2 {
     width: 11.135%;
     *width: 11.082%;
   }
-  /* line 291, sass/bootstrap/_mixins.scss */
+  /* line 295, sass/bootstrap/_mixins.scss */
   .row-fluid .span1 {
     width: 4.787%;
     *width: 4.734%;
@@ -11854,18 +11904,27 @@ abbr {
 }
 
 @media (max-width: 979px) {
-  /* line 211, sass/bootstrap/_responsive-navbar.scss */
+  /* line 214, sass/bootstrap/_responsive-navbar.scss */
   .header {
     padding-top: 15px;
     padding-bottom: 15px;
   }
-  /* line 214, sass/bootstrap/_responsive-navbar.scss */
+  /* line 217, sass/bootstrap/_responsive-navbar.scss */
   .header .logo h1, .header .logo .h1 {
     display: none;
   }
-  /* line 217, sass/bootstrap/_responsive-navbar.scss */
+  /* line 220, sass/bootstrap/_responsive-navbar.scss */
   .header .logo i {
     display: block;
+  }
+
+  /* line 227, sass/bootstrap/_responsive-navbar.scss */
+  .home .header .logo h1, .home .header .logo .h1 {
+    display: block;
+  }
+  /* line 230, sass/bootstrap/_responsive-navbar.scss */
+  .home .header .logo i {
+    display: none;
   }
 }
 @media (max-width: 767px) {
@@ -11880,46 +11939,50 @@ abbr {
   }
 
   /* line 21, sass/bootstrap/_responsive-navbar.scss */
+  .home .header {
+    display: none;
+  }
+  /* line 24, sass/bootstrap/_responsive-navbar.scss */
   .header .logo-container {
     display: none !important;
   }
-  /* line 22, sass/bootstrap/_responsive-navbar.scss */
+  /* line 25, sass/bootstrap/_responsive-navbar.scss */
   .header .menu-container {
     width: 100% !important;
   }
-  /* line 24, sass/bootstrap/_responsive-navbar.scss */
+  /* line 27, sass/bootstrap/_responsive-navbar.scss */
   .header .menu-container .nav {
     float: left !important;
   }
 
-  /* line 33, sass/bootstrap/_responsive-navbar.scss */
+  /* line 36, sass/bootstrap/_responsive-navbar.scss */
   body {
     padding-top: 0;
   }
 
-  /* line 37, sass/bootstrap/_responsive-navbar.scss */
+  /* line 40, sass/bootstrap/_responsive-navbar.scss */
   .navbar-fixed-top {
     position: static;
   }
 
-  /* line 41, sass/bootstrap/_responsive-navbar.scss */
+  /* line 44, sass/bootstrap/_responsive-navbar.scss */
   .navbar-fixed-top .navbar-inner {
     padding: 5px;
   }
 
-  /* line 44, sass/bootstrap/_responsive-navbar.scss */
+  /* line 47, sass/bootstrap/_responsive-navbar.scss */
   .navbar .container {
     width: auto;
     padding: 0;
   }
 
-  /* line 49, sass/bootstrap/_responsive-navbar.scss */
+  /* line 52, sass/bootstrap/_responsive-navbar.scss */
   .navbar .brand {
     margin-left: 0;
     padding: 0;
     left: 5px;
   }
-  /* line 54, sass/bootstrap/_responsive-navbar.scss */
+  /* line 57, sass/bootstrap/_responsive-navbar.scss */
   .navbar .brand span, .navbar .brand i {
     visibility: visible;
     font-family: "bystlLogoFont", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -11941,48 +12004,48 @@ abbr {
     font-weight: normal;
     color: inherit;
   }
-  /* line 59, sass/bootstrap/_responsive-navbar.scss */
+  /* line 62, sass/bootstrap/_responsive-navbar.scss */
   .navbar .brand span > strong, .navbar .brand span > b, .navbar .brand i > strong, .navbar .brand i > b {
     word-spacing: normal;
   }
 
-  /* line 65, sass/bootstrap/_responsive-navbar.scss */
+  /* line 68, sass/bootstrap/_responsive-navbar.scss */
   #pageWrapper {
     margin-top: 0;
   }
 
-  /* line 70, sass/bootstrap/_responsive-navbar.scss */
+  /* line 73, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse {
     clear: both;
   }
-  /* line 73, sass/bootstrap/_responsive-navbar.scss */
+  /* line 76, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse, .nav-collapse.collapse {
     overflow: hidden;
     height: 0;
   }
-  /* line 79, sass/bootstrap/_responsive-navbar.scss */
+  /* line 82, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav {
     float: none;
     margin: 0 0 9px;
   }
-  /* line 84, sass/bootstrap/_responsive-navbar.scss */
+  /* line 87, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav.pull-left, .nav-collapse .nav.pull-right {
     float: none;
     margin: 0;
   }
-  /* line 89, sass/bootstrap/_responsive-navbar.scss */
+  /* line 92, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav > li {
     float: none;
   }
-  /* line 92, sass/bootstrap/_responsive-navbar.scss */
+  /* line 95, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav > li.divider-vertical {
     display: none;
   }
-  /* line 96, sass/bootstrap/_responsive-navbar.scss */
+  /* line 99, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav > li > a {
     margin-bottom: 2px;
   }
-  /* line 103, sass/bootstrap/_responsive-navbar.scss */
+  /* line 106, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav > li > a, .nav-collapse .nav .dropdown-menu a {
     padding: 6px 15px;
     font-weight: bold;
@@ -11993,43 +12056,43 @@ abbr {
     -o-border-radius: 3px;
     border-radius: 3px;
   }
-  /* line 109, sass/bootstrap/_responsive-navbar.scss */
+  /* line 112, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav > li > a:hover, .nav-collapse .nav .dropdown-menu a:hover {
     background-color: #201302;
   }
-  /* line 115, sass/bootstrap/_responsive-navbar.scss */
+  /* line 118, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav .dropdown-menu li + li a {
     margin-bottom: 2px;
   }
-  /* line 119, sass/bootstrap/_responsive-navbar.scss */
+  /* line 122, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav .nav-header {
     color: #c5c2ba;
     text-shadow: none;
   }
-  /* line 125, sass/bootstrap/_responsive-navbar.scss */
+  /* line 128, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav .dropdown {
     border-bottom: 1px solid #201302;
     border-top: 1px solid #362510;
   }
-  /* line 131, sass/bootstrap/_responsive-navbar.scss */
+  /* line 134, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav .dropdown:first-child {
     border-top: none;
   }
-  /* line 134, sass/bootstrap/_responsive-navbar.scss */
+  /* line 137, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav .dropdown:last-child {
     border-bottom: none;
   }
-  /* line 139, sass/bootstrap/_responsive-navbar.scss */
+  /* line 142, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav .dropdown .dropdown-toggle, .nav-collapse .nav .dropdown .dropdown-toggle:hover {
     color: #969183 !important;
     background-color: transparent !important;
     cursor: default;
   }
-  /* line 145, sass/bootstrap/_responsive-navbar.scss */
+  /* line 148, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav .dropdown .dropdown-toggle > b.caret {
     display: none;
   }
-  /* line 152, sass/bootstrap/_responsive-navbar.scss */
+  /* line 155, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav .dropdown .dropdown-menu {
     position: static;
     top: auto;
@@ -12050,15 +12113,15 @@ abbr {
     -moz-box-shadow: none;
     box-shadow: none;
   }
-  /* line 166, sass/bootstrap/_responsive-navbar.scss */
+  /* line 169, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav .dropdown .dropdown-menu:before, .nav-collapse .nav .dropdown .dropdown-menu:after, .nav-collapse .nav .dropdown .dropdown-menu .divider {
     display: none;
   }
-  /* line 177, sass/bootstrap/_responsive-navbar.scss */
+  /* line 180, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse.in .btn-group {
     padding: 0;
   }
-  /* line 181, sass/bootstrap/_responsive-navbar.scss */
+  /* line 184, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .btn, .nav-collapse .btn-group li a, .btn-group li .nav-collapse a, .nav-collapse .small-btn, .nav-collapse .big-btn {
     padding: 4px 10px 4px;
     font-weight: normal;
@@ -12068,7 +12131,7 @@ abbr {
     -o-border-radius: 4px;
     border-radius: 4px;
   }
-  /* line 188, sass/bootstrap/_responsive-navbar.scss */
+  /* line 191, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .navbar-form, .nav-collapse .navbar-search {
     float: none;
     padding: 9px 15px;
@@ -12080,34 +12143,34 @@ abbr {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 
-  /* line 203, sass/bootstrap/_responsive-navbar.scss */
+  /* line 206, sass/bootstrap/_responsive-navbar.scss */
   .navbar .btn-navbar,
   .navbar .btn-navbar.mainmenu {
     display: block;
   }
 }
 @media (max-width: 320px) {
-  /* line 227, sass/bootstrap/_responsive-navbar.scss */
+  /* line 240, sass/bootstrap/_responsive-navbar.scss */
   .navbar .brand span {
     display: none;
   }
-  /* line 228, sass/bootstrap/_responsive-navbar.scss */
+  /* line 241, sass/bootstrap/_responsive-navbar.scss */
   .navbar .brand i {
     display: block;
   }
 
-  /* line 250, sass/bootstrap/_responsive-navbar.scss */
+  /* line 263, sass/bootstrap/_responsive-navbar.scss */
   .testiphonelandscapelink {
     display: none;
   }
 
-  /* line 251, sass/bootstrap/_responsive-navbar.scss */
+  /* line 264, sass/bootstrap/_responsive-navbar.scss */
   .header {
     padding-bottom: 0 !important;
   }
 }
 @media (min-width: 980px) {
-  /* line 261, sass/bootstrap/_responsive-navbar.scss */
+  /* line 274, sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse.collapse {
     height: auto !important;
     overflow: visible !important;

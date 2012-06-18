@@ -1,47 +1,16 @@
- <div class="slider clearfix">
+<div class="container-fluid">
+  <div id="large-slider" class="carousel slide">
+    <div class="carousel-inner">
 
-            <div class="container-fluid">
+      <?php if ( function_exists( 'get_option_tree' ) ) {
+        $slides = get_option_tree( 'slides', $option_tree, false, true, -1 );
+        foreach( $slides as $slide ) {
+        echo '<div class="item"><img src="'.get_bloginfo('template_url').'/includes/timthumb.php?q=100&amp;w=940&amp;h=500&amp;zc=1&amp;src='.$slide['image'].'" alt="'.$slide['title'].'" /></div>';
+        }
+      } ?>
 
-                <div class="row-fluid">
-
-                    <div class="large-slider">
-
-                        <div id="slider">
-
-                            <ul class="images-wide">
-
-                                <?php
-if ( function_exists( 'get_option_tree' ) ) {
-  $slides = get_option_tree( 'slides', $option_tree, false, true, -1 );
-  foreach( $slides as $slide ) {
-    echo '
-    <li><a href="'.$slide['link'].'"><img src="'.get_bloginfo('template_url').'/includes/timthumb.php?q=100&amp;w=940&amp;h=330&amp;zc=1&amp;src='.$slide['image'].'" alt="'.$slide['title'].'" /></a></li>';
-
-  }
-}
-?>
-                            </ul>
-
-                            <ul class="slider-nav-wide clearfix">
-
-                                     <?php
-
-if ( function_exists( 'get_option_tree' ) ) {
-  $slides = get_option_tree( 'slides', $option_tree, false, true, -1 );
-  foreach( $slides as $slide ) {
-    echo '
-    <li><a href="'.$slide['link'].'">'.$slide['title'].'</a></li>';
-  }
-}
-?>
-                           </ul>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
+    </div>
+    <a class="carousel-control left" href="#large-slider" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#large-slider" data-slide="next">&rsaquo;</a>
+  </div>
+</div>

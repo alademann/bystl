@@ -4,15 +4,6 @@
 	PARENT:		_theme-synapse.scss
 	
  ----------------------------------------------*/
- 
-.simple-slider img, .img-container img, .portfolio-single-img {
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-o-border-radius: 5px;
-	-moz-box-shadow: 0 2px 3px rgba($black, 0.1);
-	-webkit-box-shadow: 0 2px 3px rgba($black, 0.1);
-	-o-box-shadow:0 2px 3px rgba($black, 0.1);
-}
 
 .blog-widget a img, #alternate #flickr_badge_wrapper img, .sidebar #flickr_badge_wrapper img  {
 	float: left;

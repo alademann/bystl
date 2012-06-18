@@ -8,10 +8,16 @@
 $contentSliderImgH: 330px !default;
 $contentSliderImgW: 620px !default;
 $sliderWideImgW: 940px !default;
-$slideWideImgH:  500px !default;
+$sliderWideImgH:  500px !default;
 
 .slider ul { 
 	margin: 0 !important;
+	position: relative;
+	overflow: visible;
+
+	li {
+		width: 100%;
+	}
 }
 .span-two-thirds {
 	@extend .span#{round($gridColumns * (2/3))};
@@ -63,16 +69,22 @@ $slideWideImgH:  500px !default;
 }
 .content-slider {
 	//padding-bottom: 20px;
-	position: relative;
 	min-height: $contentSliderImgH;
 	height: auto; 
 	background: none !important;
 	//overflow: hidden;
 }
-.content-slider li {
+.images-wide {
+	min-height: $sliderWideImgH;
+	height: auto;
 	background: none !important;
-	width: 100% !important;
-	height: auto !important;
+}
+.content-slider, .images-wide {
+	li {
+		background: none !important;
+		width: 100% !important;
+		height: auto !important;
+	}
 }
 .slider, .slider-intro, .slider-intro-right, .slider-intro-left {
 	margin-top: $mobileGutter;
@@ -80,14 +92,21 @@ $slideWideImgH:  500px !default;
 .slider {
 	position: relative;
 }
-#slider {
-	position: relative;
-	margin-bottom: 428px;
-}
-#slider-thumbs {
-	position: relative;
-	margin-bottom: 465px;
-}
+// #slider {
+// 	position: relative;
+// 	margin-bottom: $contentSliderImgH + 98;
+// 	.large-slider & {
+// 		margin-bottom: $sliderWideImgH + 98;
+// 	}
+// }
+// #slider-thumbs {
+// 	position: relative;
+// 	margin-bottom: $contentSliderImgH + 135;
+// 	.large-slider & {
+// 		margin-bottom: $sliderWideImgH + 135;
+// 	}
+// }
+
 
 @mixin sliderNav {
 
@@ -204,23 +223,29 @@ $slideWideImgH:  500px !default;
 } // END @mixin sliderNav
 @include sliderNav;
 
-.large-slider, .large-slider .images-wide, .large-slider .images-wide-thumb  {
-	max-width: $sliderWideImgW;
-	width: auto;
-}
-.images, .images-wide, .images-wide-thumb, .images-thumb {
-	overflow: hidden;
-}
-.images, .images-thumb, .images-wide, .images-wide-thumb {
-	margin-bottom: -2px;
-	max-width: $contentSliderImgW;
-	width: auto;
-	max-height: $contentSliderImgH;
-	height: auto;
-	position: absolute;
-	z-index: 1;
-	@include box-shadow(0 3px 1px rgba($black, 0.3));
-}
+// .large-slider, .large-slider .images-wide, .large-slider .images-wide-thumb  {
+// 	max-width: $sliderWideImgW;
+// 	max-height: $sliderWideImgH;
+// 	width: auto;
+// 	height: auto;
+// }
+// .images, .images-wide, .images-wide-thumb, .images-thumb {
+// 	overflow: hidden;
+// }
+// .images, .images-thumb, .images-wide, .images-wide-thumb {
+// 	margin-bottom: -2px;
+// 	max-width: $contentSliderImgW;
+// 	width: auto;
+// 	max-height: $contentSliderImgH;
+// 	height: auto;
+// 	position: relative;
+// 	z-index: 1;
+// 	@include box-shadow(0 3px 1px rgba($black, 0.3));
+// }
+// .images-wide, .images-wide-thumb {
+// 	max-width: $sliderWideImgW;
+// 	max-height: $sliderWideImgH;
+// }
 
 .simple-slider img, .img-container img, .portfolio-single-img {
 	@include border-radius(5px);

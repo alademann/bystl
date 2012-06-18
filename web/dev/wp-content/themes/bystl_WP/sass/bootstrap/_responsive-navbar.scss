@@ -18,6 +18,9 @@
     display: block; 
   }
   .header { 
+    .home & { 
+      display: none;
+    }
     .logo-container { display: none !important; }
     .menu-container { 
       width: 100% !important;
@@ -217,6 +220,16 @@
     .logo i {
       display: block;
     }
+  }
+
+  // not on the home page
+  .home .header {
+    .logo h1, .logo .h1 {
+      display: block;
+    }
+    .logo i {
+      display: none;
+    } 
   }
 
 } // END @mixin smallerHeaderLogo

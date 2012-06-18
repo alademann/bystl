@@ -7,14 +7,16 @@
 
 .carousel {
   position: relative;
-  margin-bottom: 1em;
+  margin: $mobileGutter 0;
   line-height: 1;
 }
 
 .carousel-inner {
   overflow: hidden;
   width: 100%;
+  //min-height: 100px; // so the loader will at least show up
   position: relative;
+  //background: transparent url(image-url("ajax-loader.gif", true)) center center no-repeat;
 }
 
 .carousel {
@@ -22,7 +24,7 @@
   .item {
     display: none;
     position: relative;
-    @include tb_transition(.6s ease-in-out left);
+    @include transition(1.3s ease-in-out left);
   }
 
   // Account for jankitude on images
@@ -75,16 +77,16 @@
   left: 15px;
   width: 40px;
   height: 40px;
-  margin-top: -20px;
+  //margin-top: -20px;
   font-size: 60px;
   font-weight: 100;
   line-height: 30px;
   color: $white;
   text-align: center;
   background: $grayDarker;
-  border: 3px solid $white;
-  @include tb_border-radius(23px);
-  @include opacity(50);
+  border: 3px solid rgba($white, 0.7);
+  @include border-radius(23px);
+  @include opacity(0.5);
 
   // we can't have this transition here
   // because webkit cancels the carousel
@@ -103,7 +105,7 @@
   &:hover {
     color: $white;
     text-decoration: none;
-    @include opacity(90);
+    @include opacity(0.9);
   }
 }
 

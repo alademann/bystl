@@ -59,7 +59,7 @@
 
                 <div class="footer-right span8">
                     <ul class="breadcrumb pull-right">
-                        <li><a href="/about/contact-us/">Contact</a></li>
+                        <li><a href="about/contact-us/">Contact</a></li>
                         <?php wp_list_pages('post_status=publish&title_li=&depth=1'); ?>
                     </ul>
                     <?php echo get_option_tree('footer_right_content'); ?>
@@ -107,7 +107,18 @@ head.ready(function() {
 
     <?php if (get_option_tree('auto') == 'Yes') {  $timeout = 4000; } else { $timeout = 0; } ?>
 
+    //var prepHeight = $('#large-slider').find(".item:first-child > img").height();
+    //$('#large-slider').css("min-height", prepHeight);
 
+
+    $('.carousel').carousel({
+        interval: <?php echo $timeout; ?>
+    }).bind("slid", function(){
+        $img = $(".active img", this);
+        $img.attr("src", $img.data("lazy-load-src"));
+    });
+
+/*
     jQuery('.images').cycle({
                 fx:     'fade',
                 speed:    1500,
@@ -156,6 +167,8 @@ head.ready(function() {
                 'pause':   1,
                 'prev':   '#prev-arrow'
              });
+*/
+
 
 }); // END head.ready
 
