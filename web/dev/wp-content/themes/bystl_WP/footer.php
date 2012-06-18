@@ -1,4 +1,4 @@
-<?php if(function_exists('bcn_display')) { ?>
+<?php if(function_exists('bcn_display') && !is_home()) { ?>
 <div class="container-fluid">
     <div class="row-fluid">
         <div id="crumbs" class="span16">
@@ -52,9 +52,18 @@
         <div class="small-footer">
             <div class="container-fluid">
             <div class="row-fluid">
-                <div class="footer-left span8"><p><?php echo get_option_tree('footer_left_content') ?></p></div>
+                <div class="footer-left span8">
+                    Copyright &copy; Bikram Yoga St. Louis <?php echo date("Y"); ?>
+                    <?php echo get_option_tree('footer_left_content'); ?>
+                </div>
 
-                <div class="footer-right span8"><p><?php echo get_option_tree('footer_right_content') ?></p></div>
+                <div class="footer-right span8">
+                    <ul class="breadcrumb pull-right">
+                        <li><a href="/about/contact-us/">Contact</a></li>
+                        <?php wp_list_pages('post_status=publish&title_li=&depth=1'); ?>
+                    </ul>
+                    <?php echo get_option_tree('footer_right_content'); ?>
+                </div>
             </div>
         </div>
         </div>
@@ -96,7 +105,7 @@
 
 head.ready(function() {
 
-    <?php if (get_option_tree('auto') == 'Yes') {  $timeout = 1500; } else { $timeout = 0; } ?>
+    <?php if (get_option_tree('auto') == 'Yes') {  $timeout = 4000; } else { $timeout = 0; } ?>
 
 
     jQuery('.images').cycle({
@@ -145,7 +154,7 @@ head.ready(function() {
                 'pager' : '#content-slider-pager',
                 'next':   '#next-arrow',
                 'pause':   1,
-        'prev':   '#prev-arrow'
+                'prev':   '#prev-arrow'
              });
 
 }); // END head.ready

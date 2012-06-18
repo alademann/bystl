@@ -116,14 +116,38 @@ a {
 		}
 	} // END .cat-item <li><a>
 
-	.small-footer & {
-		color: $gray;
-		font-weight: bold;
-		font-style: italic;
-		text-decoration: underline;
-	} // END .small-footer <a>
-
 } // END <a>
+
+.small-footer {
+	color: $bystl_tan_darkest;
+	text-shadow: 0 1px 0 $white;
+	a {
+		color: $bystl_brown_almstBlk;
+		&:hover {
+			color: $linkColorHover;
+			text-decoration: none;
+		}
+	}
+	.breadcrumb { 
+		margin: 0;
+		padding: 0;
+		background: transparent;
+		border: 0 none;
+		@include box-shadow(none);
+
+		li {
+			&:after {
+				color: lighten($bystl_tan_darkest, 10%);
+				margin: 0 2px;
+				content: " / ";
+			}
+			&:last-child:after {
+				margin: 0;
+				content: "";
+			}
+		}
+	}
+} // END .small-footer
 
 /*	LISTS
 ---------------------------------------------- */
