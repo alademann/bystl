@@ -339,28 +339,29 @@ $metaFields2 = array(
 
 $metaFields3 = array(
 
-    array(
+  //   array(
 
-			'type' => 'img',
-			'name' => 'testimonials_avatar',
-			'title' => 'Avatar'
+		// 	'type' => 'img',
+		// 	'name' => 'testimonials_avatar',
+		// 	'title' => 'Avatar'
 
-		),
+		// ),
 		array(
 
 			'type' => 'text',
 			'name' => 'testimonials_link',
-			'title' => 'Link Text'
-
-		),
-
-    array(
-
-			'type' => 'text',
-			'name' => 'testimonials_url',
-			'title' => 'Link URL'
+			'title' => 'Testimonial Author'
 
 		)
+  //   ,
+
+  //   array(
+
+		// 	'type' => 'text',
+		// 	'name' => 'testimonials_url',
+		// 	'title' => 'Link URL'
+
+		// )
 
 	);
 
