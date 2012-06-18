@@ -4,8 +4,12 @@
 
       <?php if ( function_exists( 'get_option_tree' ) ) {
         $slides = get_option_tree( 'slides', $option_tree, false, true, -1 );
+        $i = 0;
+        $initClass = "";
         foreach( $slides as $slide ) {
-        echo '<div class="item"><img src="'.$slide['image'].'" alt="'.$slide['title'].'" /></div>';
+          if($i == 0){ $initClass = "active"; } else { $initClass = ""; }
+          echo '<div class="item '.$initClass.'"><img src="'.$slide['image'].'" alt="'.$slide['title'].'" /></div>';
+          $i = $i + 1;
         }
       } ?>
 

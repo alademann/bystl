@@ -5301,16 +5301,12 @@ a.thumbnail:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 75, sass/bootstrap/_carousel.scss */
-.js .carousel-control {
-  display: none;
-}
-/* line 102, sass/bootstrap/_carousel.scss */
+/* line 99, sass/bootstrap/_carousel.scss */
 .carousel-control.right {
   left: auto;
   right: 15px;
 }
-/* line 108, sass/bootstrap/_carousel.scss */
+/* line 105, sass/bootstrap/_carousel.scss */
 .carousel-control:hover {
   color: white;
   text-decoration: none;
@@ -5319,17 +5315,17 @@ a.thumbnail:hover {
 }
 
 @media only screen and (max-width: 979px) {
-  /* line 117, sass/bootstrap/_carousel.scss */
+  /* line 114, sass/bootstrap/_carousel.scss */
   .carousel-control {
-    display: none;
+    display: none !important;
   }
 
-  /* line 119, sass/bootstrap/_carousel.scss */
+  /* line 116, sass/bootstrap/_carousel.scss */
   .carousel {
     margin-top: 0;
   }
 
-  /* line 122, sass/bootstrap/_carousel.scss */
+  /* line 119, sass/bootstrap/_carousel.scss */
   #slider {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -5337,7 +5333,7 @@ a.thumbnail:hover {
     margin-right: -mobileGutter;
   }
 }
-/* line 133, sass/bootstrap/_carousel.scss */
+/* line 130, sass/bootstrap/_carousel.scss */
 .carousel-caption {
   position: absolute;
   left: 0;
@@ -5348,7 +5344,7 @@ a.thumbnail:hover {
   background: rgba(0, 0, 0, 0.75);
 }
 
-/* line 143, sass/bootstrap/_carousel.scss */
+/* line 140, sass/bootstrap/_carousel.scss */
 .carousel-caption h4,
 .carousel-caption p {
   color: white;

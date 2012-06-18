@@ -72,9 +72,6 @@
 // ---------------------------
 
 .carousel-control {
-  .js & {
-    display: none;
-  }
   position: absolute;
   top: 40%;
   left: 15px;
@@ -114,7 +111,7 @@
 
 // tablets and mobile devices
 @media only screen and (max-width: 979px) {
-  .carousel-control { display: none; }
+  .carousel-control { display: none !important; }
   // TODO: touch gesture controls?
   .carousel {
     margin-top: 0;
