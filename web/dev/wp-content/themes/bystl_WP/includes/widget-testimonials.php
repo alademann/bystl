@@ -97,7 +97,7 @@ class dd_testimonials_widget extends WP_Widget {
 
                                         <?php if(get_post_meta(get_the_id(), 'ddtestimonials', true) != '') : //IF IT HAS AT LEAST ONE THUMB
 
-							//OUR THUMBNAILS
+							//OUR AUTHOR AVATAR THUMBNAIL
 							$testimonials = ddListGet('testimonials', get_the_ID());?>
 
                                   <img src="<?php echo $testimonials[0]['testimonials_avatar']; ?>" alt="" />
@@ -108,15 +108,15 @@ class dd_testimonials_widget extends WP_Widget {
                                   
                                     <div class="testimonial-widget-meta">
 
-                                        <span><?php the_title(); ?></span>
-                                        <a class="testimonial-url" href="<?php echo $testimonials[0]['testimonials_url']; ?>"><?php echo $testimonials[0]['testimonials_link']; ?></a>
+                                        <span class="testimonialTitle"><?php the_title(); ?></span>
+                                        <span class="testimonialAuthor"><?php echo $testimonials[0]['testimonials_link']?></span>
 
                                     </div>
 
                                 </div>
 
                                 
-                                <blockquote><p><?php the_content(); ?></p></blockquote>
+                                <blockquote class="testimonialQuote"><p><?php the_content(); ?></p></blockquote>
 
                             </li>
 

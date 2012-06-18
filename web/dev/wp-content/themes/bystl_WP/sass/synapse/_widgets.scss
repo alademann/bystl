@@ -29,7 +29,7 @@
 }
 .blog-widget-info {
 	float: right;
-	margin-left: 20px;
+	//margin-left: 20px;
 	//max-width: 223px;
 	width: auto;
 }
@@ -127,7 +127,7 @@
 }
 .testimonial p {
 	font-family: $serifFontFamily;
-	font-size: $baseFontSize - 1;
+	font-size: $baseFontSize;
 	line-height: 22px;
 	font-weight: normal;
 	text-shadow: -1px -1px rgba($black, 0.4);
@@ -150,7 +150,7 @@
 	width: auto;
 }
 .testimonial-widget-meta {
-	margin-left: 15px;
+	//margin-left: 15px;
 	float: right;
 	//max-width: 190px;
 	width: auto;

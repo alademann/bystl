@@ -13,7 +13,7 @@ function synergiePortfolioPosts() {
             array(
                 'labels' => array(
                     'name' => __('Portfolio Posts'),
-                    'singular_name' => __('Portfolio Posts')
+                    'singular_name' => __('Portfolio Post')
                 ),
                 'menu_position' => 5,
                 'supports' => array('title', 'author', 'thumbnail', 'editor', 'categories', 'comments'),

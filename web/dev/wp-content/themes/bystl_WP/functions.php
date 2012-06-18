@@ -343,24 +343,26 @@ $metaFields3 = array(
 
 			'type' => 'img',
 			'name' => 'testimonials_avatar',
-			'title' => 'Avatar'
+			'title' => 'Author Avatar'
 
 		),
 		array(
 
 			'type' => 'text',
 			'name' => 'testimonials_link',
-			'title' => 'Link Text'
-
-		),
-
-    array(
-
-			'type' => 'text',
-			'name' => 'testimonials_url',
-			'title' => 'Link URL'
+			'title' => 'Testimonial Author'
 
 		)
+  //   ,
+
+
+  //   array(
+
+		// 	'type' => 'text',
+		// 	'name' => 'testimonials_url',
+		// 	'title' => 'Link URL'
+
+		// )
 
 	);
 

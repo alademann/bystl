@@ -34,7 +34,7 @@ function synapsetestimonialsPosts() {
 			array(
 
 				'hierarchical' => true,
-				'label' => 'testimonials Categories'
+				'label' => 'Testimonials Categories'
 
 			)
 
