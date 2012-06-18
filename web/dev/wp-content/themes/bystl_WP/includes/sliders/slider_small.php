@@ -1,12 +1,10 @@
-<div class="slider clearfix">
-
-            <div class="container-fluid">
+<div class="slider container-fluid clearfix">
 
                 <div class="row-fluid">
 
                     <div class="span-one-third slider-intro">
 
-                        <h1><?php echo get_option_tree('slider_title') ?></h1>
+                        <p><strong class="h1"><?php echo get_option_tree('slider_title') ?></strong></p>
 
                         <p><?php echo get_option_tree('slider_text') ?></p>
                         
@@ -78,7 +76,5 @@
                     </div>
 
                 </div>
-
-            </div>
 
         </div>

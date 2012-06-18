@@ -4,7 +4,7 @@
 
                 <div class="row-fluid">
 
-                    <div class="large-slider span-two-thirds">
+                    <div class="large-slider">
 
                         <div id="slider-thumbs">
 

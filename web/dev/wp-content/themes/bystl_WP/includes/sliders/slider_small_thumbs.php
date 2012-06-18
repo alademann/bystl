@@ -6,7 +6,7 @@
 
                         <div class="span-one-third slider-intro">
 
-                        <h1><?php echo get_option_tree('slider_title') ?></h1>
+                        <p><strong class="h1"><?php echo get_option_tree('slider_title') ?></strong></h1>
 
                         <p><?php echo get_option_tree('slider_text') ?></p>
 

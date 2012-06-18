@@ -1,0 +1,247 @@
+/*----------------------------------------------
+
+	PARTIAL:	_slider.scss
+	PARENT:		_theme-synapse.scss
+
+ ----------------------------------------------*/
+ 
+$contentSliderImgH: 330px !default;
+$contentSliderImgW: 620px !default;
+$sliderWideImgW: 940px !default;
+$slideWideImgH:  500px !default;
+
+.slider ul { 
+	margin: 0 !important;
+}
+.span-two-thirds {
+	@extend .span#{round($gridColumns * (2/3))};
+	//@debug "TWO THIRDS: .span#{round($gridColumns * (2/3))}";
+}
+.span-one-third {
+	@extend .span#{round($gridColumns * (1/3))};
+	//@debug "ONE THIRD: .span#{round($gridColumns * (1/3))}";
+}
+
+/*	SLIDER ARROWS
+---------------------------------------------- */ 
+
+#prev-arrow, #next-arrow {
+	text-indent: -9999px !important;
+	display: block;
+	width: 20px;
+	height: 32px;
+}
+#prev-arrow {
+	background: url('img/prev-arrow.png') no-repeat;
+	position: absolute;
+	left: -80px;
+	top: 40%;
+}
+#prev-arrow:active  {
+	background: url('img/prev-arrow.png') no-repeat bottom left;
+}
+#next-arrow {
+	background: url('img/next-arrow.png') no-repeat;
+	position: absolute;
+	right: -80px;
+	top: 40%;
+}
+#next-arrow:active  {
+	background: url('img/next-arrow.png') no-repeat bottom left;
+}
+
+/*	SLIDERS
+---------------------------------------------- */ 
+
+// if js is enabled, hide the image containers initially to prevent flicker
+.js .slider li {
+	display: none; // script will reveal
+}
+
+.simple-slider li {
+	height: 407px;
+}
+.content-slider {
+	//padding-bottom: 20px;
+	position: relative;
+	min-height: $contentSliderImgH;
+	height: auto; 
+	background: none !important;
+	//overflow: hidden;
+}
+.content-slider li {
+	background: none !important;
+	width: 100% !important;
+	height: auto !important;
+}
+.slider, .slider-intro, .slider-intro-right, .slider-intro-left {
+	margin-top: $mobileGutter;
+}
+.slider {
+	position: relative;
+}
+#slider {
+	position: relative;
+	margin-bottom: 428px;
+}
+#slider-thumbs {
+	position: relative;
+	margin-bottom: 465px;
+}
+
+@mixin sliderNav {
+
+
+	.slider-nav, .slider-nav-thumbs, .slider-nav-wide {
+		background: rgb(70,75,77); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(70,75,77,1) 0%, rgba(48,51,53,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(70,75,77,1)), color-stop(100%,rgba(48,51,53,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(70,75,77,1) 0%,rgba(48,51,53,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(70,75,77,1) 0%,rgba(48,51,53,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(70,75,77,1) 0%,rgba(48,51,53,1) 100%); /* IE10+ */
+		background: linear-gradient(top,  rgba(70,75,77,1) 0%,rgba(48,51,53,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464b4d', endColorstr='#303335',GradientType=0 ); /* IE6-9 */
+		text-align: center;
+		border: 1px solid #1f1f1f;
+		-moz-box-shadow: inset 0 1px 0 rgba(255,255,255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+		-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+		-o-box-shadow: inset 0 1px 0 rgba(255,255,255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+		-moz-border-radius: 0 0 5px 5px;
+		-webkit-border-radius: 0 0 5px 5px;
+		-o-border-radius: 0 0 5px 5px;
+		position: absolute;
+		z-index: 2;
+		bottom: -388px;
+		left: 0;
+		width: 618px;
+	}
+	.slider-nav-thumbs {
+		bottom: -426px;
+	}
+	.slider-nav-wide, .slider-nav-wide-thumbs {
+		width: 938px;
+	}
+	.slider-nav li, .slider-nav-thumbs li, .slider-nav-wide li {
+		float: left;
+		padding: 20px 0;
+	}
+	.slider-nav a, .slider-nav-thumbs a, .slider-nav-wide a {
+		color: #969696;
+		font-size: 13px;
+		text-shadow: -1px -1px 0 rgba(0,0,0, 0.5);
+		margin-left: 15px;
+		padding-left: 15px;
+		font-weight: bold;
+		-moz-transition:color 0.3s ease-in;
+		-webkit-transition:color 0.3s ease-in;
+		-o-transition:color 0.3s ease-in;
+	}
+	.slider-nav a:hover, .slider-nav-thumbs a:hover, .slider-nav-wide a:hover {
+		text-decoration: none;
+		color: #fff;
+	}
+	.slider-nav-wide-thumbs a {
+		padding-left: 8px !important;
+	}
+	.slider-nav-thumbs a {
+		opacity: 0.3;
+		padding-left: 6px;
+		-moz-transition:opacity 0.3s ease-in;
+		-webkit-transition:opacity 0.3s ease-in;
+		-o-transition:opacity 0.3s ease-in;
+	}
+	.slider-nav-thumbs a:hover {
+		opacity: 1;
+	}
+	.slider-nav-thumbs a img {
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-o-border-radius: 5px;
+		border: 4px solid #fff;
+		-moz-box-shadow: 0 1px 3px rgba(0,0,0, 0.5);
+		-webkit-box-shadow: 0 1px 3px rgba(0,0,0, 0.5);
+		-o-box-shadow: 0 1px 3px rgba(0,0,0, 0.5);
+	}
+	.slider-nav-thumbs .activeSlide a {
+		position: relative;
+		opacity: 1;
+	}
+	.slider-nav .activeSlide a, .slider-nav-wide .activeSlide a {
+		font-size: 13px;
+		background: rgb(36,39,40); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(36,39,40,1) 1%, rgba(40,43,44,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(36,39,40,1)), color-stop(100%,rgba(40,43,44,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(36,39,40,1) 1%,rgba(40,43,44,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(36,39,40,1) 1%,rgba(40,43,44,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(36,39,40,1) 1%,rgba(40,43,44,1) 100%); /* IE10+ */
+		background: linear-gradient(top,  rgba(36,39,40,1) 1%,rgba(40,43,44,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242728', endColorstr='#282b2c',GradientType=0 ); /* IE6-9 */
+		color: #cecece !important;
+		padding: 6px 17px;
+		margin-left: 30px;
+		position: relative;
+		-moz-border-radius: 99px 99px 99px 99px;
+		-webkit-border-radius: 99px 99px 99px 99px;
+		-o-border-radius: 99px 99px 99px 99px;
+		-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
+		-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
+		-o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6) inset;
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+	}
+	.slider-nav-thumbs .activeSlide a:before {
+		content: url("img/slider-nav-arrow.png");
+		left: 40%;
+		position: absolute;
+		top: -71px;
+	}
+	.activeSlide a:before {
+		content: url("img/slider-nav-arrow.png");
+		left: 40%;
+		position: absolute;
+		top: -26px;
+	}
+
+} // END @mixin sliderNav
+@include sliderNav;
+
+.large-slider, .large-slider .images-wide, .large-slider .images-wide-thumb  {
+	max-width: $sliderWideImgW;
+	width: auto;
+}
+.images, .images-wide, .images-wide-thumb, .images-thumb {
+	overflow: hidden;
+}
+.images, .images-thumb, .images-wide, .images-wide-thumb {
+	margin-bottom: -2px;
+	max-width: $contentSliderImgW;
+	width: auto;
+	max-height: $contentSliderImgH;
+	height: auto;
+	position: absolute;
+	z-index: 1;
+	@include box-shadow(0 3px 1px rgba($black, 0.3));
+}
+
+.simple-slider img, .img-container img, .portfolio-single-img {
+	@include border-radius(5px);
+	@include box-shadow(0 2px 3px rgba($black, 0.1));
+}
+
+.images img, .images-thumb img, .images-wide img, .images-wide-thumb img {
+	@include border-top-radius(5px);
+}
+
+/*! RESPONSIVE SLIDER STYLES */
+
+@media (max-width: 767px) {
+	// at this width, grid columns no longer float side by side... they are stacked.
+	.row-fluid .slider .span-one-third, .row-fluid .slider .span-two-thirds,
+	.row-fluid .slider [class*="span"] { width: auto !important; float: right !important; }
+
+	.content-slider {
+		min-height: 435px;
+	}
+
+} // END: @media (max-width: 767px)
+
+
