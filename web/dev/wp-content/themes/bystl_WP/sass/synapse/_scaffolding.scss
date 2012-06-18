@@ -50,6 +50,15 @@ body {
 
 } // END body
 
+.span-two-thirds {
+	@extend .span#{round($gridColumns * (2/3))};
+	//@debug "TWO THIRDS: .span#{round($gridColumns * (2/3))}";
+}
+.span-one-third {
+	@extend .span#{round($gridColumns * (1/3))};
+	//@debug "ONE THIRD: .span#{round($gridColumns * (1/3))}";
+}
+
 .page-container {
 	margin-top: 40px;
 } // END .page-container
