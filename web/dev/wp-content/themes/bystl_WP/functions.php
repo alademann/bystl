@@ -300,9 +300,9 @@ function kriesi_pagination($pages = '', $range = 2)
 }
 
 $portfolioInclude = TEMPLATEPATH . '/includes/functions/portfolio/portfolio.php';
-$testimonialsInclude = TEMPLATEPATH . '/includes/functions/testimonials/testimonials.php';
+//$testimonialsInclude = TEMPLATEPATH . '/includes/functions/testimonials/testimonials.php';
+//include($testimonialsInclude);
 include($portfolioInclude);
-include($testimonialsInclude);
 
 
 $metaFields = array(
@@ -337,34 +337,34 @@ $metaFields2 = array(
 
 	);
 
-$metaFields3 = array(
+// $metaFields3 = array(
 
-    array(
+//     array(
 
-			'type' => 'img',
-			'name' => 'testimonials_avatar',
-			'title' => 'Author Avatar'
+// 			'type' => 'img',
+// 			'name' => 'testimonials_avatar',
+// 			'title' => 'Author Avatar'
 
-		),
-		array(
+// 		),
+// 		array(
 
-			'type' => 'text',
-			'name' => 'testimonials_link',
-			'title' => 'Testimonial Author'
+// 			'type' => 'text',
+// 			'name' => 'testimonials_link',
+// 			'title' => 'Testimonial Author'
 
-		)
-  //   ,
+// 		)
+//     ,
 
 
-  //   array(
+//     array(
 
-		// 	'type' => 'text',
-		// 	'name' => 'testimonials_url',
-		// 	'title' => 'Link URL'
+// 			'type' => 'text',
+// 			'name' => 'testimonials_url',
+// 			'title' => 'Link URL'
 
-		// )
+// 		)
 
-	);
+// 	);
 
 $metaFields4 = array(
 
@@ -381,7 +381,7 @@ $metaFields4 = array(
 ddCreateNewListMetabox('portfolioSlider', $metaFields, 'portfolio_posts', 'high', 'Item Slider');
 ddCreateNewListMetabox('portfolioBG', $metaFields4, 'portfolio_posts', 'high', 'Custom Portfolio BG');
 ddCreateNewListMetabox('blogImg', $metaFields2, 'post', 'high', 'Blog Image');
-ddCreateNewListMetabox('testimonials', $metaFields3, 'testimonials_posts', 'high', 'Testimonial Info');
+//ddCreateNewListMetabox('testimonials', $metaFields3, 'testimonials', 'high', 'Testimonial Info');
 
 
 add_filter( 'image_slider_fields', 'new_slider_fields', 10, 2 );

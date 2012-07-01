@@ -1,0 +1,152 @@
+/****************************************
+ * IQ Testimonials
+ * Main CSS Rules
+ *
+ * Author: Roger MacRae
+ * Author URI: http://www.rogermacrae.com
+ ****************************************/
+ 
+
+#iq-testimonials-label {
+  float: left;
+  width: 100px;
+}
+
+#iq-testimonials-input {
+  width: 300px;
+}
+
+.iq-testimonial-wrap {
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.iq-testimonial-wrap {
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.iq-testimonial-featured-wrap {
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.iq-testimonials-success {
+  color:#090;
+  font-weight:bold;
+  padding:0;
+  font-size:12px;
+}
+.iq-testimonials-error {
+  color:#f00;
+  font-weight:bold;
+  padding:0;
+}
+
+/*  TESTIMONIALS WIDGET
+---------------------------------------------- */
+.footer .testimonials {
+  //max-width: 218px;
+  width: auto !important;
+}
+.footer .testimonials blockquote {
+  //max-width: 125px;
+  width: auto !important;
+}
+.footer .testimonial-widget-meta {
+  //max-width: 116px;
+  width: auto !important;
+}
+.testimonials, .sidebar-testimonials {
+  @include darkBlueWidget;
+  margin-top: 20px;
+  color: lighten($bystl_blue_medium, 2%);
+  font-size: $baseFontSize;
+  text-shadow: -1px -1px rgba($black, 0.4);
+  line-height: 17px;
+  font-weight: bold;
+}
+.testimonial p {
+  font-family: $serifFontFamily;
+  font-size: $baseFontSize;
+  line-height: 22px;
+  font-weight: normal;
+  text-shadow: -1px -1px rgba($black, 0.4);
+  color: #959595;
+}
+.testimonial {
+  padding: 20px;
+}
+.testimonial-widget-info {
+  float: left;
+  margin-bottom: 10px;
+}
+.testimonial-widget-info img {
+  @include border-radius(5px);
+  float: left;
+  @include box-shadow(0 1px 2px rgba($black, 0.35));
+}
+.sidebar .testimonial-widget-meta {
+  //max-width: 148px;
+  width: auto;
+}
+.testimonial-widget-meta {
+  //margin-left: 15px;
+  float: right;
+  //max-width: 190px;
+  width: auto;
+  margin-top: 5px;
+}
+.testimonial-widget-meta span {
+  color: #b7b7b7;
+}
+.testimonial-widget-meta a {
+  color: #848484 !important;
+  font-family: $serifFontFamily;
+  font-weight: normal;
+  font-size: $baseFontSize - 1;
+  @include display(block);
+  font-style: italic;
+}
+.sidebar-testimonials blockquote {
+  margin: 10px 10px 10px 40px;
+}
+.testimonials blockquote {
+  font-family: $serifFontFamily;
+  font-size: $baseFontSize - 1;
+  line-height: 22px;
+  position: relative;
+  margin-top: 20px;
+  margin: 1em 10px 1em 40px;
+  margin-bottom: 5px;
+  padding-top: 0 !important;
+  float: left;
+  font-weight: normal;
+  position: relative;
+}
+.sidebar-testimonials blockquote:after {
+  color: #c5cad1;
+  content: '"';
+  font-family: $sansFontFamily;
+  font-style: italic;
+  font-size: 3em;
+  left: -36px;
+  margin-right: 0.25em;
+  position: absolute;
+  top: 56px;
+  font-weight: normal;
+}
+.testimonials blockquote:after {
+  color: #c5cad1;
+  content: '"';
+  font-family: $sansFontFamily;
+  font-style: italic;
+  font-size: 5em;
+  left: -42px;
+  margin-right: 0.25em;
+  position: absolute;
+  top: 22px;
+}
