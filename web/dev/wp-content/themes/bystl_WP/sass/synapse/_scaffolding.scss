@@ -58,6 +58,11 @@ body {
 	@extend .span#{round($gridColumns * (1/3))};
 	//@debug "ONE THIRD: .span#{round($gridColumns * (1/3))}";
 }
+#alternate .iq-testimonials, #alternate .iq-testimonials.span-one-third {
+	// override the one-thirds widget width and make it go two spans
+	@extend .span#{round($gridColumns * (2/3))};
+	//@debug "TWO THIRDS: .span#{round($gridColumns * (2/3))}";
+}
 
 .page-container {
 	margin-top: 40px;

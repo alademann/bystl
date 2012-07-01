@@ -16,6 +16,12 @@
 	margin-right: 0;
 }
 
+.tweet, .blog-widget, .blog-slider {
+	#alternate &, .footer & {
+		width: auto !important;
+	}
+}
+
 
 /*	BLOG WIDGET
 ---------------------------------------------- */

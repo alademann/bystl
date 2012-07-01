@@ -168,7 +168,7 @@ register_sidebar(array(
 if (function_exists('register_sidebar')) {
 register_sidebar(array(
 'name' => 'Single Portfolio Post',
-'before_widget' => '<li class="widget">',
+'before_widget' => '<li class="widget %2$s" id="%1$s">',
 'after_widget' => '</li>',
 'before_title' => '<h3>',
 'after_title' => '</h3>',
@@ -177,7 +177,7 @@ register_sidebar(array(
 if (function_exists('register_sidebar')) {
 register_sidebar(array(
 'name' => 'Blog',
-'before_widget' => '<li class="widget">',
+'before_widget' => '<li class="widget %2$s" id="%1$s">',
 'after_widget' => '</li>',
 'before_title' => '<h3>',
 'after_title' => '</h3>',
@@ -186,7 +186,7 @@ register_sidebar(array(
 if (function_exists('register_sidebar')) {
 register_sidebar(array(
 'name' => 'Single Blog Post',
-'before_widget' => '<li class="widget">',
+'before_widget' => '<li class="widget %2$s" id="%1$s">',
 'after_widget' => '</li>',
 'before_title' => '<h3>',
 'after_title' => '</h3>',
@@ -195,7 +195,7 @@ register_sidebar(array(
 if (function_exists('register_sidebar')) {
 register_sidebar(array(
 'name' => 'Dark Footer',
-'before_widget' => '<li class="span-one-third">',
+'before_widget' => '<li class="span-one-third %2$s" id="%1$s">',
 'after_widget' => '</li>',
 'before_title' => '<h3>',
 'after_title' => '</h3>',
@@ -204,7 +204,7 @@ register_sidebar(array(
 if (function_exists('register_sidebar')) {
 register_sidebar(array(
 'name' => 'Light Footer',
-'before_widget' => '<div class="span5">',
+'before_widget' => '<div class="span-one-third %2$s" id="%1$s">',
 'after_widget' => '</div>',
 'before_title' => '<h3>',
 'after_title' => '</h3>',

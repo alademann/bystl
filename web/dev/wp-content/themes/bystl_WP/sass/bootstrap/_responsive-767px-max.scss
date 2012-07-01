@@ -150,7 +150,7 @@
   .row-fluid [class*="span"] {
     float: none;
     display: block;
-    width: auto;
+    width: auto !important;
     margin-left: 0;
   }
 
