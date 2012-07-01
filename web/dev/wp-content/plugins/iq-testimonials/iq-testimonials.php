@@ -271,24 +271,24 @@ function iq_testimonials($id='', $is_shortcode){
 		while ($data = mysql_fetch_array($results)){
 			// Setting the testimonial information to variables for easy access
 			if (($data['featured'] == 1) && (!$dynamically_rotate == true)) {
-				$featuredpre = '<div class="iq-testimonial-featured-wrap">';
+				$featuredpre = '<li class="testimonial iq-testimonial-featured-wrap">';
 			}
 			else
 			{
-				$featuredpre = '<div class="iq-testimonial-wrap">';
+				$featuredpre = '<li class="testimonial iq-testimonial-wrap">';
 			}
 
 			$name = stripslashes($data['name']);
-			if (!empty($name)) {$name = '~'.$name;}
+			//if (!empty($name)) {$name = '~'.$name;}
 			
 			$location = stripslashes($data['location']);
-			if ((!empty($name)) && (!empty($location))) {$location = ', '.$location;}
+			//if ((!empty($name)) && (!empty($location))) {$location = ', '.$location;}
 			$quote = stripslashes($data['quote']);
 			$websitepre = '';
 			$websitesuf = '';
 			$website = str_replace('http://','',$data['website']);
 				if (!empty($website)){					
-					$websitepre = '<br /><a href="http://'.$website.'" target="_blank">';
+					$websitepre = '<a href="http://'.$website.'" target="_blank" rel="nofollow">';
 					$websitesuf = '</a>';
 				}
 			$imagelink = $data['imagelink'];
@@ -300,19 +300,26 @@ function iq_testimonials($id='', $is_shortcode){
 					} else {
    						$height = $max_image_width/$ratio_orig;
 					}
-					$imagelink = '<img class="alignleft" src="'.$imagelink.'" width="'.$width.'" height="'.$height.'" />';
-				}			
+					$imagelink = '<img alt="' . $name . '" src="'.$imagelink.'" width="45" height="45" />';
+				} else {
+					$imagelink = '<img alt="default user icon" src="'.get_bloginfo('template_url').'/img/default-user-icon.png" width="45" height="45" />';
+				}
 	
 			// Final HTML Output
+			$nomatterWhat = '<div class="testimonial-widget-info">' . $imagelink . ' <div class="testimonial-widget-meta"><span class="name">' . $websitepre . $name . $websitesuf . '</span> <span class="location">' . $location . '</span></div></div><div class="clearfix"></div><blockquote>'. $quote . '</blockquote></li>';
+
 			if ((!$is_shortcode == true) && ($dynamically_rotate == true) && ($i > 1)) {
-			$theTestimonial .= '<div class="iq-testimonial-wrap" style="display: none;">' . $imagelink .' <blockquote>'. $quote . '</blockquote> <span class="testimonialAuthor"><strong class="name">' . $name . '</strong> <em class="location">' . $location . '</em> <em class="site">' . $websitepre . $website . $websitesuf . "</em></span></div>";
+				$theTestimonial .= '<li class="testimonial iq-testimonial-wrap" style="display: none;">';
+				$theTestimonial .= $nomatterWhat;
 			}
 			else
 			{
-			$theTestimonial .= $featuredpre . $imagelink .' <blockquote>'. $quote . '</blockquote> <span class="testimonialAuthor"><strong class="name">' . $name . '</strong> <em class="location">' . $location . '</em> <em class="site">' . $websitepre . $website . $websitesuf . "</em></span></div>";
+				$theTestimonial .= $featuredpre;
+				$theTestimonial .= $nomatterWhat;
 			}
+
+
 			$i++;
-			//echo $theTestimonial;
 		}
 		mysql_free_result($results);
 		
@@ -332,13 +339,15 @@ function iq_testimonials($id='', $is_shortcode){
 		$rotate_script .= '	},'.$rotation_speed.');';
 		$rotate_script .= '	});';
 		$rotate_script .= '	</script>';
+
+		$testimonialPager = '<div class="testimonial-pager"><div id="testimonial-pager"></div></div>';
 		
 		//return $rotate_script.$theTestimonial;
-		return $rotate_script.'<div id="iq-testimonials-box">'.$theTestimonial.'</div>';
+		return '<ul class="testimonials" id="iq-testimonials-box">'.$theTestimonial.'</ul>'.$testimonialPager;
 	}
 	else
 	{
-		return $theTestimonial;
+		return '<ul class="testimonials" id="iq-testimonials-box">'.$theTestimonial.'</ul>';
 	}
 	}
 //}

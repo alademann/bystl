@@ -299,10 +299,10 @@ function kriesi_pagination($pages = '', $range = 2)
      }
 }
 
-$portfolioInclude = TEMPLATEPATH . '/includes/functions/portfolio/portfolio.php';
+//$portfolioInclude = TEMPLATEPATH . '/includes/functions/portfolio/portfolio.php';
 //$testimonialsInclude = TEMPLATEPATH . '/includes/functions/testimonials/testimonials.php';
 //include($testimonialsInclude);
-include($portfolioInclude);
+//include($portfolioInclude);
 
 
 $metaFields = array(

@@ -48,15 +48,22 @@
 
 /*  TESTIMONIALS WIDGET
 ---------------------------------------------- */
-.footer .testimonials {
+ul.testimonials {
+  margin-left: 0 !important; 
+  margin-right: 0 !important;
+}
+.footer .testimonials,
+#alternate .testimonials, {
   //max-width: 218px;
   width: auto !important;
 }
-.footer .testimonials blockquote {
+.footer .testimonials blockquote,
+#alternate .testimonials blockquote {
   //max-width: 125px;
   width: auto !important;
 }
-.footer .testimonial-widget-meta {
+.footer .testimonial-widget-meta,
+#laternate .testimonial-widget-meta {
   //max-width: 116px;
   width: auto !important;
 }
@@ -94,16 +101,22 @@
   width: auto;
 }
 .testimonial-widget-meta {
-  //margin-left: 15px;
+  margin-left: 15px; // space away from the avatar img
   float: right;
   //max-width: 190px;
   width: auto;
   margin-top: 5px;
+
+  &.noimage {
+    margin-left: 0; // there is no avatar img
+  }
+
 }
-.testimonial-widget-meta span {
+.testimonial-widget-meta .name {
   color: #b7b7b7;
+  font-weight: bold;
 }
-.testimonial-widget-meta a {
+.testimonial-widget-meta .location {
   color: #848484 !important;
   font-family: $serifFontFamily;
   font-weight: normal;
@@ -111,12 +124,17 @@
   @include display(block);
   font-style: italic;
 }
+.sidebar-testimonials blockquote, 
+.testimonials blockquote {
+  padding: 0;
+  border-left: 0 none;
+}
 .sidebar-testimonials blockquote {
   margin: 10px 10px 10px 40px;
 }
 .testimonials blockquote {
   font-family: $serifFontFamily;
-  font-size: $baseFontSize - 1;
+  font-size: $baseFontSize;
   line-height: 22px;
   position: relative;
   margin-top: 20px;
@@ -130,7 +148,7 @@
 .sidebar-testimonials blockquote:after {
   color: #c5cad1;
   content: '"';
-  font-family: $sansFontFamily;
+  font-family: $serifFontFamily;
   font-style: italic;
   font-size: 3em;
   left: -36px;
@@ -142,11 +160,11 @@
 .testimonials blockquote:after {
   color: #c5cad1;
   content: '"';
-  font-family: $sansFontFamily;
+  font-family: $serifFontFamily;
   font-style: italic;
   font-size: 5em;
   left: -42px;
   margin-right: 0.25em;
   position: absolute;
-  top: 22px;
+  top: 12px;
 }
