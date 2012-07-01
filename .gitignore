@@ -33,4 +33,5 @@ STAFFPHOTOS
 *.scssc
 web/dev/wp-content/plugins/*
 web/dev/wp-content/media/*
+web/dev/wp-content/themes/bystl_WP/*.css
 
