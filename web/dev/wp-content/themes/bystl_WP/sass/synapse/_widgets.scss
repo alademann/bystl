@@ -173,13 +173,16 @@
 	li {
 		margin-top: 20px;
 		
-		a {
-			font-family: $serifFontFamily;
-			font-style: italic;
-			font-weight: bold;
-			font-size: $baseFontSize - 2;	
-		} // END .tweet_list <li><a>
+		// a {
+		// 	font-family: $serifFontFamily;
+		// 	font-style: italic;
+		// 	font-weight: bold;
+		// 	font-size: $baseFontSize - 2;	
+		// } // END .tweet_list <li><a>
 	} // END .tweet_list <li>
+	li:first-child {
+		margin-top: 0;
+	}
 } // END .tweet_list
 
 

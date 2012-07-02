@@ -28,7 +28,8 @@ h3 {
 	} // END .sidebar .blog-widget <h3>
 
 	.footer & {
-		border-bottom: 1px solid #3e536b;
+		text-shadow: none;
+		border-bottom: 1px solid $bystl_tan_medium;
 		padding-bottom: 5px;
 		//margin-bottom: 20px;
 	} // END .footer <h3>
