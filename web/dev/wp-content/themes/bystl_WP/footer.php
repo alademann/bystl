@@ -1,75 +1,59 @@
-<?php if(function_exists('bcn_display') && !is_home()) { ?>
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div id="crumbs" class="span16">
-            <ul class="breadcrumb">
-                <?php bcn_display(); ?>
-            </ul>
-        </div>
-    </div>
-</div>
-<?php } ?>
-
- <div id="alternate">
-
-    <div class="container-fluid">
-
-        <div class="row-fluid clearfix">
-
-            <ul class="span16">
-
-           
-
-                  <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Dark Footer")); ?>
-
-                
-
-            </ul>
-
-        </div>
-
-    </div>
-</div>
-
-        <div class="footer">
-
-            <div class="container-fluid">
-
+        <?php if(function_exists('bcn_display') && !is_home()) { ?>
+        <div class="container-fluid">
             <div class="row-fluid">
-
-                
-                    <div class="span16">
-
- <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Light Footer")); ?>
-                    </div>
-
-                
-
+                <div id="crumbs" class="span16">
+                    <ul class="breadcrumb">
+                        <?php bcn_display(); ?>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+        <?php } ?>
+
+        <div id="alternate">
+            <div class="container-fluid">
+                <div class="row-fluid clearfix">
+                    <ul class="span16">
+                        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Dark Footer")); ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- END: #alternate -->
+
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span16">
+                        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Light Footer")); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END: #footer -->
 
         <div class="small-footer">
             <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="footer-left span8">
-                    Copyright &copy; Bikram Yoga St. Louis <?php echo date("Y"); ?>
-                    <?php echo get_option_tree('footer_left_content'); ?>
-                </div>
+                <div class="row-fluid">
+                    <div class="footer-left span8">
+                        Copyright &copy; Bikram Yoga St. Louis <?php echo date("Y"); ?>
+                        <?php echo get_option_tree('footer_left_content'); ?>
+                    </div>
 
-                <div class="footer-right span8">
-                    <ul class="breadcrumb pull-right">
-                        <li><a href="about/contact-us/">Contact</a></li>
-                        <?php wp_list_pages('post_status=publish&title_li=&depth=1'); ?>
-                    </ul>
-                    <?php echo get_option_tree('footer_right_content'); ?>
+                    <div class="footer-right span8">
+                        <ul class="breadcrumb pull-right">
+                            <li><a href="about/contact-us/">Contact</a></li>
+                            <?php wp_list_pages('post_status=publish&title_li=&depth=1'); ?>
+                        </ul>
+                        <?php echo get_option_tree('footer_right_content'); ?>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
+        <!--- END: .small-footer -->
 
     </div>
-    <!-- END: container-fluid -->
+    <!-- END: #pageWrapper -->
 
 <!-- SCRIPTS GO HERE -->
 <script type="text/javascript">

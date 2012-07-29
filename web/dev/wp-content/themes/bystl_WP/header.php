@@ -97,14 +97,12 @@ if(is_subpage()){
     <?php wp_reset_query(); ?>
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
-
             <div class="container-fluid">
-
-              <a class="btn btn-navbar mainmenu" data-toggle="collapse" data-target=".nav-collapse">
+                <a class="btn btn-navbar mainmenu" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-              </a>
+                </a>
 
             <?php if (get_option_tree('tagline') == 'Yes') { ?>
 
@@ -113,56 +111,54 @@ if(is_subpage()){
                 $bystl_tagline = get_option_tree('tagline_text');
                 $bystl_wds = explode(" ", $bystl_tagline);
             ?>
-              <a class="brand" href="<?php bloginfo('url'); ?>">
+                <a class="brand" href="<?php bloginfo('url'); ?>">
                 <img src="<?php echo get_bloginfo('template_url') ?>/img/bystl_header-logo_symbol_navbar.png" alt="BYSTL Logo" />
                 <span><strong><?php echo $bystl_wds[0] . ' ' . $bystl_wds[1]; ?></strong> <?php echo $bystl_wds[2]; ?> <?php echo $bystl_wds[3]; ?></span>
                 <i> bystl</i>
-              </a>
+                </a>
             <?php } ?>
 
-            <div id="socialNavbar" class="pull-right" data-no-collapse="true">
-                <?php if (get_option_tree('twitter_icon') == 'Yes') { ?>
-                <a class="btn btn-navbar" href="https://twitter.com/<?php echo get_option_tree('twitter_url') ?>"><span class="icon-twitter icon-only"></span></a>
-                <?php } ?><?php if (get_option_tree('facebook_icon') == 'Yes') { ?>
-                <a class="btn btn-navbar" href="<?php echo get_option_tree('facebook_url') ?>"><span class="icon-facebook icon-only"></span></a>
-                <?php } ?><?php if (get_option_tree('phone_icon') == 'Yes') { ?>
-                <a class="hidden-phone btn btn-navbar" href="<?php echo site_url() . get_option_tree('phone_url') ?>"><span class="icon-phone icon-only"></span></a>
-                <?php } ?><?php if (get_option_tree('mail_icon') == 'Yes') { ?>
-                <a class="hidden-phone btn btn-navbar" href="<?php echo site_url() . get_option_tree('mail_url') ?>"><span class="icon-envelope icon-only"></span></a>
-                <?php } ?>
-            </div>
+                <div id="socialNavbar" class="pull-right" data-no-collapse="true">
+                    <?php if (get_option_tree('twitter_icon') == 'Yes') { ?>
+                    <a class="btn btn-navbar" href="https://twitter.com/<?php echo get_option_tree('twitter_url') ?>"><span class="icon-twitter icon-only"></span></a>
+                    <?php } ?><?php if (get_option_tree('facebook_icon') == 'Yes') { ?>
+                    <a class="btn btn-navbar" href="<?php echo get_option_tree('facebook_url') ?>"><span class="icon-facebook icon-only"></span></a>
+                    <?php } ?><?php if (get_option_tree('phone_icon') == 'Yes') { ?>
+                    <a class="hidden-phone btn btn-navbar" href="<?php echo site_url() . get_option_tree('phone_url') ?>"><span class="icon-phone icon-only"></span></a>
+                    <?php } ?><?php if (get_option_tree('mail_icon') == 'Yes') { ?>
+                    <a class="hidden-phone btn btn-navbar" href="<?php echo site_url() . get_option_tree('mail_url') ?>"><span class="icon-envelope icon-only"></span></a>
+                    <?php } ?>
+                </div>
 
-              <div class="nav-collapse">
+                <div class="nav-collapse">
 
-                 <?php wp_nav_menu(array(
-                                'container' => false, 
-                                'theme_location' => 'top_menu', 
-                                //'container_class' => 'nav pull-right',
-                                'menu_class' => 'nav pull-right', 
-                                //'items_wrap' => '%3$s',
-                                //'echo' => true, 
-                                //'before' => '<ul class="nav pull-right">', 
-                                //'after' => '</ul>', 
-                                //'link_before' => '', 
-                                //'link_after' => '', 
-                                'depth' => 2, 
-                                'walker' => new Bootstrap_Walker_Nav_Menu()
+                <?php wp_nav_menu(
+                    array(
+                        'container' => false, 
+                        'theme_location' => 'top_menu', 
+                        //'container_class' => 'nav pull-right',
+                        'menu_class' => 'nav pull-right', 
+                        //'items_wrap' => '%3$s',
+                        //'echo' => true, 
+                        //'before' => '<ul class="nav pull-right">', 
+                        //'after' => '</ul>', 
+                        //'link_before' => '', 
+                        //'link_after' => '', 
+                        'depth' => 2, 
+                        'walker' => new Bootstrap_Walker_Nav_Menu()
 
-                                )
-                 ); ?>
+                        )
+                 ); 
+                ?>
 
                 <!--<form class="navbar-search pull-left" action="">
                   <input type="text" class="search-query span2" placeholder="Search">
                 </form>-->
 
-                
-
-            </div>
-            <!-- END: nav-collapse -->
-
+                </div>
+                <!-- END: nav-collapse -->
             </div>
             <!-- END: container -->
-
         </div>
         <!-- END: navbar-inner -->
     </div>
@@ -173,60 +169,76 @@ if(is_subpage()){
             <div class="container-fluid">
                 <div class="row-fluid">
 
-                <div class="logo-container span5">
+                    <div class="logo-container span5">
 
-                    <a class="logo" href="<?php bloginfo('url'); ?>">
-                        <img src="<?php echo get_bloginfo('template_url') ?>/img/bystl_header-logo_symbol.png" alt="BYSTL Logo" />
-                        <?php if (get_option_tree('tagline') == 'Yes') { ?>
+                        <a class="logo" href="<?php bloginfo('url'); ?>">
+                            <img src="<?php echo get_bloginfo('template_url') ?>/img/bystl_header-logo_symbol.png" alt="BYSTL Logo" />
+                            <?php if (get_option_tree('tagline') == 'Yes') { ?>
 
-                        <?php 
-                            // break up the tagline by words
-                            $bystl_tagline = get_option_tree('tagline_text');
-                            $bystl_wds = explode(" ", $bystl_tagline);
-                        ?>
+                            <?php 
+                                // break up the tagline by words
+                                $bystl_tagline = get_option_tree('tagline_text');
+                                $bystl_wds = explode(" ", $bystl_tagline);
+                            ?>
 
-                            <?php if(is_home()) { echo "<h1>"; } else { echo "<span class='h1'>"; } ?><strong><?php echo $bystl_wds[0] . ' ' . $bystl_wds[1]; ?></strong> <?php echo $bystl_wds[2]; ?> <?php echo $bystl_wds[3]; ?>
-                            <?php if(is_home()) { echo "</h1>"; } else { echo "</span>"; } ?>
+                            <?php 
+                            if(is_home()) { 
+                                echo "<h1>";
+                            } else { 
+                                echo "<span class='h1'>"; 
+                            } 
+                            ?>
+                            <strong><?php echo $bystl_wds[0] . ' ' . $bystl_wds[1]; ?></strong> 
+                            <?php echo $bystl_wds[2]; ?> <?php echo $bystl_wds[3]; ?>
+
+                            <?php 
+                            if(is_home()) { 
+                                echo "</h1>"; 
+                            } else { 
+                                echo "</span>"; 
+                            } 
+                            ?>
                             <i> bystl</i>
-                        <?php }  ?>
-                    </a>
-                    
-                </div>
+                            <?php } ?>
+                        </a>
+                        
+                    </div>
+                    <!-- END: .logo-container -->
 
-                <div class="menu-container span11">
-                    <?php 
-                        function is_subpage(){
-                            global $post;
-                            if(is_page() && $post->post_parent){
-                                return $post->post_parent;
-                            } else {
-                                return false;
+                    <div class="menu-container span11">
+                        <?php 
+                            function is_subpage(){
+                                global $post;
+                                if(is_page() && $post->post_parent){
+                                    return $post->post_parent;
+                                } else {
+                                    return false;
+                                }
                             }
-                        }
-                    ?>
-                    <!-- TODO: For mobile, instead of making them all buttons... make them part of a dropdown (maybe within the breadcrumb???) basically, we wantthe H1 to be much more clear at the top on mobile - instead of having a cluster of buttons. -->
-                    <?php if(!is_home() && !is_front_page()){ ?>
-                    <ul class="<?php if(!$is_mobile){ echo 'nav nav-pills pull-right'; } else { echo 'hide'; }?> ">  
-                        <?php
-                            if(is_subpage()){
-                                //wp_list_pages('post_status=publish&title_li=&include='.$post->post_parent);
-                                wp_list_pages('post_status=publish&title_li=&child_of='.$post->post_parent);     
-                            } else {
-                                wp_list_pages('post_status=publish&title_li=&child_of='.$post->ID); 
-                            }
-                            
                         ?>
-                        <!--<li class="testiphonelandscapelink"><a href="javascript:window.open('http://yogastlouis.com/dev/about/', '', 'width=320,height=480')">test iphone landscape</a></li>-->
-                    </ul>
-                    <?php } ?>
+                        <!-- TODO: For mobile, instead of making them all buttons... make them part of a dropdown (maybe within the breadcrumb???) basically, we wantthe H1 to be much more clear at the top on mobile - instead of having a cluster of buttons. -->
+                        <?php if(!is_home() && !is_front_page()){ ?>
+                        <ul class="<?php if(!$is_mobile){ echo 'nav nav-pills pull-right'; } else { echo 'hide'; }?> ">  
+                            <?php
+                                if(is_subpage()){
+                                    //wp_list_pages('post_status=publish&title_li=&include='.$post->post_parent);
+                                    wp_list_pages('post_status=publish&title_li=&child_of='.$post->post_parent);     
+                                } else {
+                                    wp_list_pages('post_status=publish&title_li=&child_of='.$post->ID); 
+                                }
+                                
+                            ?>
+                            <!--<li class="testiphonelandscapelink"><a href="javascript:window.open('http://yogastlouis.com/dev/about/', '', 'width=320,height=480')">test iphone landscape</a></li>-->
+                        </ul>
+                        <?php } ?>
 
-                 <!--<php wp_nav_menu(array('container' => false, 'menu_id' => 'main-nav', 'theme_location' => 'main_menu',  'menu_class' => 'sf-menu', 'echo' => true, 'before' => '', 'after' => '', 'link_before' => '', 'fallback_cb' => 'display_home2', 'link_after' => '', 'depth' => 0 )); ?>-->
-                </div>
+                     <!--<php wp_nav_menu(array('container' => false, 'menu_id' => 'main-nav', 'theme_location' => 'main_menu',  'menu_class' => 'sf-menu', 'echo' => true, 'before' => '', 'after' => '', 'link_before' => '', 'fallback_cb' => 'display_home2', 'link_after' => '', 'depth' => 0 )); ?>-->
+                    </div>
+                    <!-- END: .menu-container -->
 
-                <div class="clearFix"></div>
+                    <div class="clearFix"></div>
 
                 </div>
             </div>
-
         </div>
         <!-- END: header -->
