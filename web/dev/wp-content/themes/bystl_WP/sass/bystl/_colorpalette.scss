@@ -164,7 +164,7 @@ $outerSh: rgba($bystl_blue_black, 0.35) !default;
 @mixin pageContentStyle {
   background: $white;
   margin-bottom: 30px;
-  padding: $pageContentPad;
+  padding: ($pageContentPad / 2) $pageContentPad;
   width: 100% - ($pageContentPad * 2);
   @include box-shadow(0 1px 1px rgba($black, 0.15));
   @include border-radius(5px);

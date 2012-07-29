@@ -107,7 +107,7 @@
 	$headingBasis: $size;
 
 	@for $i from 1 through 6 {
-		h#{$i} { 
+    h#{$i} { 
 			font-size: #{round($headingBasis)}px; 
 			line-height: #{round($headingBasis * $lineheight)}px; 
       margin-bottom: #{round($headingBasis / 2)}px;

@@ -32,7 +32,14 @@ h3 {
 		//padding-bottom: 7px;
 		color: $white;
 		text-shadow: 1px 1px 0 rgba($black, 0.5);
+		font-size: 16px;
+		margin-top: 20px;
+
 	} // END .widget <h3>
+
+	.sidebar .widget:first-child & {
+		margin-top: 0;
+	}
 
 	.sidebar .blog-widget & {
 		margin-bottom: 0;

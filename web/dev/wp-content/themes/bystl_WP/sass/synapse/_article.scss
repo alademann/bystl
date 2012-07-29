@@ -39,22 +39,22 @@
 	@include border-radius(5px);
 }
 .article-meta {
-	background: #73797e; /* Old browsers */
-	@include background-image(linear-gradient(#73797e, #90979f));
-	@include filter-gradient(#73797e, #90979f);
+	background: $almostWhite; /* Old browsers */
+	@include background-image(linear-gradient($almostWhite, darken($almostWhite,5%)));
+	@include filter-gradient($almostWhite, darken($almostWhite,5%));
 	@include border-radius(5px);
-	@include box-shadow(inset 0 1px 1px rgba($black, 0.4));
+	@include box-shadow(inset 0 1px 1px rgba($black, 0.15));
 	height: 40px;
 	padding: 11px 15px 10px 15px;
 	font-weight: bold;
-	color: $white !important;
-	text-shadow: 1px 1px 1px rgba($black, 0.4);
+	color: $bystl_blue_navy !important;
+	text-shadow: 1px 1px 1px rgba($white, 0.4);
+
+	a {
+		font-style: italic;
+	}
 }
-.article-meta a {
-	color: $white !important;
-	text-shadow: 1px 1px 1px rgba($black, 0.4);
-	font-style: italic;
-}
+
 .article-comments {
 	float: left;
 }

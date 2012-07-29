@@ -59,6 +59,12 @@
     }
     @include headingSize-generate($baseH1Size - 10, $headingRule - .2, $headingIncrement);
   }
+  .article-meta {
+    background: transparent;
+    @include box-shadow(none);
+    border: 0 none;
+    padding: 0;
+  }
 
 }
 
