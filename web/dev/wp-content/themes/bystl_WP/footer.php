@@ -89,11 +89,56 @@
 
 head.ready("bootstrap", function() {
 
-    <?php if (get_option_tree('auto') == 'Yes') {  $timeout = 4000; } else { $timeout = 0; } ?>
+    <?php if (get_option_tree('auto') == 'Yes') {  $timeout = 6000; } else { $timeout = 0; } ?>
 
     //var prepHeight = $('#large-slider').find(".item:first-child > img").height();
     //$('#large-slider').css("min-height", prepHeight);
 
+    // make the overlay content the same size as the image
+    var itemContent = $('.carousel .content');
+    findEmptyCaptions();
+    //setTimeout(matchSize, 2000);
+    matchSize();
+    
+
+    window.onresize = function(event) {
+        matchSize();
+    }
+
+    function findEmptyCaptions(){
+        $.each(itemContent, function(){
+            $(this).find("p:empty",".h1:empty").hide();
+        });
+    }
+
+    function matchSize(){
+        var carouselImg = $('.carousel .item:visible > img');
+        var imgHeight = $(carouselImg).height();
+        var imgWidth = $(carouselImg).width();
+        var singleContainer = $(".carousel .itemOverlay > .content");
+        var singleTitle = $(".carousel .itemOverlay > .content > .h1");
+        var singleCaption = $(".carousel .itemOverlay > .content > p");
+        var singleTitleHeight = $(singleTitle).height() + $(singleCaption).height();
+
+        console.log("singleTitleH: " + $(singleTitle).height());
+        console.log("singleCaptionH: " + $(singleCaption).height());
+
+        $(singleContainer).css({
+            width: imgWidth,
+            // top: imgHeight - singleTitleHeight
+        });
+
+        $.each(itemContent, function(){
+            $(this).css("height", imgHeight);
+        });
+
+        $(singleContainer).css({
+            // width: imgWidth,
+            top: imgHeight - singleTitleHeight - 20,
+            height: singleTitleHeight
+        });
+        
+    }
 
     $('.carousel').carousel({
         interval: <?php echo $timeout; ?>
@@ -101,57 +146,6 @@ head.ready("bootstrap", function() {
     // $('.carousel').bind('slide', function(){
     //     $(".carousel-control.left, .carousel-control.right", this).delay(500).show();
     // });
-
-/*
-    jQuery('.images').cycle({
-                fx:     'fade',
-                speed:    1500,
-                timeout:  <?php echo $timeout; ?>,
-                pager:  '.slider-nav',
-                pagerAnchorBuilder: function(idx, slide) {
-                    // return selector string for existing anchor
-                    return '.slider-nav li:eq(' + idx + ') a';}
-            });
-
-              jQuery('.images-thumb').cycle({
-                fx:     'fade',
-                speed:    1500,
-                timeout:  <?php echo $timeout; ?>,
-                pager:  '.slider-nav-thumbs',
-                pagerAnchorBuilder: function(idx, slide) {
-                    // return selector string for existing anchor
-                    return '.slider-nav-thumbs li:eq(' + idx + ') a';}
-            });
-
-             jQuery('.images-wide').cycle({
-                fx:     'fade',
-                speed:    1500,
-                timeout:  <?php echo $timeout; ?>,
-                pager:  '.slider-nav-wide',
-                pagerAnchorBuilder: function(idx, slide) {
-                    // return selector string for existing anchor
-                    return '.slider-nav-wide li:eq(' + idx + ') a';}
-            });
-
-              jQuery('.images-wide-thumb').cycle({
-                fx:     'fade',
-                speed:    1500,
-                timeout:  <?php echo $timeout; ?>,
-                pager:  '.slider-nav-thumbs',
-                pagerAnchorBuilder: function(idx, slide) {
-                    // return selector string for existing anchor
-                    return '.slider-nav-thumbs li:eq(' + idx + ') a';}
-            });
-
-        jQuery('.content-slider').cycle({
-                'fx' : 'fade',
-                'timeout' : <?php echo $timeout; ?>,
-                'pager' : '#content-slider-pager',
-                'next':   '#next-arrow',
-                'pause':   1,
-                'prev':   '#prev-arrow'
-             });
-*/
 
 
 }); // END head.ready

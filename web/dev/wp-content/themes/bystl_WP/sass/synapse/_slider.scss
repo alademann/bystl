@@ -4,183 +4,109 @@
 	PARENT:		_theme-synapse.scss
 
  ----------------------------------------------*/
- 
- 
-/*	SLIDER ARROWS
----------------------------------------------- */ 
 
-#prev-arrow, #next-arrow {
-	text-indent: -9999px !important;
-	@include display(block);
-	width: 20px;
-	height: 32px;
-}
-#prev-arrow {
-	background: url(image-url('prev-arrow.png', true)) no-repeat;
-	position: absolute;
-	left: -80px;
-	top: 40%
-}
-#prev-arrow:active  {
-	background: url(image-url('prev-arrow.png', true)) no-repeat bottom left;
-}
-#next-arrow {
-	background: url(image-url('next-arrow.png', true)) no-repeat;
-	position: absolute;
-	right: -80px;
-	top: 40%
-}
-#next-arrow:active  {
-	background: url(image-url('next-arrow.png', true)) no-repeat bottom left;
-}
+$sliderContentPad: 20px !default;
+$sliderH1Size: $baseH1Size + ($baseH1Size / 2) + 0px !default;
+$sliderH1LH: $sliderH1Size - 5 !default;
+$sliderH1hugeMod: 20 !default;
 
-/*	SLIDERS
----------------------------------------------- */ 
-.simple-slider {
-	&, li {
-		//max-width: 575px;
-		width: auto !important;
+/*	SLIDER CONTENT (using bootstrap carousel)
+---------------------------------------------- */  
+.slide {
+
+	.content, .content > .inner {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
 	}
-	li {
-		max-height: 407px;
+
+	.content {
+
+		width: 100vw;
+		@include transition(top .3s ease-in);
+
+		h1, .h1 {
+			font-size: $sliderH1Size;
+			line-height: $sliderH1LH;
+			font-weight: bold;
+			color: $white;
+			@include text-shadow(0 3px 8px rgba($black, 0.8), 0 0 ($sliderH1Size / 2) rgba($black, 0.3));
+			padding: 0 $sliderContentPad;
+			margin-bottom: 0;
+			display: block;
+			width: 100%;
+			height: auto;
+
+			strong {
+				display: block;
+				font-size: $sliderH1Size + $sliderH1hugeMod;
+				line-height: $sliderH1LH + ($sliderH1hugeMod / 2);
+				position: relative;
+				left: -#{$sliderH1hugeMod / 2}px;
+			}
+
+		}
+
+		p {
+			display: block;
+			width: 100%;
+			height: auto;
+			padding: $sliderContentPad;
+			margin: 0;
+			background: rgba($black, .4);
+
+			font-size: $baseFontSize + 6;
+			font-weight: normal;
+			color: $white;
+			font-family: $serifFontFamily;
+			font-style: italic;
+			@include text-shadow(none);
+		}
+
+
 	}
+
+	.itemOverlay {
+		position: absolute;
+		z-index: 1000;
+
+		.content {
+			bottom: auto;
+			top: -99em;
+
+		}
+
+	}
+
 }
-.content-slider {
-	padding-bottom: 20px;
-	position: relative;
-	//max-height: 315px;
-	height: auto;
-	background: none !important;
-	overflow: hidden;
-}
-.content-slider li {
-	background: none !important;
-}
-.slider {
-	margin-top: 40px;
-	position: relative;
-}
-.slider-intro {
-	margin-right: 45px;
-	//max-width: 255px;
-	width: auto !important;
-	margin-top: 20px;
-}
-.slider-intro-right {
-	margin-left: 45px;
-	//max-width: 275px;
-	width: auto !important;
-	margin-top: 20px;
-}
-.slider-intro-left {
-	margin-top: 20px;
-	margin-right: 45px;
-	//max-width: 255px;
-	width: auto !important;
-}
-#slider {
-	position: relative;
-	margin-bottom: 428px; // TODO: need a way for this to be automatic
-}
-#slider-thumbs {
-	position: relative;
-	margin-bottom: 465px; // TODO: need a way for this to be automatic
-}
-.slider-nav, .slider-nav-thumbs, .slider-nav-wide {
-	z-index: 2;
-	position: absolute;
-	bottom: -388px; // need this to be dynamic
-	left: 0;
-	//max-width: 618px;
-	width: 100%;
-	text-align: center;
-	@include darkBlueWidget(0.7);
-	@include border-top-radius(0); // flat on top (override mixin)
-}
-.slider-nav-thumbs {
-	bottom: -426px;
-}
-.slider-nav-wide, .slider-nav-wide-thumbs {
-	//max-width: 938px;
-	width: auto !important;
-}
-.slider-nav li, .slider-nav-thumbs li, .slider-nav-wide li {
-	float: left;
-	padding: 20px 0;
-}
-.slider-nav a, .slider-nav-thumbs a, .slider-nav-wide a {
-	color: lighten($bystl_blue_medium, 2%);
-	font-size: $baseFontSize;
-	text-shadow: -1px -1px 0 rgba($black, 0.5);
-	margin-left: 15px;
-	padding-left: 15px;
-	font-weight: bold;
-	@include transition(color 0.3s ease-in);
-}
-.slider-nav a:hover, .slider-nav-thumbs a:hover, .slider-nav-wide a:hover {
-	text-decoration: none;
-	color: $white;
-}
-.slider-nav-wide-thumbs a {
-	padding-left: 8px !important;
-}
-.slider-nav-thumbs a {
-	@include opacity(.3);
-	padding-left: 6px;
-	@include transition(opacity 0.3s ease-in);
-}
-.slider-nav-thumbs a:hover {
-	@include opacity(1);
-}
-.slider-nav-thumbs a img {
-	@include border-radius(5px);
-	@include box-shadow(0 1px 3px rgba($black, 0.5));
-	border: 4px solid $white;
-}
-.slider-nav-thumbs .activeSlide a {
-	position: relative;
-	@include opacity(1);
-}
-.slider-nav .activeSlide a, .slider-nav-wide .activeSlide a {
-	font-size: $baseFontSize;
-	color: #cecece !important;
-	text-shadow: 1px 1px 1px rgba($black, 0.4);
-	padding: 6px 17px;
-	margin-left: 30px;
-	position: relative;
-	background: $bystl_blue_black; // old browsers
-	@include background(linear-gradient($bystl_blue_black, lighten($bystl_blue_black, 5%)));
-	@include filter-gradient($bystl_blue_black, $bystl_blue_navy);
-	@include border-radius(99px 99px 99px 99px);
-}
-.slider-nav-thumbs .activeSlide a:before {
-	content: image-url('slider-nav-arrow.png', true);
-	left: 40%;
-	position: absolute;
-	top: -71px;
-}
-.activeSlide a:before {
-	content: image-url('slider-nav-arrow.png', true);
-	left: 40%;
-	position: absolute;
-	top: -26px;
-}
-.large-slider, .large-slider .images-wide, .large-slider .images-wide-thumb  {
-	//max-width: 940px;
-	width: auto !important;
-}
-.images, .images-wide, .images-wide-thumb, .images-thumb {
-	overflow: hidden;
-}
-.images, .images-thumb, .images-wide, .images-wide-thumb {
-	margin-bottom: -2px;
-	@include box-shadow(0 3px 1px rgba($black, 0.3));
-	//max-width: 620px;
-	width: auto !important;
-	max-height: 330px;
-	position: absolute;
-	z-index: 1;
-}
-.images img, .images-thumb img, .images-wide img, .images-wide-thumb img {
-	@include border-radius(5px 5px 0 0);
+.carousel .item > img { width: 100%; }
+
+
+@media (max-width: $phoneBreakpoint) {
+
+	$sliderContentPad_m: 20px !default;
+	$sliderH1Size_m: $baseH1Size + 0px !default;
+	$sliderH1LH_m: $sliderH1Size_m - 2 !default;
+	$sliderH1hugeMod_m: 20 !default;
+
+	.slide .content {
+
+		h1, .h1 {
+			font-size: $sliderH1Size_m;
+			line-height: $sliderH1LH_m;
+			@include text-shadow(0 3px 8px rgba($black, 0.8), 0 0 ($sliderH1Size_m / 2) rgba($black, 0.3));
+			padding: 0 $sliderContentPad_m;
+
+			strong {
+				font-size: $sliderH1Size_m + $sliderH1hugeMod_m;
+				line-height: $sliderH1LH_m + ($sliderH1hugeMod_m / 2);
+				left: -#{$sliderH1hugeMod_m / 2}px;
+			}
+
+		}
+
+	}
+
 }

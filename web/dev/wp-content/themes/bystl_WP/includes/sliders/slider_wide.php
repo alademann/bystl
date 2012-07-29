@@ -6,9 +6,13 @@
         $slides = get_option_tree( 'slides', $option_tree, false, true, -1 );
         $i = 0;
         $initClass = "";
+
         foreach( $slides as $slide ) {
-          if($i == 0){ $initClass = "active"; } else { $initClass = ""; }
-          echo '<div class="item '.$initClass.'"><img src="'.$slide['image'].'" alt="'.$slide['title'].'" /></div>';
+          if($i == 0){ 
+            $initClass = "active"; 
+            echo '<div class="itemOverlay"><div class="content"><span class="h1">'.$slide['title'].'</span><p>'.$slide['description'].'</p></div></div>';
+          } else { $initClass = ""; }
+          echo '<div class="item '.$initClass.'"><img src="'.$slide['image'].'" alt="'.$slide['title2'].'" /><div class="content"><div class="inner"><span class="h1">'.$slide['title2'].'</span><p>'.$slide['description'].'</p></div></div></div>'; 
           $i = $i + 1;
         }
       } ?>
