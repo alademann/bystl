@@ -160,3 +160,13 @@ $outerSh: rgba($bystl_blue_black, 0.35) !default;
     @include box-shadow(inset 0 1px 0 opacify($insetBd, .1), opacify(rgba($bystl_blue_black, $outerShOpacity), .1));
   }
 }
+
+@mixin pageContentStyle {
+  background: $white;
+  margin-bottom: 30px;
+  padding: $pageContentPad;
+  width: 100% - ($pageContentPad * 2);
+  @include box-shadow(0 1px 1px rgba($black, 0.15));
+  @include border-radius(5px);
+  font-size: $baseFontSize - 1;
+}

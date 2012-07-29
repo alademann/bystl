@@ -629,7 +629,6 @@
 // automatically provide cross-browser compatible rgba bg colors
 @mixin rgba_bg($color, $alpha: opacity($color)){
 	$rgba: rgba($color, $alpha);
-	background-color: $rgba;
 	@if $compass_css3 {
 		@if $legacy-support-for-ie {
 			zoom: 1;
@@ -650,6 +649,7 @@
 				background-color: rgb(red($color), green($color), blue($color));
 			}
 		}
+    background-color: $rgba;
 	} // END if($compass_css3)
 } // END @mixin rba_gb)
 

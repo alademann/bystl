@@ -5,15 +5,28 @@
 	
  ----------------------------------------------*/
  
-#comment-form span {
+.comment-form label {
 	margin-bottom: 10px;
 	margin-top: 10px;
 	@include display(block);
 	font-weight: bold;
 }
+.comment-form #submit {
+	margin-bottom: 5px;
+}
 #textarea3 {
 	//max-width: 565px;
 	width: auto;
+}
+.comment-h3 {
+	font-style: italic;
+	font-family: $serifFontFamily;
+	line-height: 23px;
+	margin-bottom: 20px;
+}
+.commentlist {
+	margin: 0;
+	padding: 0;
 }
 .comment-info img {
 	@include border-radius(5px);
@@ -21,39 +34,56 @@
 }
 .comment-info {
 	float: left;
+	width: 13%;
+	min-width: 70px;
 }
 .comment-content {
-	float: right;
+	float: left;
 	//max-width: 485px;
-	width: auto;
+	width: 85%;
+	padding-left: 2%;
+	&.comment-form {
+		float: none;
+		width: 100%;
+		padding-left: 0;
+	}
 }
 .comment-meta {
 	margin-bottom: 15px;
+	float: left;
+	width: 100%;
+
+	.comment-author, a {
+		font-family: $serifFontFamily;
+		font-style: italic;
+		font-size: $baseFontSize - 2;
+	}
+	.comment-author span {
+		font-family: $sansFontFamily;
+		font-weight: bold;
+		font-style: normal;
+		font-size: $baseFontSize;
+		@include display(inline-block);
+
+	}
 
 }
-.comment-meta span {
-	font-weight: bold;
-	@include display(block);
-	margin-bottom: 5px;
-	color: #1f1f1f;
-}
-.comment-meta a {
-	font-family: $serifFontFamily;
-	font-size: $baseFontSize - 2;
-	font-style: italic;
+.comments-wrapper, .comment {
+	float: left;	
+	padding: $pageContentPad;
+	width: 100% - ($pageContentPad * 2);
+	clear: both;
 }
 .comment {
-	padding-bottom: 20px;
-	padding-top: 27px;
-	margin-bottom: 20px;
-	background: $white;
-	padding: 25px 25px 25px 25px;
+	//padding: 25px 25px 25px 25px;
 	//max-width: 578px;
-	width: auto;
-	@include border-radius(5px);
-	@include box-shadow(0 1px 1px rgba($black, 0.15));
-	margin-bottom: 30px;
-	font-size: $baseFontSize - 1;
+	//width: auto;
+	@include pageContentStyle;
+}
+@media (max-width: $tabletBreakpoint - 1) {
+	.comment, .comments-wrapper.page-content {
+		@include pageContentStyle;
+	}
 }
 .comment-author {
 	float: left;
@@ -63,57 +93,25 @@
 	margin-right: 10px;
 }
 .children li {
-	//max-width: 525px;
-	width: auto;
 	margin-bottom: 0;
 	@include box-shadow(0 1px 1px rgba($black, 0.15));
 	margin-top: 15px;
-	background: #eaf0f1;
-}
-.children li .comment-content {
-	//max-width: 430px;
-	width: auto;
+	background: $almostWhite;
 }
 .children li .children li {
 	background: $white;
 	@include box-shadow(0 1px 1px rgba($black, 0.1));
-	//max-width: 475px;
-	width: auto;
-}
-.children li .children li .comment-content {
-	//max-width: 385px;
 	width: auto;
 }
 .children li .children li .children li {
-	background: #eaf0f1;
+	background: $almostWhite;
 	@include box-shadow(0 1px 1px rgba($black, 0.15));
-	//max-width: 425px;
-	width: auto;
 }
-.children li .children li .children li .comment-content {
-	//max-width: 340px;
-	width: auto;
-}
-
 .children li .children li .children li .children li {
 	background: $white;
 	@include box-shadow(0 1px 1px rgba($black, 0.1));
-	//max-width: 375px;
-	width: auto;
 }
-.children li .children li .children li .children li .comment-content {
-	//max-width: 290px;
-	width: auto;
-}
-
 #comments li {
 	margin-left: 0 !important; 
 	list-style: none;
-}
-.leave-reply {
-  padding: 3px 0;
-}
-.comment-h3 {
-	line-height: 23px;
-	margin-bottom: 20px;
 }

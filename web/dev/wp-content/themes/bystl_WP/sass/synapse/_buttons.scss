@@ -40,11 +40,13 @@
 .buttons a { margin-top: 0; }
 .rounded-1 { @include border-radius(99px); }
 .rounded-2 { @include border-radius(5px); }
-.small-btn, .big-btn {
-    @extend .btn; // use twitter bootstrap button styles
-    @include synBlueBtn;
-}
 
+.btn, .small-btn, .big-btn {
+    @extend .btn; // use twitter bootstrap button styles
+}
+.small-btn {
+    @extend .btn-small;
+}
 .big-btn {
     @extend .btn-large; // tb large button style
     //font-size: 19px;
@@ -59,32 +61,37 @@
 // ----------------
 
 // BLACK
-.small-btn, .big-btn {
-    .btnTheme_Black &, &.black {
+.btn, .small-btn, .big-btn {
+    &.black, &.btn-inverse {
         @include synBlackBtn;
     }
 }
 // BLUE
-.small-btn, .big-btn {
-    .btnTheme_Blue &, &.blue {
+.btn, .small-btn, .big-btn {
+    &.blue, &.btn-blue {
         @include synBlueBtn;
     }
 }
 // ORANGE 
-.small-btn, .big-btn {
-    .btnTheme_Orange &, &.orange {
+.btn, .small-btn, .big-btn {
+    &.orange, &.btn-warning {
         @include synOrangeBtn;
     }
 }
 // PINK
 .small-btn, .big-btn {
-    .btnTheme_Pink &, &.pink {
+    &.pink, &.btn-pink {
         @include synPinkBtn;
     }
 }
 // RED
 .small-btn, .big-btn {
-    .btnTheme_Red &, &.red {
+    &.red, &.btn-danger {
         @include synRedBtn;
     }
+}
+
+// fix vertical alignment when mixing different button types
+.btn-group .btn, .btn-group input.btn, .btn-group button.btn {
+  margin: 0;
 }

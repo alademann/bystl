@@ -16,7 +16,7 @@ $wellInsetShadowHalf:			rgba($grayMedium, (opacity($wellInsetShadowColor) / 2));
 	min-height: 20px;
   margin-bottom: 2%;
 	@include tb_border-radius($wellCornerRadius);
-  @include rgba_bg($wellBgColor); // custom mixin that takes care of non-rgba backgrounds, too
+  background: $wellBgColor; // custom mixin that takes care of non-rgba backgrounds, too
 	@include tb_box-shadow(
 		0 1px 0 0 $wellEdgeHighlight, // highlight edge 
 		0 1px 7px 0 $wellInsetShadowColor inset // inner shadow

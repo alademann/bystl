@@ -141,8 +141,10 @@
 // -------------------------
 .btn {
   // reset here as of 2.0.3 due to Recess property order
-  border-color: $ccc;
-  border-color: rgba($black,.1) rgba($black,.1) rgba($black,.25);
+  @include buttonBackground($btnBackground, $btnBackgroundHighlight);
+  border: 1px solid $btnBorder;
+  @include ie7(border, 0); // Remove the border to prevent IE7's black border on input:focus
+  border-bottom-color: darken($btnBorder, 10%);
 }
 .btn-primary {
   @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);

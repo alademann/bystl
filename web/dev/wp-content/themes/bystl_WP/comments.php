@@ -40,10 +40,10 @@ $id = $post->ID;
 
 
 <?php if (have_comments()) : ?>
+<div class="clearfix"></div>
+<span class="h3 comment-h3" style="margin-top:30px; line-height: 27px;" id="n_comments"><?php comments_number(__('No Comments', 'localization'), __('One Comment', 'localization'), __('% Comments', 'localization') );?> <?php _e('to', 'localization'); ?> "<?php the_title(); ?>"</span>
 
-<h3 class="comment-h3" style="margin-top:30px; line-height: 27px;" id="n_comments"><?php comments_number(__('No Comments', 'localization'), __('One Comment', 'localization'), __('% Comments', 'localization') );?> <?php _e('to', 'localization'); ?> "<?php the_title(); ?>"</h3>
-
-<ol id="comments" class="commentlist">
+<ol id="comments" class="commentlist page-content">
 
     <?php wp_list_comments('avatar_size=80&style=ol&callback=rm_comments'); ?>
 
@@ -78,17 +78,12 @@ $id = $post->ID;
 
 <?php if (comments_open()) : ?>
 
-    <div class="page-content clearfix">
+    <div class="page-content clearfix comments-wrapper">
        
         <div class="leave-reply" id="respond">
             
             <span class="h3"><?php comment_form_title(__('Leave a Reply', 'localization'), __('Leave a Reply to %s', 'localization') ); ?></span>
             
-        </div>
-        <div class="cancel-comment-reply">
-            
-            <small><?php cancel_comment_reply_link(); ?></small>
-
         </div>
 
     <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
@@ -97,7 +92,7 @@ $id = $post->ID;
 
     <?php else : ?>
 
-        <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+        <form class="form-horizontal" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 
         <?php if (is_user_logged_in()) : ?>
 
@@ -105,33 +100,34 @@ $id = $post->ID;
 
         <?php else : ?>
                 
-            <div id="comment-form">
+            <fieldset class="comment-form author-info">
 
-                <span><?php _e('Name', 'localization'); ?> <?php if ($req) echo "*"; ?>: </span>
-
+                <label for="author"><?php _e('Name', 'localization'); ?> <?php if ($req) echo "*"; ?>: </label>
                 <input class="short" type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="40" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 
-                <span><?php _e('Mail', 'localization'); ?> <?php if ($req) echo "*"; ?>: <em><?php _e('won&acute;t be published', 'localization'); ?></em></span>
-
+                <label for="email"><?php _e('Mail', 'localization'); ?> <?php if ($req) echo "*"; ?>: <em><?php _e('won&acute;t be published', 'localization'); ?></em></label>
                 <input class="short" type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="40" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 
-                <span for="url"><?php _e('Website', 'localization'); ?></span>
-                        
+                <label for="url"><?php _e('Website', 'localization'); ?></label>
                 <input class="short" type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="40" tabindex="3" />
 
-            </div>
+            </fieldset>
 
         <?php endif; ?>
 
         <!--<p><small><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>-->
 
-            <div id="comment-form">
+            <fieldset class="comment-form comment-content">
               
-                <span for="comment"><?php _e('Comment', 'localization'); ?>*:</span>
+                <label for="comment"><?php _e('Comment', 'localization'); ?>*:</label>
 
-                <textarea name="comment" id="comment" style="width: 565px;" cols="61" rows="10" tabindex="4"></textarea>
+                <textarea name="comment" id="comment" rows="10" tabindex="4"></textarea>
 
-                <input name="submit" type="submit" class="small-btn blue rounded-1" style="margin-bottom: 5px;" id="submit" tabindex="5" value="<?php _e('Submit', 'localization'); ?>" />
+                <div class="btn-group pull-right">
+                    <a class="btn pull-left" rel="nofollow" id="cancel-comment-reply-link" href="#respond">Cancel</a>
+
+                    <input name="submit" type="submit" class="pull-left btn btn-primary" id="submit" tabindex="5" value="<?php _e('Submit', 'localization'); ?>" />
+                </div>
 
                 <?php
                 comment_id_fields();
@@ -139,7 +135,7 @@ $id = $post->ID;
 
                 <?php do_action('comment_form', $post->ID); ?>
 
-            </div>
+            </fieldset>
 
         </form>
 
