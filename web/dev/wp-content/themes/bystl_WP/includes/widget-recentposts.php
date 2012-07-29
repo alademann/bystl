@@ -109,7 +109,7 @@ class dd_post_widget extends WP_Widget {
 
                         <div class="blog-widget-meta">
 
-                            <a href="#"><?php the_time( get_option( 'date_format' ) ); ?></a>
+                            <?php the_time( get_option( 'date_format' ) ); ?>
 
                         </div>
 
