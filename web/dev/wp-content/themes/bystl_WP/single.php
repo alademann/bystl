@@ -3,8 +3,11 @@
 ?>
 
         <div class="page-container row-fluid clearfix blog-page">
-
+            <?php if (function_exists('dynamic_sidebar')) { ?>
             <div class="span11">
+            <?php } else { ?>
+            <div class="span16">
+            <?php } ?>
 
                 <div class="page-content">
 
@@ -74,13 +77,14 @@
 
             </div>
             <!-- END .span11 (left column) -->
-
+            <?php if (function_exists('dynamic_sidebar')) { ?>
             <div class="span5 sidebar">
                 <ul class="widgets">
                     <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Single Blog Post")); ?>
                 </ul>
             </div>
             <!-- END: .sidebar (right column) -->
+            <?php } ?>
 
         </div>
         <!-- END: .page-container -->

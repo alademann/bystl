@@ -7,8 +7,11 @@
 ?>
 
         <div class="page-container row-fluid clearfix">
-
+            <?php if (function_exists('dynamic_sidebar')) { ?>
             <div class="page-content span11">
+            <?php } else { ?>
+            <div class="page-content full span16">
+            <?php } ?>
                 <?php
                 if (have_posts ()) { 
                     while (have_posts ()) {
@@ -27,14 +30,14 @@
 
             </div>
             <!-- END: .page-content (left column) -->
-
+            <?php if (function_exists('dynamic_sidebar')) { ?>
             <div class="span5 sidebar">
                 <ul class="widgets">
                     <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Pages")); ?>
                 </ul>
             </div>
             <!-- END: .sidebar (right column) -->
-
+            <?php } ?>
         </div>
         <!-- END: .page-container -->
 
