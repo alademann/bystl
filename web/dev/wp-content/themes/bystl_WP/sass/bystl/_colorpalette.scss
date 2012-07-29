@@ -80,7 +80,7 @@ $almostWhiteF2:           #f2f2f2   !default;
 // common color replacements
 $ccc:                     $bystl_tan_medium   !default;
 $_333:                    #3c352d             !default;
-$e5e5e5:                     $bystl_tan_light    !default;
+$e5e5e5:                  $bystl_tan_light    !default;
 
 /*  PRIMARY INTERACTION COLORS (tb overrides)
 ---------------------------------------------- */
@@ -108,6 +108,10 @@ $navbarSearchBackgroundFocus:     $white !default;
 $navbarSearchBorder:              darken($navbarSearchBackground, 30%) !default;
 $navbarSearchPlaceholderColor:    lighten($navbarSearchBackground, 75%) !default;
 $navbarBrandColor:                $navbarLinkColor !default;
+
+// Buttons
+// -------------------------
+$headingColor:                    $bystl_brown_black !default;
 
 // Buttons
 // -------------------------
