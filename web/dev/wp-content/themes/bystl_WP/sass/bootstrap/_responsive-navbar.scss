@@ -246,19 +246,19 @@
 
 // TABLETS AND BELOW
 // -----------------
-@media (max-width: 979px) {
+@media (max-width: $tabletBreakpoint2) {
   @include smallerHeaderLogo;
-} // END TABLETS AND BELOW @media (max-width: 979px)
+} // END TABLETS AND BELOW @media (max-width: $tabletBreakpoint2)
 
 // PHONES ONLY
 // -----------------
-@media (max-width: 767px) {
+@media (max-width: $tabletBreakpoint - 1) {
   @include collapsedNavBar;
-} // END PHONES ONLY @media (max-width: 767px)
+} // END PHONES ONLY @media (max-width: $tabletBreakpoint - 1)
 
 // PHONES ONLY (PORTRAIT)
 // -----------------------
-@media (max-width: 320px) {
+@media (max-width: $phonePortraitBreakpoint) {
   @include smallerNavbarLogo;
   .testiphonelandscapelink { display: none; }
   .header { padding-bottom: 0 !important; } // this is a strange bug... possibly has something to do with needing a clear both
@@ -270,7 +270,7 @@
 // ---------------
 
 // Required to make the collapsing navbar work on regular desktops
-@media (min-width: 980px) {
+@media (min-width: $tabletBreakpoint2 + 1) {
   .nav-collapse.collapse {
     height: auto !important;
     overflow: visible !important;

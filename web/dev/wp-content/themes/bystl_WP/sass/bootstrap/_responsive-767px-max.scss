@@ -5,7 +5,7 @@
 //  - replace @ with $
 //  - replace . with @include for mixins
 
-@media (max-width: 480px) {
+@media (max-width: $phoneBreakpoint) {
 
   // Smooth out the collapsing/expanding nav
   .nav-collapse {
@@ -72,7 +72,7 @@
 // LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
 // --------------------------------------------------
 
-@media (max-width: 767px) {
+@media (max-width: $tabletBreakpoint - 1) {
 
   // Padding to set content in a bit
   body {
@@ -149,6 +149,7 @@
   [class*="span"],
   .row-fluid [class*="span"] {
     float: none;
+    clear: both;
     display: block;
     width: auto !important;
     margin-left: 0;

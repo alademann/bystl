@@ -1,3 +1,10 @@
 $mobileGutter: 20px !default;
 $navbarPadX: $mobileGutter / 4 !default;
 $navbarLinkPadX: $mobileGutter / 2 !default;
+$pageContentPad: 4% !default;
+
+// media query breakpoints
+$phonePortraitBreakpoint: 320px !default;
+$phoneBreakpoint:         480px !default;
+$tabletBreakpoint:        768px !default;
+$tabletBreakpoint2:       979px !default;

@@ -4,7 +4,7 @@
 // Updates for SASS:
 //  - replace #grid > .style with @include grid-style
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: $tabletBreakpoint) and (max-width: $tabletBreakpoint2) {
 
   // Fixed grid
   $TabletFixedColumnWidth:         (504 / $gridColumns) + 0px !default;

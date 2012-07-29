@@ -36,6 +36,19 @@
 	float: right;
 }
 
+@media (max-width: $tabletBreakpoint - 1) {
+	.small-footer {
+		.row-fluid .footer-left[class*='span'] {
+			float: left !important; // so that float:none; doesn't happen on smaller devices
+			clear: none !important;
+		}
+		.row-fluid .footer-right[class*='span'] {
+			float: right !important;
+			clear: none !important;
+		}
+	}
+}
+
 /*	NEXT / PREV (current unused)
 ---------------------------------------------- */
 // .next {

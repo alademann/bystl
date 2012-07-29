@@ -110,7 +110,7 @@
 }
 
 // tablets and mobile devices
-@media only screen and (max-width: 979px) {
+@media only screen and (max-width: $tabletBreakpoint2) {
   .carousel-control { display: none !important; }
   // TODO: touch gesture controls?
   .carousel {

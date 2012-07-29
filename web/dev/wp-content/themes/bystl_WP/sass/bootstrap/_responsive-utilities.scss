@@ -35,7 +35,7 @@
 } // END @media hi-res / retina displays
 
 // Phones only
-@media (max-width: 767px) {
+@media (max-width: $tabletBreakpoint - 1) {
   // Show
   .visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
   .visible-collapsedNavbar { display: inherit !important; }
@@ -53,7 +53,7 @@
     padding: 0;
     @include box-shadow(none);
     // enlarge reading size
-    p, ul, ol, li, a, td, th {
+    p, ul, ol, li, td, th {
       font-size: $baseFontSize + 2;
       line-height: $baseLineHeight + 2;
     }
@@ -63,7 +63,7 @@
 }
 
 // Tablets & small desktops only
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: $tabletBreakpoint) and (max-width: $tabletBreakpoint2) {
   // Show
   .visible-tablet    { display: inherit !important; }
   // Hide

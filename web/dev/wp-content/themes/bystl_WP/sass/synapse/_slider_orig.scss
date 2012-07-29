@@ -258,7 +258,7 @@ $sliderWideImgH:  500px !default;
 
 /*! RESPONSIVE SLIDER STYLES */
 
-@media (max-width: 767px) {
+@media (max-width: $tabletBreakpoint - 1) {
 	// at this width, grid columns no longer float side by side... they are stacked.
 	.row-fluid .slider .span-one-third, .row-fluid .slider .span-two-thirds,
 	.row-fluid .slider [class*="span"] { width: auto !important; float: right !important; }
@@ -267,6 +267,6 @@ $sliderWideImgH:  500px !default;
 		min-height: 435px;
 	}
 
-} // END: @media (max-width: 767px)
+} // END: @media (max-width: $tabletBreakpoint - 1)
 
 
