@@ -120,8 +120,8 @@ head.ready("bootstrap", function() {
         var singleCaption = $(".carousel .itemOverlay > .content > p");
         var singleTitleHeight = $(singleTitle).height() + $(singleCaption).height();
 
-        console.log("singleTitleH: " + $(singleTitle).height());
-        console.log("singleCaptionH: " + $(singleCaption).height());
+        //console.log("singleTitleH: " + $(singleTitle).height());
+        //console.log("singleCaptionH: " + $(singleCaption).height());
 
         $(singleContainer).css({
             width: imgWidth,
