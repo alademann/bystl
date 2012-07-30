@@ -164,6 +164,15 @@ register_sidebar(array(
 ));
 }
 
+if (function_exists('register_sidebar')) {
+register_sidebar(array(
+'name' => 'Home Page',
+'before_widget' => '<li class="widget">',
+'after_widget' => '</li>',
+'before_title' => '<h3>',
+'after_title' => '</h3>',
+));
+}
 
 if (function_exists('register_sidebar')) {
 register_sidebar(array(

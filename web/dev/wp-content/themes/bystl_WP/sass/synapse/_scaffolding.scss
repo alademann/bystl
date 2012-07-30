@@ -65,13 +65,11 @@ body {
 	//@debug "TWO THIRDS: .span#{round($gridColumns * (2/3))}";
 }
 
-.row-fluid [class*="span"] iframe {
-	width: 100% !important;
-	height: auto !important;
-}
-
 .page-container {
 	margin-top: 40px;
+	&#homeContent { 
+		margin-top: 0;
+	}
 } // END .page-container
 
 

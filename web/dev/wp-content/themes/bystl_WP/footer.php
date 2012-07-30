@@ -1,5 +1,5 @@
         <?php if(function_exists('bcn_display') && !is_home()) { ?>
-        <div class="container-fluid">
+        <div class="container-fluid" id="siteBreadcrumbs">
             <div class="row-fluid">
                 <div id="crumbs" class="span16">
                     <ul class="breadcrumb">
