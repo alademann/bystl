@@ -37,13 +37,14 @@
             </div>
             <!-- END: .page-content (left column) -->
             <div class="span5 sidebar">
-                <?php $args = array (
-                        'post_type' => 'testimonial',
-                        'title_li' => __('Testimonials')
-                    );
-                ?>
-                <?php wp_list_pages($args); ?>
-                
+                <ul class="blog-widget-articles">
+                    <?php $args = array (
+                            'post_type' => 'testimonial',
+                            'title_li' => __('Testimonials')
+                        );
+                    ?>
+                    <?php wp_list_pages($args); ?>
+                </ul>
             </div>
             <!-- END: .sidebar (right column) -->
         </div>
