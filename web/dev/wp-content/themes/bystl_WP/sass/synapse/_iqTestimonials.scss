@@ -51,19 +51,19 @@ ul.testimonials, ul#tbtestimonials-widget {
 .footer #tbtestimonials-widget, 
 #alternate #tbtestimonials-widget {
   //max-width: 218px;
-  width: auto !important;
+  //width: auto !important;
 }
 .footer .testimonials blockquote,
 #alternate .testimonials blockquote,
 .footer #tbtestimonials-widget blockquote,
 #alternate #tbtestimonials-widget blockquote {
   //max-width: 125px;
-  width: auto !important;
+  //width: auto !important;
 }
 .footer .testimonial-widget-meta,
 #alternate .testimonial-widget-meta {
   //max-width: 116px;
-  width: auto !important;
+  //width: auto !important;
 }
 .testimonials, #tbtestimonials-widget, .sidebar-testimonials {
   @include darkBlueWidget;
