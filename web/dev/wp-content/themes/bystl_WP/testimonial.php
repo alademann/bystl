@@ -8,13 +8,17 @@
 
         <div class="page-container row-fluid clearfix">
 
-            <div class="page-content full span16">
+            <div class="page-content span11">
                 <?php
                 if (have_posts ()) { 
                     while (have_posts ()) {
                         the_post();
                         echo '<h1>'.get_the_title().'</h1>';
                         the_content(); 
+                        //echo '<ul class="pager">';
+                        //previous_link();
+                        //next_link();
+                        //echo '</ul>';
                     } // END while()
                 } else { ?>
 
@@ -27,7 +31,17 @@
                 ?>
 
             </div>
-            <!-- END: .page-content.full -->
+            <!-- END: .page-content (left column) -->
+            <div class="span5 sidebar">
+                <?php $args = array (
+                        'post_type' => 'testimonial',
+                        'title_li' => __('Testimonials')
+                    );
+                ?>
+                <?php wp_list_pages($args); ?>
+                
+            </div>
+            <!-- END: .sidebar (right column) -->
         </div>
         <!-- END: .page-container -->
 

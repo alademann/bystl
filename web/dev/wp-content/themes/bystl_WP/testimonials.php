@@ -45,10 +45,10 @@
     
 
 
-        <div class="portfolio-full span16">
+        <div class="testimonial-full span16">
             
            
-            <ul class="row portfolio-items">
+            <ul class="row testimonial-items">
      
 
                 <?php if ($testimonial_query->have_posts()) : while ($testimonial_query->have_posts()) : $testimonial_query->the_post(); ?>
@@ -59,6 +59,7 @@
                             <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
 
                         </li>
+
 
 
     <?php endwhile; ?>

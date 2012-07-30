@@ -156,7 +156,7 @@ head.ready("bootstrap", function() {
         $(widget).cycle({
             fx: 'scrollRight',
             speed: 900,
-            timeout: 1000,
+            timeout: 7000,
             pager: thisPager
             // pagerAnchorBuilder: function(idx, slide){
             //     return '#testimonial-pager li:eq(' + idx + ') a';
