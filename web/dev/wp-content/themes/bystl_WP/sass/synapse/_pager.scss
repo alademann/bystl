@@ -30,13 +30,13 @@
 	margin: 20px 0;
 	text-align: center;
 }
-.footer #testimonial-pager a, .footer #blog-pager a {
+.footer .testimonial-pager a, .footer #blog-pager a {
 	background: url(image-url('dot.png', true)) no-repeat top left !important;
 }
-.footer #testimonial-pager .activeSlide, .footer #blog-pager .activeSlide {
+.footer .testimonial-pager .activeSlide, .footer #blog-pager .activeSlide {
 	 background: url(image-url('dot-active.png', true)) no-repeat top left !important;
 }
-#testimonial-pager a, #blog-pager a, #sidebar-blog-pager a, #sidebar-testimonial-pager a {
+.testimonial-pager a, #blog-pager a, #sidebar-blog-pager a, #sidebar-testimonial-pager a {
 	background: url(image-url('dot-alternate.png', true)) no-repeat top left;
 	width: 11px;
 	height: 11px;
@@ -44,7 +44,7 @@
 	text-indent: -9999px;
 	margin: 0 5px;
 }
-#testimonial-pager .activeSlide, #blog-pager .activeSlide, #sidebar-blog-pager .activeSlide, #sidebar-testimonial-pager .activeSlide {
+.testimonial-pager .activeSlide, #blog-pager .activeSlide, #sidebar-blog-pager .activeSlide, #sidebar-testimonial-pager .activeSlide {
 	background: url(image-url('dot-alternate-active.png', true)) no-repeat top left;
 }
 #portfolio-pager a, .slider-pagers a, #content-slider-pager a {

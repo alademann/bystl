@@ -143,6 +143,33 @@ head.ready("bootstrap", function() {
     $('.carousel').carousel({
         interval: <?php echo $timeout; ?>
     });
+
+    var sidebarTestimonialWidget = $(".sidebar .testimonials");
+    var footerTestimonialWidget  = $("#alternate .testimonials")
+    //console.log("found " + sidebarTestimonialWidget.length);
+
+    launchTestimonialsPager(sidebarTestimonialWidget);
+    launchTestimonialsPager(footerTestimonialWidget);
+
+    function launchTestimonialsPager(widget){
+        var thisPager = $(widget).find(" + .testimonial-pager");
+        $(widget).cycle({
+            fx: 'scrollRight',
+            speed: 900,
+            timeout: 1000,
+            pager: thisPager
+            // pagerAnchorBuilder: function(idx, slide){
+            //     return '#testimonial-pager li:eq(' + idx + ') a';
+            // }
+            
+            //speed: tbtestimonial_settings.transition_interval * 1000
+        });
+    }
+
+    //$.each(testimonialsWidgets, function(){
+        
+    //});
+
     // $('.carousel').bind('slide', function(){
     //     $(".carousel-control.left, .carousel-control.right", this).delay(500).show();
     // });

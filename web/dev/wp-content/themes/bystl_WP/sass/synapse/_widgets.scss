@@ -91,7 +91,7 @@
 }
 
 .blog-widget-meta {
-	color: darken($bystl_blue_medium, 2%);
+	color: darken($bystl_blue_medium, 5%);
 	font-size: $baseFontSize - 1;
 	text-shadow: -1px -1px rgba($black, 0.3);
 	line-height: 17px;
@@ -100,7 +100,7 @@
 	margin-top: 2px;
 }
 .blog-widget-meta a {
-	color: #6c6c6c !important;
+	//color: #6c6c6c !important;
 	margin-right: 5px;
 }
 .blog-widget-articles {

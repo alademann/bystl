@@ -103,25 +103,25 @@ $('.portfolio-hover').hover(function(){
   
 // Widgets
 
-         $('.testimonials').cycle({
-            'fx' : 'fade',
-            before: before_cycle,
-            speed:   400,
-			timeout: 0,
-			pause:   1,
-            'pager' : '#testimonial-pager'
+   //       $('.testimonials').cycle({
+   //          'fx' : 'fade',
+   //          before: before_cycle,
+   //          speed:   400,
+			// timeout: 0,
+			// pause:   1,
+   //          'pager' : '#testimonial-pager'
 
-        });
+   //      });
 
-         $('.sidebar-testimonials').cycle({
-            'fx' : 'fade',
-            before: before_cycle,
-            speed:   400,
-			timeout: 0,
-			pause:   1,
-            'pager' : '#sidebar-testimonial-pager'
+   //       $('.sidebar-testimonials').cycle({
+   //          'fx' : 'fade',
+   //          before: before_cycle,
+   //          speed:   400,
+			// timeout: 0,
+			// pause:   1,
+   //          'pager' : '#sidebar-testimonial-pager'
 
-        });
+   //      });
 
         $('.simple-slider').cycle({
             'before' : before_cycle_simple_slider,
@@ -156,7 +156,7 @@ $('.portfolio-hover').hover(function(){
 
         }
 
-$("a[rel^='prettyPhoto']").prettyPhoto();
+//$("a[rel^='prettyPhoto']").prettyPhoto();
 
 
 

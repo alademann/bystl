@@ -16,13 +16,7 @@
   width: 300px;
 }
 
-.iq-testimonial-wrap {
-  clear: both;
-  overflow: hidden;
-  margin-bottom: 10px;
-}
-
-.iq-testimonial-wrap {
+.iq-testimonial-wrap, .testimonial {
   clear: both;
   overflow: hidden;
   margin-bottom: 10px;
@@ -48,26 +42,30 @@
 
 /*  TESTIMONIALS WIDGET
 ---------------------------------------------- */
-ul.testimonials {
+ul.testimonials, ul#tbtestimonials-widget {
   margin-left: 0 !important; 
   margin-right: 0 !important;
 }
 .footer .testimonials,
-#alternate .testimonials, {
+#alternate .testimonials, 
+.footer #tbtestimonials-widget, 
+#alternate #tbtestimonials-widget {
   //max-width: 218px;
   width: auto !important;
 }
 .footer .testimonials blockquote,
-#alternate .testimonials blockquote {
+#alternate .testimonials blockquote,
+.footer #tbtestimonials-widget blockquote,
+#alternate #tbtestimonials-widget blockquote {
   //max-width: 125px;
   width: auto !important;
 }
 .footer .testimonial-widget-meta,
-#laternate .testimonial-widget-meta {
+#alternate .testimonial-widget-meta {
   //max-width: 116px;
   width: auto !important;
 }
-.testimonials, .sidebar-testimonials {
+.testimonials, #tbtestimonials-widget, .sidebar-testimonials {
   @include darkBlueWidget;
   margin-top: 20px;
   color: lighten($bystl_blue_medium, 2%);
@@ -112,7 +110,8 @@ ul.testimonials {
   }
 
 }
-.testimonial-widget-meta .name {
+.testimonial-widget-meta .name,
+.testimonial-widget-meta .testimonial-author {
   color: #b7b7b7;
   font-weight: bold;
 }
@@ -125,14 +124,16 @@ ul.testimonials {
   font-style: italic;
 }
 .sidebar-testimonials blockquote, 
-.testimonials blockquote {
+.testimonials blockquote,
+#tbtestimonials-widget blockquote {
   padding: 0;
   border-left: 0 none;
 }
 .sidebar-testimonials blockquote {
   margin: 10px 10px 10px 40px;
 }
-.testimonials blockquote {
+.testimonials blockquote,
+#tbtestimonials-widget blockquote {
   font-family: $serifFontFamily;
   font-size: $baseFontSize;
   line-height: 22px;
@@ -157,7 +158,8 @@ ul.testimonials {
   top: 56px;
   font-weight: normal;
 }
-.testimonials blockquote:after {
+.testimonials blockquote:after,
+#tbtestimonials-widget blockquote:after {
   color: #c5cad1;
   content: '"';
   font-family: $serifFontFamily;

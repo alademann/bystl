@@ -70,7 +70,8 @@ class dd_post_widget extends WP_Widget {
 
         <?php
         global $post;
-
+        global $more;
+        $more = 0;
         $category_id = get_cat_ID($blogcategory);
 
         $arguments = array(
@@ -106,6 +107,10 @@ class dd_post_widget extends WP_Widget {
                     <div class="blog-widget-info">
 
                         <a class="blog-widget-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+
+                        <!-- <div class="blog-widget-content">
+                          <?php the_content('',false,''); ?>
+                        </div> -->
 
                         <div class="blog-widget-meta">
 

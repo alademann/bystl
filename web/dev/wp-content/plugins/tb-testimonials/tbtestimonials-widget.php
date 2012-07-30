@@ -274,7 +274,7 @@ class TBTestimonialsWidget extends WP_Widget
                 </p>
             <?php endif; ?>
 
-            <ul id="tbtestimonials-widget">
+            <ul class="testimonials">
             <?php
 
             $x = 0;
@@ -311,6 +311,8 @@ class TBTestimonialsWidget extends WP_Widget
 
             ?></ul><?php
         }
+
+        echo '<div class="testimonial-pager"></div>';
 
         wp_reset_query();
         echo $after_widget;
