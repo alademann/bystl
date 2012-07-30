@@ -68,7 +68,7 @@ class TBTestimonials
         add_theme_support( 'post-thumbnails' );
 
         # change post title box text
-        add_action( 'gettext', array( &$this, 'change_title_text' ) );
+        //add_action( 'gettext', array( &$this, 'change_title_text' ) );
 
         # check for quote bug where we had <div class="testimonial-data""> with the extra " in the deffault output.
         # exists in versions installed prior to version 1.4
@@ -258,7 +258,7 @@ class TBTestimonials
     function add_meta_boxes()
     {
         if( function_exists( 'add_meta_box' ) ){
-            add_meta_box( 'tbtestimonial-company', 'Company Information', array( &$this, 'company_info' ), 'testimonial', 'normal', 'low' );
+            add_meta_box( 'tbtestimonial', 'Author Information', array( &$this, 'author_info' ), 'testimonial', 'normal', 'low' );
         }
     }
 
@@ -267,11 +267,14 @@ class TBTestimonials
     *
     * @param mixed $post
     */
-    function company_info( $post )
+    function author_info( $post )
     {
-        ?><p><?php wp_nonce_field( plugin_basename( __FILE__ ), 'tbtestimonial_nonce' ); ?><label for="testimonial_company">Company Name</label><input style="width:100%" type="text" name="testimonial_company" id="testimonial_company" value="<?php echo get_post_meta( $post->ID, 'tbtestimonial_company', 1 ); ?>" /></p>
+        ?><p><?php wp_nonce_field( plugin_basename( __FILE__ ), 'tbtestimonial_nonce' ); ?>
+        <label for="testimonial_author">Author Name</label><input style="width:100%" type="text" name="testimonial_author" id="testimonial_author" value="<?php echo get_post_meta( $post->ID, 'tbtestimonial_author', 1 ); ?>" /></p>
+        <p><label for="testimonial_author_email">Author Email Address (<small>For Gravatar</small>)</label><input style="width:100%" type="text" name="testimonial_author_email" id="testimonial_author_email" value="<?php echo get_post_meta( $post->ID, 'tbtestimonial_author_email', 1 ); ?>" /></p>
+        <p><label for="testimonial_company">Company Name</label><input style="width:100%" type="text" name="testimonial_company" id="testimonial_company" value="<?php echo get_post_meta( $post->ID, 'tbtestimonial_company', 1 ); ?>" /></p>
         <p><label for="testimonial_company_url">Company URL</label><input style="width:100%" type="text" name="testimonial_company_url" id="testimonial_company_url" value="<?php echo get_post_meta( $post->ID, 'tbtestimonial_company_url', 1 ); ?>" /></p>
-        <p><label for="testimonial_company_email">Email Address (<small>For Gravatar</small>)</label><input style="width:100%" type="text" name="testimonial_company_email" id="testimonial_company_email" value="<?php echo get_post_meta( $post->ID, 'tbtestimonial_company_email', 1 ); ?>" /></p><?php
+        <?php
     }
 
     /**
@@ -292,11 +295,11 @@ class TBTestimonials
             if( ! current_user_can( 'edit_page', $id ) )
                 return $id;
 
-            if( isset( $_POST['testimonial_company_email'] ) && ! empty( $_POST['testimonial_company_email'] ) )
-                update_post_meta( $id, 'tbtestimonial_company_email', strip_tags( $_POST['testimonial_company_email'] ) );
+            if( isset( $_POST['testimonial_author_email'] ) && ! empty( $_POST['testimonial_author_email'] ) )
+                update_post_meta( $id, 'tbtestimonial_author_email', strip_tags( $_POST['testimonial_author_email'] ) );
             else
-                if( get_post_meta( $id, 'tbtestimonial_company_email', 1 ) )
-                    delete_post_meta( $id, 'tbtestimonial_company_email' );
+                if( get_post_meta( $id, 'tbtestimonial_author_email', 1 ) )
+                    delete_post_meta( $id, 'tbtestimonial_author_email' );
 
             if( isset( $_POST['testimonial_company_url'] ) && ! empty( $_POST['testimonial_company_url'] ) )
                 update_post_meta( $id, 'tbtestimonial_company_url', strip_tags( $_POST['testimonial_company_url'] ) );
@@ -309,6 +312,13 @@ class TBTestimonials
             else
                 if( get_post_meta( $id, 'tbtestimonial_company', 1 ) )
                     delete_post_meta( $id, 'tbtestimonial_company' );
+
+            if( isset( $_POST['testimonial_author'] ) && ! empty( $_POST['testimonial_author'] ) )
+                update_post_meta( $id, 'tbtestimonial_author', strip_tags( $_POST['testimonial_author'] ) );
+            else
+                if( get_post_meta( $id, 'tbtestimonial_author', 1 ) )
+                    delete_post_meta( $id, 'tbtestimonial_author' );
+
         }
     }
 
@@ -583,8 +593,8 @@ class TBTestimonials
 
             if( ! has_post_thumbnail() )
             {
-                $thumbnail = get_post_meta( get_the_ID(), 'tbtestimonial_company_email', 1 ) ?
-                    get_avatar( get_post_meta( get_the_ID(), 'tbtestimonial_company_email', 1 ), $this->settings['gravatar_size'] ) :
+                $thumbnail = get_post_meta( get_the_ID(), 'tbtestimonial_author_email', 1 ) ?
+                    get_avatar( get_post_meta( get_the_ID(), 'tbtestimonial_author_email', 1 ), $this->settings['gravatar_size'] ) :
                     get_avatar( 'unknown', $this->settings['gravatar_size'] );
             }
             else
@@ -599,6 +609,7 @@ class TBTestimonials
                 'testimonial',
                 'author_prefix',
                 'author',
+                'title',
                 'company_url',
                 'company_name',
                 'testimonial_excerpt'
@@ -609,6 +620,7 @@ class TBTestimonials
                 $thumbnail,
                 apply_filters( 'the_content', get_the_content() ),
                 $this->settings['author_prefix'],
+                get_post_meta( get_the_ID(), 'tbtestimonial_author', 1 ),
                 get_the_title(),
                 get_post_meta( get_the_ID(), 'tbtestimonial_company_url', 1 ),
                 get_post_meta( get_the_ID(), 'tbtestimonial_company', 1 ),
@@ -643,8 +655,8 @@ class TBTestimonials
 
         if( ! has_post_thumbnail() )
         {
-            $thumbnail = get_post_meta( get_the_ID(), 'tbtestimonial_company_email', 1 ) ?
-                get_avatar( get_post_meta( get_the_ID(), 'tbtestimonial_company_email', 1 ), $this->settings['gravatar_size'] ) :
+            $thumbnail = get_post_meta( get_the_ID(), 'tbtestimonial_author_email', 1 ) ?
+                get_avatar( get_post_meta( get_the_ID(), 'tbtestimonial_author_email', 1 ), $this->settings['gravatar_size'] ) :
                 get_avatar( 'unknown', $this->settings['gravatar_size'] );
         }
         else
@@ -653,12 +665,13 @@ class TBTestimonials
         $thumbnail = apply_filters( 'tbtestimonials_testimonial_thumbnail', $thumbnail );
 
         # tags and replacements
-        $tags = array( '%permalink%', '%gravatar%', '%testimonial%', '%author_prefix%', '%author%', '%company_url%', '%company_name%', '%testimonial_excerpt%' );
+        $tags = array( '%permalink%', '%gravatar%', '%testimonial%', '%author_prefix%', '%author%', '%title%', '%company_url%', '%company_name%', '%testimonial_excerpt%' );
         $replacements = array(
             get_permalink(),
             $thumbnail,
             apply_filters( 'the_content', get_the_content() ),
             $this->settings['author_prefix'],
+            get_post_meta( get_the_ID(), 'tbtestimonial_author', 1 ),
             get_the_title(),
             get_post_meta( get_the_ID(), 'tbtestimonial_company_url', 1 ),
             get_post_meta( get_the_ID(), 'tbtestimonial_company', 1 ),
@@ -687,10 +700,11 @@ class TBTestimonials
                 switch( trim( $matches[1][$key] ) )
                 {
                     case 'permalink' : $variable = get_permalink(); break;
-                    case 'gravatar' : $variable = get_post_meta( get_the_ID(), 'tbtestimonial_company_email', 1 ) ? get_avatar( get_post_meta( get_the_ID(), 'tbtestimonial_company_email', 1 ), $this->settings['gravatar_size'] ) : false; break;
+                    case 'gravatar' : $variable = get_post_meta( get_the_ID(), 'tbtestimonial_author_email', 1 ) ? get_avatar( get_post_meta( get_the_ID(), 'tbtestimonial_author_email', 1 ), $this->settings['gravatar_size'] ) : false; break;
                     case 'testimonial' : $variable = apply_filters( 'the_content', get_the_content() ); break;
                     case 'author_prefix' : $variable = $this->settings['author_prefix']; break;
-                    case 'author' : $variable = get_the_title(); break;
+                    case 'title' : $variable = get_the_title(); break;
+                    case 'author' : $variable = get_post_meta( get_the_ID(), 'tbtestimonial_author', 1 ); break;
                     case 'company_url' : $variable = get_post_meta( get_the_ID(), 'tbtestimonial_company_url', 1 ); break;
                     case 'company_name' : $variable = get_post_meta( get_the_ID(), 'tbtestimonial_company', 1 ); break;
                     case 'testimonial_excerpt' : $variable = get_the_excerpt(); break;
@@ -802,7 +816,8 @@ class TBTestimonials
         $columns = array(
             'cb' => '<input type="checkbox" />',
             'tbtgravatar' => 'Gravatar',
-            'title' => 'Author Name',
+            'title' => 'Title',
+            'tbtauthor' => 'Author Name',
             'tbtdescription' => 'Excerpt',
             'tbtcompany' => 'Company',
             'tbtcompany_url' => 'Company URL',
@@ -828,6 +843,10 @@ class TBTestimonials
         {
             case "tbtdescription" : the_excerpt(); break;
 
+            case "tbtauthor" :
+                    echo isset( $custom["tbtestimonial_author"][0] ) ? $custom["tbtestimonial_author"][0] : '';
+                    break;
+
             case "tbtcompany" :
                     echo isset( $custom["tbtestimonial_company"][0] ) ? $custom["tbtestimonial_company"][0] : '';
                     break;
@@ -838,13 +857,13 @@ class TBTestimonials
 
             case "tbtgravatar" :
                     if( ! get_the_post_thumbnail( $post->ID ) )
-                        echo isset( $custom["tbtestimonial_company_email"][0] ) ? get_avatar( $custom["tbtestimonial_company_email"][0], 40 ) : '';
+                        echo isset( $custom["tbtestimonial_author_email"][0] ) ? get_avatar( $custom["tbtestimonial_author_email"][0], 40 ) : '';
                     else
                         the_post_thumbnail( 'tbtestimonial_admin_thumbnail' );
 
                     break;
 
-            case 'tbttitle' : the_title(); break;
+            case 'title' : the_title(); break;
         }
     }
 
@@ -864,7 +883,7 @@ class TBTestimonials
             switch( $post->post_type ){
                 case 'testimonial' :
                     if( $translation == 'Enter title here' )
-                        return 'Testimonial Author';
+                        return 'Testimonial Title';
                     break;
             }
         }

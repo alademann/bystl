@@ -13,8 +13,12 @@
                 if (have_posts ()) { 
                     while (have_posts ()) {
                         the_post();
+
                         echo '<h1>'.get_the_title().'</h1>';
-                        the_content(); 
+                        echo '<div class="testimonial-content">';
+                            the_content(); 
+                        echo '</div>';
+                        echo '<div class="testimonial-author">&mdash; ' . get_post_meta( get_the_id(), 'tbtestimonial_author', true ) . '</div>';
                         //echo '<ul class="pager">';
                         //previous_link();
                         //next_link();
