@@ -18,7 +18,11 @@
                         echo '<div class="testimonial-content">';
                             the_content(); 
                         echo '</div>';
-                        echo '<div class="testimonial-author">&mdash; ' . get_post_meta( get_the_id(), 'tbtestimonial_author', true ) . '</div>';
+                        echo '<div class="testimonial-author">&mdash; ' . get_post_meta( get_the_id(), 'tbtestimonial_author', true );
+                        if( get_post_meta( get_the_id(), 'tbtestimonial_company', true ) ){
+                        echo ', <span class="testimonial-company">'. get_post_meta( get_the_id(), 'tbtestimonial_company', true ) .'</span>';
+                        }
+                        echo '</div>';
                         //echo '<ul class="pager">';
                         //previous_link();
                         //next_link();
