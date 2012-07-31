@@ -58,7 +58,7 @@ body {
 	@extend .span#{round($gridColumns * (1/3))};
 	//@debug "ONE THIRD: .span#{round($gridColumns * (1/3))}";
 }
-#alternate .iq-testimonials, #alternate .iq-testimonials.span-one-third,
+#alternate .widget_tbtestimonialswidget, #alternate .widget_tbtestimonialswidget.span-one-third,
 .footer .widget_text:first-child  {
 	// override the one-thirds widget width and make it go two spans
 	@extend .span#{round($gridColumns * (2/3))};
