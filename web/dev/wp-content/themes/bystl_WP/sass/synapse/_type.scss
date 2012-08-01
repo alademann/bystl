@@ -245,6 +245,11 @@ blockquote {
 	margin-bottom: 30px;
 	padding-top: 0 !important;
 
+	.large {
+		font-size: 18px;
+		line-height: 26px;
+	}
+
 	&:after {
 		color: #CCCCCC;
 		content: open-quote;

@@ -46,25 +46,6 @@ ul.testimonials, ul#tbtestimonials-widget {
   margin-left: 0 !important; 
   margin-right: 0 !important;
 }
-.footer .testimonials,
-#alternate .testimonials, 
-.footer #tbtestimonials-widget, 
-#alternate #tbtestimonials-widget {
-  //max-width: 218px;
-  //width: auto !important;
-}
-.footer .testimonials blockquote,
-#alternate .testimonials blockquote,
-.footer #tbtestimonials-widget blockquote,
-#alternate #tbtestimonials-widget blockquote {
-  //max-width: 125px;
-  //width: auto !important;
-}
-.footer .testimonial-widget-meta,
-#alternate .testimonial-widget-meta {
-  //max-width: 116px;
-  //width: auto !important;
-}
 .testimonials, #tbtestimonials-widget, .sidebar-testimonials {
   @include darkBlueWidget;
   margin-top: 20px;
@@ -83,34 +64,31 @@ ul.testimonials, ul#tbtestimonials-widget {
   color: #959595;
 }
 .testimonial {
-  padding-right: 10px;
+  padding: 4px 10px;
 }
 .testimonial-widget-info {
   float: left;
   width: 100%;
-  margin-bottom: 10px;
-}
-.testimonial-widget-info img {
-  @include border-radius(5px);
-  float: left;
-  @include box-shadow(0 1px 2px rgba($black, 0.35));
-}
-.sidebar .testimonial-widget-meta {
-  //max-width: 148px;
-  width: auto;
-}
-.testimonial-widget-meta {
-  margin-left: 15px; // space away from the avatar img
-  float: right;
-  //max-width: 190px;
-  width: auto;
-  margin-top: 5px;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  padding-left: 20px;
 
-  &.noimage {
-    margin-left: 0; // there is no avatar img
+  .testimonial-readmore {
+    display: block;
+    float: right;
   }
 
-}
+  .testimonial-author {
+    display: block;
+    float: left;
+    margin-left: 20px;
+    margin-top: 3px;
+  }
+
+} // END .testimonial-widget-info
+
+
 .testimonial-widget-meta .name,
 .testimonial-widget-meta .testimonial-author {
   color: #b7b7b7;
@@ -155,6 +133,8 @@ ul.testimonials, ul#tbtestimonials-widget {
 #tbtestimonials-widget blockquote {
   font-family: $serifFontFamily;
   font-size: $baseFontSize;
+  font-style: italic;
+  font-weight: normal;
   line-height: 22px;
   position: relative;
   margin-top: 20px;
@@ -162,7 +142,6 @@ ul.testimonials, ul#tbtestimonials-widget {
   margin-bottom: 5px;
   padding-top: 0 !important;
   float: left;
-  font-weight: normal;
   position: relative;
 }
 .sidebar-testimonials blockquote:after {
@@ -189,3 +168,6 @@ ul.testimonials, ul#tbtestimonials-widget {
   position: absolute;
   top: 12px;
 }
+
+// there are just too many to show the pager in that skinny column
+.sidebar .testimonial-pager { display: none; }
