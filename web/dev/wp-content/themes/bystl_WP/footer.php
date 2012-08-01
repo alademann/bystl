@@ -94,6 +94,15 @@ head.ready("bootstrap", function() {
     //var prepHeight = $('#large-slider').find(".item:first-child > img").height();
     //$('#large-slider').css("min-height", prepHeight);
 
+    $(".carousel").hover(
+      function () {
+        $(this).addClass("hover");
+      }, 
+      function () {
+        $(this).removeClass("hover");
+      }
+    );
+
     // make the overlay content the same size as the image
     var itemContent = $('.carousel .content');
     findEmptyCaptions();

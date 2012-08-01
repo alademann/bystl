@@ -18,7 +18,7 @@
       } ?>
 
     </div>
-    <a class="carousel-control left" href="#large-slider" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#large-slider" data-slide="next">&rsaquo;</a>
+    <a class="fade carousel-control left" href="#large-slider" data-slide="prev">&lsaquo;</a>
+    <a class="fade carousel-control right" href="#large-slider" data-slide="next">&rsaquo;</a>
   </div>
 </div>

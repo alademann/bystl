@@ -83,6 +83,17 @@ $sliderH1hugeMod: 20 !default;
 }
 .carousel .item > img { width: 100%; }
 
+.carousel-control {
+	@include opacity(0);
+}
+.carousel.hover, .carousel:hover {
+	.carousel-control {
+		@include opacity(1);
+	}
+}
+// touch devices cannot detect hover
+.touch .carousel-control { @include opacity(1); }
+
 
 @media (max-width: $phoneBreakpoint) {
 
