@@ -9,7 +9,7 @@
 // --------------------------------------------------
 
 // Core
-.btn {
+.btn, #alternate .btn {
   @include inline-block;
   padding: 4px 15px 4px;
   margin-bottom: 0; // For input.btn
@@ -34,11 +34,11 @@
 }
 
 // Hover state
-.btn:hover {
+.btn:hover, #alternate .btn:hover {
   color: $grayDark;
   text-decoration: none;
-  background-color: darken($white, 10%);
-  @include ie7(background-color, darken($white, 15%)); /* Buttons in IE7 don't get borders, so darken on hover */
+  //@include buttonBackground($btnBackground, $btnBackgroundHighlight);
+  //@include ie7(background-color, darken($white, 15%)); /* Buttons in IE7 don't get borders, so darken on hover */
   background-position: 0 -15px;
 
   // transition is only when going to hover, otherwise the background
@@ -53,7 +53,9 @@
 
 // Active state
 .btn.active,
-.btn:active {
+.btn:active,
+#alternate .btn.active,
+#alternate .btn:active {
   $shadow: inset 0 2px 4px rgba($black,.15), 0 1px 2px rgba($black,.05);
   @include tb_box-shadow($shadow);
   background-color: darken($white, 10%);
@@ -124,8 +126,10 @@
 .btn-info:hover,
 .btn-inverse,
 .btn-inverse:hover {
-  color: $white;
-  text-shadow: 0 -1px 0 rgba($black,.25);
+  &, #alternate & {
+    color: $white;
+    text-shadow: 0 -1px 0 rgba($black,.25);
+  }
 }
 // Provide *some* extra contrast for those who can get it
 .btn-primary.active,
@@ -134,40 +138,56 @@
 .btn-success.active,
 .btn-info.active,
 .btn-inverse.active {
-  color: rgba($white,.75);
+  &, #alternate & {
+    color: rgba($white,.75);
+  }
 }
 
 // Set the backgrounds
 // -------------------------
 .btn {
-  // reset here as of 2.0.3 due to Recess property order
-  @include buttonBackground($btnBackground, $btnBackgroundHighlight);
-  border: 1px solid $btnBorder;
-  @include ie7(border, 0); // Remove the border to prevent IE7's black border on input:focus
-  border-bottom-color: darken($btnBorder, 10%);
+  &, #alternate & {
+    // reset here as of 2.0.3 due to Recess property order
+    @include buttonBackground($btnBackground, $btnBackgroundHighlight);
+    border: 1px solid $btnBorder;
+    @include ie7(border, 0); // Remove the border to prevent IE7's black border on input:focus
+    border-bottom-color: darken($btnBorder, 10%);
+  }
 }
 .btn-primary {
-  @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+  &, #alternate & {
+    @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+  }
 }
 // Warning appears are orange
 .btn-warning {
-  @include buttonBackground($btnWarningBackground, $btnWarningBackgroundHighlight);
+  &, #alternate & {
+    @include buttonBackground($btnWarningBackground, $btnWarningBackgroundHighlight);
+  }
 }
 // Danger and error appear as red
 .btn-danger {
-  @include buttonBackground($btnDangerBackground, $btnDangerBackgroundHighlight);
+  &, #alternate & {
+    @include buttonBackground($btnDangerBackground, $btnDangerBackgroundHighlight);
+  }
 }
 // Success appears as green
 .btn-success {
-  @include buttonBackground($btnSuccessBackground, $btnSuccessBackgroundHighlight);
+  &, #alternate & {
+    @include buttonBackground($btnSuccessBackground, $btnSuccessBackgroundHighlight);
+  }
 }
 // Info appears as a neutral blue
 .btn-info {
-  @include buttonBackground($btnInfoBackground, $btnInfoBackgroundHighlight);
+  &, #alternate & {
+    @include buttonBackground($btnInfoBackground, $btnInfoBackgroundHighlight);
+  }
 }
 // Inverse appears as dark gray
 .btn-inverse {
-  @include buttonBackground($btnInverseBackground, $btnInverseBackgroundHighlight);
+  &, #alternate & {
+    @include buttonBackground($btnInverseBackground, $btnInverseBackgroundHighlight);
+  }
 }
 
 
