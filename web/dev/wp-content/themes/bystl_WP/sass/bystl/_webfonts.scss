@@ -33,13 +33,13 @@ $navbarLogoImg: image-url("bystl_header-logo_symbol_navbar.png", true);
     @if $style == "bw" { 
       $logoImgW: image-width($navbarLogoImg) !default;
       $logoImgH: image-height($navbarLogoImg) !default;
-      @debug "navbarImgW: #{$logoImgW}";
+//      @debug "navbarImgW: #{$logoImgW}";
       line-height: $logoImgH / 2;
       padding-left: ($logoImgW  / 2) + 4;
     } @else { 
       $logoImgW: image-width($headerLogoImg) !default;
       $logoImgH: image-height($headerLogoImg) !default;
-      @debug "headerImgW: #{$logoImgW}";
+//      @debug "headerImgW: #{$logoImgW}";
       line-height: $logoImgH / 2;
       padding-left: ($logoImgW / 2) + 10;
     }

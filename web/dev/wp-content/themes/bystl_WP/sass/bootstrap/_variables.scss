@@ -252,7 +252,7 @@ $gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth 
 $columnWidth: (76.595744676 / $gridColumns);
 $gutterWidth: (23.404255314 / ($gridColumns - 1));
 $crossCheck: ($columnWidth * $gridColumns) + ($gutterWidth * ($gridColumns - 1));
-@debug "fluidGrid is #{$crossCheck}% accurate.";
+//@debug "fluidGrid is #{$crossCheck}% accurate.";
 
 $fluidGridColumnWidth:    $columnWidth + 0% !default;
 $fluidGridGutterWidth:    $gutterWidth + 0% !default;

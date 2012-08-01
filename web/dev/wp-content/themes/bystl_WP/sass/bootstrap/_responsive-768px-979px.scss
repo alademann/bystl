@@ -18,7 +18,7 @@
   $TabletColumnWidth: (71.794871796 / $gridColumns);
   $TabletGutterWidth: (28.205128204 / ($gridColumns - 1));
   $TabletCrossCheck: ($TabletColumnWidth * $gridColumns) + ($TabletGutterWidth * ($gridColumns - 1));
-  @debug "fluidGridTablet is #{$TabletCrossCheck}% accurate.";
+//  @debug "fluidGridTablet is #{$TabletCrossCheck}% accurate.";
 
   $TabletFluidGridColumnWidth:    $TabletColumnWidth + 0% !default;
   $TabletFluidGridGutterWidth:    $TabletGutterWidth + 0% !default;

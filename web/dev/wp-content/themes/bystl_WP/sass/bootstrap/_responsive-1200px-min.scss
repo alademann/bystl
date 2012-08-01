@@ -20,7 +20,7 @@
   $columnWidth1200: (76.595744676 / $gridColumns);
   $gutterWidth1200: (23.404255314 / ($gridColumns - 1));
   $crossCheck1200: ($columnWidth1200 * $gridColumns) + ($gutterWidth1200 * ($gridColumns - 1));
-  @debug "fluidGrid1200 is #{$crossCheck1200}% accurate.";
+//  @debug "fluidGrid1200 is #{$crossCheck1200}% accurate.";
 
   $fluidGridColumnWidth1200:    $columnWidth1200 + 0% !default;
   $fluidGridGutterWidth1200:    $gutterWidth1200 + 0% !default;
