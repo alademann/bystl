@@ -88,6 +88,13 @@ ul.testimonials, ul#tbtestimonials-widget {
 
 } // END .testimonial-widget-info
 
+.sidebar .testimonial-widget-info .testimonial-readmore {
+  float: right;
+  position: absolute;
+  bottom: -10px;
+  left: 50px;
+}
+
 
 .testimonial-widget-meta .name,
 .testimonial-widget-meta .testimonial-author {
