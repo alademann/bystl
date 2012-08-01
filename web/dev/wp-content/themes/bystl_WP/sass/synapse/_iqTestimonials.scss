@@ -66,6 +66,9 @@ ul.testimonials, ul#tbtestimonials-widget {
 .testimonial {
   padding: 4px 10px;
 }
+.sidebar .testimonial {
+  padding: 4px 10px 20px 10px;
+}
 .testimonial-widget-info {
   float: left;
   width: 100%;
@@ -91,8 +94,9 @@ ul.testimonials, ul#tbtestimonials-widget {
 .sidebar .testimonial-widget-info .testimonial-readmore {
   float: right;
   position: absolute;
-  bottom: -10px;
+  bottom: -20px;
   left: 50px;
+  margin-top: 10px;
 }
 
 

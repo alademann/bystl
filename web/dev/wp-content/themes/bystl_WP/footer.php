@@ -43,7 +43,7 @@
                     <div class="footer-right span8">
                         <ul class="breadcrumb pull-right">
                             <li><a href="about/contact-us/">Contact</a></li>
-                            <?php wp_list_pages('post_status=publish&title_li=&depth=1'); ?>
+                            <?php wp_list_pages('post_status=publish&title_li=&depth=1&exclude=148'); ?>
                         </ul>
                         <?php echo get_option_tree('footer_right_content'); ?>
                     </div>
