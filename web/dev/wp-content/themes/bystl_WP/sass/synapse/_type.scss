@@ -97,6 +97,23 @@ strong {
 b {
 	@extend strong;
 }
+.large {
+	font-size: $baseFontSize + 5;
+	line-height: $baseLineHeight + 9;
+}
+.huge {
+	font-size: $baseFontSize + 20;
+	line-height: $baseLineHeight + 28;
+}
+.serif {
+	font-family: $serifFontFamily;
+}
+.ltblue-text {
+	color: $bystl_logo_blueLight;
+}
+.blue-text {
+	color: $bystl_logo_blueDarkest;
+}
 
 /*	LINKS
 ---------------------------------------------- */
