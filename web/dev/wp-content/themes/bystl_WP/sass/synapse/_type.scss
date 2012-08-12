@@ -237,15 +237,20 @@ li {
 /*	BLOCKQUOTES, CODE, ETC
 ---------------------------------------------- */
 blockquote {
-	font-family: $serifFontFamily;
-	font-size: 15px;
-	line-height: 22px;
+	padding: 0;
+	border: 0;
 	position: relative;
 	margin-top: 30px;
 	margin-bottom: 30px;
 	padding-top: 0 !important;
 
-	.large {
+	&, & > p {
+		font-family: $serifFontFamily;
+		font-size: 15px;
+		line-height: 22px;
+	}
+
+	.large, &.large {
 		font-size: 18px;
 		line-height: 26px;
 	}
@@ -260,6 +265,7 @@ blockquote {
 		position: absolute;
 		top: 15px;
 	}
+
 } // END blockquote
 
 /*	WORDPRESS CLASS TYPOGRAPHY

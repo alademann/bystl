@@ -80,6 +80,17 @@ body {
 	@include pageContentStyle;
 } // END .page-container > .page-content
 
+
+.box {
+	.wrapper {
+		@include boxContentPadding;
+		position: relative;
+	}
+	&.boxWhite {
+		@include pageContentColors;
+	}
+}
+
 .full {
 	//max-width: 890px !important;
 	width: 100%;

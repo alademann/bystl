@@ -5,6 +5,11 @@
 	
  ----------------------------------------------*/
 
+.page-container.navWrapper {
+	margin-top: 20px;
+	margin-bottom: -30px;
+}
+
 // global transition for all nav items in the theme 
 .navbar .nav li a, .navbar .dropdown-menu li a, .header li a, .caret, [class*="icon-"]:before {
 	@include transition(all .3s ease);
@@ -82,6 +87,9 @@
 ---------------------------------------------- */
 #filters {
 	margin-bottom: 40px;
+	.page-container > & {
+		margin-bottom: 0;
+	}
 
 	li {
 		float: left;

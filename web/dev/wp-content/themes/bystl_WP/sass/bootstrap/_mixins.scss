@@ -284,7 +284,7 @@
       margin-left: $fluidGridGutterWidth;
       @include ie7(margin-left, $fluidGridGutterWidth - (.5 / $gridRowWidth * 100px * 1%));
     }
-    [class*="span"]:first-child {
+    [class*="span"]:first-child, [class*="span#{$gridColumns}"] {
       margin-left: 0;
     }
 

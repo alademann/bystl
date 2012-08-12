@@ -161,12 +161,27 @@ $outerSh: rgba($bystl_blue_black, 0.35) !default;
   }
 }
 
-@mixin pageContentStyle {
+@mixin pageContentColors {
   background: $white;
-  margin-bottom: 30px;
-  padding: ($pageContentPad / 2) $pageContentPad $pageContentPad $pageContentPad;
-  width: 100% - ($pageContentPad * 2);
   @include box-shadow(0 1px 1px rgba($black, 0.15));
   @include border-radius(5px);
-  //font-size: $baseFontSize - 1;
+}
+
+@mixin pageContentPadding {
+  padding: ($pageContentPad / 2) $pageContentPad $pageContentPad $pageContentPad;
+  //width: 100% - ($pageContentPad * 2);
+  width: 100%;
+}
+
+@mixin boxContentPadding {
+  $boxContentPad: $pageContentPad * 2 !default;
+  padding: ($boxContentPad / 2) $boxContentPad $boxContentPad $boxContentPad;
+  //width: 100% - ($boxContentPad * 2);
+  width: 100%;
+}
+
+@mixin pageContentStyle {
+  margin-bottom: 30px;
+  @include pageContentPadding;
+  @include pageContentColors;
 }
