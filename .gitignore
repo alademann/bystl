@@ -34,5 +34,7 @@ STAFFPHOTOS
 #web/dev/wp-content/plugins/*
 web/dev/wp-content/plugins/akismet/*
 web/dev/wp-content/media/*
-web/dev/wp-content/themes/bystl_WP/*.css
+#web/dev/wp-content/themes/bystl_WP/*.css
 
+
+web/dev/wp-content/themes/twentyeleven/
