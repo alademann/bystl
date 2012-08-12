@@ -68,6 +68,7 @@
             {cycle:         "<?php echo get_bloginfo('template_url').'/js/jquery.cycle.all.js'; ?>"},
             {easing:        "<?php echo get_bloginfo('template_url').'/js/jquery.easing.1.3.js'; ?>"},
             {bootstrap:     "<?php echo get_bloginfo('template_url').'/js/bootstrap/bootstrap.min.js'; ?>"},
+            {masonry:     "<?php echo get_bloginfo('template_url').'/js/jquery.masonry.min.js'; ?>"},
             {twitter:       "<?php echo get_bloginfo('template_url').'/js/twitter.js'; ?>"},
             {synapse:       "<?php echo get_bloginfo('template_url').'/js/script.js'; ?>"},
             {prettyphoto:   "<?php echo get_bloginfo('template_url').'/js/jquery.prettyPhoto.js'; ?>"},
