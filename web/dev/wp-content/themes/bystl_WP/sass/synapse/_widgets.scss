@@ -239,3 +239,8 @@
 		text-shadow: 1px 1px 1px rgba($black, 0.4);
 	}
 } // END .category-widget
+
+// footer map widget
+.footer .widget_text {
+	@extend .span-two-thirds;
+}
