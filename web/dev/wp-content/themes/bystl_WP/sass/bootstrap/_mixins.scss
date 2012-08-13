@@ -125,6 +125,9 @@
         margin-bottom: #{round(($headingBasis - ($headingBasis / $increment)) / 2)}px;
       }
     }
+    .page-content h#{$i}, .page-content .h#{$i} {
+      margin-top: #{round($headingBasis)}px;
+    }
 		// next time it loops through, heading basis will be the next smallest.
 		$headingBasis: $headingBasis - ($headingBasis / $increment);
 	}
