@@ -127,6 +127,7 @@ a {
 	}
 	&:hover { 
 		color: $linkColorHover; 
+		text-decoration: none;
 	}
 
 	.video-holder &, .portfolio-item & {

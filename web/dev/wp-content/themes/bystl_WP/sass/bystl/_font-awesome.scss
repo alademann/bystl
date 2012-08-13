@@ -48,8 +48,8 @@ li[class*=" icon-"], [class*="navicon-"] {
     @include webfont($icoFont_name, "icon");
     display: inline-block;
     text-decoration: inherit;
-    color: $black;
-    font-size: $baseFontSize + 4;
+    color: inherit;
+    font-size: 1.1em;
     padding-right: 7px;
 }
 
@@ -161,6 +161,8 @@ ul.icons {
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
     readers do not read off random characters that represent icons */
 @mixin iconGlyphClasses($prefix: "icon-", $el: ":before") {
+
+    .#{$prefix}none#{$el}                     { content: " "; }
 
     .#{$prefix}glass#{$el}                { content: "\f000"; }
     .#{$prefix}music#{$el}                { content: "\f001"; }
