@@ -240,7 +240,90 @@
 	}
 } // END .category-widget
 
+/*	FOOTER WIDGETS
+---------------------------------------------- */
+
+$footerElemMargin: 7px !default;
+
 // footer map widget
 .footer .widget_text {
 	@extend .span-two-thirds;
+}
+
+// footer vCard styles
+.footer .info > div {
+	
+	padding: 0 0 0 20px;
+	color: $gray6;
+
+}
+
+.footer .info .vcard {
+
+	// split up logical sections of address / contact text
+	.org, .adr, .email, .tel {
+		display: block;
+		margin-bottom: $footerElemMargin;
+	}
+
+	.org {
+		font-size: $baseFontSize + 4;
+		font-weight: bold;
+		text-shadow: 0 0 transparent !important;
+	}
+
+	.contact-info {
+		//padding: 0 10px; // keep it inset from .org above
+	}
+
+	.email {
+		color: inherit;
+	}
+
+	.adr {
+
+		color: inherit;
+
+		.line-two {
+			padding-left: 14px;
+		}
+
+		.street-address {
+			color: inherit;
+		}
+		.locality { // city
+			color: inherit;
+		}
+		.region { // state
+			color: inherit;
+		}
+		.postal-code {
+			color: inherit;
+		}
+
+	} // END address
+
+	.tel {
+		color: inherit;
+	}
+
+} // end vcard
+
+// footer directions styles
+.footer .info .h4 {
+	font-size: $baseFontSize + 2;
+	font-weight: bold;
+	text-shadow: 0 0 transparent !important;
+	//
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-top: $footerElemMargin * 2;
+	margin-bottom: $footerElemMargin * 2;
+	padding-top: $footerElemMargin;
+	border-top: 1px solid $grayLighterD;
+}
+
+.footer .info .tab-pane {
+	font-size: $baseFontSize - 1;
 }

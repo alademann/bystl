@@ -90,6 +90,28 @@
 
 head.ready("bootstrap", function() {
 
+    var tabs = $(".nav-tabs");
+    var tabsHere = $(tabs).length;
+    //console.log("found " + tabsHere + "tab sections");
+    if(tabsHere > 0) {
+        $(tabs).each(function(){
+            var tabBtn = $(this).find(" > li a");
+            $(tabBtn).click(function(e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+
+            // activate first tab
+            $(tabBtn).filter(":first").tab("show");
+
+        });
+
+    } // end if(tabsHere)
+
+
+    // END TAB ACTIVATION
+    
+
     <?php if (get_option_tree('auto') == 'Yes') {  $timeout = 6000; } else { $timeout = 0; } ?>
 
     //var prepHeight = $('#large-slider').find(".item:first-child > img").height();
