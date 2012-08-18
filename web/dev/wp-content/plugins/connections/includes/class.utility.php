@@ -1,0 +1,459 @@
+<?php
+
+class cnCounter
+{
+     private $step;
+     private $count; 
+
+     public function getcount() {
+          return $this->count;
+     }
+ 
+     public function getstep() {
+          return $this->step;
+     }
+
+     public function changestep($newval) {
+          if(is_integer($newval))
+          $this->step = $newval;
+     }
+
+     public function step() {
+          $this->count += $this->step;
+     }
+
+     public function reset() {
+          $this->count = 0;
+          $this->step = 1;
+     }
+}
+
+class cnFormatting
+{
+	/**
+	 * Sanitize the input string. HTML tags can be permitted.
+	 * The permitted tags can be suppled in an array.
+	 * 
+	 * @TODO: Finish the code needed to support the $permittedTags array.
+	 * 
+	 * @param string $string
+	 * @param bool $allowHTML [optional]
+	 * @param array $permittedTags [optional]
+	 * @return string
+	 */
+	public function sanitizeString($string, $allowHTML = FALSE, $permittedTags = NULL)
+	{
+		// Strip all tags except the permitted.
+		if ( ! $allowHTML)
+		{
+			// Ensure all tags are closed. Uses WordPress method balanceTags().
+			$balancedText = balanceTags($string, TRUE);
+			
+			$strippedText = strip_tags($balancedText);
+			
+			// Strip all script and style tags.
+			$strippedText = preg_replace( '@<(script|style)[^>]*?>.*?</\\1>@si', '', $strippedText );
+			
+			// Escape text using the WordPress method and then strip slashes.
+			$escapedText = stripslashes(esc_attr($strippedText));
+			
+			// Remove line breaks and trim white space.
+			$escapedText = preg_replace('/[\r\n\t ]+/', ' ', $escapedText);
+			
+			return trim($escapedText);
+		}
+		else
+		{
+			// Strip all script and style tags.
+			$strippedText = preg_replace( '@<(script|style)[^>]*?>.*?</\\1>@si', '', $string );
+			$strippedText = preg_replace( '/&lt;(script|style).*?&gt;.*?&lt;\/\\1&gt;/si', '', stripslashes($strippedText) );
+			
+			/*
+			 * Use WordPress method make_clickable() to make links clickable and
+			 * use kses for filtering.
+			 * 
+			 * http://ottopress.com/2010/wp-quickie-kses/
+			 */
+			return wptexturize( wpautop( make_clickable( wp_kses_post($strippedText) ) ) );
+		}
+		
+	}
+	
+	/**
+	 * Uses WordPress function to sanitize the input string.
+	 * 
+	 * Limits the output to alphanumeric characters, underscore (_) and dash (-).
+	 * Whitespace becomes a dash.
+	 * 
+	 * @param string $string
+	 * @return string
+	 */
+	public function sanitizeStringStrong($string)
+	{
+		$string = sanitize_title_with_dashes($string);
+		return $string;
+	}
+	
+	/**
+	 * Strips all numeric characters from the supplied string and returns the string.
+	 * 
+	 * @param string $string
+	 * @return string
+	 */
+	public function stripNonNumeric($string)
+	{
+		return preg_replace('/[^0-9]/', '', $string);
+	}
+	
+	/**
+	 * Converts the following strings: yes/no; true/false and 0/1 to boolean values.
+	 * If the supplied string does not match one of those values the method will return NULL.
+	 * 
+	 * @param string $value
+	 * @return boolean
+	 */
+	public function toBoolean(&$value)
+	{
+		switch ( strtolower($value) ) 
+		{
+			case 'yes':
+				$value = TRUE;
+			break;
+			
+			case 'no':
+				$value = FALSE;
+			break;
+			
+			case 'true':
+				$value = TRUE;
+			break;
+			
+			case 'false':
+				$value = FALSE;
+			break;
+			
+			case '1':
+				$value = TRUE;
+			break;
+			
+			case '0':
+				$value = FALSE;
+			break;
+			
+			default:
+				$value = NULL;
+			break;
+		}
+		
+		return $value;
+	}
+	
+	/**
+	 * Return localized Yes or No.
+	 * 
+	 * @author Alex Rabe (http://alexrabe.de/)
+	 * @since 0.7.1.6
+	 * 
+	 * @param bool $bool
+	 * @return return 'Yes' | 'No'
+	 */
+	public function toYesNo( $bool ){
+		if($bool) 
+			return __('Yes', 'connections');
+		else 
+			return __('No', 'connections');
+	}
+}
+
+class cnValidate
+{
+	public function attributesArray($defaults, $untrusted)
+	{
+		//print_r($defaults);
+		
+		$intersect = array_intersect_key($untrusted, $defaults); // Get data for which is in the valid fields.
+		$difference = array_diff_key($defaults, $untrusted); // Get default data which is not supplied.
+		return array_merge($intersect, $difference); // Merge the results. Contains only valid fields of all defaults.
+	}
+	
+    /**
+     * Validate the supplied URL.
+     * 
+     * return: 1 is returned if good (check for >0 or ==1)
+     * return: 0 is returned if syntax is incorrect
+     * return: -1 is returned if syntax is correct, but url/file does not exist
+     * 
+     * @author Luke America
+     * @url http://wpcodesnippets.info/blog/two-useful-php-validation-functions.html
+     * @param string $url
+     * @param bool $check_exists [optional]
+     * @return int
+     */
+	public function url( $url , $check_exists = TRUE )
+	{
+	    /**********************************************************************
+	     Copyright © 2011 Gizmo Digital Fusion (http://wpCodeSnippets.info)
+	     you can redistribute and/or modify this code under the terms of the
+	     GNU GPL v2: http://www.gnu.org/licenses/gpl-2.0.html
+	    **********************************************************************/
+		
+		 // add http:// (here AND in the referenced $url), if needed
+	    if (!$url) {return false;}
+	    if (strpos($url, ':') === false) {$url = 'http://' . $url;}
+	    // auto-correct backslashes (here AND in the referenced $url)
+	    $url = str_replace('\\', '/', $url);
+	 
+	    // convert multi-byte international url's by stripping multi-byte chars
+	    $url_local = urldecode($url) . ' ';
+	    $len = mb_strlen($url_local);
+	    if ($len !== strlen($url_local))
+	    {
+	        $convmap = array(0x0, 0x2FFFF, 0, 0xFFFF);
+	        $url_local = mb_decode_numericentity($url_local, $convmap, 'UTF-8');
+	    }
+	    $url_local = trim($url_local);
+	 
+	    // now, process pre-encoded MBI's
+	    $regex = '#&([a-z]{1,2})(?:acute|cedil|circ|grave|lig|orn|ring|slash|th|tilde|uml);#i';
+	    $url_test = preg_replace($regex, '$1', htmlentities($url_local, ENT_QUOTES, 'UTF-8'));
+	    if ($url_test != '') {$url_local = $url_test;}
+	 
+	    // test for bracket-enclosed IP address (IPv6) and modify for further testing
+	    preg_match('#(?<=\[)(.*?)(?=\])#i', $url, $matches);
+	    if ($matches[0])
+	    {
+	        $ip = $matches[0];
+	        if (!preg_match('/^([0-9a-f\.\/:]+)$/', strtolower($ip))) {return false;}
+	        if (substr_count($ip, ':') < 2) {return false;}
+	        $octets = preg_split('/[:\/]/', $ip);
+	        foreach ($octets as $i) {if (strlen($i) > 4) {return false;}}
+	        $ip_adj = 'x' . str_replace(':', '_', $ip) . '.com';
+	        $url_local = str_replace('[' . $ip . ']', $ip_adj, $url_local);
+	    }
+	 
+	    // test for IP address (IPv4)
+	    $regex = "^(https?|ftp|news|file)\:\/\/";
+	    $regex .= "([0-9]{1,3}\.[0-9]{1,3}\.)";
+	    if (eregi($regex, $url_local))
+	    {
+	        $regex = "^(https?|ftps)\:\/\/";
+	        $regex .= "([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})";
+	        if (!eregi($regex, $url_local)) {return false;}
+	        $seg = preg_split('/[.\/]/', $url_local);
+	        if (($seg[2] > 255) || ($seg[3] > 255) || ($seg[4] > 255) || ($seg[5] > 255)) {return false;}
+	    }
+	 
+	    // patch for wikipedia which can have a 2nd colon in the url
+	    if (strpos(strtolower($url_local), 'wikipedia'))
+	    {
+	        $pos = strpos($url_local, ':');
+	        $url_left = substr($url_local, 0, $pos + 1);
+	        $url_right = substr($url_local, $pos + 1);
+	        $url_right = str_replace(':', '_', $url_right);
+	        $url_local = $url_left . $url_right;
+	    }
+	 
+	    // construct the REGEX for standard processing
+	    // scheme
+	    $regex = "^(https?|ftp|news|file)\:\/\/";
+	    // user and password (optional)
+	    $regex .= "([a-z0-9+!*(),;?&=\$_.-]+(\:[a-z0-9+!*(),;?&=\$_.-]+)?@)?";
+	    // hostname or IP address
+	    $regex .= "([a-z0-9+\$_-]+\.)*[a-z0-9+\$_-]{2,4}";
+	    // port (optional)
+	    $regex .= "(\:[0-9]{2,5})?";
+	    // dir/file path (optional)
+	    $regex .= "(\/([a-z0-9+\$_-]\.?)+)*\/?";
+	    // query (optional)
+	    $regex .= "(\?[a-z+&\$_.-][a-z0-9;:@/&%=+\$_.-]*)?";
+	    // anchor (optional)
+	    $regex .= "(#[a-z_.-][a-z0-9+\$_.-]*)?\$";
+	 
+	    // test it
+	    $is_valid = eregi($regex, $url_local) > 0;
+	 
+	    // final check for a TLD suffix
+	    if ($is_valid)
+	    {
+	        $url_test = str_replace('-', '_', $url_local);
+	        $regex = '#^(.*?//)*([\w\.\d]*)(:(\d+))*(/*)(.*)$#';
+	        preg_match($regex, $url_test, $matches);
+	        $is_valid = preg_match('#^(.+?)\.+[0-9a-z]{2,4}$#i', $matches[2]) > 0;
+	    }
+	 
+	    // check if the url/file exists
+	    if (($check_exists) && ($is_valid))
+	    {
+	        $status = array();
+	        $url_test = str_replace(' ', '%20', $url);
+	        $handle = curl_init($url_test);
+	        curl_setopt($handle, CURLOPT_HEADER, true);
+	        curl_setopt($handle, CURLOPT_NOBODY, true);
+	        curl_setopt($handle, CURLOPT_FAILONERROR, true);
+	        curl_setopt($handle, CURLOPT_SSL_VERIFYHOST, false);
+	        curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, false);
+	        curl_setopt($handle, CURLOPT_FOLLOWLOCATION, false);
+	        curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+	        preg_match('/HTTP\/.* ([0-9]+) .*/', curl_exec($handle) , $status);
+	        if ($status[1] == 200) {$is_valid = true;}
+	        else {$is_valid = -1;}
+	    }
+	 
+	    // exit
+	    return $is_valid;
+	}
+	
+	/**
+	 * Validate the supplied URL.
+     * 
+     * return: 1 is returned if good (check for >0 or ==1)
+     * return: 0 is returned if syntax is incorrect
+     * return: -1 is returned if syntax is correct, but email address does not exist
+     * 
+     * @author Luke America
+     * @url http://wpcodesnippets.info/blog/two-useful-php-validation-functions.html
+	 * @param string $email
+	 * @param bool $check_mx [optional]
+	 * @return 
+	 */
+	public function email( $email , $check_mx = TRUE )
+	{
+		/**********************************************************************
+	     Copyright © 2011 Gizmo Digital Fusion (http://wpCodeSnippets.info)
+	     you can redistribute and/or modify this code under the terms of the
+	     GNU GPL v2: http://www.gnu.org/licenses/gpl-2.0.html
+	    **********************************************************************/
+		
+		// check syntax
+	    $email = trim($email);
+	    $regex = '/^([*+!.&#$¦\'\\%\/0-9a-z^_`{}=?~:-]+)@(([0-9a-z-]+\.)+[0-9a-z]{2,4})$/i';
+	    $is_valid = preg_match($regex, $email, $matches);
+	 
+	    // NOTE: Windows servers do not offer checkdnsrr until PHP 5.3.
+	    // So we create the function, if it doesn't exist.
+	    if(!function_exists('checkdnsrr'))
+	    {
+	        function checkdnsrr($host_name='', $rec_type='')
+	        {
+	            if(!empty($host_name))
+	            {
+	                if(!$rec_type) {$rec_type = 'MX';}
+	                exec("nslookup -type=$rec_type $host_name", $result);
+	 
+	                // Check each line to find the one that starts with the host name.
+	                foreach ($result as $line)
+	                {
+	                    if(eregi("^$host_name", $line))
+	                    {
+	                        return true;
+	                    }
+	                }
+	                return false;
+	            }
+	            return false;
+	        }
+	    }
+	 
+	    // check that the server exists and is setup to handle email accounts
+	    if (($is_valid) && ($check_mx))
+	    {
+	        $at_index = strrpos($email, '@');
+	        $domain = substr($email, $at_index + 1);
+	        if (!(checkdnsrr($domain, 'MX') || checkdnsrr($domain, 'A')))
+	        {
+	            $is_valid = -1;
+	        }
+	    }
+	 
+	    // exit
+	    return $is_valid;
+	}
+	
+	/**
+	 * Will return TRUE?FALSE based on current user capability or privacy setting if the user is not logged in to WordPress.
+	 * 
+	 * @author Steven A. Zahm
+	 * @since 0.7.2.0
+	 * @param string $visibilty
+	 * @return bool
+	 */
+	public function userPermitted($visibilty)
+	{
+		global $connections;
+		
+		if ( is_user_logged_in() )
+		{
+			if ( ! empty($visibilty) )
+			{
+				if ( current_user_can('connections_view_public') && $visibilty == 'public' ) return TRUE;
+				if ( current_user_can('connections_view_private') && $visibilty == 'private' ) return TRUE;
+				if ( ( current_user_can('connections_view_unlisted') && is_admin() ) && $visibilty == 'unlisted' ) return TRUE;
+				
+				// If we get here, return FALSE
+				return FALSE;
+			}
+			else
+			{
+				return FALSE;
+			}
+		}
+		else
+		{
+			if ( $visibilty == 'unlisted' ) return FALSE;
+			
+			if ( $connections->options->getAllowPublic() && $visibilty == 'public' ) return TRUE;
+			if ( $connections->options->getAllowPublicOverride() && $visibilty == 'public' ) return TRUE;
+			if ( $connections->options->getAllowPrivateOverride() && $visibilty == 'private' ) return TRUE;
+			
+			// If we get here, return FALSE
+			return FALSE;
+		}
+		
+		// Shouldn't happen....
+		return FALSE;
+	}
+}
+
+class cnURL
+{
+	/**
+	 * Modifies, replaces or removes the url query.
+	 * 
+	 * @author solenoid && jesse
+	 * @link http://us2.php.net/manual/en/function.parse-url.php#100114
+	 * @param array $mod
+	 * @return string
+	 */
+	public function modify($mod)
+	{
+	    $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+	    $query = explode("&", $_SERVER['QUERY_STRING']);
+	    if (!$_SERVER['QUERY_STRING']) {$queryStart = "?";} else {$queryStart = "&";}
+	    // modify/delete data
+	    foreach($query as $q)
+	    {
+	        list($key, $value) = explode("=", $q);
+	        if(array_key_exists($key, $mod))
+	        {
+	            if($mod[$key])
+	            {
+	                $url = preg_replace('/'.$key.'='.$value.'/', $key.'='.$mod[$key], $url);
+	            }
+	            else
+	            {
+	                $url = preg_replace('/&?'.$key.'='.$value.'/', '', $url);
+	            }
+	        }
+	    }
+	    // add new data
+	    foreach($mod as $key => $value)
+	    {
+	        if($value && !preg_match('/'.$key.'=/', $url))
+	        {
+	            $url .= $queryStart.$key.'='.$value;
+	        }
+	    }
+	    return $url;
+	}
+}
+?>

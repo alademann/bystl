@@ -1,0 +1,93 @@
+/*
+ * Common
+ */
+div#cn-list div.cn-list-head { position: relative; }
+div#cn-list div.cn-list-section-head { position: relative; }
+div#cn-list div.cn-list-section-head h4 { font-size: 16px; padding: 0; margin-bottom: .8em; }
+div#cn-list div.cn-alphaindex { font-weight: bold; font-size: 14px; position: relative; bottom: 0; right: 0; }
+/*
+ * Image / Logo Styles
+ */
+div#cn-list span.cn-image {
+	background:url("../images/loading.gif") transparent no-repeat 50% 50%;
+	display: block;
+	position: relative;
+}
+div#cn-list span.cn-image img {
+	border: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	visibility: hidden;
+}
+div#cn-list span.cn-image-style {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color: #FFFFFF;
+	border: 1px solid #E3E3E3;
+	margin: 0 0 5px;
+	padding: 5px;
+}
+
+/*
+ * Name and Org Styles
+ */
+div#cn-list span.fn { display: block; }
+div#cn-list span.org { display: block; }
+div#cn-list span.organization-name { display: block; }
+div#cn-list span.organization-unit { display: block; }
+div#cn-list span.title { display: block; }
+div#cn-list span.contact-name { display: block; }
+div#cn-list span.contact-label { font-weight: bold; }
+
+/*
+ * Address Styles
+ */
+div#cn-list span.adr { display: block; margin-bottom: 10px; }
+div#cn-list span.adr span.address-name { display: block; font-weight: bold; }
+div#cn-list span.adr span.street-address { display: block; }
+div#cn-list span.adr span.extended-address { display: block; }
+div#cn-list span.adr span.country-name { display: block; }
+div#cn-list span.adr span.geo, div#cn-list span.adr span.geo span.latitude,div#cn-list span.adr span.geo span.longitude { display: block; }
+
+/*
+ * Phone Styles
+ */
+div#cn-list span.phone-number-block { display: block; margin-bottom: 10px; }
+div#cn-list span.tel { display: block; }
+div#cn-list span.tel span.phone-name { font-weight: bold; }
+
+/*
+ * Email Styles
+ */
+div#cn-list span.email-address-block { display: block; margin-bottom: 10px; }
+div#cn-list span.email { background-image: none; display: block; }
+div#cn-list span.email span.email-name { font-weight: bold; }
+
+/*
+ * IM Styles
+ */
+div#cn-list span.im-network-block { display: block; margin-bottom: 10px; }
+div#cn-list span.im-network { display: block; }
+div#cn-list span.im-network span.im-name { font-weight: bold; }
+div#cn-list span.social-media-block img { width: auto; }
+
+/*
+ * Social Media Network Styles
+ */
+div#cn-list span.social-media-block { display: block; margin-bottom: 10px; }
+div#cn-list span.social-media-block a { margin: 0; padding: 0; }
+div#cn-list span.social-media-block img { margin: 0; padding: 0; width: auto; }
+div#cn-list span.social-media-network { display: inline-block; }
+
+/*
+ * Link Styles
+ */
+div#cn-list span.link-block { display: block; margin-bottom: 10px; }
+div#cn-list span.link { display: block; }
+div#cn-list span.link span.link-name { font-weight: bold; }
+
+/*
+ * Anniversary/Birthday vEvent Styles
+ */
+div#cn-list div.vevent abbr{ border: 0; cursor: default; text-transform: none; letter-spacing: normal; }
