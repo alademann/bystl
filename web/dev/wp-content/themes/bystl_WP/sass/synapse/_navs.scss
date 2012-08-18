@@ -2,7 +2,7 @@
 
 	PARTIAL:	_navs.scss
 	PARENT:		_theme-synapse.scss
-	
+
  ----------------------------------------------*/
 
 .page-container.navWrapper {
@@ -10,7 +10,7 @@
 	margin-bottom: -30px;
 }
 
-// global transition for all nav items in the theme 
+// global transition for all nav items in the theme
 .navbar .nav li a, .navbar .dropdown-menu li a, .header li a, .caret, [class*="icon-"]:before {
 	@include transition(all .3s ease);
 }
@@ -51,7 +51,10 @@
 
 .header .nav {
 	margin-bottom: 0;
+	margin-top: 2px;
+	.children, .page-template-staff-bio-php & { display: none; }
 }
+
 #main-nav {
 	float: right;
 	padding-top: 6px;
@@ -107,7 +110,7 @@
 			&:hover {
 				text-decoration: none;
 			} // END #filters <li><a>:hover
-			
+
 		} // END #filters <li><a>
 	} // END #filters <li>
 } // END #filters

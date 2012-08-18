@@ -1,4 +1,4 @@
-// MIXINS 
+// MIXINS
 // Snippets of reusable CSS to develop faster and keep code readable
 // -----------------------------------------------------------------
 
@@ -103,22 +103,22 @@
   @include size($size, $size);
 }
 @mixin headingSize-generate($size, $lineheight, $increment){
-	
+
 	$headingBasis: $size;
 
 	@for $i from 1 through 6 {
-    h#{$i} { 
-			font-size: #{round($headingBasis)}px; 
-			line-height: #{round($headingBasis * $lineheight)}px; 
+    h#{$i} {
+			font-size: #{round($headingBasis)}px;
+			line-height: #{round($headingBasis * $lineheight)}px;
       margin-bottom: #{round($headingBasis / 2)}px;
 			small {
 				font-size: #{round($headingBasis - ($headingBasis / $increment))}px;
         margin-bottom: #{round(($headingBasis - ($headingBasis / $increment)) / 2)}px;
 			}
 		}
-		.h#{$i} { 
-      font-size: #{round($headingBasis)}px; 
-      line-height: #{round($headingBasis * $lineheight)}px; 
+		.h#{$i} {
+      font-size: #{round($headingBasis)}px;
+      line-height: #{round($headingBasis * $lineheight)}px;
       margin-bottom: #{round($headingBasis / 2)}px;
       small {
         font-size: #{round($headingBasis - ($headingBasis / $increment))}px;
@@ -265,11 +265,11 @@
   $newWidth: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1));
   width: $newWidth;
   //@debug "numColumns: #{$columns} : #{$newWidth}";
-  @include ie7(width, ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) - (.5 / $gridRowWidth * 100px * 1%)); 
+  @include ie7(width, ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) - (.5 / $gridRowWidth * 100px * 1%));
 }
 
 @mixin grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth) {
-  
+
   // Set the container width, and override it for fixed navbars in media queries
     .container-fluid,
     .navbar-fixed-top .container-fluid,
@@ -384,10 +384,10 @@
 			 -moz-border-radius: $radius;
 						border-radius: $radius;
 		@if $warn_if_compass_not_default { @debug "not using compass css3, using bootstrap tb_ mixins"; }
-	} 
+	}
 	@else {
 		@include border-radius($radius); // compass equivalent
-	}	
+	}
 
 }
 
@@ -397,7 +397,7 @@
 		-webkit-box-shadow: $shadow;
 			 -moz-box-shadow: $shadow;
 						box-shadow: $shadow;
-	} 
+	}
 	@else {
 		$shadow: compact($shadow, $shadow2, $shadow3, $shadow4, $shadow5, $shadow6, $shadow7, $shadow8, $shadow9, $shadow10);
 		@include box-shadow($shadow); // compass equivalent
@@ -412,7 +412,7 @@
 				-ms-transition: $transition;
 				 -o-transition: $transition;
 						transition: $transition;
-	} 
+	}
 	@else {
 		@include transition($transition);
 	}
@@ -422,7 +422,7 @@
 
 @mixin transition_extensions{
 	@if $compass_css3 {
-		
+
 		// use @extend to add these properties elsewhere for consistency.
 		.trans {
 			@include transition-duration(.7s);
@@ -430,14 +430,14 @@
 
 		// extension classes for various transition PROPERTIES
 		.tp_alpha {
-			@include transition-property("opacity");	
+			@include transition-property("opacity");
 		}
 		.tp_shadow {
 			@include transition-property("box-shadow, text-shadow");
 		}
 		.tp_scale {
 			@include transition-property("height, min-height, max-height, width, min-width, max-width, font-size, line-height");
-		}	
+		}
 		.tp_position {
 			@include transition-property("top, right, bottom, left, margin, padding, vertical-aligns");
 		}
@@ -646,7 +646,7 @@
 				@if $legacy-support-for-ie8 or $legacy-support-for-ie7 or $legacy-support-for-ie6 {
 					filter: $value;
 				}
-			} 
+			}
 			@else {
 				// it isn't transparent anyway... just output a good ole hex color
 				background-color: rgb(red($color), green($color), blue($color));
@@ -723,7 +723,7 @@
   background-image: -moz-radial-gradient(circle, $innerColor, $outerColor);
   background-image: -ms-radial-gradient(circle, $innerColor, $outerColor);
   background-image: -o-radial-gradient(circle, $innerColor, $outerColor);
-  background-repeat: no-repeat;    
+  background-repeat: no-repeat;
 }
 @mixin gradient-striped($color, $angle: left top) {
   background-color: $color;
@@ -732,7 +732,7 @@
   background-image: -moz-linear-gradient($angle, rgba($white,.15) 25%, transparent 25%, transparent 50%, rgba($white,.15) 50%, rgba($white,.15) 75%, transparent 75%, transparent);
   background-image: -ms-linear-gradient($angle, rgba($white,.15) 25%, transparent 25%, transparent 50%, rgba($white,.15) 50%, rgba($white,.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient($angle, rgba($white,.15) 25%, transparent 25%, transparent 50%, rgba($white,.15) 50%, rgba($white,.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient($angle, rgba($white,.15) 25%, transparent 25%, transparent 50%, rgba($white,.15) 50%, rgba($white,.15) 75%, transparent 75%, transparent);  
+  background-image: linear-gradient($angle, rgba($white,.15) 25%, transparent 25%, transparent 50%, rgba($white,.15) 50%, rgba($white,.15) 75%, transparent 75%, transparent);
 }
 
 // Reset filters for IE

@@ -2,14 +2,14 @@
 
 	PARTIAL:	_type.scss
 	PARENT:		_theme-synapse.scss
-	
+
  ----------------------------------------------*/
 
 /*	HEADINGS, PARAGRAPHS, EMPHASIS, ETC
 ---------------------------------------------- */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-	&, a { 
+	&, a {
 		color: $headingColor;
 		text-decoration: none !important;
 		text-shadow: 1px 1px rgba($white, 0.8);
@@ -79,7 +79,7 @@ p {
 		font-size: $baseFontSize - 1;
 		font-style: italic;
 		text-shadow: -1px -1px rgba($black, 0.4);
-		margin: 15px 0 0 0;	
+		margin: 15px 0 0 0;
 	}
 
 	.footer & {
@@ -87,6 +87,35 @@ p {
 	}
 
 } // END <p>
+
+.large, .large p {
+	font-size: $baseFontSize + 5;
+	line-height: $baseLineHeight + 9;
+}
+.huge, .huge p {
+	font-size: $baseFontSize + 20;
+	line-height: $baseLineHeight + 28;
+}
+
+.page .page-content {
+	&, p {
+		font-size: $baseFontSize + 3;
+		line-height: $baseLineHeight + 11;
+	}
+	small, p small, p.small {
+		font-size: $baseFontSize - 2;
+		line-height: $baseLineHeight - 2;
+		color: inherit;
+	}
+	.large, .large p, p .large, p.large {
+		font-size: $baseFontSize + 6;
+		line-height: $baseLineHeight + 15;
+	}
+	.huge, .huge p, p .huge, p.huge {
+		font-size: $baseFontSize + 20;
+		line-height: $baseLineHeight + 30;
+	}
+}
 
 em {
 	font-style: italic;
@@ -97,36 +126,48 @@ strong {
 b {
 	@extend strong;
 }
-.large {
-	font-size: $baseFontSize + 5;
-	line-height: $baseLineHeight + 9;
-}
-.huge {
-	font-size: $baseFontSize + 20;
-	line-height: $baseLineHeight + 28;
-}
 .serif {
 	font-family: $serifFontFamily;
 }
-.ltblue-text {
+.ltblue-text, .ltblue-text p {
 	color: $bystl_logo_blueLight;
 }
-.blue-text {
+.blue-text, .blue-text p {
 	color: $bystl_logo_blueDarkest;
 }
+.sidequote {
+  margin: 0 0 0 30px;
+  padding: 10px !important;
+  text-align: center;
+  font-style: italic;
+  //@extend .well;
+
+  &:after, &:before {
+  	content: '"';
+  	color: $bystl_logo_blueLight;
+  	@include opacity(.6);
+    font-size: inherit;
+    position: inherit;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+}
+
 
 /*	LINKS
 ---------------------------------------------- */
 a {
 	color: $linkColor;
-	.sidebar & { 
-		color: lighten($bystl_blue_medium, 20%); 
+	.sidebar & {
+		color: lighten($bystl_blue_medium, 20%);
 		&:hover {
 			color: $bystl_blue_medium;
 		}
 	}
-	&:hover { 
-		color: $linkColorHover; 
+	&:hover {
+		color: $linkColorHover;
 		text-decoration: none;
 	}
 
@@ -134,7 +175,7 @@ a {
 		color: lighten($bystl_blue_medium, 20%);
 		@include transition(color 0.3s ease-in);
 		&:hover {
-			color: $bystl_blue_medium;	
+			color: $bystl_blue_medium;
 		}
 	} // END .video-holder <a>, .portfolio-item <a>
 
@@ -165,7 +206,7 @@ a {
 			text-decoration: none;
 		}
 	}
-	.breadcrumb { 
+	.breadcrumb {
 		margin: 0;
 		padding: 0;
 		background: transparent;
@@ -219,7 +260,7 @@ ul {
 			background: url(image-url('list-bullet.png', true)) no-repeat top left;
 			margin-bottom: 10px;
 		}
-		
+
 	} // END .article-excerpt <ul>, .portfolio-item-content <ul>
 } // END <ul>
 

@@ -2,15 +2,15 @@
 
 	PARTIAL:	_scaffolding.scss
 	PARENT:		_theme-synapse.scss
-	
+
  ----------------------------------------------*/
- 
+
 body {
-	padding-bottom: 20px; 
+	padding-bottom: 20px;
 	background-color: $bodyBackground;
 	background-repeat: repeat;
 	background-image: image-url('patterns/Graphy2.png');
-	
+
 	&.bg_Axiom {
 		background-image: image-url('patterns/Axiom.png');
 	}
@@ -18,34 +18,34 @@ body {
 		background-image: image-url('patterns/Brick.png');
 	}
 	&.bg_Connected {
-		background-image: image-url('patterns/Connected.png');		
+		background-image: image-url('patterns/Connected.png');
 	}
 	&.bg_Cube {
-		background-image: image-url('patterns/Cube.png');		
+		background-image: image-url('patterns/Cube.png');
 	}
 	&.bg_Fabric {
-		background-image: image-url('patterns/Fabric.png');		
+		background-image: image-url('patterns/Fabric.png');
 	}
 	&.bg_Flower {
-		background-image: image-url('patterns/Flower.png');		
+		background-image: image-url('patterns/Flower.png');
 	}
 	&.bg_Graphy {
-		background-image: image-url('patterns/Graphy.png');		
+		background-image: image-url('patterns/Graphy.png');
 	}
 	&.bg_Graphy2 {
-		background-image: image-url('patterns/Graphy2.png');		
+		background-image: image-url('patterns/Graphy2.png');
 	}
 	&.bg_Line {
-		background-image: image-url('patterns/Line.png');		
+		background-image: image-url('patterns/Line.png');
 	}
 	&.bg_Noise {
-		background-image: image-url('patterns/Noise.png');		
+		background-image: image-url('patterns/Noise.png');
 	}
 	&.bg_Square {
-		background-image: image-url('patterns/Square.png');		
+		background-image: image-url('patterns/Square.png');
 	}
 	&.bg_Wood {
-		background-image: image-url('patterns/Wood.png');		
+		background-image: image-url('patterns/Wood.png');
 	}
 
 } // END body
@@ -67,7 +67,7 @@ body {
 
 .page-container {
 	margin-top: 40px;
-	&#homeContent { 
+	&#homeContent {
 		margin-top: 0;
 	}
 } // END .page-container
@@ -78,8 +78,20 @@ body {
 .page-content {
 	//max-width: 578px;
 	@include pageContentStyle;
-} // END .page-container > .page-content
 
+	// increase spacing when grid is nested inside content area (wysiwyg)
+	.row-fluid > [class*="span"] {
+		padding-right: 2%;
+	}
+	.row-fluid > [class*="span"]:first-child,
+	.row-fluid > [class*="span#{$gridColumns}"] {
+	    margin-left: 0;
+	}
+	.row-fluid > [class*="span"]:last-child, .row-fluid > [class*="span#{$gridColumns}"] {
+		padding-right: 0;
+	}
+
+} // END .page-container > .page-content
 
 .box {
 	.wrapper {
