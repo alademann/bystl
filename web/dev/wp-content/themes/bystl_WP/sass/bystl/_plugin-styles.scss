@@ -5,6 +5,10 @@
     margin-top: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid $bystl_tan_light;
+    float: left;
+    width: 100%;
+    height: auto;
+
     &:last-child {
         border-bottom: 0 none;
     }
@@ -15,7 +19,7 @@
         margin: 1% 0 1.5% 6%;
 
         .staffBios & {
-            margin: 4% 6% 2% 4%;
+            margin: 6% 6% 2% 4%;
         }
 
         img {
@@ -23,6 +27,7 @@
             @include box-shadow(0 0 8px 0 rgba($black,.2));
             width: 100%;
             height: 100%;
+            max-width: 259px;
 
             .staffBios & {
                 width: 130px;
