@@ -8,7 +8,7 @@
 
         <div class="page-container row-fluid clearfix">
 
-            <div class="page-content span13">
+            <div class="page-content span12">
                 <?php
                 if (have_posts ()) {
                     while (have_posts ()) {
@@ -40,9 +40,9 @@
 
             </div>
             <!-- END: .page-content (left column) -->
-            <div class="span3 sidebar menu-container">
+            <div class="span4 sidebar menu-container autoActivate">
                 <h3 class="title"><a href="../">Testimonials</a></h3>
-                <ul class="nav nav-tabs nav-stacked">
+                <ul class="nav nav-pills nav-stacked">
                     <?php $args = array (
                             'post_type' => 'testimonial',
                             'title_li'  => ''

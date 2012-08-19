@@ -112,8 +112,78 @@ head.ready("bootstrap", function() {
 
     } // end if(tabsHere)
 
-
     // END TAB ACTIVATION
+
+
+    function moveActiveToTop(){
+        // move active sidebar link to the top of the list so it's visible
+
+        var sideBarMenuLists = $(".sidebar.menu-container .nav");
+
+        if(sideBarMenuLists.length > 0) {
+            //console.log("I found " + sideBarMenuLists.length + " sideBarMenus");
+
+            $(sideBarMenuLists).each(function(index){
+                if(index == 0){ index = 1};
+
+                var firstLI = $(this).find("li:first");
+                var activeLI = $(this).find("li.active");
+
+                activeLI.insertBefore(firstLI);
+
+                index = index + 1;
+            })
+
+        }
+
+
+        $('#list').delegate('input[type="button"]', 'click', function() {
+            var parent = $(this).parent();
+
+            if(this.value === 'higher'){
+                parent.insertBefore(parent.prev());
+            } else {
+                parent.insertAfter(parent.next());
+            }
+
+            return false;
+        });
+    } // END function moveActiveToTop()
+
+    function autoActivateLinks() {
+        // system to activate an item in a list of links if it's href matches the URL string
+        // Select an a element that has the matching href and apply a class of 'active'. Also prepend a - to the content of the link
+        var url = window.location;
+        var linkLists = $(".autoActivate");
+
+        if(linkLists.length > 0){
+            //console.log("I found " + linkLists.length + " linkLists");
+
+            $(linkLists).each(function(index){
+                if(index == 0){ index = 1};
+
+                //console.info("iteration: " + index);
+                $(this).find('a[href="'+url+'"]').closest("li").addClass('active');
+
+                if(index == linkLists.length) {
+                    //console.log("end of the line... index(" + index + ") == this.length(" + linkLists.length + ")");
+
+                    moveActiveToTop();
+
+                }
+
+
+                index = index + 1;
+            });
+        }
+
+
+    } // END function autoActivateLinks()
+
+
+
+    // find all <ul> elems with class "autoActivate" and compare the url to the hrefs of the links inside
+    autoActivateLinks();
 
 
     <?php if (get_option_tree('auto') == 'Yes') {  $timeout = 6000; } else { $timeout = 0; } ?>
@@ -214,20 +284,6 @@ head.ready("bootstrap", function() {
 }); // END head.ready
 
 </script>
-
-<?php if (get_post_meta(get_the_id(), 'ddportfolioBG', true) != '') {
-
-    $portfolioBG = ddListGet('portfolioBG', get_the_ID());
-
-    ?>
-
-    <script type="text/javascript">
-        head.ready(function(){
-            jQuery.backstretch("<?php echo $portfolioBG[0]['img_url']; ?>");
-        }); // END head.ready
-     </script>
-
-<?php } ?>
 
   </body>
 
