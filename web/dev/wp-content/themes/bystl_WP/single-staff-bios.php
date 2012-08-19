@@ -41,10 +41,13 @@
                 <ul class="blog-widget-articles">
                     <?php $args = array (
                             'post_type' => 'staff-bios',
-                            'title_li' => __('Staff Bios')
+                            'title_li' => ''
                         );
                     ?>
+
+                    <li class="title"><strong><a href="../">Staff Bios</a></strong></li>
                     <?php wp_list_pages($args); ?>
+
                 </ul>
             </div>
             <!-- END: .sidebar (right column) -->

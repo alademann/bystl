@@ -3,6 +3,11 @@
 .bio-entry {
 
     margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $bystl_tan_light;
+    &:last-child {
+        border-bottom: 0 none;
+    }
 
     .bioImg {
         // bio-photo container

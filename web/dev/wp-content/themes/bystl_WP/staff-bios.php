@@ -10,6 +10,8 @@
   $arguments = array(
       'post_type' => 'staff-bios',
       'post_status' => 'publish',
+      'orderby' => 'menu_order',
+      'order' => 'asc',
       'posts_per_page' => '-1',
       'paged' => 0,
 
