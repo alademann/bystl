@@ -153,6 +153,10 @@ body {
 				}
 
 				a {
+
+					@include transition-property("background");
+					@include transition-duration(.7s);
+
 					margin: 0 !important;
 					@include border-radius(0);
 					border: 0 none;
