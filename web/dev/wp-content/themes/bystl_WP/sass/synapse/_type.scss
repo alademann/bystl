@@ -171,6 +171,7 @@ b {
   padding: 10px !important;
   text-align: center;
   font-style: italic;
+  font-family: $serifFontFamily;
   //@extend .well;
 
   &:after, &:before {

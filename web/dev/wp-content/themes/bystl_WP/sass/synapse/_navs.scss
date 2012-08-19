@@ -55,6 +55,12 @@
 	.children, .page-template-staff-bio-php & { display: none; }
 }
 
+.parentChildrenListing {
+	padding-top: 30px;
+	margin-top: 30px;
+	border-top: 1px solid $grayLighter;
+}
+
 #main-nav {
 	float: right;
 	padding-top: 6px;
