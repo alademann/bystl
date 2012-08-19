@@ -1,5 +1,5 @@
 <?php /*
-  Template Name: Testimonials   
+  Template Name: Testimonials
  */ ?>
 
 <?php get_header(); ?>
@@ -25,44 +25,44 @@
 ?>
 
         <div class="row-fluid page-container clearfix navWrapper">
-          <?php 
+          <?php
             if ( $count > 1 ) {
           ?>
 
             <ul class="nav nav-pills span16 clearfix">
-                
+
                 <li class="active"><a href="#" data-filter="testimonialArchive">Show All</a></li>
-                        
-                <?php 
+
+                <?php
                   if ( $count > 0 ){
                     echo "<ul>";
                     foreach ( $terms as $term ) {
                       echo '<li><a href="" data-filter="' . $term->name . '">' . $term->name . '</li></a>';
-                        
+
                     }
                     echo "</ul>";
                   }
-                
+
                 ?>
-                    
+
             </ul>
             <!-- END: filters -->
-              
-          <?php 
+
+          <?php
             } // END if($count > 0)
           ?>
         </div>
 
         <div class="page-container row-fluid clearfix">
-          
+
           <h1>Testimonials</h1>
 
           <div id="testimonialItems" class="full span16">
-              
-          <?php if ($testimonial_query->have_posts()) : 
-            while ($testimonial_query->have_posts()) : $testimonial_query->the_post(); 
+
+          <?php if ($testimonial_query->have_posts()) :
+            while ($testimonial_query->have_posts()) : $testimonial_query->the_post();
           ?>
-                
+
             <div class="box boxWhite testimonialArchive span-one-third <?php echo custom_taxonomies_terms_text(); ?>">
               <div class="wrapper">
                 <strong class="h4"><a class="permalink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></strong> <br />
@@ -74,10 +74,16 @@
             </div>
 
           <?php endwhile; ?>
+
+          <?php
+              kriesi_pagination();
+              dd_restore_query();
+          ?>
+
           <?php endif; ?>
 
           </div>
-          <!-- END: .testimonial-items -->         
+          <!-- END: .testimonial-items -->
 
         </div>
         <!-- END: .page-container -->
@@ -102,7 +108,7 @@
         function () {
           //console.log("hovering");
           $(this).addClass("hover");
-        }, 
+        },
         function () {
           //console.log("hover-out");
           $(this).removeClass("hover");

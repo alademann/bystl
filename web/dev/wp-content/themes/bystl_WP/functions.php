@@ -561,3 +561,13 @@ function custom_taxonomies_terms_text2() {
 		return $return;
 	}
 }
+
+function is_only_home() {
+  $post_type = get_query_var('post_type');
+  return is_home() && empty($post_type);
+}
+
+function is_any_single() {
+  $post_type = get_query_var('post_type');
+  return is_single() || !empty($post_type);
+}

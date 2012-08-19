@@ -60,6 +60,12 @@
 
 
           <?php endwhile; ?>
+
+          <?php
+              kriesi_pagination();
+              dd_restore_query();
+          ?>
+
           <?php endif; ?>
 
           </div>

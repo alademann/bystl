@@ -1,4 +1,8 @@
-        <?php if(function_exists('bcn_display') && !is_home()) { ?>
+        <?php if(
+                function_exists('bcn_display') &&
+                !is_only_home()
+                ) {
+        ?>
         <div class="container-fluid" id="siteBreadcrumbs">
             <div class="row-fluid">
                 <div id="crumbs" class="span16">
@@ -77,14 +81,14 @@
             {prettifyCode:  "<?php echo get_bloginfo('template_url').'/js/prettify/prettify.js'; ?>"}
         );
 
-        
+
         var wp_active = $(".nav li[class*='current']");
         $.each(wp_active, function(){
             $(this).addClass("active");
         });
 
     }); // END head.ready(jquery)
-    
+
 </script>
 <script type="text/javascript">
 
@@ -110,7 +114,7 @@ head.ready("bootstrap", function() {
 
 
     // END TAB ACTIVATION
-    
+
 
     <?php if (get_option_tree('auto') == 'Yes') {  $timeout = 6000; } else { $timeout = 0; } ?>
 
@@ -120,7 +124,7 @@ head.ready("bootstrap", function() {
     $(".carousel").hover(
       function () {
         $(this).addClass("hover");
-      }, 
+      },
       function () {
         $(this).removeClass("hover");
       }
@@ -131,7 +135,7 @@ head.ready("bootstrap", function() {
     findEmptyCaptions();
     //setTimeout(matchSize, 2000);
     matchSize();
-    
+
 
     window.onresize = function(event) {
         matchSize();
@@ -169,7 +173,7 @@ head.ready("bootstrap", function() {
             top: imgHeight - singleTitleHeight - 20,
             height: singleTitleHeight
         });
-        
+
     }
 
     $('.carousel').carousel({
@@ -193,13 +197,13 @@ head.ready("bootstrap", function() {
             // pagerAnchorBuilder: function(idx, slide){
             //     return '#testimonial-pager li:eq(' + idx + ') a';
             // }
-            
+
             //speed: tbtestimonial_settings.transition_interval * 1000
         });
     }
 
     //$.each(testimonialsWidgets, function(){
-        
+
     //});
 
     // $('.carousel').bind('slide', function(){
@@ -214,15 +218,15 @@ head.ready("bootstrap", function() {
 <?php if (get_post_meta(get_the_id(), 'ddportfolioBG', true) != '') {
 
     $portfolioBG = ddListGet('portfolioBG', get_the_ID());
-    
+
     ?>
-                            
+
     <script type="text/javascript">
         head.ready(function(){
             jQuery.backstretch("<?php echo $portfolioBG[0]['img_url']; ?>");
         }); // END head.ready
      </script>
-         
+
 <?php } ?>
 
   </body>
