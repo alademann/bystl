@@ -131,10 +131,20 @@ p {
 		line-height: $baseLineHeight + 30;
 	}
 	blockquote {
-		font-family: $serifFontFamily;
-		font-style: italic;
-		font-size: inherit;
-		padding: 20px;
+		&, p {
+
+			padding: 20px;
+			margin: 0;
+			border: 0 none;
+			color: darken($bystl_logo_blueDarkest, 6%);
+
+		}
+
+		p {
+			margin-bottom: $baseLineHeight - ($baseLineHeight / 2);
+			padding: 0;
+		}
+
 	}
 }
 
