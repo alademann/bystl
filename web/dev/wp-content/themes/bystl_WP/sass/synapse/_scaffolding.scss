@@ -125,6 +125,62 @@ body {
 	margin-bottom: 35px;
 	font-size: $baseFontSize - 2 !important;
 	@include darkBlueWidget;
+
+	&.menu-container {
+
+		$darkDivider: #374a5f !default;
+		$lightDivder: #485b6e !default;
+		$hoverBg: #3a4e64 !default;
+
+		// sidebars where their sole purpose is to be a list of links
+		padding: 0;
+		font-size: $baseFontSize !important;
+
+		.title {
+			padding: 10px 0 0 10px;
+		}
+
+		/* SIDEBAR NAVIGATION */
+		.nav {
+
+			li {
+				border-bottom: 1px solid $lightDivder;
+				.rgba & {
+					border-bottom: 1px solid rgba($white, .1);
+				}
+				&:last-child {
+					border-bottom: 0 none;
+				}
+
+				a {
+					@include border-radius(0);
+					border: 0 none;
+					border-bottom: 1px solid $darkDivider;
+					.rgba & {
+						border-bottom: 1px solid rgba($black, .25);
+					}
+
+					&:hover {
+						background: $hoverBg;
+						.rgba & {
+							background: rgba($black, .45);
+						}
+					}
+
+				} // end .menu-container.sidebar .nav li a
+
+				&.active {
+					a, a:hover {
+						background: $white;
+						font-weight: bold;
+					}
+				} // end .menu-container.sidebar .nav li.active
+
+			} // end .menu-container.sidebar .nav li
+		} // end .menu-container.sidebar .nav
+
+	} // end .menu-container.sidebar
+
 } // END .page-container > .sidebar
 
 /*	CONTENT-SPECIFIC ELEM CONTAINERS

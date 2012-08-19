@@ -5,6 +5,13 @@
 
  ----------------------------------------------*/
 
+@mixin sidebarHeadingStyle {
+	color: $white;
+	text-shadow: 1px 1px 0 rgba($black, 0.5);
+	font-size: 16px;
+	margin-top: 20px;
+}
+
 /*	HEADINGS, PARAGRAPHS, EMPHASIS, ETC
 ---------------------------------------------- */
 h1, h2, h3, h4, h5, h6,
@@ -24,16 +31,24 @@ h1, h2, h3, h4, h5, h6,
 	margin-top: .5em;
 }
 
+.sidebar {
+	h2, h3, .title {
+		&, a {
+			@include sidebarHeadingStyle;
+		}
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
 h3 {
 
 	#alternate .widget &, .sidebar .widget & {
 		//border-bottom: 1px solid darken(#3e536b, 15%);
 		//margin-bottom: 15px;
 		//padding-bottom: 7px;
-		color: $white;
-		text-shadow: 1px 1px 0 rgba($black, 0.5);
-		font-size: 16px;
-		margin-top: 20px;
+		@include sidebarHeadingStyle;
 
 	} // END .widget <h3>
 
@@ -114,6 +129,12 @@ p {
 	.huge, .huge p, p .huge, p.huge {
 		font-size: $baseFontSize + 20;
 		line-height: $baseLineHeight + 30;
+	}
+	blockquote {
+		font-family: $serifFontFamily;
+		font-style: italic;
+		font-size: inherit;
+		padding: 20px;
 	}
 }
 
@@ -295,7 +316,7 @@ li {
 
 /*	BLOCKQUOTES, CODE, ETC
 ---------------------------------------------- */
-blockquote {
+.box blockquote {
 	padding: 0;
 	border: 0;
 	position: relative;
@@ -325,7 +346,7 @@ blockquote {
 		top: 15px;
 	}
 
-} // END blockquote
+} // END .box blockquote
 
 /*	WORDPRESS CLASS TYPOGRAPHY
 ---------------------------------------------- */

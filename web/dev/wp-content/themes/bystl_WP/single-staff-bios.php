@@ -4,7 +4,7 @@
 
         <div class="page-container row-fluid clearfix">
 
-            <div class="page-content span11">
+            <div class="page-content span13">
                 <?php
                 if (have_posts ()) {
                     while (have_posts ()) {
@@ -37,15 +37,15 @@
 
             </div>
             <!-- END: .page-content (left column) -->
-            <div class="span5 sidebar">
-                <ul class="blog-widget-articles">
+            <div class="span3 sidebar menu-container">
+                <h2 class="title"><a href="../">Staff Bios</a></h2>
+                <ul class="nav nav-tabs nav-stacked">
                     <?php $args = array (
                             'post_type' => 'staff-bios',
                             'title_li' => ''
                         );
                     ?>
 
-                    <li class="title"><strong><a href="../">Staff Bios</a></strong></li>
                     <?php wp_list_pages($args); ?>
 
                 </ul>
