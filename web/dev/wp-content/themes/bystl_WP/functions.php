@@ -1,5 +1,8 @@
 <?php
 
+add_theme_support( 'post-thumbnails' );
+add_theme_support( 'post-thumbnails', array( 'staff-bios' ) );
+
 add_action( 'after_setup_theme', 'bootstrap_setup' );
 
 if ( ! function_exists( 'bootstrap_setup' ) ):
@@ -7,23 +10,23 @@ if ( ! function_exists( 'bootstrap_setup' ) ):
   function bootstrap_setup(){
 
     add_action( 'init', 'register_menu' );
-      
+
     function register_menu(){
-      register_nav_menu( 'top_menu', 'Bootstrap Top Menu' ); 
+      register_nav_menu( 'top_menu', 'Bootstrap Top Menu' );
     }
 
     class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
 
-      
+
       function start_lvl( &$output, $depth ) {
 
         $indent = str_repeat( "\t", $depth );
         $output    .= "\n$indent<ul class=\"dropdown-menu\">\n";
-        
+
       }
 
       function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-        
+
         $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
         $li_attributes = '';
@@ -59,17 +62,17 @@ if ( ! function_exists( 'bootstrap_setup' ) ):
       }
 
       function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
-        
+
         if ( !$element )
           return;
-        
+
         $id_field = $this->db_fields['id'];
 
         //display this element
-        if ( is_array( $args[0] ) ) 
+        if ( is_array( $args[0] ) )
           $args[0]['has_children'] = ! empty( $children_elements[$element->$id_field] );
-        else if ( is_object( $args[0] ) ) 
-          $args[0]->has_children = ! empty( $children_elements[$element->$id_field] ); 
+        else if ( is_object( $args[0] ) )
+          $args[0]->has_children = ! empty( $children_elements[$element->$id_field] );
         $cb_args = array_merge( array(&$output, $element, $depth), $args);
         call_user_func_array(array(&$this, 'start_el'), $cb_args);
 
@@ -100,9 +103,9 @@ if ( ! function_exists( 'bootstrap_setup' ) ):
         //end this element
         $cb_args = array_merge( array(&$output, $element, $depth), $args);
         call_user_func_array(array(&$this, 'end_el'), $cb_args);
-        
+
       }
-      
+
     }
 
   }
@@ -111,13 +114,13 @@ endif;
 ?>
 <?php
 
- add_theme_support( 'automatic-feed-links' ); 
+ add_theme_support( 'automatic-feed-links' );
    // Ready for theme localisation
 load_theme_textdomain ('localization');
 
 $metaboxes = TEMPLATEPATH . '/includes/metaboxes/metaboxes.php';
 include($metaboxes);
-require TEMPLATEPATH . '/option-tree/index.php'; 
+require TEMPLATEPATH . '/option-tree/index.php';
 require_once TEMPLATEPATH . '/includes/comment-list.php';
 
 	/* ==OTHER FUNCTION === */
@@ -127,9 +130,9 @@ require_once TEMPLATEPATH . '/includes/comment-list.php';
 		return get_bloginfo('template_url').'/includes/timthumb.php?q=100&amp;zc=1&amp;src='.$img.'&amp;w='.$width.'&amp;h='.$height;
 
 	}
-        
+
 // Register our custom image sizes
-// add_image_size( $name, $width, $height, $crop ); 
+// add_image_size( $name, $width, $height, $crop );
 if ( function_exists( 'add_image_size' ) ) {
   add_image_size('full-screen', 980, 652, false);
 	add_image_size('slider-wide', 940, 500, true ); // was 330 originally
@@ -536,7 +539,7 @@ function custom_taxonomies_terms_text() {
 		}
 		return $return;
 	}
-} 
+}
 
 function custom_taxonomies_terms_text2() {
 	global $post, $post_id;
@@ -557,4 +560,4 @@ function custom_taxonomies_terms_text2() {
 		}
 		return $return;
 	}
-} 
+}

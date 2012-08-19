@@ -1,65 +1,37 @@
 // "connections" bio styles
-#cn-list {
-    .cn-entry {
-        border: 0 none !important;
-        padding: 0 !important;
-        margin-top: 30px !important;
 
-        div, span {
-            margin: 0 !important;
-            font-variant: normal !important;
+.bio-entry {
+
+    margin-top: 30px;
+
+    .bioImg {
+        // bio-photo container
+        float: right;
+        margin: 1% 0 1.5% 6%;
+
+        .staffBios & {
+            margin: 4% 6% 2% 4%;
         }
 
-        > div > span {
-            // bio-photo container
-            float: right !important;
-            margin: 0 0 2% 4% !important;
-        }
+        img {
+            @include border-radius(7px);
+            @include box-shadow(0 0 8px 0 rgba($black,.2));
+            width: 100%;
+            height: 100%;
 
-        h4 a, .h4 a {
-            color: $bystl_link_blue;
-            &:hover {
-                color: $bystl_link_blueHover;
-            }
-        }
-
-        .cn-image-style {
-            border: 0 none !important;
-
-            .cn-image {
-                width: 100px;
-
-                img {
-                    @include border-radius(7px);
-                    @include box-shadow(0 0 8px 0 rgba($black,.2));
-                    visibility: visible !important;
-                    width: 100% !important;
-                    height: 100% !important;
-                }
-
-            }
-
-        } // END .cn-image-style
-    } // END: .cn-entry
-} // END #cn-list
-
-// individual bio page
-.page-template-staff-bio-php #cn-list {
-
-    .cn-entry {
-
-        > div > span {
-            margin: 4% 0 4% 4% !important;
-        }
-
-        .cn-image-style {
-
-            .cn-image {
-                width: auto;
+            .staffBios & {
+                width: 130px;
             }
 
         }
 
     }
 
-}
+    h4 a, .h4 a {
+        color: $bystl_link_blue;
+        &:hover {
+            color: $bystl_link_blueHover;
+        }
+    }
+
+} // END: .cn-entry
