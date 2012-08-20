@@ -150,8 +150,12 @@ head.ready("bootstrap", function() {
 
     }
 
-    $('.carousel').carousel({
+    $('.carousel#slider').carousel({
         interval: 6000
+    });
+
+    $('.carousel#postures').carousel({
+        interval: 800
     });
 
     var sidebarTestimonialWidget = $(".sidebar .testimonials");

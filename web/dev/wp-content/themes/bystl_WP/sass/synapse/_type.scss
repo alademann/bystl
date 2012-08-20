@@ -42,6 +42,32 @@ h1, h2, h3, h4, h5, h6,
 	}
 }
 
+// posture titles
+.postureEnglishName {
+	font-family: inherit;
+}
+.postureSanskritName {
+	margin-bottom: 0;
+	font-family: $serifFontFamily;
+	font-weight: normal;
+	font-style: italic;
+	position: relative;
+	top: -20px;
+	left: 0;
+	letter-spacing: .1em;
+	color: $bystl_blue_medium;
+
+	&:before {
+		content: "(";
+	}
+	&:after {
+		content: ")";
+	}
+}
+.postureDescription {
+	font-family: inherit;
+}
+
 h3 {
 
 	#alternate .widget &, .sidebar .widget & {
