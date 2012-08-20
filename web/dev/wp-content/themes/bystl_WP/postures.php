@@ -50,15 +50,16 @@
                     foreach($postureThumbs as $thumbID) {
                       $postureThumb = wp_get_attachment_image_src( $thumbID, 'thumbnail' );
                     }
-
-                    echo "<div class='postureImg'>";
-                    echo "<img src='".$postureThumb[0]."' width='".$postureThumb[1]."' height='".$postureThumb[2]."' />";
-                    echo "</div>";
-                    echo "<div class='en'>".get_custom_field('posture_name_en')."</div>";
-                    echo "<div class='sa' lang='sa'>".get_custom_field('posture_name')."</div>";
-                   //echo '</a>';
-
                 ?>
+                <div class='postureImg'>
+                  <a rel='nofollow' href='<?php the_permalink() ?>'>
+                    <img src='<?php echo $postureThumb[0]; ?>' />
+                  </a>
+                </div>
+                <div>
+                  <a href='<?php the_permalink() ?>'><?php print_custom_field('posture_name_en') ?></a> <br />
+                  <em lang='sa'><?php print_custom_field('posture_name') ?></em>
+                </div>
 
               </div>
 

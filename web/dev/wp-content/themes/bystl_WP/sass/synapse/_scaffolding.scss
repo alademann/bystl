@@ -103,6 +103,29 @@ body {
 	}
 }
 
+// grid of postures
+.posture {
+  float: left;
+  width: auto;
+  height: 276px;
+  max-width: 200px;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  margin: 0 0 19px 12px;
+  padding: 0 10px 10px 10px;
+  @include box-shadow(0 0 9px 0 rgba(0,0,0,.15));
+  @include border-radius(7px);
+}
+.posture img {
+  @include border-radius(7px);
+}
+.posture em {
+  font-size: 11px;
+  line-height: normal;
+}
+
+
 .full {
 	//max-width: 890px !important;
 	width: 100%;
