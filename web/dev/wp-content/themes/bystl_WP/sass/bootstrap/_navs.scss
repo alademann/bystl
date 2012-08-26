@@ -2,7 +2,7 @@
 
   PARTIAL:  _navs.scss
   PARENT:   _bootstrap.scss
-  
+
 ----------------------------------------------*/
 
 // BASE CLASS
@@ -108,7 +108,7 @@
   padding-top: 9px;
   padding-bottom: 9px;
   border: 1px solid transparent;
-  @include tb_border-radius(4px 4px 0 0);
+  @include tb_border-radius($buttonBdRadius $buttonBdRadius 0 0);
   &:hover {
     border-color: $grayLighter $grayLighter $grayLighterD;
   }
@@ -132,7 +132,7 @@
   padding-bottom: 8px;
   margin-top: 2px;
   margin-bottom: 2px;
-  @include border-radius(5px);
+  @include border-radius($pageContentBdRadius);
 }
 
 // Active state
@@ -164,10 +164,10 @@
   @include tb_border-radius(0);
 }
 .nav-tabs.nav-stacked > li:first-child > a {
-  @include tb_border-radius(4px 4px 0 0);
+  @include tb_border-radius($buttonBdRadius $buttonBdRadius 0 0);
 }
 .nav-tabs.nav-stacked > li:last-child > a {
-  @include tb_border-radius(0 0 4px 4px);
+  @include tb_border-radius(0 0 $buttonBdRadius $buttonBdRadius);
 }
 .nav-tabs.nav-stacked > li > a:hover {
   border-color: $grayLighterD;
@@ -194,7 +194,7 @@
   border-width: 1px;
 }
 .nav-pills .dropdown-menu {
-  @include border-radius(4px);
+  @include tb_border-radius($buttonBdRadius);
 }
 
 // Default dropdown links
@@ -252,7 +252,7 @@
 
 
 // COMMON STYLES
-// ------------- 
+// -------------
 
 // Clear any floats
 .tabbable {
@@ -291,7 +291,7 @@
   margin-bottom: 0;
 }
 .tabs-below .nav-tabs > li > a {
-  @include tb_border-radius(0 0 4px 4px);
+  @include tb_border-radius(0 0 $buttonBdRadius $buttonBdRadius);
   &:hover {
     border-bottom-color: transparent;
     border-top-color: $grayLighterD;
@@ -325,7 +325,7 @@
 }
 .tabs-left .nav-tabs > li > a {
   margin-right: -1px;
-  @include tb_border-radius(4px 0 0 4px);
+  @include tb_border-radius($buttonBdRadius 0 0 $buttonBdRadius);
 }
 .tabs-left .nav-tabs > li > a:hover {
   border-color: $grayLighter $grayLighterD $grayLighter $grayLighter;
@@ -344,7 +344,7 @@
 }
 .tabs-right .nav-tabs > li > a {
   margin-left: -1px;
-  @include tb_border-radius(0 4px 4px 0);
+  @include tb_border-radius(0 $buttonBdRadius $buttonBdRadius 0);
 }
 .tabs-right .nav-tabs > li > a:hover {
   border-color: $grayLighter $grayLighter $grayLighter $grayLighterD;

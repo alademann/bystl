@@ -38,13 +38,13 @@
   .rgba &.hover, .rgba &:hover {
 
     background: darken($white, 50%) !important;
-    
+
     .h4, .h4 a, blockquote, blockquote p, p {
       text-shadow: 0 0 transparent !important;
     }
 
     &::after {
-      @include border-radius(5px);
+      @include border-radius($pageContentBdRadius);
       width: 100%;
       height: 60%;
       top: 0;
@@ -62,7 +62,7 @@
 
   }
 
-} 
+}
 
 #iq-testimonials-label {
   float: left;
@@ -100,7 +100,7 @@
 /*  TESTIMONIALS WIDGET
 ---------------------------------------------- */
 ul.testimonials, ul#tbtestimonials-widget {
-  margin-left: 0 !important; 
+  margin-left: 0 !important;
   margin-right: 0 !important;
 }
 .testimonials, #tbtestimonials-widget, .sidebar-testimonials {
@@ -175,7 +175,7 @@ ul.testimonials, ul#tbtestimonials-widget {
   @include display(block);
   font-style: italic;
 }
-.sidebar-testimonials blockquote, 
+.sidebar-testimonials blockquote,
 .testimonials blockquote,
 #tbtestimonials-widget blockquote {
   padding: 0;

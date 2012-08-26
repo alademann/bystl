@@ -4,13 +4,13 @@
 	PARENT:		_theme-synapse.scss
 
  ----------------------------------------------*/
- 
+
 $contentSliderImgH: 330px !default;
 $contentSliderImgW: 620px !default;
 $sliderWideImgW: 940px !default;
 $sliderWideImgH:  500px !default;
 
-.slider ul { 
+.slider ul {
 	margin: 0 !important;
 	position: relative;
 	overflow: visible;
@@ -29,7 +29,7 @@ $sliderWideImgH:  500px !default;
 }
 
 /*	SLIDER ARROWS
----------------------------------------------- */ 
+---------------------------------------------- */
 
 #prev-arrow, #next-arrow {
 	text-indent: -9999px !important;
@@ -57,7 +57,7 @@ $sliderWideImgH:  500px !default;
 }
 
 /*	SLIDERS
----------------------------------------------- */ 
+---------------------------------------------- */
 
 // if js is enabled, hide the image containers initially to prevent flicker
 .js .slider li {
@@ -70,7 +70,7 @@ $sliderWideImgH:  500px !default;
 .content-slider {
 	//padding-bottom: 20px;
 	min-height: $contentSliderImgH;
-	height: auto; 
+	height: auto;
 	background: none !important;
 	//overflow: hidden;
 }
@@ -248,7 +248,7 @@ $sliderWideImgH:  500px !default;
 // }
 
 .simple-slider img, .img-container img, .portfolio-single-img {
-	@include border-radius(5px);
+	@include border-radius($pageContentBdRadius);
 	@include box-shadow(0 2px 3px rgba($black, 0.1));
 }
 

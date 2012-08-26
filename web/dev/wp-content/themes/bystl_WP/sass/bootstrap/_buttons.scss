@@ -2,7 +2,7 @@
 
   PARTIAL:  _buttons.scss
   PARENT:   _bootstrap.scss
-  
+
 ----------------------------------------------*/
 
 // Base styles
@@ -25,12 +25,12 @@
   border: 1px solid $btnBorder;
   @include ie7(border, 0); // Remove the border to prevent IE7's black border on input:focus
   border-bottom-color: darken($btnBorder, 10%);
-  @include tb_border-radius(4px);
+  @include tb_border-radius($buttonBdRadius);
   @include ie7-restore-left-whitespace(); // Give IE7 some love
   $shadow: inset 0 1px 0 rgba($white,.2), 0 1px 2px rgba($black,.05);
   @include tb_box-shadow($shadow);
   cursor: pointer;
-  
+
 }
 
 // Hover state
@@ -62,8 +62,8 @@
   @include ie9(background-color, darken($white, 15%));
   background-image: none;
   outline: 0;
-  
-  
+
+
 }
 
 // Disabled state

@@ -1,13 +1,25 @@
-$mobileGutter: 20px !default;
-$navbarPadX: $mobileGutter / 4 !default;
-$navbarLinkPadX: $mobileGutter / 2 !default;
-$pageContentPad: 4% !default;
+$mobileGutter:              20px                !default;
+$navbarPadX:                $mobileGutter / 4   !default;
+$navbarLinkPadX:            $mobileGutter / 2   !default;
+$pageContentPad:            4%                  !default;
+$pageContentBdRadius:       5px                 !default;
+$buttonBdRadius:            4px                 !default;
+
+$baseH1Size:                32                  !default;
+$headingRule:               1.2                 !default;
+$headingIncrement:          6                   !default;
+
+$baseH1Size_px:             $baseH1Size + 0px   !default;
+$pageContentH1Size:         $baseH1Size_px + 10 !default;
+
+$sliderContentHeadingSize:  $baseH1Size_px + 16 !default;
+$sliderContentHspacing:     20px                !default;
 
 // media query breakpoints
-$phonePortraitBreakpoint: 320px !default;
-$phoneBreakpoint:         480px !default;
-$tabletBreakpoint:        768px !default;
-$tabletBreakpoint2:       979px !default;
+$phonePortraitBreakpoint:   320px !default;
+$phoneBreakpoint:           480px !default;
+$tabletBreakpoint:          768px !default;
+$tabletBreakpoint2:         979px !default;
 
 // leave this last
 $cl: ":";

@@ -2,9 +2,9 @@
 
 	PARTIAL:	_buttons.scss
 	PARENT:		_theme-synapse.scss
-	
+
  ----------------------------------------------*/
- 
+
 @mixin synBlackBtn {
     @extend .btn-inverse;
     @include buttonBackground(#626262, #1c1c1c); // tb button color mixin
@@ -39,7 +39,7 @@
 }
 .buttons a { margin-top: 0; }
 .rounded-1 { @include border-radius(99px); }
-.rounded-2 { @include border-radius(5px); }
+.rounded-2 { @include border-radius($buttonBdRadius); }
 
 .btn, .small-btn, .big-btn {
     @extend .btn; // use twitter bootstrap button styles
@@ -72,7 +72,7 @@
         @include synBlueBtn;
     }
 }
-// ORANGE 
+// ORANGE
 .btn, .small-btn, .big-btn {
     &.orange, &.btn-warning {
         @include synOrangeBtn;

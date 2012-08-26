@@ -2,12 +2,12 @@
 
 	PARTIAL:	_portfolio.scss
 	PARENT:		_theme-synapse.scss
-	
+
  ----------------------------------------------*/
- 
+
  /*	HOME PAGE PORTFOLIO STUFF
  ---------------------------------------------- */
- 
+
 .home-portfolio {
 	min-height: 251px;
 	position: relative;
@@ -49,7 +49,7 @@
 	} // END .home-portfolio-item <span>
 
 	img {
-		@include border-radius(5px);
+		@include border-radius($pageContentBdRadius);
 		@include opacity(1.0);
 		@include transition(opacity 0.3s ease-in);
 
@@ -144,7 +144,7 @@
 	@include display(block);
 	font-weight: bold;
 	margin-bottom: 5px;
-  
+
 }
 .portfolio-span, .portfolio-span-desc {
 	font-weight: normal;

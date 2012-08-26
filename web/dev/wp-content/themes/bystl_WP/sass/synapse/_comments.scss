@@ -2,9 +2,9 @@
 
 	PARTIAL:	_comments.scss
 	PARENT:		_theme-synapse.scss
-	
+
  ----------------------------------------------*/
- 
+
 .comment-form label {
 	margin-bottom: 10px;
 	margin-top: 10px;
@@ -29,7 +29,7 @@
 	padding: 0;
 }
 .comment-info img {
-	@include border-radius(5px);
+	@include border-radius($pageContentBdRadius);
 	@include box-shadow(0 1px 2px rgba($black, 0.35));
 }
 .comment-info {
@@ -69,7 +69,7 @@
 
 }
 .comments-wrapper, .comment {
-	float: left;	
+	float: left;
 	padding: $pageContentPad;
 	width: 100% - ($pageContentPad * 2);
 	clear: both;
@@ -112,6 +112,6 @@
 	@include box-shadow(0 1px 1px rgba($black, 0.1));
 }
 #comments li {
-	margin-left: 0 !important; 
+	margin-left: 0 !important;
 	list-style: none;
 }

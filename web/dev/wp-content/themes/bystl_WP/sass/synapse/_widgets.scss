@@ -2,7 +2,7 @@
 
 	PARTIAL:	_widgets.scss
 	PARENT:		_theme-synapse.scss
-	
+
 ----------------------------------------------*/
 
 
@@ -172,12 +172,12 @@
 
 	li {
 		margin-top: 20px;
-		
+
 		// a {
 		// 	font-family: $serifFontFamily;
 		// 	font-style: italic;
 		// 	font-weight: bold;
-		// 	font-size: $baseFontSize - 2;	
+		// 	font-size: $baseFontSize - 2;
 		// } // END .tweet_list <li><a>
 	} // END .tweet_list <li>
 	li:first-child {
@@ -214,7 +214,7 @@
 
 	img {
 		border: 7px solid $white;
-		@include border-radius(5px);
+		@include border-radius($pageContentBdRadius);
 		@include box-shadow(0 1px 1px rgba($black, 0.25));
 	}
 } // END .footer .flickr_badge_image
@@ -252,7 +252,7 @@ $footerElemMargin: 7px !default;
 
 // footer vCard styles
 .footer .info > div {
-	
+
 	padding: 0 0 0 20px;
 	color: $gray6;
 
