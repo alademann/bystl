@@ -5,83 +5,54 @@
 
  ----------------------------------------------*/
 
-$sliderContentPad: 20px !default;
-$sliderH1Size: $baseH1Size + ($baseH1Size / 2) + 0px !default;
-$sliderH1LH: $sliderH1Size - 5 !default;
-$sliderH1hugeMod: 20 !default;
-
 /*	SLIDER CONTENT (using bootstrap carousel)
 ---------------------------------------------- */
-.slide {
-
-	.content, .content > .inner {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: auto;
-	}
-
-	.content {
-
-		width: 100vw;
-		@include transition(top .3s ease-in);
-
-		h1, .h1 {
-			font-size: $sliderH1Size;
-			line-height: $sliderH1LH;
-			font-weight: bold;
-			color: $white;
-			@include text-shadow(0 3px 8px rgba($black, 0.8), 0 0 ($sliderH1Size / 2) rgba($black, 0.3));
-			padding: 0 $sliderContentPad;
-			margin-bottom: 0;
-			display: block;
-			width: 100%;
-			height: auto;
-
-			strong {
-				display: block;
-				font-size: $sliderH1Size + $sliderH1hugeMod;
-				line-height: $sliderH1LH + ($sliderH1hugeMod / 2);
-				position: relative;
-				left: -#{$sliderH1hugeMod / 2}px;
-			}
-
-		}
-
-		p {
-			display: block;
-			width: 100%;
-			height: auto;
-			padding: $sliderContentPad;
-			margin: 0;
-			background: rgba($black, .4);
-
-			font-size: $baseFontSize + 6;
-			font-weight: normal;
-			color: $white;
-			font-family: $serifFontFamily;
-			font-style: italic;
-			@include text-shadow(none);
-		}
-
-
-	}
-
-	.itemOverlay {
-		position: absolute;
-		z-index: 1000;
-
-		.content {
-			bottom: auto;
-			top: -99em;
-
-		}
-
-	}
-
+.carousel, #slider .content {
+	margin: 20px 0;
+	position: relative;
 }
-.carousel .item > img { width: 100%; }
+// content sliders
+.slider-intro {
+
+	&.slider-intro-left {
+		padding-right: $sliderContentHspacing;
+		.description {
+			padding-right: $sliderContentHspacing * 1.5;
+		}
+	}
+	&.slider-intro-right {
+		padding-left: $sliderContentHspacing;
+		.description {
+			padding-left: $sliderContentHspacing * 1.5;
+		}
+	}
+
+	h1, .h1 {
+		margin-top: 35px;
+		font-size: $sliderContentHeadingSize;
+		line-height: $sliderContentHeadingSize;
+		font-weight: bold !important;
+
+		br {
+			@extend .hidden-phone; // don't need the line breaks on our phone
+		}
+
+	}
+	.description {
+		&, & p {
+			font-size: $baseFontSize + 2;
+		}
+	}
+}
+.carousel {
+	.item img {
+		.homeSlider & {
+			@include border-radius($pageContentBdRadius);
+		}
+		width: 100%;
+	}
+}
+
 .carousel#postures {
 	margin-top: 0;
 	position: relative;

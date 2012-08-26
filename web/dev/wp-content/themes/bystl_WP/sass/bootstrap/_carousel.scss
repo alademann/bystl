@@ -2,8 +2,11 @@
 
   PARTIAL:  _carousel.scss
   PARENT:   _bootstrap.scss
-  
+
 ----------------------------------------------*/
+
+$carouselSpeed:   1.3s; // transition timing
+$carouselTiming:  ease-in-out;
 
 .carousel {
   position: relative;
@@ -23,8 +26,8 @@
   .item {
     display: none;
     position: relative;
-    -webkit-transform: translate3d(0, 0, 0); // activate the GPU
-    @include transition(left 1.3s ease-in-out);
+    @include transform(translate3d(0,0,0));
+    @include transition(left $carouselSpeed $carouselTiming);
   }
 
   // Account for jankitude on images
@@ -33,19 +36,19 @@
     line-height: 1;
   }
 
-  .active, 
-  .next, 
+  .active,
+  .next,
   .prev { display: block; }
 
-  .active {
-    left: 0;
-  }
-
-  .next, 
+  .next,
   .prev {
     position: absolute;
     top: 0;
     width: 100%;
+  }
+
+  .active {
+    left: 0;
   }
 
   .next {
@@ -54,7 +57,7 @@
   .prev {
     left: -100%;
   }
-  .next.left, 
+  .next.left,
   .prev.right {
     left: 0;
   }
