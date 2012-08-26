@@ -91,6 +91,30 @@
 
     </script>
     <script type="text/javascript" src="<?php echo get_bloginfo('template_url').'/js/footer-onload.js'; ?>"></script>
+    <script type="text/javascript">
+    head.ready(function(){
+
+        var homePageSlider = $(".homeSlider #slider");
+        <?php
+            if (get_option_tree('auto') == 'Yes') {
+                $defaultSpeed = 1500;
+                if(get_option_tree('auto_speed') != ''){
+                    $timeout = get_option_tree('auto_speed') * 1000;
+                } else {
+                    $timeout = $defaultSpeed;
+                }
+            } else {
+                $timeout = 0;
+            }
+        ?>
+        if(homePageSlider) {
+            $('.homeSlider .carousel').carousel({
+                interval: <?php echo $timeout; ?>
+            });
+        }
+
+    });
+    </script>
 
   </body>
 

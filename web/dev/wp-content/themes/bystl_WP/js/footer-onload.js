@@ -95,67 +95,63 @@ head.ready("bootstrap", function() {
     //var prepHeight = $('#large-slider').find(".item:first-child > img").height();
     //$('#large-slider').css("min-height", prepHeight);
 
-    $(".carousel").hover(
-      function () {
-        $(this).addClass("hover");
-      },
-      function () {
-        $(this).removeClass("hover");
-      }
-    );
+    // $(".carousel").hover(
+    //   function () {
+    //     $(this).addClass("hover");
+    //   },
+    //   function () {
+    //     $(this).removeClass("hover");
+    //   }
+    // );
 
-    // make the overlay content the same size as the image
-    var itemContent = $('.carousel .content');
-    findEmptyCaptions();
-    //setTimeout(matchSize, 2000);
-    matchSize();
+    // // make the overlay content the same size as the image
+    // var itemContent = $('.carousel .content');
+    // findEmptyCaptions();
+    // //setTimeout(matchSize, 2000);
+    // matchSize();
 
 
-    window.onresize = function(event) {
-        matchSize();
-    }
+    // window.onresize = function(event) {
+    //     matchSize();
+    // }
 
-    function findEmptyCaptions(){
-        $.each(itemContent, function(){
-            $(this).find("p:empty",".h1:empty").hide();
-        });
-    }
+    // function findEmptyCaptions(){
+    //     $.each(itemContent, function(){
+    //         $(this).find("p:empty",".h1:empty").hide();
+    //     });
+    // }
 
-    function matchSize(){
-        var carouselImg = $('.carousel .item:visible > img');
-        var imgHeight = $(carouselImg).height();
-        var imgWidth = $(carouselImg).width();
-        var singleContainer = $(".carousel .itemOverlay > .content");
-        var singleTitle = $(".carousel .itemOverlay > .content > .h1");
-        var singleCaption = $(".carousel .itemOverlay > .content > p");
-        var singleTitleHeight = $(singleTitle).height() + $(singleCaption).height();
+    // function matchSize(){
+    //     var carouselImg = $('.carousel .item:visible > img');
+    //     var imgHeight = $(carouselImg).height();
+    //     var imgWidth = $(carouselImg).width();
+    //     var singleContainer = $(".carousel .itemOverlay > .content");
+    //     var singleTitle = $(".carousel .itemOverlay > .content > .h1");
+    //     var singleCaption = $(".carousel .itemOverlay > .content > p");
+    //     var singleTitleHeight = $(singleTitle).height() + $(singleCaption).height();
 
-        //console.log("singleTitleH: " + $(singleTitle).height());
-        //console.log("singleCaptionH: " + $(singleCaption).height());
+    //     //console.log("singleTitleH: " + $(singleTitle).height());
+    //     //console.log("singleCaptionH: " + $(singleCaption).height());
 
-        $(singleContainer).css({
-            width: imgWidth,
-            // top: imgHeight - singleTitleHeight
-        });
+    //     $(singleContainer).css({
+    //         width: imgWidth,
+    //         // top: imgHeight - singleTitleHeight
+    //     });
 
-        $.each(itemContent, function(){
-            $(this).css("height", imgHeight);
-        });
+    //     $.each(itemContent, function(){
+    //         $(this).css("height", imgHeight);
+    //     });
 
-        $(singleContainer).css({
-            // width: imgWidth,
-            top: imgHeight - singleTitleHeight - 20,
-            height: singleTitleHeight
-        });
+    //     $(singleContainer).css({
+    //         // width: imgWidth,
+    //         top: imgHeight - singleTitleHeight - 20,
+    //         height: singleTitleHeight
+    //     });
 
-    }
-
-    $('.carousel#slider').carousel({
-        interval: 6000
-    });
+    // }
 
     $('.carousel#postures').carousel({
-        interval: 800
+        interval: 1000
     });
 
     var sidebarTestimonialWidget = $(".sidebar .testimonials");
