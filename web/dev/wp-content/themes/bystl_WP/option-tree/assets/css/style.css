@@ -54,7 +54,7 @@ a:hover strong {
   #framework_wrap #header h1 {
     width: 150px;
     height: 31px;
-    background: url(../images/logo_dark.png) no-repeat 0 0;
+    /*background: url(../images/logo_dark.png) no-repeat 0 0;*/
     text-indent: -9999px;
     margin: 20px 0 0 20px;
   }
@@ -231,7 +231,7 @@ a:hover strong {
     color: #000;
     border-color: #666;
   }
-  
+
   #framework_wrap a.button-framework.light {
     border: 1px solid #dfdfdf;
     color: #464646;
@@ -239,7 +239,7 @@ a:hover strong {
   #framework_wrap a:hover.button-framework.light {
     color: #000;
     border-color: #adaca7;
-  } 
+  }
   /* Content Inner */
   #framework_wrap #content {
     padding: 0;
@@ -478,7 +478,7 @@ a:hover strong {
           width: 540px;
         }
         #framework_wrap #content label {
-          
+
         }
         .input_wrap {
           padding: 4px 10px 12px 0;
@@ -626,11 +626,11 @@ a:hover strong {
           border-color: #bbb #eee #eee #bbb;
           color: #333;
         }
-        #framework_wrap *:focus { 
-      	 outline: none; 
+        #framework_wrap *:focus {
+      	 outline: none;
       	}
-        #framework_wrap *::-moz-focus-inner { 
-      	 border: none; 
+        #framework_wrap *::-moz-focus-inner {
+      	 border: none;
       	}
       	.bottom_btn {
           float: left;
@@ -777,7 +777,7 @@ a:hover strong {
             display: block;
           }
           .option-tree-slider-wrap .option-tree-slider-body .screenshot {
-            display: block; 
+            display: block;
             width: 320px;
           }
           .option-tree-slider-wrap .option-tree-slider-body .screenshot img {
@@ -833,8 +833,8 @@ a:hover strong {
 #framework_wrap .options_tabs {
   display: none;
 }
-#framework_wrap .ui-tabs { 
-  zoom: 1; 
+#framework_wrap .ui-tabs {
+  zoom: 1;
   background: url(../images/tabs_bg.png) repeat-y 0 0;
 }
 #framework_wrap .ui-tabs .options_tabs {
@@ -849,23 +849,23 @@ a:hover strong {
 #framework_wrap .ui-tabs-panel h2 {
   display: none;
 }
-#framework_wrap .ui-tabs .ui-tabs-nav { 
-  list-style: none; 
-  position: relative; 
-  float: left; 
+#framework_wrap .ui-tabs .ui-tabs-nav {
+  list-style: none;
+  position: relative;
+  float: left;
   width: 148px;
   word-wrap: break-word;
 }
-#framework_wrap .ui-tabs .ui-tabs-nav li { 
-  position: relative; 
+#framework_wrap .ui-tabs .ui-tabs-nav li {
+  position: relative;
   float: left;
   display: block;
   margin: 0;
   padding: 0;
   overflow: visible;
 }
-#framework_wrap .ui-tabs .ui-tabs-nav li a { 
-  float: left; 
+#framework_wrap .ui-tabs .ui-tabs-nav li a {
+  float: left;
   text-decoration: none;
   display: block;
   width: 127px;
@@ -879,31 +879,31 @@ a:hover strong {
   font-size: 11px;
 }
 #framework_wrap .ui-tabs .ui-tabs-nav li.ui-tabs-selected a,
-#framework_wrap .ui-tabs .ui-tabs-nav li.ui-tabs-selected a:hover { 
+#framework_wrap .ui-tabs .ui-tabs-nav li.ui-tabs-selected a:hover {
   background: #fff;
   color: #d54e45;
   width: 128px;
 }
-#framework_wrap .ui-tabs .ui-tabs-nav li.ui-state-disabled a, 
-#framework_wrap .ui-tabs .ui-tabs-nav li.ui-state-processing a { 
+#framework_wrap .ui-tabs .ui-tabs-nav li.ui-state-disabled a,
+#framework_wrap .ui-tabs .ui-tabs-nav li.ui-state-processing a {
   cursor: text;
 }
-#framework_wrap .ui-tabs .ui-tabs-nav li a, 
-#framework_wrap .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { 
-  cursor: pointer; 
+#framework_wrap .ui-tabs .ui-tabs-nav li a,
+#framework_wrap .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+  cursor: pointer;
 }
 #framework_wrap .ui-tabs .ui-tabs-nav li.ui-state-hover a {
   background-color: #eaf2fa;
   color: #555;
 }
-#framework_wrap .ui-tabs .ui-tabs-panel { 
+#framework_wrap .ui-tabs .ui-tabs-panel {
   display: block;
-  float: right; 
+  float: right;
   width: 595px;
   min-height: 400px;
 }
-#framework_wrap .ui-tabs .ui-tabs-hide { 
-  display: none !important; 
+#framework_wrap .ui-tabs .ui-tabs-hide {
+  display: none !important;
 }
 #framework_wrap .options_tabs li.ui-tabs-selected span {
   position: absolute;

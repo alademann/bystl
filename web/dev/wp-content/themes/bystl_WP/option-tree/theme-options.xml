@@ -240,7 +240,7 @@
     <item_title>Select Your Slider</item_title>
     <item_desc></item_desc>
     <item_type>select</item_type>
-    <item_options>Small Slider (Text), Small Slider (Thumbs), Full Width Slider (Text), Full Width Slider (Thumbs), Content Slider</item_options>
+    <item_options>Small Slider (Text), Small Slider (Thumbs), Full Width Slider (Text), Full Width Slider (Thumbs), Content Slider, Content Slider Images Only</item_options>
     <item_sort>0</item_sort>
   </row>
   <row>
@@ -304,6 +304,15 @@
     <item_desc></item_desc>
     <item_type>radio</item_type>
     <item_options>Yes, No</item_options>
+    <item_sort>0</item_sort>
+  </row>
+  <row>
+    <id>41</id>
+    <item_id>auto_speed</item_id>
+    <item_title>Slide Speed (seconds)</item_title>
+    <item_desc></item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
     <item_sort>0</item_sort>
   </row>
   <row>

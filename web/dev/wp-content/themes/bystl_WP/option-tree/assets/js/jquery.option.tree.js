@@ -1,11 +1,11 @@
 /**
  *
- * Author: Derek Herman 
+ * Author: Derek Herman
  * URL: http://valendesigns.com
  * Email: derek@valendesigns.com
  *
  */
- 
+
 /**
  *
  * Delay
@@ -56,14 +56,14 @@
         $(this).wrap('<div class="file_wrap" />');
         $(this).addClass('file').css('opacity', 0); //set to invisible
         $(this).parent().append($('<div class="fake_file" />').append($('<input type="text" class="upload" />').attr('id',$(this).attr('id')+'_file')).append(uploadbutton));
-       
+
         $(this).bind('change', function() {
           $('#'+$(this).attr('id')+'_file').val($(this).val());;
         });
         $(this).bind('mouseout', function() {
           $('#'+$(this).attr('id')+'_file').val($(this).val());;
         });
-      }); 
+      });
     }
   };
   $(document).ready(function () {
@@ -90,7 +90,7 @@
       });
       $('.select').bind($.browser.msie ? 'click' : 'change', function(event) {
         $(this).prev('span').replaceWith('<span>' + $(this).find('option:selected').text() + '</span>');
-      }); 
+      });
     }
   };
   $(document).ready(function () {
@@ -120,7 +120,7 @@
       }, function() {
         $("#options_tabs").tabs();
         $(this).removeClass('off');
-      }); 
+      });
     }
   };
   $(document).ready(function () {
@@ -193,7 +193,7 @@ function UrlExists(url) {
 /**
  *
  * Inline Edit Options
- * 
+ *
  * Creates & Updates Options via Ajax
  * Dependencies: jQuery
  *
@@ -282,7 +282,7 @@ function UrlExists(url) {
         } else {
           inlineEditOption.edit(this);
           return false;
-        }                
+        }
       });
       $("a.save").live("click", function () {
         if ($("a.save").hasClass('add-save')) {
@@ -307,8 +307,8 @@ function UrlExists(url) {
           event.preventDefault();
           return false;
         } else {
-          $.post( 
-            ajaxurl,  
+          $.post(
+            ajaxurl,
             { action:'option_tree_next_id', _ajax_nonce: $("#_ajax_nonce").val() },
             function (response) {
               c = parseInt(response) + 1;
@@ -327,7 +327,7 @@ function UrlExists(url) {
             _ajax_nonce: $("#_ajax_nonce").val()
           };
           $.post(ajaxurl, d, function (response) {
-        
+
           }, "html");
         }
       });
@@ -357,7 +357,7 @@ function UrlExists(url) {
         $('.ajax-message').ajaxMessage();
       }
       // Remove Uploaded Image
-      $('.remove').live('click', function(event) { 
+      $('.remove').live('click', function(event) {
         $(this).hide();
         $(this).parents().prev().prev('.upload').attr('value', '');
         //$(this).parents('.screenshot').slideUp();
@@ -365,7 +365,7 @@ function UrlExists(url) {
         $(this).parents('.screenshot').find('.remove').remove();
         event.preventDefault();
       });
-      // Hide the delete button on the first row 
+      // Hide the delete button on the first row
       $('a.delete-inline', "#option-1").hide();
       // change upload input
       $('.upload').live('blur', function() {
@@ -374,8 +374,8 @@ function UrlExists(url) {
             img = $(this).parent().find('img'),
             btn = $(this).parent().find('.remove'),
             src = img.attr('src');
-        
-        // don't match update             
+
+        // don't match update
         if ( val != src ) {
           img.attr('src', val);
         }
@@ -387,14 +387,14 @@ function UrlExists(url) {
         } else if ( val == '' || ! UrlExists(val) ) {
           img.remove();
           btn.remove();
-        }  
+        }
       });
       // add # to hex if missing
       $('.cp_input').live('blur', function() {
         $('.cp_input').each( function(index, domEle) {
           var val = $(domEle).val();
           var reg = /^[A-Fa-f0-9]{6}$/;
-          if( reg.test(val) && val != '' ) { 
+          if( reg.test(val) && val != '' ) {
             $(domEle).attr('value', '#'+val )
           }
         });
@@ -477,7 +477,7 @@ function UrlExists(url) {
       });
       return false;
     },
-    save_layout: function(e){  
+    save_layout: function(e){
       var d = {
         action: "option_tree_save_layout"
       };
@@ -487,7 +487,7 @@ function UrlExists(url) {
       }
       var ab = aa.replace(' ', '-');
       ab = ab.toLowerCase();
-  	  
+
       b = $(':input', '#save-layout').serialize();
       d = b + "&" + $.param(d);
       $.post(ajaxurl, d, function (r) {
@@ -512,7 +512,7 @@ function UrlExists(url) {
         themes: true
       };
       if ( $("#save_theme_layout").val() == '' ) {
-        return false;  
+        return false;
       }
       $.post(ajaxurl, d, function (r) {
         if (r != -1) {
@@ -524,11 +524,11 @@ function UrlExists(url) {
     },
   	activate_layout: function (b) {
       var c = true;
-        
+
       // Set ID
       c = $(b).parents("tr:first").attr('id');
       c = c.replace("saved-", "");
-  
+
       d = {
         action: "option_tree_activate_layout",
         id: c,
@@ -564,11 +564,11 @@ function UrlExists(url) {
     },
     delete_layout: function (b) {
       var c = true;
-        
+
       // Set ID
       c = $(b).parents("tr:first").attr('id');
       c = c.replace("saved-", "");
-        
+
       d = {
         action: "option_tree_delete_layout",
         id: c,
@@ -646,11 +646,11 @@ function UrlExists(url) {
     },
     remove: function (b) {
       var c = true;
-      
+
       // Set ID
       c = $(b).parents("tr:first").attr('id');
       c = c.substr(c.lastIndexOf("-") + 1);
-      
+
       d = {
         action: "option_tree_delete",
         id: c,
@@ -671,55 +671,55 @@ function UrlExists(url) {
       return false;
     },
     add: function (c) {
-      var e = this, 
+      var e = this,
           addRow, editRow = true, temp_select;
       e.revert();
-      
+
       // Clone the blank main row
       addRow = $('#inline-add').clone(true);
       addRow = $(addRow).attr('id', 'option-'+c);
-      
+
       // Clone the blank edit row
       editRow = $('#inline-edit').clone(true);
-      
+
       $('a.cancel', editRow).addClass('undo-add');
       $('a.save', editRow).addClass('add-save');
       $('a.edit-inline').addClass('disable');
       $('a.delete-inline').addClass('disable');
       $('a.add-option').addClass('disable');
-      
+
       // Set Colspan to 4
       $('td', editRow).attr('colspan', 4);
-      
+
       // Add Row
       $("#framework-settings tr:last").after(addRow);
-      
+
       // Add Row and hide
       $(addRow).hide().after(editRow);
-      
+
       $('.item-data', addRow).attr('id', 'inline_'+c);
-      
+
       // Show The Editor
       $(editRow).attr('id', 'edit-'+c).addClass('inline-editor').show();
-      
+
       $('.item_title', '#edit-'+c).focus();
-      
+
       $('.select').each(function () {
         temp_select = $(this).prev('span').text();
         if (temp_select == 'Heading') {
           $('.option-desc', '#edit-'+c).hide();
           $('.option-options', '#edit-'+c).hide();
-        } 
+        }
       });
-      
+
       $('.select').live('change', function () {
         temp_select = $(this).prev('span').text();
         if (temp_select == 'Heading') {
           $('.option-desc', '#edit-'+c).hide();
           $('.option-options', '#edit-'+c).hide();
-        } else if ( 
-            temp_select == 'Checkbox' || 
-            temp_select == 'Radio' || 
+        } else if (
+            temp_select == 'Checkbox' ||
+            temp_select == 'Radio' ||
             temp_select == 'Select'
           ) {
           $('.alternative').hide();
@@ -746,7 +746,7 @@ function UrlExists(url) {
           }
         }
       });
-      
+
       // Scroll
       var $elem = $('#framework_wrap');
       $('html, body').animate({ scrollTop: $elem.height() }, 500);
@@ -764,7 +764,7 @@ function UrlExists(url) {
       $("a.delete-inline").removeClass('disable');
       $("a.add-option").removeClass('disable');
       $("#option-" + c).remove();
-      
+
       return false;
     },
     addSave: function (e) {
@@ -818,59 +818,59 @@ function UrlExists(url) {
       return false;
     },
     edit: function (b) {
-      var e = this, 
+      var e = this,
           c, editRow, rowData, item_title, item_id, item_type, item_desc, item_options = true, temp_select;
       e.revert();
-    
+
       c = $(b).parents("tr:first").attr('id');
       c = c.substr(c.lastIndexOf("-") + 1);
-      
+
       // Clone the blank row
       editRow = $('#inline-edit').clone(true);
       $('td', editRow).attr('colspan', 4);
       $("#option-" + c).hide().after(editRow);
-      
-      // First Option Settings 
+
+      // First Option Settings
       if ("#option-" + c == '#option-1') {
         $('.option').hide();
         $('.option-title').show().css({"paddingBottom":"1px"});
         $('.description', editRow).html('First item must be a heading.');
       }
-      
+
       // Populate the option data
       rowData = $('#inline_' + c);
-      
+
       // Item Title
       item_title = $('.item_title', rowData).text();
       $('.item_title', editRow).attr('value', item_title);
-      
+
       // Item ID
       item_id = $('.item_id', rowData).text();
       $('.item_id', editRow).attr('value', item_id);
-      
+
       // Item Type
       item_type = $('.item_type', rowData).text();
       $('select[name=item_type] option[value='+item_type+']', editRow).attr('selected', true);
       var temp_item_type = $('select[name=item_type] option[value='+item_type+']', editRow).text();
       $('.select_wrapper span', editRow).text(temp_item_type);
-  		
+
   		// Item Description
       item_desc = $('.item_desc', rowData).text();
       $('.item_desc', editRow).attr('value', item_desc);
-      
+
       // Item Options
       item_options = $('.item_options', rowData).text();
       $('.item_options', editRow).attr('value', item_options);
-      
-      
+
+
       $('.select', editRow).each(function () {
         temp_select = $(this).prev('span').text();
         if (temp_select == 'Heading') {
           $('.option-desc', editRow).hide();
           $('.option-options', editRow).hide();
-        } else if ( 
-            temp_select == 'Checkbox' || 
-            temp_select == 'Radio' || 
+        } else if (
+            temp_select == 'Checkbox' ||
+            temp_select == 'Radio' ||
             temp_select == 'Select'
           ) {
           $('.option-desc', editRow).show();
@@ -895,15 +895,15 @@ function UrlExists(url) {
           }
         }
       });
-      
+
       $('.select').live('change', function () {
         temp_select = $(this).prev('span').text();
         if (temp_select == 'Heading') {
           $('.option-desc', editRow).hide();
           $('.option-options', editRow).hide();
-        } else if ( 
-            temp_select == 'Checkbox' || 
-            temp_select == 'Radio' || 
+        } else if (
+            temp_select == 'Checkbox' ||
+            temp_select == 'Radio' ||
             temp_select == 'Select'
           ) {
           $('.alternative').hide();
@@ -930,10 +930,10 @@ function UrlExists(url) {
           }
         }
       });
-  		
+
       // Show The Editor
       $(editRow).attr('id', 'edit-'+c).addClass('inline-editor').show();
-      
+
       // Scroll
       var target = $('#edit-'+c);
       if (c > 1) {
@@ -941,7 +941,7 @@ function UrlExists(url) {
           $('html,body').animate({scrollTop: top}, 500);
           return false;
       }
-      
+
       return false;
     },
     editSave: function (e) {
@@ -1029,7 +1029,7 @@ function UrlExists(url) {
       }
     },
     revert: function () {
-      var b, 
+      var b,
           n, m, o, p, q, r = true;
       if (b = $(".inline-editor").attr("id")) {
         $('#'+ b).remove();
@@ -1048,7 +1048,7 @@ function UrlExists(url) {
 /**
  *
  * Image Slider
- * 
+ *
  * Creates & Updates Image Slider
  * Dependencies: jQuery, jQuery UI
  *
