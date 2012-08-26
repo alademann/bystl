@@ -2,10 +2,14 @@
 
     PARTIAL:    _header.scss
     PARENT:     _theme-synapse.scss
-    
+
  ----------------------------------------------*/
 
 // BYSTL logo symbol can appear in two places depending on the device
+.navbar {
+    @include box-shadow(0 2px 6px rgba(darken($navbarBackground, 20%), .3));
+}
+
 .header .logo, .navbar .brand {
     position: relative; // so the > img can be absolute
 
@@ -24,25 +28,26 @@
 }
 .header .logo {
     > img {
-        max-width: image-width($headerLogoImg) / 2;    
-    } 
+        max-width: image-width($headerLogoImg) / 2;
+    }
     &, > img {
-        max-height: image-height($headerLogoImg) / 2;     
+        max-height: image-height($headerLogoImg) / 2;
     }
 }
 .navbar .brand {
     > img {
-        max-width: image-width($navbarLogoImg) / 2;    
-    } 
-    &, > img {
-        max-height: image-height($navbarLogoImg) / 2;     
+        max-height: $navbarHeight - 6;
+        top: 2px;
+    }
+    & {
+        max-height: $navbarHeight;
     }
 }
 
 .header {
     // since we're using the fixed top navbar
     // we need to move this down
-	background: url(image-url("top-bar-shadow.png", true)) top left repeat-x $white;
+	background: $white;
 	padding-top: 30px; // this is changed according to @media query in _responsive-navbar.scss
     padding-bottom: 30px;
     .home & {

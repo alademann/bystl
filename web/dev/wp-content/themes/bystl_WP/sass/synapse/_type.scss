@@ -139,22 +139,24 @@ p {
 }
 
 .page-content {
-	&, p {
+	&, & p {
 		font-size: $baseFontSize + 3;
+	}
+	p {
 		line-height: $baseLineHeight + 11;
 	}
 	small, p small, p.small {
 		font-size: $baseFontSize - 2;
-		line-height: $baseLineHeight - 2;
+		line-height: $baseLineHeight - 2 !important;
 		color: inherit;
 	}
 	.large, .large p, p .large, p.large {
 		font-size: $baseFontSize + 6;
-		line-height: $baseLineHeight + 15;
+		line-height: $baseLineHeight + 15 !important;
 	}
 	.huge, .huge p, p .huge, p.huge {
 		font-size: $baseFontSize + 20;
-		line-height: $baseLineHeight + 30;
+		line-height: $baseLineHeight + 30 !important;
 	}
 	blockquote {
 		&, p {
@@ -191,6 +193,9 @@ b {
 }
 .blue-text, .blue-text p {
 	color: $bystl_logo_blueDarkest;
+}
+.red {
+	color: $red;
 }
 .sidequote {
   margin: 0 0 0 30px;

@@ -116,6 +116,7 @@ body {
   padding: 0 10px 10px 10px;
   @include box-shadow(0 0 9px 0 rgba(0,0,0,.15));
   @include border-radius(7px);
+  background: $white;
 }
 .posture img {
   @include border-radius(7px);

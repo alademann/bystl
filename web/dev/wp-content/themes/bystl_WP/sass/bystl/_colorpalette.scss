@@ -2,7 +2,7 @@
 
   PARTIAL:  bystl/_colorpalette.scss
   PARENT:   style.scss
-  
+
 ----------------------------------------------*/
 
 // contrast shades
@@ -23,7 +23,7 @@ $white:                 #fff !default; // white
 // Accent colors
 $blue:                  #049cdb !default;
 $blueDark:              #0064cd !default;
-$blueLight:             #52a8ec !default;  
+$blueLight:             #52a8ec !default;
 $teal:                  #00b3ee !default;
 $green:                 #46a546 !default;
 $red:                   #9d261d !default;
@@ -33,6 +33,7 @@ $pink:                  #c3325f !default;
 $hotPink:               #dd1144 !default;
 $purple:                #7a43b6 !default;
 $likeItColor:           #f56559 !default;
+$red:                   #ff0000 !default;
 
 /*  BLUES
 ---------------------------------------------- */
@@ -52,7 +53,7 @@ $bystl_blue_navyLtOffset: #365572   !default;
 
 // replaces #30335 in synapse defaults
 //$bystl_blue_black:        #001d29   !default; // for "alternate" sections
-$bystl_blue_black:        #273443   !default; 
+$bystl_blue_black:        #273443   !default;
 $black:                   $bystl_blue_black !default; //tb_override
 
 
@@ -92,16 +93,30 @@ $linkColorHover:                  $bystl_link_blueHover !default;
 
 $navbarHeight_int:                40 !default;
 $navbarHeight:                    $navbarHeight_int + 0px !default;
-$navbarBackground:                $bystl_brown_black !default;
-$navbarBackgroundHighlight:       $bystl_brown_almstBlk !default;
 
-$navbarText:                      $bystl_tan_medium !default;
-$navbarLinkColor:                 $bystl_tan_medium !default;
+// BROWN NAVBAR
+// $navbarBackground:                $bystl_brown_black !default;
+// $navbarBackgroundHighlight:       $bystl_brown_almstBlk !default;
+
+// $navbarText:                      $bystl_tan_medium !default;
+// $navbarLinkColor:                 $bystl_tan_medium !default;
+// $navbarLinkColorHover:            $white !default;
+// $navbarLinkColorActive:           $navbarLinkColorHover !default;
+// $navbarLinkBackgroundHover:       $navbarBackground !default;
+// $navbarLinkBackgroundActive:      lighten(desaturate($navbarBackgroundHighlight, 50%), 3%) !default;
+// $navbarLinkTextShadow:            0 -1px 0 rgba($bystl_brown_black,.25) !default;
+
+// BLUE NAVBAR
+$navbarBackground:                $bystl_logo_blueDarkest !default;
+$navbarBackgroundHighlight:       lighten($bystl_logo_blueDarkest, 10%) !default;
+
+$navbarText:                      lighten($bystl_logo_blueLight, 20%) !default;
+$navbarLinkColor:                 lighten($bystl_logo_blueLight, 20%) !default;
 $navbarLinkColorHover:            $white !default;
 $navbarLinkColorActive:           $navbarLinkColorHover !default;
 $navbarLinkBackgroundHover:       $navbarBackground !default;
-$navbarLinkBackgroundActive:      lighten(desaturate($navbarBackgroundHighlight, 50%), 3%) !default;
-$navbarLinkTextShadow:            0 -1px 0 rgba($bystl_brown_black,.25) !default;
+$navbarLinkBackgroundActive:      $navbarBackground !default;
+$navbarLinkTextShadow:            0 -1px 0 rgba(darken($bystl_logo_blueDarkest, 20%),.25) !default;
 
 $navbarSearchBackground:          lighten($navbarBackground, 25%) !default;
 $navbarSearchBackgroundFocus:     $white !default;
@@ -154,7 +169,7 @@ $outerSh: rgba($bystl_blue_black, 0.35) !default;
   @include border-radius(5px);
 
   &:hover {
-    
+
     @include background-image(linear-gradient($hov1, $hov2));
     @include filter-gradient($hov1, $hov2);
     @include box-shadow(inset 0 1px 0 opacify($insetBd, .1), opacify(rgba($bystl_blue_black, $outerShOpacity), .1));

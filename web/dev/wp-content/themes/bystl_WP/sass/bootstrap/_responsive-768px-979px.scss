@@ -30,6 +30,20 @@
     padding-right: $TabletFluidGridGutterWidth;
   }
 
+  .navbar > li > a {
+
+    font-size: 13px;
+
+  }
+
   // No need to reset .thumbnails here since it's the same
 
+}
+
+@media (min-width: $tabletBreakpoint + 100) {
+  .navbar > li > a {
+
+    font-size: 13px;
+
+  }
 }

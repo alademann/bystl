@@ -220,13 +220,14 @@
   color: $navbarLinkColor;
   text-decoration: none;
   text-shadow: $navbarLinkTextShadow;
+  font-size: $baseFontSize + 2;
 }
 // Buttons
 $btnPadBasis: 8px;
 .navbar .btn {
   display: inline-block;
   padding: ($btnPadBasis - 1) $btnPadBasis ($btnPadBasis - 5); // so that fontawesome icons are centered
-  
+
   &[data-toggle="collapse"] {
     padding: $btnPadBasis ($btnPadBasis + 2);
   }
@@ -280,7 +281,7 @@ $btnPadBasis: 8px;
 .navbar .nav .current-page-item > a:hover,
 .navbar .nav [class*="current"] > a,
 .navbar .nav [class*="current"] > a:hover,
-.navbar .nav li > a.current-menu-item, 
+.navbar .nav li > a.current-menu-item,
 .navbar .nav li > a.current-menu-item:hover,
 .navbar .nav li > a.current-page-item,
 .navbar .nav li > a.current-page-item:hover,
@@ -289,6 +290,7 @@ $btnPadBasis: 8px;
   color: $navbarLinkColorActive;
   text-decoration: none;
   background-color: $navbarLinkBackgroundActive;
+  @include box-shadow(inset 0 1px 5px 0 rgba(darken($bystl_logo_blueDarkest, 20%), .25));
 }
 
 // Dividers (basically a vertical hr)
@@ -348,13 +350,14 @@ $btnPadBasis: 8px;
 
   li a {
     color: $navbarText;
-    text-shadow: 0 -1px 0 rgba($bystl_brown_black, 0.8);
+    text-shadow: $navbarLinkTextShadow;
     padding: 5px 15px;
   }
 
   li.active a, li a:hover, li.active a:hover {
     color: $white;
-    background: $navbarLinkBackgroundHover; 
+    background: darken($navbarLinkBackgroundHover, 5%);
+    @include box-shadow(none);
   }
 
   &:before {
