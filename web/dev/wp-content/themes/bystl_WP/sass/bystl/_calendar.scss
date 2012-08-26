@@ -1,121 +1,116 @@
 .sched-table {
-  color: #666;
-  font-size: 12px;
+  color: $gray6;
+  font-size: $baseFontSize - 1;
   @include box-shadow(0 0 12px 1px rgba(0, 0, 0, 0.2));
-}
 
-/* line 9, sass/bystl/_calendar.scss */
-.sched-table a {
-  color: #467b89;
-}
+  a {
+    color: $bystl_link_blue;
+  }
 
-/* line 11, sass/bystl/_calendar.scss */
-.sched-table caption {
-  background: #383838;
-  color: #e0e0e0;
-  font-size: 14px;
-  padding: 10px 0;
-  text-align: center;
-  text-shadow: 0 -1px 0 black;
-  @include box-shadow(inset 0 1px 0 #484848, 0 -1px 12px 1px rgba(0, 0, 0, 0.3));
-  border: 1px solid #373737;
-  z-index: -99;
-}
+  caption {
+    background: $bystl_blue_navy;
+    color: lighten($bystl_logo_blueLight, 10%);
+    font-size: $baseFontSize + 2;
+    padding: 10px 0;
+    text-align: center;
+    text-shadow: 0 -1px 0 darken($bystl_blue_navy, 20%);
+    @include box-shadow(inset 0 1px 0 darken($bystl_blue_navy, 10%), 0 -1px 12px 1px rgba(0, 0, 0, 0.3));
+    border: 1px solid darken($bystl_blue_navy, 10%);
+    z-index: -99;
+  }
 
-/* line 25, sass/bystl/_calendar.scss */
-.sched-table thead th {
-  font-size: 8px;
-  padding: 5px 0;
-  color: #666;
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid #bbbbbb;
-  background: #f7f7f7;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#f1f1f1));
-  background: -moz-linear-gradient(top, #f7f7f7, #f1f1f1);
-}
+  th, td {
+    color: $gray6;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba($white, 0.5);
+  }
 
-/* line 37, sass/bystl/_calendar.scss */
-.sched-table tbody td {
-  color: #666;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  padding: 14px 4px;
-  text-align: center;
-  font-weight: bold;
-  border: 1px solid;
-  border-color: #fff #bbbbbb #bbbbbb #fff;
-  background: #ededed;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#dedede));
-  background: -moz-linear-gradient(top, #ededed, #dedede);
-}
+  thead {
 
-.sched-table tbody tr td:first-child {
-  background: #eeeeee;
-  background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#ededed));
-  background: -moz-linear-gradient(top, #eeeeee, #ededed);
-}
+    th {
+      font-size: 8px;
+      padding: 5px 0;
+      text-transform: uppercase;
+      border-bottom: 1px solid #bbbbbb;
+      background: #f7f7f7;
+      @include background-image(linear-gradient(#f7f7f7, #f1f1f1));
+    }
 
-/* line 50, sass/bystl/_calendar.scss */
-.sched-table tbody td.pad {
-  background: #f5f5f5;
-  background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), to(#ececec));
-  background: -moz-linear-gradient(top, whitesmoke, #ececec);
-}
+  } // END .sched-table thead
 
-/* line 56, sass/bystl/_calendar.scss */
-.sched-table tfoot {
-  color: #e0e0e0;
-  font-size: 12px;
-  text-align: center;
-}
+  tbody {
 
-/* line 62, sass/bystl/_calendar.scss */
-.sched-table tfoot tr {
-  background: #f5f5f5;
-  background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), to(#ececec));
-  background: -moz-linear-gradient(top, whitesmoke, #ececec);
-}
+    td {
+      padding: 14px 4px;
+      font-weight: bold;
+      border: 1px solid;
+      border-color: $white #bbbbbb #bbbbbb $white;
+      background: #ededed;
+      @include background-image(linear-gradient(#ededed, #dedede));
 
-/* line 68, sass/bystl/_calendar.scss */
-.sched-table tfoot td {
-  padding: 10px 10px;
-}
+      &:first-child {
+        // far left column of each body row
+        background: $grayLighter;
+        @include background-image(linear-gradient($grayLighter, #ededed));
+      } // END .sched-table tbody td:first-child
 
-/* line 70, sass/bystl/_calendar.scss */
-.sched-table tfoot a {
-  color: #666;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-}
+      &.pad {
+        background: #f5f5f5;
+        @include background-image(linear-gradient(#f5f5f5, #ececec));
+      } // END .sched-table tbody td.pad
 
-/* line 75, sass/bystl/_calendar.scss */
-.sched-table tfoot td#prev {
-  text-align: left;
-}
+    } // END .sched-table tbody td
 
-/* line 77, sass/bystl/_calendar.scss */
-.sched-table tfoot td#next {
-  text-align: right;
-}
+  } // END .sched-table tbody
 
-/* line 79, sass/bystl/_calendar.scss */
-.sched-table #today, .sched-table .class {
-  color: #fff;
-  text-align: center;
-  border: 1px solid #467b89;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
-  background: #6eafbf;
-  background: -moz-radial-gradient(50% 50% 0deg, ellipse cover, #6eafbf, #569eb1);
-  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 20, from(#6eafbf), to(#569eb1));
-}
+  tfoot {
+    color: #e0e0e0;
+    font-size: $baseFontSize - 1;
+    text-align: center;
 
-.sched-table #today, .sched-table [class*="icon-"]:before {
-  position: relative;
-  left: 5px;
-  top: 2px;
-  @include opacity(.3);
-}
-.sched-table #today, .sched-table .class [class*="icon-"]:before {
+    tr {
+      background: #f5f5f5;
+      @include background-image(linear-gradient(#f5f5f5, #ececec));
+    } // END .sched-table tfoot tr
+
+    td {
+      padding: 10px 10px;
+
+      &#prev {
+        text-align: left;
+      }
+      &#next {
+        text-align: right;
+      }
+
+    } // END .sched-table tfoot td
+
+    a {
+      color: $gray6;
+      text-shadow: 0 1px 0 rgba($white, 0.5);
+    } // END .sched-table tfoot a
+
+  } // END .sched-table tfoot
+
+  // ACTIVE CELL
+  #today, .class {
+    color: $white;
+    text-align: center;
+    border: 1px solid darken($bystl_logo_blueLight, 10%);
+    text-shadow: 0 1px 0 rgba($black, 0.3);
+    background: $bystl_logo_blueLight;
+  } // END .sched-table #today, .class
+
+  #today, [class*="icon-"]:before {
+    position: relative;
+    left: 5px;
+    top: 2px;
+    @include opacity(.3);
+  } // END .sched-table cell icon style (inactive)
+
+  #today, .class [class*="icon-"]:before {
     @include opacity(1);
     top: 1px;
-}
+  } // END .sched-table cell icon style (inactive)
+
+} // END .sched-table
