@@ -155,7 +155,7 @@
       window.send_to_editor = function(html) {
         if (formfield) {
           clearInterval(tbframe_interval);
-          itemurl = $(html).attr('href');
+          itemurl = $(html).attr('src');
           var image = /(^.*\.jpg|jpeg|png|gif|ico*)/gi;
           var document = /(^.*\.pdf|doc|docx|ppt|pptx|odt*)/gi;
           var audio = /(^.*\.mp3|m4a|ogg|wav*)/gi;
