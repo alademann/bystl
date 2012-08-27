@@ -2,7 +2,7 @@
 
 	PARTIAL:	_utilities.scss
 	PARENT:		_theme-synapse.scss
-	
+
 ----------------------------------------------*/
 
 
@@ -84,7 +84,7 @@ img, object, embed, video {
 .container-fluid#pageWrapper {
   padding: 0 !important;
   max-width: 100%;
-  
+
   //.header, .page-container, #alternate, #footer, .small-footer {
     // these are all the immediate children of #pageWrapper
 
@@ -101,4 +101,6 @@ abbr {
   cursor: inherit;
 }
 
+.testiphonelandscapelink { display: none !important; }
+.debug .testiphonelandscapelink { display: block !important; }
 

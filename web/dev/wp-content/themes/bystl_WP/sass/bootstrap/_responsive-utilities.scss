@@ -11,41 +11,42 @@
   visibility: hidden;
 }
 
-.nav-collapse { overflow: visible; } // so the dropdown menus will show up properly
+.nav-collapse { overflow: visible; } // so the dropdown men will show up properly
 
 // Visibility utilities
 
 // For desktops
+.visible-collapsedNavbar { display: none !important; }
 .visible-phone     { display: none !important; }
 .visible-tablet    { display: none !important; }
-.visible-collapsedNavbar { display: none !important; }
-.visible-desktop   { } // Don't set initially
 .hidden-phone      { }
 .hidden-tablet     { }
 .hidden-desktop    { display: none !important; }
+.visible-desktop   { display: inherit !important; }
 
-// Retina / hi-res mobile displays
-@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 2) {
-
-  #{elements-of-type(block)}, #{elements-of-type(inline)}, #{elements-of-type(list-item)}, 
-  #{elements-of-type(table-cell)}, #{elements-of-type(html5)} {
-    text-rendering: optimizeLegibility;
-  }
-
-} // END @media hi-res / retina displays
+// Tablets & small desktops only
+@media (min-width: $tabletBreakpoint) and (max-width: $tabletBreakpoint2) {
+  // Hide everything else
+  .hidden-desktop    { display: inherit !important; }
+  .visible-desktop   { display: none !important ; }
+  // Show
+  .visible-tablet    { display: inherit !important; }
+  // Hide
+  .hidden-tablet     { display: none !important; }
+}
 
 // Phones only
 @media (max-width: $tabletBreakpoint - 1) {
+  // Hide everything else
+  .hidden-desktop    { display: inherit !important; }
+  .visible-desktop   { display: none !important; }
   // Show
   .visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
   .visible-collapsedNavbar { display: inherit !important; }
   // Hide
   .hidden-phone      { display: none !important; }
-  // Hide everything else
-  .hidden-desktop    { display: inherit !important; }
-  .visible-desktop   { display: none !important; }
 
-// don't need all the padding / white space since 
+  // don't need all the padding / white space since
   // the body has 20px already
   .page-content {
     background-color: transparent;
@@ -68,13 +69,25 @@
 
 }
 
-// Tablets & small desktops only
-@media (min-width: $tabletBreakpoint) and (max-width: $tabletBreakpoint2) {
-  // Show
-  .visible-tablet    { display: inherit !important; }
-  // Hide
-  .hidden-tablet     { display: none !important; }
-  // Hide everything else
-  .hidden-desktop    { display: inherit !important; }
-  .visible-desktop   { display: none !important ; }
+
+// Retina / hi-res mobile displays
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 2) {
+
+  #{elements-of-type(block)}, #{elements-of-type(inline)}, #{elements-of-type(list-item)},
+  #{elements-of-type(table-cell)}, #{elements-of-type(html5)} {
+    text-rendering: optimizeLegibility;
+  }
+
+  * {
+    background-size: 100%;
+  }
+
+} // END @media hi-res / retina displays
+
+.touch {
+  a, button, img {
+    &, &:active, &:hover, &:focus {
+      @include tb_user-select(none);
+    }
+  }
 }

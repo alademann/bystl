@@ -82,29 +82,29 @@
   // Negative indent the now static "fixed" navbar
   // and also for any other items we want to span 100% across
   .navbar-fixed-top,
-  .navbar-fixed-bottom, 
-  .container-fluid .container-fluid, 
-  .container-fluid .header, .container-fluid #alternate, 
+  .navbar-fixed-bottom,
+  .container-fluid .container-fluid,
+  .container-fluid .header, .container-fluid #alternate,
   .container-fluid .footer, .container-fluid .small-footer {
     margin-left:  -#{$mobileGutter};
     margin-right: -#{$mobileGutter};
   }
   .container-fluid .container-fluid,
   .container-fluid .header,
-  .container-fluid #alternate, 
+  .container-fluid #alternate,
   .container-fluid .footer, .container-fluid .small-footer {
     padding-left: $mobileGutter !important;
     padding-right:  $mobileGutter !important;
   }
   .container-fluid .page-container.row-fluid,
-  .container-fluid .header.mobile, 
-  .container-fluid .header.mobile .container-fluid { 
+  .container-fluid .header.mobile,
+  .container-fluid .header.mobile .container-fluid {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
   .container-fluid .page-container.row-fluid,
   .container-fluid .header.mobile .container-fluid {
-    margin-left: 0; 
+    margin-left: 0;
     margin-right: 0;
   }
   .container-fluid .page-container.row-fluid {

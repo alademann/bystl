@@ -120,14 +120,15 @@ if(is_subpage()){
 
                 <div id="socialNavbar" class="pull-right" data-no-collapse="true">
                     <?php if (get_option_tree('twitter_icon') == 'Yes') { ?>
-                    <a class="btn btn-navbar" href="https://twitter.com/<?php echo get_option_tree('twitter_url') ?>"><span class="icon-twitter icon-only"></span></a>
+                    <a class="hidden-phone btn btn-navbar" title="Follow us on Twitter" href="https://twitter.com/<?php echo get_option_tree('twitter_url') ?>"><span class="icon-twitter icon-only"></span></a>
                     <?php } ?><?php if (get_option_tree('facebook_icon') == 'Yes') { ?>
-                    <a class="btn btn-navbar" href="<?php echo get_option_tree('facebook_url') ?>"><span class="icon-facebook icon-only"></span></a>
+                    <a class="hidden-phone btn btn-navbar" title="Friend us on Facebook" href="<?php echo get_option_tree('facebook_url') ?>"><span class="icon-facebook icon-only"></span></a>
                     <?php } ?><?php if (get_option_tree('phone_icon') == 'Yes') { ?>
-                    <a class="hidden-phone btn btn-navbar" href="<?php echo site_url() . get_option_tree('phone_url') ?>"><span class="icon-phone icon-only"></span></a>
+                    <a class="hidden-desktop hidden-tablet visible-phone visible-touch btn btn-navbar" title="Give us a call: 314-644-2226" href="<?php echo get_option_tree('phone_url') ?>"><span class="icon-phone icon-only"></span></a>
                     <?php } ?><?php if (get_option_tree('mail_icon') == 'Yes') { ?>
-                    <a class="hidden-phone btn btn-navbar" href="<?php echo site_url() . get_option_tree('mail_url') ?>"><span class="icon-envelope icon-only"></span></a>
+                    <a class="hidden-phone btn btn-navbar" href="<?php echo get_option_tree('mail_url') ?>"><span class="icon-envelope icon-only"></span></a>
                     <?php } ?>
+                    <a class="testiphonelandscapelink btn btn-navbar" href="javascript:window.open('http://yogastlouis.com/dev/', '', 'width=320,height=480')" rel="nofollow"><span class="icon-beaker"></span></a>
                 </div>
 
                 <div class="nav-collapse">
@@ -228,7 +229,6 @@ if(is_subpage()){
                                 }
 
                             ?>
-                            <!--<li class="testiphonelandscapelink"><a href="javascript:window.open('http://yogastlouis.com/dev/about/', '', 'width=320,height=480')">test iphone landscape</a></li>-->
                         </ul>
                         <?php } ?>
 

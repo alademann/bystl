@@ -238,23 +238,27 @@ $btnPadBasis: 8px;
   $bottomMargin: ($navbarHeight - $elementHeight) / 2 - 1;
   margin: $topMargin 5px $bottomMargin;
   line-height: $baseLineHeight;
-
   color: $navbarLinkColor;
   text-shadow: $navbarLinkTextShadow; // should match .nav > li > a style
-  //text-shadow: 0 1px 1px darken($navbarBackground, 5%);
-  &:hover {
-    color: $navbarLinkColorHover;
-  }
 
   [class^="icon-"]:before,
   [class*=" icon-"]:before {
-    color: inherit;
+    color: $navbarLinkColor;
     @include opacity(.7);
     font-size: $baseFontSize + 4;
     text-shadow: inherit;
-    &:hover {
+  }
+
+  &:hover {
+    color: $navbarLinkColorHover;
+
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+      color: $navbarLinkColorHover;
+      text-shadow: none;
       @include opacity(1.0)
     }
+
   }
 
 }
