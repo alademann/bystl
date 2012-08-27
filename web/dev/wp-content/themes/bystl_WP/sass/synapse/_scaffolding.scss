@@ -73,6 +73,15 @@ body {
 } // END .page-container
 
 
+
+/*  DROP SHADOWS ON HEADER AND FOOTER
+---------------------------------------------- */
+.navbar, #alternate {
+    @include box-shadow(0 2px 6px rgba(darken($navbarBackground, 20%), .3));
+}
+
+
+
 /*	PAGE-CONTENT CHILDREN CONTAINERS
 ---------------------------------------------- */
 .page-content {
