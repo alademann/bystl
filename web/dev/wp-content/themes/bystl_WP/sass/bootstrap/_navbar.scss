@@ -209,6 +209,9 @@
   display: block;
   float: left;
 }
+.navbar .nav.pull-right > li {
+  float: right;
+}
 
 // Links
 .navbar .nav > li > a {

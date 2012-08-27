@@ -3,7 +3,7 @@
 //  - replace . with @include for mixins
 
 .navbar .brand { display: none; }
-#socialNavbar { 
+#socialNavbar {
   float: left !important;
 }
 
@@ -14,19 +14,19 @@
   }
 
   // for BYSTL only: hide the .header logo, move logo to .brand in top navbar
-  .navbar .brand { 
-    display: block; 
+  .navbar .brand {
+    display: block;
   }
-  .header { 
-    .home &, .single & { 
+  .header {
+    .home &, .single & {
       display: none;
     }
     .logo-container { display: none !important; }
-    .menu-container { 
+    .menu-container {
       width: 100% !important;
-      .nav { 
+      .nav {
         float: left !important;
-      } 
+      }
     }
   }
 
@@ -53,7 +53,7 @@
     margin-left: 0;
     padding: 0;
     left: $navbarPadX;
-    
+
     span, i {
       @include bystlLogoFont(true, "bw");
       font-size: 26px;
@@ -70,10 +70,10 @@
 
   // COLLAPSIBLE NAVBAR
   // ------------------
-  .nav-collapse { 
+  .nav-collapse {
     clear: both; // Nav collapse clears brand
     // Hide everything in the navbar save .brand and toggle button
-    &, &.collapse {  
+    &, &.collapse {
       overflow: hidden;
       height: 0;
     }
@@ -87,25 +87,28 @@
       &.pull-left, &.pull-right {
         float: none;
         margin: 0;
+        > li {
+          float: none;
+        }
       }
 
-      > li { 
+      > li {
         float: none;
 
         // nav items that need a horizontal divider
         &.dropdown, &.divided {
-          border-bottom: 1px solid $bystl_brown_black;
-          border-top: 1px solid desaturate(lighten($bystl_brown_almstBlk, 3%), 30%);
+          border-bottom: 1px solid transparentize(darken($navbarBackground, 4%), .5);
+          border-top: 1px solid transparentize(lighten($navbarBackgroundHighlight, 4%), .5);
         }
         // used for chiseled borders seen in .dropdown and .divided li's (above)
-        &:last-child { border-bottom: none; } 
+        &:last-child { border-bottom: none; }
         &:first-child { border-top: none; }
-        
+
         &.divider-vertical {
           display: none;
         }
 
-        > a { 
+        > a {
           margin-bottom: 2px;
         } // END .nav li > a
 
@@ -114,13 +117,17 @@
       // Nav and dropdown links in navbar
       > li > a, .dropdown-menu a {
         padding: 6px ($mobileGutter - $navbarPadX);
+        .touch & {
+          // touch interface needs a bigger hit area on the buttons
+          padding: 13px ($mobileGutter - $navbarPadX);
+        }
         font-weight: bold;
         color: $navbarLinkColor;
         @include border-radius(3px);
 
         &:hover {
           background-color: $navbarBackground;
-        } // END Nav and dropdown HOVERED links in navbar 
+        } // END Nav and dropdown HOVERED links in navbar
 
       } // END Nav and dropdown links in navbar
 
@@ -128,7 +135,7 @@
         margin-bottom: 2px;
       }
 
-      .nav-header { 
+      .nav-header {
         color: $navbarText;
         text-shadow: none;
       } // END div.nav-collapse ul.nav .nav-header
@@ -145,13 +152,13 @@
             cursor: default; // doesn't function as a link
           }
 
-          > b.caret { 
-            display: none; 
+          > b.caret {
+            display: none;
           }
 
         } // END li.dropdown a.dropdown-toggle
 
-        // SUBMENU 
+        // SUBMENU
         .dropdown-menu {
           position: static;
           top: auto;
@@ -177,8 +184,8 @@
 
     } // END div.nav-collapse ul.nav
 
-    &.in .btn-group { 
-      padding: 0; 
+    &.in .btn-group {
+      padding: 0;
     } // END .nav-collapse.in .btn-group
 
     .btn {
@@ -197,14 +204,25 @@
       $shadow: inset 0 1px 0 rgba($white,.1), 0 1px 0 rgba($white,.1);
       @include box-shadow($shadow);
     }
-    
+
 
   } // END div.nav-collapse
-  
+
   // Navbar button
-  .navbar .btn-navbar, 
+  .navbar .btn-navbar,
   .navbar .btn-navbar.mainmenu {
     display: block;
+  }
+
+
+  // keep navicons and their text labels aligned left in a dropdown menu
+  .navbar .nav [class*="navicon-"],
+  .navbar .nav [class*="navicon-"] {
+    > a:before {
+      display: inline-block !important;
+      width: 12px !important;
+      text-align: center;
+    }
   }
 
 } // END @mixin collapsedNavBar
@@ -213,7 +231,7 @@
 
   .header {
     padding-top: 15px;
-    padding-bottom: 15px; 
+    padding-bottom: 15px;
     .logo h1, .logo .h1 {
       display: none;
     }
@@ -229,7 +247,7 @@
     }
     .logo i {
       display: none;
-    } 
+    }
   }
 
 } // END @mixin smallerHeaderLogo
