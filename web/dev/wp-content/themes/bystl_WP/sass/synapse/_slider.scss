@@ -17,13 +17,13 @@
 	&.slider-intro-left {
 		padding-right: $sliderContentHspacing;
 		.description {
-			padding-right: $sliderContentHspacing * 1.5;
+			padding-right: $sliderContentHspacing / 2;
 		}
 	}
 	&.slider-intro-right {
 		padding-left: $sliderContentHspacing;
 		.description {
-			padding-left: $sliderContentHspacing * 1.5;
+			padding-left: $sliderContentHspacing / 2;
 		}
 	}
 
@@ -41,6 +41,7 @@
 	.description {
 		&, & p {
 			font-size: $baseFontSize + 2;
+			line-height: ($baseFontSize + 2) + 8;
 		}
 	}
 }
