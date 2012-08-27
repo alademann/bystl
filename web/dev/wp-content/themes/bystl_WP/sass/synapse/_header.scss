@@ -32,8 +32,8 @@
 }
 .navbar .brand {
     > img {
-        max-height: $navbarHeight - 6;
-        top: 2px;
+        max-height: $navbarHeight;
+        top: 0;
     }
     & {
         max-height: $navbarHeight;

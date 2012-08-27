@@ -13,7 +13,10 @@
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
 <?php
-
+function is_mobile() {
+    $detect = new Mobile_Detect();
+    return ($detect->isMobile() ? "true" : "false");
+}
 function is_ios(){
     $detect = new Mobile_Detect();
     return ($detect->isIOS() ? "true" : "false");
@@ -74,9 +77,15 @@ if ( isset($_SERVER['HTTP_USER_AGENT']) ) {
   }
 }
 
-if(stripos($_SERVER['HTTP_USER_AGENT'], 'mobile') !== false) {
-  $is_mobile = true;
+
+$ismo = is_mobile();
+if($ismo == "true") {
+    $is_mobile = true;
+} else {
+    $is_mobile = false;
 }
+
+
 
 $is_IE = ( $is_macIE || $is_winIE );
 // end aaronl custom stuff
@@ -124,7 +133,7 @@ if(is_subpage()){
 </head>
 
 <!-- BEGIN body -->
-<body class="<?php body_class_alt(); ?> <?php echo $colorSchemeClass; ?> <?php echo qsValue('logo'); ?> <?php echo $layout . " " . $ios . " " . $iphone . " " . $ipad; ?>">
+<body class="<?php body_class_alt(); ?> <?php echo $colorSchemeClass; ?> <?php echo $layout . " " . $ios . " " . $iphone . " " . $ipad; ?>">
     <?php wp_reset_query(); ?>
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
@@ -143,7 +152,7 @@ if(is_subpage()){
                 $bystl_wds = explode(" ", $bystl_tagline);
             ?>
                 <a class="brand" href="<?php bloginfo('url'); ?>">
-                <img src="<?php echo get_bloginfo('template_url') ?>/img/bystl_header-logo_symbol.png" alt="BYSTL Logo" />
+                <img src="<?php echo get_bloginfo('template_url') ?>/img/bystl_header-logo_symbol_navbar.png" alt="BYSTL Logo" />
                 <span><strong><?php echo $bystl_wds[0] . ' ' . $bystl_wds[1]; ?></strong> <?php echo $bystl_wds[2]; ?> <?php echo $bystl_wds[3]; ?></span>
                 <i> bystl</i>
                 </a>
@@ -204,15 +213,7 @@ if(is_subpage()){
                     <div class="logo-container span5">
 
                         <a class="logo" href="<?php bloginfo('url'); ?>">
-                            <?php
-                                $logoBase = "bystl_header-logo_symbol";
-                                if(qsValue('logo') == "") {
-                                    $logoFile = $logoBase;
-                                } else {
-                                    $logoFile = $logoBase . "_" . qsValue('logo');
-                                }
-                            ?>
-                            <img src="<?php echo get_bloginfo('template_url') ?>/img/<?php echo $logoFile; ?>.png" alt="BYSTL Logo" />
+                            <img src="<?php echo get_bloginfo('template_url') ?>/img/bystl_header-logo_symbol.png" alt="BYSTL Logo" />
                             <?php if (get_option_tree('tagline') == 'Yes') { ?>
 
                             <?php
