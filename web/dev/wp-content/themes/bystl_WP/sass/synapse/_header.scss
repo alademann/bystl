@@ -6,10 +6,6 @@
  ----------------------------------------------*/
 
 // BYSTL logo symbol can appear in two places depending on the device
-.navbar {
-    @include box-shadow(0 2px 6px rgba(darken($navbarBackground, 20%), .3));
-}
-
 .header .logo, .navbar .brand {
     position: relative; // so the > img can be absolute
 

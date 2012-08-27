@@ -14,7 +14,27 @@
 
 <?php
 
+function is_ios(){
+    $detect = new Mobile_Detect();
+    return ($detect->isIOS() ? "true" : "false");
+}
+function is_ipad(){
+    $detect = new Mobile_Detect();
+    return ($detect->isipad() ? "true" : "false");
+}
+function is_iphone(){
+    $detect = new Mobile_Detect();
+    return ($detect->isiphone() ? "true" : "false");
+}
+global $detect, $layout;
 // aaronl custom stuff
+$detect = new Mobile_Detect();
+
+$iphone = ($detect->isIOS() ? 'ios' : '');
+$iphone = ($detect->isiphone() ? 'iphone' : '');
+$ipad = ($detect->isipad() ? 'ipad' : '');
+
+$layout = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'mobile') : 'desktop');
 
 // return query string value
 function qsValue($query) {
@@ -26,7 +46,7 @@ function qsValue($query) {
 }
 
 // Simple browser detection
-$is_lynx = $is_gecko = $is_winIE = $is_macIE = $is_opera = $is_NS4 = $is_safari = $is_chrome = $is_iphone = $is_mobile = false;
+$is_lynx = $is_gecko = $is_winIE = $is_macIE = $is_opera = $is_NS4 = $is_safari = $is_chrome = $is_iphone = $is_ipad = $is_iOS = $is_mobile = false;
 
 if ( isset($_SERVER['HTTP_USER_AGENT']) ) {
   if ( strpos($_SERVER['HTTP_USER_AGENT'], 'Lynx') !== false ) {
@@ -56,10 +76,6 @@ if ( isset($_SERVER['HTTP_USER_AGENT']) ) {
 
 if(stripos($_SERVER['HTTP_USER_AGENT'], 'mobile') !== false) {
   $is_mobile = true;
-}
-
-if ( $is_safari && $is_mobile ) {
-  $is_iphone = true;
 }
 
 $is_IE = ( $is_macIE || $is_winIE );
@@ -108,7 +124,7 @@ if(is_subpage()){
 </head>
 
 <!-- BEGIN body -->
-<body class="<?php body_class_alt(); ?> <?php echo $colorSchemeClass; ?> <?php echo qsValue('logo'); ?>">
+<body class="<?php body_class_alt(); ?> <?php echo $colorSchemeClass; ?> <?php echo qsValue('logo'); ?> <?php echo $layout . " " . $ios . " " . $iphone . " " . $ipad; ?>">
     <?php wp_reset_query(); ?>
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">

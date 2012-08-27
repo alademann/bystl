@@ -1,3 +1,4 @@
+
         <?php if(
                 function_exists('bcn_display') &&
                 !is_only_home()
@@ -115,7 +116,29 @@
 
     });
     </script>
+    <?php if(is_ios() == "true"){ ?>
+    <script type="text/javascript" id="iOSscripts">
+        head.ready("jquery", function(){
+            head.js(
+                {iosOrientation:"<?php echo get_bloginfo('template_url').'/js/ios-orientationchange-fix.js'; ?>" }
+            );
+        });
+    </script>
 
+        <?php if(is_iphone() == "true"){ ?>
+        <script type="text/javascript" id="iPhoneScripts">
+            //alert("iphone");
+            if(!pageYOffset && !location.hash){
+                setTimeout(function () {
+                  window.scrollTo(0, 1);
+                }, 2000);
+            }
+
+        </script>
+
+        <?php } ?>
+
+    <?php } ?>
   </body>
 
 </html>

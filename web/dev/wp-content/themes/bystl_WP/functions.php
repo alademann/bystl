@@ -505,6 +505,9 @@ include(TEMPLATEPATH . "/includes/widget-testimonials.php");
 include(TEMPLATEPATH . "/includes/widget-testimonials-sidebar.php");
 include(TEMPLATEPATH . "/includes/widget-recentposts.php");
 
+include(TEMPLATEPATH . '/includes/php-mobile-detect/Mobile_Detect.php');
+
+
 function people_init() {
 	// create a new taxonomy
 	register_taxonomy(
