@@ -15,6 +15,16 @@
 <?php
 
 // aaronl custom stuff
+
+// return query string value
+function qsValue($query) {
+
+    $myQryStr = $_SERVER["QUERY_STRING"];
+    parse_str($myQryStr, $qs);
+    return $qs[$query];
+
+}
+
 // Simple browser detection
 $is_lynx = $is_gecko = $is_winIE = $is_macIE = $is_opera = $is_NS4 = $is_safari = $is_chrome = $is_iphone = $is_mobile = false;
 
@@ -71,7 +81,12 @@ if(is_subpage()){
 <title><?php echo $parent_title . " "; ?><?php wp_title('|', true, 'right'); ?></title>
 
 <!-- Stylesheets -->
+
+<?php if(qsValue('ui') == "") { ?>
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+<?php } else { ?>
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style_original.css" type="text/css" media="screen" />
+<?php } ?>
 
 <!-- RSS, Atom & Pingbacks -->
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo( 'name' ); ?> RSS Feed" href="<?php bloginfo( 'rss2_url' ); ?>" />
@@ -83,8 +98,8 @@ if(is_subpage()){
 <?php
     // TODO: make this change a body class or something - not load an entirely separate
     // color specfic stylesheet....
-	$colorschemeInclude = TEMPLATEPATH . "/includes/colorscheme.php";
-	include($colorschemeInclude);
+    $colorschemeInclude = TEMPLATEPATH . "/includes/colorscheme.php";
+    include($colorschemeInclude);
 ?>
 <!-- make sure these is always last. -->
 <script type="text/javascript" src="<?php echo get_bloginfo('template_url').'/js/modernizr-2.5.3.min.js'; ?>"></script>
@@ -93,7 +108,7 @@ if(is_subpage()){
 </head>
 
 <!-- BEGIN body -->
-<body class="<?php body_class_alt(); ?> <?php echo $colorSchemeClass; ?>">
+<body class="<?php body_class_alt(); ?> <?php echo $colorSchemeClass; ?> <?php echo qsValue('logo'); ?>">
     <?php wp_reset_query(); ?>
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
@@ -173,7 +188,15 @@ if(is_subpage()){
                     <div class="logo-container span5">
 
                         <a class="logo" href="<?php bloginfo('url'); ?>">
-                            <img src="<?php echo get_bloginfo('template_url') ?>/img/bystl_header-logo_symbol.png" alt="BYSTL Logo" />
+                            <?php
+                                $logoBase = "bystl_header-logo_symbol";
+                                if(qsValue('logo') == "") {
+                                    $logoFile = $logoBase;
+                                } else {
+                                    $logoFile = $logoBase . "_" . qsValue('logo');
+                                }
+                            ?>
+                            <img src="<?php echo get_bloginfo('template_url') ?>/img/<?php echo $logoFile; ?>.png" alt="BYSTL Logo" />
                             <?php if (get_option_tree('tagline') == 'Yes') { ?>
 
                             <?php

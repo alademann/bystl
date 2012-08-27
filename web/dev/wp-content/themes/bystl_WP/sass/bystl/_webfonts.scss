@@ -2,7 +2,7 @@
 
   PARTIAL:  bystl/_webfonts.scss
   PARENT:   style.scs
-  
+
  ----------------------------------------------*/
 
 $icoFont_path: "fontawesome/fontawesome-webfont" !default;
@@ -26,33 +26,36 @@ $navbarLogoImg: image-url("bystl_header-logo_symbol_navbar.png", true);
 ---------------------------------------------- */
 
 @mixin bystlLogoFont($symbol: true, $style: "bw") {
-  
+
   @include webfont($logoFont_name, "sans-serif");
 
   @if $symbol {
-    @if $style == "bw" { 
+    @if $style == "bw" {
       $logoImgW: image-width($navbarLogoImg) !default;
       $logoImgH: image-height($navbarLogoImg) !default;
 //      @debug "navbarImgW: #{$logoImgW}";
       line-height: $logoImgH / 2;
       padding-left: ($logoImgW  / 2) + 4;
-    } @else { 
+    } @else {
       $logoImgW: image-width($headerLogoImg) !default;
       $logoImgH: image-height($headerLogoImg) !default;
 //      @debug "headerImgW: #{$logoImgW}";
       line-height: $logoImgH / 2;
       padding-left: ($logoImgW / 2) + 10;
     }
-    
+
   }
     text-transform: lowercase;
     letter-spacing: normal;
     @if $style == "color" {
-      color: $bystl_logo_blueLight;  
+      color: $bystl_logo_blueLight;
+      .original & {
+        color: $bystl_logo_blueLight_orig;
+      }
     } @else {
       color: inherit;
     }
-    
+
     white-space: nowrap;
     word-spacing: -3px;
     strong {
@@ -61,6 +64,9 @@ $navbarLogoImg: image-url("bystl_header-logo_symbol_navbar.png", true);
         font-weight: normal;
         @if $style == "color" {
           color: $bystl_logo_blueDarkest;
+          .original & {
+            color: $bystl_logo_blueDarkest_orig;
+          }
         } @else {
           color: inherit;
         }
