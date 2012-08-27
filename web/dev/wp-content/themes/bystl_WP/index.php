@@ -12,17 +12,18 @@
             'Small Slider (Thumbs)' => 'slider_small_thumbs.php',
             'Full Width Slider (Text)' => 'slider_wide.php',
             'Full Width Slider (Thumbs)' => 'slider_wide_thumbs.php',
-            'Content Slider' => 'slider_content.php'
+            'Content Slider' => 'slider_content.php',
+            'Content Slider Images Only' => 'slider_content_images.php'
         );
 
  $script1 = $filenames[$slider];
 
  ?>
 
- 
-<?php  
+
+<?php
 	$sliderScriptInclude = TEMPLATEPATH . "/includes/sliders/$script1";
-	include($sliderScriptInclude); 
+	include($sliderScriptInclude);
 
 ?>
 
@@ -30,18 +31,18 @@
 
 <?php if (get_option_tree('cta_onoff') == 'Yes') { ?>
 
-<?php  
+<?php
 	$ctaInclude = TEMPLATEPATH . "/includes/cta.php";
-	include($ctaInclude); 
+	include($ctaInclude);
 ?>
 
 <?php } ?>
 
 <?php if (get_option_tree('portfolio_onoff') == 'Yes') { ?>
 
-<?php	
+<?php
 	$ctaInclude = TEMPLATEPATH . "/includes/portfolio.php";
-	include($ctaInclude); 
+	include($ctaInclude);
 ?>
 
 <?php } ?>

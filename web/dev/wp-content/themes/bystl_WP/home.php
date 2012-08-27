@@ -15,19 +15,21 @@
             'Small Slider (Thumbs)' => 'slider_small_thumbs.php',
             'Full Width Slider (Text)' => 'slider_wide.php',
             'Full Width Slider (Thumbs)' => 'slider_wide_thumbs.php',
-            'Content Slider' => 'slider_content.php'
+            'Content Slider' => 'slider_content.php',
+            'Content Slider Images Only' => 'slider_content_images.php'
         );
 
  $script1 = $filenames[$slider];
 
  ?>
 
- 
-<?php  
+<div class="homeSlider">
+<?php
 	$sliderScriptInclude = TEMPLATEPATH . "/includes/sliders/$script1";
-	include($sliderScriptInclude); 
+	include($sliderScriptInclude);
 
 ?>
+</div>
 
 <?php } ?>
 
@@ -35,10 +37,10 @@
 
             <div class="page-content full span16">
                 <?php
-                if (have_posts ()) { 
+                if (have_posts ()) {
                     while (have_posts ()) {
                         the_post();
-                        the_content(); 
+                        the_content();
                     } // END while()
                 } else { ?>
 
@@ -46,7 +48,7 @@
                     <h3><?php _e('There is not post available.', 'localization'); ?></h3>
                 </div>
 
-                <?php 
+                <?php
                 } // END if()
                 ?>
 
@@ -57,18 +59,18 @@
 
 <?php if (get_option_tree('cta_onoff') == 'Yes') { ?>
 
-<?php  
+<?php
 	$ctaInclude = TEMPLATEPATH . "/includes/cta.php";
-	include($ctaInclude); 
+	include($ctaInclude);
 ?>
 
 <?php } ?>
 
 <?php if (get_option_tree('portfolio_onoff') == 'Yes') { ?>
 
-<?php	
+<?php
 	$ctaInclude = TEMPLATEPATH . "/includes/portfolio.php";
-	include($ctaInclude); 
+	include($ctaInclude);
 ?>
 
 <?php } ?>

@@ -116,15 +116,6 @@ $carouselTiming:  ease-in-out;
 @media only screen and (max-width: $tabletBreakpoint2) {
   .carousel-control { display: none !important; }
   // TODO: touch gesture controls?
-  .carousel {
-    margin-top: 0;
-  }
-  #slider {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-left: -#{mobileGutter};
-    margin-right: -#{mobileGutter};
-  }
 }
 
 // Caption for text below images

@@ -1,5 +1,5 @@
-<div class="container-fluid" id="slider">
-  <div id="large-slider" class="carousel slide">
+<div id="slider">
+  <div id="content-slider" class="carousel slide row-fluid">
     <div class="carousel-inner">
 
       <?php if ( function_exists( 'get_option_tree' ) ) {
@@ -8,17 +8,35 @@
         $initClass = "";
 
         foreach( $slides as $slide ) {
-          if($i == 0){ 
-            $initClass = "active"; 
-            echo '<div class="itemOverlay"><div class="content"><span class="h1">'.$slide['title'].'</span><p>'.$slide['description'].'</p></div></div>';
-          } else { $initClass = ""; }
-          echo '<div class="item '.$initClass.'"><img src="'.$slide['image'].'" alt="'.$slide['title2'].'" /><div class="content"><div class="inner"><span class="h1">'.$slide['title2'].'</span><p>'.$slide['description'].'</p></div></div></div>'; 
+          if($i == 0){
+            $initClass = "active";
+          } else {
+            $initClass = "";
+          }
+        ?>
+        <div class="item <?php echo $initClass; ?>">
+          <div class="span6">
+            <div class="content">
+              <span class="h1"><?php echo $slide['title']; ?></span>
+              <p><?php echo $slide['description']; ?></p>
+            </div>
+          </div>
+          <!-- END left column -->
+
+          <div class="span10">
+            <img src="<?php echo $slide['image']; ?>" alt="<?php echo $slide['title2'] ?>" />
+            <a class="fade carousel-control left" href="#large-slider" data-slide="prev">&lsaquo;</a>
+            <a class="fade carousel-control right" href="#large-slider" data-slide="next">&rsaquo;</a>
+          </div>
+          <!-- END right column -->
+        </div>
+        <?php
           $i = $i + 1;
-        }
-      } ?>
+        } // END foreach
+      } // END if
+        ?>
+
 
     </div>
-    <a class="fade carousel-control left" href="#large-slider" data-slide="prev">&lsaquo;</a>
-    <a class="fade carousel-control right" href="#large-slider" data-slide="next">&rsaquo;</a>
   </div>
 </div>
