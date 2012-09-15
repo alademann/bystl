@@ -9,44 +9,44 @@ body {
 	padding-bottom: 20px;
 	background-color: $bodyBackground;
 	background-repeat: repeat;
-	background-image: image-url('patterns/Graphy2.png');
+	background-image: image-url('patterns/Wood.png');
 
-	&.bg_Axiom {
-		background-image: image-url('patterns/Axiom.png');
-	}
-	&.bg_Brick {
-		background-image: image-url('patterns/Brick.png');
-	}
-	&.bg_Connected {
-		background-image: image-url('patterns/Connected.png');
-	}
-	&.bg_Cube {
-		background-image: image-url('patterns/Cube.png');
-	}
-	&.bg_Fabric {
-		background-image: image-url('patterns/Fabric.png');
-	}
-	&.bg_Flower {
-		background-image: image-url('patterns/Flower.png');
-	}
-	&.bg_Graphy {
-		background-image: image-url('patterns/Graphy.png');
-	}
-	&.bg_Graphy2 {
-		background-image: image-url('patterns/Graphy2.png');
-	}
-	&.bg_Line {
-		background-image: image-url('patterns/Line.png');
-	}
-	&.bg_Noise {
-		background-image: image-url('patterns/Noise.png');
-	}
-	&.bg_Square {
-		background-image: image-url('patterns/Square.png');
-	}
-	&.bg_Wood {
-		background-image: image-url('patterns/Wood.png');
-	}
+	// &.bg_Axiom {
+	// 	background-image: image-url('patterns/Axiom.png');
+	// }
+	// &.bg_Brick {
+	// 	background-image: image-url('patterns/Brick.png');
+	// }
+	// &.bg_Connected {
+	// 	background-image: image-url('patterns/Connected.png');
+	// }
+	// &.bg_Cube {
+	// 	background-image: image-url('patterns/Cube.png');
+	// }
+	// &.bg_Fabric {
+	// 	background-image: image-url('patterns/Fabric.png');
+	// }
+	// &.bg_Flower {
+	// 	background-image: image-url('patterns/Flower.png');
+	// }
+	// &.bg_Graphy {
+	// 	background-image: image-url('patterns/Graphy.png');
+	// }
+	// &.bg_Graphy2 {
+	// 	background-image: image-url('patterns/Graphy2.png');
+	// }
+	// &.bg_Line {
+	// 	background-image: image-url('patterns/Line.png');
+	// }
+	// &.bg_Noise {
+	// 	background-image: image-url('patterns/Noise.png');
+	// }
+	// &.bg_Square {
+	// 	background-image: image-url('patterns/Square.png');
+	// }
+	// &.bg_Wood {
+	// 	background-image: image-url('patterns/Wood.png');
+	// }
 
 } // END body
 
@@ -77,7 +77,7 @@ body {
 /*  DROP SHADOWS ON HEADER AND FOOTER
 ---------------------------------------------- */
 .navbar, #alternate {
-    @include box-shadow(0 2px 6px rgba(darken($navbarBackground, 20%), .3));
+    @include headerFooterShadow("on");
 }
 
 

@@ -167,7 +167,49 @@ $dropdownLinkBackgroundHover:   $linkColor !default;
 
 
 
-// COLOR STYLE MIXINS
+/* MIXINS */
+@mixin box-shadow(
+  $shadow-1 : default,
+  $shadow-2 : false,
+  $shadow-3 : false,
+  $shadow-4 : false,
+  $shadow-5 : false,
+  $shadow-6 : false,
+  $shadow-7 : false,
+  $shadow-8 : false,
+  $shadow-9 : false,
+  $shadow-10: false
+) {
+  
+
+  @if $shadow-1 == default {
+    $shadow-1 : -compass-space-list(compact(if($default-box-shadow-inset, inset, false), $default-box-shadow-h-offset, $default-box-shadow-v-offset, $default-box-shadow-blur, $default-box-shadow-spread, $default-box-shadow-color));
+  }
+  $shadow : compact($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10);
+
+  // requires modernizr
+  @if $modernizr {
+    
+  .boxshadow & {  
+  
+    @include experimental(box-shadow, $shadow,
+      -moz, -webkit, not -o, not -ms, not -khtml, official
+    );  
+  
+  }
+
+  } @else {
+
+    @include experimental(box-shadow, $shadow,
+      -moz, -webkit, not -o, not -ms, not -khtml, official
+    );    
+
+  }
+
+}
+
+
+/* COLOR STYLE MIXINS */
 $hoverDarkenAmount: 1% !default;
 $hov1: darken($bystl_blue_navy, $hoverDarkenAmount) !default;
 $hov2: darken($bystl_blue_black, $hoverDarkenAmount) !default;
@@ -215,3 +257,22 @@ $outerSh: rgba($bystl_blue_black, 0.35) !default;
   @include pageContentPadding;
   @include pageContentColors;
 }
+
+@mixin headerFooterShadow($type: "on") {
+  @if $type == "below" {
+    // subtle drop shadow used below white areas in template
+    // (drops a shadow below white areas of template)
+    @include box-shadow(0 0 2px 0 rgba($bystl_brown_black, 0.55));
+    .no-boxshadow & {
+      // down-level browser graceful degredation
+      border-bottom: 1px solid mix($bodyBackground, $bystl_brown_black, 55%);
+    }
+  }
+  @if $type == "on" {
+    // drop shadow used on elems before white areas in template
+    // (drops a shadow ON the white areas of template)
+    // originally this was done using an image ON the white element
+    @include box-shadow(0 2px 6px rgba(darken($navbarBackground, 20%), .3));
+  }
+}
+

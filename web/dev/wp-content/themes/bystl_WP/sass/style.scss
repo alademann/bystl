@@ -1,4 +1,7 @@
 @charset "UTF-8";
+
+$modernizr: true !default; // are we using modernizr?
+
 @function isDev() {
   $isDev: true !default;
   @if $isDev {

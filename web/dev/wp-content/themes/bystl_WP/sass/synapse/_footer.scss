@@ -8,9 +8,9 @@
  /*	BIG FOOTER
  ---------------------------------------------- */
  .footer {
-	background:  $white url(image-url('footer-shadow.png', true)) repeat-x scroll left top;
+	background: $white;
 	padding: 40px 0 55px 0;
-	@include box-shadow(0 1px 1px rgba($black, 0.15));
+	@include headerFooterShadow("below");
 	color: $gray;
 	font-size: $baseFontSize - 1;
 	text-shadow: 1px 1px rgba($white, 0.8);

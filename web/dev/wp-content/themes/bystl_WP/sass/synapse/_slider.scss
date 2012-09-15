@@ -16,15 +16,9 @@
 
 	&.slider-intro-left {
 		padding-right: $sliderContentHspacing;
-		.description {
-			padding-right: $sliderContentHspacing / 2;
-		}
 	}
 	&.slider-intro-right {
 		padding-left: $sliderContentHspacing;
-		.description {
-			padding-left: $sliderContentHspacing / 2;
-		}
 	}
 
 	h1, .h1 {
