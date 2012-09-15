@@ -107,12 +107,7 @@ if(is_subpage()){
 <title><?php echo $parent_title . " "; ?><?php wp_title('|', true, 'right'); ?></title>
 
 <!-- Stylesheets -->
-
-<?php if(qsValue('ui') == "") { ?>
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-<?php } else { ?>
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style_original.css" type="text/css" media="screen" />
-<?php } ?>
 
 <!-- RSS, Atom & Pingbacks -->
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo( 'name' ); ?> RSS Feed" href="<?php bloginfo( 'rss2_url' ); ?>" />
@@ -178,19 +173,12 @@ if(is_subpage()){
                     array(
                         'container' => false,
                         'theme_location' => 'top_menu',
-                        //'container_class' => 'nav pull-right',
                         'menu_class' => 'nav pull-right',
-                        //'items_wrap' => '%3$s',
-                        //'echo' => true,
-                        //'before' => '<ul class="nav pull-right">',
-                        //'after' => '</ul>',
-                        //'link_before' => '',
-                        //'link_after' => '',
                         'depth' => 2,
                         'walker' => new Bootstrap_Walker_Nav_Menu()
 
                         )
-                 );
+                    );
                 ?>
 
                 <!--<form class="navbar-search pull-left" action="">
