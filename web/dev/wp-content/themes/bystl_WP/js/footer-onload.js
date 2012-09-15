@@ -1,5 +1,42 @@
 head.ready("bootstrap", function() {
 
+    var mbolLaunchers = $("a[data-target='#mbolModal']");
+    var mbolLaunchersHere = $(mbolLaunchers).length;
+
+    if(mbolLaunchersHere > 0) {
+
+        //console.log("found " + mbolLaunchersHere + " launchers");
+
+        $(mbolLaunchers).each(function(){
+            $(this).on("click", function(e) {
+                e.preventDefault();
+                var modal = $(this).attr("data-target");
+                var url = $(this).attr("href");
+                var mbolHTML = "<iframe id='innerFrame' width='100%' height='100%' frameborder='0' scrolling='no' allowtransparency='true' src='" + url + "'></iframe>";
+
+                // set the size of the modal to fit
+                centerMbolModal();
+                $(modal + " .modal-body").html(mbolHTML);
+
+            });
+
+        });
+            
+
+        $("#mbolModal").on('shown', function () {
+            console.info("showing modal");
+            window.addEventListener('resize', centerMbolModal, false);
+        });
+
+        $("#mbolModal").on('hidden', function () {
+            console.info("hiding modal");
+            window.removeEventListener('resize', centerMbolModal, false);
+        });
+
+    } else {
+        //console.warn("no launchers found (" + mbolLaunchersHere + ")");
+    }
+
     var tabs = $(".nav-tabs");
     var tabsHere = $(tabs).length;
     //console.log("found " + tabsHere + "tab sections");
