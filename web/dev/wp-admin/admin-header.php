@@ -40,6 +40,7 @@ wp_user_settings();
 _wp_admin_html_begin();
 ?>
 <title><?php echo $admin_title; ?></title>
+<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon_admin.ico" />
 <?php
 
 wp_enqueue_style( 'colors' );

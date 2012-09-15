@@ -8,6 +8,7 @@
 <head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.ico" />
 
 <!-- Meta Tags -->
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
