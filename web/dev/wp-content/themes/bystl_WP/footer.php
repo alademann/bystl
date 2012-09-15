@@ -41,16 +41,25 @@
             <div class="container-fluid">
                 <div class="row-fluid">
                     <div class="footer-left span8">
-                        Copyright &copy; Bikram Yoga St. Louis <?php echo date("Y"); ?>
+                        <span class="copyright">Copyright &copy; <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>&nbsp;<?php echo date("Y"); ?></span>
                         <?php echo get_option_tree('footer_left_content'); ?>
                     </div>
 
                     <div class="footer-right span8">
-                        <ul class="breadcrumb pull-right">
-                            <li><a href="about/contact-us/">Contact</a></li>
-                            <?php wp_list_pages('post_status=publish&title_li=&depth=1&exclude=148'); ?>
-                        </ul>
+
+                        <?php wp_nav_menu( 
+                            array( 
+                                'container' => false,
+                                'theme_location' => 'my-footer-menu',
+                                'menu_class' => 'breadcrumb pull-right',
+                                'depth' => -1,
+                                'walker' => new Bootstrap_Walker_Nav_Menu()
+                                ) 
+                            ); 
+                        ?>
+
                         <?php echo get_option_tree('footer_right_content'); ?>
+
                     </div>
                 </div>
             </div>
@@ -79,7 +88,8 @@
                 {prettyphoto:   "<?php echo get_bloginfo('template_url').'/js/jquery.prettyPhoto.js'; ?>"},
                 {isotope:       "<?php echo get_bloginfo('template_url').'/js/jquery.isotope.min.js'; ?>"},
                 {backstretch:   "<?php echo get_bloginfo('template_url').'/js/jquery.backstretch.min.js'; ?>"},
-                {prettifyCode:  "<?php echo get_bloginfo('template_url').'/js/prettify/prettify.js'; ?>"}
+                {prettifyCode:  "<?php echo get_bloginfo('template_url').'/js/prettify/prettify.js'; ?>"},
+                {mbolPopup:     "<?php echo get_bloginfo('template_url').'/js/mbol_wsLaunch.js'; ?>"}
             );
 
 

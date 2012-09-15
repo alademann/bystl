@@ -3,6 +3,14 @@
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'post-thumbnails', array( 'staff-bios' ) );
 
+function register_my_menus() {
+  register_nav_menus(
+    array( 'my-footer-menu' => __( 'Footer Crumbs' ) )
+  );
+}
+
+add_action( 'init', 'register_my_menus' );
+
 add_action( 'after_setup_theme', 'bootstrap_setup' );
 
 if ( ! function_exists( 'bootstrap_setup' ) ):
