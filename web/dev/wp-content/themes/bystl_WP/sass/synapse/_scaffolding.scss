@@ -240,3 +240,52 @@ body {
 	text-align: right;
 	@include display(block);
 } // END .cat-item
+
+
+/*  CUSTOM MODAL IFRAME STYLING
+---------------------------------------------- */
+
+#mbolModal {
+	overflow: hidden;
+
+	.modal-header {
+		h3 {
+			display: none;
+		}
+		.close {
+			padding: 7px 12px 9px 12px;
+			position: relative;
+			right: 0;
+			top: 0;
+		}
+
+		position: relative;
+		top: 0;
+		left: 0;
+		border-bottom: 0 none;
+		background: transparent;
+		display: inline;
+		z-index: 998;
+	}
+
+	.modal-body {
+
+		z-index: 997;
+		left: -1px; // TODO: figure out why this is necessary
+		width: 100%;
+		top: -38px;
+		max-height: 999em;
+		position: relative;
+		overflow: hidden;
+
+		#innerFrame {
+			position: absolute;
+			top: -57px;
+			left: 0;
+			height: 120% !important;
+			overflow-x: hidden;
+		}
+	}
+}
+
+

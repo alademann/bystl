@@ -69,6 +69,19 @@
     </div>
     <!-- END: #pageWrapper -->
 
+    <div id="mbolModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Sign up for Bikram Yoga!</h3>
+      </div>
+      <div class="modal-body">
+        <p>Loading&hellip;</p>
+      </div>
+      <div class="modal-footer hide">
+        <a href="#" class="btn">Close</a>
+      </div>
+    </div>
+
     <!-- SCRIPTS GO HERE -->
     <script type="text/javascript">
         head.js(
