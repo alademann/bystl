@@ -1,38 +1,62 @@
-function centerMbolModal() { 
+var iframeElem; // global scope
 
-    console.info("resize");
+function initMbolModal() { 
 
-    function putInCenter(elemID) { 
-        var d = document; 
-        var rootElm = (d.documentElement && d.compatMode == 'CSS1Compat') ? d.documentElement : d.body; 
-        var vpw = self.innerWidth ? self.innerWidth : rootElm.clientWidth; // viewport width 
-        var vph = self.innerHeight ? self.innerHeight : rootElm.clientHeight; // viewport height 
+    var d, rootElm, vpw, vph, modalHeight, modalWidth, iframeHeight, frameVshift, frameHeight;
 
-        var modalHeight = vph * .8;
-        var modalWidth = vpw * .8;
-        if(modalWidth > 784) {
-            modalWidth = 784;
-        }
+    d = document; 
+    rootElm = (d.documentElement && d.compatMode == 'CSS1Compat') ? d.documentElement : d.body; 
+    vpw = self.innerWidth ? self.innerWidth : rootElm.clientWidth; // viewport width 
+    vph = self.innerHeight ? self.innerHeight : rootElm.clientHeight; // viewport height 
 
-        //console.info("vpw: " + vpw + "\nvph: " + vph + "\nmodalWidth: " + modalWidth + "\nmodalHeight: " + modalHeight);
+    modalHeight = vph * .95;
+    if(modalHeight > 600) {
+        modalHeight = 600;
+    }
 
-        $(elemID).css({
-            height: modalHeight,
-            width: modalWidth,
-            left: ((vpw - modalWidth) / 2) + 'px',
-            top: (rootElm.scrollTop + (vph - modalHeight)/2 ) + 'px',
-            margin: 0
-        });
+    modalWidth = vpw * .95;
+    if(modalWidth > 795) {
+        modalWidth = 795;
+    }
 
-        $(elemID).find(".modal-body").css({
-            height: modalHeight
-        });
 
-        // myDiv.style.position = 'absolute'; 
-        // myDiv.style.left = ((vpw - 100) / 2) + 'px';  
-        // myDiv.style.top = (rootElm.scrollTop + (vph - 100)/2 ) + 'px'; 
-    } 
+    // how far are we moving the frame up to hide the header?
+    frameVshift = 216;
+    frameHeight = modalHeight + frameVshift - 15;
+    frameHeight = frameHeight.toString() + "px";
 
-    putInCenter("#mbolModal");
+    //console.info("vpw: " + vpw + "\nvph: " + vph + "\nmodalWidth: " + modalWidth + "\nmodalHeight: " + modalHeight);
 
+    $(mbolModalElem).css({
+        height: modalHeight,
+        width: modalWidth,
+        left: ((vpw - modalWidth) / 2) + 'px',
+        top: (rootElm.scrollTop + (vph - modalHeight)/2 ) + 'px',
+        margin: 0
+    });
+
+    $(mbolModalElem).find(".modal-body").css({
+        height: modalHeight
+    });
+
+    if(launched == false) {
+        // haven't launched yet... 
+        // set the dimensions AND show the modal
+        launchMbolModal(frameHeight);    
+    } else {
+        // modal is already showing
+        // just change the dimensions when this is triggered.
+        $(iframeElem).attr("height",frameHeight);
+    }
+    
+    // console.info("frameHeight: " + frameHeight);
+    // $(mbolModalElem).find(".modal-body > iframe").height(frameHeight);
+
+}
+
+function launchMbolModal(frameHeight) {
+    var mbolHTML = "<iframe id='innerFrame' src='" + modalURL + "' class='" + screenClass + "' width='100%' height='" + frameHeight + "' frameborder='0' scrolling='no' allowtransparency='true'></iframe>";
+    // put the iframe window in the modal body
+    $(mbolModalElemID + " .modal-body").html(mbolHTML);
+    iframeElem = $("#innerFrame");
 }

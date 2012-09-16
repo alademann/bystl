@@ -246,6 +246,7 @@ body {
 ---------------------------------------------- */
 
 #mbolModal {
+	$framePad: 3px;
 	overflow: hidden;
 
 	.modal-header {
@@ -269,21 +270,32 @@ body {
 	}
 
 	.modal-body {
-
+		$desiredHeight: 600px;
 		z-index: 997;
-		left: -1px; // TODO: figure out why this is necessary
+		left: 0;
 		width: 100%;
-		top: -38px;
+		top: -35px; // replace header with more body
 		max-height: 999em;
 		position: relative;
 		overflow: hidden;
 
 		#innerFrame {
+			
 			position: absolute;
-			top: -57px;
-			left: 0;
-			height: 120% !important;
 			overflow-x: hidden;
+			top: 0;
+			left: -#{$framePad};
+			max-height: $desiredHeight;
+
+			&.prices {
+				$vShift: -216px;
+				// dimensions for price list
+				top: $vShift;
+				left: -#{$framePad};
+				max-height: $desiredHeight + abs($vShift) - 15px; 
+
+			}
+			
 		}
 	}
 }

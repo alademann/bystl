@@ -1,41 +1,68 @@
+head.ready("jquery", function(){
+    // GLOBAL SCOPE VARS
+    mbolModalElem = $("#mbolModal"); 
+    mbolModalElemID = '#' + $(mbolModalElem).attr("id");
+    launched = false;
+});
+
 head.ready("bootstrap", function() {
 
-    var mbolLaunchers = $("a[data-target='#mbolModal']");
-    var mbolLaunchersHere = $(mbolLaunchers).length;
+    /* MINDBODY ONLINE MODAL SYSTEM */
+    var mbolLaunchers, mbolLaunchersHere;
 
-    if(mbolLaunchersHere > 0) {
+    mbolLaunchers = $("a[data-target='#mbolModal']");
+    mbolLaunchersHere = $(mbolLaunchers).length;
+
+    if(mbolLaunchersHere > 0 && mbolModalElem != undefined) {
 
         //console.log("found " + mbolLaunchersHere + " launchers");
 
         $(mbolLaunchers).each(function(){
             $(this).on("click", function(e) {
                 e.preventDefault();
-                var modal = $(this).attr("data-target");
-                var url = $(this).attr("href");
-                var mbolHTML = "<iframe id='innerFrame' width='100%' height='100%' frameborder='0' scrolling='no' allowtransparency='true' src='" + url + "'></iframe>";
+                
+                modalURL = $(this).attr("href");
+                
+                var screenType = modalURL.substring(modalURL.lastIndexOf("&stype=") + 7, modalURL.length);
+                    //console.info(screenType);
 
-                // set the size of the modal to fit
-                centerMbolModal();
-                $(modal + " .modal-body").html(mbolHTML);
+                switch(screenType) {
+                    case '41':
+                        screenClass = "prices";
+                    break;
+                    default:
+                        screenClass = "prices";
+                } // END switch(screenType)
+
+                // set the size of the modal to fit and launch it!
+                initMbolModal();
 
             });
 
         });
             
-
-        $("#mbolModal").on('shown', function () {
-            console.info("showing modal");
-            window.addEventListener('resize', centerMbolModal, false);
+        // bind window resize while modal is being shown
+        $(mbolModalElem).on('shown', function () {
+            //console.info("showing modal");
+            window.addEventListener('resize', initMbolModal, false);
+            launched = true;
         });
 
-        $("#mbolModal").on('hidden', function () {
-            console.info("hiding modal");
-            window.removeEventListener('resize', centerMbolModal, false);
+        // unbind when its hidden to save CPU
+        $(mbolModalElem).on('hidden', function () {
+            //console.info("hiding modal");
+            window.removeEventListener('resize', initMbolModal, false);
+            launched = false;
         });
 
     } else {
         //console.warn("no launchers found (" + mbolLaunchersHere + ")");
     }
+
+
+
+
+    /* TABS */
 
     var tabs = $(".nav-tabs");
     var tabsHere = $(tabs).length;
@@ -129,71 +156,14 @@ head.ready("bootstrap", function() {
     autoActivateLinks();
 
 
-    //var prepHeight = $('#large-slider').find(".item:first-child > img").height();
-    //$('#large-slider').css("min-height", prepHeight);
-
-    // $(".carousel").hover(
-    //   function () {
-    //     $(this).addClass("hover");
-    //   },
-    //   function () {
-    //     $(this).removeClass("hover");
-    //   }
-    // );
-
-    // // make the overlay content the same size as the image
-    // var itemContent = $('.carousel .content');
-    // findEmptyCaptions();
-    // //setTimeout(matchSize, 2000);
-    // matchSize();
-
-
-    // window.onresize = function(event) {
-    //     matchSize();
-    // }
-
-    // function findEmptyCaptions(){
-    //     $.each(itemContent, function(){
-    //         $(this).find("p:empty",".h1:empty").hide();
-    //     });
-    // }
-
-    // function matchSize(){
-    //     var carouselImg = $('.carousel .item:visible > img');
-    //     var imgHeight = $(carouselImg).height();
-    //     var imgWidth = $(carouselImg).width();
-    //     var singleContainer = $(".carousel .itemOverlay > .content");
-    //     var singleTitle = $(".carousel .itemOverlay > .content > .h1");
-    //     var singleCaption = $(".carousel .itemOverlay > .content > p");
-    //     var singleTitleHeight = $(singleTitle).height() + $(singleCaption).height();
-
-    //     //console.log("singleTitleH: " + $(singleTitle).height());
-    //     //console.log("singleCaptionH: " + $(singleCaption).height());
-
-    //     $(singleContainer).css({
-    //         width: imgWidth,
-    //         // top: imgHeight - singleTitleHeight
-    //     });
-
-    //     $.each(itemContent, function(){
-    //         $(this).css("height", imgHeight);
-    //     });
-
-    //     $(singleContainer).css({
-    //         // width: imgWidth,
-    //         top: imgHeight - singleTitleHeight - 20,
-    //         height: singleTitleHeight
-    //     });
-
-    // }
-
     $('.carousel#postures').carousel({
         interval: 1000
     });
 
-    var sidebarTestimonialWidget = $(".sidebar .testimonials");
-    var footerTestimonialWidget  = $("#alternate .testimonials")
-    //console.log("found " + sidebarTestimonialWidget.length);
+    var sidebarTestimonialWidget, footerTestimonialWidget;
+    
+    sidebarTestimonialWidget = $(".sidebar .testimonials");
+    footerTestimonialWidget  = $("#alternate .testimonials");
 
     launchTestimonialsPager(sidebarTestimonialWidget);
     launchTestimonialsPager(footerTestimonialWidget);
@@ -211,15 +181,7 @@ head.ready("bootstrap", function() {
 
             //speed: tbtestimonial_settings.transition_interval * 1000
         });
-    }
-
-    //$.each(testimonialsWidgets, function(){
-
-    //});
-
-    // $('.carousel').bind('slide', function(){
-    //     $(".carousel-control.left, .carousel-control.right", this).delay(500).show();
-    // });
+    } // END launchTestimonialsPager
 
 
 }); // END head.ready
