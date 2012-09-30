@@ -9,33 +9,6 @@ RewriteRule \.(?:jpe?g|gif|png)$ wp-content/plugins/wp-resolutions/adaptive-imag
 </IfModule>
 # END WP Resolutions
 
-######################################################
-# REDIRECT OLD SITE PAGES TO NEW WORDPRESS EQUIVALENTS 
-
-#Redirect 301 /index.html http://yogastlouis.com
-
-### ABOUT ###
-Redirect 301 /about.html http://yogastlouis.com/about
-Redirect 301 /contact.html http://yogastlouis.com/about/contact-us
-Redirect 301 /location.html http://yogastlouis.com/about/contact-us
-
-### CLASS INFORMATION ###
-Redirect 301 /ratesandschedule.html http://yogastlouis.com/class-info/schedule-tuition/
-Redirect 301 /policies.html http://yogastlouis.com/class-info/studio-etiquette/
-Redirect 301 /postures.html http://yogastlouis.com/class-info/bikram-yoga-postures/
-
-### NEW STUDENTS ###
-Redirect 301 /newstudents.html http://yogastlouis.com/new-students
-Redirect 301 /testimonials.html http://yogastlouis.com/testimonial
-
-
-### OLD WP PERMALINKS THAT CAUSED ERRORS ###
-
-
-
-# END REDIRECTS
-######################################################
-
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
