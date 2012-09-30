@@ -9,7 +9,7 @@
 	padding: 15px 25px;
 	background: $white; /* Old browsers */
 	@include background-image(linear-gradient($white, $almostWhiteF2));
-	@include filter-gradient($white, $almostWhiteF2);
+//	@include filter-gradient($white, $almostWhiteF2);
 	@include border-radius($pageContentBdRadius);
 	@include box-shadow(0 1px 1px rgba($black, 0.15));
 	////max-width: 890px;

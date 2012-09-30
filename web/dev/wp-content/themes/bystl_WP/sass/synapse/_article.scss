@@ -41,7 +41,7 @@
 .article-meta {
 	background: $almostWhite; /* Old browsers */
 	@include background-image(linear-gradient($almostWhite, darken($almostWhite,5%)));
-	@include filter-gradient($almostWhite, darken($almostWhite,5%));
+//	@include filter-gradient($almostWhite, darken($almostWhite,5%));
 	@include border-radius($pageContentBdRadius);
 	@include box-shadow(inset 0 1px 1px rgba($black, 0.15));
 	height: 40px;

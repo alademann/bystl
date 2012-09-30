@@ -7,6 +7,7 @@
 <!-- BEGIN head -->
 <head>
 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.ico" />
 
@@ -107,7 +108,12 @@ if(is_subpage()){
 <title><?php echo $parent_title . " "; ?><?php wp_title('|', true, 'right'); ?></title>
 
 <!-- Stylesheets -->
+<!--[if !IE]> -->
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+<!-- <![endif]-->
+<!--[if IE]>
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/ie.css" type="text/css" media="screen" />
+<![endif]-->
 
 <!-- RSS, Atom & Pingbacks -->
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo( 'name' ); ?> RSS Feed" href="<?php bloginfo( 'rss2_url' ); ?>" />

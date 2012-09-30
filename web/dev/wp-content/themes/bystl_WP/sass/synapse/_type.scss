@@ -279,7 +279,7 @@ a {
 	.breadcrumb {
 		margin: 0;
 		padding: 0;
-		background: transparent;
+		@include transparentBG;
 		border: 0 none;
 		@include box-shadow(none);
 

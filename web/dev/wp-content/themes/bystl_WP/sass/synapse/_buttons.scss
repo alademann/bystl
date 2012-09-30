@@ -5,91 +5,91 @@
 
  ----------------------------------------------*/
 
-@mixin synBlackBtn {
-    @extend .btn-inverse;
-    @include buttonBackground(#626262, #1c1c1c); // tb button color mixin
-}
-@mixin synBlueBtn {
-    @extend .btn-primary;
-    @include buttonBackground(#3f99dd, #2860c9); // tb button color mixin
-}
-@mixin synOrangeBtn {
-    @extend .btn-warning;
-    @include buttonBackground(#eda838, #da6c18); // tb button color mixin
-}
-@mixin synPinkBtn {
-    @include buttonBackground(#df4e8e, #cb2d58); // tb button color mixin
-    &:hover {
-        @include buttonBackground(#dd6699, #c94467);
-    }
-    &:active {
-        @include buttonBackground(#df4e8e, #cb2d58);
-    }
-}
-@mixin synRedBtn {
-    @extend .btn-danger;
-    @include buttonBackground(#f75252, #c60a0a); // tb button color mixin
-}
+// @mixin synBlackBtn {
+//     @extend .btn-inverse;
+//     @include buttonBackground(#626262, #1c1c1c); // tb button color mixin
+// }
+// @mixin synBlueBtn {
+//     @extend .btn-primary;
+//     @include buttonBackground(#3f99dd, #2860c9); // tb button color mixin
+// }
+// @mixin synOrangeBtn {
+//     @extend .btn-warning;
+//     @include buttonBackground(#eda838, #da6c18); // tb button color mixin
+// }
+// @mixin synPinkBtn {
+//     @include buttonBackground(#df4e8e, #cb2d58); // tb button color mixin
+//     &:hover {
+//         @include buttonBackground(#dd6699, #c94467);
+//     }
+//     &:active {
+//         @include buttonBackground(#df4e8e, #cb2d58);
+//     }
+// }
+// @mixin synRedBtn {
+//     @extend .btn-danger;
+//     @include buttonBackground(#f75252, #c60a0a); // tb button color mixin
+// }
 
-.buttons li {
-	float: left;
-    list-style: none;
-	margin-right: 15px;
-	margin-bottom: 20px;
-}
-.buttons a { margin-top: 0; }
-.rounded-1 { @include border-radius(99px); }
-.rounded-2 { @include border-radius($buttonBdRadius); }
+// .buttons li {
+// 	float: left;
+//     list-style: none;
+// 	margin-right: 15px;
+// 	margin-bottom: 20px;
+// }
+// .buttons a { margin-top: 0; }
+// .rounded-1 { @include border-radius(99px); }
+// .rounded-2 { @include border-radius($buttonBdRadius); }
 
-.btn, .small-btn, .big-btn {
-    @extend .btn; // use twitter bootstrap button styles
-}
-.small-btn {
-    @extend .btn-small;
-}
-.big-btn {
-    @extend .btn-large; // tb large button style
-    //font-size: 19px;
-    //padding: 14px 22px;
-}
-.big-btn:active {
-    //font-size: 19px;
-    //padding: 15px 23px;
-}
+// .btn, .small-btn, .big-btn {
+//     @extend .btn; // use twitter bootstrap button styles
+// }
+// .small-btn {
+//     @extend .btn-small;
+// }
+// .big-btn {
+//     @extend .btn-large; // tb large button style
+//     //font-size: 19px;
+//     //padding: 14px 22px;
+// }
+// //.big-btn:active {
+//     //font-size: 19px;
+//     //padding: 15px 23px;
+// //}
 
-// BUTTON COLORS
-// ----------------
+// // BUTTON COLORS
+// // ----------------
 
-// BLACK
-.btn, .small-btn, .big-btn {
-    &.black, &.btn-inverse {
-        @include synBlackBtn;
-    }
-}
-// BLUE
-.btn, .small-btn, .big-btn {
-    &.blue, &.btn-blue {
-        @include synBlueBtn;
-    }
-}
-// ORANGE
-.btn, .small-btn, .big-btn {
-    &.orange, &.btn-warning {
-        @include synOrangeBtn;
-    }
-}
-// PINK
-.small-btn, .big-btn {
-    &.pink, &.btn-pink {
-        @include synPinkBtn;
-    }
-}
-// RED
-.small-btn, .big-btn {
-    &.red, &.btn-danger {
-        @include synRedBtn;
-    }
-}
+// // BLACK
+// .btn, .small-btn, .big-btn {
+//     &.black, &.btn-inverse {
+//         @include synBlackBtn;
+//     }
+// }
+// // BLUE
+// .btn, .small-btn, .big-btn {
+//     &.blue, &.btn-blue {
+//         @include synBlueBtn;
+//     }
+// }
+// // ORANGE
+// .btn, .small-btn, .big-btn {
+//     &.orange, &.btn-warning {
+//         @include synOrangeBtn;
+//     }
+// }
+// // PINK
+// .small-btn, .big-btn {
+//     &.pink, &.btn-pink {
+//         @include synPinkBtn;
+//     }
+// }
+// // RED
+// .small-btn, .big-btn {
+//     &.red, &.btn-danger {
+//         @include synRedBtn;
+//     }
+// }
 
 // fix vertical alignment when mixing different button types
 .btn-group .btn, .btn-group input.btn, .btn-group button.btn {

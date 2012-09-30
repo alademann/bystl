@@ -139,6 +139,7 @@
 .btn-info.active,
 .btn-inverse.active {
   &, #alternate & {
+    color: $white; /* Old browsers fallback */
     color: rgba($white,.75);
   }
 }

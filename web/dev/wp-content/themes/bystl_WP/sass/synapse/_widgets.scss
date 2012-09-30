@@ -229,7 +229,7 @@
 		font-size: $baseFontSize - 2;
 		background: $bystl_blue_black; /* Old browsers */
 		@include background-image(linear-gradient($bystl_blue_black, lighten($bystl_blue_black, 5%)));
-		@include filter-gradient($bystl_blue_black, lighten($bystl_blue_black, 5%));
+//		@include filter-gradient($bystl_blue_black, lighten($bystl_blue_black, 5%));
 		color: #cecece !important;
 		padding: 6px 10px;
 		margin-left: 30px;

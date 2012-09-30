@@ -15,12 +15,8 @@ $modernizr: true !default; // are we using modernizr?
   compass helpers
 ---*/
 @import "global-compass";
-$legacy-support-for-ie: false;
-$legacy-support-for-ie6: false;
-$legacy-support-for-ie7: false;
-$legacy-support-for-ie8: false;
-$legacy-support-for-ie9: false;
-$experimental-support-for-microsoft: false;
+$legacy-support-for-ie: true;
+$legacy-support-for-ie9: true;
 /*!---
   bystl color palette
 ---*/

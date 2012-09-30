@@ -6,7 +6,7 @@
 // Recalculate z-index where appropriate
 .modal-open {
   .dropdown-menu {  z-index: $zindexDropdown + $zindexModal; }
-  .dropdown.open { *z-index: $zindexDropdown + $zindexModal; }
+  .dropdown.open { @include ie6(z-index, $zindexDropdown + $zindexModal); }
   .popover       {  z-index: $zindexPopover  + $zindexModal; }
   .tooltip       {  z-index: $zindexTooltip  + $zindexModal; }
 }
@@ -41,7 +41,7 @@
   background-color: $white;
   border: 1px solid #999;
   border: 1px solid rgba(0,0,0,.3);
-  *border: 1px solid #999; /* IE6-7 */
+  @include ie6(border,1px solid #999); /* IE6-7 */
   @include tb_border-radius(6px);
   @include tb_box-shadow(0 3px 7px rgba(0,0,0,0.3));
   @include background-clip(padding-box);
@@ -57,7 +57,7 @@
   // Close icon
   .close { margin-top: 2px; }
   // Heading
-  h3 {
+  h3 { 
     margin: 0;
     line-height: 30px;
   }
