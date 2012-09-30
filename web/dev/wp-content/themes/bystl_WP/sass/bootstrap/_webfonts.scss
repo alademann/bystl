@@ -18,7 +18,7 @@ $baseFontCursive:			("Apple Chancery", "Zapf Chancery", "Monotype Corsiva", curs
 	$woff: "#{$font_path}.woff";
 	$ttf:  "#{$font_path}.ttf";
 	$svg:  "#{$font_path}.svg##{$font_name}";
-	$eot:  "#{$font_path}.eot";
+	$eot:  "#{$font_path}";
 	@include font-face(
         $font_name, 
         font-files( 
