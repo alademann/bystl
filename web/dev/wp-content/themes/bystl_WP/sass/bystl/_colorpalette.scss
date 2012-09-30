@@ -279,7 +279,8 @@ $outerSh: rgba($bystl_blue_black, 0.35) !default;
 
 // zero out any default :focus styling set by the browser
 *:focus {
-  border: 0 none;
   outline: 0 none;
-  @include box-shadow(none);
+}
+.btn:focus {
+  outline: 0 none !important;
 }

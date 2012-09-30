@@ -105,12 +105,7 @@ h3 {
 
 p {
 	text-shadow: 1px 1px rgba($white, 0.8);
-	color: $bystl_brown_almstBlk;
 	font-size: $baseFontSize;
-
-	strong, b {
-		color: $bystl_brown_black;
-	}
 
 	.page-content & {
 		text-shadow: none;
@@ -157,6 +152,10 @@ p {
 		font-size: $baseFontSize - 2;
 		line-height: $baseLineHeight - 2 !important;
 		color: inherit;
+	}
+	.alert p {
+		font-size: $baseFontSize;
+		line-height: $baseLineHeight;
 	}
 	.large, .large p, p .large, p.large {
 		font-size: $baseFontSize + 6;
