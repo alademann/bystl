@@ -54,6 +54,7 @@
                 ?>
 
                 <h4><a class="permalink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                <p class="lead"><?php print_custom_field('staff_title') ?></p>
                 <?php the_content('Read More&hellip;',false,''); ?>
 
               </div>

@@ -11,6 +11,7 @@
                         the_post();
 
                         echo '<h1>'.get_the_title().'</h1>';
+                        echo '<p class="lead">' . print_custom_field('staff_title') . '</p>';
                         echo '<div class="bio-entry">';
                             if ( has_post_thumbnail()) {
                                 echo "<div class='bioImg'>";
