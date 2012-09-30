@@ -8,7 +8,7 @@
 .breadcrumb {
   padding: 7px 14px;
   margin: 0 0 $baseLineHeight;
-  background: $white; /* Old browsers */
+  background-color: $white; /* Old browsers */
   @include background-image(linear-gradient($white, darken($almostWhite, 2%)));
   border: 1px solid $grayLighterD;
   @include tb_border-radius(3px);

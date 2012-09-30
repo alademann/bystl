@@ -129,8 +129,9 @@ if(is_subpage()){
     include($colorschemeInclude);
 ?>
 <!-- make sure these is always last. -->
+<script type="text/javascript" src="<?php echo get_bloginfo('template_url').'/js/head.min.js'; ?>"></script>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_url').'/js/modernizr-2.5.3.min.js'; ?>"></script>
-<script type="text/javascript" src="<?php echo get_bloginfo('template_url').'/js/head.load.min.js'; ?>"></script>
+
 <!-- END head -->
 </head>
 

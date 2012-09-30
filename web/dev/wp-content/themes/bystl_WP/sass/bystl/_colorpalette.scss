@@ -171,6 +171,7 @@ $dropdownLinkBackgroundHover:   $linkColor !default;
 
 @mixin transparentBG {
   background-color: transparent;
+  background-image: none;
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 or $legacy-support-for-ie8 {
     filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
   }

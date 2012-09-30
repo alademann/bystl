@@ -26,6 +26,9 @@
 		font-size: $sliderContentHeadingSize;
 		line-height: $sliderContentHeadingSize;
 		font-weight: bold !important;
+		.mozilla & {
+			font-weight: normal !important;
+		}
 
 		br {
 			@extend .hidden-phone; // don't need the line breaks on our phone
