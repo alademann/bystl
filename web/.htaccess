@@ -30,8 +30,7 @@ Redirect 301 /testimonials.html http://yogastlouis.com/testimonial
 
 
 ### OLD WP PERMALINKS THAT CAUSED ERRORS ###
-
-
+Redirect 301 /wp-content/media/BYSTL_New-Student-Registration.pdf http://yogastlouis.com/dev/wp-content/media/BYSTL_New-Student-Registration.pdf
 
 # END REDIRECTS
 ######################################################
