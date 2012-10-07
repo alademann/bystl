@@ -27,9 +27,28 @@ Redirect 301 /tips.html http://yogastlouis.com/class-info/studio-etiquette/
 Redirect 301 /postures.html http://yogastlouis.com/class-info/bikram-yoga-postures/
 
 ### NEW STUDENTS ###
-Redirect 301 /newstudents.html http://yogastlouis.com/new-students
-Redirect 301 /testimonials.html http://yogastlouis.com/testimonial
+Redirect 301 /newstudents.html http://yogastlouis.com/new-students/
+Redirect 301 /testimonials.html http://yogastlouis.com/testimonial/
 
+### TESTIMONIALS ###
+Redirect 301 /testimonial1.html http://yogastlouis.com/testimonial/healing-past-injuries/
+Redirect 301 /testimonial2.html http://yogastlouis.com/testimonial/bikram-yoga-during-pregnancy/
+Redirect 301 /testimonial3.html http://yogastlouis.com/testimonial/plantar-fasciitis/
+Redirect 301 /testimonial4.html http://yogastlouis.com/testimonial/weight-loss-flexibility/
+Redirect 301 /testimonial5.html http://yogastlouis.com/testimonial/healing-your-mind-body/
+Redirect 301 /testimonial6.html http://yogastlouis.com/testimonial/overall-wellness-beginners-perspective/
+Redirect 301 /testimonial7.html http://yogastlouis.com/testimonial/health-benefits-i-never-expected/
+Redirect 301 /testimonial8.html http://yogastlouis.com/testimonial/marathon-training/
+Redirect 301 /testimonial9.html http://yogastlouis.com/testimonial/
+Redirect 301 /testimonial10.html http://yogastlouis.com/testimonial/heal-your-body-and-soul/
+Redirect 301 /testimonial11.html http://yogastlouis.com/testimonial/i-can-dodge-bullets/
+Redirect 301 /testimonial12.html http://yogastlouis.com/testimonial/its-all-about-balance/
+Redirect 301 /testimonial13.html http://yogastlouis.com/testimonial/improved-hdl-good-cholesterol/
+Redirect 301 /testimonial14.html http://yogastlouis.com/testimonial/healing-my-crew-wrist-injury/
+Redirect 301 /testimonial15.html http://yogastlouis.com/testimonial/lessons-learned/
+Redirect 301 /testimonial16.html http://yogastlouis.com/testimonial/healing-after-surgery/
+Redirect 301 /testimonial17.html http://yogastlouis.com/testimonial/a-new-addiction/
+Redirect 301 /testimonial18.html http://yogastlouis.com/testimonial/thank-you-from-santiago-chile/
 
 ### OLD WP PERMALINKS THAT CAUSED ERRORS ###
 Redirect 301 /wp-content/media/BYSTL_New-Student-Registration.pdf http://yogastlouis.com/dev/wp-content/media/BYSTL_New-Student-Registration.pdf
