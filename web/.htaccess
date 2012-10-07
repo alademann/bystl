@@ -18,10 +18,12 @@ RewriteRule \.(?:jpe?g|gif|png)$ wp-content/plugins/wp-resolutions/adaptive-imag
 Redirect 301 /about.html http://yogastlouis.com/about
 Redirect 301 /contact.html http://yogastlouis.com/about/contact-us
 Redirect 301 /location.html http://yogastlouis.com/about/contact-us
+Redirect 301 /location2.html http://yogastlouis.com/about/contact-us
 
 ### CLASS INFORMATION ###
 Redirect 301 /ratesandschedule.html http://yogastlouis.com/class-info/schedule-tuition/
 Redirect 301 /policies.html http://yogastlouis.com/class-info/studio-etiquette/
+Redirect 301 /tips.html http://yogastlouis.com/class-info/studio-etiquette/
 Redirect 301 /postures.html http://yogastlouis.com/class-info/bikram-yoga-postures/
 
 ### NEW STUDENTS ###
