@@ -8,7 +8,7 @@ User-agent: *
 #Disallow: *
 
 # DISALLOW DEPRECATED DIRECTORIES
-Disallow: */carol
+Disallow: carol/*
 Disallow: */guest
 Disallow: */wwwboard
 

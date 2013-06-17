@@ -49,14 +49,14 @@ class dd_tweet_widget extends WP_Widget {
 		extract( $args );
 
 		/* Our variables from the widget settings. */
-                $title = apply_filters('widget_title', $instance['title'] );
-		$user = $instance['user'];
-		$postcount = $instance['postcount'];
+            $title = apply_filters('widget_title', $instance['title'] );
+			$user = $instance['user'];
+			$postcount = $instance['postcount'];
 	
 		/* Before widget (defined by themes). */
-        echo $before_widget;
+        	echo $before_widget;
 
-        		/* Display Latest Tweets */
+		/* Display Latest Tweets */
 
         ?>
 
@@ -64,22 +64,22 @@ class dd_tweet_widget extends WP_Widget {
 <div class="tweet"><?php echo $before_title ?><?php echo $title ?><?php echo $after_title ?></div>
 
 <a href="https://twitter.com/<?php echo $user ?>" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @<?php echo $user ?></a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http:':'https:';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
    <script type='text/javascript'>
  
 		head.ready(function(){
 
 			$(".tweet").tweet({
-            username: "<?php echo $user ?>",
-            join_text: "",
-            count: <?php echo $postcount ?>,
-            auto_join_text_ed: "",
-            auto_join_text_ing: "",
-            auto_join_text_reply: "",
-            auto_join_text_url: "",
-            loading_text: "loading tweets..."
-        });
+	            username: "<?php echo $user ?>",
+	            join_text: "",
+	            count: <?php echo $postcount ?>,
+	            auto_join_text_ed: "",
+	            auto_join_text_ing: "",
+	            auto_join_text_reply: "",
+	            auto_join_text_url: "",
+	            loading_text: "loading tweets..."
+	        });
 
  		});
  
@@ -101,7 +101,7 @@ class dd_tweet_widget extends WP_Widget {
 		$instance = $old_instance;
 
 		/* Strip tags for title and name to remove HTML (important for text inputs). */
-                $instance['title'] = strip_tags( $new_instance['title'] );
+		$instance['title'] = strip_tags( $new_instance['title'] );
 		$instance['user'] = strip_tags( $new_instance['user'] );
 		$instance['postcount'] = strip_tags( $new_instance['postcount'] );
 		
@@ -125,9 +125,9 @@ class dd_tweet_widget extends WP_Widget {
 
 		/* Set up some default widget settings. */
 		$defaults = array(
-                'title' => 'My Tweets',
-		'username' => 'ddstudios',
-		'postcount' => '5',
+            'title' => 'My Tweets',
+			'username' => 'ddstudios',
+			'postcount' => '5',
 				);
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
 

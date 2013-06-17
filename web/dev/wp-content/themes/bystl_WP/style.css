@@ -304,7 +304,7 @@ a:hover {
 ----------------------------------------------*/
 /* line 235, sass/bootstrap/_mixins.scss */
 .row {
-  margin-left: -14.667px;
+  margin-left: -14.66667px;
 }
 /* line 15, sass/bootstrap/_mixins.scss */
 .row:before, .row:after {
@@ -319,7 +319,7 @@ a:hover {
 /* line 240, sass/bootstrap/_mixins.scss */
 [class*="span"] {
   float: left;
-  margin-left: 14.667px;
+  margin-left: 14.66667px;
 }
 
 /* line 248, sass/bootstrap/_mixins.scss */
@@ -336,12 +336,12 @@ a:hover {
 
 /* line 255, sass/bootstrap/_mixins.scss */
 .span15 {
-  width: 880.333px;
+  width: 880.33333px;
 }
 
 /* line 255, sass/bootstrap/_mixins.scss */
 .span14 {
-  width: 820.667px;
+  width: 820.66667px;
 }
 
 /* line 255, sass/bootstrap/_mixins.scss */
@@ -351,12 +351,13 @@ a:hover {
 
 /* line 255, sass/bootstrap/_mixins.scss */
 .span12 {
-  width: 701.333px;
+  width: 701.33333px;
 }
 
 /* line 255, sass/bootstrap/_mixins.scss */
-.span11, .span-two-thirds, .footer .widget_text, #alternate .widget_tbtestimonialswidget {
-  width: 641.667px;
+.span11, .span-two-thirds, .footer .widget_text, #alternate .widget_tbtestimonialswidget, #alternate .widget_tbtestimonialswidget.span-one-third,
+.footer .widget_text:first-child {
+  width: 641.66667px;
 }
 
 /* line 255, sass/bootstrap/_mixins.scss */
@@ -366,12 +367,12 @@ a:hover {
 
 /* line 255, sass/bootstrap/_mixins.scss */
 .span9 {
-  width: 522.333px;
+  width: 522.33333px;
 }
 
 /* line 255, sass/bootstrap/_mixins.scss */
 .span8 {
-  width: 462.667px;
+  width: 462.66667px;
 }
 
 /* line 255, sass/bootstrap/_mixins.scss */
@@ -381,12 +382,12 @@ a:hover {
 
 /* line 255, sass/bootstrap/_mixins.scss */
 .span6 {
-  width: 343.333px;
+  width: 343.33333px;
 }
 
 /* line 255, sass/bootstrap/_mixins.scss */
 .span5, .span-one-third {
-  width: 283.667px;
+  width: 283.66667px;
 }
 
 /* line 255, sass/bootstrap/_mixins.scss */
@@ -396,12 +397,12 @@ a:hover {
 
 /* line 255, sass/bootstrap/_mixins.scss */
 .span3 {
-  width: 164.333px;
+  width: 164.33333px;
 }
 
 /* line 255, sass/bootstrap/_mixins.scss */
 .span2 {
-  width: 104.667px;
+  width: 104.66667px;
 }
 
 /* line 255, sass/bootstrap/_mixins.scss */
@@ -411,12 +412,12 @@ a:hover {
 
 /* line 261, sass/bootstrap/_mixins.scss */
 .offset16 {
-  margin-left: 969.333px;
+  margin-left: 969.33333px;
 }
 
 /* line 261, sass/bootstrap/_mixins.scss */
 .offset15 {
-  margin-left: 909.667px;
+  margin-left: 909.66667px;
 }
 
 /* line 261, sass/bootstrap/_mixins.scss */
@@ -426,12 +427,12 @@ a:hover {
 
 /* line 261, sass/bootstrap/_mixins.scss */
 .offset13 {
-  margin-left: 790.333px;
+  margin-left: 790.33333px;
 }
 
 /* line 261, sass/bootstrap/_mixins.scss */
 .offset12 {
-  margin-left: 730.667px;
+  margin-left: 730.66667px;
 }
 
 /* line 261, sass/bootstrap/_mixins.scss */
@@ -441,12 +442,12 @@ a:hover {
 
 /* line 261, sass/bootstrap/_mixins.scss */
 .offset10 {
-  margin-left: 611.333px;
+  margin-left: 611.33333px;
 }
 
 /* line 261, sass/bootstrap/_mixins.scss */
 .offset9 {
-  margin-left: 551.667px;
+  margin-left: 551.66667px;
 }
 
 /* line 261, sass/bootstrap/_mixins.scss */
@@ -456,12 +457,12 @@ a:hover {
 
 /* line 261, sass/bootstrap/_mixins.scss */
 .offset7 {
-  margin-left: 432.333px;
+  margin-left: 432.33333px;
 }
 
 /* line 261, sass/bootstrap/_mixins.scss */
 .offset6 {
-  margin-left: 372.667px;
+  margin-left: 372.66667px;
 }
 
 /* line 261, sass/bootstrap/_mixins.scss */
@@ -471,12 +472,12 @@ a:hover {
 
 /* line 261, sass/bootstrap/_mixins.scss */
 .offset4 {
-  margin-left: 253.333px;
+  margin-left: 253.33333px;
 }
 
 /* line 261, sass/bootstrap/_mixins.scss */
 .offset3 {
-  margin-left: 193.667px;
+  margin-left: 193.66667px;
 }
 
 /* line 261, sass/bootstrap/_mixins.scss */
@@ -486,7 +487,7 @@ a:hover {
 
 /* line 261, sass/bootstrap/_mixins.scss */
 .offset1 {
-  margin-left: 74.333px;
+  margin-left: 74.33333px;
 }
 
 /* line 278, sass/bootstrap/_mixins.scss */
@@ -521,7 +522,7 @@ a:hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
-  margin-left: 1.56%;
+  margin-left: 1.56028%;
 }
 /* line 292, sass/bootstrap/_mixins.scss */
 .row-fluid [class*="span"]:first-child, .row-fluid [class*="span16"] {
@@ -533,63 +534,63 @@ a:hover {
 }
 /* line 300, sass/bootstrap/_mixins.scss */
 .row-fluid .span15 {
-  width: 93.652%;
+  width: 93.65248%;
 }
 /* line 300, sass/bootstrap/_mixins.scss */
 .row-fluid .span14 {
-  width: 87.305%;
+  width: 87.30496%;
 }
 /* line 300, sass/bootstrap/_mixins.scss */
 .row-fluid .span13 {
-  width: 80.957%;
+  width: 80.95745%;
 }
 /* line 300, sass/bootstrap/_mixins.scss */
 .row-fluid .span12 {
-  width: 74.61%;
+  width: 74.60993%;
 }
 /* line 300, sass/bootstrap/_mixins.scss */
 .row-fluid .span11, .row-fluid .span-two-thirds, .row-fluid .footer .widget_text, .footer .row-fluid .widget_text, .row-fluid #alternate .widget_tbtestimonialswidget, #alternate .row-fluid .widget_tbtestimonialswidget {
-  width: 68.262%;
+  width: 68.26241%;
 }
 /* line 300, sass/bootstrap/_mixins.scss */
 .row-fluid .span10 {
-  width: 61.915%;
+  width: 61.91489%;
 }
 /* line 300, sass/bootstrap/_mixins.scss */
 .row-fluid .span9 {
-  width: 55.567%;
+  width: 55.56738%;
 }
 /* line 300, sass/bootstrap/_mixins.scss */
 .row-fluid .span8 {
-  width: 49.22%;
+  width: 49.21986%;
 }
 /* line 300, sass/bootstrap/_mixins.scss */
 .row-fluid .span7 {
-  width: 42.872%;
+  width: 42.87234%;
 }
 /* line 300, sass/bootstrap/_mixins.scss */
 .row-fluid .span6 {
-  width: 36.525%;
+  width: 36.52482%;
 }
 /* line 300, sass/bootstrap/_mixins.scss */
 .row-fluid .span5, .row-fluid .span-one-third {
-  width: 30.177%;
+  width: 30.1773%;
 }
 /* line 300, sass/bootstrap/_mixins.scss */
 .row-fluid .span4 {
-  width: 23.83%;
+  width: 23.82979%;
 }
 /* line 300, sass/bootstrap/_mixins.scss */
 .row-fluid .span3 {
-  width: 17.482%;
+  width: 17.48227%;
 }
 /* line 300, sass/bootstrap/_mixins.scss */
 .row-fluid .span2 {
-  width: 11.135%;
+  width: 11.13475%;
 }
 /* line 300, sass/bootstrap/_mixins.scss */
 .row-fluid .span1 {
-  width: 4.787%;
+  width: 4.78723%;
 }
 
 /*----------------------------------------------
@@ -616,8 +617,8 @@ a:hover {
 
 /* line 15, sass/bootstrap/_layouts.scss */
 .container-fluid, .page-container.row-fluid {
-  padding-left: 1.56%;
-  padding-right: 1.56%;
+  padding-left: 1.56028%;
+  padding-right: 1.56028%;
 }
 /* line 15, sass/bootstrap/_mixins.scss */
 .container-fluid:before, .page-container.row-fluid:before, .container-fluid:after, .page-container.row-fluid:after {
@@ -994,7 +995,7 @@ em {
 
 /* line 160, sass/bootstrap/_type.scss */
 abbr {
-  font-size: 0.923em;
+  font-size: 0.92308em;
   text-transform: uppercase;
   border-bottom: 1px dotted #eeeeee;
   cursor: help;
@@ -1009,7 +1010,7 @@ blockquote {
 /* line 172, sass/bootstrap/_type.scss */
 blockquote p {
   margin-bottom: 0;
-  font-size: 1.231em;
+  font-size: 1.23077em;
   line-height: 22.5px;
   font-weight: 300;
 }
@@ -1032,7 +1033,8 @@ blockquote.pull-right {
   border-right: 5px solid #eeeeee;
 }
 /* line 193, sass/bootstrap/_type.scss */
-blockquote.pull-right p, blockquote.pull-right small {
+blockquote.pull-right p,
+blockquote.pull-right small {
   text-align: right;
 }
 
@@ -1458,14 +1460,14 @@ textarea.span16,
 input.span15,
 textarea.span15,
 .uneditable-input.span15 {
-  width: 870.333px;
+  width: 870.33333px;
 }
 
 /* line 324, sass/bootstrap/_mixins.scss */
 input.span14,
 textarea.span14,
 .uneditable-input.span14 {
-  width: 810.667px;
+  width: 810.66667px;
 }
 
 /* line 324, sass/bootstrap/_mixins.scss */
@@ -1479,20 +1481,23 @@ textarea.span13,
 input.span12,
 textarea.span12,
 .uneditable-input.span12 {
-  width: 691.333px;
+  width: 691.33333px;
 }
 
 /* line 324, sass/bootstrap/_mixins.scss */
-input.span11, input.span-two-thirds, .footer input.widget_text, #alternate input.widget_tbtestimonialswidget,
+input.span11, input.span-two-thirds, .footer input.widget_text, #alternate input.widget_tbtestimonialswidget, #alternate input.widget_tbtestimonialswidget.span-one-third,
+.footer input.widget_text:first-child,
 textarea.span11,
 textarea.span-two-thirds,
 .footer textarea.widget_text,
 #alternate textarea.widget_tbtestimonialswidget,
+#alternate textarea.widget_tbtestimonialswidget.span-one-third,
+.footer textarea.widget_text:first-child,
 .uneditable-input.span11,
 .uneditable-input.span-two-thirds,
 .footer .uneditable-input.widget_text,
 #alternate .uneditable-input.widget_tbtestimonialswidget {
-  width: 631.667px;
+  width: 631.66667px;
 }
 
 /* line 324, sass/bootstrap/_mixins.scss */
@@ -1506,14 +1511,14 @@ textarea.span10,
 input.span9,
 textarea.span9,
 .uneditable-input.span9 {
-  width: 512.333px;
+  width: 512.33333px;
 }
 
 /* line 324, sass/bootstrap/_mixins.scss */
 input.span8,
 textarea.span8,
 .uneditable-input.span8 {
-  width: 452.667px;
+  width: 452.66667px;
 }
 
 /* line 324, sass/bootstrap/_mixins.scss */
@@ -1527,7 +1532,7 @@ textarea.span7,
 input.span6,
 textarea.span6,
 .uneditable-input.span6 {
-  width: 333.333px;
+  width: 333.33333px;
 }
 
 /* line 324, sass/bootstrap/_mixins.scss */
@@ -1536,7 +1541,7 @@ textarea.span5,
 textarea.span-one-third,
 .uneditable-input.span5,
 .uneditable-input.span-one-third {
-  width: 273.667px;
+  width: 273.66667px;
 }
 
 /* line 324, sass/bootstrap/_mixins.scss */
@@ -1550,14 +1555,14 @@ textarea.span4,
 input.span3,
 textarea.span3,
 .uneditable-input.span3 {
-  width: 154.333px;
+  width: 154.33333px;
 }
 
 /* line 324, sass/bootstrap/_mixins.scss */
 input.span2,
 textarea.span2,
 .uneditable-input.span2 {
-  width: 94.667px;
+  width: 94.66667px;
 }
 
 /* line 324, sass/bootstrap/_mixins.scss */
@@ -1588,78 +1593,105 @@ input[type="checkbox"][readonly] {
 }
 
 /* line 350, sass/bootstrap/_mixins.scss */
-.control-group.warning > label, .control-group.warning .help-block, .control-group.warning .help-inline {
+.control-group.warning > label,
+.control-group.warning .help-block,
+.control-group.warning .help-inline {
   color: #c09853;
 }
 /* line 356, sass/bootstrap/_mixins.scss */
-.control-group.warning input, .control-group.warning select, .control-group.warning textarea {
+.control-group.warning input,
+.control-group.warning select,
+.control-group.warning textarea {
   color: #c09853;
   border-color: #c09853;
 }
 /* line 359, sass/bootstrap/_mixins.scss */
-.control-group.warning input:focus, .control-group.warning select:focus, .control-group.warning textarea:focus {
+.control-group.warning input:focus,
+.control-group.warning select:focus,
+.control-group.warning textarea:focus {
   border-color: #a47e3c;
 }
 /* line 202, sass/bystl/_colorpalette.scss */
-.boxshadow .control-group.warning input:focus, .boxshadow .control-group.warning select:focus, .boxshadow .control-group.warning textarea:focus {
+.boxshadow .control-group.warning input:focus, .boxshadow
+.control-group.warning select:focus, .boxshadow
+.control-group.warning textarea:focus {
   -webkit-box-shadow: 0 0 6px #dbc59e;
   -moz-box-shadow: 0 0 6px #dbc59e;
   box-shadow: 0 0 6px #dbc59e;
 }
 /* line 366, sass/bootstrap/_mixins.scss */
-.control-group.warning .input-prepend .add-on, .control-group.warning .input-append .add-on {
+.control-group.warning .input-prepend .add-on,
+.control-group.warning .input-append .add-on {
   color: #c09853;
   background-color: #fcf8e3;
   border-color: #c09853;
 }
 
 /* line 350, sass/bootstrap/_mixins.scss */
-.control-group.error > label, .control-group.error .help-block, .control-group.error .help-inline {
+.control-group.error > label,
+.control-group.error .help-block,
+.control-group.error .help-inline {
   color: #b94a48;
 }
 /* line 356, sass/bootstrap/_mixins.scss */
-.control-group.error input, .control-group.error select, .control-group.error textarea {
+.control-group.error input,
+.control-group.error select,
+.control-group.error textarea {
   color: #b94a48;
   border-color: #b94a48;
 }
 /* line 359, sass/bootstrap/_mixins.scss */
-.control-group.error input:focus, .control-group.error select:focus, .control-group.error textarea:focus {
+.control-group.error input:focus,
+.control-group.error select:focus,
+.control-group.error textarea:focus {
   border-color: #953b39;
 }
 /* line 202, sass/bystl/_colorpalette.scss */
-.boxshadow .control-group.error input:focus, .boxshadow .control-group.error select:focus, .boxshadow .control-group.error textarea:focus {
+.boxshadow .control-group.error input:focus, .boxshadow
+.control-group.error select:focus, .boxshadow
+.control-group.error textarea:focus {
   -webkit-box-shadow: 0 0 6px #d59392;
   -moz-box-shadow: 0 0 6px #d59392;
   box-shadow: 0 0 6px #d59392;
 }
 /* line 366, sass/bootstrap/_mixins.scss */
-.control-group.error .input-prepend .add-on, .control-group.error .input-append .add-on {
+.control-group.error .input-prepend .add-on,
+.control-group.error .input-append .add-on {
   color: #b94a48;
   background-color: #f2dede;
   border-color: #b94a48;
 }
 
 /* line 350, sass/bootstrap/_mixins.scss */
-.control-group.success > label, .control-group.success .help-block, .control-group.success .help-inline {
+.control-group.success > label,
+.control-group.success .help-block,
+.control-group.success .help-inline {
   color: #468847;
 }
 /* line 356, sass/bootstrap/_mixins.scss */
-.control-group.success input, .control-group.success select, .control-group.success textarea {
+.control-group.success input,
+.control-group.success select,
+.control-group.success textarea {
   color: #468847;
   border-color: #468847;
 }
 /* line 359, sass/bootstrap/_mixins.scss */
-.control-group.success input:focus, .control-group.success select:focus, .control-group.success textarea:focus {
+.control-group.success input:focus,
+.control-group.success select:focus,
+.control-group.success textarea:focus {
   border-color: #356635;
 }
 /* line 202, sass/bystl/_colorpalette.scss */
-.boxshadow .control-group.success input:focus, .boxshadow .control-group.success select:focus, .boxshadow .control-group.success textarea:focus {
+.boxshadow .control-group.success input:focus, .boxshadow
+.control-group.success select:focus, .boxshadow
+.control-group.success textarea:focus {
   -webkit-box-shadow: 0 0 6px #7aba7b;
   -moz-box-shadow: 0 0 6px #7aba7b;
   box-shadow: 0 0 6px #7aba7b;
 }
 /* line 366, sass/bootstrap/_mixins.scss */
-.control-group.success .input-prepend .add-on, .control-group.success .input-append .add-on {
+.control-group.success .input-prepend .add-on,
+.control-group.success .input-append .add-on {
   color: #468847;
   background-color: #dff0d8;
   border-color: #468847;
@@ -1757,7 +1789,9 @@ select:focus:required:invalid:focus {
   margin-bottom: 5px;
 }
 /* line 401, sass/bootstrap/_forms.scss */
-.input-prepend input, .input-prepend select, .input-prepend .uneditable-input,
+.input-prepend input,
+.input-prepend select,
+.input-prepend .uneditable-input,
 .input-append input,
 .input-append select,
 .input-append .uneditable-input {
@@ -1770,7 +1804,9 @@ select:focus:required:invalid:focus {
   border-radius: 0 3px 3px 0;
 }
 /* line 408, sass/bootstrap/_forms.scss */
-.input-prepend input:focus, .input-prepend select:focus, .input-prepend .uneditable-input:focus,
+.input-prepend input:focus,
+.input-prepend select:focus,
+.input-prepend .uneditable-input:focus,
 .input-append input:focus,
 .input-append select:focus,
 .input-append .uneditable-input:focus {
@@ -1798,7 +1834,10 @@ select:focus:required:invalid:focus {
   border: 1px solid #c5c2ba;
 }
 /* line 430, sass/bootstrap/_forms.scss */
-.input-prepend .add-on, .input-prepend .btn, .input-prepend .btn-group li a, .btn-group li .input-prepend a,
+.input-prepend .add-on,
+.input-prepend .btn,
+.input-prepend .btn-group li a,
+.btn-group li .input-prepend a,
 .input-append .add-on,
 .input-append .btn,
 .input-append .btn-group li a,
@@ -1817,11 +1856,17 @@ select:focus:required:invalid:focus {
 }
 
 /* line 441, sass/bootstrap/_forms.scss */
-.input-prepend .add-on, .input-prepend .btn, .input-prepend .btn-group li a, .btn-group li .input-prepend a {
+.input-prepend .add-on,
+.input-prepend .btn,
+.input-prepend .btn-group li a,
+.btn-group li .input-prepend a {
   margin-right: -1px;
 }
 /* line 445, sass/bootstrap/_forms.scss */
-.input-prepend .add-on:first-child, .input-prepend .btn:first-child, .input-prepend .btn-group li a:first-child, .btn-group li .input-prepend a:first-child {
+.input-prepend .add-on:first-child,
+.input-prepend .btn:first-child,
+.input-prepend .btn-group li a:first-child,
+.btn-group li .input-prepend a:first-child {
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   -o-border-radius: 3px 0 0 3px;
@@ -1829,7 +1874,9 @@ select:focus:required:invalid:focus {
 }
 
 /* line 452, sass/bootstrap/_forms.scss */
-.input-append input, .input-append select, .input-append .uneditable-input {
+.input-append input,
+.input-append select,
+.input-append .uneditable-input {
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   -o-border-radius: 3px 0 0 3px;
@@ -1841,7 +1888,10 @@ select:focus:required:invalid:focus {
   border-left-color: #eeeeee;
 }
 /* line 460, sass/bootstrap/_forms.scss */
-.input-append .add-on:last-child, .input-append .btn:last-child, .input-append .btn-group li a:last-child, .btn-group li .input-append a:last-child {
+.input-append .add-on:last-child,
+.input-append .btn:last-child,
+.input-append .btn-group li a:last-child,
+.btn-group li .input-append a:last-child {
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
   -o-border-radius: 0 3px 3px 0;
@@ -1849,14 +1899,19 @@ select:focus:required:invalid:focus {
 }
 
 /* line 468, sass/bootstrap/_forms.scss */
-.input-prepend.input-append input, .input-prepend.input-append select, .input-prepend.input-append .uneditable-input {
+.input-prepend.input-append input,
+.input-prepend.input-append select,
+.input-prepend.input-append .uneditable-input {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
 }
 /* line 472, sass/bootstrap/_forms.scss */
-.input-prepend.input-append .add-on:first-child, .input-prepend.input-append .btn:first-child, .input-prepend.input-append .btn-group li a:first-child, .btn-group li .input-prepend.input-append a:first-child {
+.input-prepend.input-append .add-on:first-child,
+.input-prepend.input-append .btn:first-child,
+.input-prepend.input-append .btn-group li a:first-child,
+.btn-group li .input-prepend.input-append a:first-child {
   margin-right: -1px;
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
@@ -1864,7 +1919,10 @@ select:focus:required:invalid:focus {
   border-radius: 3px 0 0 3px;
 }
 /* line 477, sass/bootstrap/_forms.scss */
-.input-prepend.input-append .add-on:last-child, .input-prepend.input-append .btn:last-child, .input-prepend.input-append .btn-group li a:last-child, .btn-group li .input-prepend.input-append a:last-child {
+.input-prepend.input-append .add-on:last-child,
+.input-prepend.input-append .btn:last-child,
+.input-prepend.input-append .btn-group li a:last-child,
+.btn-group li .input-prepend.input-append a:last-child {
   margin-left: -1px;
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
@@ -1885,7 +1943,13 @@ select:focus:required:invalid:focus {
 }
 
 /* line 514, sass/bootstrap/_forms.scss */
-.form-search input, .form-search textarea, .form-search select, .form-search .help-inline, .form-search .uneditable-input, .form-search .input-prepend, .form-search .input-append,
+.form-search input,
+.form-search textarea,
+.form-search select,
+.form-search .help-inline,
+.form-search .uneditable-input,
+.form-search .input-prepend,
+.form-search .input-append,
 .form-inline input,
 .form-inline textarea,
 .form-inline select,
@@ -2014,7 +2078,14 @@ table {
   margin-bottom: 1em;
 }
 /* line 26, sass/bootstrap/_tables.scss */
-.table th, .table-condensed th, .condensed-table th, .table-bordered th, .bordered-table th, .table-striped th, .zebra-striped th, .table td, .table-condensed td, .condensed-table td, .table-bordered td, .bordered-table td, .table-striped td, .zebra-striped td {
+.table th, .table-condensed th, .condensed-table th, .table-bordered th, .bordered-table th, .table-striped th, .zebra-striped th,
+.table td,
+.table-condensed td,
+.condensed-table td,
+.table-bordered td,
+.bordered-table td,
+.table-striped td,
+.zebra-striped td {
   padding: 8px;
   line-height: 18px;
   text-align: left;
@@ -2030,7 +2101,14 @@ table {
   vertical-align: bottom;
 }
 /* line 42, sass/bootstrap/_tables.scss */
-.table thead:first-child tr th, .table-condensed thead:first-child tr th, .condensed-table thead:first-child tr th, .table-bordered thead:first-child tr th, .bordered-table thead:first-child tr th, .table-striped thead:first-child tr th, .zebra-striped thead:first-child tr th, .table thead:first-child tr td, .table-condensed thead:first-child tr td, .condensed-table thead:first-child tr td, .table-bordered thead:first-child tr td, .bordered-table thead:first-child tr td, .table-striped thead:first-child tr td, .zebra-striped thead:first-child tr td {
+.table thead:first-child tr th, .table-condensed thead:first-child tr th, .condensed-table thead:first-child tr th, .table-bordered thead:first-child tr th, .bordered-table thead:first-child tr th, .table-striped thead:first-child tr th, .zebra-striped thead:first-child tr th,
+.table thead:first-child tr td,
+.table-condensed thead:first-child tr td,
+.condensed-table thead:first-child tr td,
+.table-bordered thead:first-child tr td,
+.bordered-table thead:first-child tr td,
+.table-striped thead:first-child tr td,
+.zebra-striped thead:first-child tr td {
   border-top: 0;
 }
 /* line 46, sass/bootstrap/_tables.scss */
@@ -2039,7 +2117,9 @@ table {
 }
 
 /* line 59, sass/bootstrap/_tables.scss */
-.table-condensed th, .table-condensed td, .condensed-table th, .condensed-table td {
+.table-condensed th,
+.table-condensed td, .condensed-table th,
+.condensed-table td {
   padding: 4px 5px;
 }
 
@@ -2053,36 +2133,54 @@ table {
   border-radius: 4px;
 }
 /* line 77, sass/bootstrap/_tables.scss */
-.table-bordered th + th, .table-bordered td + td, .table-bordered th + td, .table-bordered td + th, .bordered-table th + th, .bordered-table td + td, .bordered-table th + td, .bordered-table td + th {
+.table-bordered th + th,
+.table-bordered td + td,
+.table-bordered th + td,
+.table-bordered td + th, .bordered-table th + th,
+.bordered-table td + td,
+.bordered-table th + td,
+.bordered-table td + th {
   border-left: 1px solid #dddddd;
 }
 /* line 83, sass/bootstrap/_tables.scss */
-.table-bordered thead:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child td, .bordered-table thead:first-child tr:first-child th, .bordered-table tbody:first-child tr:first-child th, .bordered-table tbody:first-child tr:first-child td {
+.table-bordered thead:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child td, .bordered-table thead:first-child tr:first-child th,
+.bordered-table tbody:first-child tr:first-child th,
+.bordered-table tbody:first-child tr:first-child td {
   border-top: 0;
 }
 /* line 88, sass/bootstrap/_tables.scss */
-.table-bordered thead:first-child tr:first-child th:first-child, .table-bordered tbody:first-child tr:first-child td:first-child, .bordered-table thead:first-child tr:first-child th:first-child, .bordered-table tbody:first-child tr:first-child td:first-child {
+.table-bordered thead:first-child tr:first-child th:first-child,
+.table-bordered tbody:first-child tr:first-child td:first-child, .bordered-table thead:first-child tr:first-child th:first-child,
+.bordered-table tbody:first-child tr:first-child td:first-child {
   -webkit-border-radius: 4px 0 0 0;
   -moz-border-radius: 4px 0 0 0;
   -o-border-radius: 4px 0 0 0;
   border-radius: 4px 0 0 0;
 }
 /* line 92, sass/bootstrap/_tables.scss */
-.table-bordered thead:first-child tr:first-child th:last-child, .table-bordered tbody:first-child tr:first-child td:last-child, .bordered-table thead:first-child tr:first-child th:last-child, .bordered-table tbody:first-child tr:first-child td:last-child {
+.table-bordered thead:first-child tr:first-child th:last-child,
+.table-bordered tbody:first-child tr:first-child td:last-child, .bordered-table thead:first-child tr:first-child th:last-child,
+.bordered-table tbody:first-child tr:first-child td:last-child {
   -webkit-border-radius: 0 4px 0 0;
   -moz-border-radius: 0 4px 0 0;
   -o-border-radius: 0 4px 0 0;
   border-radius: 0 4px 0 0;
 }
 /* line 97, sass/bootstrap/_tables.scss */
-.table-bordered thead:last-child tr:last-child th:first-child, .table-bordered tbody:last-child tr:last-child td:first-child, .bordered-table thead:last-child tr:last-child th:first-child, .bordered-table tbody:last-child tr:last-child td:first-child {
+.table-bordered thead:last-child tr:last-child th:first-child,
+.table-bordered tbody:last-child tr:last-child td:first-child, .bordered-table thead:last-child tr:last-child th:first-child,
+.bordered-table tbody:last-child tr:last-child td:first-child {
   -webkit-border-radius: 0 0 0 4px;
   -moz-border-radius: 0 0 0 4px;
   -o-border-radius: 0 0 0 4px;
   border-radius: 0 0 0 4px;
 }
 /* line 101, sass/bootstrap/_tables.scss */
-.table-bordered thead:last-child tr:last-child th:last-child, .table-bordered tbody:last-child tr:last-child td:last-child, .bordered-table thead:last-child tr:last-child th:last-child, .bordered-table tbody:last-child tr:last-child td:last-child {
+.table-bordered thead:last-child tr:last-child th:last-child,
+.table-bordered tbody:last-child tr:last-child td:last-child, .bordered-table thead:last-child tr:last-child th:last-child,
+.bordered-table tbody:last-child tr:last-child td:last-child {
   -webkit-border-radius: 0 0 4px 0;
   -moz-border-radius: 0 0 4px 0;
   -o-border-radius: 0 0 4px 0;
@@ -2090,12 +2188,15 @@ table {
 }
 
 /* line 115, sass/bootstrap/_tables.scss */
-.table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th, .zebra-striped tbody tr:nth-child(odd) td, .zebra-striped tbody tr:nth-child(odd) th {
+.table-striped tbody tr:nth-child(odd) td,
+.table-striped tbody tr:nth-child(odd) th, .zebra-striped tbody tr:nth-child(odd) td,
+.zebra-striped tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
 
 /* line 127, sass/bootstrap/_tables.scss */
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
   background-color: #f7f7f7;
 }
 
@@ -2108,13 +2209,13 @@ table .span1 {
 /* line 144, sass/bootstrap/_tables.scss */
 table .span2 {
   float: none;
-  width: 88.667px;
+  width: 88.66667px;
   margin-left: 0;
 }
 /* line 145, sass/bootstrap/_tables.scss */
 table .span3 {
   float: none;
-  width: 148.333px;
+  width: 148.33333px;
   margin-left: 0;
 }
 /* line 146, sass/bootstrap/_tables.scss */
@@ -2126,13 +2227,13 @@ table .span4 {
 /* line 147, sass/bootstrap/_tables.scss */
 table .span5, table .span-one-third {
   float: none;
-  width: 267.667px;
+  width: 267.66667px;
   margin-left: 0;
 }
 /* line 148, sass/bootstrap/_tables.scss */
 table .span6 {
   float: none;
-  width: 327.333px;
+  width: 327.33333px;
   margin-left: 0;
 }
 /* line 149, sass/bootstrap/_tables.scss */
@@ -2144,13 +2245,13 @@ table .span7 {
 /* line 150, sass/bootstrap/_tables.scss */
 table .span8 {
   float: none;
-  width: 446.667px;
+  width: 446.66667px;
   margin-left: 0;
 }
 /* line 151, sass/bootstrap/_tables.scss */
 table .span9 {
   float: none;
-  width: 506.333px;
+  width: 506.33333px;
   margin-left: 0;
 }
 /* line 152, sass/bootstrap/_tables.scss */
@@ -2160,15 +2261,17 @@ table .span10 {
   margin-left: 0;
 }
 /* line 153, sass/bootstrap/_tables.scss */
-table .span11, table .span-two-thirds, table .footer .widget_text, .footer table .widget_text, table #alternate .widget_tbtestimonialswidget, #alternate table .widget_tbtestimonialswidget {
+table .span11, table .span-two-thirds, table .footer .widget_text, .footer table .widget_text, table #alternate .widget_tbtestimonialswidget, #alternate table .widget_tbtestimonialswidget, table #alternate .widget_tbtestimonialswidget.span-one-third, #alternate table .widget_tbtestimonialswidget.span-one-third,
+table .footer .widget_text:first-child,
+.footer table .widget_text:first-child {
   float: none;
-  width: 625.667px;
+  width: 625.66667px;
   margin-left: 0;
 }
 /* line 154, sass/bootstrap/_tables.scss */
 table .span12 {
   float: none;
-  width: 685.333px;
+  width: 685.33333px;
   margin-left: 0;
 }
 
@@ -2187,7 +2290,7 @@ table .span12 {
   -o-border-radius: 4px;
   border-radius: 4px;
   background: rgba(119, 119, 119, 0.03);
-  padding: 14.667px;
+  padding: 14.66667px;
 }
 /* line 202, sass/bystl/_colorpalette.scss */
 .boxshadow .well {
@@ -2202,7 +2305,7 @@ table .span12 {
 /* line 53, sass/bootstrap/_wells.scss */
 .well[class*='span'] .inner, .well[class*='fluid'] .inner {
   display: block;
-  padding: 14.667px;
+  padding: 14.66667px;
 }
 /* line 59, sass/bootstrap/_wells.scss */
 .well blockquote {
@@ -3005,17 +3108,24 @@ ul.btn-group {
 .alert, .alert-message,
 .alert-heading,
 .alert-message strong,
-.alert-message b {
+.alert-message b,
+.alert-message .alert-heading {
   color: #c09853;
 }
 
-/* line 56, sass/bootstrap/_alerts.scss */
+/* line 55, sass/bootstrap/_alerts.scss */
+.alert-warning, .alert-message.warning {
+  background-color: #fcf8e3;
+  border-color: #fbeed5;
+}
+
+/* line 59, sass/bootstrap/_alerts.scss */
 .alert-success, .alert-message.success {
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
 
-/* line 61, sass/bootstrap/_alerts.scss */
+/* line 64, sass/bootstrap/_alerts.scss */
 .alert-success, .alert-message.success,
 .alert-success .alert-heading,
 .alert-success .alert-message strong,
@@ -3023,11 +3133,12 @@ ul.btn-group {
 .alert-message.success strong,
 .alert-success .alert-message b,
 .alert-message .alert-success b,
-.alert-message.success b {
+.alert-message.success b,
+.alert-message.success .alert-heading {
   color: #468847;
 }
 
-/* line 65, sass/bootstrap/_alerts.scss */
+/* line 68, sass/bootstrap/_alerts.scss */
 .alert-danger, .alert-message.danger, .alert-message.error,
 .alert-error,
 .contact-error {
@@ -3035,7 +3146,7 @@ ul.btn-group {
   border-color: #eed3d7;
 }
 
-/* line 72, sass/bootstrap/_alerts.scss */
+/* line 75, sass/bootstrap/_alerts.scss */
 .alert-danger, .alert-message.danger, .alert-message.error,
 .alert-error,
 .contact-error,
@@ -3048,6 +3159,8 @@ ul.btn-group {
 .alert-message .alert-danger b,
 .alert-message.danger b,
 .alert-message.error b,
+.alert-message.danger .alert-heading,
+.alert-message.error .alert-heading,
 .alert-error .alert-heading,
 .contact-error .alert-heading,
 .alert-error .alert-message strong,
@@ -3057,17 +3170,19 @@ ul.btn-group {
 .alert-error .alert-message b,
 .alert-message .alert-error b,
 .contact-error .alert-message b,
-.alert-message .contact-error b {
+.alert-message .contact-error b,
+.contact-error .alert-message .alert-heading,
+.alert-message .contact-error .alert-heading {
   color: #b94a48;
 }
 
-/* line 75, sass/bootstrap/_alerts.scss */
+/* line 78, sass/bootstrap/_alerts.scss */
 .alert-info, .alert-message.info {
   background-color: #d0eaf4;
   border-color: #7ec6e0;
 }
 
-/* line 80, sass/bootstrap/_alerts.scss */
+/* line 83, sass/bootstrap/_alerts.scss */
 .alert-info, .alert-message.info,
 .alert-info .alert-heading,
 .alert-info .alert-message strong,
@@ -3075,23 +3190,24 @@ ul.btn-group {
 .alert-message.info strong,
 .alert-info .alert-message b,
 .alert-message .alert-info b,
-.alert-message.info b {
+.alert-message.info b,
+.alert-message.info .alert-heading {
   color: #00709d;
 }
 
-/* line 87, sass/bootstrap/_alerts.scss */
+/* line 90, sass/bootstrap/_alerts.scss */
 .alert-block {
   padding-top: 14px;
   padding-bottom: 14px;
 }
 
-/* line 92, sass/bootstrap/_alerts.scss */
+/* line 95, sass/bootstrap/_alerts.scss */
 .alert-block > p,
 .alert-block > ul {
   margin-bottom: 0;
 }
 
-/* line 95, sass/bootstrap/_alerts.scss */
+/* line 98, sass/bootstrap/_alerts.scss */
 .alert-block p + p {
   margin-top: 5px;
 }
@@ -3578,7 +3694,8 @@ ul.btn-group {
   color: white;
 }
 /* line 80, sass/bootstrap/_navbar.scss */
-.navbar .btn, .navbar .btn-group li a, .btn-group li .navbar a, .navbar .btn-group {
+.navbar .btn, .navbar .btn-group li a, .btn-group li .navbar a,
+.navbar .btn-group {
   margin-top: 5px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3603,25 +3720,33 @@ ul.btn-group {
   clear: both;
 }
 /* line 96, sass/bootstrap/_navbar.scss */
-.navbar-form input, .navbar-form select, .navbar-form .radio, .navbar-form .checkbox {
+.navbar-form input,
+.navbar-form select,
+.navbar-form .radio,
+.navbar-form .checkbox {
   margin-top: 5px;
 }
 /* line 100, sass/bootstrap/_navbar.scss */
-.navbar-form input, .navbar-form select {
+.navbar-form input,
+.navbar-form select {
   display: inline-block;
   margin-bottom: 0;
 }
 /* line 106, sass/bootstrap/_navbar.scss */
-.navbar-form input[type="image"], .navbar-form input[type="checkbox"], .navbar-form input[type="radio"] {
+.navbar-form input[type="image"],
+.navbar-form input[type="checkbox"],
+.navbar-form input[type="radio"] {
   margin-top: 3px;
 }
 /* line 110, sass/bootstrap/_navbar.scss */
-.navbar-form .input-append, .navbar-form .input-prepend {
+.navbar-form .input-append,
+.navbar-form .input-prepend {
   margin-top: 6px;
   white-space: nowrap;
 }
 /* line 113, sass/bootstrap/_navbar.scss */
-.navbar-form .input-append input, .navbar-form .input-prepend input {
+.navbar-form .input-append input,
+.navbar-form .input-prepend input {
   margin-top: 0;
 }
 
@@ -3764,7 +3889,10 @@ ul.btn-group {
   padding: 8px 10px;
 }
 /* line 248, sass/bootstrap/_navbar.scss */
-.navbar .btn [class^="icon-"]:before, .navbar .btn-group li a [class^="icon-"]:before, .btn-group li .navbar a [class^="icon-"]:before, .navbar .btn [class*=" icon-"]:before, .navbar .btn-group li a [class*=" icon-"]:before, .btn-group li .navbar a [class*=" icon-"]:before {
+.navbar .btn [class^="icon-"]:before, .navbar .btn-group li a [class^="icon-"]:before, .btn-group li .navbar a [class^="icon-"]:before,
+.navbar .btn [class*=" icon-"]:before,
+.navbar .btn-group li a [class*=" icon-"]:before,
+.btn-group li .navbar a [class*=" icon-"]:before {
   color: #d0eaf4;
   opacity: 0.7;
   font-size: 17px;
@@ -3775,7 +3903,10 @@ ul.btn-group {
   color: white;
 }
 /* line 259, sass/bootstrap/_navbar.scss */
-.navbar .btn:hover [class^="icon-"]:before, .navbar .btn-group li a:hover [class^="icon-"]:before, .btn-group li .navbar a:hover [class^="icon-"]:before, .navbar .btn:hover [class*=" icon-"]:before, .navbar .btn-group li a:hover [class*=" icon-"]:before, .btn-group li .navbar a:hover [class*=" icon-"]:before {
+.navbar .btn:hover [class^="icon-"]:before, .navbar .btn-group li a:hover [class^="icon-"]:before, .btn-group li .navbar a:hover [class^="icon-"]:before,
+.navbar .btn:hover [class*=" icon-"]:before,
+.navbar .btn-group li a:hover [class*=" icon-"]:before,
+.btn-group li .navbar a:hover [class*=" icon-"]:before {
   color: white;
   text-shadow: none;
   opacity: 1;
@@ -4564,7 +4695,7 @@ ul.btn-group {
 ----------------------------------------------*/
 /* line 8, sass/bootstrap/_thumbnails.scss */
 .thumbnails {
-  margin-left: -14.667px;
+  margin-left: -14.66667px;
   list-style: none;
 }
 /* line 15, sass/bootstrap/_mixins.scss */
@@ -4580,7 +4711,7 @@ ul.btn-group {
 /* line 13, sass/bootstrap/_thumbnails.scss */
 .thumbnails > li {
   float: left;
-  margin: 0 0 18px 14.667px;
+  margin: 0 0 18px 14.66667px;
 }
 
 /* line 17, sass/bootstrap/_thumbnails.scss */
@@ -4961,11 +5092,14 @@ a.thumbnail:hover {
   line-height: 1;
 }
 /* line 41, sass/bootstrap/_carousel.scss */
-.carousel .active, .carousel .next, .carousel .prev {
+.carousel .active,
+.carousel .next,
+.carousel .prev {
   display: block;
 }
 /* line 44, sass/bootstrap/_carousel.scss */
-.carousel .next, .carousel .prev {
+.carousel .next,
+.carousel .prev {
   position: absolute;
   top: 0;
   width: 100%;
@@ -4983,7 +5117,8 @@ a.thumbnail:hover {
   left: -100%;
 }
 /* line 61, sass/bootstrap/_carousel.scss */
-.carousel .next.left, .carousel .prev.right {
+.carousel .next.left,
+.carousel .prev.right {
   left: 0;
 }
 /* line 65, sass/bootstrap/_carousel.scss */
@@ -5075,7 +5210,7 @@ a.thumbnail:hover {
 }
 /* line 19, sass/bootstrap/_hero-unit.scss */
 .hero-unit p {
-  font-size: 1.385em;
+  font-size: 1.38462em;
   font-weight: 200;
   line-height: 27px;
 }
@@ -5246,17 +5381,21 @@ a [class*=" icon-"] {
 /* line 109, sass/bystl/_font-awesome.scss */
 .icon-large:before {
   vertical-align: top;
-  font-size: 1.333em;
+  font-size: 1.33333em;
 }
 
 /* line 116, sass/bystl/_font-awesome.scss */
-.btn [class^="icon-"], .btn-group li a [class^="icon-"], .btn [class*=" icon-"], .btn-group li a [class*=" icon-"], .nav-tabs [class^="icon-"], .nav-tabs [class*=" icon-"] {
+.btn [class^="icon-"], .btn-group li a [class^="icon-"],
+.btn [class*=" icon-"],
+.btn-group li a [class*=" icon-"], .nav-tabs [class^="icon-"],
+.nav-tabs [class*=" icon-"] {
   /* keeps button heights with and without icons the same */
   line-height: .9em;
 }
 
 /* line 124, sass/bystl/_font-awesome.scss */
-li [class^="icon-"], li [class*=" icon-"] {
+li [class^="icon-"],
+li [class*=" icon-"] {
   display: inline-block;
   width: 1.25em;
   text-align: center;
@@ -5264,13 +5403,15 @@ li [class^="icon-"], li [class*=" icon-"] {
   list-style-type: none;
 }
 /* line 132, sass/bystl/_font-awesome.scss */
-li .icon-large, li .icon-large {
+li .icon-large,
+li .icon-large {
   /* 1.5 increased font size for icon-large * 1.25 width */
   width: 1.875em !important;
 }
 /* line 135, sass/bystl/_font-awesome.scss */
-li .icon-large:before, li .icon-large:before {
-  text-indent: -1.333em;
+li .icon-large:before,
+li .icon-large:before {
+  text-indent: -1.33333em;
 }
 
 /* line 141, sass/bystl/_font-awesome.scss */
@@ -5280,11 +5421,13 @@ ul.icons {
   text-indent: -0.8em;
 }
 /* line 148, sass/bystl/_font-awesome.scss */
-ul.icons li [class^="icon-"], ul.icons li [class*=" icon-"] {
+ul.icons li [class^="icon-"],
+ul.icons li [class*=" icon-"] {
   width: .8em;
 }
 /* line 152, sass/bystl/_font-awesome.scss */
-ul.icons li .icon-large:before, ul.icons li .icon-large:before {
+ul.icons li .icon-large:before,
+ul.icons li .icon-large:before {
   /* 1.5 increased font size for icon-large * 1.25 width */
   vertical-align: initial;
 }
@@ -8550,7 +8693,7 @@ body {
   color: #7ec6e0;
   white-space: nowrap;
   word-spacing: -3px;
-  font-size: 2.846em;
+  font-size: 2.84615em;
 }
 /* line 52, sass/bystl/_webfonts.scss */
 .original .logo h1, .original .logo .h1, .original .logo i {
@@ -8955,6 +9098,7 @@ body {
   background: #273443;
   border: 1px solid #1f1f1f;
   padding: 40px 0;
+  min-height: 380px;
 }
 /* line 202, sass/bystl/_colorpalette.scss */
 .boxshadow #alternate {
@@ -8963,7 +9107,26 @@ body {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-/* line 14, sass/synapse/_alternate.scss */
+/* line 15, sass/synapse/_alternate.scss */
+.container-fluid, .page-container.row-fluid {
+  position: relative;
+}
+
+/* line 21, sass/synapse/_alternate.scss */
+#alternate .post-widget.span-one-third + .post-widget.span-one-third {
+  clear: left;
+  margin-left: 0;
+  margin-top: 20px;
+}
+/* line 27, sass/synapse/_alternate.scss */
+#alternate .widget_tbtestimonialswidget {
+  clear: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* line 35, sass/synapse/_alternate.scss */
 #alternate .tweet_list {
   color: #a8d0dc !important;
   border: 1px solid #141b23;
@@ -9003,7 +9166,7 @@ body {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), rgba(39, 52, 67, 0.45);
 }
 
-/* line 19, sass/synapse/_alternate.scss */
+/* line 40, sass/synapse/_alternate.scss */
 #alternate .tweet_list li {
   margin: 0;
   padding-bottom: 15px;
@@ -9013,40 +9176,40 @@ body {
   border-bottom: 1px solid #3e536b;
 }
 
-/* line 28, sass/synapse/_alternate.scss */
+/* line 49, sass/synapse/_alternate.scss */
 #alternate .tweet_list li:last-child {
   border-bottom: medium none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-/* line 33, sass/synapse/_alternate.scss */
+/* line 54, sass/synapse/_alternate.scss */
 #alternate .tweet_list span {
   color: #8bc1d0 !important;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
 }
 
-/* line 37, sass/synapse/_alternate.scss */
+/* line 58, sass/synapse/_alternate.scss */
 #alternate .textwidget {
   margin-top: 20px;
 }
 
-/* line 40, sass/synapse/_alternate.scss */
+/* line 61, sass/synapse/_alternate.scss */
 #alternate a {
   color: #CDCDCD;
 }
-/* line 42, sass/synapse/_alternate.scss */
+/* line 63, sass/synapse/_alternate.scss */
 #alternate a:hover {
   color: white;
 }
 
-/* line 46, sass/synapse/_alternate.scss */
+/* line 67, sass/synapse/_alternate.scss */
 #alternate h3 {
   color: white;
   text-shadow: 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* line 50, sass/synapse/_alternate.scss */
+/* line 71, sass/synapse/_alternate.scss */
 #alternate p {
   color: #8bc1d0;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
@@ -11263,7 +11426,7 @@ abbr {
 @media (min-width: 768px) and (max-width: 979px) {
   /* line 235, sass/bootstrap/_mixins.scss */
   .row {
-    margin-left: -14.667px;
+    margin-left: -14.66667px;
   }
   /* line 15, sass/bootstrap/_mixins.scss */
   .row:before, .row:after {
@@ -11278,7 +11441,7 @@ abbr {
   /* line 240, sass/bootstrap/_mixins.scss */
   [class*="span"] {
     float: left;
-    margin-left: 14.667px;
+    margin-left: 14.66667px;
   }
 
   /* line 248, sass/bootstrap/_mixins.scss */
@@ -11295,12 +11458,12 @@ abbr {
 
   /* line 255, sass/bootstrap/_mixins.scss */
   .span15 {
-    width: 677.833px;
+    width: 677.83333px;
   }
 
   /* line 255, sass/bootstrap/_mixins.scss */
   .span14 {
-    width: 631.667px;
+    width: 631.66667px;
   }
 
   /* line 255, sass/bootstrap/_mixins.scss */
@@ -11310,12 +11473,13 @@ abbr {
 
   /* line 255, sass/bootstrap/_mixins.scss */
   .span12 {
-    width: 539.333px;
+    width: 539.33333px;
   }
 
   /* line 255, sass/bootstrap/_mixins.scss */
-  .span11, .span-two-thirds, .footer .widget_text, #alternate .widget_tbtestimonialswidget {
-    width: 493.167px;
+  .span11, .span-two-thirds, .footer .widget_text, #alternate .widget_tbtestimonialswidget, #alternate .widget_tbtestimonialswidget.span-one-third,
+  .footer .widget_text:first-child {
+    width: 493.16667px;
   }
 
   /* line 255, sass/bootstrap/_mixins.scss */
@@ -11325,12 +11489,12 @@ abbr {
 
   /* line 255, sass/bootstrap/_mixins.scss */
   .span9 {
-    width: 400.833px;
+    width: 400.83333px;
   }
 
   /* line 255, sass/bootstrap/_mixins.scss */
   .span8 {
-    width: 354.667px;
+    width: 354.66667px;
   }
 
   /* line 255, sass/bootstrap/_mixins.scss */
@@ -11340,12 +11504,12 @@ abbr {
 
   /* line 255, sass/bootstrap/_mixins.scss */
   .span6 {
-    width: 262.333px;
+    width: 262.33333px;
   }
 
   /* line 255, sass/bootstrap/_mixins.scss */
   .span5, .span-one-third {
-    width: 216.167px;
+    width: 216.16667px;
   }
 
   /* line 255, sass/bootstrap/_mixins.scss */
@@ -11355,12 +11519,12 @@ abbr {
 
   /* line 255, sass/bootstrap/_mixins.scss */
   .span3 {
-    width: 123.833px;
+    width: 123.83333px;
   }
 
   /* line 255, sass/bootstrap/_mixins.scss */
   .span2 {
-    width: 77.667px;
+    width: 77.66667px;
   }
 
   /* line 255, sass/bootstrap/_mixins.scss */
@@ -11370,12 +11534,12 @@ abbr {
 
   /* line 261, sass/bootstrap/_mixins.scss */
   .offset16 {
-    margin-left: 753.333px;
+    margin-left: 753.33333px;
   }
 
   /* line 261, sass/bootstrap/_mixins.scss */
   .offset15 {
-    margin-left: 707.167px;
+    margin-left: 707.16667px;
   }
 
   /* line 261, sass/bootstrap/_mixins.scss */
@@ -11385,12 +11549,12 @@ abbr {
 
   /* line 261, sass/bootstrap/_mixins.scss */
   .offset13 {
-    margin-left: 614.833px;
+    margin-left: 614.83333px;
   }
 
   /* line 261, sass/bootstrap/_mixins.scss */
   .offset12 {
-    margin-left: 568.667px;
+    margin-left: 568.66667px;
   }
 
   /* line 261, sass/bootstrap/_mixins.scss */
@@ -11400,12 +11564,12 @@ abbr {
 
   /* line 261, sass/bootstrap/_mixins.scss */
   .offset10 {
-    margin-left: 476.333px;
+    margin-left: 476.33333px;
   }
 
   /* line 261, sass/bootstrap/_mixins.scss */
   .offset9 {
-    margin-left: 430.167px;
+    margin-left: 430.16667px;
   }
 
   /* line 261, sass/bootstrap/_mixins.scss */
@@ -11415,12 +11579,12 @@ abbr {
 
   /* line 261, sass/bootstrap/_mixins.scss */
   .offset7 {
-    margin-left: 337.833px;
+    margin-left: 337.83333px;
   }
 
   /* line 261, sass/bootstrap/_mixins.scss */
   .offset6 {
-    margin-left: 291.667px;
+    margin-left: 291.66667px;
   }
 
   /* line 261, sass/bootstrap/_mixins.scss */
@@ -11430,12 +11594,12 @@ abbr {
 
   /* line 261, sass/bootstrap/_mixins.scss */
   .offset4 {
-    margin-left: 199.333px;
+    margin-left: 199.33333px;
   }
 
   /* line 261, sass/bootstrap/_mixins.scss */
   .offset3 {
-    margin-left: 153.167px;
+    margin-left: 153.16667px;
   }
 
   /* line 261, sass/bootstrap/_mixins.scss */
@@ -11445,7 +11609,7 @@ abbr {
 
   /* line 261, sass/bootstrap/_mixins.scss */
   .offset1 {
-    margin-left: 60.833px;
+    margin-left: 60.83333px;
   }
 
   /* line 315, sass/bootstrap/_mixins.scss */
@@ -11466,14 +11630,14 @@ abbr {
   input.span15,
   textarea.span15,
   .uneditable-input.span15 {
-    width: 667.833px;
+    width: 667.83333px;
   }
 
   /* line 324, sass/bootstrap/_mixins.scss */
   input.span14,
   textarea.span14,
   .uneditable-input.span14 {
-    width: 621.667px;
+    width: 621.66667px;
   }
 
   /* line 324, sass/bootstrap/_mixins.scss */
@@ -11487,20 +11651,23 @@ abbr {
   input.span12,
   textarea.span12,
   .uneditable-input.span12 {
-    width: 529.333px;
+    width: 529.33333px;
   }
 
   /* line 324, sass/bootstrap/_mixins.scss */
-  input.span11, input.span-two-thirds, .footer input.widget_text, #alternate input.widget_tbtestimonialswidget,
+  input.span11, input.span-two-thirds, .footer input.widget_text, #alternate input.widget_tbtestimonialswidget, #alternate input.widget_tbtestimonialswidget.span-one-third,
+  .footer input.widget_text:first-child,
   textarea.span11,
   textarea.span-two-thirds,
   .footer textarea.widget_text,
   #alternate textarea.widget_tbtestimonialswidget,
+  #alternate textarea.widget_tbtestimonialswidget.span-one-third,
+  .footer textarea.widget_text:first-child,
   .uneditable-input.span11,
   .uneditable-input.span-two-thirds,
   .footer .uneditable-input.widget_text,
   #alternate .uneditable-input.widget_tbtestimonialswidget {
-    width: 483.167px;
+    width: 483.16667px;
   }
 
   /* line 324, sass/bootstrap/_mixins.scss */
@@ -11514,14 +11681,14 @@ abbr {
   input.span9,
   textarea.span9,
   .uneditable-input.span9 {
-    width: 390.833px;
+    width: 390.83333px;
   }
 
   /* line 324, sass/bootstrap/_mixins.scss */
   input.span8,
   textarea.span8,
   .uneditable-input.span8 {
-    width: 344.667px;
+    width: 344.66667px;
   }
 
   /* line 324, sass/bootstrap/_mixins.scss */
@@ -11535,7 +11702,7 @@ abbr {
   input.span6,
   textarea.span6,
   .uneditable-input.span6 {
-    width: 252.333px;
+    width: 252.33333px;
   }
 
   /* line 324, sass/bootstrap/_mixins.scss */
@@ -11544,7 +11711,7 @@ abbr {
   textarea.span-one-third,
   .uneditable-input.span5,
   .uneditable-input.span-one-third {
-    width: 206.167px;
+    width: 206.16667px;
   }
 
   /* line 324, sass/bootstrap/_mixins.scss */
@@ -11558,14 +11725,14 @@ abbr {
   input.span3,
   textarea.span3,
   .uneditable-input.span3 {
-    width: 113.833px;
+    width: 113.83333px;
   }
 
   /* line 324, sass/bootstrap/_mixins.scss */
   input.span2,
   textarea.span2,
   .uneditable-input.span2 {
-    width: 67.667px;
+    width: 67.66667px;
   }
 
   /* line 324, sass/bootstrap/_mixins.scss */
@@ -11607,7 +11774,7 @@ abbr {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     float: left;
-    margin-left: 1.88%;
+    margin-left: 1.88034%;
   }
   /* line 292, sass/bootstrap/_mixins.scss */
   .row-fluid [class*="span"]:first-child, .row-fluid [class*="span16"] {
@@ -11619,69 +11786,69 @@ abbr {
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span15 {
-    width: 93.632%;
+    width: 93.63248%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span14 {
-    width: 87.265%;
+    width: 87.26496%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span13 {
-    width: 80.897%;
+    width: 80.89744%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span12 {
-    width: 74.53%;
+    width: 74.52991%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span11, .row-fluid .span-two-thirds, .row-fluid .footer .widget_text, .footer .row-fluid .widget_text, .row-fluid #alternate .widget_tbtestimonialswidget, #alternate .row-fluid .widget_tbtestimonialswidget {
-    width: 68.162%;
+    width: 68.16239%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span10 {
-    width: 61.795%;
+    width: 61.79487%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span9 {
-    width: 55.427%;
+    width: 55.42735%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span8 {
-    width: 49.06%;
+    width: 49.05983%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span7 {
-    width: 42.692%;
+    width: 42.69231%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span6 {
-    width: 36.325%;
+    width: 36.32479%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span5, .row-fluid .span-one-third {
-    width: 29.957%;
+    width: 29.95726%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span4 {
-    width: 23.59%;
+    width: 23.58974%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span3 {
-    width: 17.222%;
+    width: 17.22222%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span2 {
-    width: 10.855%;
+    width: 10.8547%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span1 {
-    width: 4.487%;
+    width: 4.48718%;
   }
 
   /* line 28, sass/bootstrap/_responsive-768px-979px.scss */
   .container-fluid, .page-container.row-fluid {
-    padding-left: 1.88%;
-    padding-right: 1.88%;
+    padding-left: 1.88034%;
+    padding-right: 1.88034%;
   }
 
   /* line 33, sass/bootstrap/_responsive-768px-979px.scss */
@@ -11749,7 +11916,8 @@ abbr {
   }
 
   /* line 255, sass/bootstrap/_mixins.scss */
-  .span11, .span-two-thirds, .footer .widget_text, #alternate .widget_tbtestimonialswidget {
+  .span11, .span-two-thirds, .footer .widget_text, #alternate .widget_tbtestimonialswidget, #alternate .widget_tbtestimonialswidget.span-one-third,
+  .footer .widget_text:first-child {
     width: 797.5px;
   }
 
@@ -11926,11 +12094,14 @@ abbr {
   }
 
   /* line 324, sass/bootstrap/_mixins.scss */
-  input.span11, input.span-two-thirds, .footer input.widget_text, #alternate input.widget_tbtestimonialswidget,
+  input.span11, input.span-two-thirds, .footer input.widget_text, #alternate input.widget_tbtestimonialswidget, #alternate input.widget_tbtestimonialswidget.span-one-third,
+  .footer input.widget_text:first-child,
   textarea.span11,
   textarea.span-two-thirds,
   .footer textarea.widget_text,
   #alternate textarea.widget_tbtestimonialswidget,
+  #alternate textarea.widget_tbtestimonialswidget.span-one-third,
+  .footer textarea.widget_text:first-child,
   .uneditable-input.span11,
   .uneditable-input.span-two-thirds,
   .footer .uneditable-input.widget_text,
@@ -12042,7 +12213,7 @@ abbr {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     float: left;
-    margin-left: 1.56%;
+    margin-left: 1.56028%;
   }
   /* line 292, sass/bootstrap/_mixins.scss */
   .row-fluid [class*="span"]:first-child, .row-fluid [class*="span16"] {
@@ -12054,69 +12225,69 @@ abbr {
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span15 {
-    width: 93.652%;
+    width: 93.65248%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span14 {
-    width: 87.305%;
+    width: 87.30496%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span13 {
-    width: 80.957%;
+    width: 80.95745%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span12 {
-    width: 74.61%;
+    width: 74.60993%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span11, .row-fluid .span-two-thirds, .row-fluid .footer .widget_text, .footer .row-fluid .widget_text, .row-fluid #alternate .widget_tbtestimonialswidget, #alternate .row-fluid .widget_tbtestimonialswidget {
-    width: 68.262%;
+    width: 68.26241%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span10 {
-    width: 61.915%;
+    width: 61.91489%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span9 {
-    width: 55.567%;
+    width: 55.56738%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span8 {
-    width: 49.22%;
+    width: 49.21986%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span7 {
-    width: 42.872%;
+    width: 42.87234%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span6 {
-    width: 36.525%;
+    width: 36.52482%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span5, .row-fluid .span-one-third {
-    width: 30.177%;
+    width: 30.1773%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span4 {
-    width: 23.83%;
+    width: 23.82979%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span3 {
-    width: 17.482%;
+    width: 17.48227%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span2 {
-    width: 11.135%;
+    width: 11.13475%;
   }
   /* line 300, sass/bootstrap/_mixins.scss */
   .row-fluid .span1 {
-    width: 4.787%;
+    width: 4.78723%;
   }
 
   /* line 30, sass/bootstrap/_responsive-1200px-min.scss */
   .container-fluid, .page-container.row-fluid {
-    padding-left: 1.56%;
-    padding-right: 1.56%;
+    padding-left: 1.56028%;
+    padding-right: 1.56028%;
   }
 
   /* line 36, sass/bootstrap/_responsive-1200px-min.scss */

@@ -223,11 +223,11 @@
 }
 
 // The Grid
-@mixin core-offset($columns, $gridColumnWidth, $gridGutterWidth) {
+@mixin core-offset($columns, $gridColumnWidth: $gridColumnWidth, $gridGutterWidth: $gridGutterWidth) {
   margin-left: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns + 1));
 }
 
-@mixin core-span($columns, $gridColumnWidth, $gridGutterWidth) {
+@mixin core-span($columns, $gridColumnWidth: $gridColumnWidth, $gridGutterWidth: $gridGutterWidth) {
   width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
 }
 

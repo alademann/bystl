@@ -52,7 +52,10 @@ $closeOpacity: .2 !default;
 
 // Alternate styles
 // ----------------
-
+.alert-warning {
+  background-color: $warningBackground;
+  border-color: $warningBorder;  
+}
 .alert-success {
   background-color: $successBackground;
   border-color: $successBorder;  

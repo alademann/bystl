@@ -66,7 +66,7 @@ class dd_sidebar_tweet_widget extends WP_Widget {
 <div class="sidebar_tweet sidebar-tweet sidebar-twitter-widget"></div>
 
 <a href="https://twitter.com/<?php echo $user ?>" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @<?php echo $user ?></a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http:':'https:';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
    <script type='text/javascript'>
       
@@ -101,7 +101,7 @@ class dd_sidebar_tweet_widget extends WP_Widget {
 		$instance = $old_instance;
 
 		/* Strip tags for title and name to remove HTML (important for text inputs). */
-                $instance['title'] = strip_tags( $new_instance['title'] );
+		$instance['title'] = strip_tags( $new_instance['title'] );
 		$instance['user'] = strip_tags( $new_instance['user'] );
 		$instance['postcount'] = strip_tags( $new_instance['postcount'] );
 		
@@ -125,10 +125,10 @@ class dd_sidebar_tweet_widget extends WP_Widget {
 
 		/* Set up some default widget settings. */
 		$defaults = array(
-                'title' => 'My Tweets',
-		'username' => 'ddstudios',
-		'postcount' => '5',
-				);
+            'title' => 'My Tweets',
+			'username' => 'ddstudios',
+			'postcount' => '5',
+		);
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
 
 	

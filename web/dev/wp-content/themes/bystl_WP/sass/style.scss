@@ -10,11 +10,11 @@ $modernizr: true !default; // are we using modernizr?
     @return "";
   }
 }
-@import "theme-synapse_meta"; // THIS MUST BE FIRST (it is just the comments for wordpress info)
+@import "_theme-synapse_meta.scss"; // THIS MUST BE FIRST (it is just the comments for wordpress info)
 /*!---
   compass helpers
 ---*/
-@import "global-compass";
+@import "_global-compass.scss";
 $legacy-support-for-ie: false;
 $legacy-support-for-ie6: false;
 $legacy-support-for-ie7: false;
@@ -24,21 +24,21 @@ $experimental-support-for-microsoft: false;
 /*!---
   bystl color palette
 ---*/
-@import "bystl/variables";
-@import "bystl/colorBase_new";
-@import "bystl/colorpalette";
+@import "bystl/_variables.scss";
+@import "bystl/_colorBase_new.scss";
+@import "bystl/_colorpalette.scss";
 /*!---
   bootstrap
 ---*/
-@import "bootstrap/bootstrap";
+@import "bootstrap/_bootstrap.scss";
 /*!---
   bystl webfonts
 ---*/
-@import "bystl/webfonts";
+@import "bystl/_webfonts.scss";
 // global webfont icons
-@import "bystl/font-awesome"; // replaces bootstrap/sprites
-@import "bystl/calendar";
-@import "bystl/plugin-styles";
+@import "bystl/_font-awesome.scss"; // replaces bootstrap/sprites
+@import "bystl/_calendar.scss";
+@import "bystl/_plugin-styles.scss";
 /*!---
   primary theme framework styles (SynapseWP)
 ---*/
@@ -48,8 +48,8 @@ $experimental-support-for-microsoft: false;
 /*!---
   primary theme styles (SynapseWP)
 ---*/
-@import "theme-synapse";
+@import "_theme-synapse.scss";
 /*!---
   RESPONSIVE DESIGN
 ---*/
-@import "bootstrap/responsive";
+@import "bootstrap/_responsive.scss";

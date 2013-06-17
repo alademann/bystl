@@ -23,17 +23,17 @@
                                  <a href="<?php the_permalink(); ?>"><img src="<?php echo $blogImg[0]['img_url']; ?>" alt="" /></a>
 
 
-                                <a class="article-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <h4 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                 
                             </div>
 
                                         <?php } else { ?>
                                 
-                                <a class="title-no-img" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <h4 class="article-title title-no-img"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                 
                                 <?php }  ?>
 
-                           <div class="article-meta clearfix">
+                           <div class="article-meta clearfix" style="display: none;">
 
                                 <span class="article-comments"><a class="article-comment" href="<?php comments_link(); ?>">
                                     
@@ -46,8 +46,7 @@
 
                             <div class="article-excerpt">
 
-                               <?php the_excerpt(); ?>
-                                  <a class="small-btn blue rounded-1" href="single-blog.html"><?php _e('Continue Reading', 'localization'); ?></a>
+                               <p><?php the_excerpt(); ?>&nbsp;&nbsp;<a class="btn small-btn btn-primary" href="<?php the_permalink(); ?>" rel="nofollow"><?php _e('Continue Reading', 'localization'); ?></a></p>
                                   
                                 
                             </div>
