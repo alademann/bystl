@@ -44,7 +44,8 @@ li[class*=" icon-"], [class*="navicon-"] {
     ------------------------------------------------------- */
 [class^="icon-"]:before,
 [class*=" icon-"]:before, 
-[class*="navicon-"] > a:before, [class*="navicon-"] > a:after {
+[class*="navicon-"] > a:before, [class*="navicon-"] > a:after,
+.twitter-follow-button:before {
     @include webfont($icoFont_name, "icon");
     display: inline-block;
     text-decoration: inherit;
@@ -318,7 +319,9 @@ ul.icons {
     .#{$prefix}check-empty#{$el}          { content: "\f096"; }
     .#{$prefix}bookmark-empty#{$el}       { content: "\f097"; }
     .#{$prefix}phone-sign#{$el}           { content: "\f098"; }
-    .#{$prefix}twitter#{$el}              { content: "\f099"; }
+    .#{$prefix}twitter#{$el},
+    .twitter-follow-button:before         { content: "\f099"; }
+    .twitter-follow-button { padding: $btnPaddingY ceil($btnPaddingX / 2); }
     .#{$prefix}facebook#{$el}             { content: "\f09a"; }
     .#{$prefix}github#{$el}               { content: "\f09b"; }
     .#{$prefix}unlock#{$el}               { content: "\f09c"; }

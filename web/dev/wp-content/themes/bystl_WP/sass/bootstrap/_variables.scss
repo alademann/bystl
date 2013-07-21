@@ -116,6 +116,10 @@ $tableBorder:                       $grayLighterD !default; // table and cell bo
 
 // Buttons
 // -------------------------
+$btnPaddingX:                       15px;
+$btnPaddingY:                       4px;
+$btnPadding:                        $btnPaddingY $btnPaddingX;
+
 $btnBackground:                     $white !default;
 $btnBackgroundHighlight:            darken($white, 10%) !default;
 $btnBorder:                         #ccc !default;

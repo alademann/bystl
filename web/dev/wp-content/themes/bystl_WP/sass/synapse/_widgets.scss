@@ -120,70 +120,56 @@
 
 /*	TWITTER WIDGET
 ---------------------------------------------- */
-.sidebar-tweet {
-	@include darkBlueWidget;
-	padding: 20px;
-}
 
-.tweet span, .sidebar-tweet span {
-	font-size: $baseFontSize - 1;
-	font-weight: normal;
-	line-height: 18px;
-	margin-bottom: 9px;
-	color: $gray !important;
-}
+.widget_twitter {
+	> div {
+		position: relative;
 
-.sidebar-twitter-widget {
-	margin-bottom: 15px;
-
-	.tweet_list {
-		margin: 0;
-
-		li {
-			margin: 0;
-			//width: 163px;
-			padding-bottom: 15px;
-			margin-bottom: 15px;
-			padding-left: 40px;
-			background: url(image-url('icon-twitter-big.png', true)) no-repeat 1px 4px;
-			border-bottom: 1px solid #3e536b;
+		.follow-button {
+			width: auto;
+			height: 33px; // height of h3 where we're nesting the button
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+	ul {
+		$sidePad: 10px;
+		padding: 0 $sidePad;
+		> li {
+			position: relative;
+			margin-bottom: $sidePad;
+			padding-bottom: $sidePad + 2;
+			padding-top: $baseLineHeight;
+			// make room for entry meta which we'll position absolute
+			border-bottom: 1px solid $grayLighterD;
+			color: $gray !important;
+			font-weight: normal;
+			font-size: $baseFontSize - 1;
+			line-height: 18px;
 
 			&:last-child {
-				border-bottom: none;
-				padding-bottom: 0;
-				margin-bottom: 0;
+				border-bottom: 0 none;
 			}
 
-			a {
-				text-shadow: 1px 1px 1px rgba($black, 0.5) !important;
-			} // END .sidebar-twitter-widget .tweet_list <li><a>
-		} // END .sidebar-twitter-widget .tweet_list <li>
-	} // END .sidebar-twitter-widget .tweet_list
-
-	span {
-		color: lighten($bystl_blue_medium, 5%) !important;
-		text-shadow: -1px -1px 0 rgba($black, 0.5);
-	} // END .sidebar-twitter-widget <span>
-
-} // END .sidebar-twitter-widget
-
-.tweet_list {
-	margin-bottom: 20px;
-
-	li {
-		margin-top: 20px;
-
-		// a {
-		// 	font-family: $serifFontFamily;
-		// 	font-style: italic;
-		// 	font-weight: bold;
-		// 	font-size: $baseFontSize - 2;
-		// } // END .tweet_list <li><a>
-	} // END .tweet_list <li>
-	li:first-child {
-		margin-top: 0;
+			.entry-meta {
+				position: absolute;
+				width: 100%;
+				height: $baseLineHeight;
+				top: 0;
+				font-size: $baseFontSize - 2;
+			}
+		}
 	}
-} // END .tweet_list
+
+	// elems within the .widget_twitter ul > li
+	.entry-content,
+	.entry-meta,
+	.intent-meta {
+		display: block;
+		width: 100%;
+	}
+} // END .widget_twitter
 
 
 /*	FLICKR WIDGET
@@ -245,9 +231,21 @@
 
 $footerElemMargin: 7px !default;
 
-// footer map widget
-.footer .widget_text {
-	@extend .span-two-thirds;
+
+.footer .span16 {
+	// footer map widget
+	.widget_text:first-of-type {
+		@extend .span-two-thirds;
+	}
+	// twitter widget
+	.widget_text:last-of-type {
+		@extend .span-one-third;
+		.twitter-timeline {
+			min-width: 100% !important;
+			max-width: 100% !important;
+			width: 100% !important;
+		}
+	}
 }
 
 // footer vCard styles
