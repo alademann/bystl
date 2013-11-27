@@ -39,3 +39,4 @@ web/dev/wp-content/media/*
 
 web/dev/wp-content/themes/twentyeleven/
 *.zip
+/web/dev/wp-config.php
